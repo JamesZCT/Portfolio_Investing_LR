@@ -1,0 +1,164 @@
+# Investment Portfolio Agent
+
+A statistics-driven portfolio assistant for personal use.
+
+It combines:
+- signal detection using moving average, rolling standard deviation, and z-score rules
+- rebalance suggestions that trim hyped/overweight exposure and reallocate to underweight/undervalued areas
+- a sandbox-only execution boundary so recommendations can be simulated without placing live brokerage orders
+- a lightweight ML risk model that estimates next-horizon drawdown risk from price-derived features
+- backtesting and daily automation workflows
+
+## Features
+
+1. Quant signal engine
+- 200-day moving average (configurable)
+- rolling standard deviation and z-score
+- 3-sigma style extreme detection (`extreme_z`, default `3.0`)
+- sector state classification: `undervalued`, `hyped`, `cool`, `warm`, `neutral`
+- valuation visuals (price vs MA and +/- 3 std bands)
+
+2. Portfolio rebalance logic
+- trims positions above target weights
+- trims additional exposure when sector signal is hyped
+- reallocates freed weight to underweight names, with higher priority for undervalued sectors
+- enforces risk controls:
+- `max_single_position_weight`
+- `max_sector_weight`
+- `stop_loss_pct` + `stop_trim_fraction`
+- `trailing_stop_pct` + `trailing_stop_trim_fraction`
+
+3. Backtest module
+- periodic rebalance simulation (default every 21 trading days)
+- transaction cost model in bps
+- outputs equity curve, trade log, and performance metrics (CAGR, vol, Sharpe, max drawdown)
+
+4. Daily automation agent
+- `daily` command writes dated report folders (`outputs/daily/YYYY-MM-DD`)
+- local macOS scheduler helper (`launchd`) script
+- GitHub Actions scheduled workflow for cloud automation
+
+5. Sandbox experiments
+- `sandbox` command generates synthetic market regimes and runs the agent without live data
+- simulated execution records are produced through a sandbox adapter
+- live brokerage execution is intentionally not implemented, but the adapter boundary exists
+
+6. ML risk scoring
+- trains a transparent logistic model on rolling price features
+- estimates probability of a next-horizon drawdown event
+- can block adds or trim exposure when risk is elevated
+
+7. Notifications
+- Slack webhook notifications
+- Telegram bot notifications
+- SMTP email notifications
+- `dry_run` mode for safe testing
+
+8. Visual analytics outputs
+- sector z-score chart
+- valuation bands chart
+- position vs target allocation chart
+- sector concentration risk chart
+- backtest equity curve, drawdown, and turnover charts
+
+## Installation
+
+```bash
+cd /Users/jameszhu/Documents/New\ project
+./scripts/bootstrap.sh
+source .venv/bin/activate
+```
+
+`scripts/bootstrap.sh` creates `.venv` and installs all required packages from `requirements.txt` and `pyproject.toml`.
+
+## Commands
+
+1. Run latest analysis
+
+```bash
+portfolio-agent run --config config.yaml --out outputs
+```
+
+2. Run backtest
+
+```bash
+portfolio-agent backtest --config config.yaml --out outputs --lookback-days 1200 --rebalance-days 21 --transaction-cost-bps 5
+```
+
+3. Run daily agent once
+
+```bash
+portfolio-agent daily --config config.yaml --out outputs
+```
+
+4. Run with local prices CSV (offline mode)
+
+```bash
+portfolio-agent run --config config.yaml --prices-csv your_prices.csv --out outputs
+```
+
+5. Run toy sandbox experiment
+
+```bash
+portfolio-agent sandbox --config example_config.yaml --out outputs/sandbox --days 900
+```
+
+6. Send notifications on run/backtest
+
+```bash
+portfolio-agent run --config config.yaml --out outputs --notify
+portfolio-agent backtest --config config.yaml --out outputs --notify
+```
+
+Note: `daily` always attempts notification dispatch through configured notification settings.
+
+CSV format requirements:
+- one `Date` column (`YYYY-MM-DD`)
+- one close-price column per ticker used in your config
+
+## Scheduling automation
+
+1. Local macOS daily scheduler (09:00 local time)
+
+```bash
+./scripts/setup_daily_launchd.sh
+```
+
+2. GitHub Actions daily workflow
+- file: `.github/workflows/daily-portfolio-agent.yml`
+- schedule: daily at `13:30 UTC`
+- optional secret: `PORTFOLIO_CONFIG_YAML` (raw YAML content)
+- workflow outputs are uploaded as artifacts
+
+## Config
+
+Use `config.yaml` (or start from `example_config.yaml`):
+- `positions`: current portfolio weights (sum near `1.0`)
+- `target_weights`: strategic weights (sum near `1.0`)
+- `ticker_sector`: ticker to sector mapping
+- `sector_etfs`: sector proxy tickers for signal detection
+- `entry_prices`: used by stop-loss logic
+- `notifications`: channel environment variable names and dry-run toggle
+
+## Output structure
+
+- `outputs/sector_signals.csv`
+- `outputs/rebalance_suggestions.csv`
+- `outputs/ml_risk_predictions.csv`
+- `outputs/summary.md`
+- `outputs/charts/sector_zscores.png`
+- `outputs/charts/valuation_bands.png`
+- `outputs/charts/position_vs_target.png`
+- `outputs/charts/sector_concentration.png`
+- `outputs/backtest/backtest_equity_curve.csv`
+- `outputs/backtest/backtest_trades.csv`
+- `outputs/backtest/backtest_summary.md`
+- `outputs/backtest/charts/equity_curve.png`
+- `outputs/backtest/charts/drawdown.png`
+- `outputs/backtest/charts/turnover.png`
+- `outputs/daily/YYYY-MM-DD/...`
+
+## Disclaimer
+
+This is educational workflow tooling, not financial advice.
+Validate tax, liquidity, risk, and execution constraints before trading.

@@ -1,0 +1,120 @@
+indicators:
+  ma_window: 200
+  trend_ma_window: 200
+  std_window: 60
+  z_window: 60
+  moderate_z: 2.0
+  extreme_z: 3.0
+  momentum_lookback_days: 126
+  volatility_window: 21
+  trailing_high_lookback_days: 252
+
+rules:
+  min_history_days: 260
+  max_trim_fraction_per_position: 0.25
+  min_trade_weight: 0.005
+  overweight_trigger: 0.03
+  underweight_trigger: 0.03
+  max_single_position_weight: 0.15
+  max_sector_weight: 0.35
+  trend_filter_enabled: true
+  bear_market_trim_fraction: 0.15
+  allow_countertrend_buys: false
+  loss_block_pct: 0.10
+  min_cash_weight: 0.02
+  defensive_cash_weight: 0.10
+  stop_loss_pct: 0.12
+  stop_trim_fraction: 0.50
+  trailing_stop_pct: 0.15
+  trailing_stop_trim_fraction: 0.33
+
+ml:
+  enabled: true
+  horizon_days: 21
+  risk_event_threshold: 0.08
+  min_training_rows: 120
+  epochs: 400
+  learning_rate: 0.08
+  high_risk_probability: 0.65
+  medium_risk_probability: 0.45
+  high_risk_trim_fraction: 0.10
+
+execution:
+  mode: sandbox
+  allow_live_brokerage: false
+
+notifications:
+  enabled: true
+  dry_run: true
+  slack_webhook_env: SLACK_WEBHOOK_URL
+  telegram_bot_token_env: TELEGRAM_BOT_TOKEN
+  telegram_chat_id_env: TELEGRAM_CHAT_ID
+  smtp_host_env: SMTP_HOST
+  smtp_port_env: SMTP_PORT
+  smtp_user_env: SMTP_USER
+  smtp_pass_env: SMTP_PASS
+  email_from_env: EMAIL_FROM
+  email_to_env: EMAIL_TO
+
+universe:
+  benchmark: SPY
+  sector_etfs:
+    Technology: XLK
+    Financials: XLF
+    Healthcare: XLV
+    Industrials: XLI
+    Energy: XLE
+    ConsumerDiscretionary: XLY
+    ConsumerStaples: XLP
+    CommunicationServices: XLC
+    Utilities: XLU
+    RealEstate: XLRE
+    Materials: XLB
+
+  positions:
+    AAPL: 0.18
+    MSFT: 0.15
+    NVDA: 0.12
+    JPM: 0.08
+    XOM: 0.08
+    JNJ: 0.08
+    V: 0.07
+    COST: 0.07
+    UNH: 0.07
+    AVGO: 0.10
+
+  target_weights:
+    AAPL: 0.12
+    MSFT: 0.12
+    NVDA: 0.07
+    JPM: 0.10
+    XOM: 0.10
+    JNJ: 0.09
+    V: 0.10
+    COST: 0.08
+    UNH: 0.10
+    AVGO: 0.12
+
+  ticker_sector:
+    AAPL: Technology
+    MSFT: Technology
+    NVDA: Technology
+    JPM: Financials
+    XOM: Energy
+    JNJ: Healthcare
+    V: Financials
+    COST: ConsumerStaples
+    UNH: Healthcare
+    AVGO: Technology
+
+  entry_prices:
+    AAPL: 205
+    MSFT: 410
+    NVDA: 122
+    JPM: 180
+    XOM: 115
+    JNJ: 160
+    V: 275
+    COST: 820
+    UNH: 530
+    AVGO: 1500
