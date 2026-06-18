@@ -11,7 +11,29 @@ import {
   ShieldCheck,
   TrendingUp
 } from "lucide-react";
-import { BacktestPayload, DashboardPayload, SectorSignal, fetchBacktest, fetchDashboard } from "./api";
+import {
+  Area,
+  AreaChart,
+  CartesianGrid,
+  Cell,
+  Pie,
+  PieChart,
+  ResponsiveContainer,
+  Tooltip,
+  XAxis,
+  YAxis
+} from "recharts";
+import {
+  BacktestPayload,
+  DashboardPayload,
+  OhlcPoint,
+  SectorSignal,
+  StrategyRule,
+  fetchBacktest,
+  fetchDashboard,
+  fetchOhlc,
+  fetchRules
+} from "./api";
 import "./styles.css";
 
 function App() {
@@ -19,6 +41,9 @@ function App() {
   const [lookbackDays, setLookbackDays] = useState(900);
   const [dashboard, setDashboard] = useState<DashboardPayload | null>(null);
   const [backtest, setBacktest] = useState<BacktestPayload | null>(null);
+  const [rules, setRules] = useState<StrategyRule[]>([]);
+  const [ohlc, setOhlc] = useState<OhlcPoint[]>([]);
+  const [hoverCandle, setHoverCandle] = useState<OhlcPoint | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -30,8 +55,15 @@ function App() {
         fetchDashboard(mode, lookbackDays),
         fetchBacktest(mode, Math.max(lookbackDays, 900))
       ]);
+      const [ruleList, ohlcRows] = await Promise.all([
+        fetchRules(),
+        fetchOhlc(mode, Math.min(lookbackDays, 900), dash.universe.benchmark)
+      ]);
       setDashboard(dash);
       setBacktest(bt);
+      setRules(ruleList);
+      setOhlc(ohlcRows);
+      setHoverCandle(null);
     } catch (err) {
       setError(err instanceof Error ? err.message : String(err));
     } finally {
@@ -119,11 +151,19 @@ function App() {
 
           <section className="dashboard-grid">
             <Panel title="Benchmark Path" icon={<Activity size={18} />} className="wide-panel">
-              <LineChart points={dashboard.benchmark_series} />
+              <BenchmarkArea points={dashboard.benchmark_series} />
             </Panel>
 
             <Panel title="Backtest Snapshot" icon={<BarChart3 size={18} />}>
               {backtest ? <BacktestMetrics backtest={backtest} /> : <EmptyState label="Run backtest to compare." />}
+            </Panel>
+
+            <Panel title={`${dashboard.universe.benchmark} K-Line`} icon={<Activity size={18} />} className="wide-panel">
+              <CandlestickChart rows={ohlc} hover={hoverCandle} setHover={setHoverCandle} />
+            </Panel>
+
+            <Panel title="Allocation Pie" icon={<Gauge size={18} />}>
+              <AllocationPie positions={dashboard.positions} />
             </Panel>
 
             <Panel title="Rule Recommendations" icon={<ShieldCheck size={18} />} className="wide-panel">
@@ -140,6 +180,10 @@ function App() {
 
             <Panel title="Allocation Drift" icon={<Gauge size={18} />}>
               <AllocationBars positions={dashboard.positions} targets={dashboard.target_weights} />
+            </Panel>
+
+            <Panel title="Strategy Rule Book" icon={<ShieldCheck size={18} />} className="wide-panel">
+              <RulesTable rules={rules} />
             </Panel>
           </section>
         </>
@@ -187,33 +231,88 @@ function Panel({
   );
 }
 
-function LineChart({ points }: { points: Array<{ date: string; value: number }> }) {
+function BenchmarkArea({ points }: { points: Array<{ date: string; value: number }> }) {
   if (points.length < 2) return <EmptyState label="No benchmark series available." />;
-  const width = 680;
-  const height = 220;
-  const values = points.map((point) => point.value);
-  const min = Math.min(...values);
-  const max = Math.max(...values);
-  const range = Math.max(0.0001, max - min);
-  const path = points
-    .map((point, index) => {
-      const x = (index / (points.length - 1)) * width;
-      const y = height - ((point.value - min) / range) * height;
-      return `${index === 0 ? "M" : "L"}${x.toFixed(2)},${y.toFixed(2)}`;
-    })
-    .join(" ");
 
   return (
     <div className="chart-wrap">
-      <svg viewBox={`0 0 ${width} ${height}`} role="img" aria-label="Benchmark price line">
-        <path className="area-path" d={`${path} L${width},${height} L0,${height} Z`} />
-        <path className="line-path" d={path} />
-      </svg>
-      <div className="chart-axis">
-        <span>{points[0].date}</span>
-        <span>{money(points[points.length - 1].value)}</span>
-        <span>{points[points.length - 1].date}</span>
+      <ResponsiveContainer width="100%" height={240}>
+        <AreaChart data={points} margin={{ top: 8, right: 14, left: 0, bottom: 0 }}>
+          <defs>
+            <linearGradient id="benchmarkGradient" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="5%" stopColor="#1f6f5b" stopOpacity={0.35} />
+              <stop offset="95%" stopColor="#1f6f5b" stopOpacity={0.02} />
+            </linearGradient>
+          </defs>
+          <CartesianGrid stroke="#e6ecef" vertical={false} />
+          <XAxis dataKey="date" tick={{ fontSize: 11 }} minTickGap={34} />
+          <YAxis domain={["dataMin", "dataMax"]} tick={{ fontSize: 11 }} width={48} />
+          <Tooltip content={<ChartTooltip />} />
+          <Area dataKey="value" name="Close" type="monotone" stroke="#1f6f5b" fill="url(#benchmarkGradient)" strokeWidth={2.5} />
+        </AreaChart>
+      </ResponsiveContainer>
+    </div>
+  );
+}
+
+function CandlestickChart({
+  rows,
+  hover,
+  setHover
+}: {
+  rows: OhlcPoint[];
+  hover: OhlcPoint | null;
+  setHover: (row: OhlcPoint | null) => void;
+}) {
+  const visible = rows.slice(-120);
+  if (visible.length < 2) return <EmptyState label="No OHLC data available." />;
+
+  const width = 720;
+  const height = 260;
+  const pad = 16;
+  const lows = visible.map((row) => row.low);
+  const highs = visible.map((row) => row.high);
+  const min = Math.min(...lows);
+  const max = Math.max(...highs);
+  const range = Math.max(0.001, max - min);
+  const candleWidth = Math.max(2, (width - pad * 2) / visible.length * 0.55);
+  const y = (value: number) => height - pad - ((value - min) / range) * (height - pad * 2);
+
+  return (
+    <div className="kline-wrap">
+      <div className="kline-meta">
+        {hover ? (
+          <>
+            <strong>{hover.date}</strong>
+            <span>O {money(hover.open)}</span>
+            <span>H {money(hover.high)}</span>
+            <span>L {money(hover.low)}</span>
+            <span>C {money(hover.close)}</span>
+          </>
+        ) : (
+          <span>Hover over candles for OHLC detail</span>
+        )}
       </div>
+      <svg className="kline-svg" viewBox={`0 0 ${width} ${height}`} role="img" aria-label="Candlestick chart">
+        {visible.map((row, index) => {
+          const x = pad + (index / Math.max(1, visible.length - 1)) * (width - pad * 2);
+          const up = row.close >= row.open;
+          const bodyTop = y(Math.max(row.open, row.close));
+          const bodyHeight = Math.max(1.5, Math.abs(y(row.open) - y(row.close)));
+          return (
+            <g
+              key={`${row.date}-${index}`}
+              onMouseEnter={() => setHover(row)}
+              onMouseLeave={() => setHover(null)}
+              className={up ? "candle up" : "candle down"}
+            >
+              <line x1={x} x2={x} y1={y(row.high)} y2={y(row.low)} />
+              <rect x={x - candleWidth / 2} y={bodyTop} width={candleWidth} height={bodyHeight} rx={1} />
+              <rect className="hitbox" x={x - candleWidth} y={0} width={candleWidth * 2} height={height} />
+            </g>
+          );
+        })}
+      </svg>
     </div>
   );
 }
@@ -226,6 +325,27 @@ function BacktestMetrics({ backtest }: { backtest: BacktestPayload }) {
       <Row label="Volatility" value={percent(backtest.metrics.annualized_volatility)} />
       <Row label="Sharpe" value={backtest.metrics.sharpe.toFixed(2)} />
       <Row label="Max drawdown" value={percent(backtest.metrics.max_drawdown)} />
+    </div>
+  );
+}
+
+function AllocationPie({ positions }: { positions: Record<string, number> }) {
+  const colors = ["#1f6f5b", "#4c88a3", "#dc8f2d", "#9b6aab", "#557a38", "#b5533f", "#456990", "#c49a2c"];
+  const data = Object.entries(positions)
+    .filter(([, value]) => value > 0)
+    .map(([name, value]) => ({ name, value }));
+  return (
+    <div className="pie-wrap">
+      <ResponsiveContainer width="100%" height={260}>
+        <PieChart>
+          <Pie data={data} dataKey="value" nameKey="name" innerRadius="48%" outerRadius="80%" paddingAngle={1}>
+            {data.map((entry, index) => (
+              <Cell key={entry.name} fill={colors[index % colors.length]} />
+            ))}
+          </Pie>
+          <Tooltip content={<PieTooltip />} />
+        </PieChart>
+      </ResponsiveContainer>
     </div>
   );
 }
@@ -315,6 +435,43 @@ function SectorTable({ signals }: { signals: SectorSignal[] }) {
   );
 }
 
+function RulesTable({ rules }: { rules: StrategyRule[] }) {
+  if (!rules.length) return <EmptyState label="Rule catalog unavailable." />;
+  return (
+    <div className="table-wrap rules-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Rule</th>
+            <th>Category</th>
+            <th>Formula</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rules.map((rule) => (
+            <tr key={rule.rule_id} title={`${rule.rationale} Evidence: ${rule.evidence}`}>
+              <td>
+                <strong>{rule.rule_id}</strong>
+                <span>{rule.name}</span>
+              </td>
+              <td>{rule.category}</td>
+              <td>
+                <code>{rule.formula}</code>
+              </td>
+              <td>
+                <span className={`badge ${rule.implementation_status}`}>{rule.implementation_status}</span>
+              </td>
+              <td>{rule.action}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
 function AllocationBars({ positions, targets }: { positions: Record<string, number>; targets: Record<string, number> }) {
   const tickers = Object.keys({ ...positions, ...targets }).filter((ticker) => ticker !== "CASH");
   return (
@@ -335,6 +492,31 @@ function AllocationBars({ positions, targets }: { positions: Record<string, numb
           </div>
         );
       })}
+    </div>
+  );
+}
+
+function ChartTooltip({ active, payload, label }: any) {
+  if (!active || !payload?.length) return null;
+  return (
+    <div className="chart-tooltip">
+      <strong>{label}</strong>
+      {payload.map((item: any) => (
+        <span key={item.dataKey}>
+          {item.name}: {money(Number(item.value))}
+        </span>
+      ))}
+    </div>
+  );
+}
+
+function PieTooltip({ active, payload }: any) {
+  if (!active || !payload?.length) return null;
+  const item = payload[0];
+  return (
+    <div className="chart-tooltip">
+      <strong>{item.name}</strong>
+      <span>{percent(Number(item.value))}</span>
     </div>
   );
 }

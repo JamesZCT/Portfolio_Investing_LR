@@ -8,6 +8,7 @@ from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 
 from .config import load_config
+from .data import fetch_ohlc, synthesize_ohlc_from_close
 from .engine import (
     backtest_to_payload,
     result_to_dashboard_payload,
@@ -15,6 +16,8 @@ from .engine import (
     run_backtest_for_config,
     run_buy_and_hold_baseline,
 )
+from .rules_catalog import rules_as_dicts
+from .sandbox import generate_sandbox_prices
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
@@ -57,6 +60,11 @@ def get_config(config_path: str = Query(str(DEFAULT_CONFIG))) -> dict[str, Any]:
     }
 
 
+@app.get("/api/rules")
+def rules() -> dict[str, Any]:
+    return {"rules": rules_as_dicts()}
+
+
 @app.get("/api/dashboard")
 def dashboard(
     config_path: str = Query(str(DEFAULT_CONFIG)),
@@ -73,6 +81,38 @@ def dashboard(
         payload["mode"] = mode
         payload["lookback_days"] = lookback_days
         return payload
+    except Exception as exc:  # noqa: BLE001
+        raise HTTPException(status_code=500, detail=f"{type(exc).__name__}: {exc}") from exc
+
+
+@app.get("/api/ohlc")
+def ohlc(
+    ticker: str = Query("SPY", min_length=1, max_length=12),
+    config_path: str = Query(str(DEFAULT_CONFIG)),
+    lookback_days: int = Query(260, ge=60, le=2000),
+    mode: str = Query("real", pattern="^(real|sandbox)$"),
+) -> dict[str, Any]:
+    try:
+        if mode == "sandbox":
+            cfg = load_config(_resolve_config(config_path))
+            prices = generate_sandbox_prices(cfg, days=lookback_days)
+            selected = ticker if ticker in prices.columns else cfg.universe.benchmark
+            frame = synthesize_ohlc_from_close(prices[selected])
+        else:
+            selected = ticker.upper()
+            frame = fetch_ohlc(selected, lookback_days=lookback_days)
+
+        rows = [
+            {
+                "date": str(idx.date()),
+                "open": float(row["open"]),
+                "high": float(row["high"]),
+                "low": float(row["low"]),
+                "close": float(row["close"]),
+            }
+            for idx, row in frame.iterrows()
+        ]
+        return {"ticker": selected, "ohlc": rows}
     except Exception as exc:  # noqa: BLE001
         raise HTTPException(status_code=500, detail=f"{type(exc).__name__}: {exc}") from exc
 

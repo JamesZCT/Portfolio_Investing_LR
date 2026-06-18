@@ -44,6 +44,8 @@ jobs:
               "/api/dashboard?mode=sandbox&lookback_days=420",
               "/api/backtest?mode=sandbox&lookback_days=420",
               "/api/strategies/compare?mode=sandbox&lookback_days=420",
+              "/api/rules",
+              "/api/ohlc?mode=sandbox&ticker=SPY&lookback_days=120",
           ]
           for path in paths:
               response = client.get(path)

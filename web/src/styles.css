@@ -294,6 +294,124 @@ td {
   color: #305b91;
 }
 
+.badge.implemented {
+  background: #e4f4eb;
+  color: #206845;
+}
+
+.badge.partial {
+  background: #fff4d6;
+  color: #7a5711;
+}
+
+.badge.planned {
+  background: #edf1f3;
+  color: #445158;
+}
+
+.chart-tooltip {
+  display: grid;
+  gap: 4px;
+  min-width: 126px;
+  border: 1px solid #cbd5da;
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 8px 24px rgba(28, 39, 44, 0.12);
+  padding: 9px 10px;
+  color: #263137;
+  font-size: 0.8rem;
+}
+
+.chart-tooltip strong {
+  color: #151b1f;
+}
+
+.kline-wrap {
+  display: grid;
+  gap: 10px;
+}
+
+.kline-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 28px;
+  color: #66737a;
+  font-size: 0.82rem;
+  flex-wrap: wrap;
+}
+
+.kline-meta strong {
+  color: #1e2528;
+}
+
+.kline-svg {
+  display: block;
+  width: 100%;
+  height: 260px;
+  border-radius: 7px;
+  background:
+    linear-gradient(#eef3f5 1px, transparent 1px),
+    linear-gradient(90deg, #eef3f5 1px, transparent 1px);
+  background-size: 100% 25%, 12.5% 100%;
+}
+
+.candle line {
+  stroke-width: 1.4;
+}
+
+.candle rect:not(.hitbox) {
+  stroke-width: 1;
+}
+
+.candle.up line,
+.candle.up rect:not(.hitbox) {
+  stroke: #1f6f5b;
+  fill: #1f6f5b;
+}
+
+.candle.down line,
+.candle.down rect:not(.hitbox) {
+  stroke: #b5533f;
+  fill: #b5533f;
+}
+
+.candle:hover line,
+.candle:hover rect:not(.hitbox) {
+  stroke-width: 2.4;
+}
+
+.hitbox {
+  fill: transparent;
+  pointer-events: all;
+}
+
+.pie-wrap {
+  height: 260px;
+}
+
+.rules-table td:first-child {
+  min-width: 180px;
+}
+
+.rules-table td:first-child strong,
+.rules-table td:first-child span {
+  display: block;
+}
+
+.rules-table td:first-child span {
+  margin-top: 4px;
+  color: #6d7a81;
+  font-size: 0.78rem;
+}
+
+code {
+  color: #24414a;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.76rem;
+  white-space: normal;
+}
+
 .metric-list,
 .risk-list,
 .allocation-list {
