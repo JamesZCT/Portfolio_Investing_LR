@@ -184,7 +184,21 @@ CSV format requirements:
 
 ## Netlify hosting
 
-The dashboard can run on Netlify without a local FastAPI server. The recommended free/low-friction path is:
+The dashboard can run on Netlify without a local FastAPI server. Netlify serves:
+- the React dashboard from `web/dist`
+- same-origin API routes from `web/netlify/functions/api.ts`
+- generated model snapshots from `web/public/data/*.json`
+
+The hosted `/api/*` contract is:
+- `/api/health`: Netlify Function health check
+- `/api/dashboard`: latest generated dashboard snapshot
+- `/api/backtest`: latest generated backtest snapshot
+- `/api/strategies/compare`: latest generated strategy comparison snapshot
+- `/api/rules`: rules catalog snapshot
+- `/api/ohlc`: benchmark OHLC snapshot
+- `/api/quotes`: live quote lookup with snapshot fallback
+
+The recommended free/low-friction path is:
 
 1. Generate public demo data from `example_config.yaml`:
 
@@ -202,7 +216,7 @@ npm run build
 
 3. Deploy with Netlify using the root `netlify.toml`.
 
-Netlify builds from `web/`, publishes `web/dist`, and sets `VITE_DATA_MODE=static` so the browser reads `/data/*.json` instead of trying to call `127.0.0.1`.
+Netlify builds from `web/`, publishes `web/dist`, and sets `VITE_DATA_MODE=api` with a blank `VITE_API_BASE` so the browser calls the same-origin `/api/*` functions. The frontend still falls back to `/data/*.json` snapshots if an API request fails.
 
 Keep personal `config.yaml` data private. If you generate snapshots from your real portfolio, treat the generated `web/public/data/*.json` files as sensitive unless the repo and Netlify site are private.
 
