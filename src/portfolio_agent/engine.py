@@ -11,7 +11,7 @@ from .config import AppConfig, load_config
 from .data import fetch_close_prices, load_close_prices_csv
 from .execution import SandboxExecutionAdapter, suggestions_to_orders
 from .ml import build_risk_predictions
-from .portfolio import propose_rebalance
+from .portfolio import apply_trade_suggestions, propose_rebalance
 from .report import write_report
 from .sandbox import generate_sandbox_prices
 from .signals import build_market_regime, build_sector_signals
@@ -204,6 +204,8 @@ def result_to_dashboard_payload(result: AnalysisResult) -> dict[str, Any]:
         "positions": cfg.universe.positions,
         "target_weights": cfg.universe.target_weights,
         "sector_weights": _sector_weights(cfg.universe.positions, cfg.universe.ticker_sector),
+        "advisor_summary": _advisor_summary(result),
+        "recommended_distribution": _recommended_distribution(result),
         "benchmark_series": benchmark_series,
         "price_as_of": str(result.prices.index.max().date()) if not result.prices.empty else None,
         "universe": {
@@ -246,3 +248,150 @@ def _sector_weights(positions: dict[str, float], ticker_sector: dict[str, str]) 
         sector = ticker_sector.get(ticker, "Unknown")
         out[sector] = out.get(sector, 0.0) + weight
     return out
+
+
+def _advisor_summary(result: AnalysisResult) -> list[dict[str, object]]:
+    cfg = result.config
+    out: list[dict[str, object]] = []
+    regime = result.market_regime
+
+    if regime.trend_state == "bearish":
+        out.append(
+            {
+                "rank": 1,
+                "severity": "high",
+                "title": "先降低风险敞口",
+                "detail": f"{regime.benchmark} 低于 MA{cfg.indicators.trend_ma_window}，规则系统倾向提高现金或减少高风险仓位。",
+                "rule_ids": ["TREND_200DMA", "CASH_BUFFER"],
+            }
+        )
+    else:
+        out.append(
+            {
+                "rank": 1,
+                "severity": "medium",
+                "title": "趋势仍支持持有风险资产",
+                "detail": f"{regime.benchmark} 高于 MA{cfg.indicators.trend_ma_window}，但仍需按仓位上限和估值极值规则修剪过度集中。",
+                "rule_ids": ["TREND_200DMA", "POSITION_CAP", "SECTOR_CAP"],
+            }
+        )
+
+    ranked_suggestions = sorted(
+        [item for item in result.suggestions if item.action in {"trim", "add", "hold"}],
+        key=lambda item: abs(item.delta_weight),
+        reverse=True,
+    )
+    for index, suggestion in enumerate(ranked_suggestions[:5], start=2):
+        if suggestion.ticker == "CASH":
+            title = "建议提高现金缓冲"
+        elif suggestion.action == "trim":
+            title = f"优先修剪 {suggestion.ticker}"
+        elif suggestion.action == "add":
+            title = f"可以考虑补足 {suggestion.ticker}"
+        else:
+            title = f"保持 {suggestion.ticker}"
+        out.append(
+            {
+                "rank": index,
+                "severity": _severity_for_suggestion(suggestion),
+                "title": title,
+                "detail": f"{suggestion.action.upper()} {suggestion.ticker} {100 * suggestion.delta_weight:+.2f}%：{suggestion.reason}",
+                "rule_ids": list(suggestion.rule_ids),
+            }
+        )
+
+    high_risk = sorted(
+        [item for item in result.risk_predictions.values() if item.risk_level in {"medium", "high"}],
+        key=lambda item: item.risk_probability,
+        reverse=True,
+    )
+    if high_risk:
+        out.append(
+            {
+                "rank": len(out) + 1,
+                "severity": "medium",
+                "title": "ML 风险模型提示需复查",
+                "detail": ", ".join(f"{item.ticker} {100 * item.risk_probability:.1f}%" for item in high_risk[:4]),
+                "rule_ids": ["ML_DRAWDOWN_RISK"],
+            }
+        )
+
+    return out
+
+
+def _recommended_distribution(result: AnalysisResult) -> list[dict[str, object]]:
+    cfg = result.config
+    current = dict(cfg.universe.positions)
+    recommended = apply_trade_suggestions(current, result.suggestions)
+    suggestion_by_ticker: dict[str, list] = {}
+    for suggestion in result.suggestions:
+        suggestion_by_ticker.setdefault(suggestion.ticker, []).append(suggestion)
+
+    tickers = sorted(set(current) | set(cfg.universe.target_weights) | set(recommended) | {"CASH"})
+    rows: list[dict[str, object]] = []
+    for ticker in tickers:
+        current_weight = current.get(ticker, 0.0)
+        target_weight = cfg.universe.target_weights.get(ticker, 0.0)
+        recommended_weight = recommended.get(ticker, 0.0)
+        delta = recommended_weight - current_weight
+        suggestions = suggestion_by_ticker.get(ticker, [])
+        rule_ids = sorted({rule for suggestion in suggestions for rule in suggestion.rule_ids})
+        reason = "; ".join(s.reason for s in suggestions if s.reason) or _default_distribution_reason(
+            ticker, current_weight, target_weight, recommended_weight
+        )
+        action = _distribution_action(delta, suggestions)
+        priority = abs(delta) + (0.05 if action in {"trim", "add", "raise_cash"} else 0.0)
+        rows.append(
+            {
+                "ticker": ticker,
+                "sector": cfg.universe.ticker_sector.get(ticker, "Cash" if ticker == "CASH" else "Unknown"),
+                "current_weight": current_weight,
+                "target_weight": target_weight,
+                "recommended_weight": recommended_weight,
+                "delta_weight": delta,
+                "action": action,
+                "reason": reason,
+                "rule_ids": rule_ids,
+                "priority": priority,
+            }
+        )
+
+    return sorted(rows, key=lambda row: (float(row["priority"]), abs(float(row["delta_weight"]))), reverse=True)
+
+
+def _severity_for_suggestion(suggestion) -> str:
+    if suggestion.action == "trim" and abs(suggestion.delta_weight) >= 0.05:
+        return "high"
+    if suggestion.ticker == "CASH" or abs(suggestion.delta_weight) >= 0.03:
+        return "medium"
+    return "low"
+
+
+def _distribution_action(delta: float, suggestions: list) -> str:
+    if suggestions:
+        actions = {s.action for s in suggestions}
+        if "trim" in actions:
+            return "trim"
+        if "add" in actions:
+            return "add"
+        if any(s.ticker == "CASH" for s in suggestions):
+            return "raise_cash"
+        if "block" in actions:
+            return "blocked"
+    if delta > 0.0025:
+        return "increase"
+    if delta < -0.0025:
+        return "decrease"
+    return "hold"
+
+
+def _default_distribution_reason(ticker: str, current: float, target: float, recommended: float) -> str:
+    if ticker == "CASH":
+        return "现金作为风险缓冲和机会资金。"
+    if abs(recommended - current) < 0.0025:
+        return "当前没有规则触发明显调整。"
+    if recommended > current:
+        return "按目标权重和风险规则，建议权重高于当前。"
+    if target and current > target:
+        return "当前权重高于目标权重，规则系统倾向降低。"
+    return "按当前规则计算后的建议权重低于当前。"

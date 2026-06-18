@@ -56,6 +56,25 @@ export type DashboardPayload = {
   positions: Record<string, number>;
   target_weights: Record<string, number>;
   sector_weights: Record<string, number>;
+  advisor_summary: Array<{
+    rank: number;
+    severity: string;
+    title: string;
+    detail: string;
+    rule_ids: string[];
+  }>;
+  recommended_distribution: Array<{
+    ticker: string;
+    sector: string;
+    current_weight: number;
+    target_weight: number;
+    recommended_weight: number;
+    delta_weight: number;
+    action: string;
+    reason: string;
+    rule_ids: string[];
+    priority: number;
+  }>;
   benchmark_series: SeriesPoint[];
   universe: {
     benchmark: string;

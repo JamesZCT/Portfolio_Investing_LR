@@ -21,7 +21,7 @@ from .sandbox import generate_sandbox_prices
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
-DEFAULT_CONFIG = PROJECT_ROOT / "example_config.yaml"
+DEFAULT_CONFIG = PROJECT_ROOT / "config.yaml" if (PROJECT_ROOT / "config.yaml").exists() else PROJECT_ROOT / "example_config.yaml"
 
 app = FastAPI(
     title="Portfolio Investing Lab API",

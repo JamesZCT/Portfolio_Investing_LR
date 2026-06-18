@@ -156,6 +156,15 @@ function App() {
             />
           </section>
 
+          <section className="conclusion-grid">
+            <Panel title="Key Takeaways" icon={<ShieldCheck size={18} />}>
+              <TakeawayList items={dashboard.advisor_summary} />
+            </Panel>
+            <Panel title="Suggested Portfolio Distribution" icon={<Gauge size={18} />} className="wide-panel">
+              <DistributionTable rows={dashboard.recommended_distribution} />
+            </Panel>
+          </section>
+
           <section className="dashboard-grid">
             <Panel title="Benchmark Path" icon={<Activity size={18} />} className="wide-panel">
               <BenchmarkArea points={dashboard.benchmark_series} />
@@ -472,6 +481,67 @@ function RecommendationTable({ suggestions }: { suggestions: DashboardPayload["s
               <td>{percent(item.delta_weight)}</td>
               <td>{item.rule_ids.join(", ") || "-"}</td>
               <td>{item.reason}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+function TakeawayList({ items }: { items: DashboardPayload["advisor_summary"] }) {
+  if (!items.length) return <EmptyState label="No conclusions available." />;
+  return (
+    <div className="takeaway-list">
+      {items.map((item) => (
+        <article className={`takeaway ${item.severity}`} key={`${item.rank}-${item.title}`}>
+          <div className="takeaway-rank">{item.rank}</div>
+          <div>
+            <strong>{item.title}</strong>
+            <p>{item.detail}</p>
+            <span>{item.rule_ids.join(", ")}</span>
+          </div>
+        </article>
+      ))}
+    </div>
+  );
+}
+
+function DistributionTable({ rows }: { rows: DashboardPayload["recommended_distribution"] }) {
+  const visible = rows.filter((row) => row.current_weight > 0 || row.recommended_weight > 0).slice(0, 14);
+  return (
+    <div className="table-wrap distribution-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Priority</th>
+            <th>Ticker</th>
+            <th>Action</th>
+            <th>Current</th>
+            <th>Target</th>
+            <th>Suggested</th>
+            <th>Delta</th>
+            <th>Reason</th>
+          </tr>
+        </thead>
+        <tbody>
+          {visible.map((row, index) => (
+            <tr key={row.ticker} title={`Rules: ${row.rule_ids.join(", ") || "none"}`}>
+              <td>{index + 1}</td>
+              <td>
+                <strong>{row.ticker}</strong>
+                <span>{row.sector}</span>
+              </td>
+              <td>
+                <span className={`badge ${row.action}`}>{row.action}</span>
+              </td>
+              <td>{percent(row.current_weight)}</td>
+              <td>{percent(row.target_weight)}</td>
+              <td>
+                <strong>{percent(row.recommended_weight)}</strong>
+              </td>
+              <td className={row.delta_weight >= 0 ? "positive" : "negative"}>{percent(row.delta_weight)}</td>
+              <td>{row.reason}</td>
             </tr>
           ))}
         </tbody>
