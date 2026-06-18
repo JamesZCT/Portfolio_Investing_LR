@@ -1,7 +1,7 @@
 [build]
   base = "web"
   command = "npm ci && npm run build"
-  publish = "web/dist"
+  publish = "dist"
 
 [build.environment]
   NODE_VERSION = "20"
@@ -9,7 +9,7 @@
   VITE_DATA_MODE = "api"
 
 [functions]
-  directory = "web/netlify/functions"
+  directory = "netlify/functions"
 
 [[redirects]]
   from = "/*"
