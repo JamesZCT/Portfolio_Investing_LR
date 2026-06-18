@@ -229,8 +229,8 @@ The repository includes:
 
 Recommended private repository secrets:
 - `PORTFOLIO_CONFIG_YAML`: optional private portfolio config YAML. If absent, workflows use `example_config.yaml`.
-- `NETLIFY_SITE_ID`: Netlify site id for deployment.
-- `NETLIFY_AUTH_TOKEN`: Netlify personal access token for GitHub Actions deployment.
+- `NETLIFY_SITE_ID`: optional Netlify site id for fallback GitHub Actions deployment.
+- `NETLIFY_AUTH_TOKEN`: optional Netlify personal access token for fallback GitHub Actions deployment.
 
 The current Netlify site id is:
 
@@ -238,7 +238,13 @@ The current Netlify site id is:
 fb8a2f11-95d3-45e9-bc1b-6357eb48a5bb
 ```
 
-If `NETLIFY_AUTH_TOKEN` and `NETLIFY_SITE_ID` are set, the snapshot refresh workflow deploys `web/dist` to Netlify after rebuilding.
+Netlify continuous deployment is connected to the private GitHub repository:
+
+```text
+https://github.com/JamesZCT/Portfolio_Investing_LR
+```
+
+The scheduled snapshot workflow commits refreshed market data to `main`; Netlify then deploys automatically from that GitHub push. If `NETLIFY_AUTH_TOKEN` and `NETLIFY_SITE_ID` are also set, the workflow can perform a direct deploy as a fallback.
 
 ## Config
 
