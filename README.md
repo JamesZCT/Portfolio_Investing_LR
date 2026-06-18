@@ -227,10 +227,12 @@ The repository includes:
 - `.github/workflows/refresh-web-snapshot.yml`: refreshes `web/public/data/*.json` on a market-day schedule or manual trigger.
 - `.github/workflows/daily-portfolio-agent.yml`: runs the research agent and uploads report artifacts.
 
-Recommended private repository secrets:
+Required private repository secrets for hands-free deploys:
+- `NETLIFY_AUTH_TOKEN`: Netlify personal access token used by GitHub Actions to deploy the rebuilt site.
+- `NETLIFY_SITE_ID`: Netlify site id for deployment.
+
+Optional private repository secrets:
 - `PORTFOLIO_CONFIG_YAML`: optional private portfolio config YAML. If absent, workflows use `example_config.yaml`.
-- `NETLIFY_SITE_ID`: optional Netlify site id for fallback GitHub Actions deployment.
-- `NETLIFY_AUTH_TOKEN`: optional Netlify personal access token for fallback GitHub Actions deployment.
 
 The current Netlify site id is:
 
@@ -238,13 +240,13 @@ The current Netlify site id is:
 fb8a2f11-95d3-45e9-bc1b-6357eb48a5bb
 ```
 
-Netlify continuous deployment is connected to the private GitHub repository:
+The project source repository is:
 
 ```text
 https://github.com/JamesZCT/Portfolio_Investing_LR
 ```
 
-The scheduled snapshot workflow commits refreshed market data to `main`; Netlify then deploys automatically from that GitHub push. If `NETLIFY_AUTH_TOKEN` and `NETLIFY_SITE_ID` are also set, the workflow can perform a direct deploy as a fallback.
+The scheduled snapshot workflow commits refreshed market data to `main` and deploys the rebuilt frontend/functions through the Netlify CLI. Netlify Git builds are intentionally paused because this Free-plan private repo is blocked by Netlify's verified contributor policy; GitHub Actions direct deploy avoids that limitation once `NETLIFY_AUTH_TOKEN` is set.
 
 ## Config
 
