@@ -117,7 +117,13 @@ npm install
 npm run dev
 ```
 
-8. Send notifications on run/backtest
+8. Export a static web snapshot for Netlify or offline viewing
+
+```bash
+python scripts/export_web_snapshot.py --config example_config.yaml --mode real --lookback-days 900
+```
+
+9. Send notifications on run/backtest
 
 ```bash
 portfolio-agent run --config config.yaml --out outputs --notify
@@ -143,6 +149,30 @@ CSV format requirements:
 - schedule: daily at `13:30 UTC`
 - optional secret: `PORTFOLIO_CONFIG_YAML` (raw YAML content)
 - workflow outputs are uploaded as artifacts
+
+## Netlify hosting
+
+The dashboard can run on Netlify without a local FastAPI server. The recommended free/low-friction path is:
+
+1. Generate public demo data from `example_config.yaml`:
+
+```bash
+python scripts/export_web_snapshot.py --config example_config.yaml --mode real --lookback-days 900
+```
+
+2. Build the frontend:
+
+```bash
+cd web
+npm ci
+npm run build
+```
+
+3. Deploy with Netlify using the root `netlify.toml`.
+
+Netlify builds from `web/`, publishes `web/dist`, and sets `VITE_DATA_MODE=static` so the browser reads `/data/*.json` instead of trying to call `127.0.0.1`.
+
+Keep personal `config.yaml` data private. If you generate snapshots from your real portfolio, treat the generated `web/public/data/*.json` files as sensitive unless the repo and Netlify site are private.
 
 ## Config
 

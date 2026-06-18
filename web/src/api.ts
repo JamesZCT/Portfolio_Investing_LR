@@ -124,51 +124,60 @@ export type OhlcPoint = {
 };
 
 const API_BASE = import.meta.env.VITE_API_BASE ?? "http://127.0.0.1:8000";
+const DATA_MODE = import.meta.env.VITE_DATA_MODE ?? "api";
 
 export async function fetchDashboard(mode: string, lookbackDays: number): Promise<DashboardPayload> {
   const params = new URLSearchParams({ mode, lookback_days: String(lookbackDays) });
-  const response = await fetch(`${API_BASE}/api/dashboard?${params.toString()}`);
-  if (!response.ok) {
-    throw new Error(await readError(response));
-  }
-  return response.json();
+  return fetchJson<DashboardPayload>(`${API_BASE}/api/dashboard?${params.toString()}`, "/data/dashboard.json");
 }
 
 export async function fetchBacktest(mode: string, lookbackDays: number): Promise<BacktestPayload> {
   const params = new URLSearchParams({ mode, lookback_days: String(lookbackDays) });
-  const response = await fetch(`${API_BASE}/api/backtest?${params.toString()}`);
-  if (!response.ok) {
-    throw new Error(await readError(response));
-  }
-  return response.json();
+  return fetchJson<BacktestPayload>(`${API_BASE}/api/backtest?${params.toString()}`, "/data/backtest.json");
 }
 
 export async function fetchStrategyComparison(mode: string, lookbackDays: number): Promise<StrategyComparisonPayload> {
   const params = new URLSearchParams({ mode, lookback_days: String(Math.max(lookbackDays, 900)) });
-  const response = await fetch(`${API_BASE}/api/strategies/compare?${params.toString()}`);
-  if (!response.ok) {
-    throw new Error(await readError(response));
-  }
-  return response.json();
+  return fetchJson<StrategyComparisonPayload>(`${API_BASE}/api/strategies/compare?${params.toString()}`, "/data/strategies.json");
 }
 
 export async function fetchRules(): Promise<StrategyRule[]> {
-  const response = await fetch(`${API_BASE}/api/rules`);
-  if (!response.ok) {
-    throw new Error(await readError(response));
-  }
-  const data = await response.json();
+  const data = await fetchJson<{ rules: StrategyRule[] }>(`${API_BASE}/api/rules`, "/data/rules.json");
   return data.rules;
 }
 
 export async function fetchOhlc(mode: string, lookbackDays: number, ticker: string): Promise<OhlcPoint[]> {
   const params = new URLSearchParams({ mode, lookback_days: String(Math.min(lookbackDays, 1200)), ticker });
-  const response = await fetch(`${API_BASE}/api/ohlc?${params.toString()}`);
+  const data = await fetchJson<{ ohlc: OhlcPoint[] }>(`${API_BASE}/api/ohlc?${params.toString()}`, "/data/ohlc.json");
+  return data.ohlc;
+}
+
+async function fetchJson<T>(apiUrl: string, snapshotUrl: string): Promise<T> {
+  if (DATA_MODE === "static") {
+    return fetchSnapshot<T>(snapshotUrl);
+  }
+
+  try {
+    const response = await fetch(apiUrl);
+    if (!response.ok) {
+      throw new Error(await readError(response));
+    }
+    return response.json();
+  } catch (error) {
+    try {
+      return await fetchSnapshot<T>(snapshotUrl);
+    } catch {
+      throw error;
+    }
+  }
+}
+
+async function fetchSnapshot<T>(snapshotUrl: string): Promise<T> {
+  const response = await fetch(snapshotUrl);
   if (!response.ok) {
     throw new Error(await readError(response));
   }
-  const data = await response.json();
-  return data.ohlc;
+  return response.json();
 }
 
 async function readError(response: Response): Promise<string> {

@@ -3,6 +3,7 @@ __pycache__/
 *.pyc
 *.egg-info/
 .DS_Store
+.netlify/
 outputs/
 config.yaml
 web/node_modules/
