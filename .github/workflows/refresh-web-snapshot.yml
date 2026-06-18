@@ -1,0 +1,86 @@
+name: Refresh Web Snapshot
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "Data mode for snapshot generation"
+        default: "real"
+        required: true
+        type: choice
+        options:
+          - real
+          - sandbox
+  schedule:
+    - cron: "15 22 * * 1-5"
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    env:
+      SNAPSHOT_MODE: ${{ inputs.mode || 'real' }}
+      NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+      NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install -e .
+
+      - name: Prepare config
+        run: |
+          if [ -n "${{ secrets.PORTFOLIO_CONFIG_YAML }}" ]; then
+            printf '%s' "${{ secrets.PORTFOLIO_CONFIG_YAML }}" > config.yaml
+            echo "Using PORTFOLIO_CONFIG_YAML secret."
+          else
+            cp example_config.yaml config.yaml
+            echo "Using example_config.yaml."
+          fi
+
+      - name: Export web snapshot
+        run: python scripts/export_web_snapshot.py --config config.yaml --mode "$SNAPSHOT_MODE" --lookback-days 900
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - name: Build frontend
+        working-directory: web
+        run: |
+          npm ci
+          npm run build
+
+      - name: Commit refreshed snapshot
+        run: |
+          if git diff --quiet -- web/public/data; then
+            echo "No snapshot changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add web/public/data
+          git commit -m "Refresh market data snapshot"
+          git push
+
+      - name: Deploy to Netlify
+        if: ${{ env.NETLIFY_AUTH_TOKEN != '' && env.NETLIFY_SITE_ID != '' }}
+        working-directory: web
+        run: npx netlify deploy --prod --dir=dist --site "$NETLIFY_SITE_ID" --auth "$NETLIFY_AUTH_TOKEN"

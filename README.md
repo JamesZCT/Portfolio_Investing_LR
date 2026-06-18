@@ -71,6 +71,38 @@ source .venv/bin/activate
 
 `scripts/bootstrap.sh` creates `.venv` and installs all required packages from `requirements.txt` and `pyproject.toml`.
 
+## Full-stack local run
+
+1. Run the backend API:
+
+```bash
+portfolio-agent-api
+```
+
+2. Run the frontend:
+
+```bash
+cd web
+npm ci
+npm run dev
+```
+
+3. Open `http://127.0.0.1:5173`.
+
+Docker is also supported:
+
+```bash
+docker compose up --build
+```
+
+The API exposes:
+- `/api/dashboard`
+- `/api/backtest`
+- `/api/strategies/compare`
+- `/api/ohlc`
+- `/api/quotes`
+- `/api/rules`
+
 ## Commands
 
 1. Run latest analysis
@@ -173,6 +205,26 @@ npm run build
 Netlify builds from `web/`, publishes `web/dist`, and sets `VITE_DATA_MODE=static` so the browser reads `/data/*.json` instead of trying to call `127.0.0.1`.
 
 Keep personal `config.yaml` data private. If you generate snapshots from your real portfolio, treat the generated `web/public/data/*.json` files as sensitive unless the repo and Netlify site are private.
+
+## GitHub and CI/CD
+
+The repository includes:
+- `.github/workflows/ci.yml`: runs Python compile checks, unit tests, API sandbox smoke tests, snapshot export, and frontend build on push/PR.
+- `.github/workflows/refresh-web-snapshot.yml`: refreshes `web/public/data/*.json` on a market-day schedule or manual trigger.
+- `.github/workflows/daily-portfolio-agent.yml`: runs the research agent and uploads report artifacts.
+
+Recommended private repository secrets:
+- `PORTFOLIO_CONFIG_YAML`: optional private portfolio config YAML. If absent, workflows use `example_config.yaml`.
+- `NETLIFY_SITE_ID`: Netlify site id for deployment.
+- `NETLIFY_AUTH_TOKEN`: Netlify personal access token for GitHub Actions deployment.
+
+The current Netlify site id is:
+
+```text
+fb8a2f11-95d3-45e9-bc1b-6357eb48a5bb
+```
+
+If `NETLIFY_AUTH_TOKEN` and `NETLIFY_SITE_ID` are set, the snapshot refresh workflow deploys `web/dist` to Netlify after rebuilding.
 
 ## Config
 

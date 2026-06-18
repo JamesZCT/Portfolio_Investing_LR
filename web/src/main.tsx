@@ -28,12 +28,14 @@ import {
 import {
   BacktestPayload,
   DashboardPayload,
+  LatestQuote,
   OhlcPoint,
   SectorSignal,
   StrategyComparisonPayload,
   StrategyRule,
   fetchBacktest,
   fetchDashboard,
+  fetchLatestQuotes,
   fetchOhlc,
   fetchRules,
   fetchStrategyComparison
@@ -48,6 +50,7 @@ function App() {
   const [strategyComparison, setStrategyComparison] = useState<StrategyComparisonPayload | null>(null);
   const [rules, setRules] = useState<StrategyRule[]>([]);
   const [ohlc, setOhlc] = useState<OhlcPoint[]>([]);
+  const [quotes, setQuotes] = useState<LatestQuote[]>([]);
   const [hoverCandle, setHoverCandle] = useState<OhlcPoint | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -61,15 +64,18 @@ function App() {
         fetchBacktest(mode, Math.max(lookbackDays, 900)),
         fetchStrategyComparison(mode, Math.max(lookbackDays, 900))
       ]);
-      const [ruleList, ohlcRows] = await Promise.all([
+      const quoteTickers = [dash.universe.benchmark, ...dash.universe.tickers].slice(0, 12);
+      const [ruleList, ohlcRows, quoteRows] = await Promise.all([
         fetchRules(),
-        fetchOhlc(mode, Math.min(lookbackDays, 900), dash.universe.benchmark)
+        fetchOhlc(mode, Math.min(lookbackDays, 900), dash.universe.benchmark),
+        fetchLatestQuotes(quoteTickers)
       ]);
       setDashboard(dash);
       setBacktest(bt);
       setStrategyComparison(comparison);
       setRules(ruleList);
       setOhlc(ohlcRows);
+      setQuotes(quoteRows);
       setHoverCandle(null);
     } catch (err) {
       setError(err instanceof Error ? err.message : String(err));
@@ -172,6 +178,10 @@ function App() {
 
             <Panel title="Backtest Snapshot" icon={<BarChart3 size={18} />}>
               {backtest ? <BacktestMetrics backtest={backtest} /> : <EmptyState label="Run backtest to compare." />}
+            </Panel>
+
+            <Panel title="Latest Market Data" icon={<Activity size={18} />}>
+              <QuotesTable quotes={quotes} />
             </Panel>
 
             <Panel title={`${dashboard.universe.benchmark} K-Line`} icon={<Activity size={18} />} className="wide-panel">
@@ -349,6 +359,39 @@ function BacktestMetrics({ backtest }: { backtest: BacktestPayload }) {
       <Row label="Volatility" value={percent(backtest.metrics.annualized_volatility)} />
       <Row label="Sharpe" value={backtest.metrics.sharpe.toFixed(2)} />
       <Row label="Max drawdown" value={percent(backtest.metrics.max_drawdown)} />
+    </div>
+  );
+}
+
+function QuotesTable({ quotes }: { quotes: LatestQuote[] }) {
+  if (!quotes.length) return <EmptyState label="Latest market data unavailable." />;
+  return (
+    <div className="table-wrap compact-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Ticker</th>
+            <th>Price</th>
+            <th>Change</th>
+            <th>As of</th>
+          </tr>
+        </thead>
+        <tbody>
+          {quotes.slice(0, 8).map((quote) => (
+            <tr key={quote.ticker} title={`Source: ${quote.source}`}>
+              <td>
+                <strong>{quote.ticker}</strong>
+              </td>
+              <td>{money(quote.price)}</td>
+              <td className={quote.change >= 0 ? "positive" : "negative"}>
+                {quote.change >= 0 ? "+" : ""}
+                {money(quote.change)} / {percent(quote.change_pct)}
+              </td>
+              <td>{quote.as_of}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }

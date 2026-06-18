@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import sys
+import os
 from pathlib import Path
 from typing import Any
 
@@ -8,7 +9,7 @@ from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 
 from .config import load_config
-from .data import fetch_ohlc, synthesize_ohlc_from_close
+from .data import fetch_latest_quotes, fetch_ohlc, synthesize_ohlc_from_close
 from .engine import (
     backtest_to_payload,
     result_to_dashboard_payload,
@@ -23,6 +24,11 @@ from .sandbox import generate_sandbox_prices
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_CONFIG = PROJECT_ROOT / "config.yaml" if (PROJECT_ROOT / "config.yaml").exists() else PROJECT_ROOT / "example_config.yaml"
 
+
+def _extra_cors_origins() -> list[str]:
+    raw = os.getenv("PORTFOLIO_AGENT_CORS_ORIGINS", "")
+    return [origin.strip() for origin in raw.split(",") if origin.strip()]
+
 app = FastAPI(
     title="Portfolio Investing Lab API",
     version="0.1.0",
@@ -34,6 +40,8 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:5173",
         "http://127.0.0.1:5173",
+        "https://portfolio-investing-lr.netlify.app",
+        *_extra_cors_origins(),
     ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -113,6 +121,19 @@ def ohlc(
             for idx, row in frame.iterrows()
         ]
         return {"ticker": selected, "ohlc": rows}
+    except Exception as exc:  # noqa: BLE001
+        raise HTTPException(status_code=500, detail=f"{type(exc).__name__}: {exc}") from exc
+
+
+@app.get("/api/quotes")
+def quotes(
+    tickers: str = Query("SPY", min_length=1, max_length=240),
+) -> dict[str, Any]:
+    try:
+        symbols = [ticker.strip().upper() for ticker in tickers.split(",") if ticker.strip()]
+        if len(symbols) > 40:
+            raise ValueError("At most 40 tickers are supported per quote request")
+        return {"quotes": fetch_latest_quotes(symbols)}
     except Exception as exc:  # noqa: BLE001
         raise HTTPException(status_code=500, detail=f"{type(exc).__name__}: {exc}") from exc
 

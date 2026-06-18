@@ -1,0 +1,202 @@
+{
+  "quotes": [
+    {
+      "as_of": "2026-06-17",
+      "change": -9.3699951171875,
+      "change_pct": -0.01248783189233058,
+      "previous_close": 750.3300170898438,
+      "price": 740.9600219726562,
+      "source": "snapshot",
+      "ticker": "SPY"
+    },
+    {
+      "as_of": "2026-06-17",
+      "change": -3.28997802734375,
+      "change_pct": -0.010994446379866964,
+      "previous_close": 299.239990234375,
+      "price": 295.95001220703125,
+      "source": "snapshot",
+      "ticker": "AAPL"
+    },
+    {
+      "as_of": "2026-06-17",
+      "change": -14.91998291015625,
+      "change_pct": -0.03788432424867809,
+      "previous_close": 393.8299865722656,
+      "price": 378.9100036621094,
+      "source": "snapshot",
+      "ticker": "MSFT"
+    },
+    {
+      "as_of": "2026-06-17",
+      "change": -2.760009765625,
+      "change_pct": -0.01330702336865737,
+      "previous_close": 207.41000366210938,
+      "price": 204.64999389648438,
+      "source": "snapshot",
+      "ticker": "NVDA"
+    },
+    {
+      "as_of": "2026-06-17",
+      "change": 2.319976806640625,
+      "change_pct": 0.007006029788045043,
+      "previous_close": 331.1400146484375,
+      "price": 333.4599914550781,
+      "source": "snapshot",
+      "ticker": "JPM"
+    },
+    {
+      "as_of": "2026-06-17",
+      "change": -1.1199951171875,
+      "change_pct": -0.007895073398905467,
+      "previous_close": 141.86000061035156,
+      "price": 140.74000549316406,
+      "source": "snapshot",
+      "ticker": "XOM"
+    },
+    {
+      "as_of": "2026-06-17",
+      "change": -0.9799957275390625,
+      "change_pct": -0.004167002968190763,
+      "previous_close": 235.17999267578125,
+      "price": 234.1999969482422,
+      "source": "snapshot",
+      "ticker": "JNJ"
+    },
+    {
+      "as_of": "2026-06-17",
+      "change": -2.739990234375,
+      "change_pct": -0.008225234973995197,
+      "previous_close": 333.1199951171875,
+      "price": 330.3800048828125,
+      "source": "snapshot",
+      "ticker": "V"
+    },
+    {
+      "as_of": "2026-06-17",
+      "change": -21.0899658203125,
+      "change_pct": -0.021374676670111187,
+      "previous_close": 986.6799926757812,
+      "price": 965.5900268554688,
+      "source": "snapshot",
+      "ticker": "COST"
+    },
+    {
+      "as_of": "2026-06-17",
+      "change": -8.1199951171875,
+      "change_pct": -0.019919036523399117,
+      "previous_close": 407.6499938964844,
+      "price": 399.5299987792969,
+      "source": "snapshot",
+      "ticker": "UNH"
+    },
+    {
+      "as_of": "2026-06-17",
+      "change": 16.19000244140625,
+      "change_pct": 0.04297736404301576,
+      "previous_close": 376.7099914550781,
+      "price": 392.8999938964844,
+      "source": "snapshot",
+      "ticker": "AVGO"
+    },
+    {
+      "as_of": "2026-06-17",
+      "change": -0.6399993896484375,
+      "change_pct": -0.0034327364367503395,
+      "previous_close": 186.44000244140625,
+      "price": 185.8000030517578,
+      "source": "snapshot",
+      "ticker": "XLK"
+    },
+    {
+      "as_of": "2026-06-17",
+      "change": -0.2999992370605469,
+      "change_pct": -0.005519765326274892,
+      "previous_close": 54.349998474121094,
+      "price": 54.04999923706055,
+      "source": "snapshot",
+      "ticker": "XLF"
+    },
+    {
+      "as_of": "2026-06-17",
+      "change": -2.2299957275390625,
+      "change_pct": -0.01458085322310237,
+      "previous_close": 152.94000244140625,
+      "price": 150.7100067138672,
+      "source": "snapshot",
+      "ticker": "XLV"
+    },
+    {
+      "as_of": "2026-06-17",
+      "change": -0.25,
+      "change_pct": -0.0013900472144332784,
+      "previous_close": 179.85000610351562,
+      "price": 179.60000610351562,
+      "source": "snapshot",
+      "ticker": "XLI"
+    },
+    {
+      "as_of": "2026-06-17",
+      "change": -0.69000244140625,
+      "change_pct": -0.01246391679549998,
+      "previous_close": 55.36000061035156,
+      "price": 54.66999816894531,
+      "source": "snapshot",
+      "ticker": "XLE"
+    },
+    {
+      "as_of": "2026-06-17",
+      "change": -2.970001220703125,
+      "change_pct": -0.025071764677165383,
+      "previous_close": 118.45999908447266,
+      "price": 115.48999786376953,
+      "source": "snapshot",
+      "ticker": "XLY"
+    },
+    {
+      "as_of": "2026-06-17",
+      "change": -1.9099960327148438,
+      "change_pct": -0.02231564568801471,
+      "previous_close": 85.58999633789062,
+      "price": 83.68000030517578,
+      "source": "snapshot",
+      "ticker": "XLP"
+    },
+    {
+      "as_of": "2026-06-17",
+      "change": -3.1200027465820312,
+      "change_pct": -0.027777802306438247,
+      "previous_close": 112.31999969482422,
+      "price": 109.19999694824219,
+      "source": "snapshot",
+      "ticker": "XLC"
+    },
+    {
+      "as_of": "2026-06-17",
+      "change": -0.6000022888183594,
+      "change_pct": -0.0133156296167804,
+      "previous_close": 45.060001373291016,
+      "price": 44.459999084472656,
+      "source": "snapshot",
+      "ticker": "XLU"
+    },
+    {
+      "as_of": "2026-06-17",
+      "change": -1.1299972534179688,
+      "change_pct": -0.02505537232038654,
+      "previous_close": 45.099998474121094,
+      "price": 43.970001220703125,
+      "source": "snapshot",
+      "ticker": "XLRE"
+    },
+    {
+      "as_of": "2026-06-17",
+      "change": -0.7000007629394531,
+      "change_pct": -0.013277707639061342,
+      "previous_close": 52.720001220703125,
+      "price": 52.02000045776367,
+      "source": "snapshot",
+      "ticker": "XLB"
+    }
+  ]
+}

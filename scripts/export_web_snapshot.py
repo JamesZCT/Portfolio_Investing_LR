@@ -71,12 +71,14 @@ def main() -> int:
 
     cfg = load_config(config_path)
     ohlc_payload = _build_ohlc_payload(cfg.universe.benchmark, config_path, args.mode, args.lookback_days)
+    quotes_payload = _build_quotes_payload(analysis.prices, _quote_tickers(cfg))
 
     _write_json(out_dir / "dashboard.json", dashboard)
     _write_json(out_dir / "backtest.json", backtest_payload)
     _write_json(out_dir / "strategies.json", strategies_payload)
     _write_json(out_dir / "rules.json", {"rules": rules_as_dicts()})
     _write_json(out_dir / "ohlc.json", ohlc_payload)
+    _write_json(out_dir / "quotes.json", quotes_payload)
 
     print(f"Exported static web snapshot to {out_dir}")
     return 0
@@ -103,6 +105,43 @@ def _build_ohlc_payload(ticker: str, config_path: Path, mode: str, lookback_days
         for idx, row in frame.iterrows()
     ]
     return {"ticker": selected, "ohlc": rows}
+
+
+def _quote_tickers(cfg) -> list[str]:
+    tickers = [cfg.universe.benchmark]
+    tickers.extend(ticker for ticker in cfg.universe.positions if ticker != "CASH")
+    tickers.extend(cfg.universe.sector_etfs.values())
+    deduped = []
+    for ticker in tickers:
+        if ticker not in deduped:
+            deduped.append(ticker)
+    return deduped[:40]
+
+
+def _build_quotes_payload(prices, tickers: list[str]) -> dict[str, Any]:
+    quotes = []
+    for ticker in tickers:
+        if ticker not in prices.columns:
+            continue
+        close = prices[ticker].dropna()
+        if close.empty:
+            continue
+        price = float(close.iloc[-1])
+        previous = float(close.iloc[-2]) if len(close) > 1 else price
+        change = price - previous
+        change_pct = change / previous if previous else 0.0
+        quotes.append(
+            {
+                "ticker": ticker,
+                "price": price,
+                "previous_close": previous,
+                "change": change,
+                "change_pct": change_pct,
+                "as_of": str(close.index[-1].date()),
+                "source": "snapshot",
+            }
+        )
+    return {"quotes": quotes}
 
 
 def _snapshot_metadata(config_path: Path, mode: str, lookback_days: int) -> dict[str, Any]:

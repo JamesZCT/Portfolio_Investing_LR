@@ -123,6 +123,16 @@ export type OhlcPoint = {
   close: number;
 };
 
+export type LatestQuote = {
+  ticker: string;
+  price: number;
+  previous_close: number;
+  change: number;
+  change_pct: number;
+  as_of: string;
+  source: string;
+};
+
 const API_BASE = import.meta.env.VITE_API_BASE ?? "http://127.0.0.1:8000";
 const DATA_MODE = import.meta.env.VITE_DATA_MODE ?? "api";
 
@@ -150,6 +160,12 @@ export async function fetchOhlc(mode: string, lookbackDays: number, ticker: stri
   const params = new URLSearchParams({ mode, lookback_days: String(Math.min(lookbackDays, 1200)), ticker });
   const data = await fetchJson<{ ohlc: OhlcPoint[] }>(`${API_BASE}/api/ohlc?${params.toString()}`, "/data/ohlc.json");
   return data.ohlc;
+}
+
+export async function fetchLatestQuotes(tickers: string[]): Promise<LatestQuote[]> {
+  const params = new URLSearchParams({ tickers: tickers.join(",") });
+  const data = await fetchJson<{ quotes: LatestQuote[] }>(`${API_BASE}/api/quotes?${params.toString()}`, "/data/quotes.json");
+  return data.quotes;
 }
 
 async function fetchJson<T>(apiUrl: string, snapshotUrl: string): Promise<T> {

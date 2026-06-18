@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from datetime import date, timedelta
 from pathlib import Path
+from typing import Any
 
 import pandas as pd
 
@@ -70,6 +71,40 @@ def fetch_ohlc(ticker: str, lookback_days: int = 500) -> pd.DataFrame:
     return out.sort_index().dropna(how="any")
 
 
+def fetch_latest_quotes(tickers: list[str]) -> list[dict[str, Any]]:
+    import yfinance as yf
+
+    symbols = [ticker.upper().strip() for ticker in tickers if ticker.strip()]
+    if not symbols:
+        raise ValueError("No tickers provided")
+
+    frame = yf.download(
+        tickers=symbols,
+        period="5d",
+        interval="1d",
+        progress=False,
+        auto_adjust=True,
+        group_by="ticker",
+        threads=True,
+    )
+    if frame.empty:
+        raise RuntimeError("No quote data returned from yfinance")
+
+    quotes: list[dict[str, Any]] = []
+    if isinstance(frame.columns, pd.MultiIndex):
+        for ticker in symbols:
+            if ticker not in frame.columns.get_level_values(0):
+                continue
+            quote = _latest_quote_from_frame(ticker, frame[ticker])
+            if quote:
+                quotes.append(quote)
+    else:
+        quote = _latest_quote_from_frame(symbols[0], frame)
+        if quote:
+            quotes.append(quote)
+    return quotes
+
+
 def synthesize_ohlc_from_close(series: pd.Series) -> pd.DataFrame:
     close = series.dropna()
     if close.empty:
@@ -87,3 +122,27 @@ def synthesize_ohlc_from_close(series: pd.Series) -> pd.DataFrame:
             "close": close,
         }
     )
+
+
+def _latest_quote_from_frame(ticker: str, frame: pd.DataFrame) -> dict[str, Any] | None:
+    if "Close" not in frame.columns:
+        return None
+
+    close = frame["Close"].dropna()
+    if close.empty:
+        return None
+
+    last_date = close.index[-1]
+    price = float(close.iloc[-1])
+    previous = float(close.iloc[-2]) if len(close) > 1 else price
+    change = price - previous
+    change_pct = change / previous if previous else 0.0
+    return {
+        "ticker": ticker,
+        "price": price,
+        "previous_close": previous,
+        "change": change,
+        "change_pct": change_pct,
+        "as_of": str(last_date.date()),
+        "source": "yfinance",
+    }
