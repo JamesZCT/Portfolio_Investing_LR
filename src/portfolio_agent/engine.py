@@ -15,6 +15,7 @@ from .portfolio import propose_rebalance
 from .report import write_report
 from .sandbox import generate_sandbox_prices
 from .signals import build_market_regime, build_sector_signals
+from .strategies import compare_strategies, comparison_to_payload
 
 
 @dataclass
@@ -159,6 +160,28 @@ def run_buy_and_hold_baseline(
         rows.append({"date": dt, "portfolio_value": value, "daily_return": day_return})
 
     return compute_metrics(pd.DataFrame(rows))
+
+
+def run_strategy_comparison_for_config(
+    config_path: str | Path,
+    lookback_days: int = 900,
+    prices_csv: str | None = None,
+    sandbox_days: int | None = None,
+    rebalance_days: int = 21,
+    transaction_cost_bps: float = 5.0,
+) -> dict:
+    cfg = load_config(config_path)
+    if sandbox_days is not None:
+        prices = generate_sandbox_prices(cfg, days=sandbox_days)
+    else:
+        prices = load_prices_for_config(cfg, prices_csv, lookback_days)
+    comparisons = compare_strategies(
+        cfg,
+        prices,
+        rebalance_days=rebalance_days,
+        transaction_cost_bps=transaction_cost_bps,
+    )
+    return comparison_to_payload(comparisons)
 
 
 def result_to_dashboard_payload(result: AnalysisResult) -> dict[str, Any]:

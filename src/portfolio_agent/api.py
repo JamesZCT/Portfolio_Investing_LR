@@ -14,7 +14,7 @@ from .engine import (
     result_to_dashboard_payload,
     run_analysis,
     run_backtest_for_config,
-    run_buy_and_hold_baseline,
+    run_strategy_comparison_for_config,
 )
 from .rules_catalog import rules_as_dicts
 from .sandbox import generate_sandbox_prices
@@ -146,27 +146,20 @@ def compare_strategies(
     config_path: str = Query(str(DEFAULT_CONFIG)),
     lookback_days: int = Query(1200, ge=300, le=6000),
     mode: str = Query("real", pattern="^(real|sandbox)$"),
+    rebalance_days: int = Query(21, ge=5, le=252),
+    transaction_cost_bps: float = Query(5.0, ge=0.0, le=100.0),
 ) -> dict[str, Any]:
     try:
-        result = run_backtest_for_config(
+        payload = run_strategy_comparison_for_config(
             _resolve_config(config_path),
             lookback_days=lookback_days,
             sandbox_days=lookback_days if mode == "sandbox" else None,
-            rebalance_days=21,
-            transaction_cost_bps=5.0,
+            rebalance_days=rebalance_days,
+            transaction_cost_bps=transaction_cost_bps,
         )
-        buy_hold = run_buy_and_hold_baseline(
-            _resolve_config(config_path),
-            lookback_days=lookback_days,
-            sandbox_days=lookback_days if mode == "sandbox" else None,
-        )
-        return {
-            "mode": mode,
-            "strategies": [
-                {"name": "Rule engine", "metrics": result.metrics},
-                {"name": "Buy and hold proxy", "metrics": buy_hold},
-            ],
-        }
+        payload["mode"] = mode
+        payload["lookback_days"] = lookback_days
+        return payload
     except Exception as exc:  # noqa: BLE001
         raise HTTPException(status_code=500, detail=f"{type(exc).__name__}: {exc}") from exc
 

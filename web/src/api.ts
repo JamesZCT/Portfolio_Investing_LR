@@ -72,6 +72,18 @@ export type BacktestPayload = {
   trades: Array<Record<string, string | number>>;
 };
 
+export type StrategyComparisonPayload = {
+  mode: string;
+  lookback_days: number;
+  strategies: Array<{
+    name: string;
+    description: string;
+    metrics: Record<string, number>;
+    turnover: number;
+    equity_curve: Array<{ date: string; portfolio_value: number; daily_return: number }>;
+  }>;
+};
+
 export type StrategyRule = {
   rule_id: string;
   name: string;
@@ -106,6 +118,15 @@ export async function fetchDashboard(mode: string, lookbackDays: number): Promis
 export async function fetchBacktest(mode: string, lookbackDays: number): Promise<BacktestPayload> {
   const params = new URLSearchParams({ mode, lookback_days: String(lookbackDays) });
   const response = await fetch(`${API_BASE}/api/backtest?${params.toString()}`);
+  if (!response.ok) {
+    throw new Error(await readError(response));
+  }
+  return response.json();
+}
+
+export async function fetchStrategyComparison(mode: string, lookbackDays: number): Promise<StrategyComparisonPayload> {
+  const params = new URLSearchParams({ mode, lookback_days: String(Math.max(lookbackDays, 900)) });
+  const response = await fetch(`${API_BASE}/api/strategies/compare?${params.toString()}`);
   if (!response.ok) {
     throw new Error(await readError(response));
   }

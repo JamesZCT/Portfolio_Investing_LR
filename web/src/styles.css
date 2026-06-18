@@ -390,6 +390,42 @@ td {
   height: 260px;
 }
 
+.strategy-comparison,
+.strategy-metrics {
+  display: grid;
+  gap: 12px;
+}
+
+.strategy-legend {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  color: #54636a;
+  font-size: 0.78rem;
+}
+
+.strategy-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.strategy-legend i {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+
+.compact-table table {
+  font-size: 0.78rem;
+}
+
+.compact-table th,
+.compact-table td {
+  padding: 7px 6px;
+}
+
 .rules-table td:first-child {
   min-width: 180px;
 }

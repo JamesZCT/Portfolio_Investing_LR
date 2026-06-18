@@ -14,6 +14,8 @@ import {
 import {
   Area,
   AreaChart,
+  Bar,
+  BarChart,
   CartesianGrid,
   Cell,
   Pie,
@@ -28,11 +30,13 @@ import {
   DashboardPayload,
   OhlcPoint,
   SectorSignal,
+  StrategyComparisonPayload,
   StrategyRule,
   fetchBacktest,
   fetchDashboard,
   fetchOhlc,
-  fetchRules
+  fetchRules,
+  fetchStrategyComparison
 } from "./api";
 import "./styles.css";
 
@@ -41,6 +45,7 @@ function App() {
   const [lookbackDays, setLookbackDays] = useState(900);
   const [dashboard, setDashboard] = useState<DashboardPayload | null>(null);
   const [backtest, setBacktest] = useState<BacktestPayload | null>(null);
+  const [strategyComparison, setStrategyComparison] = useState<StrategyComparisonPayload | null>(null);
   const [rules, setRules] = useState<StrategyRule[]>([]);
   const [ohlc, setOhlc] = useState<OhlcPoint[]>([]);
   const [hoverCandle, setHoverCandle] = useState<OhlcPoint | null>(null);
@@ -51,9 +56,10 @@ function App() {
     setLoading(true);
     setError(null);
     try {
-      const [dash, bt] = await Promise.all([
+      const [dash, bt, comparison] = await Promise.all([
         fetchDashboard(mode, lookbackDays),
-        fetchBacktest(mode, Math.max(lookbackDays, 900))
+        fetchBacktest(mode, Math.max(lookbackDays, 900)),
+        fetchStrategyComparison(mode, Math.max(lookbackDays, 900))
       ]);
       const [ruleList, ohlcRows] = await Promise.all([
         fetchRules(),
@@ -61,6 +67,7 @@ function App() {
       ]);
       setDashboard(dash);
       setBacktest(bt);
+      setStrategyComparison(comparison);
       setRules(ruleList);
       setOhlc(ohlcRows);
       setHoverCandle(null);
@@ -164,6 +171,14 @@ function App() {
 
             <Panel title="Allocation Pie" icon={<Gauge size={18} />}>
               <AllocationPie positions={dashboard.positions} />
+            </Panel>
+
+            <Panel title="Strategy Comparison" icon={<BarChart3 size={18} />} className="wide-panel">
+              {strategyComparison ? <StrategyComparison comparison={strategyComparison} /> : <EmptyState label="Strategy comparison loading." />}
+            </Panel>
+
+            <Panel title="Strategy Metrics" icon={<Gauge size={18} />}>
+              {strategyComparison ? <StrategyMetrics comparison={strategyComparison} /> : <EmptyState label="No comparison metrics." />}
             </Panel>
 
             <Panel title="Rule Recommendations" icon={<ShieldCheck size={18} />} className="wide-panel">
@@ -350,6 +365,89 @@ function AllocationPie({ positions }: { positions: Record<string, number> }) {
   );
 }
 
+function StrategyComparison({ comparison }: { comparison: StrategyComparisonPayload }) {
+  const merged = mergeEquityCurves(comparison);
+  const names = comparison.strategies.map((strategy) => strategy.name);
+  const colors = ["#1f6f5b", "#4c88a3", "#dc8f2d", "#9b6aab", "#b5533f", "#557a38"];
+  return (
+    <div className="strategy-comparison">
+      <ResponsiveContainer width="100%" height={270}>
+        <AreaChart data={merged} margin={{ top: 8, right: 18, left: 0, bottom: 0 }}>
+          <CartesianGrid stroke="#e6ecef" vertical={false} />
+          <XAxis dataKey="date" tick={{ fontSize: 11 }} minTickGap={34} />
+          <YAxis tick={{ fontSize: 11 }} width={48} />
+          <Tooltip content={<ChartTooltip />} />
+          {names.map((name, index) => (
+            <Area
+              key={name}
+              dataKey={name}
+              name={name}
+              type="monotone"
+              stroke={colors[index % colors.length]}
+              fill={colors[index % colors.length]}
+              fillOpacity={0.08}
+              strokeWidth={2}
+            />
+          ))}
+        </AreaChart>
+      </ResponsiveContainer>
+      <div className="strategy-legend">
+        {comparison.strategies.map((strategy, index) => (
+          <span key={strategy.name}>
+            <i style={{ background: colors[index % colors.length] }} />
+            {strategy.name}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function StrategyMetrics({ comparison }: { comparison: StrategyComparisonPayload }) {
+  const data = comparison.strategies.map((strategy) => ({
+    name: strategy.name,
+    cagr: strategy.metrics.cagr,
+    sharpe: strategy.metrics.sharpe,
+    drawdown: Math.abs(strategy.metrics.max_drawdown),
+    final: strategy.metrics.final_value
+  }));
+  return (
+    <div className="strategy-metrics">
+      <ResponsiveContainer width="100%" height={220}>
+        <BarChart data={data} layout="vertical" margin={{ top: 8, right: 12, left: 24, bottom: 0 }}>
+          <CartesianGrid stroke="#e6ecef" horizontal={false} />
+          <XAxis type="number" tick={{ fontSize: 11 }} />
+          <YAxis dataKey="name" type="category" width={112} tick={{ fontSize: 11 }} />
+          <Tooltip content={<PercentTooltip />} />
+          <Bar dataKey="cagr" name="CAGR" fill="#1f6f5b" radius={[0, 4, 4, 0]} />
+        </BarChart>
+      </ResponsiveContainer>
+      <div className="table-wrap compact-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Strategy</th>
+              <th>CAGR</th>
+              <th>Sharpe</th>
+              <th>Max DD</th>
+            </tr>
+          </thead>
+          <tbody>
+            {comparison.strategies.map((strategy) => (
+              <tr key={strategy.name} title={strategy.description}>
+                <td>{strategy.name}</td>
+                <td>{percent(strategy.metrics.cagr)}</td>
+                <td>{strategy.metrics.sharpe.toFixed(2)}</td>
+                <td>{percent(strategy.metrics.max_drawdown)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+}
+
 function RecommendationTable({ suggestions }: { suggestions: DashboardPayload["suggestions"] }) {
   if (!suggestions.length) return <EmptyState label="No recommendations met thresholds." />;
   return (
@@ -519,6 +617,32 @@ function PieTooltip({ active, payload }: any) {
       <span>{percent(Number(item.value))}</span>
     </div>
   );
+}
+
+function PercentTooltip({ active, payload, label }: any) {
+  if (!active || !payload?.length) return null;
+  return (
+    <div className="chart-tooltip">
+      <strong>{label}</strong>
+      {payload.map((item: any) => (
+        <span key={item.dataKey}>
+          {item.name}: {percent(Number(item.value))}
+        </span>
+      ))}
+    </div>
+  );
+}
+
+function mergeEquityCurves(comparison: StrategyComparisonPayload) {
+  const rows = new Map<string, Record<string, string | number>>();
+  for (const strategy of comparison.strategies) {
+    for (const point of strategy.equity_curve) {
+      const row = rows.get(point.date) ?? { date: point.date };
+      row[strategy.name] = point.portfolio_value;
+      rows.set(point.date, row);
+    }
+  }
+  return Array.from(rows.values()).sort((a, b) => String(a.date).localeCompare(String(b.date)));
 }
 
 function Row({ label, value }: { label: string; value: string }) {
