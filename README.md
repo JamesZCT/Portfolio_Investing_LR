@@ -248,6 +248,12 @@ https://github.com/JamesZCT/Portfolio_Investing_LR
 
 The scheduled snapshot workflow commits refreshed market data to `main` and deploys the rebuilt frontend/functions through the Netlify CLI. Netlify Git builds are intentionally paused because this Free-plan private repo is blocked by Netlify's verified contributor policy; GitHub Actions direct deploy avoids that limitation once `NETLIFY_AUTH_TOKEN` is set.
 
+Usage controls:
+- The hosted dashboard loads its default real-data view through `/api/bootstrap`, reducing startup function calls from several requests to one.
+- The refresh workflow deploys only when `web/public/data/*.json` changes.
+- The schedule runs once per weekday after market close instead of polling intraday.
+- `/api/quotes` provides live quotes on demand, while heavier strategy and backtest data comes from refreshed snapshots.
+
 ## Config
 
 Use `config.yaml` (or start from `example_config.yaml`):

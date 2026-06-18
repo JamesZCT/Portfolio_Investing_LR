@@ -34,6 +34,7 @@ import {
   StrategyComparisonPayload,
   StrategyRule,
   fetchBacktest,
+  fetchBootstrap,
   fetchDashboard,
   fetchLatestQuotes,
   fetchOhlc,
@@ -59,6 +60,18 @@ function App() {
     setLoading(true);
     setError(null);
     try {
+      const bootstrap = await tryBootstrap();
+      if (bootstrap) {
+        setDashboard(bootstrap.dashboard);
+        setBacktest(bootstrap.backtest);
+        setStrategyComparison(bootstrap.strategyComparison);
+        setRules(bootstrap.rules);
+        setOhlc(bootstrap.ohlc);
+        setQuotes(bootstrap.quotes);
+        setHoverCandle(null);
+        return;
+      }
+
       const [dash, bt, comparison] = await Promise.all([
         fetchDashboard(mode, lookbackDays),
         fetchBacktest(mode, Math.max(lookbackDays, 900)),
@@ -81,6 +94,15 @@ function App() {
       setError(err instanceof Error ? err.message : String(err));
     } finally {
       setLoading(false);
+    }
+  }
+
+  async function tryBootstrap() {
+    if (mode !== "real" || lookbackDays !== 900) return null;
+    try {
+      return await fetchBootstrap();
+    } catch {
+      return null;
     }
   }
 

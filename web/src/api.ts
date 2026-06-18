@@ -133,6 +133,15 @@ export type LatestQuote = {
   source: string;
 };
 
+export type BootstrapPayload = {
+  dashboard: DashboardPayload;
+  backtest: BacktestPayload;
+  strategyComparison: StrategyComparisonPayload;
+  rules: StrategyRule[];
+  ohlc: OhlcPoint[];
+  quotes: LatestQuote[];
+};
+
 const API_BASE = import.meta.env.VITE_API_BASE ?? "http://127.0.0.1:8000";
 const DATA_MODE = import.meta.env.VITE_DATA_MODE ?? "api";
 
@@ -166,6 +175,10 @@ export async function fetchLatestQuotes(tickers: string[]): Promise<LatestQuote[
   const params = new URLSearchParams({ tickers: tickers.join(",") });
   const data = await fetchJson<{ quotes: LatestQuote[] }>(`${API_BASE}/api/quotes?${params.toString()}`, "/data/quotes.json");
   return data.quotes;
+}
+
+export async function fetchBootstrap(): Promise<BootstrapPayload> {
+  return fetchJson<BootstrapPayload>(`${API_BASE}/api/bootstrap`, "/data/bootstrap.json");
 }
 
 async function fetchJson<T>(apiUrl: string, snapshotUrl: string): Promise<T> {

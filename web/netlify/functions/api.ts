@@ -36,6 +36,10 @@ export default async function handler(req: Request, context: Context) {
     return quotesResponse(url);
   }
 
+  if (url.pathname === "/api/bootstrap") {
+    return bootstrapResponse(req);
+  }
+
   const snapshotName = SNAPSHOT_BY_PATH[url.pathname];
   if (!snapshotName) {
     return json({ detail: `Unknown API route: ${url.pathname}` }, 404);
@@ -51,10 +55,36 @@ export const config: Config = {
     "/api/strategies/compare",
     "/api/rules",
     "/api/ohlc",
-    "/api/quotes"
+    "/api/quotes",
+    "/api/bootstrap"
   ],
   method: "GET"
 };
+
+async function bootstrapResponse(req: Request) {
+  const [dashboard, backtest, strategies, rules, ohlc, quotes] = await Promise.all([
+    readSnapshot(req, "dashboard.json"),
+    readSnapshot(req, "backtest.json"),
+    readSnapshot(req, "strategies.json"),
+    readSnapshot(req, "rules.json"),
+    readSnapshot(req, "ohlc.json"),
+    readSnapshot(req, "quotes.json")
+  ]);
+  return json(
+    {
+      dashboard,
+      backtest,
+      strategyComparison: strategies,
+      rules: rules.rules ?? [],
+      ohlc: ohlc.ohlc ?? [],
+      quotes: quotes.quotes ?? []
+    },
+    200,
+    {
+      "Cache-Control": "public, max-age=60, stale-while-revalidate=300"
+    }
+  );
+}
 
 async function quotesResponse(url: URL) {
   const tickers = (url.searchParams.get("tickers") ?? "SPY")
@@ -120,6 +150,14 @@ async function snapshotResponse(req: Request, snapshotName: string) {
       "Cache-Control": "public, max-age=60, stale-while-revalidate=300"
     }
   });
+}
+
+async function readSnapshot(req: Request, snapshotName: string) {
+  const response = await fetch(new URL(`/data/${snapshotName}`, req.url));
+  if (!response.ok) {
+    throw new Error(`Snapshot unavailable: ${snapshotName}`);
+  }
+  return response.json();
 }
 
 function json(payload: unknown, status = 200, headers: Record<string, string> = {}) {

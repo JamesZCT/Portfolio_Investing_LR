@@ -69,9 +69,11 @@ jobs:
           npm run build
 
       - name: Commit refreshed snapshot
+        id: commit_snapshot
         run: |
           if git diff --quiet -- web/public/data; then
             echo "No snapshot changes to commit."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           git config user.name "github-actions[bot]"
@@ -79,13 +81,16 @@ jobs:
           git add web/public/data
           git commit -m "Refresh market data snapshot"
           git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
 
       - name: Deploy to Netlify
-        if: ${{ env.NETLIFY_AUTH_TOKEN != '' && env.NETLIFY_SITE_ID != '' }}
+        if: ${{ (steps.commit_snapshot.outputs.changed == 'true' || github.event_name == 'workflow_dispatch') && env.NETLIFY_AUTH_TOKEN != '' && env.NETLIFY_SITE_ID != '' }}
         run: npx netlify deploy --prod --site "$NETLIFY_SITE_ID" --auth "$NETLIFY_AUTH_TOKEN"
 
       - name: Report skipped Netlify deploy
-        if: ${{ env.NETLIFY_AUTH_TOKEN == '' || env.NETLIFY_SITE_ID == '' }}
+        if: ${{ (steps.commit_snapshot.outputs.changed != 'true' && github.event_name != 'workflow_dispatch') || env.NETLIFY_AUTH_TOKEN == '' || env.NETLIFY_SITE_ID == '' }}
         run: |
-          echo "Netlify deploy skipped because NETLIFY_AUTH_TOKEN or NETLIFY_SITE_ID is not configured."
-          echo "The market data snapshot was still generated and committed when changes existed."
+          echo "Netlify deploy skipped."
+          echo "changed=${{ steps.commit_snapshot.outputs.changed }}"
+          echo "has_token=${{ env.NETLIFY_AUTH_TOKEN != '' }}"
+          echo "has_site_id=${{ env.NETLIFY_SITE_ID != '' }}"
