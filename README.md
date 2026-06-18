@@ -103,7 +103,21 @@ portfolio-agent run --config config.yaml --prices-csv your_prices.csv --out outp
 portfolio-agent sandbox --config example_config.yaml --out outputs/sandbox --days 900
 ```
 
-6. Send notifications on run/backtest
+6. Run API server
+
+```bash
+portfolio-agent-api
+```
+
+7. Run frontend dashboard
+
+```bash
+cd web
+npm install
+npm run dev
+```
+
+8. Send notifications on run/backtest
 
 ```bash
 portfolio-agent run --config config.yaml --out outputs --notify

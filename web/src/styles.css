@@ -1,0 +1,422 @@
+:root {
+  color: #1e2528;
+  background: #eef1f3;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+select {
+  font: inherit;
+}
+
+.app-shell {
+  width: min(1480px, calc(100vw - 32px));
+  margin: 0 auto;
+  padding: 28px 0 44px;
+}
+
+.topbar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 6px 0 22px;
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  color: #66737a;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  color: #151b1f;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.controls {
+  display: flex;
+  align-items: end;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.controls label {
+  display: grid;
+  gap: 5px;
+  min-width: 142px;
+  color: #617079;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+select,
+.primary-button {
+  height: 38px;
+  border: 1px solid #c9d2d7;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #1f292f;
+  padding: 0 11px;
+}
+
+.primary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-color: #1f6f5b;
+  background: #1f6f5b;
+  color: #ffffff;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.primary-button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.error-band {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 16px;
+  padding: 12px 14px;
+  border: 1px solid #f0b4a9;
+  border-radius: 7px;
+  background: #fff0ed;
+  color: #8d2b1f;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.metric-card,
+.panel {
+  border: 1px solid #d5dde1;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 1px 1px rgba(28, 39, 44, 0.04);
+}
+
+.metric-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  min-height: 108px;
+  padding: 15px;
+}
+
+.metric-icon {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 7px;
+  background: #e5f1ed;
+  color: #1f6f5b;
+}
+
+.metric-card p,
+.metric-card span {
+  margin: 0;
+  color: #66737a;
+  font-size: 0.82rem;
+}
+
+.metric-card strong {
+  display: block;
+  margin: 3px 0 4px;
+  color: #151b1f;
+  font-size: 1.35rem;
+  line-height: 1.2;
+  text-transform: capitalize;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.8fr);
+  gap: 14px;
+}
+
+.wide-panel {
+  min-width: 0;
+}
+
+.panel {
+  min-height: 220px;
+  padding: 15px;
+  overflow: hidden;
+}
+
+.panel-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.panel-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #34535a;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.chart-wrap {
+  width: 100%;
+}
+
+.chart-wrap svg {
+  display: block;
+  width: 100%;
+  height: 220px;
+}
+
+.metric-icon svg,
+.panel-title svg,
+.primary-button svg {
+  flex: 0 0 auto;
+}
+
+.area-path {
+  fill: rgba(31, 111, 91, 0.11);
+}
+
+.line-path {
+  fill: none;
+  stroke: #1f6f5b;
+  stroke-width: 3;
+}
+
+.chart-axis {
+  display: flex;
+  justify-content: space-between;
+  color: #66737a;
+  font-size: 0.78rem;
+  padding-top: 8px;
+}
+
+.table-wrap {
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.84rem;
+}
+
+th {
+  color: #6b777d;
+  font-size: 0.74rem;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+th,
+td {
+  border-bottom: 1px solid #e5eaed;
+  padding: 9px 8px;
+  vertical-align: top;
+}
+
+td {
+  color: #263137;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 22px;
+  border-radius: 999px;
+  padding: 2px 8px;
+  background: #edf1f3;
+  color: #445158;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.badge.trim,
+.badge.hyped,
+.badge.extended {
+  background: #ffe8df;
+  color: #9a3d1e;
+}
+
+.badge.add,
+.badge.undervalued,
+.badge.washed_out {
+  background: #e4f4eb;
+  color: #206845;
+}
+
+.badge.block {
+  background: #fff4d6;
+  color: #7a5711;
+}
+
+.badge.hold {
+  background: #e7eef8;
+  color: #305b91;
+}
+
+.metric-list,
+.risk-list,
+.allocation-list {
+  display: grid;
+  gap: 10px;
+}
+
+.metric-row,
+.risk-row,
+.allocation-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.metric-row {
+  border-bottom: 1px solid #e5eaed;
+  padding: 8px 0;
+}
+
+.metric-row span,
+.allocation-label span,
+.risk-row span {
+  color: #6d7a81;
+  font-size: 0.8rem;
+}
+
+.metric-row strong,
+.risk-row strong,
+.allocation-label strong {
+  color: #202a30;
+}
+
+.risk-row {
+  display: grid;
+  grid-template-columns: 88px 1fr 52px;
+  align-items: center;
+}
+
+.risk-row div {
+  display: grid;
+}
+
+meter {
+  width: 100%;
+  height: 10px;
+}
+
+.risk-row em {
+  color: #4f5d64;
+  font-size: 0.8rem;
+  font-style: normal;
+  text-align: right;
+}
+
+.allocation-row {
+  display: grid;
+  gap: 7px;
+}
+
+.bar-track {
+  position: relative;
+  height: 10px;
+  border-radius: 999px;
+  background: #e8eef1;
+  overflow: hidden;
+}
+
+.bar-current {
+  position: absolute;
+  inset: 0 auto 0 0;
+  border-radius: 999px;
+  background: #4c88a3;
+}
+
+.bar-track i {
+  position: absolute;
+  top: -3px;
+  bottom: -3px;
+  width: 2px;
+  background: #dc8f2d;
+}
+
+.empty-state,
+.loading-surface {
+  display: grid;
+  place-items: center;
+  min-height: 168px;
+  color: #748188;
+  border: 1px dashed #ccd6db;
+  border-radius: 7px;
+  background: #f8fafb;
+}
+
+@media (max-width: 980px) {
+  .topbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .controls {
+    justify-content: flex-start;
+  }
+
+  .metric-grid,
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .app-shell {
+    width: min(100vw - 20px, 1480px);
+    padding-top: 18px;
+  }
+
+  .controls label,
+  .primary-button {
+    width: 100%;
+  }
+
+  .metric-card {
+    min-height: auto;
+  }
+}

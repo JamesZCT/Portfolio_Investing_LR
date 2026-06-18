@@ -32,9 +32,40 @@ jobs:
         run: |
           python -m unittest discover -s tests
 
+      - name: Run API smoke tests
+        run: |
+          python - <<'PY'
+          from fastapi.testclient import TestClient
+          from portfolio_agent.api import app
+
+          client = TestClient(app)
+          paths = [
+              "/api/health",
+              "/api/dashboard?mode=sandbox&lookback_days=420",
+              "/api/backtest?mode=sandbox&lookback_days=420",
+              "/api/strategies/compare?mode=sandbox&lookback_days=420",
+          ]
+          for path in paths:
+              response = client.get(path)
+              assert response.status_code == 200, f"{path}: {response.status_code} {response.text}"
+          PY
+
       - name: Run sandbox smoke test
         run: |
           portfolio-agent sandbox --config example_config.yaml --out outputs/sandbox-smoke --days 420
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - name: Build frontend
+        working-directory: web
+        run: |
+          npm ci
+          npm run build
 
   daily-run:
     runs-on: ubuntu-latest

@@ -13,11 +13,15 @@ dependencies = [
   "numpy>=1.26.0",
   "yfinance>=0.2.54",
   "PyYAML>=6.0.1",
-  "matplotlib>=3.8.0"
+  "matplotlib>=3.8.0",
+  "fastapi>=0.115.0",
+  "uvicorn[standard]>=0.30.0",
+  "httpx>=0.28.0"
 ]
 
 [project.scripts]
 portfolio-agent = "portfolio_agent.cli:main"
+portfolio-agent-api = "portfolio_agent.api:main"
 
 [tool.setuptools]
 package-dir = {"" = "src"}

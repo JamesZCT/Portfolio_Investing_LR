@@ -5,16 +5,16 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
-from .backtest import run_backtest, write_backtest_report
-from .config import AppConfig, load_config
-from .data import fetch_close_prices, load_close_prices_csv
-from .execution import SandboxExecutionAdapter, suggestions_to_orders
-from .ml import build_risk_predictions
+from .backtest import write_backtest_report
+from .config import load_config
+from .engine import (
+    load_prices_for_config,
+    run_analysis,
+    run_backtest_for_config,
+    write_analysis_report,
+)
 from .notifier import send_notifications
-from .portfolio import propose_rebalance
-from .report import write_report
 from .sandbox import generate_sandbox_prices
-from .signals import build_market_regime, build_sector_signals
 
 
 def parse_args() -> argparse.Namespace:
@@ -70,54 +70,15 @@ def _add_common_args(parser: argparse.ArgumentParser) -> None:
     )
 
 
-def load_prices_for_config(cfg: AppConfig, prices_csv: str | None, lookback_days: int):
-    tickers = set(cfg.universe.sector_etfs.values())
-    tickers.update(cfg.universe.positions.keys())
-    tickers.update(cfg.universe.target_weights.keys())
-    tickers.add(cfg.universe.benchmark)
-
-    ordered_tickers = sorted(t for t in tickers if t != "CASH")
-    if prices_csv:
-        return load_close_prices_csv(prices_csv, ordered_tickers)
-    return fetch_close_prices(ordered_tickers, lookback_days=lookback_days)
-
-
 def run_once(config_path: str, out_dir: str, prices_csv: str | None, lookback_days: int) -> int:
-    cfg = load_config(config_path)
-    prices = load_prices_for_config(cfg, prices_csv, lookback_days)
-    market_regime = build_market_regime(prices=prices, config=cfg)
-    signals = build_sector_signals(prices=prices, config=cfg)
-    holdings = [ticker for ticker in cfg.universe.positions if ticker != "CASH"]
-    latest_prices = {ticker: float(prices[ticker].dropna().iloc[-1]) for ticker in holdings if ticker in prices.columns}
-    trailing_window = prices[holdings].tail(cfg.indicators.trailing_high_lookback_days)
-    trailing_highs = {ticker: float(trailing_window[ticker].max()) for ticker in trailing_window.columns}
-    risk_predictions = build_risk_predictions(prices, holdings, cfg)
-    suggestions = propose_rebalance(
-        config=cfg,
-        signals=signals,
-        latest_prices=latest_prices,
-        trailing_highs=trailing_highs,
-        market_regime=market_regime,
-        risk_predictions=risk_predictions,
-    )
-
-    signals_csv, rebalance_csv, summary_md = write_report(
-        out_dir=Path(out_dir),
-        config=cfg,
-        prices=prices,
-        signals=signals,
-        suggestions=suggestions,
-        market_regime=market_regime,
-        risk_predictions=risk_predictions,
-    )
-
-    execution_results = SandboxExecutionAdapter().execute(suggestions_to_orders(suggestions))
+    result = run_analysis(config_path, lookback_days=lookback_days, prices_csv=prices_csv)
+    signals_csv, rebalance_csv, summary_md = write_analysis_report(result, Path(out_dir))
 
     print("Portfolio agent completed.")
     print(f"Signals: {signals_csv}")
     print(f"Trades: {rebalance_csv}")
     print(f"Summary: {summary_md}")
-    print(f"Sandbox execution records: {len(execution_results)}")
+    print(f"Sandbox execution records: {len(result.execution_results)}")
     return 0
 
 
@@ -135,11 +96,10 @@ def run_backtest_cmd(
     rebalance_days: int,
     transaction_cost_bps: float,
 ) -> int:
-    cfg = load_config(config_path)
-    prices = load_prices_for_config(cfg, prices_csv, lookback_days)
-    result = run_backtest(
-        config=cfg,
-        prices=prices,
+    result = run_backtest_for_config(
+        config_path=config_path,
+        lookback_days=lookback_days,
+        prices_csv=prices_csv,
         rebalance_days=rebalance_days,
         transaction_cost_bps=transaction_cost_bps,
     )

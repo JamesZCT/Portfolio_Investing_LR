@@ -5,3 +5,8 @@ __pycache__/
 .DS_Store
 outputs/
 config.yaml
+web/node_modules/
+web/dist/
+web/*.tsbuildinfo
+web/vite.config.js
+web/vite.config.d.ts
