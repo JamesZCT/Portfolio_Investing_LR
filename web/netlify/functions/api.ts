@@ -62,13 +62,14 @@ export const config: Config = {
 };
 
 async function bootstrapResponse(req: Request) {
+  const market = marketFromRequest(req);
   const [dashboard, backtest, strategies, rules, ohlc, quotes] = await Promise.all([
-    readSnapshot(req, "dashboard.json"),
-    readSnapshot(req, "backtest.json"),
-    readSnapshot(req, "strategies.json"),
-    readSnapshot(req, "rules.json"),
-    readSnapshot(req, "ohlc.json"),
-    readSnapshot(req, "quotes.json")
+    readSnapshot(req, "dashboard.json", market),
+    readSnapshot(req, "backtest.json", market),
+    readSnapshot(req, "strategies.json", market),
+    readSnapshot(req, "rules.json", market),
+    readSnapshot(req, "ohlc.json", market),
+    readSnapshot(req, "quotes.json", market)
   ]);
   return json(
     {
@@ -87,6 +88,7 @@ async function bootstrapResponse(req: Request) {
 }
 
 async function quotesResponse(url: URL) {
+  const market = marketFromUrl(url);
   const tickers = (url.searchParams.get("tickers") ?? "SPY")
     .split(",")
     .map((ticker) => ticker.trim().toUpperCase())
@@ -99,7 +101,7 @@ async function quotesResponse(url: URL) {
       "Cache-Control": "public, max-age=60, stale-while-revalidate=300"
     });
   } catch {
-    return snapshotResponse(new Request(url), "quotes.json");
+    return snapshotResponse(new Request(url), "quotes.json", market);
   }
 }
 
@@ -138,8 +140,8 @@ async function fetchYahooQuote(ticker: string): Promise<Quote | null> {
   };
 }
 
-async function snapshotResponse(req: Request, snapshotName: string) {
-  const response = await fetch(new URL(`/data/${snapshotName}`, req.url));
+async function snapshotResponse(req: Request, snapshotName: string, market = marketFromRequest(req)) {
+  const response = await fetch(snapshotUrl(req, snapshotName, market));
   if (!response.ok) {
     return json({ detail: `Snapshot unavailable: ${snapshotName}` }, response.status);
   }
@@ -152,12 +154,25 @@ async function snapshotResponse(req: Request, snapshotName: string) {
   });
 }
 
-async function readSnapshot(req: Request, snapshotName: string) {
-  const response = await fetch(new URL(`/data/${snapshotName}`, req.url));
+async function readSnapshot(req: Request, snapshotName: string, market = marketFromRequest(req)) {
+  const response = await fetch(snapshotUrl(req, snapshotName, market));
   if (!response.ok) {
     throw new Error(`Snapshot unavailable: ${snapshotName}`);
   }
   return response.json();
+}
+
+function snapshotUrl(req: Request, snapshotName: string, market: string) {
+  return new URL(`/data/${market}/${snapshotName}`, req.url);
+}
+
+function marketFromRequest(req: Request) {
+  return marketFromUrl(new URL(req.url));
+}
+
+function marketFromUrl(url: URL) {
+  const raw = (url.searchParams.get("market") ?? "us").toLowerCase();
+  return raw === "hk" ? "hk" : "us";
 }
 
 function json(payload: unknown, status = 200, headers: Record<string, string> = {}) {

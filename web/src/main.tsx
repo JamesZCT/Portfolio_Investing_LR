@@ -29,6 +29,7 @@ import {
   BacktestPayload,
   DashboardPayload,
   LatestQuote,
+  MarketProfile,
   OhlcPoint,
   SectorSignal,
   StrategyComparisonPayload,
@@ -44,6 +45,7 @@ import {
 import "./styles.css";
 
 function App() {
+  const [market, setMarket] = useState<MarketProfile>("us");
   const [mode, setMode] = useState("real");
   const [lookbackDays, setLookbackDays] = useState(900);
   const [dashboard, setDashboard] = useState<DashboardPayload | null>(null);
@@ -73,15 +75,15 @@ function App() {
       }
 
       const [dash, bt, comparison] = await Promise.all([
-        fetchDashboard(mode, lookbackDays),
-        fetchBacktest(mode, Math.max(lookbackDays, 900)),
-        fetchStrategyComparison(mode, Math.max(lookbackDays, 900))
+        fetchDashboard(mode, lookbackDays, market),
+        fetchBacktest(mode, Math.max(lookbackDays, 900), market),
+        fetchStrategyComparison(mode, Math.max(lookbackDays, 900), market)
       ]);
       const quoteTickers = [dash.universe.benchmark, ...dash.universe.tickers].slice(0, 12);
       const [ruleList, ohlcRows, quoteRows] = await Promise.all([
-        fetchRules(),
-        fetchOhlc(mode, Math.min(lookbackDays, 900), dash.universe.benchmark),
-        fetchLatestQuotes(quoteTickers)
+        fetchRules(market),
+        fetchOhlc(mode, Math.min(lookbackDays, 900), dash.universe.benchmark, market),
+        fetchLatestQuotes(quoteTickers, market)
       ]);
       setDashboard(dash);
       setBacktest(bt);
@@ -100,7 +102,7 @@ function App() {
   async function tryBootstrap() {
     if (mode !== "real" || lookbackDays !== 900) return null;
     try {
-      return await fetchBootstrap();
+      return await fetchBootstrap(market);
     } catch {
       return null;
     }
@@ -108,7 +110,7 @@ function App() {
 
   useEffect(() => {
     void load();
-  }, []);
+  }, [market]);
 
   const topRisks = useMemo(
     () => [...(dashboard?.risk_predictions ?? [])].sort((a, b) => b.risk_probability - a.risk_probability).slice(0, 6),
@@ -123,6 +125,13 @@ function App() {
           <h1>Rules, risk, and historical evidence</h1>
         </div>
         <div className="controls">
+          <label>
+            <span>Market</span>
+            <select value={market} onChange={(event) => setMarket(event.target.value as MarketProfile)}>
+              <option value="us">US Stocks</option>
+              <option value="hk">Hong Kong</option>
+            </select>
+          </label>
           <label>
             <span>Data</span>
             <select value={mode} onChange={(event) => setMode(event.target.value)}>

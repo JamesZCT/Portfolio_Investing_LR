@@ -1,0 +1,120 @@
+indicators:
+  ma_window: 200
+  trend_ma_window: 200
+  std_window: 60
+  z_window: 60
+  moderate_z: 2.0
+  extreme_z: 3.0
+  momentum_lookback_days: 126
+  volatility_window: 21
+  trailing_high_lookback_days: 252
+
+rules:
+  min_history_days: 260
+  max_trim_fraction_per_position: 0.25
+  min_trade_weight: 0.005
+  overweight_trigger: 0.03
+  underweight_trigger: 0.03
+  max_single_position_weight: 0.15
+  max_sector_weight: 0.35
+  trend_filter_enabled: true
+  bear_market_trim_fraction: 0.15
+  allow_countertrend_buys: false
+  loss_block_pct: 0.10
+  min_cash_weight: 0.02
+  defensive_cash_weight: 0.10
+  stop_loss_pct: 0.12
+  stop_trim_fraction: 0.50
+  trailing_stop_pct: 0.15
+  trailing_stop_trim_fraction: 0.33
+
+ml:
+  enabled: true
+  horizon_days: 21
+  risk_event_threshold: 0.08
+  min_training_rows: 120
+  epochs: 400
+  learning_rate: 0.08
+  high_risk_probability: 0.65
+  medium_risk_probability: 0.45
+  high_risk_trim_fraction: 0.10
+
+execution:
+  mode: sandbox
+  allow_live_brokerage: false
+
+notifications:
+  enabled: true
+  dry_run: true
+  slack_webhook_env: SLACK_WEBHOOK_URL
+  telegram_bot_token_env: TELEGRAM_BOT_TOKEN
+  telegram_chat_id_env: TELEGRAM_CHAT_ID
+  smtp_host_env: SMTP_HOST
+  smtp_port_env: SMTP_PORT
+  smtp_user_env: SMTP_USER
+  smtp_pass_env: SMTP_PASS
+  email_from_env: EMAIL_FROM
+  email_to_env: EMAIL_TO
+
+universe:
+  benchmark: "2800.HK"
+  sector_etfs:
+    BroadMarket: "2800.HK"
+    Technology: "0700.HK"
+    Ecommerce: "9988.HK"
+    ConsumerServices: "3690.HK"
+    Insurance: "1299.HK"
+    Exchanges: "0388.HK"
+    Banks: "0005.HK"
+    Property: "0823.HK"
+    Conglomerates: "0001.HK"
+
+  positions:
+    "0700.HK": 0.16
+    "9988.HK": 0.14
+    "3690.HK": 0.10
+    "1299.HK": 0.09
+    "0388.HK": 0.09
+    "0005.HK": 0.08
+    "0939.HK": 0.08
+    "1810.HK": 0.08
+    "0823.HK": 0.08
+    "0001.HK": 0.05
+    CASH: 0.05
+
+  target_weights:
+    "0700.HK": 0.14
+    "9988.HK": 0.12
+    "3690.HK": 0.09
+    "1299.HK": 0.10
+    "0388.HK": 0.10
+    "0005.HK": 0.10
+    "0939.HK": 0.08
+    "1810.HK": 0.08
+    "0823.HK": 0.08
+    "0001.HK": 0.06
+    CASH: 0.05
+
+  ticker_sector:
+    "0700.HK": Technology
+    "9988.HK": Ecommerce
+    "3690.HK": ConsumerServices
+    "1299.HK": Insurance
+    "0388.HK": Exchanges
+    "0005.HK": Banks
+    "0939.HK": Banks
+    "1810.HK": Technology
+    "0823.HK": Property
+    "0001.HK": Conglomerates
+
+  entry_prices:
+    "0700.HK": 380
+    "9988.HK": 80
+    "3690.HK": 120
+    "1299.HK": 70
+    "0388.HK": 300
+    "0005.HK": 65
+    "0939.HK": 5
+    "1810.HK": 18
+    "0823.HK": 40
+    "0001.HK": 45

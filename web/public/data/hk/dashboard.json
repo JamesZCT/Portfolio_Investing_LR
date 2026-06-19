@@ -1,0 +1,1867 @@
+{
+  "advisor_summary": [
+    {
+      "detail": "2800.HK \u4f4e\u4e8e MA200\uff0c\u89c4\u5219\u7cfb\u7edf\u503e\u5411\u63d0\u9ad8\u73b0\u91d1\u6216\u51cf\u5c11\u9ad8\u98ce\u9669\u4ed3\u4f4d\u3002",
+      "rank": 1,
+      "rule_ids": [
+        "TREND_200DMA",
+        "CASH_BUFFER"
+      ],
+      "severity": "high",
+      "title": "\u5148\u964d\u4f4e\u98ce\u9669\u655e\u53e3"
+    },
+    {
+      "detail": "HOLD CASH +29.43%\uff1araise or maintain cash buffer",
+      "rank": 2,
+      "rule_ids": [
+        "CASH_BUFFER"
+      ],
+      "severity": "medium",
+      "title": "\u5efa\u8bae\u63d0\u9ad8\u73b0\u91d1\u7f13\u51b2"
+    },
+    {
+      "detail": "TRIM 0700.HK -5.28%\uff1abenchmark trend bearish (2800.HK below MA200); exceeds max single-name cap; over target weight; trailing-stop triggered",
+      "rank": 3,
+      "rule_ids": [
+        "OVER_TARGET",
+        "SINGLE_CAP",
+        "TRAILING_STOP",
+        "TREND_FILTER"
+      ],
+      "severity": "high",
+      "title": "\u4f18\u5148\u4fee\u526a 0700.HK"
+    },
+    {
+      "detail": "TRIM 3690.HK -5.00%\uff1abenchmark trend bearish (2800.HK below MA200); over target weight; stop-loss triggered; trailing-stop triggered",
+      "rank": 4,
+      "rule_ids": [
+        "OVER_TARGET",
+        "STOP_LOSS",
+        "TRAILING_STOP",
+        "TREND_FILTER"
+      ],
+      "severity": "high",
+      "title": "\u4f18\u5148\u4fee\u526a 3690.HK"
+    },
+    {
+      "detail": "TRIM 9988.HK -4.62%\uff1abenchmark trend bearish (2800.HK below MA200); over target weight; trailing-stop triggered",
+      "rank": 5,
+      "rule_ids": [
+        "OVER_TARGET",
+        "TRAILING_STOP",
+        "TREND_FILTER"
+      ],
+      "severity": "medium",
+      "title": "\u4f18\u5148\u4fee\u526a 9988.HK"
+    },
+    {
+      "detail": "TRIM 0388.HK -2.97%\uff1abenchmark trend bearish (2800.HK below MA200); trailing-stop triggered",
+      "rank": 6,
+      "rule_ids": [
+        "TRAILING_STOP",
+        "TREND_FILTER"
+      ],
+      "severity": "low",
+      "title": "\u4f18\u5148\u4fee\u526a 0388.HK"
+    }
+  ],
+  "benchmark_series": [
+    {
+      "date": "2025-05-30",
+      "value": 22.93037986755371
+    },
+    {
+      "date": "2025-06-02",
+      "value": 22.833133697509766
+    },
+    {
+      "date": "2025-06-03",
+      "value": 23.16376495361328
+    },
+    {
+      "date": "2025-06-04",
+      "value": 23.299909591674805
+    },
+    {
+      "date": "2025-06-05",
+      "value": 23.53329849243164
+    },
+    {
+      "date": "2025-06-06",
+      "value": 23.494400024414062
+    },
+    {
+      "date": "2025-06-09",
+      "value": 23.82503318786621
+    },
+    {
+      "date": "2025-06-10",
+      "value": 23.82503318786621
+    },
+    {
+      "date": "2025-06-11",
+      "value": 24.058422088623047
+    },
+    {
+      "date": "2025-06-12",
+      "value": 23.7861328125
+    },
+    {
+      "date": "2025-06-13",
+      "value": 23.591644287109375
+    },
+    {
+      "date": "2025-06-16",
+      "value": 23.805583953857422
+    },
+    {
+      "date": "2025-06-17",
+      "value": 23.7277889251709
+    },
+    {
+      "date": "2025-06-18",
+      "value": 23.455503463745117
+    },
+    {
+      "date": "2025-06-19",
+      "value": 22.988725662231445
+    },
+    {
+      "date": "2025-06-20",
+      "value": 23.261011123657227
+    },
+    {
+      "date": "2025-06-23",
+      "value": 23.436054229736328
+    },
+    {
+      "date": "2025-06-24",
+      "value": 23.922279357910156
+    },
+    {
+      "date": "2025-06-25",
+      "value": 24.214012145996094
+    },
+    {
+      "date": "2025-06-26",
+      "value": 24.077869415283203
+    },
+    {
+      "date": "2025-06-27",
+      "value": 24.01952362060547
+    },
+    {
+      "date": "2025-06-30",
+      "value": 23.844482421875
+    },
+    {
+      "date": "2025-07-02",
+      "value": 23.96117401123047
+    },
+    {
+      "date": "2025-07-03",
+      "value": 23.86393165588379
+    },
+    {
+      "date": "2025-07-04",
+      "value": 23.7277889251709
+    },
+    {
+      "date": "2025-07-07",
+      "value": 23.68889045715332
+    },
+    {
+      "date": "2025-07-08",
+      "value": 23.96117401123047
+    },
+    {
+      "date": "2025-07-09",
+      "value": 23.708337783813477
+    },
+    {
+      "date": "2025-07-10",
+      "value": 23.844482421875
+    },
+    {
+      "date": "2025-07-11",
+      "value": 23.941728591918945
+    },
+    {
+      "date": "2025-07-14",
+      "value": 24.01952362060547
+    },
+    {
+      "date": "2025-07-15",
+      "value": 24.389053344726562
+    },
+    {
+      "date": "2025-07-16",
+      "value": 24.29180908203125
+    },
+    {
+      "date": "2025-07-17",
+      "value": 24.31125831604004
+    },
+    {
+      "date": "2025-07-18",
+      "value": 24.6224422454834
+    },
+    {
+      "date": "2025-07-21",
+      "value": 24.75858497619629
+    },
+    {
+      "date": "2025-07-22",
+      "value": 24.89472770690918
+    },
+    {
+      "date": "2025-07-23",
+      "value": 25.303157806396484
+    },
+    {
+      "date": "2025-07-24",
+      "value": 25.439300537109375
+    },
+    {
+      "date": "2025-07-25",
+      "value": 25.16701316833496
+    },
+    {
+      "date": "2025-07-28",
+      "value": 25.342056274414062
+    },
+    {
+      "date": "2025-07-29",
+      "value": 25.303157806396484
+    },
+    {
+      "date": "2025-07-30",
+      "value": 24.953075408935547
+    },
+    {
+      "date": "2025-07-31",
+      "value": 24.56409454345703
+    },
+    {
+      "date": "2025-08-01",
+      "value": 24.29180908203125
+    },
+    {
+      "date": "2025-08-04",
+      "value": 24.505748748779297
+    },
+    {
+      "date": "2025-08-05",
+      "value": 24.661340713500977
+    },
+    {
+      "date": "2025-08-06",
+      "value": 24.719688415527344
+    },
+    {
+      "date": "2025-08-07",
+      "value": 24.855831146240234
+    },
+    {
+      "date": "2025-08-08",
+      "value": 24.680788040161133
+    },
+    {
+      "date": "2025-08-11",
+      "value": 24.700237274169922
+    },
+    {
+      "date": "2025-08-12",
+      "value": 24.778034210205078
+    },
+    {
+      "date": "2025-08-13",
+      "value": 25.36150550842285
+    },
+    {
+      "date": "2025-08-14",
+      "value": 25.303157806396484
+    },
+    {
+      "date": "2025-08-15",
+      "value": 25.089218139648438
+    },
+    {
+      "date": "2025-08-18",
+      "value": 24.953075408935547
+    },
+    {
+      "date": "2025-08-19",
+      "value": 24.9141788482666
+    },
+    {
+      "date": "2025-08-20",
+      "value": 24.953075408935547
+    },
+    {
+      "date": "2025-08-21",
+      "value": 24.9141788482666
+    },
+    {
+      "date": "2025-08-22",
+      "value": 25.128116607666016
+    },
+    {
+      "date": "2025-08-25",
+      "value": 25.633790969848633
+    },
+    {
+      "date": "2025-08-26",
+      "value": 25.303157806396484
+    },
+    {
+      "date": "2025-08-27",
+      "value": 24.991973876953125
+    },
+    {
+      "date": "2025-08-28",
+      "value": 24.797483444213867
+    },
+    {
+      "date": "2025-08-29",
+      "value": 24.9141788482666
+    },
+    {
+      "date": "2025-09-01",
+      "value": 25.439300537109375
+    },
+    {
+      "date": "2025-09-02",
+      "value": 25.322607040405273
+    },
+    {
+      "date": "2025-09-03",
+      "value": 25.18646240234375
+    },
+    {
+      "date": "2025-09-04",
+      "value": 24.9141788482666
+    },
+    {
+      "date": "2025-09-05",
+      "value": 25.264259338378906
+    },
+    {
+      "date": "2025-09-08",
+      "value": 25.478199005126953
+    },
+    {
+      "date": "2025-09-09",
+      "value": 25.8088321685791
+    },
+    {
+      "date": "2025-09-10",
+      "value": 26.061668395996094
+    },
+    {
+      "date": "2025-09-11",
+      "value": 25.983871459960938
+    },
+    {
+      "date": "2025-09-12",
+      "value": 26.25615882873535
+    },
+    {
+      "date": "2025-09-15",
+      "value": 26.333955764770508
+    },
+    {
+      "date": "2025-09-16",
+      "value": 26.314504623413086
+    },
+    {
+      "date": "2025-09-17",
+      "value": 26.7618350982666
+    },
+    {
+      "date": "2025-09-18",
+      "value": 26.43120002746582
+    },
+    {
+      "date": "2025-09-19",
+      "value": 26.450651168823242
+    },
+    {
+      "date": "2025-09-22",
+      "value": 26.217260360717773
+    },
+    {
+      "date": "2025-09-23",
+      "value": 26.061668395996094
+    },
+    {
+      "date": "2025-09-24",
+      "value": 26.43120002746582
+    },
+    {
+      "date": "2025-09-25",
+      "value": 26.392301559448242
+    },
+    {
+      "date": "2025-09-26",
+      "value": 26.042221069335938
+    },
+    {
+      "date": "2025-09-29",
+      "value": 26.489545822143555
+    },
+    {
+      "date": "2025-09-30",
+      "value": 26.7618350982666
+    },
+    {
+      "date": "2025-10-02",
+      "value": 27.189708709716797
+    },
+    {
+      "date": "2025-10-03",
+      "value": 27.014671325683594
+    },
+    {
+      "date": "2025-10-06",
+      "value": 26.820180892944336
+    },
+    {
+      "date": "2025-10-08",
+      "value": 26.7034854888916
+    },
+    {
+      "date": "2025-10-09",
+      "value": 26.645139694213867
+    },
+    {
+      "date": "2025-10-10",
+      "value": 26.217260360717773
+    },
+    {
+      "date": "2025-10-13",
+      "value": 25.8088321685791
+    },
+    {
+      "date": "2025-10-14",
+      "value": 25.40040397644043
+    },
+    {
+      "date": "2025-10-15",
+      "value": 25.828279495239258
+    },
+    {
+      "date": "2025-10-16",
+      "value": 25.8088321685791
+    },
+    {
+      "date": "2025-10-17",
+      "value": 25.147565841674805
+    },
+    {
+      "date": "2025-10-20",
+      "value": 25.789382934570312
+    },
+    {
+      "date": "2025-10-21",
+      "value": 25.964426040649414
+    },
+    {
+      "date": "2025-10-22",
+      "value": 25.692136764526367
+    },
+    {
+      "date": "2025-10-23",
+      "value": 25.86717987060547
+    },
+    {
+      "date": "2025-10-27",
+      "value": 26.29505729675293
+    },
+    {
+      "date": "2025-10-28",
+      "value": 26.236709594726562
+    },
+    {
+      "date": "2025-10-30",
+      "value": 26.206928253173828
+    },
+    {
+      "date": "2025-10-31",
+      "value": 25.869415283203125
+    },
+    {
+      "date": "2025-11-03",
+      "value": 26.06795310974121
+    },
+    {
+      "date": "2025-11-04",
+      "value": 25.84956169128418
+    },
+    {
+      "date": "2025-11-05",
+      "value": 25.84956169128418
+    },
+    {
+      "date": "2025-11-06",
+      "value": 26.405466079711914
+    },
+    {
+      "date": "2025-11-07",
+      "value": 26.147367477416992
+    },
+    {
+      "date": "2025-11-10",
+      "value": 26.604001998901367
+    },
+    {
+      "date": "2025-11-11",
+      "value": 26.64371109008789
+    },
+    {
+      "date": "2025-11-12",
+      "value": 26.842248916625977
+    },
+    {
+      "date": "2025-11-13",
+      "value": 26.981224060058594
+    },
+    {
+      "date": "2025-11-14",
+      "value": 26.524587631225586
+    },
+    {
+      "date": "2025-11-17",
+      "value": 26.326051712036133
+    },
+    {
+      "date": "2025-11-18",
+      "value": 25.869415283203125
+    },
+    {
+      "date": "2025-11-19",
+      "value": 25.78999900817871
+    },
+    {
+      "date": "2025-11-20",
+      "value": 25.80985450744629
+    },
+    {
+      "date": "2025-11-21",
+      "value": 25.174535751342773
+    },
+    {
+      "date": "2025-11-24",
+      "value": 25.63117027282715
+    },
+    {
+      "date": "2025-11-25",
+      "value": 25.84956169128418
+    },
+    {
+      "date": "2025-11-26",
+      "value": 25.88926887512207
+    },
+    {
+      "date": "2025-11-27",
+      "value": 25.869415283203125
+    },
+    {
+      "date": "2025-11-28",
+      "value": 25.84956169128418
+    },
+    {
+      "date": "2025-12-01",
+      "value": 26.008392333984375
+    },
+    {
+      "date": "2025-12-02",
+      "value": 26.048097610473633
+    },
+    {
+      "date": "2025-12-03",
+      "value": 25.750293731689453
+    },
+    {
+      "date": "2025-12-04",
+      "value": 25.948829650878906
+    },
+    {
+      "date": "2025-12-05",
+      "value": 26.087806701660156
+    },
+    {
+      "date": "2025-12-08",
+      "value": 25.78999900817871
+    },
+    {
+      "date": "2025-12-09",
+      "value": 25.432634353637695
+    },
+    {
+      "date": "2025-12-10",
+      "value": 25.512048721313477
+    },
+    {
+      "date": "2025-12-11",
+      "value": 25.571609497070312
+    },
+    {
+      "date": "2025-12-12",
+      "value": 25.96868324279785
+    },
+    {
+      "date": "2025-12-15",
+      "value": 25.651023864746094
+    },
+    {
+      "date": "2025-12-16",
+      "value": 25.253950119018555
+    },
+    {
+      "date": "2025-12-17",
+      "value": 25.472339630126953
+    },
+    {
+      "date": "2025-12-18",
+      "value": 25.512048721313477
+    },
+    {
+      "date": "2025-12-19",
+      "value": 25.71058464050293
+    },
+    {
+      "date": "2025-12-22",
+      "value": 25.80985450744629
+    },
+    {
+      "date": "2025-12-23",
+      "value": 25.770145416259766
+    },
+    {
+      "date": "2025-12-24",
+      "value": 25.80985450744629
+    },
+    {
+      "date": "2025-12-29",
+      "value": 25.63117027282715
+    },
+    {
+      "date": "2025-12-30",
+      "value": 25.869415283203125
+    },
+    {
+      "date": "2025-12-31",
+      "value": 25.63117027282715
+    },
+    {
+      "date": "2026-01-02",
+      "value": 26.345905303955078
+    },
+    {
+      "date": "2026-01-05",
+      "value": 26.326051712036133
+    },
+    {
+      "date": "2026-01-06",
+      "value": 26.68341827392578
+    },
+    {
+      "date": "2026-01-07",
+      "value": 26.46502685546875
+    },
+    {
+      "date": "2026-01-08",
+      "value": 26.127513885498047
+    },
+    {
+      "date": "2026-01-09",
+      "value": 26.206928253173828
+    },
+    {
+      "date": "2026-01-12",
+      "value": 26.604001998901367
+    },
+    {
+      "date": "2026-01-13",
+      "value": 26.842248916625977
+    },
+    {
+      "date": "2026-01-14",
+      "value": 27.001079559326172
+    },
+    {
+      "date": "2026-01-15",
+      "value": 26.921663284301758
+    },
+    {
+      "date": "2026-01-16",
+      "value": 26.842248916625977
+    },
+    {
+      "date": "2026-01-19",
+      "value": 26.56429672241211
+    },
+    {
+      "date": "2026-01-20",
+      "value": 26.484880447387695
+    },
+    {
+      "date": "2026-01-21",
+      "value": 26.604001998901367
+    },
+    {
+      "date": "2026-01-22",
+      "value": 26.663564682006836
+    },
+    {
+      "date": "2026-01-23",
+      "value": 26.762832641601562
+    },
+    {
+      "date": "2026-01-26",
+      "value": 26.782686233520508
+    },
+    {
+      "date": "2026-01-27",
+      "value": 27.12019920349121
+    },
+    {
+      "date": "2026-01-28",
+      "value": 27.834936141967773
+    },
+    {
+      "date": "2026-01-29",
+      "value": 27.97391128540039
+    },
+    {
+      "date": "2026-01-30",
+      "value": 27.39815330505371
+    },
+    {
+      "date": "2026-02-02",
+      "value": 26.742979049682617
+    },
+    {
+      "date": "2026-02-03",
+      "value": 26.802539825439453
+    },
+    {
+      "date": "2026-02-04",
+      "value": 26.881956100463867
+    },
+    {
+      "date": "2026-02-05",
+      "value": 26.901809692382812
+    },
+    {
+      "date": "2026-02-06",
+      "value": 26.56429672241211
+    },
+    {
+      "date": "2026-02-09",
+      "value": 27.020931243896484
+    },
+    {
+      "date": "2026-02-10",
+      "value": 27.179759979248047
+    },
+    {
+      "date": "2026-02-11",
+      "value": 27.279029846191406
+    },
+    {
+      "date": "2026-02-12",
+      "value": 27.04078483581543
+    },
+    {
+      "date": "2026-02-13",
+      "value": 26.584150314331055
+    },
+    {
+      "date": "2026-02-16",
+      "value": 26.762832641601562
+    },
+    {
+      "date": "2026-02-20",
+      "value": 26.445173263549805
+    },
+    {
+      "date": "2026-02-23",
+      "value": 27.100345611572266
+    },
+    {
+      "date": "2026-02-24",
+      "value": 26.604001998901367
+    },
+    {
+      "date": "2026-02-25",
+      "value": 26.782686233520508
+    },
+    {
+      "date": "2026-02-26",
+      "value": 26.38561248779297
+    },
+    {
+      "date": "2026-02-27",
+      "value": 26.703271865844727
+    },
+    {
+      "date": "2026-03-02",
+      "value": 26.087806701660156
+    },
+    {
+      "date": "2026-03-03",
+      "value": 25.770145416259766
+    },
+    {
+      "date": "2026-03-04",
+      "value": 25.31351089477539
+    },
+    {
+      "date": "2026-03-05",
+      "value": 25.31351089477539
+    },
+    {
+      "date": "2026-03-06",
+      "value": 25.730438232421875
+    },
+    {
+      "date": "2026-03-09",
+      "value": 25.432634353637695
+    },
+    {
+      "date": "2026-03-10",
+      "value": 25.98853874206543
+    },
+    {
+      "date": "2026-03-11",
+      "value": 25.909122467041016
+    },
+    {
+      "date": "2026-03-12",
+      "value": 25.84956169128418
+    },
+    {
+      "date": "2026-03-13",
+      "value": 25.53190040588379
+    },
+    {
+      "date": "2026-03-16",
+      "value": 25.928977966308594
+    },
+    {
+      "date": "2026-03-17",
+      "value": 26.008392333984375
+    },
+    {
+      "date": "2026-03-18",
+      "value": 26.087806701660156
+    },
+    {
+      "date": "2026-03-19",
+      "value": 25.571609497070312
+    },
+    {
+      "date": "2026-03-20",
+      "value": 25.373071670532227
+    },
+    {
+      "date": "2026-03-23",
+      "value": 24.51936149597168
+    },
+    {
+      "date": "2026-03-24",
+      "value": 25.174535751342773
+    },
+    {
+      "date": "2026-03-25",
+      "value": 25.472339630126953
+    },
+    {
+      "date": "2026-03-26",
+      "value": 24.95614242553711
+    },
+    {
+      "date": "2026-03-27",
+      "value": 25.015705108642578
+    },
+    {
+      "date": "2026-03-30",
+      "value": 24.817167282104492
+    },
+    {
+      "date": "2026-03-31",
+      "value": 24.896581649780273
+    },
+    {
+      "date": "2026-04-01",
+      "value": 25.35321807861328
+    },
+    {
+      "date": "2026-04-02",
+      "value": 25.21424102783203
+    },
+    {
+      "date": "2026-04-08",
+      "value": 26.008392333984375
+    },
+    {
+      "date": "2026-04-09",
+      "value": 25.829708099365234
+    },
+    {
+      "date": "2026-04-10",
+      "value": 25.96868324279785
+    },
+    {
+      "date": "2026-04-13",
+      "value": 25.770145416259766
+    },
+    {
+      "date": "2026-04-14",
+      "value": 26.008392333984375
+    },
+    {
+      "date": "2026-04-15",
+      "value": 26.048097610473633
+    },
+    {
+      "date": "2026-04-16",
+      "value": 26.504735946655273
+    },
+    {
+      "date": "2026-04-17",
+      "value": 26.24663734436035
+    },
+    {
+      "date": "2026-04-20",
+      "value": 26.46502685546875
+    },
+    {
+      "date": "2026-04-21",
+      "value": 26.56429672241211
+    },
+    {
+      "date": "2026-04-22",
+      "value": 26.266489028930664
+    },
+    {
+      "date": "2026-04-23",
+      "value": 26.008392333984375
+    },
+    {
+      "date": "2026-04-24",
+      "value": 26.06795310974121
+    },
+    {
+      "date": "2026-04-27",
+      "value": 26.048097610473633
+    },
+    {
+      "date": "2026-04-28",
+      "value": 25.78999900817871
+    },
+    {
+      "date": "2026-04-29",
+      "value": 26.239999771118164
+    },
+    {
+      "date": "2026-04-30",
+      "value": 25.899999618530273
+    },
+    {
+      "date": "2026-05-04",
+      "value": 26.239999771118164
+    },
+    {
+      "date": "2026-05-05",
+      "value": 26.020000457763672
+    },
+    {
+      "date": "2026-05-06",
+      "value": 26.299999237060547
+    },
+    {
+      "date": "2026-05-07",
+      "value": 26.760000228881836
+    },
+    {
+      "date": "2026-05-08",
+      "value": 26.5
+    },
+    {
+      "date": "2026-05-11",
+      "value": 26.540000915527344
+    },
+    {
+      "date": "2026-05-12",
+      "value": 26.479999542236328
+    },
+    {
+      "date": "2026-05-13",
+      "value": 26.520000457763672
+    },
+    {
+      "date": "2026-05-14",
+      "value": 26.559999465942383
+    },
+    {
+      "date": "2026-05-15",
+      "value": 26.1200008392334
+    },
+    {
+      "date": "2026-05-18",
+      "value": 25.81999969482422
+    },
+    {
+      "date": "2026-05-19",
+      "value": 25.979999542236328
+    },
+    {
+      "date": "2026-05-20",
+      "value": 25.860000610351562
+    },
+    {
+      "date": "2026-05-21",
+      "value": 25.6200008392334
+    },
+    {
+      "date": "2026-05-22",
+      "value": 25.799999237060547
+    },
+    {
+      "date": "2026-05-26",
+      "value": 25.81999969482422
+    },
+    {
+      "date": "2026-05-27",
+      "value": 25.559999465942383
+    },
+    {
+      "date": "2026-05-28",
+      "value": 25.260000228881836
+    },
+    {
+      "date": "2026-05-29",
+      "value": 25.399999618530273
+    },
+    {
+      "date": "2026-06-01",
+      "value": 25.68000030517578
+    },
+    {
+      "date": "2026-06-02",
+      "value": 26.31999969482422
+    },
+    {
+      "date": "2026-06-03",
+      "value": 25.940000534057617
+    },
+    {
+      "date": "2026-06-04",
+      "value": 25.540000915527344
+    },
+    {
+      "date": "2026-06-05",
+      "value": 25.280000686645508
+    },
+    {
+      "date": "2026-06-08",
+      "value": 24.979999542236328
+    },
+    {
+      "date": "2026-06-09",
+      "value": 24.899999618530273
+    },
+    {
+      "date": "2026-06-10",
+      "value": 24.739999771118164
+    },
+    {
+      "date": "2026-06-11",
+      "value": 24.600000381469727
+    },
+    {
+      "date": "2026-06-12",
+      "value": 25.079999923706055
+    },
+    {
+      "date": "2026-06-15",
+      "value": 25.239999771118164
+    },
+    {
+      "date": "2026-06-16",
+      "value": 24.860000610351562
+    },
+    {
+      "date": "2026-06-17",
+      "value": 24.68000030517578
+    }
+  ],
+  "execution_results": [
+    {
+      "message": "sandbox only; no brokerage order was placed",
+      "side": "cash",
+      "status": "simulated",
+      "target_weight_delta": 0.2943,
+      "ticker": "CASH",
+      "timestamp": "2026-06-19T01:59:25"
+    },
+    {
+      "message": "sandbox only; no brokerage order was placed",
+      "side": "sell",
+      "status": "simulated",
+      "target_weight_delta": -0.05280000000000001,
+      "ticker": "0700.HK",
+      "timestamp": "2026-06-19T01:59:25"
+    },
+    {
+      "message": "sandbox only; no brokerage order was placed",
+      "side": "sell",
+      "status": "simulated",
+      "target_weight_delta": -0.05,
+      "ticker": "3690.HK",
+      "timestamp": "2026-06-19T01:59:25"
+    },
+    {
+      "message": "sandbox only; no brokerage order was placed",
+      "side": "sell",
+      "status": "simulated",
+      "target_weight_delta": -0.046200000000000005,
+      "ticker": "9988.HK",
+      "timestamp": "2026-06-19T01:59:25"
+    },
+    {
+      "message": "sandbox only; no brokerage order was placed",
+      "side": "sell",
+      "status": "simulated",
+      "target_weight_delta": -0.0297,
+      "ticker": "0388.HK",
+      "timestamp": "2026-06-19T01:59:25"
+    },
+    {
+      "message": "sandbox only; no brokerage order was placed",
+      "side": "sell",
+      "status": "simulated",
+      "target_weight_delta": -0.0297,
+      "ticker": "1299.HK",
+      "timestamp": "2026-06-19T01:59:25"
+    },
+    {
+      "message": "sandbox only; no brokerage order was placed",
+      "side": "sell",
+      "status": "simulated",
+      "target_weight_delta": -0.026400000000000003,
+      "ticker": "1810.HK",
+      "timestamp": "2026-06-19T01:59:25"
+    },
+    {
+      "message": "sandbox only; no brokerage order was placed",
+      "side": "sell",
+      "status": "simulated",
+      "target_weight_delta": -0.02,
+      "ticker": "0005.HK",
+      "timestamp": "2026-06-19T01:59:25"
+    },
+    {
+      "message": "sandbox only; no brokerage order was placed",
+      "side": "sell",
+      "status": "simulated",
+      "target_weight_delta": -0.02,
+      "ticker": "0939.HK",
+      "timestamp": "2026-06-19T01:59:25"
+    },
+    {
+      "message": "sandbox only; no brokerage order was placed",
+      "side": "sell",
+      "status": "simulated",
+      "target_weight_delta": -0.012,
+      "ticker": "0823.HK",
+      "timestamp": "2026-06-19T01:59:25"
+    },
+    {
+      "message": "sandbox only; no brokerage order was placed",
+      "side": "sell",
+      "status": "simulated",
+      "target_weight_delta": -0.0075,
+      "ticker": "0001.HK",
+      "timestamp": "2026-06-19T01:59:25"
+    }
+  ],
+  "lookback_days": 900,
+  "market_regime": {
+    "benchmark": "2800.HK",
+    "drawdown": -0.1177493896587748,
+    "momentum": -0.0430398893249635,
+    "price": 24.68000030517578,
+    "realized_vol": 0.17635252657846556,
+    "trend_ma": 26.015978717803954,
+    "trend_state": "bearish",
+    "z": -1.777527732662921
+  },
+  "mode": "real",
+  "positions": {
+    "0001.HK": 0.05,
+    "0005.HK": 0.08,
+    "0388.HK": 0.09,
+    "0700.HK": 0.16,
+    "0823.HK": 0.08,
+    "0939.HK": 0.08,
+    "1299.HK": 0.09,
+    "1810.HK": 0.08,
+    "3690.HK": 0.1,
+    "9988.HK": 0.14,
+    "CASH": 0.05
+  },
+  "price_as_of": "2026-06-18",
+  "recommended_distribution": [
+    {
+      "action": "raise_cash",
+      "current_weight": 0.05,
+      "delta_weight": 0.2943,
+      "priority": 0.3443,
+      "reason": "raise or maintain cash buffer",
+      "recommended_weight": 0.3443,
+      "rule_ids": [
+        "CASH_BUFFER"
+      ],
+      "sector": "Cash",
+      "target_weight": 0.05,
+      "ticker": "CASH"
+    },
+    {
+      "action": "trim",
+      "current_weight": 0.16,
+      "delta_weight": -0.052800000000000014,
+      "priority": 0.10280000000000002,
+      "reason": "benchmark trend bearish (2800.HK below MA200); exceeds max single-name cap; over target weight; trailing-stop triggered",
+      "recommended_weight": 0.10719999999999999,
+      "rule_ids": [
+        "OVER_TARGET",
+        "SINGLE_CAP",
+        "TRAILING_STOP",
+        "TREND_FILTER"
+      ],
+      "sector": "Technology",
+      "target_weight": 0.14,
+      "ticker": "0700.HK"
+    },
+    {
+      "action": "trim",
+      "current_weight": 0.1,
+      "delta_weight": -0.05,
+      "priority": 0.1,
+      "reason": "benchmark trend bearish (2800.HK below MA200); over target weight; stop-loss triggered; trailing-stop triggered",
+      "recommended_weight": 0.05,
+      "rule_ids": [
+        "OVER_TARGET",
+        "STOP_LOSS",
+        "TRAILING_STOP",
+        "TREND_FILTER"
+      ],
+      "sector": "ConsumerServices",
+      "target_weight": 0.09,
+      "ticker": "3690.HK"
+    },
+    {
+      "action": "trim",
+      "current_weight": 0.14,
+      "delta_weight": -0.046200000000000005,
+      "priority": 0.09620000000000001,
+      "reason": "benchmark trend bearish (2800.HK below MA200); over target weight; trailing-stop triggered",
+      "recommended_weight": 0.09380000000000001,
+      "rule_ids": [
+        "OVER_TARGET",
+        "TRAILING_STOP",
+        "TREND_FILTER"
+      ],
+      "sector": "Ecommerce",
+      "target_weight": 0.12,
+      "ticker": "9988.HK"
+    },
+    {
+      "action": "trim",
+      "current_weight": 0.09,
+      "delta_weight": -0.029700000000000004,
+      "priority": 0.07970000000000001,
+      "reason": "benchmark trend bearish (2800.HK below MA200); trailing-stop triggered",
+      "recommended_weight": 0.06029999999999999,
+      "rule_ids": [
+        "TRAILING_STOP",
+        "TREND_FILTER"
+      ],
+      "sector": "Exchanges",
+      "target_weight": 0.1,
+      "ticker": "0388.HK"
+    },
+    {
+      "action": "trim",
+      "current_weight": 0.09,
+      "delta_weight": -0.029700000000000004,
+      "priority": 0.07970000000000001,
+      "reason": "benchmark trend bearish (2800.HK below MA200); trailing-stop triggered",
+      "recommended_weight": 0.06029999999999999,
+      "rule_ids": [
+        "TRAILING_STOP",
+        "TREND_FILTER"
+      ],
+      "sector": "Insurance",
+      "target_weight": 0.1,
+      "ticker": "1299.HK"
+    },
+    {
+      "action": "trim",
+      "current_weight": 0.08,
+      "delta_weight": -0.026400000000000007,
+      "priority": 0.07640000000000001,
+      "reason": "benchmark trend bearish (2800.HK below MA200); trailing-stop triggered",
+      "recommended_weight": 0.053599999999999995,
+      "rule_ids": [
+        "TRAILING_STOP",
+        "TREND_FILTER"
+      ],
+      "sector": "Technology",
+      "target_weight": 0.08,
+      "ticker": "1810.HK"
+    },
+    {
+      "action": "trim",
+      "current_weight": 0.08,
+      "delta_weight": -0.020000000000000004,
+      "priority": 0.07,
+      "reason": "benchmark trend bearish (2800.HK below MA200); sector hyped (z=1.42)",
+      "recommended_weight": 0.06,
+      "rule_ids": [
+        "SECTOR_HYPED",
+        "TREND_FILTER"
+      ],
+      "sector": "Banks",
+      "target_weight": 0.1,
+      "ticker": "0005.HK"
+    },
+    {
+      "action": "trim",
+      "current_weight": 0.08,
+      "delta_weight": -0.020000000000000004,
+      "priority": 0.07,
+      "reason": "benchmark trend bearish (2800.HK below MA200); sector hyped (z=1.42)",
+      "recommended_weight": 0.06,
+      "rule_ids": [
+        "SECTOR_HYPED",
+        "TREND_FILTER"
+      ],
+      "sector": "Banks",
+      "target_weight": 0.08,
+      "ticker": "0939.HK"
+    },
+    {
+      "action": "trim",
+      "current_weight": 0.08,
+      "delta_weight": -0.011999999999999997,
+      "priority": 0.062,
+      "reason": "benchmark trend bearish (2800.HK below MA200)",
+      "recommended_weight": 0.068,
+      "rule_ids": [
+        "TREND_FILTER"
+      ],
+      "sector": "Property",
+      "target_weight": 0.08,
+      "ticker": "0823.HK"
+    },
+    {
+      "action": "trim",
+      "current_weight": 0.05,
+      "delta_weight": -0.0075,
+      "priority": 0.0575,
+      "reason": "benchmark trend bearish (2800.HK below MA200)",
+      "recommended_weight": 0.0425,
+      "rule_ids": [
+        "TREND_FILTER"
+      ],
+      "sector": "Conglomerates",
+      "target_weight": 0.06,
+      "ticker": "0001.HK"
+    }
+  ],
+  "risk_predictions": [
+    {
+      "features": {
+        "drawdown_252": -0.34268817484576186,
+        "ma_gap": -0.21410503624360067,
+        "ret_126": -0.2608651406062551,
+        "ret_21": -0.04304345172384516,
+        "ret_252": -0.1327580328323027,
+        "ret_63": -0.2026342497799909,
+        "vol_21": 0.4571088849518229,
+        "vol_63": 0.3784727782755079,
+        "z_60": -1.3031930493190467
+      },
+      "model_version": "logistic_price_risk_v1",
+      "risk_level": "low",
+      "risk_probability": 0.21696473140218597,
+      "ticker": "0700.HK"
+    },
+    {
+      "features": {
+        "drawdown_252": -0.43264338373558664,
+        "ma_gap": -0.27532639747023135,
+        "ret_126": -0.3040575212508796,
+        "ret_21": -0.21217020275935905,
+        "ret_252": -0.11414836086122127,
+        "ret_63": -0.21628575118892757,
+        "vol_21": 0.4029403174188891,
+        "vol_63": 0.4708271214881876,
+        "z_60": -2.4695893339325257
+      },
+      "model_version": "logistic_price_risk_v1",
+      "risk_level": "low",
+      "risk_probability": 0.16889104722028514,
+      "ticker": "9988.HK"
+    },
+    {
+      "features": {
+        "drawdown_252": -0.5006953996661954,
+        "ma_gap": -0.22537905244367085,
+        "ret_126": -0.26245501615652644,
+        "ret_21": -0.13546056094650416,
+        "ret_252": -0.5027700409514637,
+        "ret_63": -0.08301404529580125,
+        "vol_21": 0.5662807277136545,
+        "vol_63": 0.5393347638968705,
+        "z_60": -2.4632836634672097
+      },
+      "model_version": "logistic_price_risk_v1",
+      "risk_level": "low",
+      "risk_probability": 0.2277951648114176,
+      "ticker": "3690.HK"
+    },
+    {
+      "features": {
+        "drawdown_252": -0.17561652708622866,
+        "ma_gap": -0.07088828388920454,
+        "ret_126": -0.029415231077904003,
+        "ret_21": -0.12765938425252787,
+        "ret_252": 0.08309084334715222,
+        "ret_63": -0.10098709880061885,
+        "vol_21": 0.36390351028910084,
+        "vol_63": 0.37167462763498393,
+        "z_60": -1.918236971309747
+      },
+      "model_version": "logistic_price_risk_v1",
+      "risk_level": "low",
+      "risk_probability": 0.0776880435214439,
+      "ticker": "1299.HK"
+    },
+    {
+      "features": {
+        "drawdown_252": -0.16864832921711526,
+        "ma_gap": -0.09390610338845062,
+        "ret_126": -0.0509495105856127,
+        "ret_21": -0.08585368830983231,
+        "ret_252": -0.06977213085189671,
+        "ret_63": -0.07730187954317091,
+        "vol_21": 0.21201319320506148,
+        "vol_63": 0.2288428545062644,
+        "z_60": -2.1298841240421362
+      },
+      "model_version": "logistic_price_risk_v1",
+      "risk_level": "low",
+      "risk_probability": 0.06500823681543114,
+      "ticker": "0388.HK"
+    },
+    {
+      "features": {
+        "drawdown_252": 0.0,
+        "ma_gap": 0.23049459454767107,
+        "ret_126": 0.4055563792133092,
+        "ret_21": 0.06200995551676991,
+        "ret_252": 0.6645672201323218,
+        "ret_63": 0.205403417974241,
+        "vol_21": 0.27974437779077355,
+        "vol_63": 0.31920829626532843,
+        "z_60": 1.4233655820694198
+      },
+      "model_version": "logistic_price_risk_v1",
+      "risk_level": "low",
+      "risk_probability": 0.08345539372701184,
+      "ticker": "0005.HK"
+    },
+    {
+      "features": {
+        "drawdown_252": -0.04115682925240627,
+        "ma_gap": 0.07901262364309813,
+        "ret_126": 0.13272007021348697,
+        "ret_21": -0.025988755479855463,
+        "ret_252": 0.18047457331382843,
+        "ret_63": 0.07080741382841937,
+        "vol_21": 0.2005883498867314,
+        "vol_63": 0.1970767049068659,
+        "z_60": -0.05111393991389675
+      },
+      "model_version": "logistic_price_risk_v1",
+      "risk_level": "low",
+      "risk_probability": 0.05196571798885691,
+      "ticker": "0939.HK"
+    },
+    {
+      "features": {
+        "drawdown_252": -0.5913549576032717,
+        "ma_gap": -0.371081253354108,
+        "ret_126": -0.4042656101884041,
+        "ret_21": -0.19778066536090477,
+        "ret_252": -0.5401309715088152,
+        "ret_63": -0.3017045627571331,
+        "vol_21": 0.30556147461530253,
+        "vol_63": 0.3912698407551003,
+        "z_60": -2.600819402332386
+      },
+      "model_version": "logistic_price_risk_v1",
+      "risk_level": "low",
+      "risk_probability": 0.21933923945475614,
+      "ticker": "1810.HK"
+    },
+    {
+      "features": {
+        "drawdown_252": -0.1412733681308025,
+        "ma_gap": -0.023794318187970398,
+        "ret_126": 0.06841971839370076,
+        "ret_21": -0.10525670912284091,
+        "ret_252": -0.05516350797647851,
+        "ret_63": 0.007317193798066279,
+        "vol_21": 0.14297375396521173,
+        "vol_63": 0.17416770063605863,
+        "z_60": -1.08498761497491
+      },
+      "model_version": "logistic_price_risk_v1",
+      "risk_level": "low",
+      "risk_probability": 0.04760380374116805,
+      "ticker": "0823.HK"
+    },
+    {
+      "features": {
+        "drawdown_252": -0.030509458735239803,
+        "ma_gap": 0.19984855674287427,
+        "ret_126": 0.30511770819899575,
+        "ret_21": -0.0040131825919849096,
+        "ret_252": 0.5643611045759576,
+        "ret_63": 0.20549035473301247,
+        "vol_21": 0.22907253416742787,
+        "vol_63": 0.252066507780297,
+        "z_60": 0.8492938341590939
+      },
+      "model_version": "logistic_price_risk_v1",
+      "risk_level": "low",
+      "risk_probability": 0.06624879516938828,
+      "ticker": "0001.HK"
+    }
+  ],
+  "sector_weights": {
+    "Banks": 0.16,
+    "Conglomerates": 0.05,
+    "ConsumerServices": 0.1,
+    "Ecommerce": 0.14,
+    "Exchanges": 0.09,
+    "Insurance": 0.09,
+    "Property": 0.08,
+    "Technology": 0.24
+  },
+  "signals": [
+    {
+      "etf": "9988.HK",
+      "ma": 144.75482639312744,
+      "momentum": -0.3040575212508796,
+      "pct_from_ma": -0.27532639747023135,
+      "price": 104.9000015258789,
+      "realized_vol": 0.4029403174188884,
+      "sector": "Ecommerce",
+      "status": "undervalued",
+      "std": 8.34754955812991,
+      "trend_ma": 144.75482639312744,
+      "trend_state": "bearish",
+      "z": -2.4695893339325257
+    },
+    {
+      "etf": "3690.HK",
+      "ma": 92.69050014495849,
+      "momentum": -0.26245501615652644,
+      "pct_from_ma": -0.22537905244367085,
+      "price": 71.80000305175781,
+      "realized_vol": 0.5662807277136543,
+      "sector": "ConsumerServices",
+      "status": "undervalued",
+      "std": 4.159419468905498,
+      "trend_ma": 92.69050014495849,
+      "trend_state": "bearish",
+      "z": -2.4632836634672097
+    },
+    {
+      "etf": "0388.HK",
+      "ma": 413.64365127563474,
+      "momentum": -0.0509495105856127,
+      "pct_from_ma": -0.09390610338845062,
+      "price": 374.79998779296875,
+      "realized_vol": 0.2120131932050609,
+      "sector": "Exchanges",
+      "status": "washed_out",
+      "std": 13.711237115105922,
+      "trend_ma": 413.64365127563474,
+      "trend_state": "bearish",
+      "z": -2.1298841240421362
+    },
+    {
+      "etf": "1299.HK",
+      "ma": 79.32307350158692,
+      "momentum": -0.029415231077904003,
+      "pct_from_ma": -0.07088828388920454,
+      "price": 73.69999694824219,
+      "realized_vol": 0.36390351028910106,
+      "sector": "Insurance",
+      "status": "cool",
+      "std": 4.327122810950475,
+      "trend_ma": 79.32307350158692,
+      "trend_state": "bearish",
+      "z": -1.918236971309747
+    },
+    {
+      "etf": "2800.HK",
+      "ma": 26.015978717803954,
+      "momentum": -0.0430398893249635,
+      "pct_from_ma": -0.05135222576554077,
+      "price": 24.68000030517578,
+      "realized_vol": 0.17635252657846556,
+      "sector": "BroadMarket",
+      "status": "cool",
+      "std": 0.5841353176127745,
+      "trend_ma": 26.015978717803954,
+      "trend_state": "bearish",
+      "z": -1.777527732662921
+    },
+    {
+      "etf": "0700.HK",
+      "ma": 560.1257579040528,
+      "momentum": -0.2608651406062551,
+      "pct_from_ma": -0.21410503624360067,
+      "price": 440.20001220703125,
+      "realized_vol": 0.45710888495182256,
+      "sector": "Technology",
+      "status": "undervalued",
+      "std": 23.256175741759822,
+      "trend_ma": 560.1257579040528,
+      "trend_state": "bearish",
+      "z": -1.3031930493190467
+    },
+    {
+      "etf": "0823.HK",
+      "ma": 36.61113876342773,
+      "momentum": 0.06841971839370076,
+      "pct_from_ma": -0.023794318187970398,
+      "price": 35.7400016784668,
+      "realized_vol": 0.1429737539652118,
+      "sector": "Property",
+      "status": "cool",
+      "std": 1.6426196578331425,
+      "trend_ma": 36.61113876342773,
+      "trend_state": "bearish",
+      "z": -1.08498761497491
+    },
+    {
+      "etf": "0001.HK",
+      "ma": 57.882302360534666,
+      "momentum": 0.30511770819899575,
+      "pct_from_ma": 0.19984855674287427,
+      "price": 69.44999694824219,
+      "realized_vol": 0.22907253416742726,
+      "sector": "Conglomerates",
+      "status": "neutral",
+      "std": 4.506060726987034,
+      "trend_ma": 57.882302360534666,
+      "trend_state": "bullish",
+      "z": 0.8492938341590939
+    },
+    {
+      "etf": "0005.HK",
+      "ma": 121.08952014923096,
+      "momentum": 0.4055563792133092,
+      "pct_from_ma": 0.23049459454767107,
+      "price": 149.0,
+      "realized_vol": 0.27974437779077377,
+      "sector": "Banks",
+      "status": "hyped",
+      "std": 7.188024053080914,
+      "trend_ma": 121.08952014923096,
+      "trend_state": "bullish",
+      "z": 1.4233655820694198
+    }
+  ],
+  "snapshot": {
+    "config_name": "example_hk_config.yaml",
+    "is_example_config": false,
+    "lookback_days": 900,
+    "mode": "real"
+  },
+  "suggestions": [
+    {
+      "action": "hold",
+      "delta_weight": 0.2943,
+      "metadata": {},
+      "reason": "raise or maintain cash buffer",
+      "rule_ids": [
+        "CASH_BUFFER"
+      ],
+      "ticker": "CASH"
+    },
+    {
+      "action": "trim",
+      "delta_weight": -0.05280000000000001,
+      "metadata": {},
+      "reason": "benchmark trend bearish (2800.HK below MA200); exceeds max single-name cap; over target weight; trailing-stop triggered",
+      "rule_ids": [
+        "OVER_TARGET",
+        "SINGLE_CAP",
+        "TRAILING_STOP",
+        "TREND_FILTER"
+      ],
+      "ticker": "0700.HK"
+    },
+    {
+      "action": "trim",
+      "delta_weight": -0.05,
+      "metadata": {},
+      "reason": "benchmark trend bearish (2800.HK below MA200); over target weight; stop-loss triggered; trailing-stop triggered",
+      "rule_ids": [
+        "OVER_TARGET",
+        "STOP_LOSS",
+        "TRAILING_STOP",
+        "TREND_FILTER"
+      ],
+      "ticker": "3690.HK"
+    },
+    {
+      "action": "trim",
+      "delta_weight": -0.046200000000000005,
+      "metadata": {},
+      "reason": "benchmark trend bearish (2800.HK below MA200); over target weight; trailing-stop triggered",
+      "rule_ids": [
+        "OVER_TARGET",
+        "TRAILING_STOP",
+        "TREND_FILTER"
+      ],
+      "ticker": "9988.HK"
+    },
+    {
+      "action": "trim",
+      "delta_weight": -0.0297,
+      "metadata": {},
+      "reason": "benchmark trend bearish (2800.HK below MA200); trailing-stop triggered",
+      "rule_ids": [
+        "TRAILING_STOP",
+        "TREND_FILTER"
+      ],
+      "ticker": "0388.HK"
+    },
+    {
+      "action": "trim",
+      "delta_weight": -0.0297,
+      "metadata": {},
+      "reason": "benchmark trend bearish (2800.HK below MA200); trailing-stop triggered",
+      "rule_ids": [
+        "TRAILING_STOP",
+        "TREND_FILTER"
+      ],
+      "ticker": "1299.HK"
+    },
+    {
+      "action": "trim",
+      "delta_weight": -0.026400000000000003,
+      "metadata": {},
+      "reason": "benchmark trend bearish (2800.HK below MA200); trailing-stop triggered",
+      "rule_ids": [
+        "TRAILING_STOP",
+        "TREND_FILTER"
+      ],
+      "ticker": "1810.HK"
+    },
+    {
+      "action": "trim",
+      "delta_weight": -0.02,
+      "metadata": {},
+      "reason": "benchmark trend bearish (2800.HK below MA200); sector hyped (z=1.42)",
+      "rule_ids": [
+        "SECTOR_HYPED",
+        "TREND_FILTER"
+      ],
+      "ticker": "0005.HK"
+    },
+    {
+      "action": "trim",
+      "delta_weight": -0.02,
+      "metadata": {},
+      "reason": "benchmark trend bearish (2800.HK below MA200); sector hyped (z=1.42)",
+      "rule_ids": [
+        "SECTOR_HYPED",
+        "TREND_FILTER"
+      ],
+      "ticker": "0939.HK"
+    },
+    {
+      "action": "trim",
+      "delta_weight": -0.012,
+      "metadata": {},
+      "reason": "benchmark trend bearish (2800.HK below MA200)",
+      "rule_ids": [
+        "TREND_FILTER"
+      ],
+      "ticker": "0823.HK"
+    },
+    {
+      "action": "trim",
+      "delta_weight": -0.0075,
+      "metadata": {},
+      "reason": "benchmark trend bearish (2800.HK below MA200)",
+      "rule_ids": [
+        "TREND_FILTER"
+      ],
+      "ticker": "0001.HK"
+    }
+  ],
+  "target_weights": {
+    "0001.HK": 0.06,
+    "0005.HK": 0.1,
+    "0388.HK": 0.1,
+    "0700.HK": 0.14,
+    "0823.HK": 0.08,
+    "0939.HK": 0.08,
+    "1299.HK": 0.1,
+    "1810.HK": 0.08,
+    "3690.HK": 0.09,
+    "9988.HK": 0.12,
+    "CASH": 0.05
+  },
+  "universe": {
+    "benchmark": "2800.HK",
+    "sector_etfs": {
+      "Banks": "0005.HK",
+      "BroadMarket": "2800.HK",
+      "Conglomerates": "0001.HK",
+      "ConsumerServices": "3690.HK",
+      "Ecommerce": "9988.HK",
+      "Exchanges": "0388.HK",
+      "Insurance": "1299.HK",
+      "Property": "0823.HK",
+      "Technology": "0700.HK"
+    },
+    "tickers": [
+      "0001.HK",
+      "0005.HK",
+      "0388.HK",
+      "0700.HK",
+      "0823.HK",
+      "0939.HK",
+      "1299.HK",
+      "1810.HK",
+      "3690.HK",
+      "9988.HK"
+    ]
+  }
+}

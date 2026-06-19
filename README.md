@@ -191,12 +191,13 @@ The dashboard can run on Netlify without a local FastAPI server. Netlify serves:
 
 The hosted `/api/*` contract is:
 - `/api/health`: Netlify Function health check
-- `/api/dashboard`: latest generated dashboard snapshot
-- `/api/backtest`: latest generated backtest snapshot
-- `/api/strategies/compare`: latest generated strategy comparison snapshot
-- `/api/rules`: rules catalog snapshot
-- `/api/ohlc`: benchmark OHLC snapshot
-- `/api/quotes`: live quote lookup with snapshot fallback
+- `/api/bootstrap?market=us|hk`: combined dashboard, backtest, strategy, rules, OHLC, and quote snapshot
+- `/api/dashboard?market=us|hk`: latest generated dashboard snapshot
+- `/api/backtest?market=us|hk`: latest generated backtest snapshot
+- `/api/strategies/compare?market=us|hk`: latest generated strategy comparison snapshot
+- `/api/rules?market=us|hk`: rules catalog snapshot
+- `/api/ohlc?market=us|hk`: benchmark OHLC snapshot
+- `/api/quotes?market=us|hk`: live quote lookup with snapshot fallback
 
 The recommended free/low-friction path is:
 
@@ -253,6 +254,21 @@ Usage controls:
 - The refresh workflow deploys only when `web/public/data/*.json` changes.
 - The schedule runs once per weekday after market close instead of polling intraday.
 - `/api/quotes` provides live quotes on demand, while heavier strategy and backtest data comes from refreshed snapshots.
+
+## Market profiles
+
+The dashboard supports one-click switching between:
+- `us`: US equities from `example_config.yaml`
+- `hk`: Hong Kong equities from `example_hk_config.yaml`
+
+The scheduled refresh workflow exports both profiles:
+
+```bash
+python scripts/export_web_snapshot.py --config config.yaml --out-dir web/public/data/us --mode real --lookback-days 900
+python scripts/export_web_snapshot.py --config example_hk_config.yaml --out-dir web/public/data/hk --mode real --lookback-days 900
+```
+
+Hong Kong tickers use Yahoo Finance symbols such as `0700.HK`, `9988.HK`, and `2800.HK`.
 
 ## Config
 

@@ -53,7 +53,10 @@ jobs:
           fi
 
       - name: Export web snapshot
-        run: python scripts/export_web_snapshot.py --config config.yaml --mode "$SNAPSHOT_MODE" --lookback-days 900
+        run: |
+          python scripts/export_web_snapshot.py --config config.yaml --out-dir web/public/data/us --mode "$SNAPSHOT_MODE" --lookback-days 900
+          python scripts/export_web_snapshot.py --config example_hk_config.yaml --out-dir web/public/data/hk --mode "$SNAPSHOT_MODE" --lookback-days 900
+          cp web/public/data/us/*.json web/public/data/
 
       - name: Setup Node
         uses: actions/setup-node@v6

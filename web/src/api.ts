@@ -142,43 +142,51 @@ export type BootstrapPayload = {
   quotes: LatestQuote[];
 };
 
+export type MarketProfile = "us" | "hk";
+
 const API_BASE = import.meta.env.VITE_API_BASE ?? "http://127.0.0.1:8000";
 const DATA_MODE = import.meta.env.VITE_DATA_MODE ?? "api";
 
-export async function fetchDashboard(mode: string, lookbackDays: number): Promise<DashboardPayload> {
-  const params = new URLSearchParams({ mode, lookback_days: String(lookbackDays) });
-  return fetchJson<DashboardPayload>(`${API_BASE}/api/dashboard?${params.toString()}`, "/data/dashboard.json");
+export async function fetchDashboard(mode: string, lookbackDays: number, market: MarketProfile): Promise<DashboardPayload> {
+  const params = new URLSearchParams({ mode, lookback_days: String(lookbackDays), market });
+  return fetchJson<DashboardPayload>(`${API_BASE}/api/dashboard?${params.toString()}`, `/data/${market}/dashboard.json`);
 }
 
-export async function fetchBacktest(mode: string, lookbackDays: number): Promise<BacktestPayload> {
-  const params = new URLSearchParams({ mode, lookback_days: String(lookbackDays) });
-  return fetchJson<BacktestPayload>(`${API_BASE}/api/backtest?${params.toString()}`, "/data/backtest.json");
+export async function fetchBacktest(mode: string, lookbackDays: number, market: MarketProfile): Promise<BacktestPayload> {
+  const params = new URLSearchParams({ mode, lookback_days: String(lookbackDays), market });
+  return fetchJson<BacktestPayload>(`${API_BASE}/api/backtest?${params.toString()}`, `/data/${market}/backtest.json`);
 }
 
-export async function fetchStrategyComparison(mode: string, lookbackDays: number): Promise<StrategyComparisonPayload> {
-  const params = new URLSearchParams({ mode, lookback_days: String(Math.max(lookbackDays, 900)) });
-  return fetchJson<StrategyComparisonPayload>(`${API_BASE}/api/strategies/compare?${params.toString()}`, "/data/strategies.json");
+export async function fetchStrategyComparison(
+  mode: string,
+  lookbackDays: number,
+  market: MarketProfile
+): Promise<StrategyComparisonPayload> {
+  const params = new URLSearchParams({ mode, lookback_days: String(Math.max(lookbackDays, 900)), market });
+  return fetchJson<StrategyComparisonPayload>(`${API_BASE}/api/strategies/compare?${params.toString()}`, `/data/${market}/strategies.json`);
 }
 
-export async function fetchRules(): Promise<StrategyRule[]> {
-  const data = await fetchJson<{ rules: StrategyRule[] }>(`${API_BASE}/api/rules`, "/data/rules.json");
+export async function fetchRules(market: MarketProfile): Promise<StrategyRule[]> {
+  const params = new URLSearchParams({ market });
+  const data = await fetchJson<{ rules: StrategyRule[] }>(`${API_BASE}/api/rules?${params.toString()}`, `/data/${market}/rules.json`);
   return data.rules;
 }
 
-export async function fetchOhlc(mode: string, lookbackDays: number, ticker: string): Promise<OhlcPoint[]> {
-  const params = new URLSearchParams({ mode, lookback_days: String(Math.min(lookbackDays, 1200)), ticker });
-  const data = await fetchJson<{ ohlc: OhlcPoint[] }>(`${API_BASE}/api/ohlc?${params.toString()}`, "/data/ohlc.json");
+export async function fetchOhlc(mode: string, lookbackDays: number, ticker: string, market: MarketProfile): Promise<OhlcPoint[]> {
+  const params = new URLSearchParams({ mode, lookback_days: String(Math.min(lookbackDays, 1200)), ticker, market });
+  const data = await fetchJson<{ ohlc: OhlcPoint[] }>(`${API_BASE}/api/ohlc?${params.toString()}`, `/data/${market}/ohlc.json`);
   return data.ohlc;
 }
 
-export async function fetchLatestQuotes(tickers: string[]): Promise<LatestQuote[]> {
-  const params = new URLSearchParams({ tickers: tickers.join(",") });
-  const data = await fetchJson<{ quotes: LatestQuote[] }>(`${API_BASE}/api/quotes?${params.toString()}`, "/data/quotes.json");
+export async function fetchLatestQuotes(tickers: string[], market: MarketProfile): Promise<LatestQuote[]> {
+  const params = new URLSearchParams({ tickers: tickers.join(","), market });
+  const data = await fetchJson<{ quotes: LatestQuote[] }>(`${API_BASE}/api/quotes?${params.toString()}`, `/data/${market}/quotes.json`);
   return data.quotes;
 }
 
-export async function fetchBootstrap(): Promise<BootstrapPayload> {
-  return fetchJson<BootstrapPayload>(`${API_BASE}/api/bootstrap`, "/data/bootstrap.json");
+export async function fetchBootstrap(market: MarketProfile): Promise<BootstrapPayload> {
+  const params = new URLSearchParams({ market });
+  return fetchJson<BootstrapPayload>(`${API_BASE}/api/bootstrap?${params.toString()}`, `/data/${market}/bootstrap.json`);
 }
 
 async function fetchJson<T>(apiUrl: string, snapshotUrl: string): Promise<T> {
