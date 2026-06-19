@@ -392,22 +392,36 @@ def _ai_layer_status(articles: list[NewsArticle], summary: dict[str, Any], confi
         }
 
     model = os.getenv("LLM_SENTIMENT_MODEL")
-    api_key = os.getenv("OPENAI_API_KEY")
-    if not model or not api_key:
+    provider = os.getenv("LLM_SENTIMENT_PROVIDER", "ollama").lower()
+    if not model:
         return {
             "status": "llm_not_configured",
-            "provider": "openai_compatible",
+            "provider": provider,
             "model": model,
             "analysis": None,
-            "note": "Set LLM_SENTIMENT_MODEL and OPENAI_API_KEY before enabling LLM sentiment analysis.",
+            "note": "Set LLM_SENTIMENT_MODEL before enabling LLM sentiment analysis.",
             "prompt_template": prompt,
         }
 
-    analysis = _call_openai_compatible_model(prompt, model=model, api_key=api_key)
+    if provider == "ollama":
+        analysis = _call_ollama_model(prompt, model=model)
+    else:
+        api_key = os.getenv("OPENAI_API_KEY")
+        if not api_key:
+            return {
+                "status": "llm_not_configured",
+                "provider": "openai_compatible",
+                "model": model,
+                "analysis": None,
+                "note": "Set OPENAI_API_KEY for the OpenAI-compatible provider, or use LLM_SENTIMENT_PROVIDER=ollama.",
+                "prompt_template": prompt,
+            }
+        analysis = _call_openai_compatible_model(prompt, model=model, api_key=api_key)
+
     if analysis is None:
         return {
             "status": "llm_failed_fallback_to_heuristic",
-            "provider": "openai_compatible",
+            "provider": provider,
             "model": model,
             "analysis": None,
             "note": "The LLM call failed or returned an unsupported shape; heuristic analysis remains available.",
@@ -415,7 +429,7 @@ def _ai_layer_status(articles: list[NewsArticle], summary: dict[str, Any], confi
         }
     return {
         "status": "llm_generated",
-        "provider": "openai_compatible",
+        "provider": provider,
         "model": model,
         "analysis": analysis,
         "note": "LLM output is a research overlay and should not override rule, risk, and price evidence by itself.",
@@ -423,8 +437,43 @@ def _ai_layer_status(articles: list[NewsArticle], summary: dict[str, Any], confi
     }
 
 
+def _call_ollama_model(prompt: str, model: str) -> str | None:
+    base_url = os.getenv("OLLAMA_BASE_URL", "http://127.0.0.1:11434").rstrip("/")
+    timeout = float(os.getenv("LLM_SENTIMENT_TIMEOUT_SECONDS", "45"))
+    payload = {
+        "model": model,
+        "stream": False,
+        "messages": [
+            {
+                "role": "system",
+                "content": "You produce cautious public-equity research commentary. Never present investment outcomes as guaranteed.",
+            },
+            {"role": "user", "content": prompt},
+        ],
+        "options": {
+            "temperature": 0.2,
+            "num_ctx": int(os.getenv("LLM_SENTIMENT_CONTEXT_TOKENS", "4096")),
+            "num_predict": int(os.getenv("LLM_SENTIMENT_MAX_TOKENS", "700")),
+        },
+    }
+    request = Request(
+        f"{base_url}/api/chat",
+        data=json.dumps(payload).encode("utf-8"),
+        headers={"Content-Type": "application/json", "User-Agent": "portfolio-investing-lab/1.0"},
+        method="POST",
+    )
+    try:
+        with urlopen(request, timeout=timeout) as response:  # noqa: S310 - user-configured local endpoint
+            data = json.loads(response.read(500_000))
+    except Exception:
+        return None
+    content = data.get("message", {}).get("content")
+    return content if isinstance(content, str) and content.strip() else None
+
+
 def _call_openai_compatible_model(prompt: str, model: str, api_key: str) -> str | None:
     base_url = os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1").rstrip("/")
+    timeout = float(os.getenv("LLM_SENTIMENT_TIMEOUT_SECONDS", "45"))
     payload = {
         "model": model,
         "input": [
@@ -447,7 +496,7 @@ def _call_openai_compatible_model(prompt: str, model: str, api_key: str) -> str 
         method="POST",
     )
     try:
-        with urlopen(request, timeout=20) as response:  # noqa: S310 - user-configured API endpoint
+        with urlopen(request, timeout=timeout) as response:  # noqa: S310 - user-configured API endpoint
             data = json.loads(response.read(500_000))
     except Exception:
         return None

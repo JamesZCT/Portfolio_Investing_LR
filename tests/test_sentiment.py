@@ -1,6 +1,7 @@
 import unittest
+from unittest.mock import patch
 
-from portfolio_agent.sentiment import _match_ticker, score_text, themes_for_text
+from portfolio_agent.sentiment import _ai_layer_status, _match_ticker, score_text, themes_for_text
 
 
 class SentimentTests(unittest.TestCase):
@@ -14,6 +15,18 @@ class SentimentTests(unittest.TestCase):
         self.assertEqual(label, "positive")
         self.assertIn("beat", terms)
         self.assertIn("AI / semiconductors", themes_for_text("AI chip demand drives earnings growth"))
+
+    def test_llm_enabled_without_model_falls_back_cleanly(self):
+        class Config:
+            class Universe:
+                benchmark = "SPY"
+
+            universe = Universe()
+
+        with patch.dict("os.environ", {"LLM_SENTIMENT_ENABLED": "true"}, clear=True):
+            layer = _ai_layer_status([], {"investment_posture": "balanced", "overall_score": 0.0}, Config())
+        self.assertEqual(layer["status"], "llm_not_configured")
+        self.assertEqual(layer["provider"], "ollama")
 
 
 if __name__ == "__main__":

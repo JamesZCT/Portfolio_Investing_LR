@@ -268,11 +268,14 @@ Usage controls:
 Optional LLM overlay:
 - Default: off. No token usage.
 - Set `LLM_SENTIMENT_ENABLED=true` to opt in.
-- Set `LLM_SENTIMENT_MODEL` to the OpenAI-compatible model you want to use.
-- Set `OPENAI_API_KEY`.
-- Optional: set `OPENAI_BASE_URL` for a compatible gateway/proxy.
+- Set `LLM_SENTIMENT_PROVIDER=ollama` for local Ollama, or `openai_compatible` for remote/cloud endpoints.
+- Set `LLM_SENTIMENT_MODEL` to the model you want to use.
+- For Ollama, optionally set `OLLAMA_BASE_URL`.
+- For OpenAI-compatible endpoints, set `OPENAI_API_KEY` and optionally `OPENAI_BASE_URL`.
 
 If the LLM call is unavailable, the system falls back to the deterministic news sentiment readout.
+
+See `docs/local_llm_deployment.md` for Mac local, Windows/Linux NVIDIA GPU, and cloud deployment routes.
 
 ## Market profiles
 
