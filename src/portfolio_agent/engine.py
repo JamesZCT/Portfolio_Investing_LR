@@ -126,7 +126,7 @@ def run_buy_and_hold_baseline(
     prices_csv: str | None = None,
     sandbox_days: int | None = None,
 ) -> dict[str, float]:
-    from .backtest import compute_metrics
+    from .backtest import compute_metrics, drift_weights
 
     cfg = load_config(config_path)
     if sandbox_days is not None:
@@ -145,7 +145,8 @@ def run_buy_and_hold_baseline(
         raise ValueError("Initial positions must sum to a positive value")
 
     weights = {ticker: weight / total for ticker, weight in raw_weights.items()}
-    cash_weight = cash_weight / total
+    if cash_weight:
+        weights["CASH"] = cash_weight / total
     returns = prices[holdings].pct_change().fillna(0.0)
 
     value = 1.0
@@ -154,9 +155,9 @@ def run_buy_and_hold_baseline(
         if idx == 0:
             rows.append({"date": dt, "portfolio_value": value, "daily_return": 0.0})
             continue
-        day_return = float(sum(weights[ticker] * returns.at[dt, ticker] for ticker in holdings))
-        day_return += cash_weight * 0.0
+        day_return = float(sum(weights.get(ticker, 0.0) * returns.at[dt, ticker] for ticker in holdings))
         value *= 1.0 + day_return
+        weights = drift_weights(weights, returns.loc[dt], day_return)
         rows.append({"date": dt, "portfolio_value": value, "daily_return": day_return})
 
     return compute_metrics(pd.DataFrame(rows))

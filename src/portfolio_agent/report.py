@@ -167,6 +167,14 @@ def _build_risk_snapshot(config: AppConfig) -> dict[str, str]:
     positions = {k: v for k, v in config.universe.positions.items() if k != "CASH"}
     ticker_sector = config.universe.ticker_sector
 
+    if not positions:
+        return {
+            "largest_position": "None (0.00%)",
+            "single_cap": f"{100 * config.rules.max_single_position_weight:.2f}%",
+            "largest_sector": "None (0.00%)",
+            "sector_cap": f"{100 * config.rules.max_sector_weight:.2f}%",
+        }
+
     largest_ticker = max(positions, key=positions.get)
     largest_weight = positions[largest_ticker]
 

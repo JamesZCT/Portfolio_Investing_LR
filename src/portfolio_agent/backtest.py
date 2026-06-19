@@ -58,6 +58,10 @@ def run_backtest(
             equity_rows.append({"date": dt, "portfolio_value": value, "daily_return": 0.0})
             continue
 
+        day_return = float(sum(weights.get(t, 0.0) * returns.at[dt, t] for t in returns.columns))
+        value *= 1.0 + day_return
+        weights = drift_weights(weights, returns.loc[dt], day_return)
+
         should_rebalance = (i % rebalance_days) == 0
         if should_rebalance:
             history = prices.loc[:dt]
@@ -96,14 +100,31 @@ def run_backtest(
                     }
                 )
 
-        day_return = float(sum(weights.get(t, 0.0) * returns.at[dt, t] for t in returns.columns))
-        value *= 1.0 + day_return
         equity_rows.append({"date": dt, "portfolio_value": value, "daily_return": day_return})
 
     equity = pd.DataFrame(equity_rows)
     trades = pd.DataFrame(trade_rows)
     metrics = compute_metrics(equity)
     return BacktestResult(equity_curve=equity, trades=trades, metrics=metrics)
+
+
+def drift_weights(
+    weights: dict[str, float],
+    period_returns: pd.Series,
+    portfolio_return: float,
+) -> dict[str, float]:
+    gross_portfolio_return = 1.0 + portfolio_return
+    if gross_portfolio_return <= 0:
+        return dict(weights)
+
+    drifted = {
+        ticker: weight * (1.0 + float(period_returns.get(ticker, 0.0))) / gross_portfolio_return
+        for ticker, weight in weights.items()
+    }
+    total = sum(drifted.values())
+    if total <= 0:
+        return drifted
+    return {ticker: weight / total for ticker, weight in drifted.items()}
 
 
 def compute_metrics(equity_curve: pd.DataFrame) -> dict[str, float]:

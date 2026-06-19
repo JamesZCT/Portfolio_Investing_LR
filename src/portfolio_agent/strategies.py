@@ -4,7 +4,7 @@ from dataclasses import dataclass
 
 import pandas as pd
 
-from .backtest import compute_metrics, run_backtest
+from .backtest import compute_metrics, drift_weights, run_backtest
 from .config import AppConfig
 from .indicators import moving_average
 
@@ -138,6 +138,7 @@ def _simulate_static(
             continue
         day_return = float(sum(weights[ticker] * returns.at[dt, ticker] for ticker in weights))
         value *= 1.0 + day_return
+        weights = drift_weights(weights, returns.loc[dt], day_return)
         rows.append({"date": dt, "portfolio_value": value, "daily_return": day_return})
 
     equity = pd.DataFrame(rows)
@@ -164,6 +165,10 @@ def _simulate_rebalance(
             rows.append({"date": dt, "portfolio_value": value, "daily_return": 0.0})
             continue
 
+        day_return = float(sum(weights[ticker] * returns.at[dt, ticker] for ticker in weights))
+        value *= 1.0 + day_return
+        weights = drift_weights(weights, returns.loc[dt], day_return)
+
         if idx % rebalance_days == 0:
             should_rebalance = True
             if threshold is not None:
@@ -174,10 +179,7 @@ def _simulate_rebalance(
                 value *= 1.0 - turnover * (transaction_cost_bps / 10_000.0)
                 weights = dict(target_weights)
 
-        day_return = float(sum(weights[ticker] * returns.at[dt, ticker] for ticker in weights))
-        value *= 1.0 + day_return
         rows.append({"date": dt, "portfolio_value": value, "daily_return": day_return})
-        weights = _drift_weights(weights, returns.loc[dt])
 
     equity = pd.DataFrame(rows)
     return StrategyComparison(name, description, compute_metrics(equity), equity, turnover=total_turnover)
@@ -204,6 +206,10 @@ def _simulate_trend_filter(
             rows.append({"date": dt, "portfolio_value": value, "daily_return": 0.0})
             continue
 
+        day_return = float(sum(weights.get(ticker, 0.0) * returns.at[dt, ticker] for ticker in returns.columns))
+        value *= 1.0 + day_return
+        weights = drift_weights(weights, returns.loc[dt], day_return)
+
         if idx % rebalance_days == 0:
             bearish = False
             if benchmark_ma is not None and dt in benchmark_ma.index and benchmark in prices.columns:
@@ -211,16 +217,13 @@ def _simulate_trend_filter(
                 bearish = pd.notna(ma_value) and float(prices.at[dt, benchmark]) < float(ma_value)
 
             desired = _scaled_weights(target_weights, 1.0 - config.rules.defensive_cash_weight) if bearish else dict(target_weights)
-            turnover = sum(abs(desired.get(t, 0.0) - weights.get(t, 0.0)) for t in target_weights)
+            turnover = sum(abs(desired.get(t, 0.0) - weights.get(t, 0.0)) for t in set(desired) | set(weights))
             if turnover > config.rules.min_trade_weight:
                 total_turnover += turnover
                 value *= 1.0 - turnover * (transaction_cost_bps / 10_000.0)
                 weights = desired
 
-        day_return = float(sum(weights.get(ticker, 0.0) * returns.at[dt, ticker] for ticker in returns.columns))
-        value *= 1.0 + day_return
         rows.append({"date": dt, "portfolio_value": value, "daily_return": day_return})
-        weights = _drift_weights(weights, returns.loc[dt])
 
     equity = pd.DataFrame(rows)
     return StrategyComparison(
@@ -233,15 +236,9 @@ def _simulate_trend_filter(
 
 
 def _scaled_weights(weights: dict[str, float], scale: float) -> dict[str, float]:
-    return {ticker: weight * scale for ticker, weight in weights.items()}
-
-
-def _drift_weights(weights: dict[str, float], daily_returns: pd.Series) -> dict[str, float]:
-    updated = {ticker: weight * (1.0 + float(daily_returns[ticker])) for ticker, weight in weights.items()}
-    total = sum(updated.values())
-    if total <= 0:
-        return weights
-    return {ticker: weight / total for ticker, weight in updated.items()}
+    scaled = {ticker: weight * scale for ticker, weight in weights.items()}
+    scaled["CASH"] = max(0.0, 1.0 - sum(scaled.values()))
+    return scaled
 
 
 def _equity_payload(equity: pd.DataFrame) -> list[dict[str, float | str]]:

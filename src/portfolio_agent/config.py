@@ -104,7 +104,9 @@ def _require(data: dict[str, Any], key: str) -> Any:
 
 def load_config(path: str | Path) -> AppConfig:
     path = Path(path)
-    raw = yaml.safe_load(path.read_text())
+    raw = yaml.safe_load(path.read_text()) or {}
+    if not isinstance(raw, dict):
+        raise ValueError("Config file must contain a YAML mapping at the top level")
 
     indicators_raw = raw.get("indicators", {})
     rules_raw = raw.get("rules", {})
@@ -193,6 +195,7 @@ def load_config(path: str | Path) -> AppConfig:
 
     _validate_weights(universe.positions, "positions")
     _validate_weights(universe.target_weights, "target_weights")
+    _validate_config(indicators, rules, universe, ml, execution)
 
     return AppConfig(
         indicators=indicators,
@@ -210,3 +213,91 @@ def _validate_weights(weights: dict[str, float], label: str) -> None:
         raise ValueError(f"{label} should sum near 1.0; got {total:.4f}")
     if any(v < 0 for v in weights.values()):
         raise ValueError(f"{label} cannot contain negative values")
+    if any(v > 1 for v in weights.values()):
+        raise ValueError(f"{label} cannot contain weights above 1.0")
+
+
+def _validate_config(
+    indicators: IndicatorConfig,
+    rules: RuleConfig,
+    universe: UniverseConfig,
+    ml: MLConfig,
+    execution: ExecutionConfig,
+) -> None:
+    for name in (
+        "ma_window",
+        "trend_ma_window",
+        "std_window",
+        "z_window",
+        "momentum_lookback_days",
+        "volatility_window",
+        "trailing_high_lookback_days",
+    ):
+        _validate_positive_int(getattr(indicators, name), f"indicators.{name}")
+
+    for name in ("moderate_z", "extreme_z"):
+        if getattr(indicators, name) <= 0:
+            raise ValueError(f"indicators.{name} must be positive")
+    if indicators.extreme_z < indicators.moderate_z:
+        raise ValueError("indicators.extreme_z must be greater than or equal to moderate_z")
+
+    _validate_positive_int(rules.min_history_days, "rules.min_history_days")
+    for name in (
+        "max_trim_fraction_per_position",
+        "min_trade_weight",
+        "overweight_trigger",
+        "underweight_trigger",
+        "max_single_position_weight",
+        "max_sector_weight",
+        "bear_market_trim_fraction",
+        "loss_block_pct",
+        "min_cash_weight",
+        "defensive_cash_weight",
+        "stop_loss_pct",
+        "stop_trim_fraction",
+        "trailing_stop_pct",
+        "trailing_stop_trim_fraction",
+    ):
+        _validate_probability(getattr(rules, name), f"rules.{name}")
+    if rules.defensive_cash_weight < rules.min_cash_weight:
+        raise ValueError("rules.defensive_cash_weight must be greater than or equal to min_cash_weight")
+
+    non_cash_tickers = {
+        ticker
+        for ticker in set(universe.positions) | set(universe.target_weights)
+        if ticker != "CASH"
+    }
+    missing_sector = sorted(ticker for ticker in non_cash_tickers if ticker not in universe.ticker_sector)
+    if missing_sector:
+        raise ValueError(f"ticker_sector missing mappings for: {', '.join(missing_sector)}")
+
+    missing_sector_etfs = sorted(
+        sector for sector in set(universe.ticker_sector.values()) if sector not in universe.sector_etfs
+    )
+    if missing_sector_etfs:
+        raise ValueError(f"sector_etfs missing proxies for sectors: {', '.join(missing_sector_etfs)}")
+
+    _validate_positive_int(ml.horizon_days, "ml.horizon_days")
+    _validate_positive_int(ml.min_training_rows, "ml.min_training_rows")
+    _validate_positive_int(ml.epochs, "ml.epochs")
+    if ml.learning_rate <= 0:
+        raise ValueError("ml.learning_rate must be positive")
+    for name in ("risk_event_threshold", "high_risk_probability", "medium_risk_probability", "high_risk_trim_fraction"):
+        _validate_probability(getattr(ml, name), f"ml.{name}")
+    if ml.high_risk_probability < ml.medium_risk_probability:
+        raise ValueError("ml.high_risk_probability must be greater than or equal to medium_risk_probability")
+
+    if execution.mode not in {"sandbox"}:
+        raise ValueError("execution.mode must be sandbox")
+    if execution.allow_live_brokerage:
+        raise ValueError("execution.allow_live_brokerage must remain false")
+
+
+def _validate_positive_int(value: int, label: str) -> None:
+    if value <= 0:
+        raise ValueError(f"{label} must be positive")
+
+
+def _validate_probability(value: float, label: str) -> None:
+    if not 0 <= value <= 1:
+        raise ValueError(f"{label} must be between 0 and 1")
