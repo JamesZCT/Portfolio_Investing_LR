@@ -7,6 +7,7 @@ It combines:
 - rebalance suggestions that trim hyped/overweight exposure and reallocate to underweight/undervalued areas
 - a sandbox-only execution boundary so recommendations can be simulated without placing live brokerage orders
 - a lightweight ML risk model that estimates next-horizon drawdown risk from price-derived features
+- a news sentiment layer that reads public RSS headlines and converts them into a market posture overlay
 - backtesting and daily automation workflows
 
 ## Features
@@ -61,6 +62,12 @@ It combines:
 - sector concentration risk chart
 - backtest equity curve, drawdown, and turnover charts
 
+9. News sentiment and optional LLM analysis
+- pulls public market/news RSS headlines during snapshot refresh
+- scores headline tone with a transparent lexicon and theme classifier
+- combines news tone with price trend evidence into `risk_on`, `neutral`, `fragile`, or `risk_off` posture
+- includes an optional OpenAI-compatible LLM overlay that is disabled by default to avoid token spend
+
 ## Installation
 
 ```bash
@@ -101,6 +108,7 @@ The API exposes:
 - `/api/strategies/compare`
 - `/api/ohlc`
 - `/api/quotes`
+- `/api/news-sentiment`
 - `/api/rules`
 
 ## Commands
@@ -198,6 +206,7 @@ The hosted `/api/*` contract is:
 - `/api/rules?market=us|hk`: rules catalog snapshot
 - `/api/ohlc?market=us|hk`: benchmark OHLC snapshot
 - `/api/quotes?market=us|hk`: live quote lookup with snapshot fallback
+- `/api/news-sentiment?market=us|hk`: headline sentiment, themes, market posture, and optional AI overlay
 
 The recommended free/low-friction path is:
 
@@ -254,6 +263,16 @@ Usage controls:
 - The refresh workflow deploys only when `web/public/data/*.json` changes.
 - The schedule runs once per weekday after market close instead of polling intraday.
 - `/api/quotes` provides live quotes on demand, while heavier strategy and backtest data comes from refreshed snapshots.
+- News RSS is fetched during snapshot refresh, not on every page load.
+
+Optional LLM overlay:
+- Default: off. No token usage.
+- Set `LLM_SENTIMENT_ENABLED=true` to opt in.
+- Set `LLM_SENTIMENT_MODEL` to the OpenAI-compatible model you want to use.
+- Set `OPENAI_API_KEY`.
+- Optional: set `OPENAI_BASE_URL` for a compatible gateway/proxy.
+
+If the LLM call is unavailable, the system falls back to the deterministic news sentiment readout.
 
 ## Market profiles
 
@@ -269,6 +288,8 @@ python scripts/export_web_snapshot.py --config example_hk_config.yaml --out-dir 
 ```
 
 Hong Kong tickers use Yahoo Finance symbols such as `0700.HK`, `9988.HK`, and `2800.HK`.
+
+The frontend also includes a local research portfolio editor. Edited weights are stored only in browser `localStorage`; they are not uploaded and do not represent brokerage execution.
 
 ## Config
 

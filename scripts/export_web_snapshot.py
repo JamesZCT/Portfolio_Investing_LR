@@ -16,6 +16,7 @@ from portfolio_agent.engine import (
 )
 from portfolio_agent.rules_catalog import rules_as_dicts
 from portfolio_agent.sandbox import generate_sandbox_prices
+from portfolio_agent.sentiment import build_sentiment_payload
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -72,6 +73,12 @@ def main() -> int:
     cfg = load_config(config_path)
     ohlc_payload = _build_ohlc_payload(cfg.universe.benchmark, config_path, args.mode, args.lookback_days)
     quotes_payload = _build_quotes_payload(analysis.prices, _quote_tickers(cfg))
+    sentiment_payload = build_sentiment_payload(
+        cfg,
+        market=_market_from_config(config_path),
+        market_regime=analysis.market_regime,
+        mode=args.mode,
+    )
 
     _write_json(out_dir / "dashboard.json", dashboard)
     _write_json(out_dir / "backtest.json", backtest_payload)
@@ -79,6 +86,7 @@ def main() -> int:
     _write_json(out_dir / "rules.json", {"rules": rules_as_dicts()})
     _write_json(out_dir / "ohlc.json", ohlc_payload)
     _write_json(out_dir / "quotes.json", quotes_payload)
+    _write_json(out_dir / "sentiment.json", sentiment_payload)
 
     print(f"Exported static web snapshot to {out_dir}")
     return 0
@@ -153,6 +161,10 @@ def _snapshot_metadata(config_path: Path, mode: str, lookback_days: int) -> dict
         "mode": mode,
         "lookback_days": lookback_days,
     }
+
+
+def _market_from_config(config_path: Path) -> str:
+    return "hk" if "hk" in config_path.stem.lower() else "us"
 
 
 def _write_json(path: Path, payload: Any) -> None:

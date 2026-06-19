@@ -19,6 +19,7 @@ from .engine import (
 )
 from .rules_catalog import rules_as_dicts
 from .sandbox import generate_sandbox_prices
+from .sentiment import build_sentiment_payload
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
@@ -71,6 +72,31 @@ def get_config(config_path: str = Query(str(DEFAULT_CONFIG))) -> dict[str, Any]:
 @app.get("/api/rules")
 def rules() -> dict[str, Any]:
     return {"rules": rules_as_dicts()}
+
+
+@app.get("/api/news-sentiment")
+def news_sentiment(
+    config_path: str = Query(str(DEFAULT_CONFIG)),
+    lookback_days: int = Query(900, ge=300, le=5000),
+    mode: str = Query("real", pattern="^(real|sandbox)$"),
+    market: str = Query("us", pattern="^(us|hk)$"),
+) -> dict[str, Any]:
+    try:
+        resolved = _resolve_config(config_path)
+        cfg = load_config(resolved)
+        result = run_analysis(
+            resolved,
+            lookback_days=lookback_days,
+            sandbox_days=lookback_days if mode == "sandbox" else None,
+        )
+        return build_sentiment_payload(
+            cfg,
+            market=market,
+            market_regime=result.market_regime,
+            mode=mode,
+        )
+    except Exception as exc:  # noqa: BLE001
+        raise HTTPException(status_code=500, detail=f"{type(exc).__name__}: {exc}") from exc
 
 
 @app.get("/api/dashboard")

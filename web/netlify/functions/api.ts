@@ -15,7 +15,8 @@ const SNAPSHOT_BY_PATH: Record<string, string> = {
   "/api/backtest": "backtest.json",
   "/api/strategies/compare": "strategies.json",
   "/api/rules": "rules.json",
-  "/api/ohlc": "ohlc.json"
+  "/api/ohlc": "ohlc.json",
+  "/api/news-sentiment": "sentiment.json"
 };
 
 export default async function handler(req: Request, context: Context) {
@@ -55,6 +56,7 @@ export const config: Config = {
     "/api/strategies/compare",
     "/api/rules",
     "/api/ohlc",
+    "/api/news-sentiment",
     "/api/quotes",
     "/api/bootstrap"
   ],
@@ -63,13 +65,14 @@ export const config: Config = {
 
 async function bootstrapResponse(req: Request) {
   const market = marketFromRequest(req);
-  const [dashboard, backtest, strategies, rules, ohlc, quotes] = await Promise.all([
+  const [dashboard, backtest, strategies, rules, ohlc, quotes, sentiment] = await Promise.all([
     readSnapshot(req, "dashboard.json", market),
     readSnapshot(req, "backtest.json", market),
     readSnapshot(req, "strategies.json", market),
     readSnapshot(req, "rules.json", market),
     readSnapshot(req, "ohlc.json", market),
-    readSnapshot(req, "quotes.json", market)
+    readSnapshot(req, "quotes.json", market),
+    readSnapshot(req, "sentiment.json", market)
   ]);
   return json(
     {
@@ -78,7 +81,8 @@ async function bootstrapResponse(req: Request) {
       strategyComparison: strategies,
       rules: rules.rules ?? [],
       ohlc: ohlc.ohlc ?? [],
-      quotes: quotes.quotes ?? []
+      quotes: quotes.quotes ?? [],
+      sentiment
     },
     200,
     {

@@ -7,7 +7,10 @@ import {
   Brain,
   FlaskConical,
   Gauge,
+  Newspaper,
   RefreshCw,
+  RotateCcw,
+  Save,
   ShieldCheck,
   TrendingUp
 } from "lucide-react";
@@ -32,6 +35,7 @@ import {
   MarketProfile,
   OhlcPoint,
   SectorSignal,
+  SentimentPayload,
   StrategyComparisonPayload,
   StrategyRule,
   fetchBacktest,
@@ -40,6 +44,7 @@ import {
   fetchLatestQuotes,
   fetchOhlc,
   fetchRules,
+  fetchSentiment,
   fetchStrategyComparison
 } from "./api";
 import "./styles.css";
@@ -122,9 +127,15 @@ function App() {
   const [rules, setRules] = useState<StrategyRule[]>([]);
   const [ohlc, setOhlc] = useState<OhlcPoint[]>([]);
   const [quotes, setQuotes] = useState<LatestQuote[]>([]);
+  const [sentiment, setSentiment] = useState<SentimentPayload | null>(null);
+  const [researchPositions, setResearchPositions] = useState<Record<string, number>>({});
   const [hoverCandle, setHoverCandle] = useState<OhlcPoint | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  function applyResearchPositions(defaultPositions: Record<string, number>) {
+    setResearchPositions(loadSavedPortfolio(market, defaultPositions));
+  }
 
   async function load() {
     setLoading(true);
@@ -138,6 +149,8 @@ function App() {
         setRules(bootstrap.rules);
         setOhlc(bootstrap.ohlc);
         setQuotes(bootstrap.quotes);
+        setSentiment(bootstrap.sentiment);
+        applyResearchPositions(bootstrap.dashboard.positions);
         setHoverCandle(null);
         return;
       }
@@ -153,12 +166,15 @@ function App() {
         fetchOhlc(mode, Math.min(lookbackDays, 900), dash.universe.benchmark, market),
         fetchLatestQuotes(quoteTickers, market)
       ]);
+      const sentimentPayload = await fetchSentiment(market);
       setDashboard(dash);
       setBacktest(bt);
       setStrategyComparison(comparison);
       setRules(ruleList);
       setOhlc(ohlcRows);
       setQuotes(quoteRows);
+      setSentiment(sentimentPayload);
+      applyResearchPositions(dash.positions);
       setHoverCandle(null);
     } catch (err) {
       setError(err instanceof Error ? err.message : String(err));
@@ -273,7 +289,25 @@ function App() {
             </Panel>
           </section>
 
+          <section className="conclusion-grid">
+            <Panel title="My Research Portfolio" icon={<Save size={18} />}>
+              <PortfolioEditor
+                market={market}
+                positions={researchPositions}
+                defaultPositions={dashboard.positions}
+                onChange={setResearchPositions}
+              />
+            </Panel>
+            <Panel title="Personalized Action Gap" icon={<Gauge size={18} />} className="wide-panel">
+              <PersonalizedGapTable positions={researchPositions} rows={dashboard.recommended_distribution} market={market} />
+            </Panel>
+          </section>
+
           <section className="dashboard-grid">
+            <Panel title="News Sentiment & AI Readout" icon={<Newspaper size={18} />} className="wide-panel">
+              {sentiment ? <SentimentPanel sentiment={sentiment} market={market} /> : <EmptyState label="News sentiment loading." />}
+            </Panel>
+
             <Panel title="Benchmark Path" icon={<Activity size={18} />} className="wide-panel">
               <BenchmarkArea points={dashboard.benchmark_series} />
             </Panel>
@@ -733,6 +767,196 @@ function DistributionTable({ rows, market }: { rows: DashboardPayload["recommend
   );
 }
 
+function PortfolioEditor({
+  market,
+  positions,
+  defaultPositions,
+  onChange
+}: {
+  market: MarketProfile;
+  positions: Record<string, number>;
+  defaultPositions: Record<string, number>;
+  onChange: (positions: Record<string, number>) => void;
+}) {
+  const tickers = Object.keys({ ...defaultPositions, ...positions }).sort((a, b) => (a === "CASH" ? -1 : b === "CASH" ? 1 : a.localeCompare(b)));
+  const total = tickers.reduce((sum, ticker) => sum + (positions[ticker] ?? 0), 0);
+  const normalized = normalizeWeights(positions);
+
+  function updateTicker(ticker: string, value: string) {
+    const pct = Number(value);
+    if (!Number.isFinite(pct)) return;
+    onChange({ ...positions, [ticker]: Math.max(0, pct / 100) });
+  }
+
+  return (
+    <div className="portfolio-editor">
+      <div className="editor-actions">
+        <span className={Math.abs(total - 1) <= 0.01 ? "total-ok" : "total-warn"}>Total {percent(total)}</span>
+        <button type="button" onClick={() => onChange(normalized)}>
+          Normalize
+        </button>
+        <button type="button" onClick={() => savePortfolio(market, positions)}>
+          <Save size={14} />
+          Save
+        </button>
+        <button
+          type="button"
+          onClick={() => {
+            clearPortfolio(market);
+            onChange(defaultPositions);
+          }}
+        >
+          <RotateCcw size={14} />
+          Reset
+        </button>
+      </div>
+      <div className="portfolio-input-grid">
+        {tickers.map((ticker) => (
+          <label key={ticker}>
+            <span>
+              <strong>{ticker}</strong>
+              {instrumentName(ticker, market)}
+            </span>
+            <input
+              type="number"
+              min="0"
+              max="100"
+              step="0.1"
+              value={((positions[ticker] ?? 0) * 100).toFixed(1)}
+              onChange={(event) => updateTicker(ticker, event.target.value)}
+            />
+          </label>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function PersonalizedGapTable({
+  positions,
+  rows,
+  market
+}: {
+  positions: Record<string, number>;
+  rows: DashboardPayload["recommended_distribution"];
+  market: MarketProfile;
+}) {
+  const visible = rows
+    .map((row) => {
+      const current = positions[row.ticker] ?? 0;
+      const gap = row.recommended_weight - current;
+      return { ...row, current, gap, personalizedAction: actionForGap(gap) };
+    })
+    .filter((row) => row.current > 0 || row.recommended_weight > 0 || row.ticker === "CASH")
+    .sort((a, b) => Math.abs(b.gap) - Math.abs(a.gap))
+    .slice(0, 14);
+
+  return (
+    <div className="table-wrap distribution-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Priority</th>
+            <th>Holding</th>
+            <th>Action</th>
+            <th>Mine</th>
+            <th>Model</th>
+            <th>Gap</th>
+            <th>Why</th>
+          </tr>
+        </thead>
+        <tbody>
+          {visible.map((row, index) => (
+            <tr key={row.ticker}>
+              <td>{index + 1}</td>
+              <td>
+                <TickerCell ticker={row.ticker} market={market} />
+              </td>
+              <td>
+                <span className={`badge ${row.personalizedAction}`}>{row.personalizedAction}</span>
+              </td>
+              <td>{percent(row.current)}</td>
+              <td>{percent(row.recommended_weight)}</td>
+              <td className={row.gap >= 0 ? "positive" : "negative"}>{percent(row.gap)}</td>
+              <td>{row.reason}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+function SentimentPanel({ sentiment, market }: { sentiment: SentimentPayload; market: MarketProfile }) {
+  const summary = sentiment.summary;
+  return (
+    <div className="sentiment-panel">
+      <div className="sentiment-summary">
+        <div>
+          <span>Forecast Bias</span>
+          <strong className={`sentiment-${summary.forecast_bias}`}>{summary.forecast_bias.replaceAll("_", " ")}</strong>
+        </div>
+        <div>
+          <span>News Tone</span>
+          <strong>{summary.label}</strong>
+        </div>
+        <div>
+          <span>Confidence</span>
+          <strong>{percent(summary.confidence)}</strong>
+        </div>
+        <div>
+          <span>Articles</span>
+          <strong>{summary.article_count}</strong>
+        </div>
+      </div>
+      <p className="sentiment-callout">
+        {summary.recommended_action}. {summary.rationale}
+      </p>
+      <div className="sentiment-columns">
+        <div>
+          <h3>Themes</h3>
+          <div className="theme-list">
+            {summary.top_themes.length ? (
+              summary.top_themes.map((theme) => (
+                <span key={theme.theme}>
+                  {theme.theme} <strong>{theme.count}</strong>
+                </span>
+              ))
+            ) : (
+              <span>No dominant theme</span>
+            )}
+          </div>
+        </div>
+        <div>
+          <h3>Ticker Sentiment</h3>
+          <div className="ticker-sentiment-list">
+            {sentiment.ticker_sentiment.slice(0, 5).map((row) => (
+              <div key={row.ticker}>
+                <TickerCell ticker={row.ticker} market={market} />
+                <span className={`badge ${row.label}`}>{row.label}</span>
+                <strong>{percent(row.score)}</strong>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="headline-list">
+        {sentiment.articles.slice(0, 6).map((article) => (
+          <a key={`${article.title}-${article.source}`} href={article.link || "#"} target="_blank" rel="noreferrer">
+            <span className={`dot ${article.sentiment_label}`} />
+            <strong>{article.title}</strong>
+            <em>{article.source}</em>
+          </a>
+        ))}
+      </div>
+      <div className="ai-note">
+        AI layer: {summary.ai_layer.status}. {summary.ai_layer.note}
+      </div>
+      {summary.ai_layer.analysis ? <pre className="ai-analysis">{summary.ai_layer.analysis}</pre> : null}
+    </div>
+  );
+}
+
 function RiskList({ risks, market }: { risks: DashboardPayload["risk_predictions"]; market: MarketProfile }) {
   if (!risks.length) return <EmptyState label="ML model needs more data." />;
   return (
@@ -984,6 +1208,44 @@ function instrumentName(ticker: string, market: MarketProfile) {
 function tickerLabel(ticker: string, market: MarketProfile) {
   const name = instrumentName(ticker, market);
   return name === ticker ? ticker : `${ticker} ${name}`;
+}
+
+function portfolioStorageKey(market: MarketProfile) {
+  return `portfolio-investing-lab:${market}:research-positions`;
+}
+
+function loadSavedPortfolio(market: MarketProfile, fallback: Record<string, number>) {
+  try {
+    const raw = window.localStorage.getItem(portfolioStorageKey(market));
+    if (!raw) return fallback;
+    const parsed = JSON.parse(raw) as Record<string, number>;
+    const cleaned = Object.fromEntries(
+      Object.entries(parsed).filter(([, value]) => typeof value === "number" && Number.isFinite(value) && value >= 0)
+    );
+    return Object.keys(cleaned).length ? { ...fallback, ...cleaned } : fallback;
+  } catch {
+    return fallback;
+  }
+}
+
+function savePortfolio(market: MarketProfile, positions: Record<string, number>) {
+  window.localStorage.setItem(portfolioStorageKey(market), JSON.stringify(positions));
+}
+
+function clearPortfolio(market: MarketProfile) {
+  window.localStorage.removeItem(portfolioStorageKey(market));
+}
+
+function normalizeWeights(positions: Record<string, number>) {
+  const total = Object.values(positions).reduce((sum, value) => sum + Math.max(0, value), 0);
+  if (total <= 0) return positions;
+  return Object.fromEntries(Object.entries(positions).map(([ticker, value]) => [ticker, Math.max(0, value) / total]));
+}
+
+function actionForGap(gap: number) {
+  if (gap > 0.01) return "add";
+  if (gap < -0.01) return "trim";
+  return "hold";
 }
 
 createRoot(document.getElementById("root")!).render(<App />);

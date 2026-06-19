@@ -133,6 +133,53 @@ export type LatestQuote = {
   source: string;
 };
 
+export type SentimentPayload = {
+  market: MarketProfile;
+  mode: string;
+  generated_at: string;
+  summary: {
+    overall_score: number;
+    label: string;
+    confidence: number;
+    article_count: number;
+    positive_count: number;
+    negative_count: number;
+    neutral_count: number;
+    top_themes: Array<{ theme: string; count: number }>;
+    forecast_bias: string;
+    investment_posture: string;
+    recommended_action: string;
+    rationale: string;
+    source_mode: string;
+    ai_layer: {
+      status: string;
+      provider: string;
+      model: string | null;
+      analysis: string | null;
+      note: string;
+      prompt_template: string;
+    };
+  };
+  ticker_sentiment: Array<{
+    ticker: string;
+    score: number;
+    label: string;
+    article_count: number;
+    top_headlines: string[];
+  }>;
+  articles: Array<{
+    ticker: string;
+    title: string;
+    source: string;
+    published: string | null;
+    link: string;
+    sentiment_score: number;
+    sentiment_label: string;
+    themes: string[];
+    matched_terms: string[];
+  }>;
+};
+
 export type BootstrapPayload = {
   dashboard: DashboardPayload;
   backtest: BacktestPayload;
@@ -140,6 +187,7 @@ export type BootstrapPayload = {
   rules: StrategyRule[];
   ohlc: OhlcPoint[];
   quotes: LatestQuote[];
+  sentiment: SentimentPayload;
 };
 
 export type MarketProfile = "us" | "hk";
@@ -182,6 +230,11 @@ export async function fetchLatestQuotes(tickers: string[], market: MarketProfile
   const params = new URLSearchParams({ tickers: tickers.join(","), market });
   const data = await fetchJson<{ quotes: LatestQuote[] }>(`${API_BASE}/api/quotes?${params.toString()}`, `/data/${market}/quotes.json`);
   return data.quotes;
+}
+
+export async function fetchSentiment(market: MarketProfile): Promise<SentimentPayload> {
+  const params = new URLSearchParams({ market });
+  return fetchJson<SentimentPayload>(`${API_BASE}/api/news-sentiment?${params.toString()}`, `/data/${market}/sentiment.json`);
 }
 
 export async function fetchBootstrap(market: MarketProfile): Promise<BootstrapPayload> {

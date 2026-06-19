@@ -18,7 +18,8 @@ body {
 }
 
 button,
-select {
+select,
+input {
   font: inherit;
 }
 
@@ -70,6 +71,7 @@ h1 {
 }
 
 select,
+input,
 .primary-button {
   height: 38px;
   border: 1px solid #c9d2d7;
@@ -330,6 +332,21 @@ td {
   color: #305b91;
 }
 
+.badge.positive {
+  background: #e4f4eb;
+  color: #206845;
+}
+
+.badge.negative {
+  background: #ffe8df;
+  color: #9a3d1e;
+}
+
+.badge.neutral {
+  background: #edf1f3;
+  color: #445158;
+}
+
 .badge.raise_cash,
 .badge.increase {
   background: #e4f4eb;
@@ -582,6 +599,223 @@ code {
   font-weight: 750;
 }
 
+.portfolio-editor {
+  display: grid;
+  gap: 12px;
+}
+
+.editor-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.editor-actions span {
+  margin-right: auto;
+  color: #526168;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.editor-actions button {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 32px;
+  border: 1px solid #c9d2d7;
+  border-radius: 7px;
+  background: #fff;
+  color: #263137;
+  cursor: pointer;
+}
+
+.total-ok {
+  color: #206845 !important;
+}
+
+.total-warn {
+  color: #9a3d1e !important;
+}
+
+.portfolio-input-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(132px, 1fr));
+  gap: 9px;
+}
+
+.portfolio-input-grid label {
+  display: grid;
+  gap: 5px;
+  border: 1px solid #e2e8eb;
+  border-radius: 7px;
+  background: #f9fbfb;
+  padding: 9px;
+}
+
+.portfolio-input-grid label span {
+  display: grid;
+  gap: 2px;
+  min-height: 34px;
+  color: #6d7a81;
+  font-size: 0.72rem;
+  line-height: 1.2;
+}
+
+.portfolio-input-grid label strong {
+  color: #202a30;
+  font-size: 0.82rem;
+}
+
+.portfolio-input-grid input {
+  width: 100%;
+  height: 34px;
+  padding: 0 8px;
+}
+
+.sentiment-panel {
+  display: grid;
+  gap: 12px;
+}
+
+.sentiment-summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 9px;
+}
+
+.sentiment-summary > div {
+  border: 1px solid #e2e8eb;
+  border-radius: 7px;
+  background: #f9fbfb;
+  padding: 9px;
+}
+
+.sentiment-summary span,
+.sentiment-columns h3 {
+  display: block;
+  margin: 0 0 4px;
+  color: #6b777d;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.sentiment-summary strong {
+  color: #172126;
+  font-size: 0.95rem;
+  text-transform: capitalize;
+}
+
+.sentiment-risk_off,
+.sentiment-fragile,
+.sentiment-late_cycle_caution {
+  color: #9a3d1e !important;
+}
+
+.sentiment-risk_on {
+  color: #206845 !important;
+}
+
+.sentiment-watch_for_bottoming,
+.sentiment-neutral {
+  color: #305b91 !important;
+}
+
+.sentiment-callout,
+.ai-note {
+  margin: 0;
+  color: #4b5960;
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+.ai-analysis {
+  max-height: 220px;
+  overflow: auto;
+  margin: 0;
+  border: 1px solid #e2e8eb;
+  border-radius: 7px;
+  background: #f8fafb;
+  padding: 10px;
+  color: #263137;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.76rem;
+  white-space: pre-wrap;
+}
+
+.sentiment-columns {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 12px;
+}
+
+.theme-list,
+.ticker-sentiment-list {
+  display: grid;
+  gap: 7px;
+}
+
+.theme-list span,
+.ticker-sentiment-list > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  border-bottom: 1px solid #e5eaed;
+  padding-bottom: 7px;
+  color: #526168;
+  font-size: 0.8rem;
+}
+
+.ticker-sentiment-list > div {
+  display: grid;
+  grid-template-columns: minmax(110px, 1fr) auto 52px;
+}
+
+.headline-list {
+  display: grid;
+  gap: 7px;
+}
+
+.headline-list a {
+  display: grid;
+  grid-template-columns: 9px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+  color: #263137;
+  text-decoration: none;
+}
+
+.headline-list strong {
+  overflow: hidden;
+  font-size: 0.82rem;
+  font-weight: 650;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.headline-list em {
+  color: #7a858b;
+  font-size: 0.72rem;
+  font-style: normal;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #8a969c;
+}
+
+.dot.positive {
+  background: #206845;
+}
+
+.dot.negative {
+  background: #9a3d1e;
+}
+
 .distribution-table td:nth-child(2) strong,
 .distribution-table td:nth-child(2) span {
   display: block;
@@ -726,6 +960,11 @@ meter {
   .metric-grid,
   .dashboard-grid,
   .conclusion-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sentiment-summary,
+  .sentiment-columns {
     grid-template-columns: 1fr;
   }
 }
