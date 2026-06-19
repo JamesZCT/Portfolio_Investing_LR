@@ -1,17 +1,20 @@
 {
   "articles": [
     {
-      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPcDBTaDlqZUNST2dKNFlReWV0NWg2bk1QeXgtM0dDVVEyM1lNQkVZdFFmSTV0a0hpTXZZZndsdUtObHJ5UHpwemplRW9SNUNCWUZSWDliTmRDWENTSlBGZHZlTDk1ejlGT1MwMW40ZVVDMEk0RGtwTC1OZWlJLVlDRURvV0lQY3M?oc=5",
-      "matched_terms": [],
-      "published": "2026-06-18T21:54:00+00:00",
-      "sentiment_label": "neutral",
-      "sentiment_score": 0.0,
-      "source": "WSJ",
+      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPU2Ftc0l5eHQ3SkVMU1NFZFUyaS16cmN2MjNaNXBwWHJHM2hZVVZEbnVDSjZuMm4zMkx1bGhqSk4yMmhpbVFJTTFhRkoxdElmclI4aGJlaVdBUl9jeGU1aTd1ZXhsNEpoY1RRQi1rQ0hQS25GVVRNQTBNczlzMHF6TnRLemV4WWZ3eDZCQkh0Y1M3cG9TT2U4SVV4ck9oQlp3OWpjNW5Vd1o2RS1SWnhCeThDaC01ZkRzZTUyMmEwa2VHVDhoc3VNWnBwcVNEbEE?oc=5",
+      "matched_terms": [
+        "rally",
+        "optimism"
+      ],
+      "published": "2026-06-18T18:36:46+00:00",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.6,
+      "source": "Yahoo Finance",
       "themes": [
-        "macro risk"
+        "rates / inflation"
       ],
       "ticker": "MARKET",
-      "title": "Stock Market Today: Nasdaq Jumps, Oil Is Now Close to Pre-Iran War Prices \u2014 Live Updates - WSJ"
+      "title": "Stock market today: Dow, S&P 500, Nasdaq rally as Iran deal optimism offsets Fed hike worries - Yahoo Finance"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9KTnpsQTRpT1dTMHotblVRbHFZVUlWcmd4MXloSEZIaWRJQXllTXFsWDVWT1V0UW9KQWpmbDk5X1d5TVBIUks1ZF9BbGNCZl9UOVpFd0NVQmRjV1pKUGJkR0R5aW5ZeUJXd2RtWmVlMzBJUU1pWEZV0gF8QVVfeXFMTW9TUTNfSWR6N3NuNVI0TGc0eUMzOExVOGdWVkdPQ25NLUVuYnVMM2ZFWW5Xck1FMWpTdGhnNzdISHY5R3ZIWG9Td1lYa0ZlcmFaanBCTHZUd2VYLUx1M2xTTlJ4ZzVabHJsWWpyVmExY3c5dkNMODF1Vzg3TA?oc=5",
@@ -29,20 +32,17 @@
       "title": "S&P 500 closes higher, Nasdaq climbs nearly 2% as chips fuel comeback from Fed sell-off: Live updates - CNBC"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOYkRHUGF1b0hMYTROMXo0Q0pfLVpJSVNlSXFvSllmYUh0WnNwSGIwLVZVbnN5OEtrTFJXMXpQTWtWR3JUUkk2OUxlUHBuRDQ2LWxpUjBkYmdqM2duMHRZZEtfRDdKLVBZd3VNS3kwRUJGT0R2bVJNVy1MRHhIdm9mSlJ5bkZ6MjJKdFJRbUdUakZ3MV9MYzl6OHkzQ1JISDFlNzVDalJMSkxRejh2V2tfdmN3b042ZzUzelFRQWNxbVNqUzgtX3dhSEN2MU13amhWMGdDYUhEVkZBRUU?oc=5",
-      "matched_terms": [
-        "rally",
-        "optimism"
-      ],
-      "published": "2026-06-18T18:36:46+00:00",
-      "sentiment_label": "positive",
-      "sentiment_score": 0.6,
-      "source": "Yahoo Finance",
+      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPcDBTaDlqZUNST2dKNFlReWV0NWg2bk1QeXgtM0dDVVEyM1lNQkVZdFFmSTV0a0hpTXZZZndsdUtObHJ5UHpwemplRW9SNUNCWUZSWDliTmRDWENTSlBGZHZlTDk1ejlGT1MwMW40ZVVDMEk0RGtwTC1OZWlJLVlDRURvV0lQY3M?oc=5",
+      "matched_terms": [],
+      "published": "2026-06-18T21:54:00+00:00",
+      "sentiment_label": "neutral",
+      "sentiment_score": 0.0,
+      "source": "WSJ",
       "themes": [
-        "rates / inflation"
+        "macro risk"
       ],
       "ticker": "MARKET",
-      "title": "Stock market today: Dow, S&P 500, Nasdaq rally as Iran deal optimism offsets Fed hike worries - Yahoo Finance"
+      "title": "Stock Market Today: Nasdaq Jumps, Oil Is Now Close to Pre-Iran War Prices \u2014 Live Updates - WSJ"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQNldYb1BzWndpQUplQ2x1YzF4ODdjUkxTajRPblFiRkpPTWcyTl9GbEUtaVB6eW4tMjdBcmswUl82TmgzR09XQmdUM251VXJteURaZi1FWHZwV0d3TGJRYkRDOGFUbzVLam0zSnJrSjZxYnJNa3NqeGhlVjJvRmxkWEdrUEpUR2tfbWV1ZjNNNDc5dzRGbGRncjNKMnUtS21NaUFPNnVfOXBmM0ZWSEpVcg?oc=5",
@@ -112,17 +112,33 @@
       "title": "The Fed decision, JetBlue's Florida plans, Intel's Apple partnership and more in Morning Squawk - CNBC"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOcXdHQ1VSLWhzOGJVS1RCYmljYmFGMldGejU4aGV2VHh1S3Q2bHAyY1FZR2t5eENuQ2V6TEcwZ1dJMWhxOFZyd1pjZDFpWnpfaERWMFFxTDZiaWhaN0dmMWFDZm8xSnpoVUxJSUFUWUUzNFJZX1FBTWNHbnVSUHpzbXk3RHpKUl9LMkRob1cySk41QUoxZVZsRzd1eEIxVnpUMElNYlROMUhZZ1dnU1pQbmRBcVQyN3JBX3lwSzY2Nllmd3NxbnlZ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNeTFDTVlOLU9tckVpTGRXVDVPZV82elNENmpvN2pQSkpISk1iQmJoZXg0QzFCb0Zhb1ByNVR2eGhLSDZWU2thRVcydG9GTTZyY2tOOXZTdENHTW5ac3N0VERtVkZUdG1HbVV1aFVHcS1kdWtuLUN4S1MtSmlSQ0w3Mk5rbHl0bjJ2ZE5VeA?oc=5",
       "matched_terms": [],
-      "published": "2026-06-19T02:15:33+00:00",
+      "published": "2026-06-18T21:02:00+00:00",
       "sentiment_label": "neutral",
       "sentiment_score": 0.0,
-      "source": "Investing.com",
+      "source": "Investor's Business Daily",
       "themes": [
-        "AI / semiconductors"
+        "earnings"
       ],
       "ticker": "MARKET",
-      "title": "US stock futures dip after Wall St surges on Iran peace deal, chip gains - Investing.com"
+      "title": "Stock Market Forecast For Next Six Months: Why More Gains May Lie Ahead - Investor's Business Daily"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE4tUlFhUnd5TEd5LUhEYUZiRG1KSm5vVS1KcUUyazdtbEd5YVNjZklfNGFKRnhNUnlfSER6ZEZOZFBRdzFsQy1CUk9WRkJlSHVUZVExYk85ZHB6QU15Y1A1WWpXaHpoRFQwYWM3UlMxSVVxTkt0MkZ3SnI0OA?oc=5",
+      "matched_terms": [
+        "rally"
+      ],
+      "published": "2026-06-18T20:23:00+00:00",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.32,
+      "source": "Barron's",
+      "themes": [
+        "rates / inflation",
+        "China / policy"
+      ],
+      "ticker": "MARKET",
+      "title": "S&P 500 Outlook: Unstoppable Stock Market Rally Outruns Fed Policy Anxiety - Barron's"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNamc5X0x0bFAyR2lTOVFzcm1LTmFNR2xqY2hlbnN6cUlVYVBvYWNtdVN0dmZRcG9QLUVCX1R3WHlWd2VUclNpVmlla05HY0o3TWpLbkJkWHZqYk1VeWJJdFlueVZFMm1rRkxDcjRGLUZINXZvRHZ5TEhzWUJtOExadnpNZGNXVVpVZnBmU0lRN3UxV2V2U3NhSGhESEdtcVhuTFJyNkZFU2dKQVhLTEE?oc=5",
@@ -138,34 +154,45 @@
       "title": "An under-the-radar indicator is signaling that stocks are headed for 'violent' swings, Stifel says - Business Insider"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNeTFDTVlOLU9tckVpTGRXVDVPZV82elNENmpvN2pQSkpISk1iQmJoZXg0QzFCb0Zhb1ByNVR2eGhLSDZWU2thRVcydG9GTTZyY2tOOXZTdENHTW5ac3N0VERtVkZUdG1HbVV1aFVHcS1kdWtuLUN4S1MtSmlSQ0w3Mk5rbHl0bjJ2ZE5VeA?oc=5",
-      "matched_terms": [],
-      "published": "2026-06-18T21:02:00+00:00",
-      "sentiment_label": "neutral",
-      "sentiment_score": 0.0,
-      "source": "Investor's Business Daily",
+      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOT21BbEYyM2ZUU1h5XzV5R2NBY1pOa056MUc5Q0xqbTFwYzg4cFFrMnk5bVBLcm4wQlhGb3lqTUJGYnlzLWRBZ0x5VXVJNWpHU0hIaEFxM2YtV1JJVHJxVTR4YUQtT3FzNXpWeTNYb29fTi1oQ295aDdyQXZlMjlXVmRMNkxBTTdtZjFKcHg5c1JKb0N5YTQzN0QtY2Y3YTF6R0R3bnpveHpjX25KRFBIVWJtbi1BTVE?oc=5",
+      "matched_terms": [
+        "growth"
+      ],
+      "published": "2026-05-28T07:00:00+00:00",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.27999999999999997,
+      "source": "Goldman Sachs",
       "themes": [
         "earnings"
       ],
       "ticker": "MARKET",
-      "title": "Stock Market Forecast For Next Six Months: Why More Gains May Lie Ahead - Investor's Business Daily"
+      "title": "The S&P 500 Is Forecast to Climb as Earnings Growth Powers Stocks Higher - Goldman Sachs"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPREl5X3RSRmRreVBmOWJkVUZFVWVhdndGNlUtckRlaDFKMUdqSVVhaVRzMnRpS3RNTVhBQ0JscXN1M2RSTGF1LUdaSHhpZjZ2eGwxRXRSWkM1eWxPczlSTDQ0SjZWVFc2RFRraTRLVmNiZDY2YV9nYV9CR09SU3ZWNFJGMWF2ZkxxSnJJekpubGVqZkVMWDh0cnRwQ243VFBlaUtlTnRhaE5XMVN3OFk4M21QdjAycy1XcWhCZkFxeGZyQ0NaQVU0bm9ZczgxQjFxVlU3QTZQSDlnOFZUT09NclF3?oc=5",
-      "matched_terms": [
-        "rally",
-        "optimism",
-        "ai"
-      ],
-      "published": "2026-06-18T20:02:56+00:00",
-      "sentiment_label": "positive",
-      "sentiment_score": 0.76,
-      "source": "Yahoo Finance",
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQNGFfTEdBNm1tYmNMLURwOWxrTU5UV1R3cTBWbURtR2VzTUZzWlRYc0Z2VWJsczJXcW9DeEV1eGkzVllEZEdoeWtlM2tRZ2dFYjJQejNxOUNXTHhCUWd2VUJSZmhWbmIyc3ZINXdmeWZLZUk4SGV0NWpCUFp2MFdKbzVDdUhvWi1UT1NQRGpuTTVYc0JVT2JFa0ZGNFFRbHFlX1NBTjlWQQ?oc=5",
+      "matched_terms": [],
+      "published": "2026-06-13T17:42:41+00:00",
+      "sentiment_label": "neutral",
+      "sentiment_score": 0.0,
+      "source": "lwvtexas.org",
       "themes": [
-        "AI / semiconductors"
+        "earnings"
       ],
       "ticker": "MARKET",
-      "title": "Stocks market today: Dow, S&P 500, Nasdaq rally amid Iran deal optimism as AI chip trade reignites - Yahoo Finance"
+      "title": "SpaceX's S&P 500 Exclusion: What Index Fund Investors Should Consider - Revenue Guidance Range - lwvtexas.org"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNdWF0cVhDZ0xINzB6TTdhbkxQQVBkSEV1THpyQzhQSy1CMnQtUjFhSEdmRWNod1FCeWpmcF9UMWFOaXdQWGFVX2VEUUpMb01LYVlLbGxYVzg4Y19EMmlvMmYxckE3RmJVZnM4RzFsTnBGRlBYS3BzRHIzdGdjSk1DSlpReG9IUGJPTWxOcjlTRHU5aTYtTHlxZkw0eVN2cUJiVk16SkZ4Rl9YTnFDLWc?oc=5",
+      "matched_terms": [],
+      "published": "2026-06-14T10:30:00+00:00",
+      "sentiment_label": "neutral",
+      "sentiment_score": 0.0,
+      "source": "Forbes",
+      "themes": [
+        "general market"
+      ],
+      "ticker": "MARKET",
+      "title": "What To Expect For The Stock Market's Last 6 Months Of 2026 - Forbes"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNclFvV0pzRzR6dXVwb2VqRTVoMVQ4X2pyVXJQZlFqR2JhUWdZX19rOWFyR0UxcU5mNHZLd3NvUjlPZEl1ellUb3F0TG5qNURWclRtbk52Rm0zSXlPbjNBUFZkZWZtOXVPTThTZlJZMzhQT054cnlLLXIyYXRSV21fM2Z4dHhYV2xaZ0dTT0dNbjlLMDd4MlIxQlR1MDgwVTdZMllzeThvX1NoVUU0eUJSYnUxLWszbDc3RHo3RTVrYXhRMUFaSXhNdVBxZmxsLTg?oc=5",
@@ -181,32 +208,17 @@
       "title": "These Wall Street Experts Think the Market Outlook for 2026 Just Got Brighter. Here's Why. - Investopedia"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE00bF84Z2JTc0szR1VTNi1aZWNpa01MVUFmUFBheDBHenVoX2dmMlUxVEdYWmE4THh2LV92ZXJBYlVPY0puWXZ0MXJXSm9EMVhCbkZ0aUpwNWxPZmFKR1lJdjBuRHcwRC1NaFEwTGNYQlh3N0Y3N1lKOWV3?oc=5",
-      "matched_terms": [
-        "rally"
-      ],
-      "published": "2026-06-17T21:17:27+00:00",
-      "sentiment_label": "positive",
-      "sentiment_score": 0.32,
-      "source": "Seeking Alpha",
-      "themes": [
-        "rates / inflation"
-      ],
-      "ticker": "MARKET",
-      "title": "The Fed Just Killed The Rally (SPX) - Seeking Alpha"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOcDExdjNicGpJQkt0UnBKaG1hRXNBdkhPdlVQQVZNWUNjbUtNajM2blFFOVMxMjJiYnBhNV9aaEc4UERBYXczZndNa01Gb25aMGRmNjNrbW1yLTR1VzQ5a2Jmcjdqam52T1hxTXZvZzZCRHpZbGwtbzVaZEE3MUhZbkxxckt2R3pLZ2lSUmJvNzNoUkNjTHd3T2htX1l1UU9WaWVDcWYxQUFWOUXSAbABQVVfeXFMT0hpMm5OM1hlaExhOGMwNVBISHhNbWN0NXpaU1RNTDdVUjVzMXpPeUZfbkpLY0VDb284UEpKYmtCWS1lZDEzeDhiRVJRRFlfYmJSX19MRUZVWHZNNUVfTDNQZHRfNll1dnEtT19XZVFhZ3lObTFIbTdvLTB2Y2tiYllsLUFsOThaODBIN2VBVGtrMnJyc1RzcVBHd0h0SmR5eXZycWh3b0lzQlBtdFg5WXI?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQZEo2R2RCeWc4U0NPb0hfQWVsX29abDk3dUlsZ3FJdm0wVzczZFJkc21xNldqNlpJeVFGbUxWTWhKdjJNQUFLSDQyU2pGMFYxSDlxZlQ5alNrZE9BcnhCTGJJcnpCNlJ1cnptQkdwcVRxRFkwT2lVRVNPbXZaTUZxeG1OZDhZcjQzT1RqbUxnZzdGQWMwSWx5aTdZVWpnZ1FRczdndFNMZ2lFdnFvUDVFSXFtcmtLd2V2SGREckdtbWt4ZVhobV90a1FuYVVlX3ND?oc=5",
       "matched_terms": [],
-      "published": "2026-06-16T17:20:00+00:00",
+      "published": "2026-06-18T08:54:27+00:00",
       "sentiment_label": "neutral",
       "sentiment_score": 0.0,
-      "source": "Fox Business",
+      "source": "Benzinga",
       "themes": [
         "general market"
       ],
-      "ticker": "SPY",
-      "title": "Could the Vanguard S&P 500 ETF be your ticket to becoming a stock market millionaire? - Fox Business"
+      "ticker": "MARKET",
+      "title": "Stock Market: Will S&P 500 Open Up Or Down Today? - Benzinga"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNNEpjeGFSd3V3MEpqaTZBNzYwSEMzdzY2eXo5aHpDeV9nTG5qRWFyUmhwUDdUdmFVZUk0MEJYaW5GUmZsdkZNWGk1YnpJVnhZdFRETlAyV054YmlLZDhKUGNRdU5BUi1yWm1OMjJBdzU1Z2J1Wjhzc2lRM1AzZXh5TVdDS3dtYU5QLXVlTG1CYzVGeDhUWDJwMDJKZmxtR1RLZ01j?oc=5",
@@ -276,19 +288,6 @@
       "title": "Trading Day: US stocks end lower, dollar jumps as Federal Reserve kicks off Warsh era By Reuters - Investing.com"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBqM2YxdkxQS2ktN2N3OXRleXNvTlpoNXQwNXdJeDBXbzkzT1dVQ0FGTUM2RUxXbUtReXR4VG03am1FelNEbG9MclpzS09fTG03T2RGejJIWjdDTmtGcG5Ba1dxVU84blBqcUJrV01WTQ?oc=5",
-      "matched_terms": [],
-      "published": "2026-06-17T13:44:46+00:00",
-      "sentiment_label": "neutral",
-      "sentiment_score": 0.0,
-      "source": "San Bernardino Sun",
-      "themes": [
-        "rates / inflation"
-      ],
-      "ticker": "MARKET",
-      "title": "US stocks sink on worries about a possible hike to interest rates this year by the Federal Reserve - San Bernardino Sun"
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNNGtyRHNDSTFGYUd4aEpFQVJqMXBYQXUyNUl2RXF0bHNTcXQyaUhJWktZM0JHSnVxdVRIN1B0dWs1WE9hajNJTTJhV19LUWdfRlVIZ0xPQ1VPSGVPZlpidTc1NTNDaWFDa0lEYTlWSEtKYnN1R2pwaEpLNHo1RHV4Tzk2MGk0TmgtT2hlX0RYUExjc2RhWVdrLXhkVmJlNTJVcFVTUk5HRzlJRGVtektTMlU0YV9Kb29GQnBOMUN0T0ZucEkyeWVpbk9PbEswZThSRDN1X1hFdkJacVE?oc=5",
       "matched_terms": [],
       "published": "2026-06-17T21:25:00+00:00",
@@ -313,6 +312,32 @@
       ],
       "ticker": "MARKET",
       "title": "European shares retreat as markets mull hawkish US Federal Reserve - The Business Times"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQa084Z1VIaFlWMkZnM2JWMF92MjQ4ZF82ZW1DdmJnTnFPLXZjSWJseVYzeVVoaTVsTVNCSU9MdFJKRGE5QVhSRE1mX2tyaWRyYUNmZlB6ZF9DRW9yVFZmUU1TNmRNR2c3ZF9qV2hBVTF3Y2dkdkhKQ3dud0tPZTNiekEtb1hzLWcxbl9QckpQc2hMTGdkd0pSVjV1ZFE?oc=5",
+      "matched_terms": [],
+      "published": "2026-06-17T14:46:00+00:00",
+      "sentiment_label": "neutral",
+      "sentiment_score": 0.0,
+      "source": "Business Insider",
+      "themes": [
+        "rates / inflation"
+      ],
+      "ticker": "MARKET",
+      "title": "A $3 billion CIO says be ready to buy the dip in stocks if the Fed meeting jolts markets - Business Insider"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOcDExdjNicGpJQkt0UnBKaG1hRXNBdkhPdlVQQVZNWUNjbUtNajM2blFFOVMxMjJiYnBhNV9aaEc4UERBYXczZndNa01Gb25aMGRmNjNrbW1yLTR1VzQ5a2Jmcjdqam52T1hxTXZvZzZCRHpZbGwtbzVaZEE3MUhZbkxxckt2R3pLZ2lSUmJvNzNoUkNjTHd3T2htX1l1UU9WaWVDcWYxQUFWOUXSAbABQVVfeXFMT0hpMm5OM1hlaExhOGMwNVBISHhNbWN0NXpaU1RNTDdVUjVzMXpPeUZfbkpLY0VDb284UEpKYmtCWS1lZDEzeDhiRVJRRFlfYmJSX19MRUZVWHZNNUVfTDNQZHRfNll1dnEtT19XZVFhZ3lObTFIbTdvLTB2Y2tiYllsLUFsOThaODBIN2VBVGtrMnJyc1RzcVBHd0h0SmR5eXZycWh3b0lzQlBtdFg5WXI?oc=5",
+      "matched_terms": [],
+      "published": "2026-06-16T17:20:00+00:00",
+      "sentiment_label": "neutral",
+      "sentiment_score": 0.0,
+      "source": "Fox Business",
+      "themes": [
+        "general market"
+      ],
+      "ticker": "SPY",
+      "title": "Could the Vanguard S&P 500 ETF be your ticket to becoming a stock market millionaire? - Fox Business"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPQU5nYkJEZ291N3F1NUc1SXBTYktkRlMtQ0tSTnpKLTNMNGJ1WDVKYWRnbTZTS3JZbWd5Nno0SUtJVjk4Z0l3X0EyR3RteEd1WkJHTXV6a1JPQ0l5VGo0Sk9hNXpMRGRYNVo2S3hXWnZJbTlCbkFIX2xGY201dUNpRmc1MTRqZ21IQUFfVTAxUQ?oc=5",
@@ -432,19 +457,17 @@
       "title": "Prediction: Apple Stock Will Go On a Bull Run in the Second Half of 2026 - The Motley Fool"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNZFJLWllMc0xIMjdEd3l2S0JqQlJ4dkM4UEo3WEtQdkQ0M0EtQngtcE5vVjNybVZFNWFVSkkwVjhkeW9vVlBxd0Y2V1l4TWhqMDdMNWh0NXFUUElIdm1UZDFWT2t4cDVVQkk5N2FEMFI2T3JKMm1sdGE5YmFYWklHdUJNY0dkMkc2OWFrYnk1bGZmc2ZXZlRubm1IWjdBblNoeTZkaHNB?oc=5",
-      "matched_terms": [
-        "surge"
-      ],
-      "published": "2026-06-18T13:41:00+00:00",
-      "sentiment_label": "positive",
-      "sentiment_score": 0.36,
-      "source": "WSJ",
+      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9EYlA1MHNsNk83YllqeGQ4NjVjajZXSnpUdHRUcU1OaTZoM1hXUGZhb2ktT3BFUHBVTmEtOFowaUw3Qk9LWHJPeGdJWmRrWXV0YXBYaERka3kwMzlGTVAteFA4X1BQSlFKNy13QjZWb2h1UTU2azhmT3VPMNIBgAFBVV95cUxNajJvNDlLalFrd0RUcldYN0tHVUZlOEJfX1Q4bGZ3M004S2ktUGY5dmFFd0Q3R1Q2djBzN1NvQWJSSksxYWVjTV9NdW44U2ttTFU4NzRZNzFCSHBWWlB2VXowcGt0dlFWbXM1bkhwTjRFY2l1Qm1HVHFDU0dEUTczcg?oc=5",
+      "matched_terms": [],
+      "published": "2026-06-18T08:45:04+00:00",
+      "sentiment_label": "neutral",
+      "sentiment_score": 0.0,
+      "source": "CNBC",
       "themes": [
-        "general market"
+        "AI / semiconductors"
       ],
       "ticker": "AAPL",
-      "title": "Intel Shares Surge After Trump Announces Apple Partnership - WSJ"
+      "title": "Intel gains 10% after Trump says company will partner with Apple on U.S. chip design - CNBC"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQeUhwb1FZaURvR1VkVWphenAzc3Q3Mkl4dkRBNVUwck1qMFF3N3hIOXNscEdSNld5Q2NvQ21YNUZsNEZZblk3TlNWVWN1Y3QwekIzbjlmZENrdmEzQmQ3a3FOd0ZoS3duem9SQ3JhNlV1TVhENHctczRQeXpRa3E2ZF9PZFBCMlBkU0RhMlZnbVFtby1GRVFRYlZiRVJpWXdNSE1Iby1wWUdoeVdpdHFfNWJR?oc=5",
@@ -460,56 +483,29 @@
       ],
       "ticker": "AAPL",
       "title": "Stocks Rally on Middle East Peace, Apple-Intel Deal: Stock Market Today - Kiplinger"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFA3RkN5bGJEQzhQdTFlQkJvMXp0SER2Q3RQcHRVQnB5MEd3TEJITzJrUzJVZXhFQWcwY0Y4MUVGMzFFa2RHNTBhRHRmamRLQVlBUnAwMnBBbUNYNm91RVFxb0I1NEMyaHppRV92N3BKZw?oc=5",
-      "matched_terms": [],
-      "published": "2026-06-18T20:25:19+00:00",
-      "sentiment_label": "neutral",
-      "sentiment_score": 0.0,
-      "source": "Morningstar",
-      "themes": [
-        "general market"
-      ],
-      "ticker": "AAPL",
-      "title": "Apple: Pulling the Pricing Lever - Morningstar"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNLWFIRTF1OVp5bWpsVXNQcDk4TWMxRWt5LWpBbXF0a2k5aGgtcmpUZURiV1ZzdUpDUDhXZl9aTlFlUkdBZVVwUEtHSW9FTWZCLVYtb01LbzhZOEhLajJBOU9JeE45eDBMcWxqLURxaWYwanpxNHJTc1FEelVNSlBNaGRrYTVNVDFCeG02OUdHQXE2U0Q0UWJiZ2tWSE5wcHNaUjBIa3JKRnFROWY0?oc=5",
-      "matched_terms": [
-        "falls"
-      ],
-      "published": "2026-06-18T00:00:00+00:00",
-      "sentiment_label": "negative",
-      "sentiment_score": -0.32,
-      "source": "Bloomberg.com",
-      "themes": [
-        "earnings"
-      ],
-      "ticker": "AAPL",
-      "title": "Watch Kroger Falls on Downbeat Forecast; Intel Surges on Apple Deal | Stock Movers - Bloomberg.com"
     }
   ],
-  "generated_at": "2026-06-19T04:10:05.204130+00:00",
+  "generated_at": "2026-06-19T04:15:22.756645+00:00",
   "market": "us",
   "mode": "real",
   "summary": {
     "ai_layer": {
+      "analysis": null,
       "model": null,
-      "note": "LLM summarization is intentionally optional; set OPENAI_API_KEY or enable Netlify AI Gateway later to replace the heuristic narrative.",
-      "prompt_template": "You are a cautious portfolio research agent. Use the headlines, market-regime facts, and rule-based portfolio constraints to explain market sentiment and produce a conditional, non-execution investment posture. Do not promise returns. Return JSON with sentiment, risks, watchlist, and recommended posture.\n\nBenchmark: SPY\nRule engine posture: balanced\nNews score: 0.029\nHeadlines: ['Stock Market Today: Nasdaq Jumps, Oil Is Now Close to Pre-Iran War Prices \u2014 Live Updates - WSJ', 'S&P 500 closes higher, Nasdaq climbs nearly 2% as chips fuel comeback from Fed sell-off: Live updates - CNBC', 'Stock market today: Dow, S&P 500, Nasdaq rally as Iran deal optimism offsets Fed hike worries - Yahoo Finance', 'Is the stock market open or closed on Juneteenth 2026? See schedule - USA Today', \"Stock Market Today: Nasdaq, Russell 2000 Pace Rebound; SpaceX Slumps 24% Off Its Peak - Investor's Business Daily\", 'Stock Market News, June 18, 2026: Dow, S&P 500 and Nasdaq post weekly gains for second week in a row, stocks climb after U.S. and Iran sign initial peace deal - MarketWatch', 'Markets News, June 18, 2026: Stocks Rise to Finish Winning Week; Intel Leads Chip, Memory Stocks Higher; SpaceX Continues Slide - Investopedia', \"The Fed decision, JetBlue's Florida plans, Intel's Apple partnership and more in Morning Squawk - CNBC\", 'US stock futures dip after Wall St surges on Iran peace deal, chip gains - Investing.com', \"An under-the-radar indicator is signaling that stocks are headed for 'violent' swings, Stifel says - Business Insider\"]",
+      "note": "LLM summarization is intentionally optional and currently disabled to avoid token costs.",
+      "prompt_template": "You are a cautious portfolio research agent. Use the headlines, market-regime facts, and rule-based portfolio constraints to explain market sentiment and produce a conditional, non-execution investment posture. Do not promise returns. Return JSON with sentiment, risks, watchlist, and recommended posture.\n\nBenchmark: SPY\nRule engine posture: balanced\nNews score: 0.014\nHeadlines: ['Stock market today: Dow, S&P 500, Nasdaq rally as Iran deal optimism offsets Fed hike worries - Yahoo Finance', 'S&P 500 closes higher, Nasdaq climbs nearly 2% as chips fuel comeback from Fed sell-off: Live updates - CNBC', 'Stock Market Today: Nasdaq Jumps, Oil Is Now Close to Pre-Iran War Prices \u2014 Live Updates - WSJ', 'Is the stock market open or closed on Juneteenth 2026? See schedule - USA Today', \"Stock Market Today: Nasdaq, Russell 2000 Pace Rebound; SpaceX Slumps 24% Off Its Peak - Investor's Business Daily\", 'Stock Market News, June 18, 2026: Dow, S&P 500 and Nasdaq post weekly gains for second week in a row, stocks climb after U.S. and Iran sign initial peace deal - MarketWatch', 'Markets News, June 18, 2026: Stocks Rise to Finish Winning Week; Intel Leads Chip, Memory Stocks Higher; SpaceX Continues Slide - Investopedia', \"The Fed decision, JetBlue's Florida plans, Intel's Apple partnership and more in Morning Squawk - CNBC\", \"Stock Market Forecast For Next Six Months: Why More Gains May Lie Ahead - Investor's Business Daily\", \"S&P 500 Outlook: Unstoppable Stock Market Rally Outruns Fed Policy Anxiety - Barron's\"]",
       "provider": "none",
       "status": "heuristic_default"
     },
     "article_count": 36,
-    "confidence": 0.8043333333333333,
+    "confidence": 0.8021666666666667,
     "forecast_bias": "neutral",
     "investment_posture": "balanced",
     "label": "neutral",
-    "negative_count": 4,
-    "neutral_count": 27,
-    "overall_score": 0.02888888888888889,
-    "positive_count": 5,
+    "negative_count": 3,
+    "neutral_count": 29,
+    "overall_score": 0.014444444444444446,
+    "positive_count": 4,
     "rationale": "News and price evidence are mixed or not strong enough for a directional overlay.",
     "recommended_action": "follow target weights and rule-based trims/adds; do not override price evidence with headlines alone",
     "source_mode": "rss",
@@ -524,11 +520,11 @@
       },
       {
         "count": 3,
-        "theme": "AI / semiconductors"
+        "theme": "earnings"
       },
       {
         "count": 2,
-        "theme": "earnings"
+        "theme": "AI / semiconductors"
       },
       {
         "count": 1,
@@ -538,9 +534,9 @@
   },
   "ticker_sentiment": [
     {
-      "article_count": 7,
+      "article_count": 5,
       "label": "neutral",
-      "score": 0.05142857142857142,
+      "score": 0.064,
       "ticker": "AAPL",
       "top_headlines": [
         "The Fed decision, JetBlue's Florida plans, Intel's Apple partnership and more in Morning Squawk - CNBC",
