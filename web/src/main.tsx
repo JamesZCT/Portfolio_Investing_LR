@@ -44,6 +44,74 @@ import {
 } from "./api";
 import "./styles.css";
 
+type MarketProfileInfo = {
+  label: string;
+  benchmarkName: string;
+  currency: string;
+  tickerConvention: string;
+  dataTruth: string;
+  portfolioTruth: string;
+  instruments: Record<string, string>;
+};
+
+const MARKET_INFO: Record<MarketProfile, MarketProfileInfo> = {
+  us: {
+    label: "US Stocks",
+    benchmarkName: "SPDR S&P 500 ETF Trust",
+    currency: "USD",
+    tickerConvention: "US exchange tickers use ordinary symbols such as AAPL, MSFT, SPY.",
+    dataTruth: "Prices and history are real market data fetched through yfinance/Yahoo and published as API/static snapshots.",
+    portfolioTruth: "The current holdings are an example research portfolio until you enter your own positions.",
+    instruments: {
+      AAPL: "Apple",
+      AVGO: "Broadcom",
+      COST: "Costco",
+      JNJ: "Johnson & Johnson",
+      JPM: "JPMorgan Chase",
+      MSFT: "Microsoft",
+      NVDA: "NVIDIA",
+      SPY: "S&P 500 ETF",
+      UNH: "UnitedHealth",
+      V: "Visa",
+      XOM: "Exxon Mobil",
+      CASH: "Cash reserve",
+      XLB: "Materials Select Sector SPDR",
+      XLC: "Communication Services Select Sector SPDR",
+      XLE: "Energy Select Sector SPDR",
+      XLF: "Financials Select Sector SPDR",
+      XLI: "Industrials Select Sector SPDR",
+      XLK: "Technology Select Sector SPDR",
+      XLP: "Consumer Staples Select Sector SPDR",
+      XLRE: "Real Estate Select Sector SPDR",
+      XLU: "Utilities Select Sector SPDR",
+      XLV: "Health Care Select Sector SPDR",
+      XLY: "Consumer Discretionary Select Sector SPDR"
+    }
+  },
+  hk: {
+    label: "Hong Kong",
+    benchmarkName: "Tracker Fund of Hong Kong",
+    currency: "HKD",
+    tickerConvention: "HKEX tickers are numeric locally; yfinance/Yahoo writes them with a .HK suffix, for example 0700.HK.",
+    dataTruth: "Prices and history are real Hong Kong market data fetched through yfinance/Yahoo and published as API/static snapshots.",
+    portfolioTruth: "The portfolio weights are a sandbox/example HK portfolio, not your actual brokerage holdings.",
+    instruments: {
+      "0001.HK": "CK Hutchison Holdings",
+      "0005.HK": "HSBC Holdings",
+      "0388.HK": "Hong Kong Exchanges and Clearing",
+      "0700.HK": "Tencent Holdings",
+      "0823.HK": "Link REIT",
+      "0939.HK": "China Construction Bank",
+      "1299.HK": "AIA Group",
+      "1810.HK": "Xiaomi",
+      "2800.HK": "Tracker Fund of Hong Kong",
+      "3690.HK": "Meituan",
+      "9988.HK": "Alibaba Group",
+      CASH: "Cash reserve"
+    }
+  }
+};
+
 function App() {
   const [market, setMarket] = useState<MarketProfile>("us");
   const [mode, setMode] = useState("real");
@@ -116,6 +184,7 @@ function App() {
     () => [...(dashboard?.risk_predictions ?? [])].sort((a, b) => b.risk_probability - a.risk_probability).slice(0, 6),
     [dashboard]
   );
+  const marketInfo = MARKET_INFO[market];
 
   return (
     <main className="app-shell">
@@ -164,12 +233,14 @@ function App() {
 
       {dashboard ? (
         <>
+          <MarketTruthBanner marketInfo={marketInfo} dashboard={dashboard} quotes={quotes} />
+
           <section className="metric-grid">
             <MetricCard
               icon={<Gauge size={19} />}
               label="Market Regime"
               value={dashboard.market_regime.trend_state}
-              detail={`${dashboard.market_regime.benchmark} ${money(dashboard.market_regime.price)} vs MA ${money(
+              detail={`${tickerLabel(dashboard.market_regime.benchmark, market)} ${money(dashboard.market_regime.price)} vs MA ${money(
                 dashboard.market_regime.trend_ma
               )}`}
             />
@@ -183,7 +254,7 @@ function App() {
               icon={<Brain size={19} />}
               label="ML Risk"
               value={`${topRisks.filter((item) => item.risk_level === "high").length} high`}
-              detail={topRisks[0] ? `${topRisks[0].ticker}: ${percent(topRisks[0].risk_probability)}` : "No predictions"}
+              detail={topRisks[0] ? `${tickerLabel(topRisks[0].ticker, market)}: ${percent(topRisks[0].risk_probability)}` : "No predictions"}
             />
             <MetricCard
               icon={<ShieldCheck size={19} />}
@@ -198,7 +269,7 @@ function App() {
               <TakeawayList items={dashboard.advisor_summary} />
             </Panel>
             <Panel title="Suggested Portfolio Distribution" icon={<Gauge size={18} />} className="wide-panel">
-              <DistributionTable rows={dashboard.recommended_distribution} />
+              <DistributionTable rows={dashboard.recommended_distribution} market={market} />
             </Panel>
           </section>
 
@@ -212,15 +283,15 @@ function App() {
             </Panel>
 
             <Panel title="Latest Market Data" icon={<Activity size={18} />}>
-              <QuotesTable quotes={quotes} />
+              <QuotesTable quotes={quotes} market={market} />
             </Panel>
 
-            <Panel title={`${dashboard.universe.benchmark} K-Line`} icon={<Activity size={18} />} className="wide-panel">
+            <Panel title={`${tickerLabel(dashboard.universe.benchmark, market)} K-Line`} icon={<Activity size={18} />} className="wide-panel">
               <CandlestickChart rows={ohlc} hover={hoverCandle} setHover={setHoverCandle} />
             </Panel>
 
             <Panel title="Allocation Pie" icon={<Gauge size={18} />}>
-              <AllocationPie positions={dashboard.positions} />
+              <AllocationPie positions={dashboard.positions} market={market} />
             </Panel>
 
             <Panel title="Strategy Comparison" icon={<BarChart3 size={18} />} className="wide-panel">
@@ -232,19 +303,23 @@ function App() {
             </Panel>
 
             <Panel title="Rule Recommendations" icon={<ShieldCheck size={18} />} className="wide-panel">
-              <RecommendationTable suggestions={dashboard.suggestions} />
+              <RecommendationTable suggestions={dashboard.suggestions} market={market} />
             </Panel>
 
             <Panel title="ML Risk Ranking" icon={<Brain size={18} />}>
-              <RiskList risks={topRisks} />
+              <RiskList risks={topRisks} market={market} />
             </Panel>
 
             <Panel title="Sector Signals" icon={<FlaskConical size={18} />} className="wide-panel">
-              <SectorTable signals={dashboard.signals} />
+              <SectorTable signals={dashboard.signals} market={market} />
             </Panel>
 
             <Panel title="Allocation Drift" icon={<Gauge size={18} />}>
-              <AllocationBars positions={dashboard.positions} targets={dashboard.target_weights} />
+              <AllocationBars positions={dashboard.positions} targets={dashboard.target_weights} market={market} />
+            </Panel>
+
+            <Panel title="Instrument Guide" icon={<Activity size={18} />} className="wide-panel">
+              <InstrumentGuide dashboard={dashboard} market={market} quotes={quotes} />
             </Panel>
 
             <Panel title="Strategy Rule Book" icon={<ShieldCheck size={18} />} className="wide-panel">
@@ -256,6 +331,36 @@ function App() {
         <section className="loading-surface">Loading portfolio lab...</section>
       )}
     </main>
+  );
+}
+
+function MarketTruthBanner({
+  marketInfo,
+  dashboard,
+  quotes
+}: {
+  marketInfo: MarketProfileInfo;
+  dashboard: DashboardPayload;
+  quotes: LatestQuote[];
+}) {
+  const quoteSource = quotes[0]?.source ?? "snapshot/API";
+  return (
+    <section className="truth-banner">
+      <div>
+        <strong>{marketInfo.label}</strong>
+        <span>{marketInfo.tickerConvention}</span>
+      </div>
+      <div>
+        <strong>Market data is real</strong>
+        <span>
+          {marketInfo.dataTruth} Latest quote source: {quoteSource}; price date: {dashboard.price_as_of ?? "unknown"}.
+        </span>
+      </div>
+      <div>
+        <strong>Portfolio is editable research input</strong>
+        <span>{marketInfo.portfolioTruth}</span>
+      </div>
+    </section>
   );
 }
 
@@ -394,15 +499,16 @@ function BacktestMetrics({ backtest }: { backtest: BacktestPayload }) {
   );
 }
 
-function QuotesTable({ quotes }: { quotes: LatestQuote[] }) {
+function QuotesTable({ quotes, market }: { quotes: LatestQuote[]; market: MarketProfile }) {
   if (!quotes.length) return <EmptyState label="Latest market data unavailable." />;
+  const marketInfo = MARKET_INFO[market];
   return (
     <div className="table-wrap compact-table">
       <table>
         <thead>
           <tr>
             <th>Ticker</th>
-            <th>Price</th>
+            <th>Price ({marketInfo.currency})</th>
             <th>Change</th>
             <th>As of</th>
           </tr>
@@ -411,7 +517,7 @@ function QuotesTable({ quotes }: { quotes: LatestQuote[] }) {
           {quotes.slice(0, 8).map((quote) => (
             <tr key={quote.ticker} title={`Source: ${quote.source}`}>
               <td>
-                <strong>{quote.ticker}</strong>
+                <TickerCell ticker={quote.ticker} market={market} />
               </td>
               <td>{money(quote.price)}</td>
               <td className={quote.change >= 0 ? "positive" : "negative"}>
@@ -427,16 +533,16 @@ function QuotesTable({ quotes }: { quotes: LatestQuote[] }) {
   );
 }
 
-function AllocationPie({ positions }: { positions: Record<string, number> }) {
+function AllocationPie({ positions, market }: { positions: Record<string, number>; market: MarketProfile }) {
   const colors = ["#1f6f5b", "#4c88a3", "#dc8f2d", "#9b6aab", "#557a38", "#b5533f", "#456990", "#c49a2c"];
   const data = Object.entries(positions)
     .filter(([, value]) => value > 0)
-    .map(([name, value]) => ({ name, value }));
+    .map(([name, value]) => ({ name, label: tickerLabel(name, market), value }));
   return (
     <div className="pie-wrap">
       <ResponsiveContainer width="100%" height={260}>
         <PieChart>
-          <Pie data={data} dataKey="value" nameKey="name" innerRadius="48%" outerRadius="80%" paddingAngle={1}>
+          <Pie data={data} dataKey="value" nameKey="label" innerRadius="48%" outerRadius="80%" paddingAngle={1}>
             {data.map((entry, index) => (
               <Cell key={entry.name} fill={colors[index % colors.length]} />
             ))}
@@ -531,7 +637,7 @@ function StrategyMetrics({ comparison }: { comparison: StrategyComparisonPayload
   );
 }
 
-function RecommendationTable({ suggestions }: { suggestions: DashboardPayload["suggestions"] }) {
+function RecommendationTable({ suggestions, market }: { suggestions: DashboardPayload["suggestions"]; market: MarketProfile }) {
   if (!suggestions.length) return <EmptyState label="No recommendations met thresholds." />;
   return (
     <div className="table-wrap">
@@ -548,7 +654,9 @@ function RecommendationTable({ suggestions }: { suggestions: DashboardPayload["s
         <tbody>
           {suggestions.map((item) => (
             <tr key={`${item.ticker}-${item.action}-${item.reason}`}>
-              <td>{item.ticker}</td>
+              <td>
+                <TickerCell ticker={item.ticker} market={market} />
+              </td>
               <td>
                 <span className={`badge ${item.action}`}>{item.action}</span>
               </td>
@@ -581,7 +689,7 @@ function TakeawayList({ items }: { items: DashboardPayload["advisor_summary"] })
   );
 }
 
-function DistributionTable({ rows }: { rows: DashboardPayload["recommended_distribution"] }) {
+function DistributionTable({ rows, market }: { rows: DashboardPayload["recommended_distribution"]; market: MarketProfile }) {
   const visible = rows.filter((row) => row.current_weight > 0 || row.recommended_weight > 0).slice(0, 14);
   return (
     <div className="table-wrap distribution-table">
@@ -604,6 +712,7 @@ function DistributionTable({ rows }: { rows: DashboardPayload["recommended_distr
               <td>{index + 1}</td>
               <td>
                 <strong>{row.ticker}</strong>
+                <span>{instrumentName(row.ticker, market)}</span>
                 <span>{row.sector}</span>
               </td>
               <td>
@@ -624,7 +733,7 @@ function DistributionTable({ rows }: { rows: DashboardPayload["recommended_distr
   );
 }
 
-function RiskList({ risks }: { risks: DashboardPayload["risk_predictions"] }) {
+function RiskList({ risks, market }: { risks: DashboardPayload["risk_predictions"]; market: MarketProfile }) {
   if (!risks.length) return <EmptyState label="ML model needs more data." />;
   return (
     <div className="risk-list">
@@ -632,6 +741,7 @@ function RiskList({ risks }: { risks: DashboardPayload["risk_predictions"] }) {
         <div className="risk-row" key={risk.ticker}>
           <div>
             <strong>{risk.ticker}</strong>
+            <span>{instrumentName(risk.ticker, market)}</span>
             <span>{risk.risk_level}</span>
           </div>
           <meter min={0} max={1} value={risk.risk_probability} />
@@ -642,7 +752,7 @@ function RiskList({ risks }: { risks: DashboardPayload["risk_predictions"] }) {
   );
 }
 
-function SectorTable({ signals }: { signals: SectorSignal[] }) {
+function SectorTable({ signals, market }: { signals: SectorSignal[]; market: MarketProfile }) {
   return (
     <div className="table-wrap">
       <table>
@@ -661,7 +771,9 @@ function SectorTable({ signals }: { signals: SectorSignal[] }) {
           {[...signals].sort((a, b) => b.z - a.z).map((signal) => (
             <tr key={signal.sector}>
               <td>{signal.sector}</td>
-              <td>{signal.etf}</td>
+              <td>
+                <TickerCell ticker={signal.etf} market={market} />
+              </td>
               <td>
                 <span className={`badge ${signal.status}`}>{signal.status}</span>
               </td>
@@ -714,7 +826,7 @@ function RulesTable({ rules }: { rules: StrategyRule[] }) {
   );
 }
 
-function AllocationBars({ positions, targets }: { positions: Record<string, number>; targets: Record<string, number> }) {
+function AllocationBars({ positions, targets, market }: { positions: Record<string, number>; targets: Record<string, number>; market: MarketProfile }) {
   const tickers = Object.keys({ ...positions, ...targets }).filter((ticker) => ticker !== "CASH");
   return (
     <div className="allocation-list">
@@ -725,6 +837,7 @@ function AllocationBars({ positions, targets }: { positions: Record<string, numb
           <div className="allocation-row" key={ticker}>
             <div className="allocation-label">
               <strong>{ticker}</strong>
+              <span>{instrumentName(ticker, market)}</span>
               <span>{percent(current - target)} drift</span>
             </div>
             <div className="bar-track">
@@ -735,6 +848,60 @@ function AllocationBars({ positions, targets }: { positions: Record<string, numb
         );
       })}
     </div>
+  );
+}
+
+function InstrumentGuide({ dashboard, market, quotes }: { dashboard: DashboardPayload; market: MarketProfile; quotes: LatestQuote[] }) {
+  const marketInfo = MARKET_INFO[market];
+  const quoteMap = new Map(quotes.map((quote) => [quote.ticker, quote]));
+  const tickers = [dashboard.universe.benchmark, ...dashboard.universe.tickers, "CASH"].filter(
+    (ticker, index, all) => all.indexOf(ticker) === index
+  );
+
+  return (
+    <div className="instrument-guide">
+      <p>
+        {marketInfo.benchmarkName} is the benchmark for this profile. Prices are shown in {marketInfo.currency}; weights are portfolio percentages.
+      </p>
+      <div className="table-wrap compact-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Ticker</th>
+              <th>Name</th>
+              <th>Current weight</th>
+              <th>Latest price</th>
+              <th>Data status</th>
+            </tr>
+          </thead>
+          <tbody>
+            {tickers.map((ticker) => {
+              const quote = quoteMap.get(ticker);
+              return (
+                <tr key={ticker}>
+                  <td>
+                    <strong>{ticker}</strong>
+                  </td>
+                  <td>{instrumentName(ticker, market)}</td>
+                  <td>{percent(dashboard.positions[ticker] ?? 0)}</td>
+                  <td>{quote ? `${money(quote.price)} ${marketInfo.currency}` : ticker === "CASH" ? "-" : "not in latest quote set"}</td>
+                  <td>{ticker === "CASH" ? "portfolio input" : quote ? `real snapshot, ${quote.as_of}` : "historical data only"}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+}
+
+function TickerCell({ ticker, market }: { ticker: string; market: MarketProfile }) {
+  return (
+    <span className="ticker-cell">
+      <strong>{ticker}</strong>
+      <span>{instrumentName(ticker, market)}</span>
+    </span>
   );
 }
 
@@ -808,6 +975,15 @@ function percent(value: number) {
 
 function money(value: number) {
   return value.toLocaleString(undefined, { maximumFractionDigits: 2 });
+}
+
+function instrumentName(ticker: string, market: MarketProfile) {
+  return MARKET_INFO[market].instruments[ticker] ?? ticker;
+}
+
+function tickerLabel(ticker: string, market: MarketProfile) {
+  const name = instrumentName(ticker, market);
+  return name === ticker ? ticker : `${ticker} ${name}`;
 }
 
 createRoot(document.getElementById("root")!).render(<App />);
