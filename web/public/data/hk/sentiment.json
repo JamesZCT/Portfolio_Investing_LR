@@ -27,19 +27,6 @@
       "title": "Hong Kong market faces pressure as HK$255 billion in locked shares expire in July - The Business Times"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9kZklxbGJyalRHOFpsclZHcGZFaFcwY0o3WUdXT3NXSVhZRDRIbUhhRlRYeDhGQjdhNl84WUV4NWhLVk1IM21UbGRCblN0LVNQTkdDeW51SlVyX2NwRFdka3l1UkRNUQ?oc=5",
-      "matched_terms": [],
-      "published": "2026-06-18T07:00:00+00:00",
-      "sentiment_label": "neutral",
-      "sentiment_score": 0.0,
-      "source": "FOREX.com",
-      "themes": [
-        "China / policy"
-      ],
-      "ticker": "MARKET",
-      "title": "Hong Kong 50 - FOREX.com"
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQRUFXMGs1YzZkM0p1OXF4bWtxbWFrUm9Sa0RuV0xLZzRUV0lnOVI3Sm5wRTBQX3JKc0kwUXpCZXhOOE9fV3BYX2ZVWUc4QllkQ0p4Q2dUTVhteElIS09XOFVCWjRyVnJ4VWF2dEVhMG96UlEtRVBNVVVyUkVjazdwZmNrRmE?oc=5",
       "matched_terms": [
         "ai",
@@ -107,6 +94,19 @@
       ],
       "ticker": "MARKET",
       "title": "SENASIC ELECTRONICS TECHNOLOGY CO., LTD. - H SHARES (6675) - stock price, quote, history - hkex.com.hk"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQNTFxeEs1aWtrdjQ0RzV6M0lNUkdJT29zVFR4cHNJVW1KamdKQVJWektFWkdXNTNlTXFPM1NaWjFsQ3VKd1ZkemZEZnNMeHZGbnVVNjlHem9sUGZOalFiUUVTazh2eDNvd3dlVEhobGRqYkpIVVZPTms5WHYza1BhcnJNRmNlTEZIcDRFb2t4NUR1LU0zVHhnbmRJRV9PVFFGbElySA?oc=5",
+      "matched_terms": [],
+      "published": "2026-06-18T00:34:00+00:00",
+      "sentiment_label": "neutral",
+      "sentiment_score": 0.0,
+      "source": "Reuters",
+      "themes": [
+        "China / policy"
+      ],
+      "ticker": "MARKET",
+      "title": "Breakingviews - Hong Kong\u2019s wealth hub faces a leaner future - Reuters"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOMHdyOVJ5VVJOTFZIbVlNYUNQRzdxOG1HSk14SUxIRlM4VTJJQ294QVVwNEFYMXg4ZGdxT3UybVhrMXZxV1RYTEZLMFRoZkpvcEstejFnNVREMUNidlB6OFBZUVlBMWxaSjJfRFNsdWlTSUpnblZIMURxYWFWNXhYS0I1T2huR0p1X2IyRQ?oc=5",
@@ -492,15 +492,15 @@
       "title": "Tencent Holdings Stock Slides 1.3% in Hong Kong - Moomoo"
     }
   ],
-  "generated_at": "2026-06-21T06:18:01.581670+00:00",
+  "generated_at": "2026-06-21T06:27:33.866912+00:00",
   "market": "hk",
   "mode": "real",
   "summary": {
     "ai_layer": {
-      "analysis": "{\n  \"sentiment\": \"Cautious\",\n  \"risks\": [\n    \"Geopolitical tensions affecting investor confidence\",\n    \"Potential liquidity pressures from expiring locked shares\",\n    \"Market volatility due to external macroeconomic factors\",\n    \"Sector-specific risks in technology and AI hardware plays\",\n    \"Uncertainty in global trade dynamics impacting regional markets\"\n  ],\n  \"watchlist\": [\n    \"Hang Seng Index (HSI)\",\n    \"Hong Kong 50\",\n    \"SENASIC ELECTRONICS TECHNOLOGY CO., LTD. (6675)\",\n    \"Goldman Sachs' AI hardware focus\",\n    \"Overlooked stocks in Hong Kong market\"\n  ],\n  \"recommended_posture\": \"Defensive\"\n}",
+      "analysis": "{\n  \"sentiment\": \"Cautious and defensive\",\n  \"risks\": [\n    \"Geopolitical uncertainties affecting investor sentiment\",\n    \"Pressure from expiring locked shares in Hong Kong\",\n    \"Shift in institutional favor towards mainland China AI plays\",\n    \"Volatility in the Hang Seng Index due to external factors like Iran peace doubts\",\n    \"Potential underperformance of overlooked stocks due to limited liquidity\"\n  ],\n  \"watchlist\": [\n    \"Hang Seng Index (HSI)\",\n    \"SENASIC ELECTRONICS TECHNOLOGY CO., LTD. (6675)\",\n    \"Hong Kong market liquidity dynamics\",\n    \"Mainland China AI hardware sector\",\n    \"Global geopolitical tensions\"\n  ],\n  \"recommended_posture\": \"Maintain a defensive stance with a focus on liquidity and downside protection. Avoid overexposure to volatile sectors and consider rebalancing toward more stable, defensive equities. Monitor geopolitical developments and market liquidity closely before considering any active position adjustments.\"\n}",
       "model": "qwen3:8b",
       "note": "LLM output is a research overlay and should not override rule, risk, and price evidence by itself.",
-      "prompt_template": "You are a cautious portfolio research agent. Use the headlines, market-regime facts, and rule-based portfolio constraints to explain market sentiment and produce a conditional, non-execution investment posture. Do not promise returns. Return JSON with sentiment, risks, watchlist, and recommended posture.\n\nBenchmark: 2800.HK\nRule engine posture: defensive\nNews score: 0.036\nHeadlines: ['Editorial | Hong Kong and Shanghai extend the yuan\u2019s international reach - South China Morning Post', 'Hong Kong market faces pressure as HK$255 billion in locked shares expire in July - The Business Times', 'Hong Kong 50 - FOREX.com', 'Goldman Sachs cuts Hong Kong stocks in favor of mainland China AI hardware plays - CNBC', 'Live Trading + U.S. and Hong Kong Stock Market Analysis \u2013 Stay Low-Key Ahead of the U.S. Market Close; Will Hong Kong Stocks See a Shift at Lower Levels? 6/17 - Moomoo', 'Hong Kong Stock Exchange: Hang Seng Index (HSI) Drops 1.59% to 23,924.81 as Iran Peace Doubts Weigh - BBN Times', 'Hong Kong Issuers Seek to Boost Trading in Overlooked Stocks - Bloomberg.com', 'SENASIC ELECTRONICS TECHNOLOGY CO., LTD. - H SHARES (6675) - stock price, quote, history - hkex.com.hk', 'Asia stock markets outlook for 2026: Hang Seng and Nikkei forecasts - ig.com', 'How the Hang Seng Is Thriving as Geopolitical Uncertainty Impacts Global Markets - The Diplomat \u2013 Asia-Pacific']",
+      "prompt_template": "You are a cautious portfolio research agent. Use the headlines, market-regime facts, and rule-based portfolio constraints to explain market sentiment and produce a conditional, non-execution investment posture. Do not promise returns. Return JSON with sentiment, risks, watchlist, and recommended posture.\n\nBenchmark: 2800.HK\nRule engine posture: defensive\nNews score: 0.036\nHeadlines: ['Editorial | Hong Kong and Shanghai extend the yuan\u2019s international reach - South China Morning Post', 'Hong Kong market faces pressure as HK$255 billion in locked shares expire in July - The Business Times', 'Goldman Sachs cuts Hong Kong stocks in favor of mainland China AI hardware plays - CNBC', 'Live Trading + U.S. and Hong Kong Stock Market Analysis \u2013 Stay Low-Key Ahead of the U.S. Market Close; Will Hong Kong Stocks See a Shift at Lower Levels? 6/17 - Moomoo', 'Hong Kong Stock Exchange: Hang Seng Index (HSI) Drops 1.59% to 23,924.81 as Iran Peace Doubts Weigh - BBN Times', 'Hong Kong Issuers Seek to Boost Trading in Overlooked Stocks - Bloomberg.com', 'SENASIC ELECTRONICS TECHNOLOGY CO., LTD. - H SHARES (6675) - stock price, quote, history - hkex.com.hk', 'Breakingviews - Hong Kong\u2019s wealth hub faces a leaner future - Reuters', 'Asia stock markets outlook for 2026: Hang Seng and Nikkei forecasts - ig.com', 'How the Hang Seng Is Thriving as Geopolitical Uncertainty Impacts Global Markets - The Diplomat \u2013 Asia-Pacific']",
       "provider": "ollama",
       "status": "llm_generated"
     },

@@ -1,22 +1,6 @@
 {
   "articles": [
     {
-      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPU2Ftc0l5eHQ3SkVMU1NFZFUyaS16cmN2MjNaNXBwWHJHM2hZVVZEbnVDSjZuMm4zMkx1bGhqSk4yMmhpbVFJTTFhRkoxdElmclI4aGJlaVdBUl9jeGU1aTd1ZXhsNEpoY1RRQi1rQ0hQS25GVVRNQTBNczlzMHF6TnRLemV4WWZ3eDZCQkh0Y1M3cG9TT2U4SVV4ck9oQlp3OWpjNW5Vd1o2RS1SWnhCeThDaC01ZkRzZTUyMmEwa2VHVDhoc3VNWnBwcVNEbEE?oc=5",
-      "matched_terms": [
-        "rally",
-        "optimism"
-      ],
-      "published": "2026-06-18T18:36:46+00:00",
-      "sentiment_label": "positive",
-      "sentiment_score": 0.6,
-      "source": "Yahoo Finance",
-      "themes": [
-        "rates / inflation"
-      ],
-      "ticker": "MARKET",
-      "title": "Stock market today: Dow, S&P 500, Nasdaq rally as Iran deal optimism offsets Fed hike worries - Yahoo Finance"
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQaTZzYVctMFhaakhiSDhBM3ViWF9Da3dGN3lKeFpqNW5FNnlQNDdwLWRsel9pVDR5NU9kZzk2ZFNpV0dyZXJBM1VUbGQ5UV9fdFd1OWdJX0s5cXdKYzJRVmJ2THo0MV9XbHQxNWVhYlZiajZYeDdiS0FKb1N0cjZBSTdMcF9hbno3RTNOTzhydHotOVZHMEFtNjg0SDZXckw5LThETVNYbXFwT3ZGa3Y4eFV0Z1p3d2VNT3Fv?oc=5",
       "matched_terms": [
         "slumps"
@@ -60,21 +44,32 @@
       "title": "Global stock markets close lower on Friday as investors assess durability of U.S.-Iran peace deal - CNBC"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOdnV3ci1pOWNMTTVNMmJCdnNUd0FoNktlcWdWZ2ZpMHEwWGdaSXZUNWpBa093RGlDN1pMdjBFNVZybUN0NUVrSWo5cVpjRm0ySG9UcUk5dW10akRXamNuUXBDamsyM3RQRDFIUEE4S0Vvd0ltd3BVQnBCSVY5WFRDazVXOG5HaW9CZ3RqQTNzcGI2TE9rNTc1ZGg2UGNCaE5QelNmWjhfTU83OHZkc1U3R0ZsQlczR0JmR2otV2dkYVQtM241M2FXbHJmRQ?oc=5",
-      "matched_terms": [
-        "rally",
-        "ai"
-      ],
-      "published": "2026-06-19T10:03:43+00:00",
-      "sentiment_label": "positive",
-      "sentiment_score": 0.4800000000000001,
-      "source": "Reuters",
+      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOV0RjV0VucGtTVmpjOXNVby01eUJ5NVFncGpmeWxCRFdOSUNDSURjbGp3d2xwZ3EzZC00dnJQWDVXNHhOUGw3Sl9kMFBkODlDWWdJTVQ2S1lxX1hLSW1ZMTFkTG5DMUw4Q2pNMnNKMU85MTI1NGNuOGFNZWIzbDZONkVmcTZBbW9qLVMwN210NmJONWk3MUR6ekVGMUU1WThEMDhVd2hYQmdYZ253MjVEVTl2Vi1vTHFwNzEtRWxmYTFDQ0pOa3hqLXpfbHc?oc=5",
+      "matched_terms": [],
+      "published": "2026-06-20T11:34:58+00:00",
+      "sentiment_label": "neutral",
+      "sentiment_score": 0.0,
+      "source": "Yahoo Finance",
       "themes": [
-        "AI / semiconductors",
-        "earnings"
+        "general market"
       ],
       "ticker": "MARKET",
-      "title": "Wall St Week Ahead Investors see Micron earnings as pulse check of AI rally momentum - Reuters"
+      "title": "Trump's Iran deal is getting major blowback from everyone except the markets - Yahoo Finance"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNbk9OU3cxZnFJZTJuS2dhU3hka1hTQjc0ay1fMUgzTHl5cnhpb2F1NzUzbEkwTmQ1TzkxWHJscTJKVGRkMEFvdC1ieXJ1RDhWVjRvNERsaHdwUVBROEE4ckpaaUwyY1I0RlJwMVRDWFBSd1BmYkF0OC02UXIxMXFwSFU2RGNpd1hwNG9lN1NqbWVMTlhRUUhkVk5jdHN4MVhfRXpnZkdXYUFiT25WOWVndVktRVBNUHY3WjQ1SkNDeWFNZw?oc=5",
+      "matched_terms": [
+        "optimism"
+      ],
+      "published": "2026-06-18T22:50:59+00:00",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.27999999999999997,
+      "source": "Reuters",
+      "themes": [
+        "general market"
+      ],
+      "ticker": "MARKET",
+      "title": "Wall St indexes advance with boost from chips, Iran optimism - Reuters"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOWHIwSUFDM2dFTGZLaUtuRmU1X2F6UmtBeFBhZ1kzdFk0ci1jUEk4UzNnbkZtN280a1NYVVZTMVFWbXlYMndIMWhBMHEyZmlhQU5NSEpjMUVRckVzRVJfbzBuc3pKZHduZzRsM1NpYmZqeHMtQ2FCTU5DLVB5MV9rRGxQT244aHA2Z25pNWdhZFdpQWJ6R2UtQ2RXcy05eXU0RUlzRkQ0WDNUTml1ZlE?oc=5",
@@ -90,19 +85,6 @@
       "title": "Which Total U.S. Stock Market ETF Is Better: Vanguard or iShares? - The Motley Fool"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPbGtQMnI4cF9yUGY4aE1KN211cU5pYXBJRGZpeS1SMFlOVW10NFZla29FYzl5aWN3anhOMEtfVUxpZkdubGluQ1A2NGFNRlpCQUhfbkpRRTJOaXdsbDhnOXpVSjFiRmFBVWNjLUlqWE5pR2dJQWVwQ1pTRnhDcmlwQjNRbXBCSzRRdmk3eEZQa2JhR25xSmZzU3E4NVRBaXExaUtWVjU0bjhPRU9tbU5ETW5nMA?oc=5",
-      "matched_terms": [],
-      "published": "2026-06-17T22:11:45+00:00",
-      "sentiment_label": "neutral",
-      "sentiment_score": 0.0,
-      "source": "Bloomberg.com",
-      "themes": [
-        "general market"
-      ],
-      "ticker": "MARKET",
-      "title": "Stocks Join Bonds Higher as US-Iran Deal Sinks Oil: Markets Wrap - Bloomberg.com"
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQNldYb1BzWndpQUplQ2x1YzF4ODdjUkxTajRPblFiRkpPTWcyTl9GbEUtaVB6eW4tMjdBcmswUl82TmgzR09XQmdUM251VXJteURaZi1FWHZwV0d3TGJRYkRDOGFUbzVLam0zSnJrSjZxYnJNa3NqeGhlVjJvRmxkWEdrUEpUR2tfbWV1ZjNNNDc5dzRGbGRncjNKMnUtS21NaUFPNnVfOXBmM0ZWSEpVcg?oc=5",
       "matched_terms": [],
       "published": "2026-06-18T09:11:00+00:00",
@@ -114,6 +96,19 @@
       ],
       "ticker": "MARKET",
       "title": "Is the stock market open or closed on Juneteenth 2026? See schedule - USA Today"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNQ2hYS2RKLTJTRkhtVTN6VGtBcmdwOGNZdUdSc0FfSUY3dS11UExSUTRhdV8xLXJNVUkxRkJFRW9QdjlTRDZXS3hPY1NZcmVpOEdZdXo2ZTRieV9DUTVYY21nSnMtSEczSG1hYXE4Mlhfam1Qb0dzcXA0bUVPWHVQNkNpV0xyYjMzQ1lHc0ZfU1ZraUZOWEJXbHJLQy1jXzJ6cndOalB2SnhBN09xVWNPQzMxNDN1M0dQNEtKTkV2TnJWMnVvOXpvN2Q5a09FOUlv?oc=5",
+      "matched_terms": [],
+      "published": "2026-06-18T21:41:00+00:00",
+      "sentiment_label": "neutral",
+      "sentiment_score": 0.0,
+      "source": "MarketWatch",
+      "themes": [
+        "general market"
+      ],
+      "ticker": "MARKET",
+      "title": "Stock Market News, June 18, 2026: Dow, S&P 500 and Nasdaq post weekly gains for second week in a row, stocks climb after U.S. and Iran sign initial peace deal - MarketWatch"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNamc5X0x0bFAyR2lTOVFzcm1LTmFNR2xqY2hlbnN6cUlVYVBvYWNtdVN0dmZRcG9QLUVCX1R3WHlWd2VUclNpVmlla05HY0o3TWpLbkJkWHZqYk1VeWJJdFlueVZFMm1rRkxDcjRGLUZINXZvRHZ5TEhzWUJtOExadnpNZGNXVVpVZnBmU0lRN3UxV2V2U3NhSGhESEdtcVhuTFJyNkZFU2dKQVhLTEE?oc=5",
@@ -266,17 +261,17 @@
       "title": "Trading Day: US stocks end lower, dollar jumps as Federal Reserve kicks off Warsh era - Reuters"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMilwJBVV95cUxQRmszLVVxLVdlTEdKUGhmWlJUbnE4WTVWMFdwTVJScUU5Nks4b3pueVVfQWNkME45VWtOdXdBWTlERTNVRmxFWkdudFZfSF96bFlvNTJSZFRvMU43OXZTYlcxRU5iamstSmNhNVNHdGJVZ2k2YzJIVW1RWFBIZVREUlpUTHAzLS1OeC1FSlBUNV9kcVdSbGsyMkRDN2FPUzFSRDI5T09BWWdUVi1XXzJTN2VNczhWOXJacEJsSEU0TlJfVEFPbm9qOVlBbnFBTlhUTzZjN0JrSVI0YTd6ZkxOWlhTenYtR1VzNFRPRzdTY3FfdU5OODh3YUpmQVpTR19sMlpwaUgtTG5iZzJwSVRNb1JPT0F4WlHSAZwCQVVfeXFMTU1aMjY4bmtWbllDYkFfTkh2eTFvVWZLbzVmOHkxZjEtN1ZoZHVKZlVVeHMtN3RjSS0wQkdRcnpfRTBqX2RNbXZKQmhIek4zanJsMzFVZ21neE9LbXUyaEE3dVdBZFFDLWdqZ0YxSjdfZTlZYnRvQzI0RThxYkZsMmFYczRPLTEwTElsVUxKX2NZNUs2QTdkMWFMWUpHMlljWmUtY0oyUnlHVXZMQmRtUTZiWXNBSm5ZY3JON2JKRHB1cF9iNlJEU2RjN3hScmdZLVZzZF9ycGxFX3JjQl9SdXk3a2FOZ3A3Mkl4S2UxVE13TFpzZmtKYWxWRjJKTUszR1F4M1FyV3RwSWRaajRRbExTTjY1WGtMN19oYzI?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQcUlFaFNwNVNsa1RTZTFkTEhaMmhGLXBpZnZjeVAwaDBSSzRjZUFIMTQ3UTctckwtOXRvUDB6c0sxUGVlRWY5SUM5ZUllV1doQVhoLWkyd3IxdFdkRWJGY2J0ZGxyNmNwTEU3LVVBdDlXWVlxM2QtdGpHWmtBMGl0WkFWQzNucTVFTF9lelY3ZjdXNzFYeDhN?oc=5",
       "matched_terms": [],
-      "published": "2026-06-17T21:20:57+00:00",
+      "published": "2026-06-17T21:09:00+00:00",
       "sentiment_label": "neutral",
       "sentiment_score": 0.0,
-      "source": "Yakima Herald-Republic",
+      "source": "AP News",
       "themes": [
         "rates / inflation"
       ],
       "ticker": "MARKET",
-      "title": "US stocks sink on worries about a possible hike to interest rates this year by the Federal Reserve - Yakima Herald-Republic"
+      "title": "US stocks sink on worries about a possible hike to interest rates this year by the Federal Reserve - AP News"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNSjlraUlLQUtxMDVranBVQVhQVDl6bjRENDBndkxSX3dPdWJZX0Mzblp1dDl5STFUZmtnazJXYVh1M0NHR2dMQmVWNTVWdUpHMzcyZDV1cU5McDhwVEpwY0FJLXFlSkFvcEZWU0pNQzFJYkxHRkVpVThFM2hyejJaVWJ3Umc0VjlTRVlzZThqOGNQR253?oc=5",
@@ -495,46 +490,42 @@
       "title": "Intel Shares Surge After Trump Announces Apple Partnership - WSJ"
     }
   ],
-  "generated_at": "2026-06-21T06:17:50.214799+00:00",
+  "generated_at": "2026-06-21T06:27:16.847765+00:00",
   "market": "us",
   "mode": "real",
   "summary": {
     "ai_layer": {
-      "analysis": "{\n  \"sentiment\": \"Mixed with cautious optimism\",\n  \"risks\": [\n    \"Market volatility due to geopolitical tensions and Fed policy uncertainty\",\n    \"Potential for sharp swings in equities due to under-the-radar indicators\",\n    \"Sector-specific risks, particularly in high-growth tech and space-related stocks\"\n  ],\n  \"watchlist\": [\n    \"SPY (S&P 500 ETF)\",\n    \"Nasdaq\",\n    \"Russell 2000\",\n    \"SpaceX (SPCE)\",\n    \"Micron Technology (MU)\",\n    \"Oil-related sectors\",\n    \"U.S.-Iran geopolitical developments\"\n  ],\n  \"recommended_posture\": \"Maintain a balanced portfolio with a focus on defensive and diversified holdings. Consider reducing exposure to high-volatility sectors and maintaining liquidity to capitalize on potential market corrections. Monitor geopolitical developments and Fed policy cues closely.\"\n}",
+      "analysis": "{\n  \"sentiment\": \"Mixed with cautious optimism\",\n  \"risks\": [\n    \"Market volatility due to geopolitical tensions and under-the-radar indicators\",\n    \"Potential for sharp swings in equities due to shifting investor sentiment\",\n    \"Uncertainty around the durability of the U.S.-Iran peace deal\",\n    \"Sector-specific risks, particularly in tech and space-related industries\"\n  ],\n  \"watchlist\": [\n    \"Nasdaq\",\n    \"Russell 2000\",\n    \"SpaceX\",\n    \"U.S.-Iran peace deal developments\",\n    \"Semiconductor sector\",\n    \"Total U.S. Stock Market ETFs (Vanguard vs. iShares)\",\n    \"Under-the-radar market indicators\"\n  ],\n  \"recommended_posture\": \"Maintain a balanced portfolio with a focus on defensive and diversified holdings. Consider reducing exposure to high-volatility sectors such as aerospace and defense, while maintaining a long-term perspective on equities. Monitor geopolitical developments and market sentiment indicators closely for potential shifts in risk appetite.\"\n}",
       "model": "qwen3:8b",
       "note": "LLM output is a research overlay and should not override rule, risk, and price evidence by itself.",
-      "prompt_template": "You are a cautious portfolio research agent. Use the headlines, market-regime facts, and rule-based portfolio constraints to explain market sentiment and produce a conditional, non-execution investment posture. Do not promise returns. Return JSON with sentiment, risks, watchlist, and recommended posture.\n\nBenchmark: SPY\nRule engine posture: balanced\nNews score: 0.078\nHeadlines: ['Stock market today: Dow, S&P 500, Nasdaq rally as Iran deal optimism offsets Fed hike worries - Yahoo Finance', \"Stock Market Today: Nasdaq, Russell 2000 Pace Rebound; SpaceX Slumps 24% Off Its Peak - Investor's Business Daily\", 'Stock Market News, June 18, 2026: U.S. Stocks Close Week on a Strong Note - WSJ', 'Global stock markets close lower on Friday as investors assess durability of U.S.-Iran peace deal - CNBC', 'Wall St Week Ahead Investors see Micron earnings as pulse check of AI rally momentum - Reuters', 'Which Total U.S. Stock Market ETF Is Better: Vanguard or iShares? - The Motley Fool', 'Stocks Join Bonds Higher as US-Iran Deal Sinks Oil: Markets Wrap - Bloomberg.com', 'Is the stock market open or closed on Juneteenth 2026? See schedule - USA Today', \"An under-the-radar indicator is signaling that stocks are headed for 'violent' swings, Stifel says - Business Insider\", \"Stock Market Forecast For Next Six Months: Why More Gains May Lie Ahead - Investor's Business Daily\"]",
+      "prompt_template": "You are a cautious portfolio research agent. Use the headlines, market-regime facts, and rule-based portfolio constraints to explain market sentiment and produce a conditional, non-execution investment posture. Do not promise returns. Return JSON with sentiment, risks, watchlist, and recommended posture.\n\nBenchmark: SPY\nRule engine posture: balanced\nNews score: 0.056\nHeadlines: [\"Stock Market Today: Nasdaq, Russell 2000 Pace Rebound; SpaceX Slumps 24% Off Its Peak - Investor's Business Daily\", 'Stock Market News, June 18, 2026: U.S. Stocks Close Week on a Strong Note - WSJ', 'Global stock markets close lower on Friday as investors assess durability of U.S.-Iran peace deal - CNBC', \"Trump's Iran deal is getting major blowback from everyone except the markets - Yahoo Finance\", 'Wall St indexes advance with boost from chips, Iran optimism - Reuters', 'Which Total U.S. Stock Market ETF Is Better: Vanguard or iShares? - The Motley Fool', 'Is the stock market open or closed on Juneteenth 2026? See schedule - USA Today', 'Stock Market News, June 18, 2026: Dow, S&P 500 and Nasdaq post weekly gains for second week in a row, stocks climb after U.S. and Iran sign initial peace deal - MarketWatch', \"An under-the-radar indicator is signaling that stocks are headed for 'violent' swings, Stifel says - Business Insider\", \"Stock Market Forecast For Next Six Months: Why More Gains May Lie Ahead - Investor's Business Daily\"]",
       "provider": "ollama",
       "status": "llm_generated"
     },
     "article_count": 36,
-    "confidence": 0.8116666666666668,
+    "confidence": 0.8083333333333333,
     "forecast_bias": "neutral",
     "investment_posture": "balanced",
     "label": "neutral",
     "negative_count": 2,
-    "neutral_count": 25,
-    "overall_score": 0.07777777777777778,
-    "positive_count": 9,
+    "neutral_count": 26,
+    "overall_score": 0.05555555555555555,
+    "positive_count": 8,
     "rationale": "News and price evidence are mixed or not strong enough for a directional overlay.",
     "recommended_action": "follow target weights and rule-based trims/adds; do not override price evidence with headlines alone",
     "source_mode": "rss",
     "top_themes": [
       {
-        "count": 25,
+        "count": 27,
         "theme": "general market"
       },
       {
-        "count": 7,
+        "count": 6,
         "theme": "rates / inflation"
       },
       {
-        "count": 4,
+        "count": 3,
         "theme": "earnings"
-      },
-      {
-        "count": 1,
-        "theme": "AI / semiconductors"
       },
       {
         "count": 1,
