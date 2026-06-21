@@ -24,11 +24,18 @@ on:
         options:
           - ollama
           - openai_compatible
+      deploy_to_netlify:
+        description: "Publish this run to Netlify production. Leave false for compute-only refreshes."
+        default: false
+        required: true
+        type: boolean
   schedule:
     # US pre-open sentiment refresh: 08:30 ET during daylight saving time.
     - cron: "30 12 * * 1-5"
     # US post-close data refresh: after regular close, with room for Yahoo/yfinance data availability.
     - cron: "30 22 * * 1-5"
+    # Weekly production publish after Friday post-close refresh. Costs 15 Netlify credits when successful.
+    - cron: "30 23 * * 5"
 
 permissions:
   contents: write
@@ -138,14 +145,37 @@ jobs:
           git push
           "changed=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
 
+      - name: Decide Netlify deploy
+        id: deploy_policy
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          EVENT_SCHEDULE: ${{ github.event.schedule }}
+          MANUAL_DEPLOY: ${{ inputs.deploy_to_netlify || false }}
+        run: |
+          $shouldDeploy = "false"
+          $reason = "daily compute-only refresh"
+
+          if ($env:EVENT_NAME -eq "workflow_dispatch" -and $env:MANUAL_DEPLOY -eq "true") {
+            $shouldDeploy = "true"
+            $reason = "manual production deploy requested"
+          } elseif ($env:EVENT_NAME -eq "schedule" -and $env:EVENT_SCHEDULE -eq "30 23 * * 5") {
+            $shouldDeploy = "true"
+            $reason = "weekly Friday production publish"
+          }
+
+          "should_deploy=$shouldDeploy" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          "reason=$reason" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          echo "Netlify deploy policy: $shouldDeploy ($reason)"
+
       - name: Deploy to Netlify
-        if: ${{ (steps.commit_snapshot.outputs.changed == 'true' || github.event_name == 'workflow_dispatch') && env.NETLIFY_AUTH_TOKEN != '' && env.NETLIFY_SITE_ID != '' }}
+        if: ${{ steps.deploy_policy.outputs.should_deploy == 'true' && env.NETLIFY_AUTH_TOKEN != '' && env.NETLIFY_SITE_ID != '' }}
         run: npx netlify deploy --prod --site "$env:NETLIFY_SITE_ID" --auth "$env:NETLIFY_AUTH_TOKEN"
 
       - name: Report skipped Netlify deploy
-        if: ${{ (steps.commit_snapshot.outputs.changed != 'true' && github.event_name != 'workflow_dispatch') || env.NETLIFY_AUTH_TOKEN == '' || env.NETLIFY_SITE_ID == '' }}
+        if: ${{ steps.deploy_policy.outputs.should_deploy != 'true' || env.NETLIFY_AUTH_TOKEN == '' || env.NETLIFY_SITE_ID == '' }}
         run: |
           echo "Netlify deploy skipped."
           echo "changed=${{ steps.commit_snapshot.outputs.changed }}"
+          echo "policy=${{ steps.deploy_policy.outputs.reason }}"
           echo "has_token=${{ env.NETLIFY_AUTH_TOKEN != '' }}"
           echo "has_site_id=${{ env.NETLIFY_SITE_ID != '' }}"

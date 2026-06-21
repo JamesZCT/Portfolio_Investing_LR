@@ -11,6 +11,11 @@ on:
         options:
           - real
           - sandbox
+      deploy_to_netlify:
+        description: "Publish this run to Netlify production. Leave false for compute-only refreshes."
+        default: false
+        required: true
+        type: boolean
 
 permissions:
   contents: write
@@ -85,13 +90,14 @@ jobs:
           echo "changed=true" >> "$GITHUB_OUTPUT"
 
       - name: Deploy to Netlify
-        if: ${{ (steps.commit_snapshot.outputs.changed == 'true' || github.event_name == 'workflow_dispatch') && env.NETLIFY_AUTH_TOKEN != '' && env.NETLIFY_SITE_ID != '' }}
+        if: ${{ inputs.deploy_to_netlify == true && env.NETLIFY_AUTH_TOKEN != '' && env.NETLIFY_SITE_ID != '' }}
         run: npx netlify deploy --prod --site "$NETLIFY_SITE_ID" --auth "$NETLIFY_AUTH_TOKEN"
 
       - name: Report skipped Netlify deploy
-        if: ${{ (steps.commit_snapshot.outputs.changed != 'true' && github.event_name != 'workflow_dispatch') || env.NETLIFY_AUTH_TOKEN == '' || env.NETLIFY_SITE_ID == '' }}
+        if: ${{ inputs.deploy_to_netlify != true || env.NETLIFY_AUTH_TOKEN == '' || env.NETLIFY_SITE_ID == '' }}
         run: |
           echo "Netlify deploy skipped."
           echo "changed=${{ steps.commit_snapshot.outputs.changed }}"
+          echo "manual_deploy_requested=${{ inputs.deploy_to_netlify == true }}"
           echo "has_token=${{ env.NETLIFY_AUTH_TOKEN != '' }}"
           echo "has_site_id=${{ env.NETLIFY_SITE_ID != '' }}"
