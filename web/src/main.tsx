@@ -378,6 +378,7 @@ function MarketTruthBanner({
   quotes: LatestQuote[];
 }) {
   const quoteSource = quotes[0]?.source ?? "snapshot/API";
+  const refreshedAt = dashboard.snapshot?.generated_at ? formatDateTime(dashboard.snapshot.generated_at) : "unknown";
   return (
     <section className="truth-banner">
       <div>
@@ -387,7 +388,7 @@ function MarketTruthBanner({
       <div>
         <strong>Market data is real</strong>
         <span>
-          {marketInfo.dataTruth} Latest quote source: {quoteSource}; price date: {dashboard.price_as_of ?? "unknown"}.
+          {marketInfo.dataTruth} Latest quote source: {quoteSource}; market price date: {dashboard.price_as_of ?? "unknown"}; snapshot refreshed: {refreshedAt}.
         </span>
       </div>
       <div>
@@ -396,6 +397,21 @@ function MarketTruthBanner({
       </div>
     </section>
   );
+}
+
+function formatDateTime(value: string) {
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) {
+    return value;
+  }
+  return date.toLocaleString(undefined, {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    timeZoneName: "short"
+  });
 }
 
 function MetricCard({ icon, label, value, detail }: { icon: React.ReactNode; label: string; value: string; detail: string }) {

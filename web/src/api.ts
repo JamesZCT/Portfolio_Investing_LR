@@ -49,6 +49,13 @@ export type DashboardPayload = {
   mode: string;
   lookback_days: number;
   price_as_of: string | null;
+  snapshot?: {
+    generated_at?: string;
+    config_name?: string;
+    is_example_config?: boolean;
+    mode?: string;
+    lookback_days?: number;
+  };
   market_regime: MarketRegime;
   signals: SectorSignal[];
   suggestions: Suggestion[];

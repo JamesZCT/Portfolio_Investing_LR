@@ -25,6 +25,9 @@ on:
           - ollama
           - openai_compatible
   schedule:
+    # US pre-open sentiment refresh: 08:30 ET during daylight saving time.
+    - cron: "30 12 * * 1-5"
+    # US post-close data refresh: after regular close, with room for Yahoo/yfinance data availability.
     - cron: "30 22 * * 1-5"
 
 permissions:

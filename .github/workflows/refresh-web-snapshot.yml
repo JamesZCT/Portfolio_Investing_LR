@@ -11,8 +11,6 @@ on:
         options:
           - real
           - sandbox
-  schedule:
-    - cron: "15 22 * * 1-5"
 
 permissions:
   contents: write

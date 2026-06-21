@@ -4,6 +4,7 @@ import argparse
 import json
 from pathlib import Path
 from typing import Any
+from datetime import datetime, timezone
 
 from portfolio_agent.config import load_config
 from portfolio_agent.data import fetch_ohlc, synthesize_ohlc_from_close
@@ -156,6 +157,7 @@ def _snapshot_metadata(config_path: Path, mode: str, lookback_days: int) -> dict
     config_name = config_path.name
     is_example = config_name == "example_config.yaml"
     return {
+        "generated_at": datetime.now(timezone.utc).isoformat(),
         "config_name": config_name,
         "is_example_config": is_example,
         "mode": mode,
