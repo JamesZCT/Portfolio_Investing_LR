@@ -235,6 +235,7 @@ Keep personal `config.yaml` data private. If you generate snapshots from your re
 The repository includes:
 - `.github/workflows/ci.yml`: runs Python compile checks, unit tests, API sandbox smoke tests, snapshot export, and frontend build on push/PR.
 - `.github/workflows/refresh-web-snapshot.yml`: refreshes `web/public/data/*.json` on a market-day schedule or manual trigger.
+- `.github/workflows/refresh-web-snapshot-local-llm.yml`: refreshes snapshots on a self-hosted `local-llm` runner and enables Ollama/OpenAI-compatible sentiment only when the local model health check passes.
 - `.github/workflows/daily-portfolio-agent.yml`: runs the research agent and uploads report artifacts.
 
 Required private repository secrets for hands-free deploys:
@@ -275,7 +276,9 @@ Optional LLM overlay:
 
 If the LLM call is unavailable, the system falls back to the deterministic news sentiment readout.
 
-See `docs/local_llm_deployment.md` for Mac local, Windows/Linux NVIDIA GPU, and cloud deployment routes.
+For an NVIDIA PC workflow, install a GitHub self-hosted runner with the `windows` and `local-llm` labels and run `Refresh Web Snapshot Local LLM`. That workflow uses `scripts/check_local_llm.py` before export, so Netlify receives generated JSON results without hosting or calling the model itself.
+
+See `docs/local_llm_deployment.md` for Mac local, Windows/Linux NVIDIA GPU, and cloud deployment routes. See `docs/windows_nvidia_local_llm_setup.md` for the detailed Windows 3090 Ti / 3060 Ti setup runbook.
 
 ## Market profiles
 

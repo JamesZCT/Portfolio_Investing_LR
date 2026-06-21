@@ -34,6 +34,7 @@ Use these variables when running `scripts/export_web_snapshot.py`.
 | `LLM_SENTIMENT_TIMEOUT_SECONDS` | `45` | Hard timeout for one sentiment call. |
 | `LLM_SENTIMENT_CONTEXT_TOKENS` | `4096` | Ollama context window budget. |
 | `LLM_SENTIMENT_MAX_TOKENS` | `700` | Maximum generated tokens for the sentiment overlay. |
+| `LLM_SENTIMENT_THINK` | `false` | Ollama thinking-mode toggle. Keep false for dashboard snapshots so reasoning models return final summary text quickly. |
 
 ## Recommended Local Mac Route
 
@@ -71,6 +72,51 @@ Guardrails:
 ## Windows or Linux NVIDIA Route
 
 This is the likely best future route for a 3090 Ti or 3060 Ti machine.
+
+### Recommended: Self-Hosted GitHub Actions Runner
+
+Use this route when the website should refresh automatically but the LLM should run on your own GPU machine, not inside Netlify or GitHub-hosted runners.
+
+```text
+NVIDIA PC
+  - GitHub self-hosted runner with the label local-llm
+  - Ollama or vLLM
+  - scheduled snapshot export with LLM analysis
+      |
+commit web/public/data/*.json
+      |
+GitHub Actions deploys the static Netlify site
+```
+
+Setup outline:
+
+1. Install the GitHub self-hosted runner on the GPU host and add `windows`, `local-llm`, and optionally `nvidia` labels.
+2. Install Python, Node, Git, and Git Bash on Windows hosts.
+3. Install Ollama, then pull a model:
+
+```bash
+ollama pull qwen3:8b
+```
+
+4. Keep Ollama listening locally at `http://127.0.0.1:11434`.
+5. Run the `Refresh Web Snapshot Local LLM` workflow manually once from GitHub Actions.
+
+The workflow file is `.github/workflows/refresh-web-snapshot-local-llm.yml`. It runs on `[self-hosted, windows, local-llm]`, checks the model with `scripts/check_local_llm.py`, and enables `LLM_SENTIMENT_ENABLED=true` only when the endpoint and model are ready. If the check fails, snapshot generation still succeeds with the deterministic headline sentiment layer.
+
+For the full Windows-first setup, see `docs/windows_nvidia_local_llm_setup.md`.
+
+Useful local checks:
+
+```bash
+python scripts/check_local_llm.py --provider ollama --model qwen3:8b
+
+LLM_SENTIMENT_ENABLED=true \
+LLM_SENTIMENT_PROVIDER=ollama \
+LLM_SENTIMENT_MODEL=qwen3:8b \
+python scripts/export_web_snapshot.py --config config.yaml --out-dir web/public/data/us --mode real --lookback-days 900
+```
+
+For a 3090 Ti, `qwen3:8b` is the conservative first model. Try `qwen3:14b` after the full refresh workflow is stable.
 
 ### Option A: Ollama on the GPU Host
 
@@ -164,7 +210,8 @@ cp web/public/data/us/*.json web/public/data/
 ```
 
 6. Verify `web/public/data/us/sentiment.json` and `web/public/data/hk/sentiment.json`.
-7. Deploy through the GitHub Actions `Refresh Web Snapshot` workflow.
+7. For local LLM automation, verify `scripts/check_local_llm.py --provider ollama --model qwen3:8b`.
+8. Deploy through either `Refresh Web Snapshot` or `Refresh Web Snapshot Local LLM`.
 
 ## Future Enhancements
 

@@ -443,6 +443,7 @@ def _call_ollama_model(prompt: str, model: str) -> str | None:
     payload = {
         "model": model,
         "stream": False,
+        "think": os.getenv("LLM_SENTIMENT_THINK", "false").lower() in {"1", "true", "yes"},
         "messages": [
             {
                 "role": "system",
