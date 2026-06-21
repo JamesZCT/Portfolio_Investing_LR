@@ -59,6 +59,16 @@ type MarketProfileInfo = {
   instruments: Record<string, string>;
 };
 
+type ModelPortfolio = {
+  id: string;
+  name: string;
+  risk: string;
+  coverage: string;
+  description: string;
+  keywords: string[];
+  weights: Record<string, number>;
+};
+
 const MARKET_INFO: Record<MarketProfile, MarketProfileInfo> = {
   us: {
     label: "US Stocks",
@@ -75,9 +85,14 @@ const MARKET_INFO: Record<MarketProfile, MarketProfileInfo> = {
       JPM: "JPMorgan Chase",
       MSFT: "Microsoft",
       NVDA: "NVIDIA",
+      BND: "Vanguard Total Bond Market ETF",
+      QQQ: "Invesco QQQ Trust",
       SPY: "S&P 500 ETF",
+      SGOV: "0-3 Month Treasury Bill ETF",
       UNH: "UnitedHealth",
       V: "Visa",
+      VTI: "Vanguard Total Stock Market ETF",
+      VXUS: "Vanguard Total International Stock ETF",
       XOM: "Exxon Mobil",
       CASH: "Cash reserve",
       XLB: "Materials Select Sector SPDR",
@@ -116,6 +131,101 @@ const MARKET_INFO: Record<MarketProfile, MarketProfileInfo> = {
     }
   }
 };
+
+const MODEL_PORTFOLIOS: Record<MarketProfile, ModelPortfolio[]> = {
+  us: [
+    {
+      id: "total-us",
+      name: "Total US Market",
+      risk: "Market beta",
+      coverage: "US all-cap stocks",
+      description: "Broad US equity baseline, useful as the practical default before adding active views.",
+      keywords: ["US", "broad", "index-like", "equity"],
+      weights: { VTI: 1 }
+    },
+    {
+      id: "sp500-core",
+      name: "S&P 500 Core",
+      risk: "Market beta",
+      coverage: "US large cap",
+      description: "Large-company US benchmark exposure with less single-stock decision risk.",
+      keywords: ["US", "large-cap", "S&P 500", "simple"],
+      weights: { SPY: 1 }
+    },
+    {
+      id: "balanced-growth",
+      name: "Balanced Growth",
+      risk: "Moderate",
+      coverage: "US, international, bonds",
+      description: "A steadier research starting point with US equity as the core and ballast from bonds and cash.",
+      keywords: ["US", "international", "bonds", "cash"],
+      weights: { VTI: 0.55, QQQ: 0.15, VXUS: 0.15, BND: 0.1, CASH: 0.05 }
+    },
+    {
+      id: "growth-tech",
+      name: "Growth Tech Tilt",
+      risk: "Aggressive",
+      coverage: "US growth, tech, light international",
+      description: "Keeps a broad US core but deliberately leans toward Nasdaq-style growth exposure.",
+      keywords: ["tech", "growth", "US", "higher volatility"],
+      weights: { VTI: 0.55, QQQ: 0.25, VXUS: 0.1, SGOV: 0.05, CASH: 0.05 }
+    },
+    {
+      id: "defensive",
+      name: "Defensive Allocator",
+      risk: "Lower volatility",
+      coverage: "US, international, bonds, cash",
+      description: "A more conservative sandbox for drawdown control and dry powder.",
+      keywords: ["defensive", "bonds", "cash", "lower drawdown"],
+      weights: { VTI: 0.35, QQQ: 0.05, VXUS: 0.15, BND: 0.35, CASH: 0.1 }
+    },
+    {
+      id: "core-satellite",
+      name: "Core + AI Leaders",
+      risk: "Aggressive",
+      coverage: "US index core plus selected mega-cap tech",
+      description: "A practical bridge between index investing and single-stock experimentation.",
+      keywords: ["US", "tech", "single stocks", "active tilt"],
+      weights: { VTI: 0.4, SPY: 0.15, QQQ: 0.15, AAPL: 0.05, MSFT: 0.05, NVDA: 0.05, AVGO: 0.03, VXUS: 0.07, CASH: 0.05 }
+    }
+  ],
+  hk: [
+    {
+      id: "hk-tracker",
+      name: "HK Tracker Core",
+      risk: "Market beta",
+      coverage: "Hong Kong index",
+      description: "Simple Hong Kong benchmark exposure through the tracker fund.",
+      keywords: ["HK", "index", "simple"],
+      weights: { "2800.HK": 1 }
+    },
+    {
+      id: "hk-balanced",
+      name: "HK Balanced Core",
+      risk: "Moderate",
+      coverage: "HK index, financials, internet, cash",
+      description: "Uses the tracker as the anchor with modest active exposure and a cash buffer.",
+      keywords: ["HK", "core", "cash", "active"],
+      weights: { "2800.HK": 0.55, "0700.HK": 0.15, "1299.HK": 0.1, "0005.HK": 0.1, CASH: 0.1 }
+    },
+    {
+      id: "hk-defensive",
+      name: "HK Defensive",
+      risk: "Lower volatility",
+      coverage: "HK index, bank, REIT, cash",
+      description: "A more defensive Hong Kong research mix with a larger cash reserve.",
+      keywords: ["HK", "defensive", "cash", "income"],
+      weights: { "2800.HK": 0.45, "0005.HK": 0.15, "0823.HK": 0.15, CASH: 0.25 }
+    }
+  ]
+};
+
+const US_SINGLE_STOCKS = new Set(["AAPL", "AVGO", "COST", "JNJ", "JPM", "MSFT", "NVDA", "UNH", "V", "XOM"]);
+const US_CORE_FUNDS = new Set(["SPY", "VTI", "QQQ"]);
+const TECH_TILT_TICKERS = new Set(["AAPL", "AVGO", "MSFT", "NVDA", "QQQ", "XLK"]);
+const INTERNATIONAL_TICKERS = new Set(["VXUS"]);
+const BOND_TICKERS = new Set(["BND"]);
+const CASH_TICKERS = new Set(["CASH", "SGOV"]);
 
 function App() {
   const [market, setMarket] = useState<MarketProfile>("us");
@@ -300,6 +410,12 @@ function App() {
             </Panel>
             <Panel title="Personalized Action Gap" icon={<Gauge size={18} />} className="wide-panel">
               <PersonalizedGapTable positions={researchPositions} rows={dashboard.recommended_distribution} market={market} />
+            </Panel>
+          </section>
+
+          <section className="portfolio-comparison-row">
+            <Panel title="Selected Portfolio vs Indexes" icon={<BarChart3 size={18} />} className="wide-panel">
+              <PortfolioComparison positions={researchPositions} targetWeights={dashboard.target_weights} market={market} />
             </Panel>
           </section>
 
@@ -794,9 +910,20 @@ function PortfolioEditor({
   defaultPositions: Record<string, number>;
   onChange: (positions: Record<string, number>) => void;
 }) {
-  const tickers = Object.keys({ ...defaultPositions, ...positions }).sort((a, b) => (a === "CASH" ? -1 : b === "CASH" ? 1 : a.localeCompare(b)));
+  const templates = MODEL_PORTFOLIOS[market];
+  const [templateId, setTemplateId] = useState(templates[0]?.id ?? "");
+  const selectedTemplate = templates.find((template) => template.id === templateId) ?? templates[0];
+  const templateTickers = Object.fromEntries(templates.flatMap((template) => Object.keys(template.weights)).map((ticker) => [ticker, 0]));
+  const tickers = Object.keys({ ...templateTickers, ...defaultPositions, ...positions }).sort((a, b) =>
+    a === "CASH" ? -1 : b === "CASH" ? 1 : a.localeCompare(b)
+  );
   const total = tickers.reduce((sum, ticker) => sum + (positions[ticker] ?? 0), 0);
   const normalized = normalizeWeights(positions);
+
+  useEffect(() => {
+    const nextTemplates = MODEL_PORTFOLIOS[market];
+    setTemplateId(nextTemplates[0]?.id ?? "");
+  }, [market]);
 
   function updateTicker(ticker: string, value: string) {
     const pct = Number(value);
@@ -806,6 +933,34 @@ function PortfolioEditor({
 
   return (
     <div className="portfolio-editor">
+      {selectedTemplate ? (
+        <div className="template-selector">
+          <label>
+            <span>Starting portfolio</span>
+            <select value={selectedTemplate.id} onChange={(event) => setTemplateId(event.target.value)}>
+              {templates.map((template) => (
+                <option key={template.id} value={template.id}>
+                  {template.name}
+                </option>
+              ))}
+            </select>
+          </label>
+          <button type="button" onClick={() => onChange(selectedTemplate.weights)}>
+            Use
+          </button>
+          <div className="template-summary">
+            <strong>{selectedTemplate.name}</strong>
+            <p>{selectedTemplate.description}</p>
+            <div className="keyword-list">
+              <span>{selectedTemplate.risk}</span>
+              <span>{selectedTemplate.coverage}</span>
+              {selectedTemplate.keywords.map((keyword) => (
+                <span key={keyword}>{keyword}</span>
+              ))}
+            </div>
+          </div>
+        </div>
+      ) : null}
       <div className="editor-actions">
         <span className={Math.abs(total - 1) <= 0.01 ? "total-ok" : "total-warn"}>Total {percent(total)}</span>
         <button type="button" onClick={() => onChange(normalized)}>
@@ -843,6 +998,98 @@ function PortfolioEditor({
             />
           </label>
         ))}
+      </div>
+    </div>
+  );
+}
+
+function PortfolioComparison({
+  positions,
+  targetWeights,
+  market
+}: {
+  positions: Record<string, number>;
+  targetWeights: Record<string, number>;
+  market: MarketProfile;
+}) {
+  const benchmarkRows: Array<{ id: string; name: string; risk: string; coverage: string; weights: Record<string, number> }> =
+    market === "us"
+      ? [
+          { id: "selected", name: "Selected Portfolio", risk: "Custom", coverage: "Your current editor weights", weights: positions },
+          { id: "vti", name: "Total US Market", risk: "Market beta", coverage: "US all-cap stocks", weights: { VTI: 1 } },
+          { id: "spy", name: "S&P 500", risk: "Market beta", coverage: "US large cap", weights: { SPY: 1 } },
+          { id: "qqq", name: "Nasdaq 100", risk: "Aggressive", coverage: "US growth and tech-heavy", weights: { QQQ: 1 } },
+          { id: "rule-target", name: "Current Rule Target", risk: "Rule model", coverage: "App target weights", weights: targetWeights }
+        ]
+      : [
+          { id: "selected", name: "Selected Portfolio", risk: "Custom", coverage: "Your current editor weights", weights: positions },
+          { id: "tracker", name: "HK Tracker", risk: "Market beta", coverage: "Hong Kong index", weights: { "2800.HK": 1 } },
+          { id: "rule-target", name: "Current Rule Target", risk: "Rule model", coverage: "App target weights", weights: targetWeights }
+        ];
+  const profiles = benchmarkRows.map((row) => ({ ...row, profile: portfolioProfile(row.weights, market) }));
+  const selected = profiles[0].profile;
+  const marketBaseline = profiles[1]?.profile ?? selected;
+  const equityLabel = market === "us" ? "US equity exposure" : "Local equity exposure";
+
+  return (
+    <div className="portfolio-comparison">
+      <div className="comparison-summary">
+        <div>
+          <span>{equityLabel}</span>
+          <strong>{percent(selected.usEquity)}</strong>
+          <small>{formatSignedPercent(selected.usEquity - marketBaseline.usEquity)} vs {profiles[1]?.name ?? "baseline"}</small>
+        </div>
+        <div>
+          <span>Tech and growth tilt</span>
+          <strong>{percent(selected.techTilt)}</strong>
+          <small>{formatSignedPercent(selected.techTilt - marketBaseline.techTilt)} vs {profiles[1]?.name ?? "baseline"}</small>
+        </div>
+        <div>
+          <span>Bonds and cash</span>
+          <strong>{percent(selected.defensive)}</strong>
+          <small>{formatSignedPercent(selected.defensive - marketBaseline.defensive)} vs {profiles[1]?.name ?? "baseline"}</small>
+        </div>
+        <div>
+          <span>Top five concentration</span>
+          <strong>{percent(selected.topFive)}</strong>
+          <small>Largest holding {selected.largestTicker ? `${selected.largestTicker} ${percent(selected.largestWeight)}` : "none"}</small>
+        </div>
+      </div>
+      <div className="table-wrap compact-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Portfolio</th>
+              <th>Risk / Coverage</th>
+              <th>{market === "us" ? "US Equity" : "Local Equity"}</th>
+              <th>Tech Tilt</th>
+              <th>International</th>
+              <th>Bonds + Cash</th>
+              <th>Top 5</th>
+              <th>Largest Holding</th>
+            </tr>
+          </thead>
+          <tbody>
+            {profiles.map((row) => (
+              <tr key={row.id}>
+                <td>
+                  <strong>{row.name}</strong>
+                  <span>{row.id === "selected" ? "active research mix" : "comparison baseline"}</span>
+                </td>
+                <td>
+                  <span className="badge neutral">{row.risk}</span>
+                  <span>{row.coverage}</span>
+                </td>
+                <td>{percent(row.profile.usEquity)}</td>
+                <td>{percent(row.profile.techTilt)}</td>
+                <td>{percent(row.profile.international)}</td>
+                <td>{percent(row.profile.defensive)}</td>
+                <td>{percent(row.profile.topFive)}</td>
+                <td>{row.profile.largestTicker ? `${row.profile.largestTicker} ${percent(row.profile.largestWeight)}` : "-"}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </div>
   );
@@ -1207,6 +1454,37 @@ function Row({ label, value }: { label: string; value: string }) {
 
 function EmptyState({ label }: { label: string }) {
   return <div className="empty-state">{label}</div>;
+}
+
+function portfolioProfile(weights: Record<string, number>, market: MarketProfile) {
+  const normalized = normalizeWeights(weights);
+  const entries = Object.entries(normalized)
+    .filter(([, weight]) => weight > 0)
+    .sort((a, b) => b[1] - a[1]);
+  const profile = {
+    usEquity: 0,
+    techTilt: 0,
+    international: 0,
+    defensive: 0,
+    topFive: entries.slice(0, 5).reduce((sum, [, weight]) => sum + weight, 0),
+    largestTicker: entries[0]?.[0] ?? "",
+    largestWeight: entries[0]?.[1] ?? 0
+  };
+
+  for (const [ticker, weight] of entries) {
+    if (TECH_TILT_TICKERS.has(ticker)) profile.techTilt += weight;
+    if (market === "us" && (INTERNATIONAL_TICKERS.has(ticker) || ticker.endsWith(".HK"))) profile.international += weight;
+    if (BOND_TICKERS.has(ticker) || CASH_TICKERS.has(ticker)) profile.defensive += weight;
+    if (market === "us" && (US_CORE_FUNDS.has(ticker) || US_SINGLE_STOCKS.has(ticker))) profile.usEquity += weight;
+    if (market === "hk" && ticker.endsWith(".HK")) profile.usEquity += weight;
+  }
+
+  return profile;
+}
+
+function formatSignedPercent(value: number) {
+  const sign = value >= 0 ? "+" : "";
+  return `${sign}${percent(value)}`;
 }
 
 function percent(value: number) {

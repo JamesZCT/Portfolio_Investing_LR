@@ -205,6 +205,10 @@ input,
   min-width: 0;
 }
 
+.portfolio-comparison-row {
+  margin-bottom: 14px;
+}
+
 .panel {
   min-height: 220px;
   padding: 15px;
@@ -604,6 +608,70 @@ code {
   gap: 12px;
 }
 
+.template-selector {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.75fr) auto minmax(280px, 1.6fr);
+  align-items: start;
+  gap: 10px;
+  border: 1px solid #e0e7ea;
+  border-radius: 7px;
+  background: #f8fafb;
+  padding: 10px;
+}
+
+.template-selector label {
+  display: grid;
+  gap: 5px;
+  color: #617079;
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.template-selector button {
+  min-width: 58px;
+  min-height: 38px;
+  border: 1px solid #1f6f5b;
+  border-radius: 7px;
+  background: #1f6f5b;
+  color: #fff;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.template-summary {
+  display: grid;
+  gap: 6px;
+}
+
+.template-summary strong {
+  color: #182126;
+  font-size: 0.92rem;
+}
+
+.template-summary p {
+  margin: 0;
+  color: #55646b;
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.keyword-list {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.keyword-list span {
+  min-height: 21px;
+  border: 1px solid #d8e2e6;
+  border-radius: 999px;
+  background: #fff;
+  color: #486068;
+  padding: 2px 8px;
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
 .editor-actions {
   display: flex;
   align-items: center;
@@ -671,6 +739,41 @@ code {
   width: 100%;
   height: 34px;
   padding: 0 8px;
+}
+
+.portfolio-comparison {
+  display: grid;
+  gap: 12px;
+}
+
+.comparison-summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.comparison-summary > div {
+  border: 1px solid #e0e7ea;
+  border-radius: 7px;
+  background: #f8fafb;
+  padding: 10px;
+}
+
+.comparison-summary span,
+.comparison-summary small {
+  display: block;
+  color: #66737a;
+  font-size: 0.72rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.comparison-summary strong {
+  display: block;
+  margin: 4px 0;
+  color: #182126;
+  font-size: 1.14rem;
+  line-height: 1.2;
 }
 
 .sentiment-panel {
@@ -959,7 +1062,12 @@ meter {
 
   .metric-grid,
   .dashboard-grid,
-  .conclusion-grid {
+  .conclusion-grid,
+  .comparison-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .template-selector {
     grid-template-columns: 1fr;
   }
 
