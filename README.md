@@ -186,8 +186,8 @@ CSV format requirements:
 
 2. GitHub Actions daily workflow
 - file: `.github/workflows/daily-portfolio-agent.yml`
-- schedule: daily at `13:30 UTC`
-- optional secret: `PORTFOLIO_CONFIG_YAML` (raw YAML content)
+- manual demo smoke run only
+- uses `example_config.yaml`
 - workflow outputs are uploaded as artifacts
 
 ## Netlify hosting
@@ -230,6 +230,8 @@ Netlify builds from `web/`, publishes `web/dist`, and sets `VITE_DATA_MODE=api` 
 
 Keep personal `config.yaml` data private. If you generate snapshots from your real portfolio, treat the generated `web/public/data/*.json` files as sensitive unless the repo and Netlify site are private.
 
+This public repository is demo-only. Do not wire personal holdings or brokerage exports into public scheduled workflows. Use a separate private repo or local-only config for your real portfolio.
+
 ## GitHub and CI/CD
 
 The repository includes:
@@ -243,7 +245,7 @@ Required private repository secrets for hands-free deploys:
 - `NETLIFY_SITE_ID`: Netlify site id for deployment.
 
 Optional private repository secrets:
-- `PORTFOLIO_CONFIG_YAML`: optional private portfolio config YAML. If absent, workflows use `example_config.yaml`.
+- `PORTFOLIO_CONFIG_YAML`: use this only in a private repo/fork. Public workflows in this repo intentionally use `example_config.yaml`.
 
 The current Netlify site id is:
 
@@ -257,12 +259,12 @@ The project source repository is:
 https://github.com/JamesZCT/Portfolio_Investing_LR
 ```
 
-The scheduled snapshot workflow commits refreshed market data to `main` and deploys the rebuilt frontend/functions through the Netlify CLI. Netlify Git builds are intentionally paused because this Free-plan private repo is blocked by Netlify's verified contributor policy; GitHub Actions direct deploy avoids that limitation once `NETLIFY_AUTH_TOKEN` is set.
+The scheduled snapshot workflow commits refreshed public demo market data to `main`. Netlify production deploys are intentionally limited to weekly or manual publishes to avoid Free-plan credit burn.
 
 Usage controls:
 - The hosted dashboard loads its default real-data view through `/api/bootstrap`, reducing startup function calls from several requests to one.
-- The refresh workflow deploys only when `web/public/data/*.json` changes.
-- The schedule runs once per weekday after market close instead of polling intraday.
+- The local refresh workflow updates data on the 3090 Ti runner but does not deploy to Netlify on every run.
+- Netlify production deploys happen weekly or when `deploy_to_netlify=true` is selected manually.
 - `/api/quotes` provides live quotes on demand, while heavier strategy and backtest data comes from refreshed snapshots.
 - News RSS is fetched during snapshot refresh, not on every page load.
 
@@ -279,6 +281,7 @@ If the LLM call is unavailable, the system falls back to the deterministic news 
 For an NVIDIA PC workflow, install a GitHub self-hosted runner with the `windows` and `local-llm` labels and run `Refresh Web Snapshot Local LLM`. That workflow uses `scripts/check_local_llm.py` before export, so Netlify receives generated JSON results without hosting or calling the model itself.
 
 See `docs/local_llm_deployment.md` for Mac local, Windows/Linux NVIDIA GPU, and cloud deployment routes. See `docs/windows_nvidia_local_llm_setup.md` for the detailed Windows 3090 Ti / 3060 Ti setup runbook.
+See `docs/public_private_split.md` for the public demo/private personal portfolio boundary.
 
 ## Market profiles
 

@@ -47,13 +47,8 @@ jobs:
 
       - name: Prepare config
         run: |
-          if [ -n "${{ secrets.PORTFOLIO_CONFIG_YAML }}" ]; then
-            printf '%s' "${{ secrets.PORTFOLIO_CONFIG_YAML }}" > config.yaml
-            echo "Using PORTFOLIO_CONFIG_YAML secret."
-          else
-            cp example_config.yaml config.yaml
-            echo "Using example_config.yaml."
-          fi
+          cp example_config.yaml config.yaml
+          echo "Using public demo example_config.yaml."
 
       - name: Export web snapshot
         run: |

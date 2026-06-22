@@ -74,16 +74,9 @@ jobs:
           .\.venv\Scripts\python.exe -m pip install -e .
 
       - name: Prepare config
-        env:
-          PORTFOLIO_CONFIG_YAML: ${{ secrets.PORTFOLIO_CONFIG_YAML }}
         run: |
-          if ($env:PORTFOLIO_CONFIG_YAML) {
-            Set-Content -Path config.yaml -Value $env:PORTFOLIO_CONFIG_YAML -NoNewline
-            echo "Using PORTFOLIO_CONFIG_YAML secret."
-          } else {
-            Copy-Item example_config.yaml config.yaml
-            echo "Using example_config.yaml."
-          }
+          Copy-Item example_config.yaml config.yaml
+          echo "Using public demo example_config.yaml."
 
       - name: Start Ollama if installed
         run: |

@@ -2,8 +2,9 @@ name: Daily Portfolio Agent
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "30 13 * * *"
+
+permissions:
+  contents: read
 
 jobs:
   test:
@@ -90,13 +91,8 @@ jobs:
 
       - name: Prepare config
         run: |
-          if [ -n "${{ secrets.PORTFOLIO_CONFIG_YAML }}" ]; then
-            printf '%s' "${{ secrets.PORTFOLIO_CONFIG_YAML }}" > config.yaml
-          elif [ -f config.yaml ]; then
-            echo "Using repository config.yaml"
-          else
-            cp example_config.yaml config.yaml
-          fi
+          cp example_config.yaml config.yaml
+          echo "Using public demo example_config.yaml."
 
       - name: Run daily agent
         run: |
