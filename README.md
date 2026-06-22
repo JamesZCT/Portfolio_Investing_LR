@@ -261,6 +261,16 @@ https://github.com/JamesZCT/Portfolio_Investing_LR
 
 The scheduled snapshot workflow commits refreshed public demo market data to `main`. Netlify production deploys are intentionally limited to weekly or manual publishes to avoid Free-plan credit burn.
 
+## Free static hosting
+
+The public demo is also designed to run as a pure static site on free static hosts:
+
+- Cloudflare Pages production: `https://portfolio-investing-lr.pages.dev`
+- GitHub Pages: built by `.github/workflows/deploy-github-pages.yml` from `web/dist`
+- Netlify: retained as a backup/manual production channel while credits are limited
+
+GitHub Pages uses `VITE_DATA_MODE=static`, so it reads the committed `web/public/data/*.json` snapshots directly and does not call Netlify Functions or any hosted LLM. When the self-hosted 3090 Ti refresh workflow commits new JSON to `main`, GitHub Pages republishes the updated static dashboard from that commit.
+
 Usage controls:
 - The hosted dashboard loads its default real-data view through `/api/bootstrap`, reducing startup function calls from several requests to one.
 - The local refresh workflow updates data on the 3090 Ti runner but does not deploy to Netlify on every run.

@@ -201,6 +201,7 @@ export type MarketProfile = "us" | "hk";
 
 const API_BASE = import.meta.env.VITE_API_BASE ?? "http://127.0.0.1:8000";
 const DATA_MODE = import.meta.env.VITE_DATA_MODE ?? "api";
+const APP_BASE = import.meta.env.BASE_URL ?? "/";
 
 export async function fetchDashboard(mode: string, lookbackDays: number, market: MarketProfile): Promise<DashboardPayload> {
   const params = new URLSearchParams({ mode, lookback_days: String(lookbackDays), market });
@@ -270,11 +271,19 @@ async function fetchJson<T>(apiUrl: string, snapshotUrl: string): Promise<T> {
 }
 
 async function fetchSnapshot<T>(snapshotUrl: string): Promise<T> {
-  const response = await fetch(snapshotUrl);
+  const response = await fetch(resolveSnapshotUrl(snapshotUrl));
   if (!response.ok) {
     throw new Error(await readError(response));
   }
   return response.json();
+}
+
+function resolveSnapshotUrl(snapshotUrl: string): string {
+  if (/^https?:\/\//.test(snapshotUrl)) {
+    return snapshotUrl;
+  }
+  const base = APP_BASE.endsWith("/") ? APP_BASE : `${APP_BASE}/`;
+  return `${base}${snapshotUrl.replace(/^\/+/, "")}`;
 }
 
 async function readError(response: Response): Promise<string> {
