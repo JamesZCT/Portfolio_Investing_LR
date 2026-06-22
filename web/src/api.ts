@@ -202,6 +202,7 @@ export type MarketProfile = "us" | "hk";
 const API_BASE = import.meta.env.VITE_API_BASE ?? "http://127.0.0.1:8000";
 const DATA_MODE = import.meta.env.VITE_DATA_MODE ?? "api";
 const APP_BASE = import.meta.env.BASE_URL ?? "/";
+export const IS_STATIC_DATA_MODE = DATA_MODE === "static";
 
 export async function fetchDashboard(mode: string, lookbackDays: number, market: MarketProfile): Promise<DashboardPayload> {
   const params = new URLSearchParams({ mode, lookback_days: String(lookbackDays), market });
@@ -251,7 +252,7 @@ export async function fetchBootstrap(market: MarketProfile): Promise<BootstrapPa
 }
 
 async function fetchJson<T>(apiUrl: string, snapshotUrl: string): Promise<T> {
-  if (DATA_MODE === "static") {
+  if (IS_STATIC_DATA_MODE) {
     return fetchSnapshot<T>(snapshotUrl);
   }
 

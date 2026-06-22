@@ -45,7 +45,8 @@ import {
   fetchOhlc,
   fetchRules,
   fetchSentiment,
-  fetchStrategyComparison
+  fetchStrategyComparison,
+  IS_STATIC_DATA_MODE
 } from "./api";
 import "./styles.css";
 
@@ -294,6 +295,7 @@ function App() {
   }
 
   async function tryBootstrap() {
+    if (IS_STATIC_DATA_MODE) return null;
     if (mode !== "real" || lookbackDays !== 900) return null;
     try {
       return await fetchBootstrap(market);
