@@ -1,19 +1,6 @@
 {
   "articles": [
     {
-      "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQanQ3QzhWaU1YYjc5Wmc1VEpkeTh4NW4zRmkxMXNWU1o3eDZvbFRPZFVwTVJLY3RLUGppRXZXcHMteVBQTGJHVmZBcDlJVjhjVEpkdWFfOExGWWUzZkdEdldHc1VqNHdYck95WDRYVF9palRoUU45ZW93WUUzSTFaWERHVl9wTkhzZUE?oc=5",
-      "matched_terms": [],
-      "published": "2026-07-10T14:37:11+00:00",
-      "sentiment_label": "neutral",
-      "sentiment_score": 0.0,
-      "source": "Yahoo Finance UK",
-      "themes": [
-        "China / policy"
-      ],
-      "ticker": "MARKET",
-      "title": "China approves fast-fashion giant Shein's Hong Kong listing bid - Yahoo Finance UK"
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQZ1U3WEVBYU1TOXdkb2h5RG1VWVpMVmlHWm0zeDFuQklodXBxRzQ0SjZXWTdUenVIXzY2N0I1aEJ3Z0pITFFpMVJuZEhZcmhwY2xOWWp6b2M5Wjc0d2RxNXpENVdxVURvTjhJcXRfY3h4RlA0V3hlVUdpWEozMmtUaXNkWTdFQdIBiwFBVV95cUxNU2ZsSWYwNWp1WGk0akxhNi1CeENqR2ltOVlick1VZ0hYSi16NWpXTEh0MUd0aVdyXzk5bGVXWV9Yc3BMSldDd0dVY0QtRTVjWE8xRGhZcHkxSW1qcGk0TUdRR3NsUmpDYXcxMjZ4cVVGcVF3NGpZa3h0ZXB4a2lsNnRiRzBNTFdhYlNB?oc=5",
       "matched_terms": [],
       "published": "2026-07-09T01:38:00+00:00",
@@ -32,12 +19,12 @@
       "published": "2026-07-10T09:56:40+00:00",
       "sentiment_label": "neutral",
       "sentiment_score": 0.0,
-      "source": "Bloomberg",
+      "source": "Bloomberg.com",
       "themes": [
         "China / policy"
       ],
       "ticker": "MARKET",
-      "title": "JPMorgan, Citi Bankers to Join Hong Kong Exchange Listing Panel - Bloomberg"
+      "title": "JPMorgan, Citi Bankers to Join Hong Kong Exchange Listing Panel - Bloomberg.com"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOZzU4NTZOTmd4Z0xIQmtsWDdFOUJEZFN1QU4wUWNBYjRNVGdvbEFtaDlwMnRkZVdkSmlOeENKYy1SdWU5WHNVcXQ0NEs3Y3hNekVoQm5zLU9FbFpDWURjTDhDcjJPdlBwNFdEaGpneEJ0X1VmSEkwbHBfQ0hLRGFZenpNLXgwUUVFUlMtdHhnbDhpM3VWd1d4WGhlWk00VEJGaGc?oc=5",
@@ -97,12 +84,25 @@
       "published": "2026-07-08T05:14:00+00:00",
       "sentiment_label": "neutral",
       "sentiment_score": 0.0,
-      "source": "Bloomberg",
+      "source": "Bloomberg.com",
       "themes": [
         "general market"
       ],
       "ticker": "MARKET",
-      "title": "Chinese Stocks in HK Jump Most in 14 Months as Tech Rallies - Bloomberg"
+      "title": "Chinese Stocks in HK Jump Most in 14 Months as Tech Rallies - Bloomberg.com"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPRUNNTVNVXzJTN3FSaDhQSU5FTzhEdldaaHdva194ZVgxM1AxWV90QmhJbmpzejMyQUxRUVBsZTFvVzU3NER3M1h3T2d6R1FpcjR0NkVsYkluMS01SW9vbVM5UE5oR3kwMXFNV0tuaGYxT2ljVVlmcGJqRjVXMDlhZTdPZ0hSS3hl?oc=5",
+      "matched_terms": [],
+      "published": "2026-07-10T19:22:53+00:00",
+      "sentiment_label": "neutral",
+      "sentiment_score": 0.0,
+      "source": "Reuters",
+      "themes": [
+        "China / policy"
+      ],
+      "ticker": "MARKET",
+      "title": "Shein finally wins China's approval for Hong Kong IPO, in third attempt to go public - Reuters"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOMHdyOVJ5VVJOTFZIbVlNYUNQRzdxOG1HSk14SUxIRlM4VTJJQ294QVVwNEFYMXg4ZGdxT3UybVhrMXZxV1RYTEZLMFRoZkpvcEstejFnNVREMUNidlB6OFBZUVlBMWxaSjJfRFNsdWlTSUpnblZIMURxYWFWNXhYS0I1T2huR0p1X2IyRQ?oc=5",
@@ -224,7 +224,7 @@
       "matched_terms": [
         "rally"
       ],
-      "published": "2026-07-10T07:01:21+00:00",
+      "published": "2026-07-10T13:01:21+00:00",
       "sentiment_label": "positive",
       "sentiment_score": 0.32,
       "source": "Finimize",
@@ -245,7 +245,7 @@
         "China / policy"
       ],
       "ticker": "MARKET",
-      "title": "Chinese tech firms, from Apple suppliers to OpenAI rivals, raise $17 billion in Hong Kong - Reuters"
+      "title": "Chinese tech firms, from Apple suppliers to OpenAI rivals, raise $20 billion in Hong Kong - Reuters"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPZFlVRUhjVUFuNTQzN2lydV9oRk1GcDU0VnMzQ2l5TVZFWjYtdjAwNzlIOVRPMmRpQW9ONHo0bHVLS3lLMVZ6MU9PdkZ6U0ppcld2ZmRLaWg2OGRwTWp1VktBTFE5cUdZbEVBMGJ0VFZBR08xcnBLaEQ3NE9hMU1rOXFMZndUNHppek1ORG9xbjRqTmRSaWRRdVlZQ0NFc1NmNmJJTFBTR1NMUGxUTVNpeVY5aGk1dGpEZFpVYjdXSmJiaUVxYXFEdkpneGxPSDJPUDRSU3gwVHo5a0dicnBTZ2pR?oc=5",
@@ -302,19 +302,6 @@
       "title": "Record Demand, Recurring Pitfalls: The Truth About Single-Stock Leveraged and Inverse Products - Morningstar"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPYTVrNnpZbU41dmw5VWYwQ1dmS1VDVm9vWjFNVzgtOVVyTFN5SWhzNnM1R0FRTjNSZ1gwLW9LZTNkOTBEU1NReWxQX1JlSlk4a1JNMU5PeDBMb21CUm95X0N6M0ZPSWQ1d25SUkxDbkY5VUotaGRJc1Z3a1JYV0liNEtoM09oV2JVSHVNaUxTM1dFSXZxVm94TFBoY1htdWxt?oc=5",
-      "matched_terms": [],
-      "published": "2026-07-06T12:03:24+00:00",
-      "sentiment_label": "neutral",
-      "sentiment_score": 0.0,
-      "source": "\u5bcc\u9014\u725b\u725b",
-      "themes": [
-        "China / policy"
-      ],
-      "ticker": "2800.HK",
-      "title": "Fund Flows | Southbound capital bought HK$20.5 billion worth of Hong Kong stocks, significantly increasing its position in Tencent by nearly HK$2.5 billion - \u5bcc\u9014\u725b\u725b"
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQTzB4cHZySEpxU2NaeEN3QXNwZGRROFcwNTNVajFEdjVKMTJLLVBWR3FsZFI1VW0yN0l6N3JIcE0xM1h1YTJzZXRHWWJjSFJUNjJwWmZablRBR2NBLTU1RW9KTm5LUHdLVmJ4Y05zUGhUOUJQbF9wVUtIUkVmZ2VEYkNhU1NoQktIdVVRbW5GRUt0M1NQMHc?oc=5",
       "matched_terms": [],
       "published": "2026-06-01T15:17:14+00:00",
@@ -328,17 +315,34 @@
       "title": "How ETF Issuers Compete in Hong Kong\u2019s Market - Nasdaq"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMirANBVV95cUxPVFhOeFFkaWtjcl8yOU5sYk5nUkFjZDFYM25NRnVvQnRQRmlPYm40MHR3TjNPcjdRU19pdl9Fd0MxbzZmR2pGQTVlQkItQXUxa09nckoya2RaWjdPMWtzVlowTWt6cnV2MnRXaDF2SmZ5U3JXWTFVMnBZeWJyZTM4elVSUGZnUGZiNzdlQ2VaRl9pNl9seFl0VkNiNTBhUzZfdmVqbjJHNkwtdlJwMU1NeHluM2ctOXRRNXN4b2paOE1FX3ZxbFVybV9xcXZPY25BcDdaZXVuTTdnZHdRMmVwOVhyaEVQNUNZaFVRYWpoVlFEQ1YzVzQwVTlsc0JZUTkycEtPU01YcklNSGNzS2YwQU5vRXMyN2FDWTc1Slp1UVg3TmZ3aHNkaExVYUVNQXNtSEV6RXI4bjdnSVVUaXdxS0VhbVZjNk15ZUhkY3ludVB0ejRab3BLQW1mLXNqNHBQd3lKR0RTVms5dWozUmEtdHE1Z3g2b2V4d2JBUzI5aXhmX1g5NUdzdjNoVC0xeEVDRVNYQXNMaDQySjFDSDVrUU12Z2xvSVdSRVlBbw?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPYTVrNnpZbU41dmw5VWYwQ1dmS1VDVm9vWjFNVzgtOVVyTFN5SWhzNnM1R0FRTjNSZ1gwLW9LZTNkOTBEU1NReWxQX1JlSlk4a1JNMU5PeDBMb21CUm95X0N6M0ZPSWQ1d25SUkxDbkY5VUotaGRJc1Z3a1JYV0liNEtoM09oV2JVSHVNaUxTM1dFSXZxVm94TFBoY1htdWxt?oc=5",
       "matched_terms": [],
-      "published": "2026-06-24T11:35:17+00:00",
+      "published": "2026-07-06T12:03:24+00:00",
       "sentiment_label": "neutral",
       "sentiment_score": 0.0,
-      "source": "Moomoo",
+      "source": "\u5bcc\u9014\u725b\u725b",
       "themes": [
         "China / policy"
       ],
       "ticker": "2800.HK",
-      "title": "TRACKER FUND OF HONG KONG (02800) Latest Announcement & Press Release - Moomoo"
+      "title": "Fund Flows | Southbound capital bought HK$20.5 billion worth of Hong Kong stocks, significantly increasing its position in Tencent by nearly HK$2.5 billion - \u5bcc\u9014\u725b\u725b"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQMTNfVFRVbU9nSjc1Sjg3S0J0d0FCSXQwdFRHcFIwSnlnYThnR1ZEVkdXdFB4RlBGdFJ2NEVnLXM2c3AtQUlMeFlrV1hCZXZIUmtXVV9BajZCMXJFMTZnSy1kZEljU09Ba1NfRUY0VUwtNXJ6Si1xeTRfZXk1eWN4Wjl6NTg4SFhBTzZNYmtvTFlYWVBxTU9BQ0tRWHRxSXZRTDVidXc1Tkh6WFMwdVgwaA?oc=5",
+      "matched_terms": [
+        "ai"
+      ],
+      "published": "2026-06-29T09:51:05+00:00",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.16,
+      "source": "Moomoo",
+      "themes": [
+        "AI / semiconductors",
+        "China / policy",
+        "consumer demand"
+      ],
+      "ticker": "2800.HK",
+      "title": "Southbound Capital Trends | Southbound capital recorded net sales of HK$10.339 billion, with continued buying of AI hardware stocks and across-the-board selling of the Tracker Fund of Hong Kong (02800) totaling over HK$7.3 billion for the day. - Moomoo"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQb0JzOFV1UVNUTkpDQk14cUpFWGtpOUxXLVRJUzEtaHlfWWJJTEpGOGpVS3BUYTdPVUFiTDAzMG4talJJMGtEajF0OXFCeDJLbjl0WHNCUmxVa3dVWHZqT2RJQWk1cDZPT3AyYXNpa21qTTJDaUVxRlNqODFyQVhkVWJnd2dzc21RMTlWM1FwU1gtcnpzSDE3c0lET284dXpaaXFHMVVlZ1BTbnI1SDJscQ?oc=5",
@@ -352,21 +356,6 @@
       ],
       "ticker": "2800.HK",
       "title": "E Fund (HK) HKEX Tech 100 Index ETF (3456) Lists Today - TradingView"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE11b0lvdm00TXIzQV9GZ0ZDTExSVDRKdlpBSUJZWF95R2V1ODdLVktDX2FCU0RXdm1lVDF1aXNmX0NhZFFPcEJpMUJqNlExRUMyNk9RaVhLRmpqRktkVzBaMk9iMWJYSEhCY0k3ck1PeTF3QnBYYnc?oc=5",
-      "matched_terms": [
-        "ai"
-      ],
-      "published": "2026-07-07T10:36:00+00:00",
-      "sentiment_label": "positive",
-      "sentiment_score": 0.16,
-      "source": "finance.biggo.com",
-      "themes": [
-        "AI / semiconductors"
-      ],
-      "ticker": "3690.HK",
-      "title": "Southbound Funds Pour HK$497 Million into Tencent and Meituan; Hang Seng Tech Index Rebounds as Capital Rotates from AI Hardware to Internet Stocks - finance.biggo.com"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNV1hvTUpUQU84RWpqZ0s3SVJPN0VVd0RuQ3Q3UGFnSVpkY1Rrdk9YbnZ2LWdDa1Rxc1ZLMnIwSV9EN2pCWnBLMEU1YTNiWFAybWxDZGN1UzU2WERUbkJQS3RkUUF0eFpCVnZHR3A2eHZFQ2NNd0JsRmVGaDkwZ01PQ05nd0RnWTd2YmN5eFVZVU5qanZHaFpBRVBfdkJtT2JwZ0s1Zk8zNW9JTjFHZGlqeFN5Z3V1RkNJNHNrbkN0R29CUzhZZjVvWHNJRjlrRFNB?oc=5",
@@ -393,6 +382,19 @@
       ],
       "ticker": "2800.HK",
       "title": "SK Hynix ETF\u2019s assets soar to US$17 billion, biggest in Hong Kong - The Business Times"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMirANBVV95cUxPVFhOeFFkaWtjcl8yOU5sYk5nUkFjZDFYM25NRnVvQnRQRmlPYm40MHR3TjNPcjdRU19pdl9Fd0MxbzZmR2pGQTVlQkItQXUxa09nckoya2RaWjdPMWtzVlowTWt6cnV2MnRXaDF2SmZ5U3JXWTFVMnBZeWJyZTM4elVSUGZnUGZiNzdlQ2VaRl9pNl9seFl0VkNiNTBhUzZfdmVqbjJHNkwtdlJwMU1NeHluM2ctOXRRNXN4b2paOE1FX3ZxbFVybV9xcXZPY25BcDdaZXVuTTdnZHdRMmVwOVhyaEVQNUNZaFVRYWpoVlFEQ1YzVzQwVTlsc0JZUTkycEtPU01YcklNSGNzS2YwQU5vRXMyN2FDWTc1Slp1UVg3TmZ3aHNkaExVYUVNQXNtSEV6RXI4bjdnSVVUaXdxS0VhbVZjNk15ZUhkY3ludVB0ejRab3BLQW1mLXNqNHBQd3lKR0RTVms5dWozUmEtdHE1Z3g2b2V4d2JBUzI5aXhmX1g5NUdzdjNoVC0xeEVDRVNYQXNMaDQySjFDSDVrUU12Z2xvSVdSRVlBbw?oc=5",
+      "matched_terms": [],
+      "published": "2026-06-24T11:35:17+00:00",
+      "sentiment_label": "neutral",
+      "sentiment_score": 0.0,
+      "source": "Moomoo",
+      "themes": [
+        "China / policy"
+      ],
+      "ticker": "2800.HK",
+      "title": "TRACKER FUND OF HONG KONG (02800) Latest Announcement & Press Release - Moomoo"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPcEk1QlE4QUppcDlCa1NoOWVxM0dDZ292TTgyTUJMbDE5YWQtV0FyajN3OUV4S1JvamtjbmhZNzFqOHhvcFhTVnlwUGJ6VDZlTEdVRDY5SGhqcWNlb2d4d21ZcWJENHZWMEd6S2Y1YkFJVzlBNjdoYjd0UE9DTHcxSDdXbTlqcnFLcjduVnRaeXI5NWFUUGFROQ?oc=5",
@@ -438,9 +440,9 @@
       "title": "Tencent unit raises $1.5 billion from Kuaishou share sale, term sheet shows - Reuters"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNeXBudFRldU5adllXZzJVY2ZVT0VUdG9paEFvdWpwQ0NEZkdJQlZXR1VmckY1eVdrLUg5RVBFcGwwOXotRlhvamVEeTAxUGROXzVCeDA3dlBxRDVLcjM2VTRnRnE2cm5sa3UzLVVkcFkwM2EwcUZhSUdpdmhHeVAyUFpEN0UyZExRTU5JUGppcjFUbklaTWkwWWlyc2U0Zw?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQTGRqUDkxeWEyY0luXzFTMF8zZ29ieFUtT0Z0SEFZaUoxVGR6NTFxSkZ1NlBUWlRiblRZak1BdUp1NFhuRXZFYnJTcEZidVY2ZFk3UjdRajFTM0tNMWVKdG9weUREdTM5Tl9Nb1FNWi02bHFUZFM0alpTTVZMd2NPTDVZbG9XREk2U1I0TGEtb2VpTnBnNjRJekl1OVpwZw?oc=5",
       "matched_terms": [],
-      "published": "2026-06-15T07:00:00+00:00",
+      "published": "2026-07-06T07:07:14+00:00",
       "sentiment_label": "neutral",
       "sentiment_score": 0.0,
       "source": "Investing.com",
@@ -448,7 +450,7 @@
         "general market"
       ],
       "ticker": "0700.HK",
-      "title": "Why is Tencent stock slipping today? - Investing.com"
+      "title": "Why is Tencent stock rallying today? - Investing.com"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOQUFFOG5FWGhfQm5EZTIyNS1Ccm1fQk1KRnJpOVBiWXljWGQ4Q2w1UFFIT3FINm9Cd3lPSzhLM0FzTjMyb1ZjRkJ0RDJ4QmdRQzhCc1lpYkx0eW1saVZFd1JHNk5BMnFhNDhwZHRId3VUZUs2Q1B0a3ZpVUpQT2Zmb19KRDhwQ09SeWwwU2RIRmNUOEppNkFqdWtCYW85NlBoblJoWTJIVEFnLU1Y?oc=5",
@@ -456,12 +458,12 @@
       "published": "2026-07-07T02:45:00+00:00",
       "sentiment_label": "neutral",
       "sentiment_score": 0.0,
-      "source": "Bloomberg",
+      "source": "Bloomberg.com",
       "themes": [
         "general market"
       ],
       "ticker": "0700.HK",
-      "title": "Tencent Seeks to Sell Up to $1.6 Billion Stake in Kuaishou - Bloomberg"
+      "title": "Tencent Seeks to Sell Up to $1.6 Billion Stake in Kuaishou - Bloomberg.com"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQemtGWkh5RzFjNnpRQV8tOHlqaExweDU4YWNjcTZmMlNkYkREUm5td25TbGNSWFQ1Q3lkTzB4TnBoT2JIN3U0RUNWWWlUbXNLRkhQVFg1dFg3U2RoY2pLUUxFTHdqZEJ3WXhmb29peF82Qnp2VndMQnJ6SXY5cGtwVFZMNzNkYVVUM0ZVcTU2OTV2UTNiVkJrR0RZY0tyMUdqRVY2OFZRLTdBc1ZkeXc0RnlnR0sxSnhXNUZqUtIBvAFBVV95cUxNUzZnVXdPOWZ3T0lUc0pCVGtydFN3TUhLdDhIT2pRUXBkSEtESVpoWXRKMEg0VVFoZ3hVbHN0aVVIMHREQTJOS3NpMEd1dnZDSnBkRV9qcU9DMHdiM0xPaF9RaGdVT3hpZ3pCTGgyUm1qcjVRQ1lNNVgxYWJNa1VwQWsybFR0THJwcVdHWktSSjdYeVJTbWdfSFJFcEdYSXZlN19kSUF0bEhnbDBjVFVxTUtPS2RhMmdBdnZ3RA?oc=5",
@@ -493,15 +495,15 @@
       "title": "Shareholder Tencent Holdings Sold 272.95M Kuaishou Shares to Independent Third Parties - Moomoo"
     }
   ],
-  "generated_at": "2026-07-10T15:28:11.429720+00:00",
+  "generated_at": "2026-07-10T22:50:39.055594+00:00",
   "market": "hk",
   "mode": "real",
   "summary": {
     "ai_layer": {
-      "analysis": "{\n  \"sentiment\": \"Mixed with cautious optimism\",\n  \"risks\": [\n    \"AI valuation concerns may pressure tech stocks\",\n    \"Fed rate outlook introduces macroeconomic uncertainty\",\n    \"Market volatility remains elevated due to geopolitical and regulatory factors\",\n    \"Sector-specific risks in fast fashion and consumer electronics\"\n  ],\n  \"watchlist\": [\n    \"Shein (HK: 9926)\",\n    \"Alibaba-W (HK: 09988)\",\n    \"SMIC (HK: 00981)\",\n    \"Momenta (HK: 2505)\",\n    \"Luxshare (HK: 2182)\"\n  ],\n  \"recommended_posture\": \"Defensive with selective exposure. Maintain a diversified portfolio with a focus on high-quality, fundamentally strong companies. Avoid overexposure to speculative or highly volatile sectors. Monitor central bank policy developments and AI-related valuations closely.\"\n}",
+      "analysis": "{\n  \"sentiment\": \"Mixed with cautious optimism\",\n  \"risks\": [\n    \"AI valuation concerns may pressure tech stocks\",\n    \"Fed rate outlook introduces uncertainty in global markets\",\n    \"Market volatility could persist due to geopolitical and macroeconomic factors\"\n  ],\n  \"watchlist\": [\n    \"09988 (Alibaba-W)\",\n    \"00238 (SMIC)\",\n    \"01024 (Momenta)\",\n    \"06998 (Shein)\",\n    \"00004 (Hong Kong Exchanges)\"\n  ],\n  \"recommended_posture\": \"Defensive with selective exposure to high-quality tech and consumer stocks. Maintain liquidity and monitor macroeconomic signals closely.\"\n}",
       "model": "qwen3:8b",
       "note": "LLM output is a research overlay and should not override rule, risk, and price evidence by itself.",
-      "prompt_template": "You are a cautious portfolio research agent. Use the headlines, market-regime facts, and rule-based portfolio constraints to explain market sentiment and produce a conditional, non-execution investment posture. Do not promise returns. Return JSON with sentiment, risks, watchlist, and recommended posture.\n\nBenchmark: 2800.HK\nRule engine posture: defensive\nNews score: 0.048\nHeadlines: [\"China approves fast-fashion giant Shein's Hong Kong listing bid - Yahoo Finance UK\", 'AirPods-maker Luxshare sees shares close lower in tepid Hong Kong debut - CNBC', 'JPMorgan, Citi Bankers to Join Hong Kong Exchange Listing Panel - Bloomberg', 'Hong Kong Stock Market Movement | Alibaba-W (09988) Rises Over 9% Before Midday Amid Reports Alibaba Is Merging Three Enterprise-Grade Agent Products - Moomoo', 'Hong Kong stocks rise as rallies from Alibaba, SMIC, others lift market sentiment - South China Morning Post', 'Hong Kong stocks log strongest week in 9 months on China internet gains - marketscreener.com', 'Chinese autonomous-driving firm Momenta rises 3% in Hong Kong stock debut - CNBC', 'Chinese Stocks in HK Jump Most in 14 Months as Tech Rallies - Bloomberg', 'Asia stock markets outlook for 2026: Hang Seng and Nikkei forecasts - ig.com', 'Hong Kong stock decline deepens on AI valuation concerns, Fed rate outlook - South China Morning Post']",
+      "prompt_template": "You are a cautious portfolio research agent. Use the headlines, market-regime facts, and rule-based portfolio constraints to explain market sentiment and produce a conditional, non-execution investment posture. Do not promise returns. Return JSON with sentiment, risks, watchlist, and recommended posture.\n\nBenchmark: 2800.HK\nRule engine posture: defensive\nNews score: 0.048\nHeadlines: ['AirPods-maker Luxshare sees shares close lower in tepid Hong Kong debut - CNBC', 'JPMorgan, Citi Bankers to Join Hong Kong Exchange Listing Panel - Bloomberg.com', 'Hong Kong Stock Market Movement | Alibaba-W (09988) Rises Over 9% Before Midday Amid Reports Alibaba Is Merging Three Enterprise-Grade Agent Products - Moomoo', 'Hong Kong stocks rise as rallies from Alibaba, SMIC, others lift market sentiment - South China Morning Post', 'Hong Kong stocks log strongest week in 9 months on China internet gains - marketscreener.com', 'Chinese autonomous-driving firm Momenta rises 3% in Hong Kong stock debut - CNBC', 'Chinese Stocks in HK Jump Most in 14 Months as Tech Rallies - Bloomberg.com', \"Shein finally wins China's approval for Hong Kong IPO, in third attempt to go public - Reuters\", 'Asia stock markets outlook for 2026: Hang Seng and Nikkei forecasts - ig.com', 'Hong Kong stock decline deepens on AI valuation concerns, Fed rate outlook - South China Morning Post']",
       "provider": "ollama",
       "status": "llm_generated"
     },
@@ -519,7 +521,7 @@
     "source_mode": "rss",
     "top_themes": [
       {
-        "count": 21,
+        "count": 22,
         "theme": "China / policy"
       },
       {
@@ -531,25 +533,16 @@
         "theme": "AI / semiconductors"
       },
       {
-        "count": 1,
-        "theme": "rates / inflation"
+        "count": 2,
+        "theme": "consumer demand"
       },
       {
         "count": 1,
-        "theme": "earnings"
+        "theme": "rates / inflation"
       }
     ]
   },
   "ticker_sentiment": [
-    {
-      "article_count": 1,
-      "label": "positive",
-      "score": 0.16,
-      "ticker": "3690.HK",
-      "top_headlines": [
-        "Southbound Funds Pour HK$497 Million into Tencent and Meituan; Hang Seng Tech Index Rebounds as Capital Rotates from AI Hardware to Internet Stocks - finance.biggo.com"
-      ]
-    },
     {
       "article_count": 7,
       "label": "neutral",
@@ -562,14 +555,14 @@
       ]
     },
     {
-      "article_count": 7,
+      "article_count": 8,
       "label": "neutral",
-      "score": 0.039999999999999994,
+      "score": 0.05499999999999999,
       "ticker": "2800.HK",
       "top_headlines": [
         "Record Demand, Recurring Pitfalls: The Truth About Single-Stock Leveraged and Inverse Products - Morningstar",
-        "Fund Flows | Southbound capital bought HK$20.5 billion worth of Hong Kong stocks, significantly increasing its position in Tencent by nearly HK$2.5 billion - \u5bcc\u9014\u725b\u725b",
-        "How ETF Issuers Compete in Hong Kong\u2019s Market - Nasdaq"
+        "How ETF Issuers Compete in Hong Kong\u2019s Market - Nasdaq",
+        "Fund Flows | Southbound capital bought HK$20.5 billion worth of Hong Kong stocks, significantly increasing its position in Tencent by nearly HK$2.5 billion - \u5bcc\u9014\u725b\u725b"
       ]
     }
   ]
