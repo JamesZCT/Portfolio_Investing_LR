@@ -1097,6 +1097,10 @@
     {
       "date": "2026-07-09",
       "value": 24.459999084472656
+    },
+    {
+      "date": "2026-07-10",
+      "value": 24.6200008392334
     }
   ],
   "execution_results": [
@@ -1106,7 +1110,7 @@
       "status": "simulated",
       "target_weight_delta": 0.2831,
       "ticker": "CASH",
-      "timestamp": "2026-07-10T23:48:33"
+      "timestamp": "2026-07-13T16:20:21"
     },
     {
       "message": "sandbox only; no brokerage order was placed",
@@ -1114,7 +1118,7 @@
       "status": "simulated",
       "target_weight_delta": -0.05280000000000001,
       "ticker": "0700.HK",
-      "timestamp": "2026-07-10T23:48:33"
+      "timestamp": "2026-07-13T16:20:21"
     },
     {
       "message": "sandbox only; no brokerage order was placed",
@@ -1122,7 +1126,7 @@
       "status": "simulated",
       "target_weight_delta": -0.05,
       "ticker": "3690.HK",
-      "timestamp": "2026-07-10T23:48:33"
+      "timestamp": "2026-07-13T16:20:21"
     },
     {
       "message": "sandbox only; no brokerage order was placed",
@@ -1130,7 +1134,7 @@
       "status": "simulated",
       "target_weight_delta": -0.046200000000000005,
       "ticker": "9988.HK",
-      "timestamp": "2026-07-10T23:48:33"
+      "timestamp": "2026-07-13T16:20:21"
     },
     {
       "message": "sandbox only; no brokerage order was placed",
@@ -1138,7 +1142,7 @@
       "status": "simulated",
       "target_weight_delta": -0.0297,
       "ticker": "1299.HK",
-      "timestamp": "2026-07-10T23:48:33"
+      "timestamp": "2026-07-13T16:20:21"
     },
     {
       "message": "sandbox only; no brokerage order was placed",
@@ -1146,7 +1150,7 @@
       "status": "simulated",
       "target_weight_delta": -0.026400000000000003,
       "ticker": "1810.HK",
-      "timestamp": "2026-07-10T23:48:33"
+      "timestamp": "2026-07-13T16:20:21"
     },
     {
       "message": "sandbox only; no brokerage order was placed",
@@ -1154,7 +1158,7 @@
       "status": "simulated",
       "target_weight_delta": -0.02,
       "ticker": "0005.HK",
-      "timestamp": "2026-07-10T23:48:33"
+      "timestamp": "2026-07-13T16:20:21"
     },
     {
       "message": "sandbox only; no brokerage order was placed",
@@ -1162,7 +1166,7 @@
       "status": "simulated",
       "target_weight_delta": -0.02,
       "ticker": "0939.HK",
-      "timestamp": "2026-07-10T23:48:33"
+      "timestamp": "2026-07-13T16:20:21"
     },
     {
       "message": "sandbox only; no brokerage order was placed",
@@ -1170,7 +1174,7 @@
       "status": "simulated",
       "target_weight_delta": -0.0135,
       "ticker": "0388.HK",
-      "timestamp": "2026-07-10T23:48:33"
+      "timestamp": "2026-07-13T16:20:21"
     },
     {
       "message": "sandbox only; no brokerage order was placed",
@@ -1178,7 +1182,7 @@
       "status": "simulated",
       "target_weight_delta": -0.0125,
       "ticker": "0001.HK",
-      "timestamp": "2026-07-10T23:48:33"
+      "timestamp": "2026-07-13T16:20:21"
     },
     {
       "message": "sandbox only; no brokerage order was placed",
@@ -1186,19 +1190,19 @@
       "status": "simulated",
       "target_weight_delta": -0.012,
       "ticker": "0823.HK",
-      "timestamp": "2026-07-10T23:48:33"
+      "timestamp": "2026-07-13T16:20:21"
     }
   ],
   "lookback_days": 900,
   "market_regime": {
     "benchmark": "2800.HK",
-    "drawdown": -0.1256139037933408,
-    "momentum": -0.054481950337918694,
-    "price": 24.459999084472656,
-    "realized_vol": 0.20751066242955432,
-    "trend_ma": 25.91859511375427,
+    "drawdown": -0.11989422615769152,
+    "momentum": -0.03945077118330953,
+    "price": 24.6200008392334,
+    "realized_vol": 0.20883263777848216,
+    "trend_ma": 25.91138677597046,
     "trend_state": "bearish",
-    "z": -0.9077797290957875
+    "z": -0.7278366511406412
   },
   "mode": "real",
   "positions": {
@@ -1393,13 +1397,13 @@
         "ret_21": 0.015445718913180917,
         "ret_252": -0.07442985509696165,
         "ret_63": -0.08353984807135584,
-        "vol_21": 0.38082326726582655,
-        "vol_63": 0.3814214310512905,
-        "z_60": 0.09361350790635431
+        "vol_21": 0.3808232672658267,
+        "vol_63": 0.38142143105129045,
+        "z_60": 0.09361350790635657
       },
       "model_version": "logistic_price_risk_v1",
       "risk_level": "low",
-      "risk_probability": 0.2553298724609992,
+      "risk_probability": 0.2566419279555564,
       "ticker": "0700.HK"
     },
     {
@@ -1410,13 +1414,13 @@
         "ret_21": -0.0578679849435082,
         "ret_252": 0.004769130973891533,
         "ret_63": -0.12787622623154193,
-        "vol_21": 0.599874143992307,
-        "vol_63": 0.49495088066290943,
-        "z_60": -0.6587447362087291
+        "vol_21": 0.5998741439923073,
+        "vol_63": 0.4949508806629089,
+        "z_60": -0.6587447362087532
       },
       "model_version": "logistic_price_risk_v1",
       "risk_level": "low",
-      "risk_probability": 0.3504223598839559,
+      "risk_probability": 0.351433688184452,
       "ticker": "9988.HK"
     },
     {
@@ -1428,12 +1432,12 @@
         "ret_252": -0.37190746183993717,
         "ret_63": -0.11073449775997524,
         "vol_21": 0.45286717434034557,
-        "vol_63": 0.450392239435403,
-        "z_60": -0.0952220465471911
+        "vol_63": 0.4503922394354029,
+        "z_60": -0.09522204654719076
       },
       "model_version": "logistic_price_risk_v1",
       "risk_level": "low",
-      "risk_probability": 0.30709122442282927,
+      "risk_probability": 0.30849598734926653,
       "ticker": "3690.HK"
     },
     {
@@ -1444,13 +1448,13 @@
         "ret_21": 0.0232394581109705,
         "ret_252": 0.0570442486638727,
         "ret_63": -0.16627776653682125,
-        "vol_21": 0.2932667016505244,
-        "vol_63": 0.2895684288958151,
-        "z_60": -1.2382777258725433
+        "vol_21": 0.29326670165052404,
+        "vol_63": 0.2895684288958156,
+        "z_60": -1.238277725872478
       },
       "model_version": "logistic_price_risk_v1",
       "risk_level": "low",
-      "risk_probability": 0.1562548999728194,
+      "risk_probability": 0.15789595622556452,
       "ticker": "1299.HK"
     },
     {
@@ -1459,49 +1463,49 @@
         "ma_gap": -0.05923487482466572,
         "ret_126": -0.040899351480683355,
         "ret_21": 0.0026041666666667407,
-        "ret_252": -0.053582852910921686,
+        "ret_252": -0.05358292391029307,
         "ret_63": -0.0664403353588846,
-        "vol_21": 0.20633777401922282,
-        "vol_63": 0.19010580657852413,
-        "z_60": -0.7082001277416125
+        "vol_21": 0.20633777401922188,
+        "vol_63": 0.19010580657852294,
+        "z_60": -0.7082001277414032
       },
       "model_version": "logistic_price_risk_v1",
       "risk_level": "low",
-      "risk_probability": 0.10229294141521925,
+      "risk_probability": 0.10344274841556794,
       "ticker": "0388.HK"
     },
     {
       "features": {
         "drawdown_252": 0.0,
-        "ma_gap": 0.2300970760120571,
+        "ma_gap": 0.2300970756360201,
         "ret_126": 0.29751769406624584,
         "ret_21": 0.08022514712757878,
-        "ret_252": 0.6949728949939225,
+        "ret_252": 0.6949730377870302,
         "ret_63": 0.11368509221816803,
-        "vol_21": 0.2431115072233042,
-        "vol_63": 0.24712834281596718,
-        "z_60": 2.1055328990901025
+        "vol_21": 0.24311150722330474,
+        "vol_63": 0.24712834281596674,
+        "z_60": 2.1055328990888893
       },
       "model_version": "logistic_price_risk_v1",
       "risk_level": "low",
-      "risk_probability": 0.09749057264130445,
+      "risk_probability": 0.09918636669788577,
       "ticker": "0005.HK"
     },
     {
       "features": {
         "drawdown_252": -0.07233804589862525,
-        "ma_gap": 0.03658795853325447,
+        "ma_gap": 0.03658795947858384,
         "ret_126": 0.08731165981696654,
         "ret_21": -0.04031285295557607,
-        "ret_252": 0.08007870899211333,
+        "ret_252": 0.08007877741326452,
         "ret_63": -0.020014079737202817,
-        "vol_21": 0.2926181333940741,
-        "vol_63": 0.22049059653002237,
-        "z_60": -1.1585627133538972
+        "vol_21": 0.2926181333940738,
+        "vol_63": 0.22049059653002256,
+        "z_60": -1.15856271335419
       },
       "model_version": "logistic_price_risk_v1",
       "risk_level": "low",
-      "risk_probability": 0.06923181860508253,
+      "risk_probability": 0.06972316925770748,
       "ticker": "0939.HK"
     },
     {
@@ -1514,45 +1518,45 @@
         "ret_63": -0.21123316616279508,
         "vol_21": 0.5199185405056119,
         "vol_63": 0.41216953014823116,
-        "z_60": -0.6765358543106872
+        "z_60": -0.6765358543106909
       },
       "model_version": "logistic_price_risk_v1",
       "risk_level": "low",
-      "risk_probability": 0.4189185683306867,
+      "risk_probability": 0.42259124344166366,
       "ticker": "1810.HK"
     },
     {
       "features": {
-        "drawdown_252": -0.10042746480138354,
+        "drawdown_252": -0.10042738235024273,
         "ma_gap": 0.02669374917882017,
         "ret_126": 0.11537361381914124,
         "ret_21": 0.021298986013301935,
         "ret_252": -0.042459818306147756,
         "ret_63": 0.027800554559660462,
-        "vol_21": 0.18120833842220208,
-        "vol_63": 0.1611003097665875,
-        "z_60": -0.2811206855294583
+        "vol_21": 0.18120833842220221,
+        "vol_63": 0.1611003097665876,
+        "z_60": -0.2811206855294288
       },
       "model_version": "logistic_price_risk_v1",
       "risk_level": "low",
-      "risk_probability": 0.07992329171599444,
+      "risk_probability": 0.0809215434333587,
       "ticker": "0823.HK"
     },
     {
       "features": {
         "drawdown_252": -0.022831664929959472,
-        "ma_gap": 0.1851608736217507,
+        "ma_gap": 0.18516087400447567,
         "ret_126": 0.3565614075708512,
         "ret_21": 0.04712044274912475,
         "ret_252": 0.5032989280091715,
         "ret_63": 0.13512591306099253,
-        "vol_21": 0.3338372578047209,
-        "vol_63": 0.269415249385574,
-        "z_60": 0.9344810014425267
+        "vol_21": 0.3338372578047219,
+        "vol_63": 0.26941524938557343,
+        "z_60": 0.9344810014425309
       },
       "model_version": "logistic_price_risk_v1",
       "risk_level": "low",
-      "risk_probability": 0.09136619174720022,
+      "risk_probability": 0.09250599448911549,
       "ticker": "0001.HK"
     }
   ],
@@ -1576,24 +1580,24 @@
       "realized_vol": 0.2932667016505236,
       "sector": "Insurance",
       "status": "cool",
-      "std": 5.296241393169684,
+      "std": 5.296241393169963,
       "trend_ma": 79.38444175720215,
       "trend_state": "bearish",
-      "z": -1.2382777258725433
+      "z": -1.238277725872478
     },
     {
       "etf": "2800.HK",
-      "ma": 25.91859511375427,
-      "momentum": -0.054481950337918694,
-      "pct_from_ma": -0.05627604516679918,
-      "price": 24.459999084472656,
-      "realized_vol": 0.20751066242955432,
+      "ma": 25.91138677597046,
+      "momentum": -0.03945077118330953,
+      "pct_from_ma": -0.049838549665533916,
+      "price": 24.6200008392334,
+      "realized_vol": 0.20883263777848216,
       "sector": "BroadMarket",
       "status": "neutral",
-      "std": 1.0088408880161859,
-      "trend_ma": 25.91859511375427,
+      "std": 1.012087637830749,
+      "trend_ma": 25.91138677597046,
       "trend_state": "bearish",
-      "z": -0.9077797290957875
+      "z": -0.7278366511406412
     },
     {
       "etf": "0388.HK",
@@ -1604,10 +1608,10 @@
       "realized_vol": 0.20633777401922335,
       "sector": "Exchanges",
       "status": "neutral",
-      "std": 19.024755462592122,
+      "std": 19.024755462597746,
       "trend_ma": 409.2413607788086,
       "trend_state": "bearish",
-      "z": -0.7082001277416125
+      "z": -0.7082001277414032
     },
     {
       "etf": "9988.HK",
@@ -1618,10 +1622,10 @@
       "realized_vol": 0.5998741439923067,
       "sector": "Ecommerce",
       "status": "neutral",
-      "std": 14.638427883854174,
+      "std": 14.63842788385364,
       "trend_ma": 142.49534133911132,
       "trend_state": "bearish",
-      "z": -0.6587447362087291
+      "z": -0.6587447362087532
     },
     {
       "etf": "0823.HK",
@@ -1632,10 +1636,10 @@
       "realized_vol": 0.18120833842220227,
       "sector": "Property",
       "status": "neutral",
-      "std": 1.330086334635943,
+      "std": 1.3300863346360825,
       "trend_ma": 36.46656917572022,
       "trend_state": "bullish",
-      "z": -0.2811206855294583
+      "z": -0.2811206855294288
     },
     {
       "etf": "3690.HK",
@@ -1646,10 +1650,10 @@
       "realized_vol": 0.4528671743403456,
       "sector": "ConsumerServices",
       "status": "neutral",
-      "std": 5.819760068238865,
+      "std": 5.819760068238886,
       "trend_ma": 90.37950008392335,
       "trend_state": "bearish",
-      "z": -0.0952220465471911
+      "z": -0.09522204654719076
     },
     {
       "etf": "0700.HK",
@@ -1660,43 +1664,43 @@
       "realized_vol": 0.38082326726582644,
       "sector": "Technology",
       "status": "undervalued",
-      "std": 24.1252556310113,
+      "std": 24.125255631010717,
       "trend_ma": 548.7165443420411,
       "trend_state": "bearish",
-      "z": 0.09361350790635431
+      "z": 0.09361350790635657
     },
     {
       "etf": "0001.HK",
-      "ma": 59.06371156692505,
+      "ma": 59.06371154785156,
       "momentum": 0.3565614075708512,
-      "pct_from_ma": 0.1851608736217507,
+      "pct_from_ma": 0.18516087400447567,
       "price": 70.0,
       "realized_vol": 0.3338372578047209,
       "sector": "Conglomerates",
       "status": "hyped",
-      "std": 2.876274696204213,
-      "trend_ma": 59.06371156692505,
+      "std": 2.8762746962042,
+      "trend_ma": 59.06371154785156,
       "trend_state": "bullish",
-      "z": 0.9344810014425267
+      "z": 0.9344810014425309
     },
     {
       "etf": "0005.HK",
-      "ma": 124.78689933776856,
+      "ma": 124.78689937591552,
       "momentum": 0.29751769406624584,
-      "pct_from_ma": 0.2300970760120571,
+      "pct_from_ma": 0.2300970756360201,
       "price": 153.5,
       "realized_vol": 0.24311150722330463,
       "sector": "Banks",
       "status": "hyped",
-      "std": 4.593766940082278,
-      "trend_ma": 124.78689933776856,
+      "std": 4.593766940084925,
+      "trend_ma": 124.78689937591552,
       "trend_state": "bullish",
-      "z": 2.1055328990901025
+      "z": 2.1055328990888893
     }
   ],
   "snapshot": {
     "config_name": "example_hk_config.yaml",
-    "generated_at": "2026-07-10T23:48:33.981549+00:00",
+    "generated_at": "2026-07-13T16:20:21.481326+00:00",
     "is_example_config": false,
     "lookback_days": 900,
     "mode": "real"
