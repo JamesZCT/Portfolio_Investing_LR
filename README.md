@@ -208,7 +208,7 @@ The hosted `/api/*` contract is:
 - `/api/quotes?market=us|hk`: live quote lookup with snapshot fallback
 - `/api/news-sentiment?market=us|hk`: headline sentiment, themes, market posture, and optional AI overlay
 
-Static snapshots also include `information_signs.json`, which records public Lance/RIA commentary and official Federal Reserve/FRED context as information-only evidence with zero portfolio-decision weight.
+Static snapshots also include `information_signs.json`, which records public Lance/RIA commentary and official Federal Reserve/FRED context as information-only evidence with zero portfolio-decision weight. `market_opportunities.json` screens the full eligible liquid US equity universe into buy-candidate, hold/watch, and sell/avoid-review research lists with coverage and methodology disclosed in the payload and dashboard.
 
 The recommended free/low-friction path is:
 
@@ -262,6 +262,8 @@ https://github.com/JamesZCT/Portfolio_Investing_LR
 ```
 
 The scheduled snapshot workflow commits refreshed public demo market data to `main`. Netlify production deploys are intentionally limited to weekly or manual publishes to avoid Free-plan credit burn.
+
+The broad US market screen is implemented in `src/portfolio_agent/market_screener.py`. It queries US-listed equities above $2B market capitalization and 1M shares of three-month average daily volume, then ranks every eligible name with complete Yahoo trend fields. The labels are research shortlists, not personalized recommendations or automated orders.
 
 ## Free static hosting
 

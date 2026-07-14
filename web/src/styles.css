@@ -218,6 +218,156 @@ input,
   font-size: 0.9rem;
 }
 
+.market-opportunities {
+  margin-bottom: 14px;
+  border: 1px solid #d5dde1;
+  border-radius: 8px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.market-opportunities > header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 15px 16px 13px;
+  border-bottom: 1px solid #e1e7ea;
+}
+
+.market-opportunities > header span,
+.market-coverage span,
+.opportunity-group header span,
+.opportunity-group article span,
+.market-opportunities footer span {
+  display: block;
+  color: #66737a;
+  font-size: 0.72rem;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+.market-opportunities h2 {
+  margin: 3px 0 0;
+  color: #172126;
+  font-size: 1.2rem;
+  letter-spacing: 0;
+}
+
+.market-coverage {
+  text-align: right;
+}
+
+.market-coverage strong {
+  display: block;
+  color: #172126;
+  font-size: 1.05rem;
+}
+
+.opportunity-groups {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.opportunity-group {
+  min-width: 0;
+  border-right: 1px solid #e1e7ea;
+}
+
+.opportunity-group:last-child {
+  border-right: 0;
+}
+
+.opportunity-group > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 12px;
+}
+
+.opportunity-group.buy > header {
+  border-top: 4px solid #25875d;
+  background: #edf8f2;
+  color: #175d3d;
+}
+
+.opportunity-group.hold > header {
+  border-top: 4px solid #3a73a8;
+  background: #eef5fb;
+  color: #285982;
+}
+
+.opportunity-group.sell > header {
+  border-top: 4px solid #c5533f;
+  background: #fff1ee;
+  color: #903728;
+}
+
+.opportunity-group > div {
+  display: grid;
+}
+
+.opportunity-group article {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 52px 64px;
+  align-items: center;
+  gap: 8px;
+  min-height: 61px;
+  border-top: 1px solid #edf0f2;
+  padding: 9px 12px;
+}
+
+.opportunity-group article > div:first-child {
+  min-width: 0;
+}
+
+.opportunity-group article > div:first-child strong {
+  display: block;
+  color: #172126;
+  font-size: 0.9rem;
+}
+
+.opportunity-group article > div:first-child span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.opportunity-group article > div:not(:first-child) {
+  text-align: right;
+}
+
+.opportunity-group article > div:not(:first-child) strong {
+  display: block;
+  color: #28343a;
+  font-size: 0.82rem;
+}
+
+.market-opportunities footer {
+  display: grid;
+  grid-template-columns: 1.3fr 1.3fr auto;
+  gap: 14px;
+  align-items: start;
+  border-top: 1px solid #e1e7ea;
+  background: #f8fafb;
+  padding: 10px 12px;
+}
+
+.market-opportunities footer a {
+  color: #216b89;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.market-screen-unavailable {
+  margin: 0;
+  padding: 18px;
+  color: #66737a;
+}
+
 .metric-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -883,6 +1033,22 @@ code {
   padding: 9px;
 }
 
+.sentiment-summary > div:nth-child(1) {
+  border-left: 4px solid #3a73a8;
+}
+
+.sentiment-summary > div:nth-child(2) {
+  border-left: 4px solid #25875d;
+}
+
+.sentiment-summary > div:nth-child(3) {
+  border-left: 4px solid #d0962f;
+}
+
+.sentiment-summary > div:nth-child(4) {
+  border-left: 4px solid #7a5aa6;
+}
+
 .sentiment-summary span,
 .sentiment-columns h3 {
   display: block;
@@ -912,6 +1078,21 @@ code {
 .sentiment-watch_for_bottoming,
 .sentiment-neutral {
   color: #305b91 !important;
+}
+
+.sentiment-tone-positive,
+.sentiment-confidence-high {
+  color: #1f754f !important;
+}
+
+.sentiment-tone-negative,
+.sentiment-confidence-low {
+  color: #a13e2e !important;
+}
+
+.sentiment-tone-neutral,
+.sentiment-confidence-medium {
+  color: #936817 !important;
 }
 
 .sentiment-callout,
@@ -1267,9 +1448,38 @@ meter {
   .dashboard-grid,
   .conclusion-grid,
   .comparison-summary,
+  .opportunity-groups,
   .run-health-summary,
   .run-history {
     grid-template-columns: 1fr;
+  }
+
+  .opportunity-group {
+    width: 100%;
+    max-width: 100%;
+    border-right: 0;
+    overflow: hidden;
+  }
+
+  .opportunity-group > div,
+  .opportunity-group article {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .opportunity-group article > div {
+    min-width: 0;
+  }
+
+  .market-opportunities footer {
+    grid-template-columns: 1fr;
+  }
+
+  .market-opportunities footer a,
+  .market-opportunities footer span {
+    overflow-wrap: anywhere;
+    white-space: normal;
   }
 
   .template-selector {
@@ -1301,5 +1511,14 @@ meter {
 
   .metric-card {
     min-height: auto;
+  }
+
+  .market-opportunities > header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .market-coverage {
+    text-align: left;
   }
 }

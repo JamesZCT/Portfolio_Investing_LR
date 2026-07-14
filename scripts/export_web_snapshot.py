@@ -18,6 +18,7 @@ from portfolio_agent.engine import (
 from portfolio_agent.rules_catalog import rules_as_dicts
 from portfolio_agent.sandbox import generate_sandbox_prices
 from portfolio_agent.sentiment import build_sentiment_payload
+from portfolio_agent.market_screener import build_market_opportunities_payload
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -80,6 +81,10 @@ def main() -> int:
         market_regime=analysis.market_regime,
         mode=args.mode,
     )
+    opportunities_payload = build_market_opportunities_payload(
+        market=_market_from_config(config_path),
+        mode=args.mode,
+    )
 
     _write_json(out_dir / "dashboard.json", dashboard)
     _write_json(out_dir / "backtest.json", backtest_payload)
@@ -89,6 +94,7 @@ def main() -> int:
     _write_json(out_dir / "quotes.json", quotes_payload)
     _write_json(out_dir / "sentiment.json", sentiment_payload)
     _write_json(out_dir / "information_signs.json", sentiment_payload.get("summary", {}).get("information_signs", {}))
+    _write_json(out_dir / "market_opportunities.json", opportunities_payload)
     health_payload = _build_health_payload(
         config_path=config_path,
         mode=args.mode,
@@ -96,6 +102,7 @@ def main() -> int:
         dashboard=dashboard,
         quotes=quotes_payload,
         sentiment=sentiment_payload,
+        opportunities=opportunities_payload,
     )
     _write_json(out_dir / "health.json", health_payload)
     _write_json(out_dir / "history.json", _updated_history(out_dir / "history.json", health_payload, sentiment_payload))
@@ -191,6 +198,7 @@ def _build_health_payload(
     dashboard: dict[str, Any],
     quotes: dict[str, Any],
     sentiment: dict[str, Any],
+    opportunities: dict[str, Any],
 ) -> dict[str, Any]:
     generated_at = datetime.now(timezone.utc)
     quote_dates = [quote.get("as_of") for quote in quotes.get("quotes", []) if quote.get("as_of")]
@@ -221,12 +229,15 @@ def _build_health_payload(
         "research_overlay_note_count": research_overlay.get("note_count", 0),
         "information_signs_status": information_signs.get("status"),
         "information_sign_count": information_signs.get("sign_count", 0),
+        "market_screen_status": opportunities.get("status"),
+        "market_screen_analyzed_count": opportunities.get("universe", {}).get("analyzed_count", 0),
         "pipeline": {
             "price_fetch": "ok" if price_as_of else "missing",
             "rss_news": "ok" if sentiment.get("summary", {}).get("article_count", 0) else "empty",
             "local_llm": ai_layer.get("status", "unknown"),
             "private_research": research_overlay.get("status", "unknown"),
             "public_information_signs": information_signs.get("status", "unknown"),
+            "broad_market_screen": opportunities.get("status", "unknown"),
         },
     }
 
