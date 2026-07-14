@@ -1,8 +1,8 @@
 {
   "config_name": "config.yaml",
-  "days_since_price": 1,
+  "days_since_price": 0,
   "forecast_bias": "neutral",
-  "generated_at": "2026-07-14T05:38:08.428112+00:00",
+  "generated_at": "2026-07-14T23:09:51.152231+00:00",
   "information_sign_count": 14,
   "information_signs_status": "available",
   "investment_posture": "balanced",
@@ -21,8 +21,8 @@
     "public_information_signs": "available",
     "rss_news": "ok"
   },
-  "price_as_of": "2026-07-13",
-  "quote_latest_as_of": "2026-07-13",
+  "price_as_of": "2026-07-14",
+  "quote_latest_as_of": "2026-07-14",
   "research_overlay_note_count": 0,
   "research_overlay_status": "empty",
   "sentiment_label": "neutral",
