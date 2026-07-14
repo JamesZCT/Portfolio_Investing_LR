@@ -226,6 +226,50 @@ export type InformationSignsPayload = {
   sign_count: number;
 };
 
+export type MarketOpportunity = {
+  ticker: string;
+  name: string;
+  exchange: string;
+  action: "buy_candidate" | "hold_watch" | "sell_avoid";
+  score: number;
+  price: number;
+  return_1y_pct: number;
+  distance_ma50_pct: number;
+  distance_ma200_pct: number;
+  range_position: number;
+  market_cap: number | null;
+  average_volume_3m: number | null;
+  trailing_pe: number | null;
+  range_width_pct: number;
+  reason: string;
+};
+
+export type MarketOpportunitiesPayload = {
+  status: string;
+  generated_at: string;
+  market: MarketProfile;
+  note?: string;
+  source: { name: string; url: string; note?: string };
+  universe: {
+    definition: string;
+    eligible_total: number;
+    fetched_count: number;
+    analyzed_count: number;
+    coverage_ratio: number;
+    latest_price_date: string | null;
+  };
+  methodology: {
+    summary?: string;
+    buy_rule?: string;
+    sell_rule?: string;
+    policy: string;
+  };
+  action_counts: Record<"buy_candidate" | "hold_watch" | "sell_avoid", number>;
+  buy_candidates: MarketOpportunity[];
+  hold_watch: MarketOpportunity[];
+  sell_avoid: MarketOpportunity[];
+};
+
 export type ResearchOverlay = {
   status: string;
   source_mode: string;
@@ -271,6 +315,8 @@ export type HealthPayload = {
   research_overlay_note_count: number;
   information_signs_status: string;
   information_sign_count: number;
+  market_screen_status: string;
+  market_screen_analyzed_count: number;
   pipeline: Record<string, string>;
 };
 
@@ -365,6 +411,10 @@ export async function fetchHealth(market: MarketProfile): Promise<HealthPayload>
 
 export async function fetchHistory(market: MarketProfile): Promise<HistoryPayload> {
   return fetchSnapshot<HistoryPayload>(`/data/${market}/history.json`);
+}
+
+export async function fetchMarketOpportunities(market: MarketProfile): Promise<MarketOpportunitiesPayload> {
+  return fetchSnapshot<MarketOpportunitiesPayload>(`/data/${market}/market_opportunities.json`);
 }
 
 async function fetchJson<T>(apiUrl: string, snapshotUrl: string): Promise<T> {

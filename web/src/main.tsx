@@ -34,6 +34,7 @@ import {
   HealthPayload,
   HistoryPayload,
   LatestQuote,
+  MarketOpportunitiesPayload,
   MarketProfile,
   OhlcPoint,
   SectorSignal,
@@ -45,6 +46,7 @@ import {
   fetchDashboard,
   fetchHealth,
   fetchHistory,
+  fetchMarketOpportunities,
   fetchLatestQuotes,
   fetchOhlc,
   fetchRules,
@@ -245,6 +247,7 @@ function App() {
   const [sentiment, setSentiment] = useState<SentimentPayload | null>(null);
   const [health, setHealth] = useState<HealthPayload | null>(null);
   const [history, setHistory] = useState<HistoryPayload | null>(null);
+  const [marketOpportunities, setMarketOpportunities] = useState<MarketOpportunitiesPayload | null>(null);
   const [researchPositions, setResearchPositions] = useState<Record<string, number>>({});
   const [hoverCandle, setHoverCandle] = useState<OhlcPoint | null>(null);
   const [loading, setLoading] = useState(false);
@@ -267,9 +270,10 @@ function App() {
         setOhlc(bootstrap.ohlc);
         setQuotes(bootstrap.quotes);
         setSentiment(bootstrap.sentiment);
-        const [healthPayload, historyPayload] = await fetchOptionalRunStatus(market);
+        const [healthPayload, historyPayload, opportunitiesPayload] = await fetchOptionalRunStatus(market);
         setHealth(healthPayload);
         setHistory(historyPayload);
+        setMarketOpportunities(opportunitiesPayload);
         applyResearchPositions(bootstrap.dashboard.positions);
         setHoverCandle(null);
         return;
@@ -287,7 +291,7 @@ function App() {
         fetchLatestQuotes(quoteTickers, market)
       ]);
       const sentimentPayload = await fetchSentiment(market);
-      const [healthPayload, historyPayload] = await fetchOptionalRunStatus(market);
+      const [healthPayload, historyPayload, opportunitiesPayload] = await fetchOptionalRunStatus(market);
       setDashboard(dash);
       setBacktest(bt);
       setStrategyComparison(comparison);
@@ -297,6 +301,7 @@ function App() {
       setSentiment(sentimentPayload);
       setHealth(healthPayload);
       setHistory(historyPayload);
+      setMarketOpportunities(opportunitiesPayload);
       applyResearchPositions(dash.positions);
       setHoverCandle(null);
     } catch (err) {
@@ -376,6 +381,8 @@ function App() {
           <MarketTruthBanner marketInfo={marketInfo} dashboard={dashboard} quotes={quotes} />
 
           <RunHealthPanel health={health} history={history} sentiment={sentiment} />
+
+          {market === "us" && marketOpportunities ? <MarketOpportunityPanel payload={marketOpportunities} /> : null}
 
           <section className="metric-grid">
             <MetricCard
@@ -531,12 +538,81 @@ function MarketTruthBanner({
   );
 }
 
-async function fetchOptionalRunStatus(market: MarketProfile): Promise<[HealthPayload | null, HistoryPayload | null]> {
-  const [healthResult, historyResult] = await Promise.allSettled([fetchHealth(market), fetchHistory(market)]);
+async function fetchOptionalRunStatus(
+  market: MarketProfile
+): Promise<[HealthPayload | null, HistoryPayload | null, MarketOpportunitiesPayload | null]> {
+  const [healthResult, historyResult, opportunitiesResult] = await Promise.allSettled([
+    fetchHealth(market),
+    fetchHistory(market),
+    fetchMarketOpportunities(market)
+  ]);
   return [
     healthResult.status === "fulfilled" ? healthResult.value : null,
-    historyResult.status === "fulfilled" ? historyResult.value : null
+    historyResult.status === "fulfilled" ? historyResult.value : null,
+    opportunitiesResult.status === "fulfilled" ? opportunitiesResult.value : null
   ];
+}
+
+function MarketOpportunityPanel({ payload }: { payload: MarketOpportunitiesPayload }) {
+  const groups = [
+    { key: "buy", title: "Buy candidates", rows: payload.buy_candidates, count: payload.action_counts.buy_candidate },
+    { key: "hold", title: "Hold / watch", rows: payload.hold_watch, count: payload.action_counts.hold_watch },
+    { key: "sell", title: "Sell / avoid review", rows: payload.sell_avoid, count: payload.action_counts.sell_avoid }
+  ];
+
+  return (
+    <section className="market-opportunities" aria-label="Broad market opportunity screen">
+      <header>
+        <div>
+          <span>Broad US Market Screen</span>
+          <h2>High-level opportunity map</h2>
+        </div>
+        <div className="market-coverage">
+          <strong>{payload.universe.analyzed_count.toLocaleString()} / {payload.universe.eligible_total.toLocaleString()}</strong>
+          <span>eligible stocks analyzed · prices {payload.universe.latest_price_date ?? "unknown"}</span>
+        </div>
+      </header>
+      {payload.status === "available" ? (
+        <>
+          <div className="opportunity-groups">
+            {groups.map((group) => (
+              <section className={`opportunity-group ${group.key}`} key={group.key}>
+                <header>
+                  <strong>{group.title}</strong>
+                  <span>{group.count} in universe</span>
+                </header>
+                <div>
+                  {group.rows.slice(0, 5).map((row) => (
+                    <article key={row.ticker} title={row.reason}>
+                      <div>
+                        <strong>{row.ticker}</strong>
+                        <span>{row.name}</span>
+                      </div>
+                      <div className="opportunity-score">
+                        <strong>{row.score}</strong>
+                        <span>score</span>
+                      </div>
+                      <div className={row.return_1y_pct >= 0 ? "positive" : "negative"}>
+                        <strong>{row.return_1y_pct >= 0 ? "+" : ""}{row.return_1y_pct.toFixed(1)}%</strong>
+                        <span>1 year</span>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              </section>
+            ))}
+          </div>
+          <footer>
+            <span>{payload.universe.definition}</span>
+            <span>{payload.methodology.policy}</span>
+            <a href={payload.source.url} target="_blank" rel="noreferrer">{payload.source.name}</a>
+          </footer>
+        </>
+      ) : (
+        <p className="market-screen-unavailable">{payload.note ?? "The broad-market screen is unavailable for this snapshot."}</p>
+      )}
+    </section>
+  );
 }
 
 function RunHealthPanel({
@@ -1258,11 +1334,13 @@ function SentimentPanel({ sentiment, market }: { sentiment: SentimentPayload; ma
         </div>
         <div>
           <span>News Tone</span>
-          <strong>{summary.label}</strong>
+          <strong className={`sentiment-tone-${summary.label}`}>{summary.label}</strong>
         </div>
         <div>
           <span>Confidence</span>
-          <strong>{percent(summary.confidence)}</strong>
+          <strong className={`sentiment-confidence-${summary.confidence >= 0.65 ? "high" : summary.confidence >= 0.4 ? "medium" : "low"}`}>
+            {percent(summary.confidence)}
+          </strong>
         </div>
         <div>
           <span>Articles</span>

@@ -1,0 +1,29 @@
+{
+  "action_counts": {
+    "buy_candidate": 0,
+    "hold_watch": 0,
+    "sell_avoid": 0
+  },
+  "buy_candidates": [],
+  "generated_at": "2026-07-14T23:21:19.579721+00:00",
+  "hold_watch": [],
+  "market": "hk",
+  "methodology": {
+    "policy": "Research shortlist only; no automated trading."
+  },
+  "note": "The broad-market opportunity screen currently covers US-listed equities only.",
+  "sell_avoid": [],
+  "source": {
+    "name": "Yahoo Finance via yfinance",
+    "url": "https://finance.yahoo.com/research-hub/screener/"
+  },
+  "status": "unavailable",
+  "universe": {
+    "analyzed_count": 0,
+    "coverage_ratio": 0.0,
+    "definition": "US-listed common equities on Nasdaq, NYSE, or NYSE American with market capitalization above $2B and average three-month daily volume above 1M shares.",
+    "eligible_total": 0,
+    "fetched_count": 0,
+    "latest_price_date": null
+  }
+}
