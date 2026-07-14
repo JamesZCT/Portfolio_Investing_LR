@@ -3,10 +3,13 @@ from __future__ import annotations
 from dataclasses import asdict, dataclass
 from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
+from email import policy
+from email.parser import BytesParser
 from html import unescape
 from pathlib import Path
 from typing import Any
 import json
+import mailbox
 import os
 import re
 
@@ -106,7 +109,7 @@ def build_research_overlay(market: str, tickers: list[str], max_items: int = 12)
 
 def load_research_notes(root: Path, tickers: list[str], max_items: int = 12) -> list[ResearchNote]:
     candidates = sorted(
-        [path for path in root.rglob("*") if path.suffix.lower() in {".json", ".md", ".txt"}],
+        [path for path in root.rglob("*") if path.suffix.lower() in {".json", ".md", ".txt", ".eml", ".mbox"}],
         key=lambda path: path.stat().st_mtime,
         reverse=True,
     )
@@ -122,6 +125,23 @@ def load_research_notes(root: Path, tickers: list[str], max_items: int = 12) -> 
 
 
 def _records_from_file(path: Path) -> list[dict[str, Any]]:
+    if path.suffix.lower() == ".eml":
+        try:
+            message = BytesParser(policy=policy.default).parsebytes(path.read_bytes())
+        except (OSError, ValueError):
+            return []
+        return [_record_from_email(message)]
+
+    if path.suffix.lower() == ".mbox":
+        try:
+            messages = mailbox.mbox(path, create=False)
+            return [
+                _record_from_email(BytesParser(policy=policy.default).parsebytes(message.as_bytes()))
+                for message in messages
+            ]
+        except (OSError, ValueError, mailbox.Error):
+            return []
+
     if path.suffix.lower() == ".json":
         try:
             data = json.loads(path.read_text(encoding="utf-8"))
@@ -143,6 +163,31 @@ def _records_from_file(path: Path) -> list[dict[str, Any]]:
         return []
     title = path.stem.replace("_", " ").replace("-", " ").strip()
     return [{"title": title, "body": text, "source": _source_from_text(f"{path} {text[:300]}")}]
+
+
+def _record_from_email(message: Any) -> dict[str, Any]:
+    body = ""
+    try:
+        preferred = message.get_body(preferencelist=("plain", "html"))
+        if preferred is not None:
+            body = preferred.get_content()
+    except (AttributeError, KeyError, LookupError, UnicodeDecodeError):
+        body = ""
+    if not body:
+        payload = message.get_payload(decode=True)
+        if isinstance(payload, bytes):
+            body = payload.decode(message.get_content_charset() or "utf-8", errors="replace")
+    content_type = str(message.get_content_type() or "")
+    if content_type == "text/html" or "<html" in body.lower():
+        body = re.sub(r"<[^>]+>", " ", body)
+    first_url = re.search(r"https?://[^\s<>\"]+", body)
+    return {
+        "title": str(message.get("Subject") or "Untitled email"),
+        "sender": str(message.get("From") or "Email export"),
+        "published": str(message.get("Date") or ""),
+        "body": _clean_text(body),
+        "url": first_url.group(0).rstrip(".,)") if first_url else "",
+    }
 
 
 def _note_from_record(record: dict[str, Any], path: Path, tickers: list[str]) -> ResearchNote | None:

@@ -88,6 +88,7 @@ def main() -> int:
     _write_json(out_dir / "ohlc.json", ohlc_payload)
     _write_json(out_dir / "quotes.json", quotes_payload)
     _write_json(out_dir / "sentiment.json", sentiment_payload)
+    _write_json(out_dir / "information_signs.json", sentiment_payload.get("summary", {}).get("information_signs", {}))
     health_payload = _build_health_payload(
         config_path=config_path,
         mode=args.mode,
@@ -197,6 +198,7 @@ def _build_health_payload(
     days_since_price = _days_since_date(price_as_of, generated_at)
     ai_layer = sentiment.get("summary", {}).get("ai_layer", {})
     research_overlay = sentiment.get("summary", {}).get("research_overlay", {})
+    information_signs = sentiment.get("summary", {}).get("information_signs", {})
     return {
         "generated_at": generated_at.isoformat(),
         "market": _market_from_config(config_path),
@@ -217,11 +219,14 @@ def _build_health_payload(
         "llm_model": ai_layer.get("model"),
         "research_overlay_status": research_overlay.get("status"),
         "research_overlay_note_count": research_overlay.get("note_count", 0),
+        "information_signs_status": information_signs.get("status"),
+        "information_sign_count": information_signs.get("sign_count", 0),
         "pipeline": {
             "price_fetch": "ok" if price_as_of else "missing",
             "rss_news": "ok" if sentiment.get("summary", {}).get("article_count", 0) else "empty",
             "local_llm": ai_layer.get("status", "unknown"),
             "private_research": research_overlay.get("status", "unknown"),
+            "public_information_signs": information_signs.get("status", "unknown"),
         },
     }
 
@@ -248,6 +253,8 @@ def _updated_history(path: Path, health: dict[str, Any], sentiment: dict[str, An
             "llm_status": health["llm_status"],
             "research_overlay_status": health["research_overlay_status"],
             "research_overlay_note_count": health["research_overlay_note_count"],
+            "information_signs_status": health["information_signs_status"],
+            "information_sign_count": health["information_sign_count"],
             "top_themes": sentiment.get("summary", {}).get("top_themes", [])[:3],
         }
     )

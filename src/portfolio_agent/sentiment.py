@@ -13,6 +13,7 @@ import re
 import xml.etree.ElementTree as ET
 
 from .config import AppConfig
+from .information_signs import build_information_signs_payload
 from .research_digest import build_research_overlay
 
 
@@ -140,6 +141,7 @@ def build_sentiment_payload(
     summary["source_mode"] = source_mode
     research_overlay = build_research_overlay(market, tickers)
     summary["research_overlay"] = research_overlay
+    summary["information_signs"] = build_information_signs_payload(market, mode=mode)
     summary["ai_layer"] = _ai_layer_status(articles, summary, config)
     return {
         "market": market,
@@ -386,16 +388,33 @@ def _ai_layer_status(articles: list[NewsArticle], summary: dict[str, Any], confi
         for note in research_overlay.get("notes", [])[:6]
         if isinstance(note, dict)
     ]
+    information_signs = summary.get("information_signs", {})
+    public_signs = [
+        {
+            "title": sign.get("title"),
+            "source": sign.get("source"),
+            "signal": sign.get("signal"),
+            "why_it_matters": sign.get("why_it_matters"),
+            "decision_use": sign.get("decision_use"),
+        }
+        for sign in (
+            information_signs.get("primary_signs", [])[:5]
+            + information_signs.get("commentary_signs", [])[:4]
+        )
+        if isinstance(sign, dict)
+    ]
     prompt = (
         "You are a cautious portfolio research agent. Use the headlines, market-regime facts, "
-        "private research notes when present, and rule-based portfolio constraints to explain market sentiment and produce a conditional, "
+        "private research notes and public information signs when present, and rule-based portfolio constraints to explain market sentiment and produce a conditional, "
         "non-execution investment posture. Do not promise returns. Return JSON with sentiment, risks, "
-        "watchlist, research-note conflicts, and recommended posture.\n\n"
+        "watchlist, research-note conflicts, and recommended posture. Public information signs have zero decision weight: "
+        "use them to explain and form questions, never to override price, allocation, or risk rules.\n\n"
         f"Benchmark: {config.universe.benchmark}\n"
         f"Rule engine posture: {summary['investment_posture']}\n"
         f"News score: {summary['overall_score']:.3f}\n"
         f"Private research overlay status: {research_overlay.get('status', 'unknown')}\n"
         f"Private research notes: {research_notes}\n"
+        f"Public information signs: {public_signs}\n"
         f"Headlines: {headlines}"
     )
     if os.getenv("LLM_SENTIMENT_ENABLED", "").lower() not in {"1", "true", "yes"}:

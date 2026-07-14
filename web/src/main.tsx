@@ -549,6 +549,7 @@ function RunHealthPanel({
   sentiment: SentimentPayload | null;
 }) {
   const research = sentiment?.summary.research_overlay;
+  const informationSigns = sentiment?.summary.information_signs;
   const latestRuns = history?.runs.slice(0, 5) ?? [];
   const status = health?.stale_price ? "stale" : "fresh";
   return (
@@ -573,6 +574,11 @@ function RunHealthPanel({
           <span>Research Overlay</span>
           <strong>{research?.status?.replaceAll("_", " ") ?? health?.research_overlay_status?.replaceAll("_", " ") ?? "unknown"}</strong>
           <small>{research?.note_count ?? health?.research_overlay_note_count ?? 0} private notes applied</small>
+        </div>
+        <div>
+          <span>Public Information</span>
+          <strong>{informationSigns?.status?.replaceAll("_", " ") ?? health?.information_signs_status?.replaceAll("_", " ") ?? "unknown"}</strong>
+          <small>{informationSigns?.sign_count ?? health?.information_sign_count ?? 0} sourced signs, decision weight 0</small>
         </div>
       </div>
       {latestRuns.length ? (
@@ -1242,6 +1248,7 @@ function PersonalizedGapTable({
 function SentimentPanel({ sentiment, market }: { sentiment: SentimentPayload; market: MarketProfile }) {
   const summary = sentiment.summary;
   const research = summary.research_overlay;
+  const informationSigns = summary.information_signs;
   return (
     <div className="sentiment-panel">
       <div className="sentiment-summary">
@@ -1281,6 +1288,31 @@ function SentimentPanel({ sentiment, market }: { sentiment: SentimentPayload; ma
           ))}
           {!research.notes.length && research.note ? <p>{research.note}</p> : null}
         </div>
+      ) : null}
+      {informationSigns ? (
+        <section className="information-signs">
+          <header>
+            <div>
+              <span>Public Information Signs</span>
+              <strong>{informationSigns.status.replaceAll("_", " ")}</strong>
+            </div>
+            <small>Portfolio decision weight: {informationSigns.decision_policy.portfolio_weight}</small>
+          </header>
+          <p>{informationSigns.decision_policy.rule}</p>
+          <div className="information-sign-list">
+            {[...informationSigns.commentary_signs.slice(0, 3), ...informationSigns.primary_signs.slice(0, 5)].map((sign) => (
+              <a key={`${sign.source}-${sign.title}-${sign.published ?? "latest"}`} href={sign.url || "#"} target="_blank" rel="noreferrer">
+                <div>
+                  <span>{sign.source_tier} · {sign.source}</span>
+                  <strong>{sign.title}</strong>
+                  <em>{sign.category} · {sign.signal.replaceAll("_", " ")}{sign.value !== null ? ` · ${sign.value}${sign.unit ? ` ${sign.unit}` : ""}` : ""}</em>
+                </div>
+                <p><b>Why:</b> {sign.why_it_matters}</p>
+                <time>{sign.published ? formatShortDateTime(sign.published) : "date unavailable"}</time>
+              </a>
+            ))}
+          </div>
+        </section>
       ) : null}
       <div className="sentiment-columns">
         <div>

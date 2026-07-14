@@ -147,7 +147,7 @@ input,
 
 .run-health-summary {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 10px;
 }
 
@@ -960,6 +960,82 @@ code {
   font-size: 0.8rem;
 }
 
+.information-signs {
+  display: grid;
+  gap: 9px;
+  border-top: 1px solid #d5dde1;
+  border-bottom: 1px solid #d5dde1;
+  padding: 12px 0;
+}
+
+.information-signs header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.information-signs header div,
+.information-sign-list,
+.information-sign-list a > div {
+  display: grid;
+  gap: 3px;
+}
+
+.information-signs header span,
+.information-signs header small,
+.information-sign-list span,
+.information-sign-list em,
+.information-sign-list time {
+  color: #66737a;
+  font-size: 0.72rem;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.information-signs header strong {
+  color: #172126;
+  text-transform: capitalize;
+}
+
+.information-signs > p {
+  margin: 0;
+  color: #4b5960;
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.information-sign-list a {
+  display: grid;
+  grid-template-columns: minmax(210px, 0.9fr) minmax(280px, 1.3fr) auto;
+  align-items: center;
+  gap: 12px;
+  border-top: 1px solid #e5eaed;
+  padding-top: 8px;
+  color: #263137;
+  text-decoration: none;
+}
+
+.information-sign-list a strong {
+  font-size: 0.82rem;
+  line-height: 1.3;
+}
+
+.information-sign-list a p {
+  margin: 0;
+  color: #526168;
+  font-size: 0.76rem;
+  line-height: 1.4;
+}
+
+.information-sign-list a p b {
+  color: #263137;
+}
+
+.information-sign-list time {
+  white-space: nowrap;
+}
+
 .ai-analysis {
   max-height: 220px;
   overflow: auto;
@@ -1201,8 +1277,14 @@ meter {
   }
 
   .sentiment-summary,
-  .sentiment-columns {
+  .sentiment-columns,
+  .information-sign-list a {
     grid-template-columns: 1fr;
+  }
+
+  .information-signs header {
+    align-items: start;
+    flex-direction: column;
   }
 }
 

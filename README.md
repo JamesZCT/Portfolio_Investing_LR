@@ -208,6 +208,8 @@ The hosted `/api/*` contract is:
 - `/api/quotes?market=us|hk`: live quote lookup with snapshot fallback
 - `/api/news-sentiment?market=us|hk`: headline sentiment, themes, market posture, and optional AI overlay
 
+Static snapshots also include `information_signs.json`, which records public Lance/RIA commentary and official Federal Reserve/FRED context as information-only evidence with zero portfolio-decision weight.
+
 The recommended free/low-friction path is:
 
 1. Generate public demo data from `example_config.yaml`:
@@ -293,6 +295,7 @@ For an NVIDIA PC workflow, install a GitHub self-hosted runner with the `windows
 See `docs/local_llm_deployment.md` for Mac local, Windows/Linux NVIDIA GPU, and cloud deployment routes. See `docs/windows_nvidia_local_llm_setup.md` for the detailed Windows 3090 Ti / 3060 Ti setup runbook.
 See `docs/public_private_split.md` for the public demo/private personal portfolio boundary.
 See `docs/research_sources_integration.md` for adding private Gmail/Substack/newsletter research overlays such as Lance Roberts / Real Investment Advice.
+The local research reader accepts normalized JSON/Markdown/text plus Gmail `.eml` and Google Takeout `.mbox` files from `C:\portfolio-research-digest`. Raw private messages are never committed by the public workflow.
 
 ## Market profiles
 

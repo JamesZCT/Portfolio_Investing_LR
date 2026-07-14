@@ -14,12 +14,18 @@ This project keeps market data, rule outputs, and private research inputs separa
 - Role: broad headline tone and theme detection.
 - Output: `sentiment.json`.
 
-3. Optional local LLM overlay
+3. Public information signs
+- Sources: Lance Roberts-authored RIA RSS posts, Federal Reserve releases, and FRED macro series.
+- Role: sourced context with a visible explanation of why each item matters.
+- Decision weight: `0.0`. These signs do not change target weights, trades, or risk limits.
+- Output: `information_signs.json` and the `information_signs` section of `sentiment.json`.
+
+4. Optional local LLM overlay
 - Source: Ollama or an OpenAI-compatible local/private endpoint.
 - Role: summarize and reconcile price evidence, headlines, and research notes.
 - Default: local Ollama, no cloud token spend.
 
-4. Private research overlay
+5. Private research overlay
 - Source: local normalized exports from Gmail, Substack, PDFs, or notes.
 - Role: investor color, questions, watchlist emphasis, and risk posture.
 - Output: compact metadata only inside `sentiment.json`; raw emails should never be committed.
@@ -43,7 +49,7 @@ Avoid:
 
 ## Private Digest File Format
 
-Put `.json`, `.md`, or `.txt` files in a private ignored folder such as:
+Put `.json`, `.md`, `.txt`, Gmail-exported `.eml`, or Google Takeout `.mbox` files in a private ignored folder such as:
 
 ```powershell
 mkdir C:\portfolio-research-digest
@@ -71,15 +77,27 @@ The public output keeps only compact fields: title, source, published date, link
 
 ## Gmail Ingestion Plan
 
-The current Codex session does not expose callable Gmail search/read tools, so the safest immediate path is local export:
+The current Codex task does not expose callable Gmail search/read tools, so inbox messages are not being fetched automatically. The immediate private path is local export:
 
 1. In Gmail, search for relevant sender/newsletter terms:
    - `from:(lance OR realinvestmentadvice) newer_than:30d`
    - `("Lance Roberts" OR "Real Investment Advice" OR "RIA") newer_than:30d`
-2. Export or copy the selected messages into normalized JSON files in `private/research_digest`.
-3. The scheduled 3090 Ti workflow reads that private folder via `RESEARCH_DIGEST_DIR`.
+2. In Gmail, use **More > Download message** to save selected messages as `.eml`, or use Google Takeout for an `.mbox` export.
+3. Put those files in `C:\portfolio-research-digest`. The reader extracts subject, sender, date, body, and first source link locally.
+4. The scheduled 3090 Ti workflow reads that private folder via `RESEARCH_DIGEST_DIR`.
 
-When Gmail connector tools become available, the next upgrade is a private local script that searches Gmail daily, normalizes the latest matching emails, writes them to `private/research_digest`, then runs the existing snapshot exporter. That should live in a private repo or local-only automation, not the public demo repo.
+When Gmail connector tools or Gmail API OAuth credentials become available, the next upgrade is a private local script that searches Gmail daily, normalizes only matching emails, writes them to `C:\portfolio-research-digest`, then runs the existing snapshot exporter. OAuth tokens and raw messages must remain on this PC or in a private repo, never in the public demo repo.
+
+## Decision Boundary
+
+The current project deliberately separates observation from allocation:
+
+- Lance/RIA and other commentary: hypothesis, risks to review, and watchlist emphasis.
+- Federal Reserve/FRED: primary macro context and freshness anchors.
+- Price, drawdown, trend, concentration, and configured portfolio rules: allocation constraints.
+- Local LLM: explains agreements and conflicts; it does not execute trades.
+
+If commentary is later allowed to influence a portfolio recommendation, the change should be opt-in and auditable. Each influence should record the source, publication date, affected ticker or asset class, old recommendation, new recommendation, maximum allowed adjustment, and a plain-language reason. The default adjustment remains zero.
 
 ## Other Reputable Source Candidates
 
@@ -90,7 +108,7 @@ Use multiple sources with different biases and time horizons:
 - JPMorgan Guide to the Markets: broad macro and allocation reference.
 - Schwab Market Perspective: retail-accessible macro and sector commentary.
 - BlackRock Investment Institute: asset allocation and macro regime framing.
-- FRED / Federal Reserve data: primary macro time series.
+- FRED / Federal Reserve data: primary macro time series. The first automated set is 10-year yield, 2-year yield, 10Y-2Y curve, unemployment, and CPI year-over-year.
 - BLS, BEA, Treasury, and SEC filings: primary economic and company data.
 
 The best project design is not to ask one source for a final answer. Use source disagreement as a feature:

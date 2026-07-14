@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+from email.message import EmailMessage
 import tempfile
 import unittest
 from pathlib import Path
@@ -10,6 +11,23 @@ from portfolio_agent.research_digest import build_research_overlay, load_researc
 
 
 class ResearchDigestTests(unittest.TestCase):
+    def test_loads_exported_eml_without_publishing_raw_message(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            message = EmailMessage()
+            message["Subject"] = "Lance Roberts: breadth warning"
+            message["From"] = "newsletter@realinvestmentadvice.com"
+            message["Date"] = "Mon, 13 Jul 2026 12:00:00 +0000"
+            message.set_content("Market breadth is weakening. Consider a risk hedge. https://example.com/post")
+            path = Path(tmp) / "lance.eml"
+            path.write_bytes(message.as_bytes())
+
+            notes = load_research_notes(Path(tmp), tickers=["SPY"])
+
+            self.assertEqual(len(notes), 1)
+            self.assertEqual(notes[0].source, "newsletter@realinvestmentadvice.com")
+            self.assertEqual(notes[0].stance_label, "risk_off")
+            self.assertEqual(notes[0].url, "https://example.com/post")
+
     def test_load_research_notes_scores_risk_terms(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             path = Path(tmp) / "lance.json"

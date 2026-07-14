@@ -167,6 +167,7 @@ export type SentimentPayload = {
       prompt_template: string;
     };
     research_overlay?: ResearchOverlay;
+    information_signs?: InformationSignsPayload;
   };
   ticker_sentiment: Array<{
     ticker: string;
@@ -186,6 +187,43 @@ export type SentimentPayload = {
     themes: string[];
     matched_terms: string[];
   }>;
+};
+
+export type InformationSign = {
+  title: string;
+  source: string;
+  source_tier: "primary" | "commentary" | string;
+  published: string | null;
+  url: string;
+  category: string;
+  signal: string;
+  value: number | null;
+  unit: string | null;
+  why_it_matters: string;
+  decision_use: "information_only" | string;
+  portfolio_weight: number;
+};
+
+export type InformationSignsPayload = {
+  status: string;
+  generated_at: string;
+  market: MarketProfile;
+  source_mode: string;
+  decision_policy: {
+    portfolio_weight: number;
+    rule: string;
+  };
+  source_status: Array<{
+    source: string;
+    url: string;
+    status: string;
+    item_count?: number;
+    latest_published?: string | null;
+    failed_series?: string[];
+  }>;
+  primary_signs: InformationSign[];
+  commentary_signs: InformationSign[];
+  sign_count: number;
 };
 
 export type ResearchOverlay = {
@@ -231,6 +269,8 @@ export type HealthPayload = {
   llm_model: string | null;
   research_overlay_status: string;
   research_overlay_note_count: number;
+  information_signs_status: string;
+  information_sign_count: number;
   pipeline: Record<string, string>;
 };
 
@@ -249,6 +289,8 @@ export type HistoryPayload = {
     llm_status: string;
     research_overlay_status: string;
     research_overlay_note_count: number;
+    information_signs_status: string;
+    information_sign_count: number;
     top_themes: Array<{ theme: string; count: number }>;
   }>;
 };
