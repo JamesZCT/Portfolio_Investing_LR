@@ -1,0 +1,85 @@
+{
+  "generated_at": "2026-07-14T04:44:05.883691+00:00",
+  "market": "us",
+  "retention_runs": 120,
+  "runs": [
+    {
+      "forecast_bias": "neutral",
+      "generated_at": "2026-07-14T04:44:05.883691+00:00",
+      "investment_posture": "balanced",
+      "llm_status": "llm_generated",
+      "market": "us",
+      "news_article_count": 36,
+      "price_as_of": "2026-07-13",
+      "research_overlay_note_count": 0,
+      "research_overlay_status": "not_configured",
+      "sentiment_label": "neutral",
+      "top_themes": [
+        {
+          "count": 24,
+          "theme": "general market"
+        },
+        {
+          "count": 7,
+          "theme": "AI / semiconductors"
+        },
+        {
+          "count": 4,
+          "theme": "rates / inflation"
+        }
+      ]
+    },
+    {
+      "forecast_bias": "neutral",
+      "generated_at": "2026-07-14T04:42:39.012769+00:00",
+      "investment_posture": "balanced",
+      "llm_status": "llm_failed_fallback_to_heuristic",
+      "market": "us",
+      "news_article_count": 36,
+      "price_as_of": "2026-07-13",
+      "research_overlay_note_count": 0,
+      "research_overlay_status": "not_configured",
+      "sentiment_label": "neutral",
+      "top_themes": [
+        {
+          "count": 24,
+          "theme": "general market"
+        },
+        {
+          "count": 7,
+          "theme": "AI / semiconductors"
+        },
+        {
+          "count": 4,
+          "theme": "rates / inflation"
+        }
+      ]
+    },
+    {
+      "forecast_bias": "neutral",
+      "generated_at": "2026-07-14T04:41:46.863089+00:00",
+      "investment_posture": "balanced",
+      "llm_status": "heuristic_default",
+      "market": "us",
+      "news_article_count": 36,
+      "price_as_of": "2026-07-13",
+      "research_overlay_note_count": 0,
+      "research_overlay_status": "not_configured",
+      "sentiment_label": "neutral",
+      "top_themes": [
+        {
+          "count": 24,
+          "theme": "general market"
+        },
+        {
+          "count": 7,
+          "theme": "AI / semiconductors"
+        },
+        {
+          "count": 4,
+          "theme": "rates / inflation"
+        }
+      ]
+    }
+  ]
+}

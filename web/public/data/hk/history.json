@@ -1,0 +1,85 @@
+{
+  "generated_at": "2026-07-14T04:44:18.232630+00:00",
+  "market": "hk",
+  "retention_runs": 120,
+  "runs": [
+    {
+      "forecast_bias": "fragile",
+      "generated_at": "2026-07-14T04:44:18.232630+00:00",
+      "investment_posture": "defensive",
+      "llm_status": "llm_generated",
+      "market": "hk",
+      "news_article_count": 36,
+      "price_as_of": "2026-07-14",
+      "research_overlay_note_count": 0,
+      "research_overlay_status": "not_configured",
+      "sentiment_label": "neutral",
+      "top_themes": [
+        {
+          "count": 23,
+          "theme": "China / policy"
+        },
+        {
+          "count": 12,
+          "theme": "general market"
+        },
+        {
+          "count": 4,
+          "theme": "AI / semiconductors"
+        }
+      ]
+    },
+    {
+      "forecast_bias": "fragile",
+      "generated_at": "2026-07-14T04:42:49.148370+00:00",
+      "investment_posture": "defensive",
+      "llm_status": "llm_failed_fallback_to_heuristic",
+      "market": "hk",
+      "news_article_count": 36,
+      "price_as_of": "2026-07-14",
+      "research_overlay_note_count": 0,
+      "research_overlay_status": "not_configured",
+      "sentiment_label": "neutral",
+      "top_themes": [
+        {
+          "count": 23,
+          "theme": "China / policy"
+        },
+        {
+          "count": 12,
+          "theme": "general market"
+        },
+        {
+          "count": 4,
+          "theme": "AI / semiconductors"
+        }
+      ]
+    },
+    {
+      "forecast_bias": "fragile",
+      "generated_at": "2026-07-14T04:41:56.794163+00:00",
+      "investment_posture": "defensive",
+      "llm_status": "heuristic_default",
+      "market": "hk",
+      "news_article_count": 36,
+      "price_as_of": "2026-07-14",
+      "research_overlay_note_count": 0,
+      "research_overlay_status": "not_configured",
+      "sentiment_label": "neutral",
+      "top_themes": [
+        {
+          "count": 23,
+          "theme": "China / policy"
+        },
+        {
+          "count": 12,
+          "theme": "general market"
+        },
+        {
+          "count": 4,
+          "theme": "AI / semiconductors"
+        }
+      ]
+    }
+  ]
+}

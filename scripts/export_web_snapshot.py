@@ -88,6 +88,16 @@ def main() -> int:
     _write_json(out_dir / "ohlc.json", ohlc_payload)
     _write_json(out_dir / "quotes.json", quotes_payload)
     _write_json(out_dir / "sentiment.json", sentiment_payload)
+    health_payload = _build_health_payload(
+        config_path=config_path,
+        mode=args.mode,
+        lookback_days=args.lookback_days,
+        dashboard=dashboard,
+        quotes=quotes_payload,
+        sentiment=sentiment_payload,
+    )
+    _write_json(out_dir / "health.json", health_payload)
+    _write_json(out_dir / "history.json", _updated_history(out_dir / "history.json", health_payload, sentiment_payload))
 
     print(f"Exported static web snapshot to {out_dir}")
     return 0
@@ -171,6 +181,93 @@ def _market_from_config(config_path: Path) -> str:
 
 def _write_json(path: Path, payload: Any) -> None:
     path.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n")
+
+
+def _build_health_payload(
+    config_path: Path,
+    mode: str,
+    lookback_days: int,
+    dashboard: dict[str, Any],
+    quotes: dict[str, Any],
+    sentiment: dict[str, Any],
+) -> dict[str, Any]:
+    generated_at = datetime.now(timezone.utc)
+    quote_dates = [quote.get("as_of") for quote in quotes.get("quotes", []) if quote.get("as_of")]
+    price_as_of = dashboard.get("price_as_of")
+    days_since_price = _days_since_date(price_as_of, generated_at)
+    ai_layer = sentiment.get("summary", {}).get("ai_layer", {})
+    research_overlay = sentiment.get("summary", {}).get("research_overlay", {})
+    return {
+        "generated_at": generated_at.isoformat(),
+        "market": _market_from_config(config_path),
+        "mode": mode,
+        "lookback_days": lookback_days,
+        "config_name": config_path.name,
+        "is_example_config": config_path.name.startswith("example"),
+        "price_as_of": price_as_of,
+        "days_since_price": days_since_price,
+        "stale_price": days_since_price is not None and days_since_price > 4,
+        "quote_latest_as_of": max(quote_dates) if quote_dates else None,
+        "news_article_count": sentiment.get("summary", {}).get("article_count", 0),
+        "sentiment_label": sentiment.get("summary", {}).get("label"),
+        "investment_posture": sentiment.get("summary", {}).get("investment_posture"),
+        "forecast_bias": sentiment.get("summary", {}).get("forecast_bias"),
+        "llm_status": ai_layer.get("status"),
+        "llm_provider": ai_layer.get("provider"),
+        "llm_model": ai_layer.get("model"),
+        "research_overlay_status": research_overlay.get("status"),
+        "research_overlay_note_count": research_overlay.get("note_count", 0),
+        "pipeline": {
+            "price_fetch": "ok" if price_as_of else "missing",
+            "rss_news": "ok" if sentiment.get("summary", {}).get("article_count", 0) else "empty",
+            "local_llm": ai_layer.get("status", "unknown"),
+            "private_research": research_overlay.get("status", "unknown"),
+        },
+    }
+
+
+def _updated_history(path: Path, health: dict[str, Any], sentiment: dict[str, Any], limit: int = 120) -> dict[str, Any]:
+    rows: list[dict[str, Any]] = []
+    if path.exists():
+        try:
+            existing = json.loads(path.read_text(encoding="utf-8"))
+            if isinstance(existing, dict) and isinstance(existing.get("runs"), list):
+                rows = [row for row in existing["runs"] if isinstance(row, dict)]
+        except json.JSONDecodeError:
+            rows = []
+
+    rows.append(
+        {
+            "generated_at": health["generated_at"],
+            "market": health["market"],
+            "price_as_of": health["price_as_of"],
+            "sentiment_label": health["sentiment_label"],
+            "investment_posture": health["investment_posture"],
+            "forecast_bias": health["forecast_bias"],
+            "news_article_count": health["news_article_count"],
+            "llm_status": health["llm_status"],
+            "research_overlay_status": health["research_overlay_status"],
+            "research_overlay_note_count": health["research_overlay_note_count"],
+            "top_themes": sentiment.get("summary", {}).get("top_themes", [])[:3],
+        }
+    )
+    rows = sorted(rows, key=lambda row: str(row.get("generated_at", "")), reverse=True)[:limit]
+    return {
+        "generated_at": health["generated_at"],
+        "market": health["market"],
+        "retention_runs": limit,
+        "runs": rows,
+    }
+
+
+def _days_since_date(value: Any, now: datetime) -> int | None:
+    if not value:
+        return None
+    try:
+        parsed = datetime.fromisoformat(str(value)).date()
+    except ValueError:
+        return None
+    return (now.date() - parsed).days
 
 
 if __name__ == "__main__":

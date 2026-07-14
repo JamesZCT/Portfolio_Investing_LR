@@ -31,6 +31,8 @@ import {
 import {
   BacktestPayload,
   DashboardPayload,
+  HealthPayload,
+  HistoryPayload,
   LatestQuote,
   MarketProfile,
   OhlcPoint,
@@ -41,6 +43,8 @@ import {
   fetchBacktest,
   fetchBootstrap,
   fetchDashboard,
+  fetchHealth,
+  fetchHistory,
   fetchLatestQuotes,
   fetchOhlc,
   fetchRules,
@@ -239,6 +243,8 @@ function App() {
   const [ohlc, setOhlc] = useState<OhlcPoint[]>([]);
   const [quotes, setQuotes] = useState<LatestQuote[]>([]);
   const [sentiment, setSentiment] = useState<SentimentPayload | null>(null);
+  const [health, setHealth] = useState<HealthPayload | null>(null);
+  const [history, setHistory] = useState<HistoryPayload | null>(null);
   const [researchPositions, setResearchPositions] = useState<Record<string, number>>({});
   const [hoverCandle, setHoverCandle] = useState<OhlcPoint | null>(null);
   const [loading, setLoading] = useState(false);
@@ -261,6 +267,9 @@ function App() {
         setOhlc(bootstrap.ohlc);
         setQuotes(bootstrap.quotes);
         setSentiment(bootstrap.sentiment);
+        const [healthPayload, historyPayload] = await fetchOptionalRunStatus(market);
+        setHealth(healthPayload);
+        setHistory(historyPayload);
         applyResearchPositions(bootstrap.dashboard.positions);
         setHoverCandle(null);
         return;
@@ -278,6 +287,7 @@ function App() {
         fetchLatestQuotes(quoteTickers, market)
       ]);
       const sentimentPayload = await fetchSentiment(market);
+      const [healthPayload, historyPayload] = await fetchOptionalRunStatus(market);
       setDashboard(dash);
       setBacktest(bt);
       setStrategyComparison(comparison);
@@ -285,6 +295,8 @@ function App() {
       setOhlc(ohlcRows);
       setQuotes(quoteRows);
       setSentiment(sentimentPayload);
+      setHealth(healthPayload);
+      setHistory(historyPayload);
       applyResearchPositions(dash.positions);
       setHoverCandle(null);
     } catch (err) {
@@ -362,6 +374,8 @@ function App() {
       {dashboard ? (
         <>
           <MarketTruthBanner marketInfo={marketInfo} dashboard={dashboard} quotes={quotes} />
+
+          <RunHealthPanel health={health} history={history} sentiment={sentiment} />
 
           <section className="metric-grid">
             <MetricCard
@@ -517,6 +531,66 @@ function MarketTruthBanner({
   );
 }
 
+async function fetchOptionalRunStatus(market: MarketProfile): Promise<[HealthPayload | null, HistoryPayload | null]> {
+  const [healthResult, historyResult] = await Promise.allSettled([fetchHealth(market), fetchHistory(market)]);
+  return [
+    healthResult.status === "fulfilled" ? healthResult.value : null,
+    historyResult.status === "fulfilled" ? historyResult.value : null
+  ];
+}
+
+function RunHealthPanel({
+  health,
+  history,
+  sentiment
+}: {
+  health: HealthPayload | null;
+  history: HistoryPayload | null;
+  sentiment: SentimentPayload | null;
+}) {
+  const research = sentiment?.summary.research_overlay;
+  const latestRuns = history?.runs.slice(0, 5) ?? [];
+  const status = health?.stale_price ? "stale" : "fresh";
+  return (
+    <section className="run-health">
+      <div className={`run-health-summary ${status}`}>
+        <div>
+          <span>Scheduler Health</span>
+          <strong>{health ? (health.stale_price ? "Needs review" : "Fresh") : "Pending"}</strong>
+          <small>Snapshot {health ? formatDateTime(health.generated_at) : "not loaded"}</small>
+        </div>
+        <div>
+          <span>Market Data</span>
+          <strong>{health?.price_as_of ?? "unknown"}</strong>
+          <small>{health?.days_since_price ?? "?"} days since price date</small>
+        </div>
+        <div>
+          <span>Local AI Layer</span>
+          <strong>{health?.llm_status?.replaceAll("_", " ") ?? "unknown"}</strong>
+          <small>{[health?.llm_provider, health?.llm_model].filter(Boolean).join(" / ") || "no model"}</small>
+        </div>
+        <div>
+          <span>Research Overlay</span>
+          <strong>{research?.status?.replaceAll("_", " ") ?? health?.research_overlay_status?.replaceAll("_", " ") ?? "unknown"}</strong>
+          <small>{research?.note_count ?? health?.research_overlay_note_count ?? 0} private notes applied</small>
+        </div>
+      </div>
+      {latestRuns.length ? (
+        <div className="run-history">
+          {latestRuns.map((run) => (
+            <div key={`${run.market}-${run.generated_at}`}>
+              <span>{formatShortDateTime(run.generated_at)}</span>
+              <strong>{run.price_as_of ?? "unknown"}</strong>
+              <em>{run.investment_posture}</em>
+              <small>{run.llm_status?.replaceAll("_", " ")}</small>
+            </div>
+          ))}
+        </div>
+      ) : null}
+    </section>
+  );
+}
+
 function formatDateTime(value: string) {
   const date = new Date(value);
   if (Number.isNaN(date.getTime())) {
@@ -529,6 +603,19 @@ function formatDateTime(value: string) {
     hour: "2-digit",
     minute: "2-digit",
     timeZoneName: "short"
+  });
+}
+
+function formatShortDateTime(value: string) {
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) {
+    return value;
+  }
+  return date.toLocaleString(undefined, {
+    month: "short",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit"
   });
 }
 
@@ -1154,6 +1241,7 @@ function PersonalizedGapTable({
 
 function SentimentPanel({ sentiment, market }: { sentiment: SentimentPayload; market: MarketProfile }) {
   const summary = sentiment.summary;
+  const research = summary.research_overlay;
   return (
     <div className="sentiment-panel">
       <div className="sentiment-summary">
@@ -1177,6 +1265,23 @@ function SentimentPanel({ sentiment, market }: { sentiment: SentimentPayload; ma
       <p className="sentiment-callout">
         {summary.recommended_action}. {summary.rationale}
       </p>
+      {research ? (
+        <div className="research-overlay">
+          <div>
+            <span>Private Research Overlay</span>
+            <strong>{research.status.replaceAll("_", " ")}</strong>
+            <small>{research.decision_use}</small>
+          </div>
+          {research.notes.slice(0, 3).map((note) => (
+            <a key={`${note.source}-${note.title}`} href={note.url || "#"} target="_blank" rel="noreferrer">
+              <span className={`badge ${note.stance_label}`}>{note.stance_label.replaceAll("_", " ")}</span>
+              <strong>{note.title}</strong>
+              <em>{note.source}</em>
+            </a>
+          ))}
+          {!research.notes.length && research.note ? <p>{research.note}</p> : null}
+        </div>
+      ) : null}
       <div className="sentiment-columns">
         <div>
           <h3>Themes</h3>

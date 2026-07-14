@@ -292,6 +292,7 @@ For an NVIDIA PC workflow, install a GitHub self-hosted runner with the `windows
 
 See `docs/local_llm_deployment.md` for Mac local, Windows/Linux NVIDIA GPU, and cloud deployment routes. See `docs/windows_nvidia_local_llm_setup.md` for the detailed Windows 3090 Ti / 3060 Ti setup runbook.
 See `docs/public_private_split.md` for the public demo/private personal portfolio boundary.
+See `docs/research_sources_integration.md` for adding private Gmail/Substack/newsletter research overlays such as Lance Roberts / Real Investment Advice.
 
 ## Market profiles
 

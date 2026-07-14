@@ -139,6 +139,85 @@ input,
   line-height: 1.45;
 }
 
+.run-health {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.run-health-summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.run-health-summary > div,
+.run-history,
+.research-overlay {
+  border: 1px solid #d5dde1;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.run-health-summary > div {
+  min-height: 90px;
+  padding: 12px;
+}
+
+.run-health-summary.stale > div:first-child {
+  border-color: #efc1b4;
+  background: #fff5f1;
+}
+
+.run-health-summary span,
+.run-health-summary small,
+.run-history span,
+.run-history small,
+.run-history em,
+.research-overlay span,
+.research-overlay small,
+.research-overlay em {
+  display: block;
+  color: #66737a;
+  font-size: 0.72rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.run-health-summary strong {
+  display: block;
+  margin: 5px 0;
+  color: #172126;
+  font-size: 1rem;
+  line-height: 1.2;
+  text-transform: capitalize;
+}
+
+.run-history {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0;
+  overflow: hidden;
+}
+
+.run-history > div {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+  border-right: 1px solid #e5eaed;
+  padding: 10px;
+}
+
+.run-history > div:last-child {
+  border-right: 0;
+}
+
+.run-history strong {
+  color: #172126;
+  font-size: 0.9rem;
+}
+
 .metric-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -349,6 +428,16 @@ td {
 .badge.neutral {
   background: #edf1f3;
   color: #445158;
+}
+
+.badge.risk_on {
+  background: #e4f4eb;
+  color: #206845;
+}
+
+.badge.risk_off {
+  background: #ffe8df;
+  color: #9a3d1e;
 }
 
 .badge.raise_cash,
@@ -833,6 +922,44 @@ code {
   line-height: 1.45;
 }
 
+.research-overlay {
+  display: grid;
+  gap: 8px;
+  padding: 10px;
+}
+
+.research-overlay > div {
+  display: grid;
+  gap: 3px;
+}
+
+.research-overlay > div strong {
+  color: #172126;
+  text-transform: capitalize;
+}
+
+.research-overlay a {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+  color: #263137;
+  text-decoration: none;
+}
+
+.research-overlay a strong {
+  overflow: hidden;
+  font-size: 0.82rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.research-overlay p {
+  margin: 0;
+  color: #617079;
+  font-size: 0.8rem;
+}
+
 .ai-analysis {
   max-height: 220px;
   overflow: auto;
@@ -1063,7 +1190,9 @@ meter {
   .metric-grid,
   .dashboard-grid,
   .conclusion-grid,
-  .comparison-summary {
+  .comparison-summary,
+  .run-health-summary,
+  .run-history {
     grid-template-columns: 1fr;
   }
 

@@ -1,0 +1,27 @@
+{
+  "config_name": "example_hk_config.yaml",
+  "days_since_price": 0,
+  "forecast_bias": "fragile",
+  "generated_at": "2026-07-14T04:44:18.232630+00:00",
+  "investment_posture": "defensive",
+  "is_example_config": true,
+  "llm_model": "qwen3:8b",
+  "llm_provider": "ollama",
+  "llm_status": "llm_generated",
+  "lookback_days": 900,
+  "market": "hk",
+  "mode": "real",
+  "news_article_count": 36,
+  "pipeline": {
+    "local_llm": "llm_generated",
+    "price_fetch": "ok",
+    "private_research": "not_configured",
+    "rss_news": "ok"
+  },
+  "price_as_of": "2026-07-14",
+  "quote_latest_as_of": "2026-07-14",
+  "research_overlay_note_count": 0,
+  "research_overlay_status": "not_configured",
+  "sentiment_label": "neutral",
+  "stale_price": false
+}

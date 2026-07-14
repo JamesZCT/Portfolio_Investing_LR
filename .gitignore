@@ -6,6 +6,9 @@ __pycache__/
 .netlify/
 outputs/
 config.yaml
+private/
+.research/
+research_digest/
 web/node_modules/
 web/dist/
 web/*.tsbuildinfo
