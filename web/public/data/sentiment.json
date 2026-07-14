@@ -402,19 +402,6 @@
       "title": "The Big Tech Fund Hiding Inside SPY ETF - Trefis"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQUjF6UGJuU3hYU011RlBkR3ZNdXNBd2owcEtNS24zUTBNbWEzc0VVRDZsUEpJNkpUVDBZemloUTZVd3dJNnd4OENnU2JoczE1X3pkT2VOaW9fZXR3REd3WU84MWdXY1FDcDFyUEdQTVZBa1dndDFFdzJhQXM4VXdRQm9FQUVpQTJHcWVUbFViZUNLd3dmWXVkX2VfZmR6NldTODJZMDJPbklTNXg1czU2b0JnSThQV3ZJYWlzMUZhOVdnamhMdDRCMHpGbU9uN1BEWkR2VFhUeGltYmFZMzRTbQ?oc=5",
-      "matched_terms": [],
-      "published": "2026-07-13T22:17:30+00:00",
-      "sentiment_label": "neutral",
-      "sentiment_score": 0.0,
-      "source": "24/7 Wall St.",
-      "themes": [
-        "general market"
-      ],
-      "ticker": "SPY",
-      "title": "RSP's Equal-Weight Trap: How a $10,000 Investment Lost $27,800 to Fees and Rebalancing Drag Over a Decade - 24/7 Wall St."
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQZHJaYUZYUmlQR21paGJRMFZkN3c3aV9IOXNUR2Y2ZEotWEMyTGROYXhURThKdzR4Wnh6Q2s2WEZZUk5jNU9pSl92b2FxdDB5OW5SVlpUTEhZTWFKTGFEbW5NdENXV0FRRFpyWi1BV0QtVEt2OEZWQ3FQZXNyVUpuX2p1SWxlNC1Ib0tYclpUdU1pLWRB?oc=5",
       "matched_terms": [],
       "published": "2026-07-13T18:00:00+00:00",
@@ -426,6 +413,19 @@
       ],
       "ticker": "SPY",
       "title": "The Vanguard S&P 500 ETF Is Magnificent. These Investments Could Be Even Better. - The Motley Fool"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQUjF6UGJuU3hYU011RlBkR3ZNdXNBd2owcEtNS24zUTBNbWEzc0VVRDZsUEpJNkpUVDBZemloUTZVd3dJNnd4OENnU2JoczE1X3pkT2VOaW9fZXR3REd3WU84MWdXY1FDcDFyUEdQTVZBa1dndDFFdzJhQXM4VXdRQm9FQUVpQTJHcWVUbFViZUNLd3dmWXVkX2VfZmR6NldTODJZMDJPbklTNXg1czU2b0JnSThQV3ZJYWlzMUZhOVdnamhMdDRCMHpGbU9uN1BEWkR2VFhUeGltYmFZMzRTbQ?oc=5",
+      "matched_terms": [],
+      "published": "2026-07-13T22:17:30+00:00",
+      "sentiment_label": "neutral",
+      "sentiment_score": 0.0,
+      "source": "24/7 Wall St.",
+      "themes": [
+        "general market"
+      ],
+      "ticker": "SPY",
+      "title": "RSP's Equal-Weight Trap: How a $10,000 Investment Lost $27,800 to Fees and Rebalancing Drag Over a Decade - 24/7 Wall St."
     },
     {
       "link": "https://news.google.com/rss/articles/CBMizwJBVV95cUxNaU5HVjJXWVBaUFRaNTRDTmtsckxrNzFzOFVkeDAyZmJUTFVFS2h1OFFUQWJ5VlZEX04tU1c0S3RlOHNXVDlSS1VpSXNXc1BZaVVzZEV1dm5RT1ZmR1k1dWNlSzZtTGdETElibGFUejh6M2VkaVBNSzJkRXlyd2dYVXdqRUNVUXVJRkd0ZXdBckhONklXWW5vODZTSlVtV0Y2VUY4SnpFZVU4M0NjcGE4b1BFMTN6VDNLQnF4cFc2ekZNRlUtaThySjIzTVhISHRnMkRkTjhlS2RyZEFUSGcwcTNJVW1WT3lWSHMtWU56dThkYlh5M3ZlNndfRGVUbG9yb3M3dm5paG5ZVmFrdDlEVE9fOER0NDdLQ0xzTy1MUzlyOVJxN2YzSGs4SWNDUXhwN2ViV2lNbGRvN3BKZmhfdC1ING9jM19WRXp6RXhQTQ?oc=5",
@@ -503,12 +503,12 @@
       "title": "Apple Stock Hits Record Territory as Traders Sour on AI Spending - MacRumors"
     }
   ],
-  "generated_at": "2026-07-14T04:18:58.426634+00:00",
+  "generated_at": "2026-07-14T04:23:44.067173+00:00",
   "market": "us",
   "mode": "real",
   "summary": {
     "ai_layer": {
-      "analysis": "{\n  \"sentiment\": \"Cautious\",\n  \"risks\": [\n    \"Geopolitical tensions in the Middle East (e.g., Hormuz, Iran) could disrupt global energy markets and affect investor risk appetite.\",\n    \"AI-related trade concerns are resurfacing, potentially impacting chip stocks and broader tech sectors.\",\n    \"Market sentiment is mixed, with both positive economic outlooks and heightened geopolitical risks creating uncertainty.\",\n    \"Historical patterns suggest potential for market volatility in 2026, which could challenge long-term growth assumptions.\"\n  ],\n  \"watchlist\": [\n    \"SPY (S&P 500 ETF)\",\n    \"SK Hynix (000660.KS)\",\n    \"AI-related tech stocks (e.g., NVIDIA, AMD, TSMC)\",\n    \"Energy sector ETFs (e.g., XLE)\",\n    \"Vanguard AI ETF (e.g., VGT or similar)\"\n  ],\n  \"recommended_posture\": \"Maintain a balanced portfolio with a focus on defensive and diversified holdings. Consider reducing exposure to high-volatility sectors like energy and semiconductors, while maintaining a small allocation to AI-driven growth opportunities. Monitor geopolitical developments and macroeconomic indicators closely. Avoid overexposure to speculative or high-risk assets in the current environment.\"\n}",
+      "analysis": "{\n  \"sentiment\": \"Cautious\",\n  \"risks\": [\n    \"Geopolitical tensions in the Middle East (Hormuz, Iran) may continue to pressure energy and global markets.\",\n    \"AI trade concerns are resurfacing, impacting chip stocks and broader tech sectors.\",\n    \"Market sentiment is mixed with both positive economic forecasts and warnings about potential crashes.\",\n    \"High valuations and market momentum may be vulnerable to corrections if macroeconomic risks materialize.\"\n  ],\n  \"watchlist\": [\n    \"SPY (S&P 500 ETF)\",\n    \"SK Hynix (000660.KS)\",\n    \"Oil-related equities\",\n    \"AI-focused tech stocks\",\n    \"Vanguard ETFs (e.g., VOO)\",\n    \"Corporate earnings reports for AI-related sectors\"\n  ],\n  \"recommended_posture\": \"Maintain a balanced portfolio with a focus on defensive and diversified holdings. Consider reducing exposure to high-volatility sectors like energy and semiconductors. Monitor geopolitical developments and AI trade dynamics closely. Avoid overexposure to speculative growth stocks unless risk appetite is well-managed.\"\n}",
       "model": "qwen3:8b",
       "note": "LLM output is a research overlay and should not override rule, risk, and price evidence by itself.",
       "prompt_template": "You are a cautious portfolio research agent. Use the headlines, market-regime facts, and rule-based portfolio constraints to explain market sentiment and produce a conditional, non-execution investment posture. Do not promise returns. Return JSON with sentiment, risks, watchlist, and recommended posture.\n\nBenchmark: SPY\nRule engine posture: balanced\nNews score: 0.067\nHeadlines: ['Stocks end lower as oil prices surge on renewed Hormuz tensions, SK Hynix leads chip stock sell-off - CNBC', 'Iran strikes, Lindsey Graham, Apple takes OpenAI to court and more in Morning Squawk - CNBC', 'Stock Market Today: Dow Jones, Nasdaq 100, S&P 500 Futures Slips as US and Iran Exchange Strikes\u2014 Saratog - Benzinga', 'The 10 best state economies in America in 2026 - CNBC', 'SK Hynix stock falls, leads broader chip sector declines as AI trade angst returns - Yahoo Finance', 'Will the Stock Market Crash in 2026? History Says It May Happen as This Event Draws Near. - Yahoo Finance', \"This Vanguard ETF Would Have Quadrupled Your Money Over the Last Decade. History Says Now Is a Smart Time to Invest. (It's Likely to Outperform SpaceX, Too.) - Yahoo Finance\", 'The stock-market rally now hinges more on AI than oil - MarketWatch', \"Corporate America's best earnings in 5 years are set to keep the AI trade humming - Opening Bell Daily\", 'This Is Why the S&P 500 Keeps Breaking Records - inc.com']",
