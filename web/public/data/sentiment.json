@@ -78,16 +78,18 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPTW4yVzdPb1d3TE4wNnVLYkl2RGw4amk3aW83SHc1V1FrVjgyYThXOWRWb0lPZ29yanFpQ3l4MlJHWHNPbmxvVm5FemlLS0syRmlIUFBTYUxOb3RSdEFCQUtIWVFCVWhlQXA4aUlKcmFGQXZLa0szcnc0a3RLRkIzWFRn?oc=5",
-      "matched_terms": [],
-      "published": "2026-07-14T20:48:00+00:00",
-      "sentiment_label": "neutral",
-      "sentiment_score": 0.0,
+      "matched_terms": [
+        "strong"
+      ],
+      "published": "2026-07-14T22:45:00+00:00",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.27999999999999997,
       "source": "WSJ",
       "themes": [
         "general market"
       ],
       "ticker": "MARKET",
-      "title": "Stock Market Today: Dow, Nasdaq Move Higher; IBM Sinks 24%; Warsh Hearing Live \u2014 Live Updates - WSJ"
+      "title": "Stock Market News, July 14, 2026: Stocks Rise as Bank Results Point to Strong Economy - WSJ"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOS3hyY3d4TVI1X0dVdGVDU1IwRmZ1RnlOWDFHQkFrUGpmMlN0M0JqNkxFS2RidHJkVjU3c1V4VVRSWVNwakNlQmFlNy1wanNEVnN5SW5Fb1prVmlkMnVZLVVWU0h4TWUtTlpRazVmV1cxMGpabXNzQUJfelBzeXVqeFFwd1ZTX0k4?oc=5",
@@ -494,33 +496,33 @@
       "title": "AAPL Stock Slips \u2014 OpenAI Says It Sees No \u2018Evidence\u2019 That Apple Lawsuit Has Merit - Yahoo Finance"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPRkgzTThRaUg0b0V4YXdkTDJrNS1nT09fSE5uMVBlRlcxd0RFeGRsRjc4MVJzQ1pJeWxBRG5pUWlfRXlhWE56WTFCZmhuckVpeVhwSWxDXzZRZVFHS1BYejdINXF0S2JXODhUaWUzU3pLRXFmVjlhNUF4aG1wMVFiTDZVUHd2cW9uRDJTcVJ6Z0FCVE5jdzh3WkFaSE1kSndmblFhTFRn?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNWTZrVkJGM2hubloxSHJnMGFKUU9xeGp0RDVIRG1MRjBTU1lIZ2FjTHZ1YzBqeDZ4TG5fcDNxNFpQUXp3R3MyTHZrNnZWN1otcHFjUGpraWdjSjRldmZOSVFKNEYxdERBbktmNnkzQ3h4MTNlTDRtVV9KeXI4WmZKTkRCXzJpWUpydUhmYUNHb1FUS1R0aGFZMDRGM0VNUnlybHQwbWdKUC1BcDQ?oc=5",
       "matched_terms": [],
-      "published": "2026-07-14T21:30:26+00:00",
+      "published": "2026-07-14T15:51:01+00:00",
       "sentiment_label": "neutral",
       "sentiment_score": 0.0,
-      "source": "Trefis",
+      "source": "CNBC",
       "themes": [
-        "general market"
+        "AI / semiconductors"
       ],
       "ticker": "AAPL",
-      "title": "What You Actually Pay To Join The AAPL Run - Trefis"
+      "title": "Jim Cramer says don't bite on Apple sell call; buy his new chip favorite - CNBC"
     }
   ],
-  "generated_at": "2026-07-14T23:09:51.138882+00:00",
+  "generated_at": "2026-07-14T23:30:18.241485+00:00",
   "market": "us",
   "mode": "real",
   "summary": {
     "ai_layer": {
-      "analysis": "{\n  \"sentiment\": \"mixed\",\n  \"risks\": [\n    \"Volatility in chip stocks due to geopolitical tensions and macroeconomic uncertainty\",\n    \"Rising 10-Year Treasury Yield may pressure equity valuations and increase borrowing costs\",\n    \"Speculative behavior and extreme market positioning may lead to overvaluation risks\",\n    \"Margin debt and leverage ratios could amplify market swings if equity prices decline\"\n  ],\n  \"watchlist\": [\n    \"Chip sector (e.g., NVIDIA, AMD, Intel)\",\n    \"Energy sector (e.g., oil prices, geopolitical tensions)\",\n    \"AI-related equities and tech stocks\",\n    \"Federal Reserve policy announcements and rate decisions\",\n    \"Corporate earnings reports and market positioning\"\n  ],\n  \"research-note conflicts\": [\n    \"Conflicting signals from public information signs regarding market bubbles and speculative behavior\",\n    \"Uncertainty around the impact of AI capex on economic growth and corporate earnings\",\n    \"Ambiguity in the relationship between rising Treasury yields and equity valuations\"\n  ],\n  \"recommended posture\": \"balanced\",\n  \"rationale\": \"The market is experiencing mixed sentiment due to conflicting macroeconomic signals, geopolitical tensions, and speculative behavior. While short-term rallies are occurring due to easing rate-hike expectations and soft inflation data, the underlying risks remain elevated. The rising 10-Year Treasury Yield suggests potential pressure on equity valuations, and the cautionary signals from private research notes highlight the need for vigilance regarding market bubbles and speculative overexposure. Given the balanced rule engine posture and the mixed sentiment, a balanced approach is appropriate to manage risk while remaining open to potential opportunities.\"\n}",
+      "analysis": "{\n  \"sentiment\": \"Neutral with cautionary undertones\",\n  \"risks\": [\n    \"Earnings season volatility due to mixed tech performance\",\n    \"Oil price fluctuations driven by geopolitical tensions\",\n    \"Rising 10-Year Treasury Yield pressuring equity valuations\",\n    \"Speculative positioning in equities could lead to overcorrection\",\n    \"AI-related macroeconomic risks and capital expenditures uncertainty\"\n  ],\n  \"watchlist\": [\n    \"Chip sector (e.g., SK Hynix, NVIDIA, AMD)\",\n    \"Energy sector (e.g., oil prices, geopolitical risk)\",\n    \"AI-related equities and tech innovation exposure\",\n    \"Bank earnings and economic sentiment indicators\",\n    \"Federal Reserve policy signals and rate expectations\"\n  ],\n  \"research-note conflicts\": [\n    \"Conflicting signals from Fed policy releases and market reactions\",\n    \"AI capex risk vs. potential for AI-driven economic growth\",\n    \"Speculative positioning vs. fundamental economic data\"\n  ],\n  \"recommended posture\": \"Maintain a balanced portfolio with defensive allocations, monitor sector-specific volatility, and avoid overexposure to speculative or high-beta equities. Rebalance based on macroeconomic data and Fed policy developments.\"\n}",
       "model": "qwen3:8b",
       "note": "LLM output is a research overlay and should not override rule, risk, and price evidence by itself.",
-      "prompt_template": "You are a cautious portfolio research agent. Use the headlines, market-regime facts, private research notes and public information signs when present, and rule-based portfolio constraints to explain market sentiment and produce a conditional, non-execution investment posture. Do not promise returns. Return JSON with sentiment, risks, watchlist, research-note conflicts, and recommended posture. Public information signs have zero decision weight: use them to explain and form questions, never to override price, allocation, or risk rules.\n\nBenchmark: SPY\nRule engine posture: balanced\nNews score: 0.019\nPrivate research overlay status: empty\nPrivate research notes: []\nPublic information signs: [{'title': \"Minutes of the Board's discount rate meetings on June 8 and June 17, 2026\", 'source': 'Federal Reserve', 'signal': 'event', 'why_it_matters': 'Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting.', 'decision_use': 'information_only'}, {'title': 'Federal Reserve announces the leadership and objectives of its task forces to advance the conduct of monetary policy', 'source': 'Federal Reserve', 'signal': 'event', 'why_it_matters': 'Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting.', 'decision_use': 'information_only'}, {'title': 'Federal Reserve Board issues enforcement action with TS Banking Group, Inc. and TS Contrarian Bancshares, Inc.', 'source': 'Federal Reserve', 'signal': 'event', 'why_it_matters': 'Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting.', 'decision_use': 'information_only'}, {'title': 'Minutes of the Federal Open Market Committee, June 16-17, 2026', 'source': 'Federal Reserve', 'signal': 'event', 'why_it_matters': 'Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting.', 'decision_use': 'information_only'}, {'title': '10-Year Treasury Yield', 'source': 'FRED / Federal Reserve Bank of St. Louis', 'signal': 'rising', 'why_it_matters': 'Long-term yields affect equity valuation, borrowing costs, and the relative appeal of bonds versus stocks. Latest change: +0.06 percentage points.', 'decision_use': 'information_only'}, {'title': 'Spotting Market Bubbles: Why History Says It\u2019s Nearly Impossible', 'source': 'Lance Roberts / RIA', 'signal': 'cautionary', 'why_it_matters': 'Commentary supplies a research hypothesis and watch items; it is not independent evidence for changing portfolio weights.', 'decision_use': 'information_only'}, {'title': 'Big Bank Earnings Kick Off Earnings Season', 'source': 'Lance Roberts / RIA', 'signal': 'cautionary', 'why_it_matters': 'Technical and positioning commentary can identify conditions to test against current price trend, drawdown, and concentration rules.', 'decision_use': 'information_only'}, {'title': 'AI Capex Risk Cuts Both Ways In The American Economy', 'source': 'Lance Roberts / RIA', 'signal': 'cautionary', 'why_it_matters': \"Macro commentary provides a scenario to compare with primary economic data and the portfolio's rate sensitivity.\", 'decision_use': 'information_only'}, {'title': 'Margin Debt Risk: The Ratios That Mislead Investors', 'source': 'Lance Roberts / RIA', 'signal': 'cautionary', 'why_it_matters': \"Macro commentary provides a scenario to compare with primary economic data and the portfolio's rate sensitivity.\", 'decision_use': 'information_only'}]\nHeadlines: ['Stocks end higher buoyed by light inflation data, bounce in chip stocks - CNBC', 'Stock market today: Dow, S&P 500, Nasdaq fall as chip stocks tumble, oil surges on US-Iran tensions - Yahoo Finance', 'Stocks end lower as oil prices surge on renewed Hormuz tensions, SK Hynix leads chip stock sell-off - CNBC', 'Stock Market News, July 13, 2026: Oil Jumps, While AI Jitters Weigh on Nasdaq - WSJ', 'Stock market today: Dow, S&P 500, Nasdaq rise as Fed rate-hike bets ease, chip stocks rally - Yahoo Finance', 'Stock Market Today: Dow, Nasdaq Move Higher; IBM Sinks 24%; Warsh Hearing Live \u2014 Live Updates - WSJ', \"The U.S. Stock Market Has a KOSPI Problem - Barron's\", 'Stock Market News, July 14, 2026: Dow ends flat after soft CPI inflation report, Nasdaq and S&P 500 climb as tech stocks rebound; Trump walks back Hormuz tolls; IBM tumbles - MarketWatch', \"Stock market outlook: S&P 500 to lose much of 2026 gains as 'speculation is hitting extreme levels' - Fortune\", \"Corporate America's best earnings in 5 years are set to keep the AI trade humming - Opening Bell Daily\"]",
+      "prompt_template": "You are a cautious portfolio research agent. Use the headlines, market-regime facts, private research notes and public information signs when present, and rule-based portfolio constraints to explain market sentiment and produce a conditional, non-execution investment posture. Do not promise returns. Return JSON with sentiment, risks, watchlist, research-note conflicts, and recommended posture. Public information signs have zero decision weight: use them to explain and form questions, never to override price, allocation, or risk rules.\n\nBenchmark: SPY\nRule engine posture: balanced\nNews score: 0.027\nPrivate research overlay status: empty\nPrivate research notes: []\nPublic information signs: [{'title': \"Minutes of the Board's discount rate meetings on June 8 and June 17, 2026\", 'source': 'Federal Reserve', 'signal': 'event', 'why_it_matters': 'Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting.', 'decision_use': 'information_only'}, {'title': 'Federal Reserve announces the leadership and objectives of its task forces to advance the conduct of monetary policy', 'source': 'Federal Reserve', 'signal': 'event', 'why_it_matters': 'Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting.', 'decision_use': 'information_only'}, {'title': 'Federal Reserve Board issues enforcement action with TS Banking Group, Inc. and TS Contrarian Bancshares, Inc.', 'source': 'Federal Reserve', 'signal': 'event', 'why_it_matters': 'Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting.', 'decision_use': 'information_only'}, {'title': 'Minutes of the Federal Open Market Committee, June 16-17, 2026', 'source': 'Federal Reserve', 'signal': 'event', 'why_it_matters': 'Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting.', 'decision_use': 'information_only'}, {'title': '10-Year Treasury Yield', 'source': 'FRED / Federal Reserve Bank of St. Louis', 'signal': 'rising', 'why_it_matters': 'Long-term yields affect equity valuation, borrowing costs, and the relative appeal of bonds versus stocks. Latest change: +0.06 percentage points.', 'decision_use': 'information_only'}, {'title': 'Spotting Market Bubbles: Why History Says It\u2019s Nearly Impossible', 'source': 'Lance Roberts / RIA', 'signal': 'cautionary', 'why_it_matters': 'Commentary supplies a research hypothesis and watch items; it is not independent evidence for changing portfolio weights.', 'decision_use': 'information_only'}, {'title': 'Big Bank Earnings Kick Off Earnings Season', 'source': 'Lance Roberts / RIA', 'signal': 'cautionary', 'why_it_matters': 'Technical and positioning commentary can identify conditions to test against current price trend, drawdown, and concentration rules.', 'decision_use': 'information_only'}, {'title': 'AI Capex Risk Cuts Both Ways In The American Economy', 'source': 'Lance Roberts / RIA', 'signal': 'cautionary', 'why_it_matters': \"Macro commentary provides a scenario to compare with primary economic data and the portfolio's rate sensitivity.\", 'decision_use': 'information_only'}, {'title': 'Margin Debt Risk: The Ratios That Mislead Investors', 'source': 'Lance Roberts / RIA', 'signal': 'cautionary', 'why_it_matters': \"Macro commentary provides a scenario to compare with primary economic data and the portfolio's rate sensitivity.\", 'decision_use': 'information_only'}]\nHeadlines: ['Stocks end higher buoyed by light inflation data, bounce in chip stocks - CNBC', 'Stock market today: Dow, S&P 500, Nasdaq fall as chip stocks tumble, oil surges on US-Iran tensions - Yahoo Finance', 'Stocks end lower as oil prices surge on renewed Hormuz tensions, SK Hynix leads chip stock sell-off - CNBC', 'Stock Market News, July 13, 2026: Oil Jumps, While AI Jitters Weigh on Nasdaq - WSJ', 'Stock market today: Dow, S&P 500, Nasdaq rise as Fed rate-hike bets ease, chip stocks rally - Yahoo Finance', 'Stock Market News, July 14, 2026: Stocks Rise as Bank Results Point to Strong Economy - WSJ', \"The U.S. Stock Market Has a KOSPI Problem - Barron's\", 'Stock Market News, July 14, 2026: Dow ends flat after soft CPI inflation report, Nasdaq and S&P 500 climb as tech stocks rebound; Trump walks back Hormuz tolls; IBM tumbles - MarketWatch', \"Stock market outlook: S&P 500 to lose much of 2026 gains as 'speculation is hitting extreme levels' - Fortune\", \"Corporate America's best earnings in 5 years are set to keep the AI trade humming - Opening Bell Daily\"]",
       "provider": "ollama",
       "status": "llm_generated"
     },
     "article_count": 36,
-    "confidence": 0.8028333333333334,
+    "confidence": 0.804,
     "forecast_bias": "neutral",
     "information_signs": {
       "commentary_signs": [
@@ -599,7 +601,7 @@
         "portfolio_weight": 0.0,
         "rule": "Information signs may explain conditions and create review questions, but they do not change target weights, trade instructions, or risk limits. Any future influence must be explicit, bounded, and recorded with a reason."
       },
-      "generated_at": "2026-07-14T23:09:43.442341+00:00",
+      "generated_at": "2026-07-14T23:30:12.823038+00:00",
       "market": "us",
       "primary_signs": [
         {
@@ -759,14 +761,14 @@
     "investment_posture": "balanced",
     "label": "neutral",
     "negative_count": 5,
-    "neutral_count": 22,
-    "overall_score": 0.01888888888888889,
-    "positive_count": 9,
+    "neutral_count": 21,
+    "overall_score": 0.026666666666666665,
+    "positive_count": 10,
     "rationale": "News and price evidence are mixed or not strong enough for a directional overlay.",
     "recommended_action": "follow target weights and rule-based trims/adds; do not override price evidence with headlines alone",
     "research_overlay": {
       "decision_use": "No private research overlay was applied.",
-      "generated_at": "2026-07-14T23:09:42.085078+00:00",
+      "generated_at": "2026-07-14T23:30:08.571681+00:00",
       "note": "No supported research notes were found in the configured directory.",
       "note_count": 0,
       "notes": [],
@@ -779,11 +781,11 @@
     "source_mode": "rss",
     "top_themes": [
       {
-        "count": 21,
+        "count": 20,
         "theme": "general market"
       },
       {
-        "count": 8,
+        "count": 9,
         "theme": "AI / semiconductors"
       },
       {

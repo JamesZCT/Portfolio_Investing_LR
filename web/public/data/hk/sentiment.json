@@ -84,17 +84,20 @@
       "title": "Hong Kong stocks close higher Tuesday - \u5df4\u58eb\u7684\u5831"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPamE0dWRxQXFLUE01enJBVU9hdTdCMHFOZ1JSOXo0VG1YU3I3MDJ0N3dwNmlReHdVLWRxZWZydmZvdWpNeDlDWmNzREROaWpITF9vdVBCRjlGMlQyRGZSbUVXZldreUVCeXRENVo4Y3U3N3R5eTl4ek10VUZnc19nMTBFTEctSDJMSWx4NEpGc2VrZHQwazdRV2F3TTNXZ1o5b0k0YjBKWUdVVUhWbVE?oc=5",
-      "matched_terms": [],
-      "published": "2026-07-13T08:59:20+00:00",
-      "sentiment_label": "neutral",
-      "sentiment_score": 0.0,
+      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOdzcyeWhsSzh2RkhlQ00waUthR3NHTllNMjR2anZ2VWVldE1ZTk1KdWlIV1JPbnpYYWtTV3B1WEdzbXQyY0E2ZF9SOFNjQTAyd2lVQkQyZXE1SmE3ZHJEaVZTQzh3dlk4NU1SZU9feE9YbS1wamZONjN3bW1QSXFFcU9Zd0x3cG9NUG5yQkZHbjJqSFNnUkU4MUhBNW1BSGN3ZW9IZjZUOUtXUjQ?oc=5",
+      "matched_terms": [
+        "ai"
+      ],
+      "published": "2026-07-13T03:23:02+00:00",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.16,
       "source": "Moomoo",
       "themes": [
-        "general market"
+        "AI / semiconductors",
+        "China / policy"
       ],
       "ticker": "MARKET",
-      "title": "Robot-related stocks retreat across the board as YouShu Technology's STAR Market IPO gets approval - Moomoo"
+      "title": "Hong Kong stock market movement | PCB concept stocks plunged across the board; Jensen Huang denied rumors of a delay to Rubin Ultra; institutions say AI hardware market congestion has eased. - Moomoo"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQSlJuc1hrRzQxR2RJVjRTS3JJeU01RU90TnExNnZmcDFaR2xRa0otRnpvVWJZN0d6NDVPM2U0SWFqajF6c3FKX3NmUTFncWxiYjZpLVd4VVNHVVNpUjF1V0R5V0U4eGJtUktULXZQRXJZdGJLa0RyRTQ5cnhtdHRfWjlzWkR6UXcxR0JZS3RqTGtySEVURHZEbmRqM3NNdjlVbVV2anliWnBaWHF0VVE?oc=5",
@@ -498,20 +501,20 @@
       "title": "Tencent unit raises $1.5 billion from Kuaishou share sale, term sheet shows - Reuters"
     }
   ],
-  "generated_at": "2026-07-14T23:10:06.553310+00:00",
+  "generated_at": "2026-07-14T23:30:35.423792+00:00",
   "market": "hk",
   "mode": "real",
   "summary": {
     "ai_layer": {
-      "analysis": "{\n  \"sentiment\": \"Cautious with mixed signals\",\n  \"risks\": [\n    \"Rising 10-Year Treasury Yield may pressure equity valuations\",\n    \"AI valuation concerns and Fed rate outlook add uncertainty\",\n    \"Margin debt and macroeconomic risks remain elevated\",\n    \"Earnings season may test portfolio concentration and trend resilience\"\n  ],\n  \"watchlist\": [\n    \"Shein's potential $3bn Hong Kong IPO\",\n    \"AI-related stocks (e.g., YouShu Technology, Robot-related sectors)\",\n    \"Fed policy developments and rate outlook\",\n    \"Hang Seng Index performance relative to 2800.HK benchmark\"\n  ],\n  \"research-note conflicts\": [\n    \"No private research notes available to override public signals\",\n    \"Public information signs are informational only and do not influence portfolio posture\"\n  ],\n  \"recommended posture\": \"Defensive with selective exposure to high-quality, low-volatility equities. Maintain liquidity and avoid overexposure to AI and tech-heavy sectors. Monitor Fed policy and rate expectations closely. Use earnings season as a time to reassess portfolio positioning and risk tolerance.\"\n}",
+      "analysis": "{\n  \"sentiment\": \"cautious optimism\",\n  \"risks\": [\n    \"Rising 10-Year Treasury Yield may pressure equity valuations and increase borrowing costs\",\n    \"AI valuation concerns and regulatory uncertainty in the Hong Kong market\",\n    \"Potential market corrections due to Fed rate outlook and macroeconomic uncertainty\",\n    \"Earnings season volatility and margin debt risk in equities\"\n  ],\n  \"watchlist\": [\n    \"Shein's potential $3 billion Hong Kong IPO\",\n    \"AI hardware market dynamics and valuation concerns\",\n    \"Fed rate decisions and their impact on liquidity and economic expectations\",\n    \"Hong Kong's Hang Seng Index and its sensitivity to China trade and macroeconomic data\"\n  ],\n  \"research-note conflicts\": [],\n  \"recommended posture\": \"defensive\"\n}",
       "model": "qwen3:8b",
       "note": "LLM output is a research overlay and should not override rule, risk, and price evidence by itself.",
-      "prompt_template": "You are a cautious portfolio research agent. Use the headlines, market-regime facts, private research notes and public information signs when present, and rule-based portfolio constraints to explain market sentiment and produce a conditional, non-execution investment posture. Do not promise returns. Return JSON with sentiment, risks, watchlist, research-note conflicts, and recommended posture. Public information signs have zero decision weight: use them to explain and form questions, never to override price, allocation, or risk rules.\n\nBenchmark: 2800.HK\nRule engine posture: defensive\nNews score: 0.054\nPrivate research overlay status: empty\nPrivate research notes: []\nPublic information signs: [{'title': \"Minutes of the Board's discount rate meetings on June 8 and June 17, 2026\", 'source': 'Federal Reserve', 'signal': 'event', 'why_it_matters': 'Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting.', 'decision_use': 'information_only'}, {'title': 'Federal Reserve announces the leadership and objectives of its task forces to advance the conduct of monetary policy', 'source': 'Federal Reserve', 'signal': 'event', 'why_it_matters': 'Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting.', 'decision_use': 'information_only'}, {'title': 'Federal Reserve Board issues enforcement action with TS Banking Group, Inc. and TS Contrarian Bancshares, Inc.', 'source': 'Federal Reserve', 'signal': 'event', 'why_it_matters': 'Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting.', 'decision_use': 'information_only'}, {'title': 'Minutes of the Federal Open Market Committee, June 16-17, 2026', 'source': 'Federal Reserve', 'signal': 'event', 'why_it_matters': 'Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting.', 'decision_use': 'information_only'}, {'title': '10-Year Treasury Yield', 'source': 'FRED / Federal Reserve Bank of St. Louis', 'signal': 'rising', 'why_it_matters': 'Long-term yields affect equity valuation, borrowing costs, and the relative appeal of bonds versus stocks. Latest change: +0.06 percentage points.', 'decision_use': 'information_only'}, {'title': 'Spotting Market Bubbles: Why History Says It\u2019s Nearly Impossible', 'source': 'Lance Roberts / RIA', 'signal': 'cautionary', 'why_it_matters': 'Commentary supplies a research hypothesis and watch items; it is not independent evidence for changing portfolio weights.', 'decision_use': 'information_only'}, {'title': 'Big Bank Earnings Kick Off Earnings Season', 'source': 'Lance Roberts / RIA', 'signal': 'cautionary', 'why_it_matters': 'Technical and positioning commentary can identify conditions to test against current price trend, drawdown, and concentration rules.', 'decision_use': 'information_only'}, {'title': 'AI Capex Risk Cuts Both Ways In The American Economy', 'source': 'Lance Roberts / RIA', 'signal': 'cautionary', 'why_it_matters': \"Macro commentary provides a scenario to compare with primary economic data and the portfolio's rate sensitivity.\", 'decision_use': 'information_only'}, {'title': 'Margin Debt Risk: The Ratios That Mislead Investors', 'source': 'Lance Roberts / RIA', 'signal': 'cautionary', 'why_it_matters': \"Macro commentary provides a scenario to compare with primary economic data and the portfolio's rate sensitivity.\", 'decision_use': 'information_only'}]\nHeadlines: ['Shein targets up to $3bn in Hong Kong IPO, could launch by August \u2013 report - Yahoo Finance', 'Hong Kong Stock Exchange: Hang Seng Climbs 0.52% to 24,340.73 as China Trade Beat Lifts Sentiment - BBN Times', 'Shein scheduled for Hong Kong IPO hearing on Thursday, sources say - Reuters', 'Macroscope | How AI is both a boon and a bane for Hong Kong\u2019s stock market - South China Morning Post', 'Shein Wins China Approval for Potential $3 Billion Hong Kong IPO - TradingView', 'Hong Kong stocks close higher Tuesday - \u5df4\u58eb\u7684\u5831', \"Robot-related stocks retreat across the board as YouShu Technology's STAR Market IPO gets approval - Moomoo\", 'China Stocks in Hong Kong Eye Bear Market on Spending Woes - Bloomberg.com', 'Outlook on Nasdaq, HSI and USD/JPY | Week of 22 Jun - ig.com', 'Hong Kong stock decline deepens on AI valuation concerns, Fed rate outlook - South China Morning Post']",
+      "prompt_template": "You are a cautious portfolio research agent. Use the headlines, market-regime facts, private research notes and public information signs when present, and rule-based portfolio constraints to explain market sentiment and produce a conditional, non-execution investment posture. Do not promise returns. Return JSON with sentiment, risks, watchlist, research-note conflicts, and recommended posture. Public information signs have zero decision weight: use them to explain and form questions, never to override price, allocation, or risk rules.\n\nBenchmark: 2800.HK\nRule engine posture: defensive\nNews score: 0.059\nPrivate research overlay status: empty\nPrivate research notes: []\nPublic information signs: [{'title': \"Minutes of the Board's discount rate meetings on June 8 and June 17, 2026\", 'source': 'Federal Reserve', 'signal': 'event', 'why_it_matters': 'Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting.', 'decision_use': 'information_only'}, {'title': 'Federal Reserve announces the leadership and objectives of its task forces to advance the conduct of monetary policy', 'source': 'Federal Reserve', 'signal': 'event', 'why_it_matters': 'Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting.', 'decision_use': 'information_only'}, {'title': 'Federal Reserve Board issues enforcement action with TS Banking Group, Inc. and TS Contrarian Bancshares, Inc.', 'source': 'Federal Reserve', 'signal': 'event', 'why_it_matters': 'Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting.', 'decision_use': 'information_only'}, {'title': 'Minutes of the Federal Open Market Committee, June 16-17, 2026', 'source': 'Federal Reserve', 'signal': 'event', 'why_it_matters': 'Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting.', 'decision_use': 'information_only'}, {'title': '10-Year Treasury Yield', 'source': 'FRED / Federal Reserve Bank of St. Louis', 'signal': 'rising', 'why_it_matters': 'Long-term yields affect equity valuation, borrowing costs, and the relative appeal of bonds versus stocks. Latest change: +0.06 percentage points.', 'decision_use': 'information_only'}, {'title': 'Spotting Market Bubbles: Why History Says It\u2019s Nearly Impossible', 'source': 'Lance Roberts / RIA', 'signal': 'cautionary', 'why_it_matters': 'Commentary supplies a research hypothesis and watch items; it is not independent evidence for changing portfolio weights.', 'decision_use': 'information_only'}, {'title': 'Big Bank Earnings Kick Off Earnings Season', 'source': 'Lance Roberts / RIA', 'signal': 'cautionary', 'why_it_matters': 'Technical and positioning commentary can identify conditions to test against current price trend, drawdown, and concentration rules.', 'decision_use': 'information_only'}, {'title': 'AI Capex Risk Cuts Both Ways In The American Economy', 'source': 'Lance Roberts / RIA', 'signal': 'cautionary', 'why_it_matters': \"Macro commentary provides a scenario to compare with primary economic data and the portfolio's rate sensitivity.\", 'decision_use': 'information_only'}, {'title': 'Margin Debt Risk: The Ratios That Mislead Investors', 'source': 'Lance Roberts / RIA', 'signal': 'cautionary', 'why_it_matters': \"Macro commentary provides a scenario to compare with primary economic data and the portfolio's rate sensitivity.\", 'decision_use': 'information_only'}]\nHeadlines: ['Shein targets up to $3bn in Hong Kong IPO, could launch by August \u2013 report - Yahoo Finance', 'Hong Kong Stock Exchange: Hang Seng Climbs 0.52% to 24,340.73 as China Trade Beat Lifts Sentiment - BBN Times', 'Shein scheduled for Hong Kong IPO hearing on Thursday, sources say - Reuters', 'Macroscope | How AI is both a boon and a bane for Hong Kong\u2019s stock market - South China Morning Post', 'Shein Wins China Approval for Potential $3 Billion Hong Kong IPO - TradingView', 'Hong Kong stocks close higher Tuesday - \u5df4\u58eb\u7684\u5831', 'Hong Kong stock market movement | PCB concept stocks plunged across the board; Jensen Huang denied rumors of a delay to Rubin Ultra; institutions say AI hardware market congestion has eased. - Moomoo', 'China Stocks in Hong Kong Eye Bear Market on Spending Woes - Bloomberg.com', 'Outlook on Nasdaq, HSI and USD/JPY | Week of 22 Jun - ig.com', 'Hong Kong stock decline deepens on AI valuation concerns, Fed rate outlook - South China Morning Post']",
       "provider": "ollama",
       "status": "llm_generated"
     },
     "article_count": 36,
-    "confidence": 0.8081666666666667,
+    "confidence": 0.8088333333333334,
     "forecast_bias": "fragile",
     "information_signs": {
       "commentary_signs": [
@@ -590,7 +593,7 @@
         "portfolio_weight": 0.0,
         "rule": "Information signs may explain conditions and create review questions, but they do not change target weights, trade instructions, or risk limits. Any future influence must be explicit, bounded, and recorded with a reason."
       },
-      "generated_at": "2026-07-14T23:10:03.406745+00:00",
+      "generated_at": "2026-07-14T23:30:33.139707+00:00",
       "market": "hk",
       "primary_signs": [
         {
@@ -750,14 +753,14 @@
     "investment_posture": "defensive",
     "label": "neutral",
     "negative_count": 2,
-    "neutral_count": 24,
-    "overall_score": 0.05444444444444444,
-    "positive_count": 10,
+    "neutral_count": 23,
+    "overall_score": 0.05888888888888889,
+    "positive_count": 11,
     "rationale": "The benchmark remains in a meaningful drawdown even though news tone is mixed.",
     "recommended_action": "prioritize liquidity and staged re-entry rules over one-shot buying",
     "research_overlay": {
       "decision_use": "No private research overlay was applied.",
-      "generated_at": "2026-07-14T23:10:02.164165+00:00",
+      "generated_at": "2026-07-14T23:30:31.869423+00:00",
       "note": "No supported research notes were found in the configured directory.",
       "note_count": 0,
       "notes": [],
@@ -770,15 +773,15 @@
     "source_mode": "rss",
     "top_themes": [
       {
-        "count": 21,
+        "count": 22,
         "theme": "China / policy"
       },
       {
-        "count": 13,
+        "count": 12,
         "theme": "general market"
       },
       {
-        "count": 4,
+        "count": 5,
         "theme": "AI / semiconductors"
       },
       {
