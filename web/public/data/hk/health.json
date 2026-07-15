@@ -1,8 +1,8 @@
 {
   "config_name": "example_hk_config.yaml",
-  "days_since_price": 1,
+  "days_since_price": 0,
   "forecast_bias": "fragile",
-  "generated_at": "2026-07-15T00:23:05.833959+00:00",
+  "generated_at": "2026-07-15T13:57:14.778100+00:00",
   "information_sign_count": 14,
   "information_signs_status": "available",
   "investment_posture": "defensive",
@@ -25,8 +25,8 @@
     "rss_news": "ok",
     "sec_fundamentals": "unavailable"
   },
-  "price_as_of": "2026-07-14",
-  "quote_latest_as_of": "2026-07-14",
+  "price_as_of": "2026-07-15",
+  "quote_latest_as_of": "2026-07-15",
   "research_overlay_note_count": 0,
   "research_overlay_status": "empty",
   "sec_research_failed_count": 0,
