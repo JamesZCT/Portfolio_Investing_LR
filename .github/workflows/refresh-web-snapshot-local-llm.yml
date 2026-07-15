@@ -13,7 +13,7 @@ on:
           - sandbox
       model:
         description: "Local LLM model name"
-        default: "qwen3:8b"
+        default: "qwen3:14b"
         required: true
         type: string
       provider:
@@ -52,12 +52,16 @@ jobs:
     env:
       SNAPSHOT_MODE: ${{ inputs.mode || 'real' }}
       LLM_SENTIMENT_PROVIDER: ${{ inputs.provider || 'ollama' }}
-      LLM_SENTIMENT_MODEL: ${{ inputs.model || 'qwen3:8b' }}
+      LLM_SENTIMENT_MODEL: ${{ inputs.model || 'qwen3:14b' }}
       LLM_SENTIMENT_THINK: ${{ vars.LLM_SENTIMENT_THINK || 'false' }}
+      LLM_SENTIMENT_TIMEOUT_SECONDS: ${{ vars.LLM_SENTIMENT_TIMEOUT_SECONDS || '75' }}
       OLLAMA_BASE_URL: ${{ vars.OLLAMA_BASE_URL || 'http://127.0.0.1:11434' }}
       OPENAI_BASE_URL: ${{ vars.OPENAI_BASE_URL || 'http://127.0.0.1:8000/v1' }}
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       RESEARCH_DIGEST_DIR: ${{ vars.RESEARCH_DIGEST_DIR || 'C:\portfolio-research-digest' }}
+      SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
+      SEC_FUNDAMENTALS_ENABLED: "true"
+      SEC_DEEP_RESEARCH_LIMIT_PER_GROUP: "5"
       NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
       NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
 
@@ -75,6 +79,14 @@ jobs:
           .\.venv\Scripts\python.exe -m pip install --upgrade pip
           .\.venv\Scripts\python.exe -m pip install -r requirements.txt
           .\.venv\Scripts\python.exe -m pip install -e .
+
+      - name: Restore SEC filing cache
+        uses: actions/cache@v5
+        with:
+          path: outputs/cache/sec
+          key: sec-company-facts-${{ runner.os }}-${{ github.run_id }}
+          restore-keys: |
+            sec-company-facts-${{ runner.os }}-
 
       - name: Prepare config
         run: |

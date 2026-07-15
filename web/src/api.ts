@@ -240,8 +240,50 @@ export type MarketOpportunity = {
   market_cap: number | null;
   average_volume_3m: number | null;
   trailing_pe: number | null;
+  forward_pe?: number | null;
+  price_to_book?: number | null;
+  eps_ttm?: number | null;
+  eps_forward?: number | null;
+  eps_forward_growth_pct?: number | null;
+  profitable?: boolean;
+  next_earnings_date?: string | null;
+  earnings_date_is_estimate?: boolean;
+  analyst_rating?: string | null;
   range_width_pct: number;
   reason: string;
+  research?: {
+    status: "sec_fundamentals" | "quote_only";
+    decision: string;
+    decision_label: string;
+    decision_score: number | null;
+    confidence: "high" | "medium" | "low";
+    sector: string;
+    industry: string;
+    business_model: string;
+    valuation_model: string;
+    scorecard: {
+      quality: number | null;
+      value: number | null;
+      financial_strength: number | null;
+      earnings: number | null;
+      trend: number | null;
+    };
+    earnings: {
+      assessment: string;
+      latest_report_form: string | null;
+      filed_at: string | null;
+      period_end: string | null;
+      report_url?: string | null;
+      revenue_growth_yoy_pct: number | null;
+      net_income_growth_yoy_pct: number | null;
+      next_earnings_date: string | null;
+    };
+    metrics?: Record<string, number | null>;
+    key_takeaways: string[];
+    risks: string[];
+    source: { name: string; url: string; as_of?: string | null };
+    methodology_note?: string;
+  };
 };
 
 export type MarketOpportunitiesPayload = {
@@ -263,6 +305,13 @@ export type MarketOpportunitiesPayload = {
     buy_rule?: string;
     sell_rule?: string;
     policy: string;
+    sector_models?: Record<string, string>;
+  };
+  deep_research?: {
+    status: string;
+    researched_count: number;
+    failed_count: number;
+    note: string;
   };
   action_counts: Record<"buy_candidate" | "hold_watch" | "sell_avoid", number>;
   buy_candidates: MarketOpportunity[];
