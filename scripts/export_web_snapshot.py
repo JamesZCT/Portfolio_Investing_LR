@@ -207,6 +207,7 @@ def _build_health_payload(
     ai_layer = sentiment.get("summary", {}).get("ai_layer", {})
     research_overlay = sentiment.get("summary", {}).get("research_overlay", {})
     information_signs = sentiment.get("summary", {}).get("information_signs", {})
+    deep_research = opportunities.get("deep_research", {})
     return {
         "generated_at": generated_at.isoformat(),
         "market": _market_from_config(config_path),
@@ -231,6 +232,9 @@ def _build_health_payload(
         "information_sign_count": information_signs.get("sign_count", 0),
         "market_screen_status": opportunities.get("status"),
         "market_screen_analyzed_count": opportunities.get("universe", {}).get("analyzed_count", 0),
+        "sec_research_status": deep_research.get("status", "unknown"),
+        "sec_researched_count": deep_research.get("researched_count", 0),
+        "sec_research_failed_count": deep_research.get("failed_count", 0),
         "pipeline": {
             "price_fetch": "ok" if price_as_of else "missing",
             "rss_news": "ok" if sentiment.get("summary", {}).get("article_count", 0) else "empty",
@@ -238,6 +242,7 @@ def _build_health_payload(
             "private_research": research_overlay.get("status", "unknown"),
             "public_information_signs": information_signs.get("status", "unknown"),
             "broad_market_screen": opportunities.get("status", "unknown"),
+            "sec_fundamentals": deep_research.get("status", "unknown"),
         },
     }
 

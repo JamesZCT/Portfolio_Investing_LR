@@ -1,9 +1,12 @@
 from __future__ import annotations
 
 from datetime import datetime, timezone
+import os
 from typing import Any
 
 import pandas as pd
+
+from .sec_fundamentals import enrich_shortlist_with_sec, quote_only_research
 
 
 UNIVERSE_DEFINITION = (
@@ -18,7 +21,12 @@ def build_market_opportunities_payload(market: str, mode: str = "real") -> dict[
 
     try:
         quotes, eligible_total = _fetch_us_equity_universe() if mode == "real" else (_sandbox_quotes(), 6)
-        return rank_market_opportunities(quotes, market=market, eligible_total=eligible_total)
+        return rank_market_opportunities(
+            quotes,
+            market=market,
+            eligible_total=eligible_total,
+            enable_sec_research=mode == "real",
+        )
     except Exception as exc:
         return _unavailable_payload(market, f"Market screen unavailable: {str(exc)[:180]}")
 
@@ -29,6 +37,7 @@ def rank_market_opportunities(
     market: str = "us",
     eligible_total: int | None = None,
     generated_at: datetime | None = None,
+    enable_sec_research: bool = False,
 ) -> dict[str, Any]:
     rows: list[dict[str, Any]] = []
     latest_timestamps: list[int] = []
@@ -57,7 +66,14 @@ def rank_market_opportunities(
                 "market_cap": _number(quote.get("marketCap")),
                 "average_volume_3m": _number(quote.get("averageDailyVolume3Month")),
                 "trailing_pe": _number(quote.get("trailingPE")),
+                "forward_pe": _number(quote.get("forwardPE")),
+                "price_to_book": _number(quote.get("priceToBook")),
+                "eps_ttm": _number(quote.get("epsTrailingTwelveMonths")),
+                "eps_forward": _number(quote.get("epsForward")),
                 "profitable": (_number(quote.get("epsTrailingTwelveMonths")) or 0.0) > 0.0,
+                "next_earnings_date": _timestamp_date(quote.get("earningsTimestamp")),
+                "earnings_date_is_estimate": bool(quote.get("isEarningsDateEstimate")),
+                "analyst_rating": str(quote.get("averageAnalystRating") or "") or None,
                 "return_1y_pct": return_1y,
                 "distance_ma50_pct": (price / ma50 - 1.0) * 100.0,
                 "distance_ma200_pct": (price / ma200 - 1.0) * 100.0,
@@ -83,6 +99,7 @@ def rank_market_opportunities(
     # Strong momentum that is far above its short trend is a watch item, not a fresh buy candidate.
     frame.loc[frame["distance_ma50_pct"] > 20.0, "score"] -= 0.12
     frame["score"] = (frame["score"].clip(0.0, 1.0) * 100.0).round(1)
+    frame["eps_forward_growth_pct"] = frame.apply(_forward_eps_growth, axis=1)
 
     upper = float(frame["score"].quantile(0.75))
     lower = float(frame["score"].quantile(0.25))
@@ -118,10 +135,32 @@ def rank_market_opportunities(
         "market_cap",
         "average_volume_3m",
         "trailing_pe",
+        "forward_pe",
+        "price_to_book",
+        "eps_ttm",
+        "eps_forward",
+        "eps_forward_growth_pct",
+        "profitable",
+        "next_earnings_date",
+        "earnings_date_is_estimate",
+        "analyst_rating",
         "range_width_pct",
         "reason",
     ]
-    for column in ("price", "return_1y_pct", "distance_ma50_pct", "distance_ma200_pct", "range_position", "range_width_pct", "trailing_pe"):
+    for column in (
+        "price",
+        "return_1y_pct",
+        "distance_ma50_pct",
+        "distance_ma200_pct",
+        "range_position",
+        "range_width_pct",
+        "trailing_pe",
+        "forward_pe",
+        "price_to_book",
+        "eps_ttm",
+        "eps_forward",
+        "eps_forward_growth_pct",
+    ):
         frame[column] = pd.to_numeric(frame[column], errors="coerce").round(2)
 
     buy = frame.loc[frame["action"] == "buy_candidate"].sort_values("score", ascending=False)
@@ -131,6 +170,34 @@ def rank_market_opportunities(
     total = eligible_total if eligible_total is not None else len(quotes)
     latest = max(latest_timestamps) if latest_timestamps else None
     latest_date = datetime.fromtimestamp(latest, tz=timezone.utc).date().isoformat() if latest else None
+
+    buy_records = _records(buy, output_columns)
+    hold_records = _records(hold, output_columns)
+    sell_records = _records(sell, output_columns)
+    record_groups = [buy_records, hold_records, sell_records]
+    for group in record_groups:
+        for row in group:
+            row["research"] = quote_only_research(row)
+
+    if enable_sec_research and os.getenv("SEC_FUNDAMENTALS_ENABLED", "true").lower() in {"1", "true", "yes"}:
+        deep_research = enrich_shortlist_with_sec(
+            record_groups,
+            limit_per_group=max(0, int(os.getenv("SEC_DEEP_RESEARCH_LIMIT_PER_GROUP", "5"))),
+        )
+    elif enable_sec_research:
+        deep_research = {
+            "status": "disabled",
+            "researched_count": 0,
+            "failed_count": 0,
+            "note": "SEC deep research is disabled for this refresh.",
+        }
+    else:
+        deep_research = {
+            "status": "not_run",
+            "researched_count": 0,
+            "failed_count": 0,
+            "note": "SEC deep research is not run for sandbox or direct ranking tests.",
+        }
 
     return {
         "status": "available",
@@ -150,19 +217,26 @@ def rank_market_opportunities(
             "latest_price_date": latest_date,
         },
         "methodology": {
-            "summary": "Cross-sectional trend, momentum, and risk screen using 1-year return, distance from 50/200-day averages, and 52-week range position/width.",
-            "buy_rule": "Top-quartile score, positive trailing earnings, above both averages, 50-day above 200-day, and no more than 20% above the 50-day average.",
+            "summary": "Two-stage screen: cross-sectional trend and momentum for the liquid US universe, followed by SEC filing, earnings, valuation, quality, and balance-sheet research for the visible shortlist.",
+            "buy_rule": "A research buy requires a strong trend screen plus acceptable sector-aware quality, valuation, financial-strength, and latest-earnings evidence.",
             "sell_rule": "Bottom-quartile score and below both the 50-day and 200-day averages.",
             "policy": "Research shortlist only. Sell/avoid means review an owned position or avoid a new entry; it is not an instruction to short or trade automatically.",
+            "sector_models": {
+                "software": "Growth, FCF margin, forward P/E, ROIC and dilution review.",
+                "banks": "P/B and P/E relative to ROE, credit quality and regulatory capital.",
+                "energy": "Normalized multi-year FCF yield, leverage and cycle resilience.",
+                "reits": "P/FFO, AFFO growth, occupancy and debt maturity review.",
+            },
         },
+        "deep_research": deep_research,
         "action_counts": {
             "buy_candidate": int((frame["action"] == "buy_candidate").sum()),
             "hold_watch": int((frame["action"] == "hold_watch").sum()),
             "sell_avoid": int((frame["action"] == "sell_avoid").sum()),
         },
-        "buy_candidates": _records(buy, output_columns),
-        "hold_watch": _records(hold, output_columns),
-        "sell_avoid": _records(sell, output_columns),
+        "buy_candidates": buy_records,
+        "hold_watch": hold_records,
+        "sell_avoid": sell_records,
     }
 
 
@@ -202,6 +276,23 @@ def _reason(row: pd.Series) -> str:
     return f"Mixed or extended setup; score {row['score']:.1f}/100 and price {row['distance_ma50_pct']:+.1f}% vs 50-day average."
 
 
+def _forward_eps_growth(row: pd.Series) -> float | None:
+    trailing = _number(row.get("eps_ttm"))
+    forward = _number(row.get("eps_forward"))
+    if trailing is None or forward is None or trailing <= 0:
+        return None
+    return max(-100.0, min((forward / trailing - 1.0) * 100.0, 500.0))
+
+
+def _timestamp_date(value: Any) -> str | None:
+    if not isinstance(value, (int, float)):
+        return None
+    try:
+        return datetime.fromtimestamp(int(value), tz=timezone.utc).date().isoformat()
+    except (OverflowError, OSError, ValueError):
+        return None
+
+
 def _number(value: Any) -> float | None:
     try:
         number = float(value)
@@ -224,6 +315,7 @@ def _unavailable_payload(market: str, note: str) -> dict[str, Any]:
         "source": {"name": "Yahoo Finance via yfinance", "url": "https://finance.yahoo.com/research-hub/screener/"},
         "universe": {"definition": UNIVERSE_DEFINITION, "eligible_total": 0, "fetched_count": 0, "analyzed_count": 0, "coverage_ratio": 0.0, "latest_price_date": None},
         "methodology": {"policy": "Research shortlist only; no automated trading."},
+        "deep_research": {"status": "unavailable", "researched_count": 0, "failed_count": 0, "note": note},
         "action_counts": {"buy_candidate": 0, "hold_watch": 0, "sell_avoid": 0},
         "buy_candidates": [],
         "hold_watch": [],
@@ -257,5 +349,11 @@ def _sandbox_quote(symbol: str, price: float, ma50: float, ma200: float, return_
         "averageDailyVolume3Month": 5_000_000,
         "epsTrailingTwelveMonths": 4.0 if return_1y > -15 else -1.0,
         "trailingPE": 24.0 if return_1y > -15 else None,
+        "forwardPE": 20.0 if return_1y > -15 else None,
+        "priceToBook": 3.0,
+        "epsForward": 4.5 if return_1y > -15 else -0.5,
+        "earningsTimestamp": 1_710_000_000,
+        "isEarningsDateEstimate": True,
+        "averageAnalystRating": "2.0 - Buy",
         "regularMarketTime": 1_700_000_000,
     }

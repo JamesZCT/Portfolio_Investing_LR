@@ -15,6 +15,9 @@ class MarketScreenerTests(unittest.TestCase):
         self.assertEqual(payload["universe"]["coverage_ratio"], 1.0)
         self.assertIn("ALPHA", {row["ticker"] for row in payload["buy_candidates"]})
         self.assertIn("FOXTROT", {row["ticker"] for row in payload["sell_avoid"]})
+        self.assertEqual(payload["deep_research"]["status"], "not_run")
+        self.assertEqual(payload["buy_candidates"][0]["research"]["status"], "quote_only")
+        self.assertIn("earnings", payload["buy_candidates"][0]["research"]["scorecard"])
         json.dumps(payload, allow_nan=False)
 
     def test_missing_trend_fields_are_reported_as_incomplete_coverage(self) -> None:

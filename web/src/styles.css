@@ -264,6 +264,20 @@ input,
   font-size: 1.05rem;
 }
 
+.market-coverage .research-status {
+  display: block;
+  margin-top: 4px;
+  color: #2d6a4f;
+  font-size: 0.69rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.market-coverage .research-status.unavailable,
+.market-coverage .research-status.not_configured {
+  color: #9b4d36;
+}
+
 .opportunity-groups {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -309,39 +323,185 @@ input,
 }
 
 .opportunity-group article {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 52px 64px;
-  align-items: center;
-  gap: 8px;
-  min-height: 61px;
+  min-height: 184px;
   border-top: 1px solid #edf0f2;
-  padding: 9px 12px;
+  padding: 11px 12px 10px;
 }
 
-.opportunity-group article > div:first-child {
+.decision-heading,
+.earnings-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.decision-heading > div {
   min-width: 0;
 }
 
-.opportunity-group article > div:first-child strong {
+.decision-heading > div > strong {
   display: block;
   color: #172126;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
-.opportunity-group article > div:first-child span {
+.decision-heading > div > span {
+  display: block;
+  color: #66737a;
+  font-size: 0.7rem;
+  font-weight: 700;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.opportunity-group article > div:not(:first-child) {
-  text-align: right;
+.decision-badge {
+  flex: 0 0 auto;
+  border: 1px solid #aebbc1;
+  border-radius: 999px;
+  padding: 3px 7px;
+  color: #425158;
+  background: #f3f6f7;
+  font-size: 0.65rem;
+  font-weight: 850;
+  line-height: 1.2;
+  text-transform: uppercase;
 }
 
-.opportunity-group article > div:not(:first-child) strong {
+.decision-badge.research_buy {
+  border-color: #73ad8c;
+  color: #185b3a;
+  background: #e8f6ee;
+}
+
+.decision-badge.wait_for_value,
+.decision-badge.wait_for_earnings,
+.decision-badge.wait_watch,
+.decision-badge.specialist_review {
+  border-color: #d6a844;
+  color: #76540c;
+  background: #fff7df;
+}
+
+.decision-badge.avoid_review,
+.decision-badge.sell_avoid {
+  border-color: #db8879;
+  color: #8b3023;
+  background: #fff0ed;
+}
+
+.decision-context {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  margin-top: 6px;
+}
+
+.decision-context span {
+  color: #607079;
+  font-size: 0.67rem;
+  font-weight: 750;
+  text-transform: capitalize;
+}
+
+.decision-card p {
+  min-height: 32px;
+  margin: 8px 0;
+  color: #2e3a40;
+  font-size: 0.76rem;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+.decision-risk {
   display: block;
-  color: #28343a;
-  font-size: 0.82rem;
+  min-height: 28px;
+  margin: -3px 0 7px;
+  color: #8a4937;
+  font-size: 0.67rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.decision-scores {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 5px;
+}
+
+.decision-scores > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 0;
+  min-height: 32px;
+  border: 1px solid #dce3e6;
+  border-top-width: 3px;
+  border-radius: 5px;
+  padding: 4px 6px;
+  background: #fafcfc;
+}
+
+.decision-scores > div.strong {
+  border-top-color: #2b8a5b;
+}
+
+.decision-scores > div.mixed {
+  border-top-color: #d19a27;
+}
+
+.decision-scores > div.weak {
+  border-top-color: #c95745;
+}
+
+.decision-scores > div.unknown {
+  border-top-color: #82939b;
+}
+
+.decision-scores span {
+  color: #65737a;
+  font-size: 0.65rem;
+  font-weight: 850;
+}
+
+.decision-scores strong {
+  color: #1e2a30;
+  font-size: 0.78rem;
+}
+
+.earnings-line {
+  margin-top: 8px;
+  color: #66737a;
+  font-size: 0.67rem;
+  font-weight: 750;
+}
+
+.earnings-line a {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  gap: 4px;
+  color: #216b89;
+  text-decoration: none;
+}
+
+.earnings-line a span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.earnings-line strong {
+  display: grid;
+  flex: 0 0 30px;
+  place-items: center;
+  min-height: 25px;
+  border: 1px solid #c8d3d8;
+  border-radius: 4px;
+  color: #172126;
+  background: #f3f6f7;
+  font-size: 0.75rem;
 }
 
 .market-opportunities footer {

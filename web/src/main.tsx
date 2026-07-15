@@ -5,6 +5,7 @@ import {
   AlertTriangle,
   BarChart3,
   Brain,
+  FileText,
   FlaskConical,
   Gauge,
   Newspaper,
@@ -555,10 +556,11 @@ async function fetchOptionalRunStatus(
 
 function MarketOpportunityPanel({ payload }: { payload: MarketOpportunitiesPayload }) {
   const groups = [
-    { key: "buy", title: "Buy candidates", rows: payload.buy_candidates, count: payload.action_counts.buy_candidate },
+    { key: "buy", title: "Best research setups", rows: payload.buy_candidates, count: payload.action_counts.buy_candidate },
     { key: "hold", title: "Hold / watch", rows: payload.hold_watch, count: payload.action_counts.hold_watch },
     { key: "sell", title: "Sell / avoid review", rows: payload.sell_avoid, count: payload.action_counts.sell_avoid }
   ];
+  const deepResearch = payload.deep_research;
 
   return (
     <section className="market-opportunities" aria-label="Broad market opportunity screen">
@@ -569,7 +571,10 @@ function MarketOpportunityPanel({ payload }: { payload: MarketOpportunitiesPaylo
         </div>
         <div className="market-coverage">
           <strong>{payload.universe.analyzed_count.toLocaleString()} / {payload.universe.eligible_total.toLocaleString()}</strong>
-          <span>eligible stocks analyzed · prices {payload.universe.latest_price_date ?? "unknown"}</span>
+          <span>eligible stocks analyzed | prices {payload.universe.latest_price_date ?? "unknown"}</span>
+          <small className={`research-status ${deepResearch?.status ?? "quote-only"}`}>
+            {deepResearch?.researched_count ?? 0} SEC filing reviews | {deepResearch?.status?.replaceAll("_", " ") ?? "quote only"}
+          </small>
         </div>
       </header>
       {payload.status === "available" ? (
@@ -582,29 +587,57 @@ function MarketOpportunityPanel({ payload }: { payload: MarketOpportunitiesPaylo
                   <span>{group.count} in universe</span>
                 </header>
                 <div>
-                  {group.rows.slice(0, 5).map((row) => (
-                    <article key={row.ticker} title={row.reason}>
-                      <div>
-                        <strong>{row.ticker}</strong>
-                        <span>{row.name}</span>
-                      </div>
-                      <div className="opportunity-score">
-                        <strong>{row.score}</strong>
-                        <span>score</span>
-                      </div>
-                      <div className={row.return_1y_pct >= 0 ? "positive" : "negative"}>
-                        <strong>{row.return_1y_pct >= 0 ? "+" : ""}{row.return_1y_pct.toFixed(1)}%</strong>
-                        <span>1 year</span>
-                      </div>
-                    </article>
-                  ))}
+                  {group.rows.slice(0, 4).map((row) => {
+                    const research = row.research;
+                    const scorecard = research?.scorecard;
+                    const decision = research?.decision ?? row.action;
+                    const evidence = research?.key_takeaways?.[0] ?? row.reason;
+                    const report = research?.earnings;
+                    return (
+                      <article className={`decision-card ${decision}`} key={row.ticker} title={row.reason}>
+                        <div className="decision-heading">
+                          <div>
+                            <strong>{row.ticker}</strong>
+                            <span>{row.name}</span>
+                          </div>
+                          <span className={`decision-badge ${decision}`}>
+                            {research?.decision_label ?? group.title}
+                          </span>
+                        </div>
+                        <div className="decision-context">
+                          <span>{research?.sector ?? row.exchange}</span>
+                          <span>{research?.confidence ?? "low"} confidence</span>
+                          <span>{research?.business_model?.replaceAll("_", " ") ?? "trend screen"}</span>
+                        </div>
+                        <p>{evidence}</p>
+                        {research?.risks?.[0] ? <small className="decision-risk">{research.risks[0]}</small> : null}
+                        <div className="decision-scores" aria-label={`${row.ticker} research scorecard`}>
+                          <ScoreChip label="Quality" value={scorecard?.quality} />
+                          <ScoreChip label="Value" value={scorecard?.value} />
+                          <ScoreChip label="Earnings" value={scorecard?.earnings} />
+                          <ScoreChip label="Trend" value={scorecard?.trend ?? row.score} />
+                        </div>
+                        <div className="earnings-line">
+                          {report?.report_url ? (
+                            <a href={report.report_url} target="_blank" rel="noreferrer" title="Open SEC earnings filing">
+                              <FileText size={13} aria-hidden="true" />
+                              <span>{report.latest_report_form} filed {report.filed_at ?? "date unknown"}</span>
+                            </a>
+                          ) : (
+                            <span>Forward P/E {row.forward_pe?.toFixed(1) ?? "n/a"}</span>
+                          )}
+                          <strong>{research?.decision_score?.toFixed(0) ?? row.score.toFixed(0)}</strong>
+                        </div>
+                      </article>
+                    );
+                  })}
                 </div>
               </section>
             ))}
           </div>
           <footer>
             <span>{payload.universe.definition}</span>
-            <span>{payload.methodology.policy}</span>
+            <span>{deepResearch?.note ?? payload.methodology.policy}</span>
             <a href={payload.source.url} target="_blank" rel="noreferrer">{payload.source.name}</a>
           </footer>
         </>
@@ -612,6 +645,16 @@ function MarketOpportunityPanel({ payload }: { payload: MarketOpportunitiesPaylo
         <p className="market-screen-unavailable">{payload.note ?? "The broad-market screen is unavailable for this snapshot."}</p>
       )}
     </section>
+  );
+}
+
+function ScoreChip({ label, value }: { label: string; value: number | null | undefined }) {
+  const status = value == null ? "unknown" : value >= 67 ? "strong" : value >= 45 ? "mixed" : "weak";
+  return (
+    <div className={status} title={`${label}: ${value == null ? "pending" : value.toFixed(0) + "/100"}`}>
+      <span>{label.slice(0, 1)}</span>
+      <strong>{value == null ? "-" : value.toFixed(0)}</strong>
+    </div>
   );
 }
 
