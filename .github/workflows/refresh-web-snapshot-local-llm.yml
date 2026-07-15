@@ -62,6 +62,7 @@ jobs:
       SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
       SEC_FUNDAMENTALS_ENABLED: "true"
       SEC_DEEP_RESEARCH_LIMIT_PER_GROUP: "5"
+      SEC_CACHE_DIR: "C:\\portfolio-sec-cache"
       NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
       NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
 
@@ -79,14 +80,6 @@ jobs:
           .\.venv\Scripts\python.exe -m pip install --upgrade pip
           .\.venv\Scripts\python.exe -m pip install -r requirements.txt
           .\.venv\Scripts\python.exe -m pip install -e .
-
-      - name: Restore SEC filing cache
-        uses: actions/cache@v5
-        with:
-          path: outputs/cache/sec
-          key: sec-company-facts-${{ runner.os }}-${{ github.run_id }}
-          restore-keys: |
-            sec-company-facts-${{ runner.os }}-
 
       - name: Prepare config
         run: |
@@ -128,8 +121,6 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: "20.19.x"
-          cache: npm
-          cache-dependency-path: web/package-lock.json
 
       - name: Build frontend
         working-directory: web
