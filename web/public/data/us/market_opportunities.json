@@ -93,8 +93,8 @@
       "distance_ma50_pct": 19.26,
       "earnings_date_is_estimate": false,
       "eps_forward": 1.18,
-      "eps_forward_growth_pct": 90.32,
-      "eps_ttm": 0.62,
+      "eps_forward_growth_pct": 93.44,
+      "eps_ttm": 0.61,
       "exchange": "NYSE",
       "forward_pe": 31.9,
       "market_cap": 2710011392.0,
@@ -111,7 +111,7 @@
         "confidence": "high",
         "decision": "wait_for_value",
         "decision_label": "Wait for value",
-        "decision_score": 64.2,
+        "decision_score": 64.1,
         "earnings": {
           "assessment": "Growth and earnings improved",
           "filed_at": "2026-05-07",
@@ -148,7 +148,7 @@
           "financial_strength": 42.7,
           "quality": 79.7,
           "trend": 86.2,
-          "value": 28.3
+          "value": 27.7
         },
         "sector": "Technology",
         "sic": 3576,
@@ -163,7 +163,7 @@
       "return_1y_pct": 105.42,
       "score": 86.2,
       "ticker": "ATEN",
-      "trailing_pe": 60.71
+      "trailing_pe": 61.7
     },
     {
       "action": "buy_candidate",
@@ -854,7 +854,7 @@
     "researched_count": 15,
     "status": "available"
   },
-  "generated_at": "2026-07-15T00:11:21.998728+00:00",
+  "generated_at": "2026-07-15T00:22:48.021264+00:00",
   "hold_watch": [
     {
       "action": "hold_watch",
@@ -2122,7 +2122,7 @@
       "earnings_date_is_estimate": true,
       "eps_forward": -0.6,
       "eps_forward_growth_pct": null,
-      "eps_ttm": -0.36,
+      "eps_ttm": -0.35,
       "exchange": "NasdaqGS",
       "forward_pe": -11.51,
       "market_cap": 3019174400.0,

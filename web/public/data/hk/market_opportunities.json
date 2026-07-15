@@ -5,7 +5,13 @@
     "sell_avoid": 0
   },
   "buy_candidates": [],
-  "generated_at": "2026-07-14T23:30:35.423937+00:00",
+  "deep_research": {
+    "failed_count": 0,
+    "note": "The broad-market opportunity screen currently covers US-listed equities only.",
+    "researched_count": 0,
+    "status": "unavailable"
+  },
+  "generated_at": "2026-07-15T00:23:05.820916+00:00",
   "hold_watch": [],
   "market": "hk",
   "methodology": {
