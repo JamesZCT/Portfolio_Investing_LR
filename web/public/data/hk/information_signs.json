@@ -19,21 +19,21 @@
       "decision_use": "information_only",
       "portfolio_weight": 0.0,
       "published": "2026-07-18T09:19:20+00:00",
-      "signal": "mixed",
+      "signal": "cautionary",
       "source": "Lance Roberts / RIA",
       "source_tier": "commentary",
       "title": "Momentum Meltdown Catches Traders By Surprise",
       "unit": null,
       "url": "https://realinvestmentadvice.com/resources/blog/momentum-meltdown-catches-traders-by-surprise/",
       "value": null,
-      "why_it_matters": "Commentary supplies a research hypothesis and watch items; it is not independent evidence for changing portfolio weights."
+      "why_it_matters": "Technical and positioning commentary can identify conditions to test against current price trend, drawdown, and concentration rules."
     },
     {
       "category": "market commentary",
       "decision_use": "information_only",
       "portfolio_weight": 0.0,
       "published": "2026-07-17T09:19:00+00:00",
-      "signal": "constructive",
+      "signal": "mixed",
       "source": "Lance Roberts / RIA",
       "source_tier": "commentary",
       "title": "Home Affordability: Better Than Headlines Suggest",
@@ -61,21 +61,21 @@
       "decision_use": "information_only",
       "portfolio_weight": 0.0,
       "published": "2026-07-11T09:42:15+00:00",
-      "signal": "mixed",
+      "signal": "cautionary",
       "source": "Lance Roberts / RIA",
       "source_tier": "commentary",
       "title": "Big Bank Earnings Kick Off Earnings Season",
       "unit": null,
       "url": "https://realinvestmentadvice.com/resources/blog/big-bank-earnings-kick-off-earnings-season/",
       "value": null,
-      "why_it_matters": "Commentary supplies a research hypothesis and watch items; it is not independent evidence for changing portfolio weights."
+      "why_it_matters": "Technical and positioning commentary can identify conditions to test against current price trend, drawdown, and concentration rules."
     }
   ],
   "decision_policy": {
     "portfolio_weight": 0.0,
     "rule": "Information signs may explain conditions and create review questions, but they do not change target weights, trade instructions, or risk limits. Any future influence must be explicit, bounded, and recorded with a reason."
   },
-  "generated_at": "2026-07-21T04:04:45.811123+00:00",
+  "generated_at": "2026-07-21T19:04:42.004028+00:00",
   "market": "hk",
   "primary_signs": [
     {

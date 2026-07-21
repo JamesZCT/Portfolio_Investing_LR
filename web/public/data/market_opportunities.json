@@ -1,37 +1,117 @@
 {
   "action_counts": {
-    "buy_candidate": 236,
-    "hold_watch": 847,
-    "sell_avoid": 240
+    "buy_candidate": 239,
+    "hold_watch": 845,
+    "sell_avoid": 246
   },
   "buy_candidates": [
     {
       "action": "buy_candidate",
+      "analyst_rating": null,
+      "average_volume_3m": 1061939.0,
+      "distance_ma200_pct": 40.62,
+      "distance_ma50_pct": 15.2,
+      "earnings_date_is_estimate": false,
+      "eps_forward": 2.13,
+      "eps_forward_growth_pct": -36.62,
+      "eps_ttm": 3.36,
+      "exchange": "NYSE",
+      "forward_pe": 21.11,
+      "market_cap": 4483549184.0,
+      "name": "Oceaneering International, Inc.",
+      "next_earnings_date": "2026-07-22",
+      "price": 44.95,
+      "price_to_book": 4.05,
+      "profitable": true,
+      "range_position": 0.99,
+      "range_width_pct": 54.3,
+      "reason": "Positive earnings and long-term trend; 1Y return +102.7% and price +15.2% vs 50-day average.",
+      "research": {
+        "business_model": "energy",
+        "confidence": "high",
+        "decision": "wait_for_earnings",
+        "decision_label": "Wait for earnings",
+        "decision_score": 63.8,
+        "earnings": {
+          "assessment": "Mixed earnings report",
+          "filed_at": "2026-04-23",
+          "latest_report_form": "10-Q",
+          "net_income_growth_yoy_pct": -28.3,
+          "next_earnings_date": "2026-07-22",
+          "period_end": "2026-03-31",
+          "report_url": "https://www.sec.gov/Archives/edgar/data/73756/000007375626000082/oii-20260331.htm",
+          "revenue_growth_yoy_pct": 4.1
+        },
+        "industry": "Oil & Gas Field Services, NEC",
+        "key_takeaways": [
+          "Mixed earnings report",
+          "Latest comparable period: revenue +4.1% YoY, net income -28.3% YoY.",
+          "Cash-return lens: FCF yield 2.4%, ROIC proxy 27.7%."
+        ],
+        "methodology_note": "Scores use standardized filing facts and sector-aware thresholds; specialist bank, insurer, and REIT metrics remain review gates.",
+        "metrics": {
+          "debt_to_equity": 0.46,
+          "equity_to_assets_pct": 40.1,
+          "fcf_margin_pct": 7.9,
+          "fcf_yield_pct": 4.6,
+          "net_debt_to_fcf": 0.0,
+          "normalized_fcf_yield_pct": 2.4,
+          "operating_margin_pct": 11.5,
+          "roe_pct": 33.0,
+          "roic_proxy_pct": 27.7
+        },
+        "risks": [
+          "Low P/E can reflect peak-cycle commodity earnings; normalized cash flow controls the decision."
+        ],
+        "scorecard": {
+          "earnings": 33.0,
+          "financial_strength": 95.7,
+          "quality": 56.4,
+          "trend": 87.0,
+          "value": 58.0
+        },
+        "sector": "Energy",
+        "sic": 1389,
+        "source": {
+          "as_of": "2026-04-23",
+          "name": "SEC EDGAR company facts and filings",
+          "url": "https://www.sec.gov/edgar/browse/?CIK=0000073756"
+        },
+        "status": "sec_fundamentals",
+        "valuation_model": "Normalized multi-year FCF yield, balance sheet and cycle resilience"
+      },
+      "return_1y_pct": 102.65,
+      "score": 87.0,
+      "ticker": "OII",
+      "trailing_pe": 13.38
+    },
+    {
+      "action": "buy_candidate",
       "analyst_rating": "1.4 - Strong Buy",
-      "average_volume_3m": 2593281.0,
-      "distance_ma200_pct": 57.0,
-      "distance_ma50_pct": 18.68,
+      "average_volume_3m": 2636493.0,
+      "distance_ma200_pct": 52.88,
+      "distance_ma50_pct": 15.4,
       "earnings_date_is_estimate": false,
       "eps_forward": 0.84,
-      "eps_forward_growth_pct": 133.26,
-      "eps_ttm": 0.36,
+      "eps_forward_growth_pct": 146.98,
+      "eps_ttm": 0.34,
       "exchange": "NYSE",
-      "forward_pe": 41.11,
-      "market_cap": 7993943552.0,
+      "forward_pe": 40.16,
+      "market_cap": 7808684032.0,
       "name": "Rush Street Interactive, Inc.",
       "next_earnings_date": "2026-07-29",
-      "price": 34.52,
-      "price_to_book": 22.39,
+      "price": 33.72,
+      "price_to_book": 21.87,
       "profitable": true,
-      "range_position": 1.0,
-      "range_width_pct": 58.34,
-      "reason": "Positive earnings and long-term trend; 1Y return +123.4% and price +18.7% vs 50-day average.",
+      "range_position": 0.96,
+      "range_width_pct": 59.73,
+      "reason": "Positive earnings and long-term trend; 1Y return +135.8% and price +15.4% vs 50-day average.",
       "research": {
         "business_model": "operating_company",
         "confidence": "high",
         "decision": "wait_for_value",
         "decision_label": "Wait for value",
-        "decision_score": 67.3,
+        "decision_score": 67.1,
         "earnings": {
           "assessment": "Growth and earnings improved",
           "filed_at": "2026-04-29",
@@ -55,7 +135,7 @@
           "fcf_margin_pct": 14.5,
           "fcf_yield_pct": 2.1,
           "net_debt_to_fcf": 0.0,
-          "normalized_fcf_yield_pct": 1.3,
+          "normalized_fcf_yield_pct": 1.4,
           "operating_margin_pct": 7.7,
           "roe_pct": 22.6,
           "roic_proxy_pct": null
@@ -67,7 +147,7 @@
           "earnings": 96.2,
           "financial_strength": 100.0,
           "quality": 67.8,
-          "trend": 88.2,
+          "trend": 86.9,
           "value": 6.1
         },
         "sector": "Other",
@@ -80,38 +160,38 @@
         "status": "sec_fundamentals",
         "valuation_model": "ROIC, FCF yield, margins, growth and balance-sheet resilience"
       },
-      "return_1y_pct": 123.37,
-      "score": 88.2,
+      "return_1y_pct": 135.79,
+      "score": 86.9,
       "ticker": "RSI",
-      "trailing_pe": 95.89
+      "trailing_pe": 99.18
     },
     {
       "action": "buy_candidate",
       "analyst_rating": "2.1 - Buy",
-      "average_volume_3m": 2591634.0,
-      "distance_ma200_pct": 33.6,
-      "distance_ma50_pct": 16.75,
+      "average_volume_3m": 2596767.0,
+      "distance_ma200_pct": 34.92,
+      "distance_ma50_pct": 17.69,
       "earnings_date_is_estimate": false,
       "eps_forward": 18.33,
-      "eps_forward_growth_pct": 79.5,
-      "eps_ttm": 10.21,
+      "eps_forward_growth_pct": 80.92,
+      "eps_ttm": 10.13,
       "exchange": "NYSE",
-      "forward_pe": 11.39,
-      "market_cap": 83715227648.0,
+      "forward_pe": 11.53,
+      "market_cap": 84741619712.0,
       "name": "Phillips 66",
       "next_earnings_date": "2026-08-05",
-      "price": 208.8,
-      "price_to_book": 2.93,
+      "price": 211.36,
+      "price_to_book": 2.97,
       "profitable": true,
-      "range_position": 0.98,
-      "range_width_pct": 44.53,
-      "reason": "Positive earnings and long-term trend; 1Y return +64.1% and price +16.7% vs 50-day average.",
+      "range_position": 0.99,
+      "range_width_pct": 44.63,
+      "reason": "Positive earnings and long-term trend; 1Y return +65.5% and price +17.7% vs 50-day average.",
       "research": {
         "business_model": "energy",
         "confidence": "high",
         "decision": "hold_watch",
         "decision_label": "Hold / watch",
-        "decision_score": 63.7,
+        "decision_score": 63.6,
         "earnings": {
           "assessment": "Mixed earnings report",
           "filed_at": "2026-04-29",
@@ -147,8 +227,8 @@
           "earnings": 60.4,
           "financial_strength": 69.6,
           "quality": 31.3,
-          "trend": 86.3,
-          "value": 85.1
+          "trend": 86.7,
+          "value": 84.5
         },
         "sector": "Energy",
         "sic": 2911,
@@ -160,117 +240,38 @@
         "status": "sec_fundamentals",
         "valuation_model": "Normalized multi-year FCF yield, balance sheet and cycle resilience"
       },
-      "return_1y_pct": 64.11,
-      "score": 86.3,
+      "return_1y_pct": 65.5,
+      "score": 86.7,
       "ticker": "PSX",
-      "trailing_pe": 20.45
-    },
-    {
-      "action": "buy_candidate",
-      "analyst_rating": "2.0 - Buy",
-      "average_volume_3m": 3462591.0,
-      "distance_ma200_pct": 29.48,
-      "distance_ma50_pct": 15.66,
-      "earnings_date_is_estimate": false,
-      "eps_forward": 0.58,
-      "eps_forward_growth_pct": 4.69,
-      "eps_ttm": 0.55,
-      "exchange": "NYSE",
-      "forward_pe": 10.82,
-      "market_cap": 6658756608.0,
-      "name": "Ultrapar Participacoes S.A. (Ne",
-      "next_earnings_date": "2026-05-06",
-      "price": 6.23,
-      "price_to_book": 2.11,
-      "profitable": true,
-      "range_position": 0.96,
-      "range_width_pct": 56.53,
-      "reason": "Positive earnings and long-term trend; 1Y return +120.1% and price +15.7% vs 50-day average.",
-      "research": {
-        "business_model": "utility",
-        "confidence": "low",
-        "decision": "wait_for_earnings",
-        "decision_label": "Wait for earnings",
-        "decision_score": 87.5,
-        "earnings": {
-          "assessment": "Insufficient comparable filing history",
-          "filed_at": "2026-05-19",
-          "latest_report_form": "20-F/A",
-          "net_income_growth_yoy_pct": null,
-          "next_earnings_date": "2026-05-06",
-          "period_end": "2025-12-31",
-          "report_url": "https://www.sec.gov/Archives/edgar/data/1094972/000155485526001080/ugp-20251231.htm",
-          "revenue_growth_yoy_pct": null
-        },
-        "industry": "Natural Gas Distribution",
-        "key_takeaways": [
-          "Insufficient comparable filing history",
-          "Earnings stability, leverage, dividend capacity and rate-base economics."
-        ],
-        "methodology_note": "Scores use standardized filing facts and sector-aware thresholds; specialist bank, insurer, and REIT metrics remain review gates.",
-        "metrics": {
-          "debt_to_equity": null,
-          "equity_to_assets_pct": null,
-          "fcf_margin_pct": null,
-          "fcf_yield_pct": null,
-          "net_debt_to_fcf": null,
-          "normalized_fcf_yield_pct": null,
-          "operating_margin_pct": null,
-          "roe_pct": null,
-          "roic_proxy_pct": null
-        },
-        "risks": [
-          "Review company-specific competition, management and concentration before sizing a position."
-        ],
-        "scorecard": {
-          "earnings": 63.5,
-          "financial_strength": 100.0,
-          "quality": null,
-          "trend": 85.9,
-          "value": 98.1
-        },
-        "sector": "Utilities",
-        "sic": 4924,
-        "source": {
-          "as_of": "2026-05-19",
-          "name": "SEC EDGAR company facts and filings",
-          "url": "https://www.sec.gov/edgar/browse/?CIK=0001094972"
-        },
-        "status": "sec_fundamentals",
-        "valuation_model": "Earnings stability, leverage, dividend capacity and rate-base economics"
-      },
-      "return_1y_pct": 120.07,
-      "score": 85.9,
-      "ticker": "UGP",
-      "trailing_pe": 11.33
+      "trailing_pe": 20.86
     },
     {
       "action": "buy_candidate",
       "analyst_rating": "1.5 - Strong Buy",
-      "average_volume_3m": 1949580.0,
-      "distance_ma200_pct": 33.74,
-      "distance_ma50_pct": 17.12,
+      "average_volume_3m": 1951877.0,
+      "distance_ma200_pct": 36.79,
+      "distance_ma50_pct": 19.51,
       "earnings_date_is_estimate": false,
       "eps_forward": 1.12,
-      "eps_forward_growth_pct": 211.24,
-      "eps_ttm": 0.36,
+      "eps_forward_growth_pct": 202.82,
+      "eps_ttm": 0.37,
       "exchange": "NasdaqGS",
-      "forward_pe": 15.62,
-      "market_cap": 5588298752.0,
+      "forward_pe": 16.02,
+      "market_cap": 5731998208.0,
       "name": "Amneal Pharmaceuticals, Inc.",
       "next_earnings_date": "2026-07-30",
-      "price": 17.5,
-      "price_to_book": -123.24,
+      "price": 17.95,
+      "price_to_book": -126.41,
       "profitable": true,
-      "range_position": 0.92,
-      "range_width_pct": 61.29,
-      "reason": "Positive earnings and long-term trend; 1Y return +125.7% and price +17.1% vs 50-day average.",
+      "range_position": 0.96,
+      "range_width_pct": 59.75,
+      "reason": "Positive earnings and long-term trend; 1Y return +119.8% and price +19.5% vs 50-day average.",
       "research": {
         "business_model": "healthcare",
         "confidence": "high",
         "decision": "hold_watch",
         "decision_label": "Hold / watch",
-        "decision_score": 57.9,
+        "decision_score": 57.8,
         "earnings": {
           "assessment": "Mixed earnings report",
           "filed_at": "2026-05-07",
@@ -285,16 +286,16 @@
         "key_takeaways": [
           "Mixed earnings report",
           "Latest comparable period: revenue +3.9% YoY, net income +410.5% YoY.",
-          "Cash-return lens: FCF yield 4.8%, ROIC proxy 16.3%."
+          "Cash-return lens: FCF yield 4.7%, ROIC proxy 16.3%."
         ],
         "methodology_note": "Scores use standardized filing facts and sector-aware thresholds; specialist bank, insurer, and REIT metrics remain review gates.",
         "metrics": {
           "debt_to_equity": null,
           "equity_to_assets_pct": -1.9,
           "fcf_margin_pct": 8.9,
-          "fcf_yield_pct": 4.8,
+          "fcf_yield_pct": 4.7,
           "net_debt_to_fcf": 8.48,
-          "normalized_fcf_yield_pct": 4.8,
+          "normalized_fcf_yield_pct": 4.7,
           "operating_margin_pct": 13.1,
           "roe_pct": null,
           "roic_proxy_pct": 16.3
@@ -306,8 +307,8 @@
           "earnings": 82.8,
           "financial_strength": 0.4,
           "quality": 69.6,
-          "trend": 85.3,
-          "value": 49.2
+          "trend": 86.3,
+          "value": 48.1
         },
         "sector": "Healthcare",
         "sic": 2834,
@@ -319,38 +320,38 @@
         "status": "sec_fundamentals",
         "valuation_model": "Pipeline/product durability, margins, FCF and balance-sheet runway"
       },
-      "return_1y_pct": 125.66,
-      "score": 85.3,
+      "return_1y_pct": 119.85,
+      "score": 86.3,
       "ticker": "AMRX",
-      "trailing_pe": 48.61
+      "trailing_pe": 48.51
     },
     {
       "action": "buy_candidate",
       "analyst_rating": "1.2 - Strong Buy",
-      "average_volume_3m": 3840086.0,
-      "distance_ma200_pct": 58.15,
-      "distance_ma50_pct": 11.73,
+      "average_volume_3m": 3856216.0,
+      "distance_ma200_pct": 60.93,
+      "distance_ma50_pct": 13.58,
       "earnings_date_is_estimate": false,
       "eps_forward": 2.14,
       "eps_forward_growth_pct": 177.39,
       "eps_ttm": 0.77,
       "exchange": "NasdaqGS",
-      "forward_pe": 33.01,
-      "market_cap": 13836218368.0,
+      "forward_pe": 33.74,
+      "market_cap": 14144344064.0,
       "name": "BrightSpring Health Services, I",
       "next_earnings_date": "2026-07-31",
-      "price": 70.5,
-      "price_to_book": 7.3,
+      "price": 72.07,
+      "price_to_book": 7.46,
       "profitable": true,
-      "range_position": 0.95,
-      "range_width_pct": 77.15,
-      "reason": "Positive earnings and long-term trend; 1Y return +258.7% and price +11.7% vs 50-day average.",
+      "range_position": 0.98,
+      "range_width_pct": 75.47,
+      "reason": "Positive earnings and long-term trend; 1Y return +249.9% and price +13.6% vs 50-day average.",
       "research": {
         "business_model": "healthcare",
         "confidence": "high",
         "decision": "hold_watch",
         "decision_label": "Hold / watch",
-        "decision_score": 45.8,
+        "decision_score": 45.6,
         "earnings": {
           "assessment": "Growth and earnings improved",
           "filed_at": "2026-05-01",
@@ -365,14 +366,14 @@
         "key_takeaways": [
           "Growth and earnings improved",
           "Latest comparable period: revenue +25.6% YoY, net income +403.6% YoY.",
-          "Cash-return lens: FCF yield 2.9%, ROIC proxy 5.2%."
+          "Cash-return lens: FCF yield 2.8%, ROIC proxy 5.2%."
         ],
         "methodology_note": "Scores use standardized filing facts and sector-aware thresholds; specialist bank, insurer, and REIT metrics remain review gates.",
         "metrics": {
           "debt_to_equity": 1.34,
           "equity_to_assets_pct": 29.2,
           "fcf_margin_pct": 3.1,
-          "fcf_yield_pct": 2.9,
+          "fcf_yield_pct": 2.8,
           "net_debt_to_fcf": 6.13,
           "normalized_fcf_yield_pct": 1.0,
           "operating_margin_pct": 2.3,
@@ -386,8 +387,8 @@
           "earnings": 96.2,
           "financial_strength": 14.4,
           "quality": 37.7,
-          "trend": 85.2,
-          "value": 13.4
+          "trend": 86.1,
+          "value": 11.8
         },
         "sector": "Healthcare",
         "sic": 8082,
@@ -399,38 +400,101 @@
         "status": "sec_fundamentals",
         "valuation_model": "Pipeline/product durability, margins, FCF and balance-sheet runway"
       },
-      "return_1y_pct": 258.65,
-      "score": 85.2,
+      "return_1y_pct": 249.88,
+      "score": 86.1,
       "ticker": "BTSG",
-      "trailing_pe": 91.56
+      "trailing_pe": 93.6
     },
     {
       "action": "buy_candidate",
-      "analyst_rating": "2.6 - Hold",
-      "average_volume_3m": 1738101.0,
-      "distance_ma200_pct": 42.85,
-      "distance_ma50_pct": 10.89,
+      "analyst_rating": "2.0 - Buy",
+      "average_volume_3m": 3544986.0,
+      "distance_ma200_pct": 29.92,
+      "distance_ma50_pct": 16.21,
       "earnings_date_is_estimate": false,
-      "eps_forward": 7.2,
-      "eps_forward_growth_pct": -1.24,
-      "eps_ttm": 7.29,
-      "exchange": "NasdaqGS",
-      "forward_pe": 13.53,
-      "market_cap": 16315185152.0,
-      "name": "Millicom International Cellular",
-      "next_earnings_date": "2026-08-06",
-      "price": 97.38,
-      "price_to_book": 5.19,
+      "eps_forward": 0.58,
+      "eps_forward_growth_pct": 4.69,
+      "eps_ttm": 0.55,
+      "exchange": "NYSE",
+      "forward_pe": 10.88,
+      "market_cap": 6696164864.0,
+      "name": "Ultrapar Participacoes S.A. (Ne",
+      "next_earnings_date": "2026-05-06",
+      "price": 6.26,
+      "price_to_book": 2.12,
       "profitable": true,
-      "range_position": 0.96,
-      "range_width_pct": 62.71,
-      "reason": "Positive earnings and long-term trend; 1Y return +141.0% and price +10.9% vs 50-day average.",
+      "range_position": 0.97,
+      "range_width_pct": 56.19,
+      "reason": "Positive earnings and long-term trend; 1Y return +119.4% and price +16.2% vs 50-day average.",
       "research": {
         "business_model": "quote_only",
         "confidence": "low",
         "decision": "research_buy",
         "decision_label": "Research buy",
-        "decision_score": 74.9,
+        "decision_score": 79.6,
+        "earnings": {
+          "assessment": "Filing review pending",
+          "filed_at": null,
+          "latest_report_form": null,
+          "net_income_growth_yoy_pct": null,
+          "next_earnings_date": "2026-05-06",
+          "period_end": null,
+          "revenue_growth_yoy_pct": null
+        },
+        "industry": "SEC classification pending",
+        "key_takeaways": [
+          "Positive earnings and long-term trend; 1Y return +119.4% and price +16.2% vs 50-day average."
+        ],
+        "risks": [
+          "Low-confidence decision until SEC filing facts are available."
+        ],
+        "scorecard": {
+          "earnings": 56.0,
+          "financial_strength": null,
+          "quality": null,
+          "trend": 86.0,
+          "value": 96.5
+        },
+        "sector": "Unclassified",
+        "source": {
+          "name": "Market quote snapshot",
+          "url": "https://finance.yahoo.com/"
+        },
+        "status": "quote_only",
+        "valuation_model": "P/E and forward earnings; filing evidence pending"
+      },
+      "return_1y_pct": 119.37,
+      "score": 86.0,
+      "ticker": "UGP",
+      "trailing_pe": 11.39
+    },
+    {
+      "action": "buy_candidate",
+      "analyst_rating": "2.6 - Hold",
+      "average_volume_3m": 1728255.0,
+      "distance_ma200_pct": 44.46,
+      "distance_ma50_pct": 12.22,
+      "earnings_date_is_estimate": false,
+      "eps_forward": 7.2,
+      "eps_forward_growth_pct": -2.18,
+      "eps_ttm": 7.36,
+      "exchange": "NasdaqGS",
+      "forward_pe": 13.73,
+      "market_cap": 16558120960.0,
+      "name": "Millicom International Cellular",
+      "next_earnings_date": "2026-08-06",
+      "price": 98.83,
+      "price_to_book": 5.27,
+      "profitable": true,
+      "range_position": 0.98,
+      "range_width_pct": 61.79,
+      "reason": "Positive earnings and long-term trend; 1Y return +135.8% and price +12.2% vs 50-day average.",
+      "research": {
+        "business_model": "quote_only",
+        "confidence": "low",
+        "decision": "research_buy",
+        "decision_label": "Research buy",
+        "decision_score": 74.7,
         "earnings": {
           "assessment": "Filing review pending",
           "filed_at": null,
@@ -442,17 +506,17 @@
         },
         "industry": "SEC classification pending",
         "key_takeaways": [
-          "Positive earnings and long-term trend; 1Y return +141.0% and price +10.9% vs 50-day average."
+          "Positive earnings and long-term trend; 1Y return +135.8% and price +12.2% vs 50-day average."
         ],
         "risks": [
           "Low-confidence decision until SEC filing facts are available."
         ],
         "scorecard": {
-          "earnings": 47.5,
+          "earnings": 46.2,
           "financial_strength": null,
           "quality": null,
-          "trend": 85.1,
-          "value": 89.3
+          "trend": 85.8,
+          "value": 88.9
         },
         "sector": "Unclassified",
         "source": {
@@ -462,38 +526,101 @@
         "status": "quote_only",
         "valuation_model": "P/E and forward earnings; filing evidence pending"
       },
-      "return_1y_pct": 141.03,
-      "score": 85.1,
+      "return_1y_pct": 135.79,
+      "score": 85.8,
       "ticker": "TIGO",
-      "trailing_pe": 13.36
+      "trailing_pe": 13.43
     },
     {
       "action": "buy_candidate",
-      "analyst_rating": "2.5 - Buy",
-      "average_volume_3m": 1037004.0,
-      "distance_ma200_pct": 27.79,
-      "distance_ma50_pct": 11.67,
+      "analyst_rating": "1.5 - Strong Buy",
+      "average_volume_3m": 8280949.0,
+      "distance_ma200_pct": 31.68,
+      "distance_ma50_pct": 11.0,
       "earnings_date_is_estimate": false,
-      "eps_forward": 3.2,
-      "eps_forward_growth_pct": 108.93,
-      "eps_ttm": 1.53,
+      "eps_forward": 8.41,
+      "eps_forward_growth_pct": 268.94,
+      "eps_ttm": 2.28,
       "exchange": "NYSE",
-      "forward_pe": 33.07,
-      "market_cap": 7974916608.0,
-      "name": "Hexcel Corporation",
-      "next_earnings_date": "2026-07-29",
-      "price": 105.73,
-      "price_to_book": 6.3,
+      "forward_pe": 13.03,
+      "market_cap": 139835260928.0,
+      "name": "CVS Health Corporation",
+      "next_earnings_date": "2026-08-05",
+      "price": 109.6,
+      "price_to_book": 1.8,
       "profitable": true,
-      "range_position": 0.98,
-      "range_width_pct": 45.83,
-      "reason": "Positive earnings and long-term trend; 1Y return +72.7% and price +11.7% vs 50-day average.",
+      "range_position": 1.0,
+      "range_width_pct": 46.68,
+      "reason": "Positive earnings and long-term trend; 1Y return +76.2% and price +11.0% vs 50-day average.",
       "research": {
         "business_model": "quote_only",
         "confidence": "low",
         "decision": "research_buy",
         "decision_label": "Research buy",
-        "decision_score": 66.6,
+        "decision_score": 75.2,
+        "earnings": {
+          "assessment": "Filing review pending",
+          "filed_at": null,
+          "latest_report_form": null,
+          "net_income_growth_yoy_pct": null,
+          "next_earnings_date": "2026-08-05",
+          "period_end": null,
+          "revenue_growth_yoy_pct": null
+        },
+        "industry": "SEC classification pending",
+        "key_takeaways": [
+          "Positive earnings and long-term trend; 1Y return +76.2% and price +11.0% vs 50-day average."
+        ],
+        "risks": [
+          "Low-confidence decision until SEC filing facts are available."
+        ],
+        "scorecard": {
+          "earnings": 85.0,
+          "financial_strength": null,
+          "quality": null,
+          "trend": 85.4,
+          "value": 45.0
+        },
+        "sector": "Unclassified",
+        "source": {
+          "name": "Market quote snapshot",
+          "url": "https://finance.yahoo.com/"
+        },
+        "status": "quote_only",
+        "valuation_model": "P/E and forward earnings; filing evidence pending"
+      },
+      "return_1y_pct": 76.18,
+      "score": 85.4,
+      "ticker": "CVS",
+      "trailing_pe": 48.07
+    },
+    {
+      "action": "buy_candidate",
+      "analyst_rating": "2.5 - Buy",
+      "average_volume_3m": 1050206.0,
+      "distance_ma200_pct": 30.78,
+      "distance_ma50_pct": 14.35,
+      "earnings_date_is_estimate": false,
+      "eps_forward": 3.2,
+      "eps_forward_growth_pct": 111.7,
+      "eps_ttm": 1.51,
+      "exchange": "NYSE",
+      "forward_pe": 33.94,
+      "market_cap": 8182341120.0,
+      "name": "Hexcel Corporation",
+      "next_earnings_date": "2026-07-29",
+      "price": 108.48,
+      "price_to_book": 6.46,
+      "profitable": true,
+      "range_position": 0.98,
+      "range_width_pct": 47.51,
+      "reason": "Positive earnings and long-term trend; 1Y return +73.9% and price +14.4% vs 50-day average.",
+      "research": {
+        "business_model": "quote_only",
+        "confidence": "low",
+        "decision": "research_buy",
+        "decision_label": "Research buy",
+        "decision_score": 66.5,
         "earnings": {
           "assessment": "Filing review pending",
           "filed_at": null,
@@ -505,7 +632,70 @@
         },
         "industry": "SEC classification pending",
         "key_takeaways": [
-          "Positive earnings and long-term trend; 1Y return +72.7% and price +11.7% vs 50-day average."
+          "Positive earnings and long-term trend; 1Y return +73.9% and price +14.4% vs 50-day average."
+        ],
+        "risks": [
+          "Low-confidence decision until SEC filing facts are available."
+        ],
+        "scorecard": {
+          "earnings": 85.0,
+          "financial_strength": null,
+          "quality": null,
+          "trend": 85.4,
+          "value": 10.1
+        },
+        "sector": "Unclassified",
+        "source": {
+          "name": "Market quote snapshot",
+          "url": "https://finance.yahoo.com/"
+        },
+        "status": "quote_only",
+        "valuation_model": "P/E and forward earnings; filing evidence pending"
+      },
+      "return_1y_pct": 73.9,
+      "score": 85.4,
+      "ticker": "HXL",
+      "trailing_pe": 71.84
+    },
+    {
+      "action": "buy_candidate",
+      "analyst_rating": "2.0 - Buy",
+      "average_volume_3m": 1739349.0,
+      "distance_ma200_pct": 23.4,
+      "distance_ma50_pct": 13.97,
+      "earnings_date_is_estimate": false,
+      "eps_forward": 7.45,
+      "eps_forward_growth_pct": 50.74,
+      "eps_ttm": 4.94,
+      "exchange": "NasdaqGS",
+      "forward_pe": 28.11,
+      "market_cap": 24676720640.0,
+      "name": "C.H. Robinson Worldwide, Inc.",
+      "next_earnings_date": "2026-07-29",
+      "price": 209.35,
+      "price_to_book": 14.52,
+      "profitable": true,
+      "range_position": 0.99,
+      "range_width_pct": 54.16,
+      "reason": "Positive earnings and long-term trend; 1Y return +108.0% and price +14.0% vs 50-day average.",
+      "research": {
+        "business_model": "quote_only",
+        "confidence": "low",
+        "decision": "research_buy",
+        "decision_label": "Research buy",
+        "decision_score": 69.6,
+        "earnings": {
+          "assessment": "Filing review pending",
+          "filed_at": null,
+          "latest_report_form": null,
+          "net_income_growth_yoy_pct": null,
+          "next_earnings_date": "2026-07-29",
+          "period_end": null,
+          "revenue_growth_yoy_pct": null
+        },
+        "industry": "SEC classification pending",
+        "key_takeaways": [
+          "Positive earnings and long-term trend; 1Y return +108.0% and price +14.0% vs 50-day average."
         ],
         "risks": [
           "Low-confidence decision until SEC filing facts are available."
@@ -515,7 +705,7 @@
           "financial_strength": null,
           "quality": null,
           "trend": 84.9,
-          "value": 11.5
+          "value": 23.6
         },
         "sector": "Unclassified",
         "source": {
@@ -525,101 +715,38 @@
         "status": "quote_only",
         "valuation_model": "P/E and forward earnings; filing evidence pending"
       },
-      "return_1y_pct": 72.67,
+      "return_1y_pct": 108.0,
       "score": 84.9,
-      "ticker": "HXL",
-      "trailing_pe": 69.1
-    },
-    {
-      "action": "buy_candidate",
-      "analyst_rating": "2.8 - Hold",
-      "average_volume_3m": 1739863.0,
-      "distance_ma200_pct": 24.83,
-      "distance_ma50_pct": 17.67,
-      "earnings_date_is_estimate": true,
-      "eps_forward": 29.38,
-      "eps_forward_growth_pct": -21.01,
-      "eps_ttm": 37.19,
-      "exchange": "NYSE",
-      "forward_pe": 12.54,
-      "market_cap": 81307566080.0,
-      "name": "The Travelers Companies, Inc.",
-      "next_earnings_date": "2026-07-17",
-      "price": 368.5,
-      "price_to_book": 2.32,
-      "profitable": true,
-      "range_position": 0.97,
-      "range_width_pct": 32.48,
-      "reason": "Positive earnings and long-term trend; 1Y return +40.2% and price +17.7% vs 50-day average.",
-      "research": {
-        "business_model": "quote_only",
-        "confidence": "low",
-        "decision": "research_buy",
-        "decision_label": "Research buy",
-        "decision_score": 72.6,
-        "earnings": {
-          "assessment": "Filing review pending",
-          "filed_at": null,
-          "latest_report_form": null,
-          "net_income_growth_yoy_pct": null,
-          "next_earnings_date": "2026-07-17",
-          "period_end": null,
-          "revenue_growth_yoy_pct": null
-        },
-        "industry": "SEC classification pending",
-        "key_takeaways": [
-          "Positive earnings and long-term trend; 1Y return +40.2% and price +17.7% vs 50-day average."
-        ],
-        "risks": [
-          "Low-confidence decision until SEC filing facts are available."
-        ],
-        "scorecard": {
-          "earnings": 35.0,
-          "financial_strength": null,
-          "quality": null,
-          "trend": 84.7,
-          "value": 95.8
-        },
-        "sector": "Unclassified",
-        "source": {
-          "name": "Market quote snapshot",
-          "url": "https://finance.yahoo.com/"
-        },
-        "status": "quote_only",
-        "valuation_model": "P/E and forward earnings; filing evidence pending"
-      },
-      "return_1y_pct": 40.17,
-      "score": 84.7,
-      "ticker": "TRV",
-      "trailing_pe": 9.91
+      "ticker": "CHRW",
+      "trailing_pe": 42.38
     },
     {
       "action": "buy_candidate",
       "analyst_rating": "2.0 - Buy",
-      "average_volume_3m": 2113752.0,
-      "distance_ma200_pct": 30.52,
-      "distance_ma50_pct": 10.68,
+      "average_volume_3m": 2144742.0,
+      "distance_ma200_pct": 31.78,
+      "distance_ma50_pct": 11.63,
       "earnings_date_is_estimate": false,
       "eps_forward": 0.56,
-      "eps_forward_growth_pct": 19.15,
-      "eps_ttm": 0.47,
+      "eps_forward_growth_pct": 21.74,
+      "eps_ttm": 0.46,
       "exchange": "NasdaqGS",
-      "forward_pe": 22.77,
-      "market_cap": 2617243648.0,
+      "forward_pe": 23.04,
+      "market_cap": 2649061120.0,
       "name": "Diamondrock Hospitality Company",
       "next_earnings_date": "2026-07-30",
-      "price": 12.75,
-      "price_to_book": 1.8,
+      "price": 12.9,
+      "price_to_book": 1.82,
       "profitable": true,
-      "range_position": 1.0,
-      "range_width_pct": 41.73,
-      "reason": "Positive earnings and long-term trend; 1Y return +57.9% and price +10.7% vs 50-day average.",
+      "range_position": 0.99,
+      "range_width_pct": 42.7,
+      "reason": "Positive earnings and long-term trend; 1Y return +56.4% and price +11.6% vs 50-day average.",
       "research": {
         "business_model": "quote_only",
         "confidence": "low",
         "decision": "research_buy",
         "decision_label": "Research buy",
-        "decision_score": 74.6,
+        "decision_score": 75.4,
         "earnings": {
           "assessment": "Filing review pending",
           "filed_at": null,
@@ -631,17 +758,17 @@
         },
         "industry": "SEC classification pending",
         "key_takeaways": [
-          "Positive earnings and long-term trend; 1Y return +57.9% and price +10.7% vs 50-day average."
+          "Positive earnings and long-term trend; 1Y return +56.4% and price +11.6% vs 50-day average."
         ],
         "risks": [
           "Low-confidence decision until SEC filing facts are available."
         ],
         "scorecard": {
-          "earnings": 76.6,
+          "earnings": 80.3,
           "financial_strength": null,
           "quality": null,
-          "trend": 84.6,
-          "value": 54.2
+          "trend": 84.9,
+          "value": 52.5
         },
         "sector": "Unclassified",
         "source": {
@@ -651,113 +778,50 @@
         "status": "quote_only",
         "valuation_model": "P/E and forward earnings; filing evidence pending"
       },
-      "return_1y_pct": 57.86,
-      "score": 84.6,
+      "return_1y_pct": 56.44,
+      "score": 84.9,
       "ticker": "DRH",
-      "trailing_pe": 27.13
+      "trailing_pe": 28.05
     },
     {
       "action": "buy_candidate",
-      "analyst_rating": "1.7 - Buy",
-      "average_volume_3m": 3485965.0,
-      "distance_ma200_pct": 22.06,
-      "distance_ma50_pct": 12.12,
-      "earnings_date_is_estimate": false,
-      "eps_forward": 3.36,
-      "eps_forward_growth_pct": 61.54,
-      "eps_ttm": 2.08,
+      "analyst_rating": "2.8 - Hold",
+      "average_volume_3m": 1742232.0,
+      "distance_ma200_pct": 25.1,
+      "distance_ma50_pct": 17.6,
+      "earnings_date_is_estimate": true,
+      "eps_forward": 29.38,
+      "eps_forward_growth_pct": -21.07,
+      "eps_ttm": 37.22,
       "exchange": "NYSE",
-      "forward_pe": 72.87,
-      "market_cap": 172836093952.0,
-      "name": "Welltower Inc.",
-      "next_earnings_date": "2026-07-27",
-      "price": 244.84,
-      "price_to_book": 3.94,
+      "forward_pe": 12.59,
+      "market_cap": 81605435392.0,
+      "name": "The Travelers Companies, Inc.",
+      "next_earnings_date": "2026-07-17",
+      "price": 369.85,
+      "price_to_book": 2.33,
       "profitable": true,
       "range_position": 0.98,
-      "range_width_pct": 36.02,
-      "reason": "Positive earnings and long-term trend; 1Y return +51.7% and price +12.1% vs 50-day average.",
+      "range_width_pct": 32.36,
+      "reason": "Positive earnings and long-term trend; 1Y return +38.1% and price +17.6% vs 50-day average.",
       "research": {
         "business_model": "quote_only",
         "confidence": "low",
         "decision": "research_buy",
         "decision_label": "Research buy",
-        "decision_score": 63.4,
+        "decision_score": 72.5,
         "earnings": {
           "assessment": "Filing review pending",
           "filed_at": null,
           "latest_report_form": null,
           "net_income_growth_yoy_pct": null,
-          "next_earnings_date": "2026-07-27",
+          "next_earnings_date": "2026-07-17",
           "period_end": null,
           "revenue_growth_yoy_pct": null
         },
         "industry": "SEC classification pending",
         "key_takeaways": [
-          "Positive earnings and long-term trend; 1Y return +51.7% and price +12.1% vs 50-day average."
-        ],
-        "risks": [
-          "Low-confidence decision until SEC filing facts are available."
-        ],
-        "scorecard": {
-          "earnings": 85.0,
-          "financial_strength": null,
-          "quality": null,
-          "trend": 84.3,
-          "value": 0.0
-        },
-        "sector": "Unclassified",
-        "source": {
-          "name": "Market quote snapshot",
-          "url": "https://finance.yahoo.com/"
-        },
-        "status": "quote_only",
-        "valuation_model": "P/E and forward earnings; filing evidence pending"
-      },
-      "return_1y_pct": 51.73,
-      "score": 84.3,
-      "ticker": "WELL",
-      "trailing_pe": 117.71
-    },
-    {
-      "action": "buy_candidate",
-      "analyst_rating": null,
-      "average_volume_3m": 1066867.0,
-      "distance_ma200_pct": 34.33,
-      "distance_ma50_pct": 10.07,
-      "earnings_date_is_estimate": false,
-      "eps_forward": 2.13,
-      "eps_forward_growth_pct": -36.62,
-      "eps_ttm": 3.36,
-      "exchange": "NYSE",
-      "forward_pe": 20.11,
-      "market_cap": 4271091456.0,
-      "name": "Oceaneering International, Inc.",
-      "next_earnings_date": "2026-07-22",
-      "price": 42.82,
-      "price_to_book": 3.86,
-      "profitable": true,
-      "range_position": 0.94,
-      "range_width_pct": 55.09,
-      "reason": "Positive earnings and long-term trend; 1Y return +103.6% and price +10.1% vs 50-day average.",
-      "research": {
-        "business_model": "quote_only",
-        "confidence": "low",
-        "decision": "research_buy",
-        "decision_label": "Research buy",
-        "decision_score": 68.2,
-        "earnings": {
-          "assessment": "Filing review pending",
-          "filed_at": null,
-          "latest_report_form": null,
-          "net_income_growth_yoy_pct": null,
-          "next_earnings_date": "2026-07-22",
-          "period_end": null,
-          "revenue_growth_yoy_pct": null
-        },
-        "industry": "SEC classification pending",
-        "key_takeaways": [
-          "Positive earnings and long-term trend; 1Y return +103.6% and price +10.1% vs 50-day average."
+          "Positive earnings and long-term trend; 1Y return +38.1% and price +17.6% vs 50-day average."
         ],
         "risks": [
           "Low-confidence decision until SEC filing facts are available."
@@ -766,8 +830,8 @@
           "earnings": 35.0,
           "financial_strength": null,
           "quality": null,
-          "trend": 84.2,
-          "value": 79.2
+          "trend": 84.7,
+          "value": 95.7
         },
         "sector": "Unclassified",
         "source": {
@@ -777,73 +841,10 @@
         "status": "quote_only",
         "valuation_model": "P/E and forward earnings; filing evidence pending"
       },
-      "return_1y_pct": 103.56,
-      "score": 84.2,
-      "ticker": "OII",
-      "trailing_pe": 12.74
-    },
-    {
-      "action": "buy_candidate",
-      "analyst_rating": "1.7 - Buy",
-      "average_volume_3m": 2236390.0,
-      "distance_ma200_pct": 49.97,
-      "distance_ma50_pct": 15.39,
-      "earnings_date_is_estimate": false,
-      "eps_forward": 1.64,
-      "eps_forward_growth_pct": 86.14,
-      "eps_ttm": 0.88,
-      "exchange": "NasdaqGS",
-      "forward_pe": 31.58,
-      "market_cap": 8620473344.0,
-      "name": "Alkermes plc",
-      "next_earnings_date": "2026-07-28",
-      "price": 51.72,
-      "price_to_book": 4.92,
-      "profitable": true,
-      "range_position": 0.87,
-      "range_width_pct": 58.97,
-      "reason": "Positive earnings and long-term trend; 1Y return +97.7% and price +15.4% vs 50-day average.",
-      "research": {
-        "business_model": "quote_only",
-        "confidence": "low",
-        "decision": "research_buy",
-        "decision_label": "Research buy",
-        "decision_score": 66.9,
-        "earnings": {
-          "assessment": "Filing review pending",
-          "filed_at": null,
-          "latest_report_form": null,
-          "net_income_growth_yoy_pct": null,
-          "next_earnings_date": "2026-07-28",
-          "period_end": null,
-          "revenue_growth_yoy_pct": null
-        },
-        "industry": "SEC classification pending",
-        "key_takeaways": [
-          "Positive earnings and long-term trend; 1Y return +97.7% and price +15.4% vs 50-day average."
-        ],
-        "risks": [
-          "Low-confidence decision until SEC filing facts are available."
-        ],
-        "scorecard": {
-          "earnings": 85.0,
-          "financial_strength": null,
-          "quality": null,
-          "trend": 84.1,
-          "value": 14.0
-        },
-        "sector": "Unclassified",
-        "source": {
-          "name": "Market quote snapshot",
-          "url": "https://finance.yahoo.com/"
-        },
-        "status": "quote_only",
-        "valuation_model": "P/E and forward earnings; filing evidence pending"
-      },
-      "return_1y_pct": 97.75,
-      "score": 84.1,
-      "ticker": "ALKS",
-      "trailing_pe": 58.77
+      "return_1y_pct": 38.13,
+      "score": 84.7,
+      "ticker": "TRV",
+      "trailing_pe": 9.94
     }
   ],
   "deep_research": {
@@ -853,115 +854,35 @@
     "researched_count": 15,
     "status": "available"
   },
-  "generated_at": "2026-07-21T04:04:34.122035+00:00",
+  "generated_at": "2026-07-21T19:04:29.608045+00:00",
   "hold_watch": [
     {
       "action": "hold_watch",
-      "analyst_rating": "1.6 - Buy",
-      "average_volume_3m": 1835386.0,
-      "distance_ma200_pct": 48.27,
-      "distance_ma50_pct": 16.3,
-      "earnings_date_is_estimate": true,
-      "eps_forward": -2.05,
-      "eps_forward_growth_pct": null,
-      "eps_ttm": -2.75,
-      "exchange": "NasdaqGS",
-      "forward_pe": -19.52,
-      "market_cap": 8195931136.0,
-      "name": "Immunovant, Inc.",
-      "next_earnings_date": "2026-05-20",
-      "price": 39.92,
-      "price_to_book": 9.55,
-      "profitable": false,
-      "range_position": 0.95,
-      "range_width_pct": 67.41,
-      "reason": "Mixed or extended setup; score 85.8/100 and price +16.3% vs 50-day average.",
-      "research": {
-        "business_model": "healthcare",
-        "confidence": "medium",
-        "decision": "hold_watch",
-        "decision_label": "Hold / watch",
-        "decision_score": 61.9,
-        "earnings": {
-          "assessment": "Loss-making; thesis requires stronger evidence",
-          "filed_at": "2026-05-20",
-          "latest_report_form": "10-K",
-          "net_income_growth_yoy_pct": null,
-          "next_earnings_date": "2026-05-20",
-          "period_end": "2026-03-31",
-          "report_url": "https://www.sec.gov/Archives/edgar/data/1764013/000176401326000064/imvt-20260331.htm",
-          "revenue_growth_yoy_pct": null
-        },
-        "industry": "Biological Products, (No Diagnostic Substances)",
-        "key_takeaways": [
-          "Loss-making; thesis requires stronger evidence",
-          "Cash-return lens: FCF yield -5.0%, ROIC proxy n/a%.",
-          "Pipeline/product durability, margins, FCF and balance-sheet runway."
-        ],
-        "methodology_note": "Scores use standardized filing facts and sector-aware thresholds; specialist bank, insurer, and REIT metrics remain review gates.",
-        "metrics": {
-          "debt_to_equity": 0.0,
-          "equity_to_assets_pct": 89.1,
-          "fcf_margin_pct": null,
-          "fcf_yield_pct": -5.0,
-          "net_debt_to_fcf": null,
-          "normalized_fcf_yield_pct": -4.6,
-          "operating_margin_pct": null,
-          "roe_pct": -59.3,
-          "roic_proxy_pct": null
-        },
-        "risks": [
-          "Review company-specific competition, management and concentration before sizing a position."
-        ],
-        "scorecard": {
-          "earnings": 85.0,
-          "financial_strength": 100.0,
-          "quality": null,
-          "trend": 85.8,
-          "value": 0.0
-        },
-        "sector": "Healthcare",
-        "sic": 2836,
-        "source": {
-          "as_of": "2026-05-20",
-          "name": "SEC EDGAR company facts and filings",
-          "url": "https://www.sec.gov/edgar/browse/?CIK=0001764013"
-        },
-        "status": "sec_fundamentals",
-        "valuation_model": "Pipeline/product durability, margins, FCF and balance-sheet runway"
-      },
-      "return_1y_pct": 127.46,
-      "score": 85.8,
-      "ticker": "IMVT",
-      "trailing_pe": null
-    },
-    {
-      "action": "hold_watch",
       "analyst_rating": "2.9 - Hold",
-      "average_volume_3m": 2614740.0,
-      "distance_ma200_pct": 46.2,
-      "distance_ma50_pct": 13.86,
+      "average_volume_3m": 2611767.0,
+      "distance_ma200_pct": 48.1,
+      "distance_ma50_pct": 15.05,
       "earnings_date_is_estimate": false,
       "eps_forward": -0.31,
       "eps_forward_growth_pct": null,
-      "eps_ttm": -0.8,
+      "eps_ttm": -0.79,
       "exchange": "NYSE",
-      "forward_pe": -62.97,
-      "market_cap": 2189159936.0,
+      "forward_pe": -63.98,
+      "market_cap": 2224304384.0,
       "name": "Pebblebrook Hotel Trust",
       "next_earnings_date": "2026-07-29",
-      "price": 19.31,
-      "price_to_book": 0.9,
+      "price": 19.62,
+      "price_to_book": 0.91,
       "profitable": false,
-      "range_position": 0.96,
-      "range_width_pct": 54.12,
-      "reason": "Mixed or extended setup; score 85.5/100 and price +13.9% vs 50-day average.",
+      "range_position": 0.99,
+      "range_width_pct": 53.26,
+      "reason": "Mixed or extended setup; score 86.3/100 and price +15.0% vs 50-day average.",
       "research": {
         "business_model": "reit",
         "confidence": "medium",
         "decision": "hold_watch",
         "decision_label": "Hold / watch",
-        "decision_score": 43.8,
+        "decision_score": 43.9,
         "earnings": {
           "assessment": "Loss-making; thesis requires stronger evidence",
           "filed_at": "2026-04-28",
@@ -997,7 +918,7 @@
           "earnings": 72.4,
           "financial_strength": 33.5,
           "quality": 8.0,
-          "trend": 85.5,
+          "trend": 86.3,
           "value": null
         },
         "sector": "Real Estate",
@@ -1010,65 +931,65 @@
         "status": "sec_fundamentals",
         "valuation_model": "P/FFO, AFFO growth, leverage and occupancy; SEC score is preliminary"
       },
-      "return_1y_pct": 83.85,
-      "score": 85.5,
+      "return_1y_pct": 80.97,
+      "score": 86.3,
       "ticker": "PEB",
       "trailing_pe": null
     },
     {
       "action": "hold_watch",
-      "analyst_rating": "1.0 - Strong Buy",
-      "average_volume_3m": 1311965.0,
-      "distance_ma200_pct": 65.85,
-      "distance_ma50_pct": 17.13,
+      "analyst_rating": "1.6 - Buy",
+      "average_volume_3m": 1828480.0,
+      "distance_ma200_pct": 47.69,
+      "distance_ma50_pct": 15.6,
       "earnings_date_is_estimate": true,
-      "eps_forward": -2.33,
+      "eps_forward": -2.05,
       "eps_forward_growth_pct": null,
-      "eps_ttm": -1.64,
+      "eps_ttm": -2.77,
       "exchange": "NasdaqGS",
-      "forward_pe": -22.22,
-      "market_cap": 3691215872.0,
-      "name": "Enliven Therapeutics, Inc.",
-      "next_earnings_date": null,
-      "price": 51.67,
-      "price_to_book": 6.94,
+      "forward_pe": -19.53,
+      "market_cap": 8200037888.0,
+      "name": "Immunovant, Inc.",
+      "next_earnings_date": "2026-05-20",
+      "price": 39.94,
+      "price_to_book": 9.55,
       "profitable": false,
-      "range_position": 0.94,
-      "range_width_pct": 76.09,
-      "reason": "Mixed or extended setup; score 85.5/100 and price +17.1% vs 50-day average.",
+      "range_position": 0.95,
+      "range_width_pct": 67.38,
+      "reason": "Mixed or extended setup; score 85.4/100 and price +15.6% vs 50-day average.",
       "research": {
         "business_model": "healthcare",
         "confidence": "medium",
         "decision": "hold_watch",
         "decision_label": "Hold / watch",
-        "decision_score": 58.6,
+        "decision_score": 61.8,
         "earnings": {
           "assessment": "Loss-making; thesis requires stronger evidence",
-          "filed_at": "2026-05-07",
-          "latest_report_form": "10-Q",
+          "filed_at": "2026-05-20",
+          "latest_report_form": "10-K",
           "net_income_growth_yoy_pct": null,
-          "next_earnings_date": null,
+          "next_earnings_date": "2026-05-20",
           "period_end": "2026-03-31",
-          "report_url": "https://www.sec.gov/Archives/edgar/data/1672619/000119312526211982/elvn-20260331.htm",
+          "report_url": "https://www.sec.gov/Archives/edgar/data/1764013/000176401326000064/imvt-20260331.htm",
           "revenue_growth_yoy_pct": null
         },
-        "industry": "Pharmaceutical Preparations",
+        "industry": "Biological Products, (No Diagnostic Substances)",
         "key_takeaways": [
           "Loss-making; thesis requires stronger evidence",
-          "Cash-return lens: FCF yield n/a%, ROIC proxy -26.2%.",
+          "Cash-return lens: FCF yield -5.0%, ROIC proxy n/a%.",
           "Pipeline/product durability, margins, FCF and balance-sheet runway."
         ],
         "methodology_note": "Scores use standardized filing facts and sector-aware thresholds; specialist bank, insurer, and REIT metrics remain review gates.",
         "metrics": {
           "debt_to_equity": 0.0,
-          "equity_to_assets_pct": 96.5,
+          "equity_to_assets_pct": 89.1,
           "fcf_margin_pct": null,
-          "fcf_yield_pct": null,
+          "fcf_yield_pct": -5.0,
           "net_debt_to_fcf": null,
-          "normalized_fcf_yield_pct": null,
+          "normalized_fcf_yield_pct": -4.6,
           "operating_margin_pct": null,
-          "roe_pct": -22.6,
-          "roic_proxy_pct": -26.2
+          "roe_pct": -59.3,
+          "roic_proxy_pct": null
         },
         "risks": [
           "Review company-specific competition, management and concentration before sizing a position."
@@ -1076,132 +997,52 @@
         "scorecard": {
           "earnings": 85.0,
           "financial_strength": 100.0,
-          "quality": 0.0,
-          "trend": 85.5,
-          "value": null
-        },
-        "sector": "Healthcare",
-        "sic": 2834,
-        "source": {
-          "as_of": "2026-05-07",
-          "name": "SEC EDGAR company facts and filings",
-          "url": "https://www.sec.gov/edgar/browse/?CIK=0001672619"
-        },
-        "status": "sec_fundamentals",
-        "valuation_model": "Pipeline/product durability, margins, FCF and balance-sheet runway"
-      },
-      "return_1y_pct": 143.26,
-      "score": 85.5,
-      "ticker": "ELVN",
-      "trailing_pe": null
-    },
-    {
-      "action": "hold_watch",
-      "analyst_rating": "1.0 - Strong Buy",
-      "average_volume_3m": 1366155.0,
-      "distance_ma200_pct": 101.67,
-      "distance_ma50_pct": 18.12,
-      "earnings_date_is_estimate": true,
-      "eps_forward": -3.13,
-      "eps_forward_growth_pct": null,
-      "eps_ttm": -2.06,
-      "exchange": "NasdaqGS",
-      "forward_pe": -31.11,
-      "market_cap": 8452259840.0,
-      "name": "Spyre Therapeutics, Inc.",
-      "next_earnings_date": "2026-05-05",
-      "price": 97.33,
-      "price_to_book": 14.9,
-      "profitable": false,
-      "range_position": 0.91,
-      "range_width_pct": 93.07,
-      "reason": "Mixed or extended setup; score 85.5/100 and price +18.1% vs 50-day average.",
-      "research": {
-        "business_model": "healthcare",
-        "confidence": "high",
-        "decision": "hold_watch",
-        "decision_label": "Hold / watch",
-        "decision_score": 45.1,
-        "earnings": {
-          "assessment": "Loss-making; thesis requires stronger evidence",
-          "filed_at": "2026-05-05",
-          "latest_report_form": "8-K",
-          "net_income_growth_yoy_pct": null,
-          "next_earnings_date": "2026-05-05",
-          "period_end": "2026-05-05",
-          "report_url": "https://www.sec.gov/Archives/edgar/data/1636282/000163628226000051/syre-20260505.htm",
-          "revenue_growth_yoy_pct": null
-        },
-        "industry": "Pharmaceutical Preparations",
-        "key_takeaways": [
-          "Loss-making; thesis requires stronger evidence",
-          "Cash-return lens: FCF yield -2.0%, ROIC proxy -33.3%.",
-          "Pipeline/product durability, margins, FCF and balance-sheet runway."
-        ],
-        "methodology_note": "Scores use standardized filing facts and sector-aware thresholds; specialist bank, insurer, and REIT metrics remain review gates.",
-        "metrics": {
-          "debt_to_equity": 0.0,
-          "equity_to_assets_pct": 92.0,
-          "fcf_margin_pct": null,
-          "fcf_yield_pct": -2.0,
-          "net_debt_to_fcf": null,
-          "normalized_fcf_yield_pct": -1.2,
-          "operating_margin_pct": null,
-          "roe_pct": -21.7,
-          "roic_proxy_pct": -33.3
-        },
-        "risks": [
-          "Review company-specific competition, management and concentration before sizing a position."
-        ],
-        "scorecard": {
-          "earnings": 85.0,
-          "financial_strength": 100.0,
-          "quality": 0.0,
-          "trend": 85.5,
+          "quality": null,
+          "trend": 85.4,
           "value": 0.0
         },
         "sector": "Healthcare",
-        "sic": 2834,
+        "sic": 2836,
         "source": {
-          "as_of": "2026-05-05",
+          "as_of": "2026-05-20",
           "name": "SEC EDGAR company facts and filings",
-          "url": "https://www.sec.gov/edgar/browse/?CIK=0001636282"
+          "url": "https://www.sec.gov/edgar/browse/?CIK=0001764013"
         },
         "status": "sec_fundamentals",
         "valuation_model": "Pipeline/product durability, margins, FCF and balance-sheet runway"
       },
-      "return_1y_pct": 513.03,
-      "score": 85.5,
-      "ticker": "SYRE",
+      "return_1y_pct": 122.52,
+      "score": 85.4,
+      "ticker": "IMVT",
       "trailing_pe": null
     },
     {
       "action": "hold_watch",
       "analyst_rating": "2.8 - Hold",
-      "average_volume_3m": 1077055.0,
-      "distance_ma200_pct": 39.78,
-      "distance_ma50_pct": 11.75,
+      "average_volume_3m": 1095377.0,
+      "distance_ma200_pct": 42.13,
+      "distance_ma50_pct": 13.43,
       "earnings_date_is_estimate": false,
       "eps_forward": 2.13,
       "eps_forward_growth_pct": null,
       "eps_ttm": -0.15,
       "exchange": "NasdaqGS",
-      "forward_pe": 21.7,
-      "market_cap": 2776290048.0,
+      "forward_pe": 22.13,
+      "market_cap": 2831443968.0,
       "name": "Werner Enterprises, Inc.",
       "next_earnings_date": "2026-07-28",
-      "price": 46.31,
-      "price_to_book": 2.05,
+      "price": 47.23,
+      "price_to_book": 2.09,
       "profitable": false,
-      "range_position": 0.98,
-      "range_width_pct": 51.41,
-      "reason": "Mixed or extended setup; score 84.1/100 and price +11.7% vs 50-day average.",
+      "range_position": 1.0,
+      "range_width_pct": 51.25,
+      "reason": "Mixed or extended setup; score 85.0/100 and price +13.4% vs 50-day average.",
       "research": {
         "business_model": "operating_company",
         "confidence": "high",
         "decision": "hold_watch",
         "decision_label": "Hold / watch",
-        "decision_score": 41.4,
+        "decision_score": 41.3,
         "earnings": {
           "assessment": "Loss-making; thesis requires stronger evidence",
           "filed_at": "2026-05-08",
@@ -1216,14 +1057,14 @@
         "key_takeaways": [
           "Loss-making; thesis requires stronger evidence",
           "Latest comparable period: revenue +13.9% YoY.",
-          "Cash-return lens: FCF yield -2.5%, ROIC proxy 0.4%."
+          "Cash-return lens: FCF yield -2.4%, ROIC proxy 0.4%."
         ],
         "methodology_note": "Scores use standardized filing facts and sector-aware thresholds; specialist bank, insurer, and REIT metrics remain review gates.",
         "metrics": {
           "debt_to_equity": 0.55,
           "equity_to_assets_pct": 47.2,
           "fcf_margin_pct": -2.4,
-          "fcf_yield_pct": -2.5,
+          "fcf_yield_pct": -2.4,
           "net_debt_to_fcf": null,
           "normalized_fcf_yield_pct": -3.0,
           "operating_margin_pct": 0.4,
@@ -1237,8 +1078,8 @@
           "earnings": 82.4,
           "financial_strength": 41.2,
           "quality": 1.2,
-          "trend": 84.1,
-          "value": 28.9
+          "trend": 85.0,
+          "value": 28.0
         },
         "sector": "Other",
         "sic": 4213,
@@ -1250,38 +1091,261 @@
         "status": "sec_fundamentals",
         "valuation_model": "ROIC, FCF yield, margins, growth and balance-sheet resilience"
       },
-      "return_1y_pct": 65.43,
-      "score": 84.1,
+      "return_1y_pct": 62.83,
+      "score": 85.0,
       "ticker": "WERN",
       "trailing_pe": null
     },
     {
       "action": "hold_watch",
-      "analyst_rating": "2.6 - Hold",
-      "average_volume_3m": 2322398.0,
-      "distance_ma200_pct": 62.58,
-      "distance_ma50_pct": 13.49,
-      "earnings_date_is_estimate": false,
-      "eps_forward": 0.53,
+      "analyst_rating": "1.3 - Strong Buy",
+      "average_volume_3m": 2966085.0,
+      "distance_ma200_pct": 67.7,
+      "distance_ma50_pct": 11.45,
+      "earnings_date_is_estimate": true,
+      "eps_forward": -5.64,
       "eps_forward_growth_pct": null,
-      "eps_ttm": -0.62,
-      "exchange": "NYSE",
-      "forward_pe": 53.97,
-      "market_cap": 4761249792.0,
-      "name": "RXO, Inc.",
-      "next_earnings_date": "2026-08-06",
-      "price": 28.87,
-      "price_to_book": 3.15,
+      "eps_ttm": -7.1,
+      "exchange": "NasdaqGS",
+      "forward_pe": -32.45,
+      "market_cap": 38926413824.0,
+      "name": "Revolution Medicines, Inc.",
+      "next_earnings_date": "2026-05-06",
+      "price": 183.1,
+      "price_to_book": 24.44,
       "profitable": false,
-      "range_position": 0.95,
-      "range_width_pct": 67.32,
-      "reason": "Mixed or extended setup; score 83.8/100 and price +13.5% vs 50-day average.",
+      "range_position": 0.93,
+      "range_width_pct": 87.29,
+      "reason": "Mixed or extended setup; score 84.4/100 and price +11.4% vs 50-day average.",
+      "research": {
+        "business_model": "healthcare",
+        "confidence": "high",
+        "decision": "hold_watch",
+        "decision_label": "Hold / watch",
+        "decision_score": 45.0,
+        "earnings": {
+          "assessment": "Loss-making; thesis requires stronger evidence",
+          "filed_at": "2026-05-06",
+          "latest_report_form": "10-Q",
+          "net_income_growth_yoy_pct": null,
+          "next_earnings_date": "2026-05-06",
+          "period_end": "2026-03-31",
+          "report_url": "https://www.sec.gov/Archives/edgar/data/1628171/000119312526208969/rvmd-20260331.htm",
+          "revenue_growth_yoy_pct": null
+        },
+        "industry": "Biological Products, (No Diagnostic Substances)",
+        "key_takeaways": [
+          "Loss-making; thesis requires stronger evidence",
+          "Cash-return lens: FCF yield -2.3%, ROIC proxy -74.9%.",
+          "Pipeline/product durability, margins, FCF and balance-sheet runway."
+        ],
+        "methodology_note": "Scores use standardized filing facts and sector-aware thresholds; specialist bank, insurer, and REIT metrics remain review gates.",
+        "metrics": {
+          "debt_to_equity": 0.0,
+          "equity_to_assets_pct": 69.3,
+          "fcf_margin_pct": null,
+          "fcf_yield_pct": -2.3,
+          "net_debt_to_fcf": null,
+          "normalized_fcf_yield_pct": -1.5,
+          "operating_margin_pct": null,
+          "roe_pct": -69.3,
+          "roic_proxy_pct": -74.9
+        },
+        "risks": [
+          "Review company-specific competition, management and concentration before sizing a position."
+        ],
+        "scorecard": {
+          "earnings": 85.0,
+          "financial_strength": 100.0,
+          "quality": 0.0,
+          "trend": 84.4,
+          "value": 0.0
+        },
+        "sector": "Healthcare",
+        "sic": 2836,
+        "source": {
+          "as_of": "2026-05-06",
+          "name": "SEC EDGAR company facts and filings",
+          "url": "https://www.sec.gov/edgar/browse/?CIK=0001628171"
+        },
+        "status": "sec_fundamentals",
+        "valuation_model": "Pipeline/product durability, margins, FCF and balance-sheet runway"
+      },
+      "return_1y_pct": 371.36,
+      "score": 84.4,
+      "ticker": "RVMD",
+      "trailing_pe": null
+    },
+    {
+      "action": "hold_watch",
+      "analyst_rating": null,
+      "average_volume_3m": 1747675.0,
+      "distance_ma200_pct": 47.15,
+      "distance_ma50_pct": 8.49,
+      "earnings_date_is_estimate": false,
+      "eps_forward": -0.48,
+      "eps_forward_growth_pct": null,
+      "eps_ttm": -1.33,
+      "exchange": "NasdaqGS",
+      "forward_pe": -20.18,
+      "market_cap": 2320594944.0,
+      "name": "Diversified Healthcare Trust",
+      "next_earnings_date": "2026-08-03",
+      "price": 9.59,
+      "price_to_book": 1.43,
+      "profitable": false,
+      "range_position": 0.99,
+      "range_width_pct": 67.61,
+      "reason": "Mixed or extended setup; score 83.9/100 and price +8.5% vs 50-day average.",
+      "research": {
+        "business_model": "reit",
+        "confidence": "medium",
+        "decision": "hold_watch",
+        "decision_label": "Hold / watch",
+        "decision_score": 50.7,
+        "earnings": {
+          "assessment": "Loss-making; thesis requires stronger evidence",
+          "filed_at": "2026-05-04",
+          "latest_report_form": "10-Q",
+          "net_income_growth_yoy_pct": null,
+          "next_earnings_date": "2026-08-03",
+          "period_end": "2026-03-31",
+          "report_url": "https://www.sec.gov/Archives/edgar/data/1075415/000107541526000024/dhc-20260331.htm",
+          "revenue_growth_yoy_pct": -5.3
+        },
+        "industry": "Real Estate Investment Trusts",
+        "key_takeaways": [
+          "Loss-making; thesis requires stronger evidence",
+          "Latest comparable period: revenue -5.3% YoY.",
+          "Cash-return lens: FCF yield n/a%, ROIC proxy 6.8%."
+        ],
+        "methodology_note": "Scores use standardized filing facts and sector-aware thresholds; specialist bank, insurer, and REIT metrics remain review gates.",
+        "metrics": {
+          "debt_to_equity": 1.47,
+          "equity_to_assets_pct": 38.2,
+          "fcf_margin_pct": null,
+          "fcf_yield_pct": null,
+          "net_debt_to_fcf": null,
+          "normalized_fcf_yield_pct": null,
+          "operating_margin_pct": 17.9,
+          "roe_pct": -17.2,
+          "roic_proxy_pct": 6.8
+        },
+        "risks": [
+          "Confirm FFO/AFFO, occupancy and debt maturities before acting."
+        ],
+        "scorecard": {
+          "earnings": 50.4,
+          "financial_strength": 18.3,
+          "quality": 52.8,
+          "trend": 83.9,
+          "value": null
+        },
+        "sector": "Real Estate",
+        "sic": 6798,
+        "source": {
+          "as_of": "2026-05-04",
+          "name": "SEC EDGAR company facts and filings",
+          "url": "https://www.sec.gov/edgar/browse/?CIK=0001075415"
+        },
+        "status": "sec_fundamentals",
+        "valuation_model": "P/FFO, AFFO growth, leverage and occupancy; SEC score is preliminary"
+      },
+      "return_1y_pct": 157.79,
+      "score": 83.9,
+      "ticker": "DHC",
+      "trailing_pe": null
+    },
+    {
+      "action": "hold_watch",
+      "analyst_rating": null,
+      "average_volume_3m": 1371409.0,
+      "distance_ma200_pct": 25.9,
+      "distance_ma50_pct": 18.45,
+      "earnings_date_is_estimate": true,
+      "eps_forward": -1.27,
+      "eps_forward_growth_pct": null,
+      "eps_ttm": -1.48,
+      "exchange": "NasdaqGS",
+      "forward_pe": -14.51,
+      "market_cap": 2042492800.0,
+      "name": "Amylyx Pharmaceuticals, Inc.",
+      "next_earnings_date": "2026-05-07",
+      "price": 18.37,
+      "price_to_book": 7.47,
+      "profitable": false,
+      "range_position": 0.93,
+      "range_width_pct": 63.53,
+      "reason": "Mixed or extended setup; score 83.8/100 and price +18.4% vs 50-day average.",
       "research": {
         "business_model": "quote_only",
         "confidence": "low",
         "decision": "wait_watch",
         "decision_label": "Wait / watch",
-        "decision_score": 45.2,
+        "decision_score": 60.3,
+        "earnings": {
+          "assessment": "Filing review pending",
+          "filed_at": null,
+          "latest_report_form": null,
+          "net_income_growth_yoy_pct": null,
+          "next_earnings_date": "2026-05-07",
+          "period_end": null,
+          "revenue_growth_yoy_pct": null
+        },
+        "industry": "SEC classification pending",
+        "key_takeaways": [
+          "Mixed or extended setup; score 83.8/100 and price +18.4% vs 50-day average."
+        ],
+        "risks": [
+          "Low-confidence decision until SEC filing facts are available."
+        ],
+        "scorecard": {
+          "earnings": 25.0,
+          "financial_strength": null,
+          "quality": null,
+          "trend": 83.8,
+          "value": null
+        },
+        "sector": "Unclassified",
+        "source": {
+          "name": "Market quote snapshot",
+          "url": "https://finance.yahoo.com/"
+        },
+        "status": "quote_only",
+        "valuation_model": "P/E and forward earnings; filing evidence pending"
+      },
+      "return_1y_pct": 121.73,
+      "score": 83.8,
+      "ticker": "AMLX",
+      "trailing_pe": null
+    },
+    {
+      "action": "hold_watch",
+      "analyst_rating": "2.6 - Hold",
+      "average_volume_3m": 2310188.0,
+      "distance_ma200_pct": 62.91,
+      "distance_ma50_pct": 13.34,
+      "earnings_date_is_estimate": false,
+      "eps_forward": 0.53,
+      "eps_forward_growth_pct": null,
+      "eps_ttm": -0.62,
+      "exchange": "NYSE",
+      "forward_pe": 54.29,
+      "market_cap": 4789286400.0,
+      "name": "RXO, Inc.",
+      "next_earnings_date": "2026-08-06",
+      "price": 29.04,
+      "price_to_book": 3.17,
+      "profitable": false,
+      "range_position": 0.96,
+      "range_width_pct": 67.06,
+      "reason": "Mixed or extended setup; score 83.6/100 and price +13.3% vs 50-day average.",
+      "research": {
+        "business_model": "quote_only",
+        "confidence": "low",
+        "decision": "wait_watch",
+        "decision_label": "Wait / watch",
+        "decision_score": 45.1,
         "earnings": {
           "assessment": "Filing review pending",
           "filed_at": null,
@@ -1293,7 +1357,7 @@
         },
         "industry": "SEC classification pending",
         "key_takeaways": [
-          "Mixed or extended setup; score 83.8/100 and price +13.5% vs 50-day average."
+          "Mixed or extended setup; score 83.6/100 and price +13.3% vs 50-day average."
         ],
         "risks": [
           "Low-confidence decision until SEC filing facts are available."
@@ -1302,7 +1366,7 @@
           "earnings": 25.0,
           "financial_strength": null,
           "quality": null,
-          "trend": 83.8,
+          "trend": 83.6,
           "value": 0.0
         },
         "sector": "Unclassified",
@@ -1313,32 +1377,32 @@
         "status": "quote_only",
         "valuation_model": "P/E and forward earnings; filing evidence pending"
       },
-      "return_1y_pct": 81.47,
-      "score": 83.8,
+      "return_1y_pct": 74.23,
+      "score": 83.6,
       "ticker": "RXO",
       "trailing_pe": null
     },
     {
       "action": "hold_watch",
       "analyst_rating": "1.3 - Strong Buy",
-      "average_volume_3m": 1834619.0,
-      "distance_ma200_pct": 26.41,
-      "distance_ma50_pct": 19.05,
+      "average_volume_3m": 1165086.0,
+      "distance_ma200_pct": 36.35,
+      "distance_ma50_pct": 18.35,
       "earnings_date_is_estimate": true,
-      "eps_forward": -2.94,
+      "eps_forward": -1.81,
       "eps_forward_growth_pct": null,
-      "eps_ttm": -3.11,
+      "eps_ttm": -1.48,
       "exchange": "NasdaqGS",
-      "forward_pe": -7.98,
-      "market_cap": 3876608512.0,
-      "name": "Dyne Therapeutics, Inc.",
-      "next_earnings_date": "2026-05-11",
-      "price": 23.45,
-      "price_to_book": 4.48,
+      "forward_pe": -13.18,
+      "market_cap": 2020325248.0,
+      "name": "Monte Rosa Therapeutics, Inc.",
+      "next_earnings_date": "2026-05-07",
+      "price": 23.92,
+      "price_to_book": 3.86,
       "profitable": false,
-      "range_position": 0.9,
-      "range_width_pct": 68.74,
-      "reason": "Mixed or extended setup; score 83.7/100 and price +19.1% vs 50-day average.",
+      "range_position": 0.91,
+      "range_width_pct": 90.53,
+      "reason": "Mixed or extended setup; score 83.6/100 and price +18.3% vs 50-day average.",
       "research": {
         "business_model": "quote_only",
         "confidence": "low",
@@ -1350,13 +1414,13 @@
           "filed_at": null,
           "latest_report_form": null,
           "net_income_growth_yoy_pct": null,
-          "next_earnings_date": "2026-05-11",
+          "next_earnings_date": "2026-05-07",
           "period_end": null,
           "revenue_growth_yoy_pct": null
         },
         "industry": "SEC classification pending",
         "key_takeaways": [
-          "Mixed or extended setup; score 83.7/100 and price +19.1% vs 50-day average."
+          "Mixed or extended setup; score 83.6/100 and price +18.3% vs 50-day average."
         ],
         "risks": [
           "Low-confidence decision until SEC filing facts are available."
@@ -1365,7 +1429,7 @@
           "earnings": 25.0,
           "financial_strength": null,
           "quality": null,
-          "trend": 83.7,
+          "trend": 83.6,
           "value": null
         },
         "sector": "Unclassified",
@@ -1376,50 +1440,50 @@
         "status": "quote_only",
         "valuation_model": "P/E and forward earnings; filing evidence pending"
       },
-      "return_1y_pct": 158.89,
-      "score": 83.7,
-      "ticker": "DYN",
+      "return_1y_pct": 314.84,
+      "score": 83.6,
+      "ticker": "GLUE",
       "trailing_pe": null
     },
     {
       "action": "hold_watch",
       "analyst_rating": "1.3 - Strong Buy",
-      "average_volume_3m": 2970831.0,
-      "distance_ma200_pct": 66.24,
-      "distance_ma50_pct": 10.19,
+      "average_volume_3m": 6019791.0,
+      "distance_ma200_pct": 37.32,
+      "distance_ma50_pct": 11.34,
       "earnings_date_is_estimate": true,
-      "eps_forward": -5.64,
+      "eps_forward": -1.56,
       "eps_forward_growth_pct": null,
-      "eps_ttm": -6.89,
+      "eps_ttm": -0.54,
       "exchange": "NasdaqGS",
-      "forward_pe": -31.97,
-      "market_cap": 38350274560.0,
-      "name": "Revolution Medicines, Inc.",
-      "next_earnings_date": "2026-05-06",
-      "price": 180.39,
-      "price_to_book": 24.07,
+      "forward_pe": -22.54,
+      "market_cap": 25282355200.0,
+      "name": "Roivant Sciences Ltd.",
+      "next_earnings_date": "2026-05-20",
+      "price": 35.15,
+      "price_to_book": 5.59,
       "profitable": false,
-      "range_position": 0.92,
-      "range_width_pct": 88.6,
-      "reason": "Mixed or extended setup; score 83.5/100 and price +10.2% vs 50-day average.",
+      "range_position": 0.93,
+      "range_width_pct": 74.25,
+      "reason": "Mixed or extended setup; score 83.6/100 and price +11.3% vs 50-day average.",
       "research": {
         "business_model": "quote_only",
         "confidence": "low",
         "decision": "wait_watch",
         "decision_label": "Wait / watch",
-        "decision_score": 60.1,
+        "decision_score": 60.2,
         "earnings": {
           "assessment": "Filing review pending",
           "filed_at": null,
           "latest_report_form": null,
           "net_income_growth_yoy_pct": null,
-          "next_earnings_date": "2026-05-06",
+          "next_earnings_date": "2026-05-20",
           "period_end": null,
           "revenue_growth_yoy_pct": null
         },
         "industry": "SEC classification pending",
         "key_takeaways": [
-          "Mixed or extended setup; score 83.5/100 and price +10.2% vs 50-day average."
+          "Mixed or extended setup; score 83.6/100 and price +11.3% vs 50-day average."
         ],
         "risks": [
           "Low-confidence decision until SEC filing facts are available."
@@ -1428,7 +1492,7 @@
           "earnings": 25.0,
           "financial_strength": null,
           "quality": null,
-          "trend": 83.5,
+          "trend": 83.6,
           "value": null
         },
         "sector": "Unclassified",
@@ -1439,101 +1503,38 @@
         "status": "quote_only",
         "valuation_model": "P/E and forward earnings; filing evidence pending"
       },
-      "return_1y_pct": 384.54,
-      "score": 83.5,
-      "ticker": "RVMD",
+      "return_1y_pct": 196.09,
+      "score": 83.6,
+      "ticker": "ROIV",
       "trailing_pe": null
     },
     {
       "action": "hold_watch",
-      "analyst_rating": "1.3 - Strong Buy",
-      "average_volume_3m": 1358140.0,
-      "distance_ma200_pct": 48.97,
-      "distance_ma50_pct": 16.33,
-      "earnings_date_is_estimate": true,
-      "eps_forward": -2.95,
-      "eps_forward_growth_pct": null,
-      "eps_ttm": -1.74,
-      "exchange": "NasdaqGS",
-      "forward_pe": -9.47,
-      "market_cap": 3567225600.0,
-      "name": "Alumis Inc.",
-      "next_earnings_date": "2026-05-14",
-      "price": 27.98,
-      "price_to_book": 6.28,
-      "profitable": false,
-      "range_position": 0.88,
-      "range_width_pct": 100.45,
-      "reason": "Mixed or extended setup; score 83.4/100 and price +16.3% vs 50-day average.",
-      "research": {
-        "business_model": "quote_only",
-        "confidence": "low",
-        "decision": "wait_watch",
-        "decision_label": "Wait / watch",
-        "decision_score": 60.0,
-        "earnings": {
-          "assessment": "Filing review pending",
-          "filed_at": null,
-          "latest_report_form": null,
-          "net_income_growth_yoy_pct": null,
-          "next_earnings_date": "2026-05-14",
-          "period_end": null,
-          "revenue_growth_yoy_pct": null
-        },
-        "industry": "SEC classification pending",
-        "key_takeaways": [
-          "Mixed or extended setup; score 83.4/100 and price +16.3% vs 50-day average."
-        ],
-        "risks": [
-          "Low-confidence decision until SEC filing facts are available."
-        ],
-        "scorecard": {
-          "earnings": 25.0,
-          "financial_strength": null,
-          "quality": null,
-          "trend": 83.4,
-          "value": null
-        },
-        "sector": "Unclassified",
-        "source": {
-          "name": "Market quote snapshot",
-          "url": "https://finance.yahoo.com/"
-        },
-        "status": "quote_only",
-        "valuation_model": "P/E and forward earnings; filing evidence pending"
-      },
-      "return_1y_pct": 763.25,
-      "score": 83.4,
-      "ticker": "ALMS",
-      "trailing_pe": null
-    },
-    {
-      "action": "hold_watch",
-      "analyst_rating": "2.7 - Hold",
-      "average_volume_3m": 5140008.0,
-      "distance_ma200_pct": 29.03,
-      "distance_ma50_pct": 11.82,
+      "analyst_rating": "2.8 - Hold",
+      "average_volume_3m": 7164501.0,
+      "distance_ma200_pct": 66.59,
+      "distance_ma50_pct": 15.44,
       "earnings_date_is_estimate": false,
-      "eps_forward": 0.53,
+      "eps_forward": 1.51,
       "eps_forward_growth_pct": null,
-      "eps_ttm": -1.09,
+      "eps_ttm": -0.54,
       "exchange": "NYSE",
-      "forward_pe": 27.87,
-      "market_cap": 2988209664.0,
-      "name": "Park Hotels & Resorts Inc.",
+      "forward_pe": 20.35,
+      "market_cap": 9295029248.0,
+      "name": "Oscar Health, Inc.",
       "next_earnings_date": "2026-08-06",
-      "price": 14.84,
-      "price_to_book": 0.97,
+      "price": 30.83,
+      "price_to_book": 5.54,
       "profitable": false,
-      "range_position": 0.97,
-      "range_width_pct": 34.91,
-      "reason": "Mixed or extended setup; score 83.0/100 and price +11.8% vs 50-day average.",
+      "range_position": 0.9,
+      "range_width_pct": 72.69,
+      "reason": "Mixed or extended setup; score 83.5/100 and price +15.4% vs 50-day average.",
       "research": {
         "business_model": "quote_only",
         "confidence": "low",
         "decision": "wait_watch",
         "decision_label": "Wait / watch",
-        "decision_score": 55.0,
+        "decision_score": 61.5,
         "earnings": {
           "assessment": "Filing review pending",
           "filed_at": null,
@@ -1545,7 +1546,7 @@
         },
         "industry": "SEC classification pending",
         "key_takeaways": [
-          "Mixed or extended setup; score 83.0/100 and price +11.8% vs 50-day average."
+          "Mixed or extended setup; score 83.5/100 and price +15.4% vs 50-day average."
         ],
         "risks": [
           "Low-confidence decision until SEC filing facts are available."
@@ -1554,8 +1555,8 @@
           "earnings": 25.0,
           "financial_strength": null,
           "quality": null,
-          "trend": 83.0,
-          "value": 40.4
+          "trend": 83.5,
+          "value": 65.5
         },
         "sector": "Unclassified",
         "source": {
@@ -1565,38 +1566,38 @@
         "status": "quote_only",
         "valuation_model": "P/E and forward earnings; filing evidence pending"
       },
-      "return_1y_pct": 39.07,
-      "score": 83.0,
-      "ticker": "PK",
+      "return_1y_pct": 101.36,
+      "score": 83.5,
+      "ticker": "OSCR",
       "trailing_pe": null
     },
     {
       "action": "hold_watch",
       "analyst_rating": "1.8 - Buy",
-      "average_volume_3m": 1357529.0,
-      "distance_ma200_pct": 150.05,
-      "distance_ma50_pct": 13.33,
+      "average_volume_3m": 1364081.0,
+      "distance_ma200_pct": 148.8,
+      "distance_ma50_pct": 13.0,
       "earnings_date_is_estimate": false,
       "eps_forward": 2.26,
       "eps_forward_growth_pct": null,
-      "eps_ttm": -0.36,
+      "eps_ttm": -0.38,
       "exchange": "NasdaqGS",
-      "forward_pe": 30.5,
-      "market_cap": 2202790912.0,
+      "forward_pe": 30.63,
+      "market_cap": 2212556288.0,
       "name": "Bandwidth Inc.",
       "next_earnings_date": "2026-07-29",
-      "price": 68.8,
-      "price_to_book": 5.43,
+      "price": 69.1,
+      "price_to_book": 5.45,
       "profitable": false,
       "range_position": 0.85,
-      "range_width_pct": 96.77,
-      "reason": "Mixed or extended setup; score 83.0/100 and price +13.3% vs 50-day average.",
+      "range_width_pct": 96.35,
+      "reason": "Mixed or extended setup; score 82.7/100 and price +13.0% vs 50-day average.",
       "research": {
         "business_model": "quote_only",
         "confidence": "low",
         "decision": "wait_watch",
         "decision_label": "Wait / watch",
-        "decision_score": 52.8,
+        "decision_score": 52.5,
         "earnings": {
           "assessment": "Filing review pending",
           "filed_at": null,
@@ -1608,7 +1609,7 @@
         },
         "industry": "SEC classification pending",
         "key_takeaways": [
-          "Mixed or extended setup; score 83.0/100 and price +13.3% vs 50-day average."
+          "Mixed or extended setup; score 82.7/100 and price +13.0% vs 50-day average."
         ],
         "risks": [
           "Low-confidence decision until SEC filing facts are available."
@@ -1617,8 +1618,8 @@
           "earnings": 25.0,
           "financial_strength": null,
           "quality": null,
-          "trend": 83.0,
-          "value": 31.7
+          "trend": 82.7,
+          "value": 31.2
         },
         "sector": "Unclassified",
         "source": {
@@ -1628,50 +1629,50 @@
         "status": "quote_only",
         "valuation_model": "P/E and forward earnings; filing evidence pending"
       },
-      "return_1y_pct": 364.49,
-      "score": 83.0,
+      "return_1y_pct": 339.9,
+      "score": 82.7,
       "ticker": "BAND",
       "trailing_pe": null
     },
     {
       "action": "hold_watch",
-      "analyst_rating": "1.3 - Strong Buy",
-      "average_volume_3m": 2905000.0,
-      "distance_ma200_pct": 53.03,
-      "distance_ma50_pct": 12.62,
+      "analyst_rating": "2.5 - Buy",
+      "average_volume_3m": 5781103.0,
+      "distance_ma200_pct": 48.05,
+      "distance_ma50_pct": 7.49,
       "earnings_date_is_estimate": false,
-      "eps_forward": 1.12,
+      "eps_forward": 4.48,
       "eps_forward_growth_pct": null,
-      "eps_ttm": -0.54,
-      "exchange": "NasdaqGS",
-      "forward_pe": 80.72,
-      "market_cap": 10952856576.0,
-      "name": "JFrog Ltd.",
-      "next_earnings_date": "2026-08-06",
-      "price": 90.43,
-      "price_to_book": 11.86,
+      "eps_ttm": -13.05,
+      "exchange": "NYSE",
+      "forward_pe": 15.02,
+      "market_cap": 33195501568.0,
+      "name": "Centene Corporation",
+      "next_earnings_date": "2026-07-28",
+      "price": 67.22,
+      "price_to_book": 1.55,
       "profitable": false,
-      "range_position": 0.87,
-      "range_width_pct": 72.07,
-      "reason": "Mixed or extended setup; score 82.2/100 and price +12.6% vs 50-day average.",
+      "range_position": 0.95,
+      "range_width_pct": 65.87,
+      "reason": "Mixed or extended setup; score 82.5/100 and price +7.5% vs 50-day average.",
       "research": {
         "business_model": "quote_only",
         "confidence": "low",
         "decision": "wait_watch",
         "decision_label": "Wait / watch",
-        "decision_score": 44.5,
+        "decision_score": 65.4,
         "earnings": {
           "assessment": "Filing review pending",
           "filed_at": null,
           "latest_report_form": null,
           "net_income_growth_yoy_pct": null,
-          "next_earnings_date": "2026-08-06",
+          "next_earnings_date": "2026-07-28",
           "period_end": null,
           "revenue_growth_yoy_pct": null
         },
         "industry": "SEC classification pending",
         "key_takeaways": [
-          "Mixed or extended setup; score 82.2/100 and price +12.6% vs 50-day average."
+          "Mixed or extended setup; score 82.5/100 and price +7.5% vs 50-day average."
         ],
         "risks": [
           "Low-confidence decision until SEC filing facts are available."
@@ -1680,8 +1681,8 @@
           "earnings": 25.0,
           "financial_strength": null,
           "quality": null,
-          "trend": 82.2,
-          "value": 0.0
+          "trend": 82.5,
+          "value": 83.3
         },
         "sector": "Unclassified",
         "source": {
@@ -1691,9 +1692,9 @@
         "status": "quote_only",
         "valuation_model": "P/E and forward earnings; filing evidence pending"
       },
-      "return_1y_pct": 111.06,
-      "score": 82.2,
-      "ticker": "FROG",
+      "return_1y_pct": 136.07,
+      "score": 82.5,
+      "ticker": "CNC",
       "trailing_pe": null
     }
   ],
@@ -1714,30 +1715,30 @@
     {
       "action": "sell_avoid",
       "analyst_rating": "2.6 - Hold",
-      "average_volume_3m": 33658821.0,
-      "distance_ma200_pct": -55.78,
-      "distance_ma50_pct": -25.54,
+      "average_volume_3m": 33490152.0,
+      "distance_ma200_pct": -51.93,
+      "distance_ma50_pct": -18.84,
       "earnings_date_is_estimate": false,
       "eps_forward": -0.72,
       "eps_forward_growth_pct": null,
-      "eps_ttm": -2.27,
+      "eps_ttm": -2.2,
       "exchange": "NYSE",
-      "forward_pe": -11.11,
-      "market_cap": 2755002112.0,
+      "forward_pe": -11.98,
+      "market_cap": 2971318272.0,
       "name": "NuScale Power Corporation",
       "next_earnings_date": "2026-08-05",
-      "price": 7.96,
-      "price_to_book": 2.17,
+      "price": 8.59,
+      "price_to_book": 2.34,
       "profitable": false,
-      "range_position": 0.01,
-      "range_width_pct": 630.78,
-      "reason": "Below both trend averages; 1Y return -83.0% and price -55.8% vs 200-day average.",
+      "range_position": 0.03,
+      "range_width_pct": 584.86,
+      "reason": "Below both trend averages; 1Y return -82.1% and price -51.9% vs 200-day average.",
       "research": {
         "business_model": "energy",
         "confidence": "high",
         "decision": "avoid_review",
         "decision_label": "Avoid / sell review",
-        "decision_score": 24.7,
+        "decision_score": 24.8,
         "earnings": {
           "assessment": "Loss-making; thesis requires stronger evidence",
           "filed_at": "2026-05-07",
@@ -1752,16 +1753,16 @@
         "key_takeaways": [
           "Loss-making; thesis requires stronger evidence",
           "Latest comparable period: revenue -95.8% YoY.",
-          "Cash-return lens: FCF yield -6.7%, ROIC proxy -163.9%."
+          "Cash-return lens: FCF yield -6.2%, ROIC proxy -163.9%."
         ],
         "methodology_note": "Scores use standardized filing facts and sector-aware thresholds; specialist bank, insurer, and REIT metrics remain review gates.",
         "metrics": {
           "debt_to_equity": 0.0,
           "equity_to_assets_pct": 82.7,
           "fcf_margin_pct": -1461.7,
-          "fcf_yield_pct": -16.7,
+          "fcf_yield_pct": -15.5,
           "net_debt_to_fcf": null,
-          "normalized_fcf_yield_pct": -6.7,
+          "normalized_fcf_yield_pct": -6.2,
           "operating_margin_pct": -2190.6,
           "roe_pct": -30.4,
           "roic_proxy_pct": -163.9
@@ -1773,7 +1774,7 @@
           "earnings": 42.5,
           "financial_strength": 100.0,
           "quality": 0.0,
-          "trend": 0.6,
+          "trend": 0.9,
           "value": 0.0
         },
         "sector": "Energy",
@@ -1786,38 +1787,118 @@
         "status": "sec_fundamentals",
         "valuation_model": "Normalized multi-year FCF yield, balance sheet and cycle resilience"
       },
-      "return_1y_pct": -83.01,
-      "score": 0.6,
+      "return_1y_pct": -82.09,
+      "score": 0.9,
       "ticker": "SMR",
       "trailing_pe": null
     },
     {
       "action": "sell_avoid",
+      "analyst_rating": "1.3 - Strong Buy",
+      "average_volume_3m": 20532426.0,
+      "distance_ma200_pct": -40.44,
+      "distance_ma50_pct": -21.46,
+      "earnings_date_is_estimate": false,
+      "eps_forward": 4.46,
+      "eps_forward_growth_pct": null,
+      "eps_ttm": -36.99,
+      "exchange": "NasdaqGS",
+      "forward_pe": 22.49,
+      "market_cap": 36391071744.0,
+      "name": "Strategy Inc",
+      "next_earnings_date": "2026-07-30",
+      "price": 100.36,
+      "price_to_book": 0.95,
+      "profitable": false,
+      "range_position": 0.05,
+      "range_width_pct": 350.85,
+      "reason": "Below both trend averages; 1Y return -77.1% and price -40.4% vs 200-day average.",
+      "research": {
+        "business_model": "financial",
+        "confidence": "high",
+        "decision": "avoid_review",
+        "decision_label": "Avoid / sell review",
+        "decision_score": 64.6,
+        "earnings": {
+          "assessment": "Loss-making; thesis requires stronger evidence",
+          "filed_at": "2026-05-06",
+          "latest_report_form": "10-Q",
+          "net_income_growth_yoy_pct": null,
+          "next_earnings_date": "2026-07-30",
+          "period_end": "2026-03-31",
+          "report_url": "https://www.sec.gov/Archives/edgar/data/1050446/000105044626000031/mstr-20260331.htm",
+          "revenue_growth_yoy_pct": 11.9
+        },
+        "industry": "Finance Services",
+        "key_takeaways": [
+          "Loss-making; thesis requires stronger evidence",
+          "Latest comparable period: revenue +11.9% YoY.",
+          "Financial lens: ROE -8.7%, P/B 0.95x."
+        ],
+        "methodology_note": "Scores use standardized filing facts and sector-aware thresholds; specialist bank, insurer, and REIT metrics remain review gates.",
+        "metrics": {
+          "debt_to_equity": 0.19,
+          "equity_to_assets_pct": 71.6,
+          "fcf_margin_pct": -15.8,
+          "fcf_yield_pct": -0.2,
+          "net_debt_to_fcf": null,
+          "normalized_fcf_yield_pct": -0.2,
+          "operating_margin_pct": -1140.8,
+          "roe_pct": -8.7,
+          "roic_proxy_pct": -7.6
+        },
+        "risks": [
+          "Review company-specific competition, management and concentration before sizing a position."
+        ],
+        "scorecard": {
+          "earnings": 79.0,
+          "financial_strength": 100.0,
+          "quality": 42.3,
+          "trend": 1.5,
+          "value": 94.4
+        },
+        "sector": "Financials",
+        "sic": 6199,
+        "source": {
+          "as_of": "2026-05-06",
+          "name": "SEC EDGAR company facts and filings",
+          "url": "https://www.sec.gov/edgar/browse/?CIK=0001050446"
+        },
+        "status": "sec_fundamentals",
+        "valuation_model": "P/B, P/E, ROE and balance-sheet resilience"
+      },
+      "return_1y_pct": -77.06,
+      "score": 1.5,
+      "ticker": "MSTR",
+      "trailing_pe": null
+    },
+    {
+      "action": "sell_avoid",
       "analyst_rating": "2.2 - Buy",
-      "average_volume_3m": 1532772.0,
-      "distance_ma200_pct": -41.61,
-      "distance_ma50_pct": -24.34,
+      "average_volume_3m": 1536740.0,
+      "distance_ma200_pct": -36.77,
+      "distance_ma50_pct": -17.31,
       "earnings_date_is_estimate": true,
       "eps_forward": 0.87,
       "eps_forward_growth_pct": null,
-      "eps_ttm": -7.58,
+      "eps_ttm": -7.49,
       "exchange": "NYSE",
-      "forward_pe": 26.05,
-      "market_cap": 3440901120.0,
+      "forward_pe": 28.06,
+      "market_cap": 3706285824.0,
       "name": "Bullish",
       "next_earnings_date": "2026-05-14",
-      "price": 22.69,
-      "price_to_book": 1.29,
+      "price": 24.44,
+      "price_to_book": 1.39,
       "profitable": false,
-      "range_position": 0.01,
-      "range_width_pct": 424.15,
-      "reason": "Below both trend averages; 1Y return -67.0% and price -41.6% vs 200-day average.",
+      "range_position": 0.03,
+      "range_width_pct": 393.78,
+      "reason": "Below both trend averages; 1Y return -66.6% and price -36.8% vs 200-day average.",
       "research": {
         "business_model": "financial",
         "confidence": "low",
         "decision": "avoid_review",
         "decision_label": "Avoid / sell review",
-        "decision_score": 54.8,
+        "decision_score": 53.4,
         "earnings": {
           "assessment": "Insufficient comparable filing history",
           "filed_at": "2026-03-10",
@@ -1831,7 +1912,7 @@
         "industry": "Finance Services",
         "key_takeaways": [
           "Insufficient comparable filing history",
-          "Financial lens: ROE n/a%, P/B 1.29x.",
+          "Financial lens: ROE n/a%, P/B 1.39x.",
           "P/B, P/E, ROE and balance-sheet resilience."
         ],
         "methodology_note": "Scores use standardized filing facts and sector-aware thresholds; specialist bank, insurer, and REIT metrics remain review gates.",
@@ -1853,8 +1934,8 @@
           "earnings": 65.0,
           "financial_strength": null,
           "quality": null,
-          "trend": 1.0,
-          "value": 81.9
+          "trend": 1.7,
+          "value": 78.1
         },
         "sector": "Financials",
         "sic": 6199,
@@ -1866,112 +1947,32 @@
         "status": "sec_fundamentals",
         "valuation_model": "P/B, P/E, ROE and balance-sheet resilience"
       },
-      "return_1y_pct": -67.04,
-      "score": 1.0,
+      "return_1y_pct": -66.63,
+      "score": 1.7,
       "ticker": "BLSH",
       "trailing_pe": null
     },
     {
       "action": "sell_avoid",
-      "analyst_rating": "1.3 - Strong Buy",
-      "average_volume_3m": 20630637.0,
-      "distance_ma200_pct": -42.34,
-      "distance_ma50_pct": -24.5,
-      "earnings_date_is_estimate": false,
-      "eps_forward": 4.46,
-      "eps_forward_growth_pct": null,
-      "eps_ttm": -38.15,
-      "exchange": "NasdaqGS",
-      "forward_pe": 21.92,
-      "market_cap": 35468288000.0,
-      "name": "Strategy Inc",
-      "next_earnings_date": "2026-07-30",
-      "price": 97.82,
-      "price_to_book": 0.92,
-      "profitable": false,
-      "range_position": 0.05,
-      "range_width_pct": 363.11,
-      "reason": "Below both trend averages; 1Y return -77.7% and price -42.3% vs 200-day average.",
-      "research": {
-        "business_model": "financial",
-        "confidence": "high",
-        "decision": "avoid_review",
-        "decision_label": "Avoid / sell review",
-        "decision_score": 64.8,
-        "earnings": {
-          "assessment": "Loss-making; thesis requires stronger evidence",
-          "filed_at": "2026-05-06",
-          "latest_report_form": "10-Q",
-          "net_income_growth_yoy_pct": null,
-          "next_earnings_date": "2026-07-30",
-          "period_end": "2026-03-31",
-          "report_url": "https://www.sec.gov/Archives/edgar/data/1050446/000105044626000031/mstr-20260331.htm",
-          "revenue_growth_yoy_pct": 11.9
-        },
-        "industry": "Finance Services",
-        "key_takeaways": [
-          "Loss-making; thesis requires stronger evidence",
-          "Latest comparable period: revenue +11.9% YoY.",
-          "Financial lens: ROE -8.7%, P/B 0.92x."
-        ],
-        "methodology_note": "Scores use standardized filing facts and sector-aware thresholds; specialist bank, insurer, and REIT metrics remain review gates.",
-        "metrics": {
-          "debt_to_equity": 0.19,
-          "equity_to_assets_pct": 71.6,
-          "fcf_margin_pct": -15.8,
-          "fcf_yield_pct": -0.2,
-          "net_debt_to_fcf": null,
-          "normalized_fcf_yield_pct": -0.2,
-          "operating_margin_pct": -1140.8,
-          "roe_pct": -8.7,
-          "roic_proxy_pct": -7.6
-        },
-        "risks": [
-          "Review company-specific competition, management and concentration before sizing a position."
-        ],
-        "scorecard": {
-          "earnings": 79.0,
-          "financial_strength": 100.0,
-          "quality": 42.3,
-          "trend": 1.3,
-          "value": 95.6
-        },
-        "sector": "Financials",
-        "sic": 6199,
-        "source": {
-          "as_of": "2026-05-06",
-          "name": "SEC EDGAR company facts and filings",
-          "url": "https://www.sec.gov/edgar/browse/?CIK=0001050446"
-        },
-        "status": "sec_fundamentals",
-        "valuation_model": "P/B, P/E, ROE and balance-sheet resilience"
-      },
-      "return_1y_pct": -77.75,
-      "score": 1.3,
-      "ticker": "MSTR",
-      "trailing_pe": null
-    },
-    {
-      "action": "sell_avoid",
       "analyst_rating": null,
-      "average_volume_3m": 26490372.0,
-      "distance_ma200_pct": -39.47,
-      "distance_ma50_pct": -22.53,
+      "average_volume_3m": 26683986.0,
+      "distance_ma200_pct": -37.77,
+      "distance_ma50_pct": -20.19,
       "earnings_date_is_estimate": false,
       "eps_forward": -0.68,
       "eps_forward_growth_pct": null,
       "eps_ttm": -0.71,
       "exchange": "NasdaqGS",
-      "forward_pe": -8.69,
-      "market_cap": 3623204608.0,
+      "forward_pe": -8.9,
+      "market_cap": 3712400640.0,
       "name": "QuantumScape Corporation",
       "next_earnings_date": "2026-07-22",
-      "price": 5.89,
-      "price_to_book": 3.26,
+      "price": 6.04,
+      "price_to_book": 3.35,
       "profitable": false,
-      "range_position": 0.02,
-      "range_width_pct": 227.93,
-      "reason": "Below both trend averages; 1Y return -53.2% and price -39.5% vs 200-day average.",
+      "range_position": 0.03,
+      "range_width_pct": 222.45,
+      "reason": "Below both trend averages; 1Y return -57.3% and price -37.8% vs 200-day average.",
       "research": {
         "business_model": "operating_company",
         "confidence": "medium",
@@ -1991,7 +1992,7 @@
         "industry": "Miscellaneous Electrical Machinery, Equipment & Supplies",
         "key_takeaways": [
           "Loss-making; thesis requires stronger evidence",
-          "Cash-return lens: FCF yield -7.7%, ROIC proxy -39.8%.",
+          "Cash-return lens: FCF yield -7.5%, ROIC proxy -39.8%.",
           "ROIC, FCF yield, margins, growth and balance-sheet resilience."
         ],
         "methodology_note": "Scores use standardized filing facts and sector-aware thresholds; specialist bank, insurer, and REIT metrics remain review gates.",
@@ -1999,9 +2000,9 @@
           "debt_to_equity": 0.0,
           "equity_to_assets_pct": 89.4,
           "fcf_margin_pct": null,
-          "fcf_yield_pct": -7.7,
+          "fcf_yield_pct": -7.5,
           "net_debt_to_fcf": null,
-          "normalized_fcf_yield_pct": -9.0,
+          "normalized_fcf_yield_pct": -8.7,
           "operating_margin_pct": null,
           "roe_pct": -37.2,
           "roic_proxy_pct": -39.8
@@ -2013,7 +2014,7 @@
           "earnings": 85.0,
           "financial_strength": 100.0,
           "quality": 0.0,
-          "trend": 2.3,
+          "trend": 2.1,
           "value": 0.0
         },
         "sector": "Other",
@@ -2026,238 +2027,175 @@
         "status": "sec_fundamentals",
         "valuation_model": "ROIC, FCF yield, margins, growth and balance-sheet resilience"
       },
-      "return_1y_pct": -53.19,
-      "score": 2.3,
+      "return_1y_pct": -57.32,
+      "score": 2.1,
       "ticker": "QS",
       "trailing_pe": null
     },
     {
       "action": "sell_avoid",
-      "analyst_rating": "1.5 - Buy",
-      "average_volume_3m": 30274483.0,
-      "distance_ma200_pct": -36.63,
-      "distance_ma50_pct": -32.06,
-      "earnings_date_is_estimate": true,
-      "eps_forward": 10.87,
-      "eps_forward_growth_pct": 94.19,
-      "eps_ttm": 5.6,
-      "exchange": "NYSE",
-      "forward_pe": 11.16,
-      "market_cap": 349631578112.0,
-      "name": "Oracle Corporation",
-      "next_earnings_date": "2026-06-10",
-      "price": 121.38,
-      "price_to_book": 9.31,
-      "profitable": true,
-      "range_position": 0.01,
-      "range_width_pct": 185.94,
-      "reason": "Below both trend averages; 1Y return -48.1% and price -36.6% vs 200-day average.",
-      "research": {
-        "business_model": "software",
-        "confidence": "high",
-        "decision": "avoid_review",
-        "decision_label": "Avoid / sell review",
-        "decision_score": 66.2,
-        "earnings": {
-          "assessment": "Growth and earnings improved",
-          "filed_at": "2026-06-22",
-          "latest_report_form": "10-K",
-          "net_income_growth_yoy_pct": 37.3,
-          "next_earnings_date": "2026-06-10",
-          "period_end": "2026-05-31",
-          "report_url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
-          "revenue_growth_yoy_pct": 17.3
-        },
-        "industry": "Services-Prepackaged Software",
-        "key_takeaways": [
-          "Growth and earnings improved",
-          "Latest comparable period: revenue +17.3% YoY, net income +37.3% YoY.",
-          "Cash-return lens: FCF yield -6.8%, ROIC proxy 148.5%."
-        ],
-        "methodology_note": "Scores use standardized filing facts and sector-aware thresholds; specialist bank, insurer, and REIT metrics remain review gates.",
-        "metrics": {
-          "debt_to_equity": 0.0,
-          "equity_to_assets_pct": 16.2,
-          "fcf_margin_pct": -35.2,
-          "fcf_yield_pct": -6.8,
-          "net_debt_to_fcf": null,
-          "normalized_fcf_yield_pct": -0.1,
-          "operating_margin_pct": 30.6,
-          "roe_pct": 40.2,
-          "roic_proxy_pct": 148.5
-        },
-        "risks": [
-          "Confirm stock-based compensation, dilution and recurring-revenue durability."
-        ],
-        "scorecard": {
-          "earnings": 94.0,
-          "financial_strength": 100.0,
-          "quality": 67.3,
-          "trend": 2.4,
-          "value": 59.6
-        },
-        "sector": "Technology",
-        "sic": 7372,
-        "source": {
-          "as_of": "2026-06-22",
-          "name": "SEC EDGAR company facts and filings",
-          "url": "https://www.sec.gov/edgar/browse/?CIK=0001341439"
-        },
-        "status": "sec_fundamentals",
-        "valuation_model": "Revenue growth, FCF margin and forward P/E; dilution remains a review gate"
-      },
-      "return_1y_pct": -48.09,
-      "score": 2.4,
-      "ticker": "ORCL",
-      "trailing_pe": 21.68
-    },
-    {
-      "action": "sell_avoid",
-      "analyst_rating": "3.0 - Hold",
-      "average_volume_3m": 38127054.0,
-      "distance_ma200_pct": -37.24,
-      "distance_ma50_pct": -22.83,
-      "earnings_date_is_estimate": true,
-      "eps_forward": -0.5,
-      "eps_forward_growth_pct": null,
-      "eps_ttm": -1.18,
-      "exchange": "NYSE",
-      "forward_pe": -14.94,
-      "market_cap": 7347812352.0,
-      "name": "Joby Aviation, Inc.",
-      "next_earnings_date": "2026-05-05",
-      "price": 7.47,
-      "price_to_book": 3.74,
-      "profitable": false,
-      "range_position": 0.04,
-      "range_width_pct": 188.22,
-      "reason": "Below both trend averages; 1Y return -57.1% and price -37.2% vs 200-day average.",
-      "research": {
-        "business_model": "quote_only",
-        "confidence": "low",
-        "decision": "avoid_review",
-        "decision_label": "Avoid / sell review",
-        "decision_score": 11.6,
-        "earnings": {
-          "assessment": "Filing review pending",
-          "filed_at": null,
-          "latest_report_form": null,
-          "net_income_growth_yoy_pct": null,
-          "next_earnings_date": "2026-05-05",
-          "period_end": null,
-          "revenue_growth_yoy_pct": null
-        },
-        "industry": "SEC classification pending",
-        "key_takeaways": [
-          "Below both trend averages; 1Y return -57.1% and price -37.2% vs 200-day average."
-        ],
-        "risks": [
-          "Low-confidence decision until SEC filing facts are available."
-        ],
-        "scorecard": {
-          "earnings": 25.0,
-          "financial_strength": null,
-          "quality": null,
-          "trend": 2.7,
-          "value": null
-        },
-        "sector": "Unclassified",
-        "source": {
-          "name": "Market quote snapshot",
-          "url": "https://finance.yahoo.com/"
-        },
-        "status": "quote_only",
-        "valuation_model": "P/E and forward earnings; filing evidence pending"
-      },
-      "return_1y_pct": -57.07,
-      "score": 2.7,
-      "ticker": "JOBY",
-      "trailing_pe": null
-    },
-    {
-      "action": "sell_avoid",
-      "analyst_rating": "2.2 - Buy",
-      "average_volume_3m": 15019554.0,
-      "distance_ma200_pct": -30.07,
-      "distance_ma50_pct": -26.07,
-      "earnings_date_is_estimate": true,
-      "eps_forward": 1.94,
-      "eps_forward_growth_pct": null,
-      "eps_ttm": -0.25,
-      "exchange": "NYSE",
-      "forward_pe": 33.78,
-      "market_cap": 17494173696.0,
-      "name": "Circle Internet Group, Inc.",
-      "next_earnings_date": "2026-05-11",
-      "price": 65.45,
-      "price_to_book": 4.73,
-      "profitable": false,
-      "range_position": 0.09,
-      "range_width_pct": 278.04,
-      "reason": "Below both trend averages; 1Y return -72.0% and price -30.1% vs 200-day average.",
-      "research": {
-        "business_model": "quote_only",
-        "confidence": "low",
-        "decision": "avoid_review",
-        "decision_label": "Avoid / sell review",
-        "decision_score": 13.9,
-        "earnings": {
-          "assessment": "Filing review pending",
-          "filed_at": null,
-          "latest_report_form": null,
-          "net_income_growth_yoy_pct": null,
-          "next_earnings_date": "2026-05-11",
-          "period_end": null,
-          "revenue_growth_yoy_pct": null
-        },
-        "industry": "SEC classification pending",
-        "key_takeaways": [
-          "Below both trend averages; 1Y return -72.0% and price -30.1% vs 200-day average."
-        ],
-        "risks": [
-          "Low-confidence decision until SEC filing facts are available."
-        ],
-        "scorecard": {
-          "earnings": 25.0,
-          "financial_strength": null,
-          "quality": null,
-          "trend": 2.7,
-          "value": 20.7
-        },
-        "sector": "Unclassified",
-        "source": {
-          "name": "Market quote snapshot",
-          "url": "https://finance.yahoo.com/"
-        },
-        "status": "quote_only",
-        "valuation_model": "P/E and forward earnings; filing evidence pending"
-      },
-      "return_1y_pct": -72.02,
-      "score": 2.7,
-      "ticker": "CRCL",
-      "trailing_pe": null
-    },
-    {
-      "action": "sell_avoid",
       "analyst_rating": null,
-      "average_volume_3m": 4357075.0,
-      "distance_ma200_pct": -48.07,
-      "distance_ma50_pct": -18.71,
+      "average_volume_3m": 4353555.0,
+      "distance_ma200_pct": -46.43,
+      "distance_ma50_pct": -15.92,
       "earnings_date_is_estimate": false,
       "eps_forward": -0.6,
       "eps_forward_growth_pct": null,
       "eps_ttm": -0.35,
       "exchange": "NasdaqGS",
-      "forward_pe": -11.11,
-      "market_cap": 2914915328.0,
+      "forward_pe": -11.4,
+      "market_cap": 2988765696.0,
       "name": "Pony AI Inc.",
       "next_earnings_date": "2026-08-18",
-      "price": 6.71,
-      "price_to_book": 1.8,
+      "price": 6.88,
+      "price_to_book": 1.85,
       "profitable": false,
-      "range_position": 0.02,
-      "range_width_pct": 276.53,
-      "reason": "Below both trend averages; 1Y return -48.3% and price -48.1% vs 200-day average.",
+      "range_position": 0.03,
+      "range_width_pct": 269.69,
+      "reason": "Below both trend averages; 1Y return -52.0% and price -46.4% vs 200-day average.",
+      "research": {
+        "business_model": "software",
+        "confidence": "high",
+        "decision": "avoid_review",
+        "decision_label": "Avoid / sell review",
+        "decision_score": 53.5,
+        "earnings": {
+          "assessment": "Loss-making; thesis requires stronger evidence",
+          "filed_at": "2026-04-22",
+          "latest_report_form": "20-F",
+          "net_income_growth_yoy_pct": null,
+          "next_earnings_date": "2026-08-18",
+          "period_end": "2025-12-31",
+          "report_url": "https://www.sec.gov/Archives/edgar/data/1969302/000110465926046406/pony-20251231x20f.htm",
+          "revenue_growth_yoy_pct": 20.0
+        },
+        "industry": "Services-Computer Integrated Systems Design",
+        "key_takeaways": [
+          "Loss-making; thesis requires stronger evidence",
+          "Latest comparable period: revenue +20.0% YoY.",
+          "Cash-return lens: FCF yield n/a%, ROIC proxy -15.1%."
+        ],
+        "methodology_note": "Scores use standardized filing facts and sector-aware thresholds; specialist bank, insurer, and REIT metrics remain review gates.",
+        "metrics": {
+          "debt_to_equity": 0.0,
+          "equity_to_assets_pct": 91.1,
+          "fcf_margin_pct": null,
+          "fcf_yield_pct": null,
+          "net_debt_to_fcf": null,
+          "normalized_fcf_yield_pct": null,
+          "operating_margin_pct": -289.8,
+          "roe_pct": -8.1,
+          "roic_proxy_pct": -15.1
+        },
+        "risks": [
+          "Confirm stock-based compensation, dilution and recurring-revenue durability."
+        ],
+        "scorecard": {
+          "earnings": 92.4,
+          "financial_strength": 100.0,
+          "quality": 26.6,
+          "trend": 2.5,
+          "value": null
+        },
+        "sector": "Technology",
+        "sic": 7373,
+        "source": {
+          "as_of": "2026-04-22",
+          "name": "SEC EDGAR company facts and filings",
+          "url": "https://www.sec.gov/edgar/browse/?CIK=0001969302"
+        },
+        "status": "sec_fundamentals",
+        "valuation_model": "Revenue growth, FCF margin and forward P/E; dilution remains a review gate"
+      },
+      "return_1y_pct": -52.04,
+      "score": 2.5,
+      "ticker": "PONY",
+      "trailing_pe": null
+    },
+    {
+      "action": "sell_avoid",
+      "analyst_rating": "1.5 - Buy",
+      "average_volume_3m": 30227468.0,
+      "distance_ma200_pct": -33.82,
+      "distance_ma50_pct": -28.77,
+      "earnings_date_is_estimate": true,
+      "eps_forward": 10.89,
+      "eps_forward_growth_pct": 86.8,
+      "eps_ttm": 5.83,
+      "exchange": "NYSE",
+      "forward_pe": 11.59,
+      "market_cap": 363616272384.0,
+      "name": "Oracle Corporation",
+      "next_earnings_date": "2026-06-10",
+      "price": 126.24,
+      "price_to_book": 9.68,
+      "profitable": true,
+      "range_position": 0.03,
+      "range_width_pct": 178.79,
+      "reason": "Below both trend averages; 1Y return -49.0% and price -33.8% vs 200-day average.",
+      "research": {
+        "business_model": "quote_only",
+        "confidence": "low",
+        "decision": "avoid_review",
+        "decision_label": "Avoid / sell review",
+        "decision_score": 46.8,
+        "earnings": {
+          "assessment": "Filing review pending",
+          "filed_at": null,
+          "latest_report_form": null,
+          "net_income_growth_yoy_pct": null,
+          "next_earnings_date": "2026-06-10",
+          "period_end": null,
+          "revenue_growth_yoy_pct": null
+        },
+        "industry": "SEC classification pending",
+        "key_takeaways": [
+          "Below both trend averages; 1Y return -49.0% and price -33.8% vs 200-day average."
+        ],
+        "risks": [
+          "Low-confidence decision until SEC filing facts are available."
+        ],
+        "scorecard": {
+          "earnings": 85.0,
+          "financial_strength": null,
+          "quality": null,
+          "trend": 2.6,
+          "value": 80.7
+        },
+        "sector": "Unclassified",
+        "source": {
+          "name": "Market quote snapshot",
+          "url": "https://finance.yahoo.com/"
+        },
+        "status": "quote_only",
+        "valuation_model": "P/E and forward earnings; filing evidence pending"
+      },
+      "return_1y_pct": -49.02,
+      "score": 2.6,
+      "ticker": "ORCL",
+      "trailing_pe": 21.65
+    },
+    {
+      "action": "sell_avoid",
+      "analyst_rating": "3.0 - Hold",
+      "average_volume_3m": 39040901.0,
+      "distance_ma200_pct": -35.83,
+      "distance_ma50_pct": -20.88,
+      "earnings_date_is_estimate": true,
+      "eps_forward": -0.5,
+      "eps_forward_growth_pct": null,
+      "eps_ttm": -1.14,
+      "exchange": "NYSE",
+      "forward_pe": -15.22,
+      "market_cap": 7485325312.0,
+      "name": "Joby Aviation, Inc.",
+      "next_earnings_date": "2026-05-05",
+      "price": 7.61,
+      "price_to_book": 3.81,
+      "profitable": false,
+      "range_position": 0.05,
+      "range_width_pct": 184.76,
+      "reason": "Below both trend averages; 1Y return -55.0% and price -35.8% vs 200-day average.",
       "research": {
         "business_model": "quote_only",
         "confidence": "low",
@@ -2269,13 +2207,13 @@
           "filed_at": null,
           "latest_report_form": null,
           "net_income_growth_yoy_pct": null,
-          "next_earnings_date": "2026-08-18",
+          "next_earnings_date": "2026-05-05",
           "period_end": null,
           "revenue_growth_yoy_pct": null
         },
         "industry": "SEC classification pending",
         "key_takeaways": [
-          "Below both trend averages; 1Y return -48.3% and price -48.1% vs 200-day average."
+          "Below both trend averages; 1Y return -55.0% and price -35.8% vs 200-day average."
         ],
         "risks": [
           "Low-confidence decision until SEC filing facts are available."
@@ -2284,7 +2222,7 @@
           "earnings": 25.0,
           "financial_strength": null,
           "quality": null,
-          "trend": 2.9,
+          "trend": 2.8,
           "value": null
         },
         "sector": "Unclassified",
@@ -2295,38 +2233,38 @@
         "status": "quote_only",
         "valuation_model": "P/E and forward earnings; filing evidence pending"
       },
-      "return_1y_pct": -48.29,
-      "score": 2.9,
-      "ticker": "PONY",
+      "return_1y_pct": -55.03,
+      "score": 2.8,
+      "ticker": "JOBY",
       "trailing_pe": null
     },
     {
       "action": "sell_avoid",
       "analyst_rating": "1.7 - Buy",
-      "average_volume_3m": 1997650.0,
-      "distance_ma200_pct": -36.72,
-      "distance_ma50_pct": -36.78,
+      "average_volume_3m": 1954449.0,
+      "distance_ma200_pct": -35.05,
+      "distance_ma50_pct": -34.38,
       "earnings_date_is_estimate": true,
       "eps_forward": 0.53,
       "eps_forward_growth_pct": null,
-      "eps_ttm": -2.01,
+      "eps_ttm": -2.07,
       "exchange": "NYSE",
-      "forward_pe": 32.64,
-      "market_cap": 2288953600.0,
+      "forward_pe": 33.4,
+      "market_cap": 2342170112.0,
       "name": "York Space Systems Inc.",
       "next_earnings_date": "2026-05-14",
-      "price": 17.42,
-      "price_to_book": 1.0,
+      "price": 17.82,
+      "price_to_book": 1.03,
       "profitable": false,
-      "range_position": 0.02,
-      "range_width_pct": 158.5,
-      "reason": "Below both trend averages; 1Y return -46.7% and price -36.7% vs 200-day average.",
+      "range_position": 0.03,
+      "range_width_pct": 154.89,
+      "reason": "Below both trend averages; 1Y return -48.2% and price -35.0% vs 200-day average.",
       "research": {
         "business_model": "quote_only",
         "confidence": "low",
         "decision": "avoid_review",
         "decision_label": "Avoid / sell review",
-        "decision_score": 14.9,
+        "decision_score": 14.4,
         "earnings": {
           "assessment": "Filing review pending",
           "filed_at": null,
@@ -2338,7 +2276,7 @@
         },
         "industry": "SEC classification pending",
         "key_takeaways": [
-          "Below both trend averages; 1Y return -46.7% and price -36.7% vs 200-day average."
+          "Below both trend averages; 1Y return -48.2% and price -35.0% vs 200-day average."
         ],
         "risks": [
           "Low-confidence decision until SEC filing facts are available."
@@ -2347,8 +2285,8 @@
           "earnings": 25.0,
           "financial_strength": null,
           "quality": null,
-          "trend": 2.9,
-          "value": 24.5
+          "trend": 3.0,
+          "value": 22.0
         },
         "sector": "Unclassified",
         "source": {
@@ -2358,176 +2296,50 @@
         "status": "quote_only",
         "valuation_model": "P/E and forward earnings; filing evidence pending"
       },
-      "return_1y_pct": -46.65,
-      "score": 2.9,
+      "return_1y_pct": -48.17,
+      "score": 3.0,
       "ticker": "YSS",
       "trailing_pe": null
     },
     {
       "action": "sell_avoid",
-      "analyst_rating": "1.6 - Buy",
-      "average_volume_3m": 19110481.0,
-      "distance_ma200_pct": -46.09,
-      "distance_ma50_pct": -12.14,
+      "analyst_rating": "1.9 - Buy",
+      "average_volume_3m": 7692352.0,
+      "distance_ma200_pct": -43.89,
+      "distance_ma50_pct": -8.91,
       "earnings_date_is_estimate": false,
-      "eps_forward": 0.36,
-      "eps_forward_growth_pct": null,
-      "eps_ttm": -1.15,
+      "eps_forward": 1.78,
+      "eps_forward_growth_pct": 500.0,
+      "eps_ttm": 0.07,
       "exchange": "NasdaqGS",
-      "forward_pe": 16.77,
-      "market_cap": 3905069824.0,
-      "name": "Fermi Inc.",
-      "next_earnings_date": "2026-08-13",
-      "price": 6.12,
-      "price_to_book": 3.6,
-      "profitable": false,
-      "range_position": 0.05,
-      "range_width_pct": 531.37,
-      "reason": "Below both trend averages; 1Y return -81.4% and price -46.1% vs 200-day average.",
-      "research": {
-        "business_model": "quote_only",
-        "confidence": "low",
-        "decision": "avoid_review",
-        "decision_label": "Avoid / sell review",
-        "decision_score": 28.3,
-        "earnings": {
-          "assessment": "Filing review pending",
-          "filed_at": null,
-          "latest_report_form": null,
-          "net_income_growth_yoy_pct": null,
-          "next_earnings_date": "2026-08-13",
-          "period_end": null,
-          "revenue_growth_yoy_pct": null
-        },
-        "industry": "SEC classification pending",
-        "key_takeaways": [
-          "Below both trend averages; 1Y return -81.4% and price -46.1% vs 200-day average."
-        ],
-        "risks": [
-          "Low-confidence decision until SEC filing facts are available."
-        ],
-        "scorecard": {
-          "earnings": 25.0,
-          "financial_strength": null,
-          "quality": null,
-          "trend": 3.1,
-          "value": 77.4
-        },
-        "sector": "Unclassified",
-        "source": {
-          "name": "Market quote snapshot",
-          "url": "https://finance.yahoo.com/"
-        },
-        "status": "quote_only",
-        "valuation_model": "P/E and forward earnings; filing evidence pending"
-      },
-      "return_1y_pct": -81.4,
-      "score": 3.1,
-      "ticker": "FRMI",
-      "trailing_pe": null
-    },
-    {
-      "action": "sell_avoid",
-      "analyst_rating": "2.0 - Buy",
-      "average_volume_3m": 13152991.0,
-      "distance_ma200_pct": -48.35,
-      "distance_ma50_pct": -29.71,
-      "earnings_date_is_estimate": true,
-      "eps_forward": -0.84,
-      "eps_forward_growth_pct": null,
-      "eps_ttm": -0.85,
-      "exchange": "NYSE",
-      "forward_pe": -49.41,
-      "market_cap": 7222365696.0,
-      "name": "Oklo Inc.",
-      "next_earnings_date": "2026-05-12",
-      "price": 41.51,
-      "price_to_book": 2.74,
-      "profitable": false,
-      "range_position": 0.01,
-      "range_width_pct": 371.74,
-      "reason": "Below both trend averages; 1Y return -34.2% and price -48.4% vs 200-day average.",
-      "research": {
-        "business_model": "quote_only",
-        "confidence": "low",
-        "decision": "avoid_review",
-        "decision_label": "Avoid / sell review",
-        "decision_score": 11.9,
-        "earnings": {
-          "assessment": "Filing review pending",
-          "filed_at": null,
-          "latest_report_form": null,
-          "net_income_growth_yoy_pct": null,
-          "next_earnings_date": "2026-05-12",
-          "period_end": null,
-          "revenue_growth_yoy_pct": null
-        },
-        "industry": "SEC classification pending",
-        "key_takeaways": [
-          "Below both trend averages; 1Y return -34.2% and price -48.4% vs 200-day average."
-        ],
-        "risks": [
-          "Low-confidence decision until SEC filing facts are available."
-        ],
-        "scorecard": {
-          "earnings": 25.0,
-          "financial_strength": null,
-          "quality": null,
-          "trend": 3.2,
-          "value": null
-        },
-        "sector": "Unclassified",
-        "source": {
-          "name": "Market quote snapshot",
-          "url": "https://finance.yahoo.com/"
-        },
-        "status": "quote_only",
-        "valuation_model": "P/E and forward earnings; filing evidence pending"
-      },
-      "return_1y_pct": -34.23,
-      "score": 3.2,
-      "ticker": "OKLO",
-      "trailing_pe": null
-    },
-    {
-      "action": "sell_avoid",
-      "analyst_rating": "2.8 - Hold",
-      "average_volume_3m": 51148408.0,
-      "distance_ma200_pct": -30.04,
-      "distance_ma50_pct": -28.46,
-      "earnings_date_is_estimate": true,
-      "eps_forward": 3.12,
-      "eps_forward_growth_pct": 67.11,
-      "eps_ttm": 1.87,
-      "exchange": "NasdaqGS",
-      "forward_pe": 7.63,
-      "market_cap": 15414983680.0,
-      "name": "Super Micro Computer, Inc.",
-      "next_earnings_date": "2026-05-05",
-      "price": 23.83,
-      "price_to_book": 1.89,
+      "forward_pe": 16.15,
+      "market_cap": 11709599744.0,
+      "name": "CoStar Group, Inc.",
+      "next_earnings_date": "2026-07-28",
+      "price": 28.68,
+      "price_to_book": 1.48,
       "profitable": true,
-      "range_position": 0.1,
-      "range_width_pct": 179.94,
-      "reason": "Below both trend averages; 1Y return -53.0% and price -30.0% vs 200-day average.",
+      "range_position": 0.03,
+      "range_width_pct": 246.73,
+      "reason": "Below both trend averages; 1Y return -65.1% and price -43.9% vs 200-day average.",
       "research": {
         "business_model": "quote_only",
         "confidence": "low",
         "decision": "avoid_review",
         "decision_label": "Avoid / sell review",
-        "decision_score": 51.3,
+        "decision_score": 36.9,
         "earnings": {
           "assessment": "Filing review pending",
           "filed_at": null,
           "latest_report_form": null,
           "net_income_growth_yoy_pct": null,
-          "next_earnings_date": "2026-05-05",
+          "next_earnings_date": "2026-07-28",
           "period_end": null,
           "revenue_growth_yoy_pct": null
         },
         "industry": "SEC classification pending",
         "key_takeaways": [
-          "Below both trend averages; 1Y return -53.0% and price -30.0% vs 200-day average."
+          "Below both trend averages; 1Y return -65.1% and price -43.9% vs 200-day average."
         ],
         "risks": [
           "Low-confidence decision until SEC filing facts are available."
@@ -2536,8 +2348,8 @@
           "earnings": 85.0,
           "financial_strength": null,
           "quality": null,
-          "trend": 3.9,
-          "value": 96.1
+          "trend": 3.3,
+          "value": 39.8
         },
         "sector": "Unclassified",
         "source": {
@@ -2547,10 +2359,199 @@
         "status": "quote_only",
         "valuation_model": "P/E and forward earnings; filing evidence pending"
       },
-      "return_1y_pct": -53.05,
-      "score": 3.9,
-      "ticker": "SMCI",
-      "trailing_pe": 12.74
+      "return_1y_pct": -65.15,
+      "score": 3.3,
+      "ticker": "CSGP",
+      "trailing_pe": 409.64
+    },
+    {
+      "action": "sell_avoid",
+      "analyst_rating": "3.2 - Hold",
+      "average_volume_3m": 2900445.0,
+      "distance_ma200_pct": -42.14,
+      "distance_ma50_pct": -9.59,
+      "earnings_date_is_estimate": false,
+      "eps_forward": 4.03,
+      "eps_forward_growth_pct": 36.54,
+      "eps_ttm": 2.95,
+      "exchange": "NYSE",
+      "forward_pe": 9.05,
+      "market_cap": 2364099328.0,
+      "name": "Whirlpool Corporation",
+      "next_earnings_date": "2026-07-27",
+      "price": 36.47,
+      "price_to_book": 0.63,
+      "profitable": true,
+      "range_position": 0.01,
+      "range_width_pct": 176.8,
+      "reason": "Below both trend averages; 1Y return -61.8% and price -42.1% vs 200-day average.",
+      "research": {
+        "business_model": "quote_only",
+        "confidence": "low",
+        "decision": "avoid_review",
+        "decision_label": "Avoid / sell review",
+        "decision_score": 51.2,
+        "earnings": {
+          "assessment": "Filing review pending",
+          "filed_at": null,
+          "latest_report_form": null,
+          "net_income_growth_yoy_pct": null,
+          "next_earnings_date": "2026-07-27",
+          "period_end": null,
+          "revenue_growth_yoy_pct": null
+        },
+        "industry": "SEC classification pending",
+        "key_takeaways": [
+          "Below both trend averages; 1Y return -61.8% and price -42.1% vs 200-day average."
+        ],
+        "risks": [
+          "Low-confidence decision until SEC filing facts are available."
+        ],
+        "scorecard": {
+          "earnings": 85.0,
+          "financial_strength": null,
+          "quality": null,
+          "trend": 3.4,
+          "value": 96.6
+        },
+        "sector": "Unclassified",
+        "source": {
+          "name": "Market quote snapshot",
+          "url": "https://finance.yahoo.com/"
+        },
+        "status": "quote_only",
+        "valuation_model": "P/E and forward earnings; filing evidence pending"
+      },
+      "return_1y_pct": -61.76,
+      "score": 3.4,
+      "ticker": "WHR",
+      "trailing_pe": 12.36
+    },
+    {
+      "action": "sell_avoid",
+      "analyst_rating": "2.3 - Buy",
+      "average_volume_3m": 4371514.0,
+      "distance_ma200_pct": -30.37,
+      "distance_ma50_pct": -14.96,
+      "earnings_date_is_estimate": true,
+      "eps_forward": 1.03,
+      "eps_forward_growth_pct": null,
+      "eps_ttm": -0.26,
+      "exchange": "NasdaqGS",
+      "forward_pe": 11.89,
+      "market_cap": 12123302912.0,
+      "name": "Li Auto Inc.",
+      "next_earnings_date": "2026-05-28",
+      "price": 12.22,
+      "price_to_book": 1.2,
+      "profitable": false,
+      "range_position": 0.03,
+      "range_width_pct": 159.17,
+      "reason": "Below both trend averages; 1Y return -59.9% and price -30.4% vs 200-day average.",
+      "research": {
+        "business_model": "quote_only",
+        "confidence": "low",
+        "decision": "avoid_review",
+        "decision_label": "Avoid / sell review",
+        "decision_score": 32.5,
+        "earnings": {
+          "assessment": "Filing review pending",
+          "filed_at": null,
+          "latest_report_form": null,
+          "net_income_growth_yoy_pct": null,
+          "next_earnings_date": "2026-05-28",
+          "period_end": null,
+          "revenue_growth_yoy_pct": null
+        },
+        "industry": "SEC classification pending",
+        "key_takeaways": [
+          "Below both trend averages; 1Y return -59.9% and price -30.4% vs 200-day average."
+        ],
+        "risks": [
+          "Low-confidence decision until SEC filing facts are available."
+        ],
+        "scorecard": {
+          "earnings": 25.0,
+          "financial_strength": null,
+          "quality": null,
+          "trend": 3.5,
+          "value": 93.7
+        },
+        "sector": "Unclassified",
+        "source": {
+          "name": "Market quote snapshot",
+          "url": "https://finance.yahoo.com/"
+        },
+        "status": "quote_only",
+        "valuation_model": "P/E and forward earnings; filing evidence pending"
+      },
+      "return_1y_pct": -59.89,
+      "score": 3.5,
+      "ticker": "LI",
+      "trailing_pe": null
+    },
+    {
+      "action": "sell_avoid",
+      "analyst_rating": "1.5 - Strong Buy",
+      "average_volume_3m": 20765159.0,
+      "distance_ma200_pct": -42.94,
+      "distance_ma50_pct": -10.88,
+      "earnings_date_is_estimate": false,
+      "eps_forward": 3.71,
+      "eps_forward_growth_pct": 55.34,
+      "eps_ttm": 2.39,
+      "exchange": "NYSE",
+      "forward_pe": 11.6,
+      "market_cap": 64015831040.0,
+      "name": "Boston Scientific Corporation",
+      "next_earnings_date": "2026-07-29",
+      "price": 43.07,
+      "price_to_book": 2.47,
+      "profitable": true,
+      "range_position": 0.01,
+      "range_width_pct": 156.26,
+      "reason": "Below both trend averages; 1Y return -57.6% and price -42.9% vs 200-day average.",
+      "research": {
+        "business_model": "quote_only",
+        "confidence": "low",
+        "decision": "avoid_review",
+        "decision_label": "Avoid / sell review",
+        "decision_score": 48.5,
+        "earnings": {
+          "assessment": "Filing review pending",
+          "filed_at": null,
+          "latest_report_form": null,
+          "net_income_growth_yoy_pct": null,
+          "next_earnings_date": "2026-07-29",
+          "period_end": null,
+          "revenue_growth_yoy_pct": null
+        },
+        "industry": "SEC classification pending",
+        "key_takeaways": [
+          "Below both trend averages; 1Y return -57.6% and price -42.9% vs 200-day average."
+        ],
+        "risks": [
+          "Low-confidence decision until SEC filing facts are available."
+        ],
+        "scorecard": {
+          "earnings": 85.0,
+          "financial_strength": null,
+          "quality": null,
+          "trend": 3.5,
+          "value": 85.9
+        },
+        "sector": "Unclassified",
+        "source": {
+          "name": "Market quote snapshot",
+          "url": "https://finance.yahoo.com/"
+        },
+        "status": "quote_only",
+        "valuation_model": "P/E and forward earnings; filing evidence pending"
+      },
+      "return_1y_pct": -57.57,
+      "score": 3.5,
+      "ticker": "BSX",
+      "trailing_pe": 18.02
     }
   ],
   "source": {
@@ -2560,11 +2561,11 @@
   },
   "status": "available",
   "universe": {
-    "analyzed_count": 1323,
+    "analyzed_count": 1330,
     "coverage_ratio": 1.0,
     "definition": "US-listed common equities on Nasdaq, NYSE, or NYSE American with market capitalization above $2B and average three-month daily volume above 1M shares.",
-    "eligible_total": 1323,
-    "fetched_count": 1323,
-    "latest_price_date": "2026-07-20"
+    "eligible_total": 1330,
+    "fetched_count": 1330,
+    "latest_price_date": "2026-07-21"
   }
 }
