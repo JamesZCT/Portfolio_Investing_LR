@@ -14,6 +14,10 @@ from portfolio_agent.point_in_time import (
     run_point_in_time_experiment,
 )
 from portfolio_agent.sandbox import generate_sandbox_prices
+from portfolio_agent.strategy_comparison import (
+    load_nasdaq100_historical_universe,
+    run_index_core_strategy_comparison,
+)
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -58,11 +62,13 @@ def main() -> int:
         prices = fetch_close_prices(tickers, lookback_days=history_days)
     point_in_time_experiment = None
     academic_factor_evidence = None
+    strategy_comparison = None
     if (
         args.market == "us"
         and args.mode == "real"
         and not args.skip_point_in_time
     ):
+        historical_universe = None
         try:
             historical_universe = load_sp500_historical_universe()
             point_prices, price_audit = fetch_point_in_time_prices(
@@ -84,6 +90,27 @@ def main() -> int:
                 "error": f"{type(exc).__name__}: {exc}",
             }
         try:
+            nasdaq_universe = load_nasdaq100_historical_universe()
+            nasdaq_prices, _ = fetch_point_in_time_prices(
+                nasdaq_universe,
+                years=args.years,
+                benchmark="QQQ",
+                extra_tickers=("SPY", "BIL"),
+                cache_key="nasdaq100",
+            )
+            prices = nasdaq_prices.combine_first(prices)
+            strategy_comparison = run_index_core_strategy_comparison(
+                prices,
+                nasdaq_universe,
+                sp500_universe=historical_universe,
+                years=args.years,
+            )
+        except Exception as exc:
+            strategy_comparison = {
+                "status": "unavailable",
+                "error": f"{type(exc).__name__}: {exc}",
+            }
+        try:
             academic_factor_evidence = build_academic_factor_evidence(years=args.years)
         except Exception as exc:
             academic_factor_evidence = {
@@ -96,6 +123,8 @@ def main() -> int:
         payload["point_in_time_experiment"] = point_in_time_experiment
     if academic_factor_evidence is not None:
         payload["academic_factor_evidence"] = academic_factor_evidence
+    if strategy_comparison is not None:
+        payload["strategy_comparison"] = strategy_comparison
     payload["mode"] = args.mode
 
     output_path = (

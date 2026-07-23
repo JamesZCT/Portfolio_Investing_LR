@@ -10,6 +10,7 @@ It combines:
 - a news sentiment layer that reads public RSS headlines and converts them into a market posture overlay
 - constrained Defensive, Balanced, and Aggressive portfolio research profiles
 - walk-forward historical validation with transaction costs and explicit bias disclosures
+- a point-in-time Nasdaq-100 test comparing QQQ, static and dynamic index cores, a public RIA-inspired risk proxy, and volatility control
 - backtesting and scheduled automation workflows
 
 ## Features

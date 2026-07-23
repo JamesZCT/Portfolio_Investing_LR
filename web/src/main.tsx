@@ -1390,6 +1390,10 @@ function HistoricalValidationPanel({ validation }: { validation: HistoricalValid
         <PointInTimeBiasPanel experiment={validation.point_in_time_experiment} />
       ) : null}
 
+      {validation.strategy_comparison ? (
+        <IndexCoreStrategyPanel comparison={validation.strategy_comparison} />
+      ) : null}
+
       {validation.academic_factor_evidence ? (
         <AcademicFactorEvidencePanel evidence={validation.academic_factor_evidence} />
       ) : null}
@@ -1543,6 +1547,209 @@ function PointInTimeBiasPanel({
   );
 }
 
+function IndexCoreStrategyPanel({
+  comparison
+}: {
+  comparison: NonNullable<HistoricalValidationPayload["strategy_comparison"]>;
+}) {
+  const { language, tr } = useI18n();
+  const tracks = comparison.tracks ?? [];
+  if (comparison.status !== "partial_point_in_time" || !tracks.length) {
+    return (
+      <section className="index-core-panel">
+        <div className="bias-section-heading">
+          <div>
+            <span>{tr("QQQ challenger", "QQQ 挑战组合")}</span>
+            <strong>{tr("Strategy comparison unavailable", "策略比较暂不可用")}</strong>
+          </div>
+          <span className="validation-status">{comparison.status}</span>
+        </div>
+        {comparison.error ? <p>{comparison.error}</p> : null}
+      </section>
+    );
+  }
+
+  const colors: Record<string, string> = {
+    qqq_passive: "#526168",
+    static_index_core: "#3a73a8",
+    dynamic_qqq_challenger: "#1f6f5b",
+    ria_public_proxy: "#d0962f",
+    qqq_volatility_control: "#9b5c72"
+  };
+  const curves = mergeTrackCurves(tracks);
+  const benchmark = tracks.find((track) => track.id === "qqq_passive");
+  const challenger = tracks.find((track) => track.id === "dynamic_qqq_challenger");
+  const signal = comparison.latest_signal;
+  const verdict = comparison.verdict;
+  const policy = comparison.allocation_policy;
+  const limitations = language === "zh" ? comparison.limitations_zh : comparison.limitations_en;
+
+  return (
+    <section className="index-core-panel">
+      <div className="bias-section-heading">
+        <div>
+          <span>{tr("Index-core experiment", "指数核心实验")}</span>
+          <strong>{tr("Can a bounded strategy beat QQQ?", "有边界的策略能否跑赢 QQQ？")}</strong>
+          <small>{comparison.evaluation_start_date} - {comparison.evaluation_end_date}</small>
+        </div>
+        <span className="validation-status">
+          {tr("Point-in-time Nasdaq members", "逐时点 Nasdaq 成分股")}
+        </span>
+      </div>
+
+      {benchmark && challenger && verdict ? (
+        <div className={`strategy-verdict ${verdict.beat_qqq_on_cagr ? "pass" : "fail"}`}>
+          <div>
+            <span>{tr("Fixed-rule result", "固定规则结果")}</span>
+            <strong>{language === "zh" ? verdict.explanation_zh : verdict.explanation_en}</strong>
+          </div>
+          <div className="verdict-numbers">
+            <span>
+              {tr("Challenger CAGR", "挑战组合年化")}
+              <strong>{percent(challenger.metrics.cagr)}</strong>
+            </span>
+            <span>
+              QQQ CAGR
+              <strong>{percent(benchmark.metrics.cagr)}</strong>
+            </span>
+            <span>
+              {tr("Excess return", "超额收益")}
+              <strong className={verdict.challenger_excess_cagr >= 0 ? "positive" : "negative"}>
+                {formatSignedPercent(verdict.challenger_excess_cagr)}
+              </strong>
+            </span>
+            <span>
+              {tr("Drawdown change", "回撤改善")}
+              <strong className={verdict.challenger_drawdown_improvement >= 0 ? "positive" : "negative"}>
+                {formatSignedPercent(verdict.challenger_drawdown_improvement)}
+              </strong>
+            </span>
+          </div>
+        </div>
+      ) : null}
+
+      <div className="validation-chart compact-validation-chart">
+        <ResponsiveContainer width="100%" height={280}>
+          <AreaChart data={curves} margin={{ top: 8, right: 18, left: 0, bottom: 0 }}>
+            <CartesianGrid stroke="#e6ecef" vertical={false} />
+            <XAxis dataKey="date" tick={{ fontSize: 11 }} minTickGap={42} />
+            <YAxis tick={{ fontSize: 11 }} width={54} />
+            <Tooltip content={<ChartTooltip />} />
+            {tracks.map((track) => (
+              <Area
+                key={track.id}
+                dataKey={track.id}
+                name={language === "zh" ? track.name_zh : track.name_en}
+                type="monotone"
+                stroke={colors[track.id] ?? "#526168"}
+                fill={colors[track.id] ?? "#526168"}
+                fillOpacity={track.id === "dynamic_qqq_challenger" ? 0.08 : 0.025}
+                strokeWidth={track.id === "dynamic_qqq_challenger" ? 2.8 : 1.9}
+              />
+            ))}
+          </AreaChart>
+        </ResponsiveContainer>
+      </div>
+
+      <div className="strategy-legend">
+        {tracks.map((track) => (
+          <span key={track.id}>
+            <i style={{ background: colors[track.id] ?? "#526168" }} />
+            {language === "zh" ? track.name_zh : track.name_en}
+          </span>
+        ))}
+      </div>
+
+      <div className="table-wrap qqq-comparison-table">
+        <table>
+          <thead>
+            <tr>
+              <th>{tr("Strategy", "策略")}</th>
+              <th>CAGR</th>
+              <th>{tr("vs QQQ", "相对 QQQ")}</th>
+              <th>Sharpe</th>
+              <th>Sortino</th>
+              <th>{tr("Max drawdown", "最大回撤")}</th>
+              <th>{tr("Upside capture", "上涨捕获")}</th>
+              <th>{tr("Downside capture", "下跌捕获")}</th>
+              <th>{tr("Turnover", "累计换手")}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {tracks.map((track) => (
+              <tr key={track.id} title={language === "zh" ? track.description_zh : track.description_en}>
+                <td>{language === "zh" ? track.name_zh : track.name_en}</td>
+                <td>{percent(track.metrics.cagr)}</td>
+                <td className={track.metrics.excess_cagr_vs_qqq >= 0 ? "positive" : "negative"}>
+                  {formatSignedPercent(track.metrics.excess_cagr_vs_qqq)}
+                </td>
+                <td>{track.metrics.sharpe.toFixed(2)}</td>
+                <td>{track.metrics.sortino.toFixed(2)}</td>
+                <td>{percent(track.metrics.max_drawdown)}</td>
+                <td>{percent(track.metrics.upside_capture_vs_qqq)}</td>
+                <td>{percent(track.metrics.downside_capture_vs_qqq)}</td>
+                <td>{percent(track.turnover)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      {signal ? (
+        <div className="strategy-signal-grid">
+          <div>
+            <span>{tr("Latest regime", "最新状态")}</span>
+            <strong>{localizeLabel(signal.dynamic_regime, language)}</strong>
+            <small>{signal.date}</small>
+          </div>
+          <div>
+            <span>{tr("Nasdaq breadth above 200-day", "Nasdaq 高于 200 日线比例")}</span>
+            <strong>{percent(signal.dynamic_regime_evidence.breadth_above_200d)}</strong>
+            <small>{tr("Only members known on that date", "只计算当时已知成分股")}</small>
+          </div>
+          <div>
+            <span>{tr("QQQ realized volatility", "QQQ 已实现波动率")}</span>
+            <strong>{signal.qqq_realized_volatility == null ? "N/A" : percent(signal.qqq_realized_volatility)}</strong>
+            <small>{tr("63 trading days", "63 个交易日")}</small>
+          </div>
+          <div>
+            <span>{tr("RIA proxy equity exposure", "RIA 代理股票敞口")}</span>
+            <strong>{percent(signal.ria_proxy.equity_exposure)}</strong>
+            <small>{language === "zh" ? signal.ria_proxy.label_zh : signal.ria_proxy.label_en}</small>
+          </div>
+        </div>
+      ) : null}
+
+      <div className="allocation-rule-grid">
+        <div>
+          <span>{tr("Latest active sleeve", "最新主动选股部分")}</span>
+          <strong>{signal?.active_selection.join(", ") || tr("No eligible stocks", "暂无合格股票")}</strong>
+          <small>{language === "zh" ? policy?.active_sleeve_rule_zh : policy?.active_sleeve_rule_en}</small>
+        </div>
+        <div>
+          <span>{tr("Allowed dynamic ranges", "动态权重允许区间")}</span>
+          <strong>
+            {Object.entries(policy?.dynamic_ranges ?? {}).map(([sleeve, range]) => (
+              <i key={sleeve}>{sleeve} {percent(range.minimum)}-{percent(range.maximum)}</i>
+            ))}
+          </strong>
+          <small>{language === "zh" ? policy?.parameter_selection_zh : policy?.parameter_selection_en}</small>
+        </div>
+      </div>
+
+      <div className="bias-disclosure">
+        <strong>{tr("Read this before treating the result as investable", "把结果用于投资前请先阅读")}</strong>
+        <ul>{(limitations ?? []).map((item) => <li key={item}>{item}</li>)}</ul>
+        {comparison.universe_audit ? (
+          <a href={comparison.universe_audit.membership_source_url} target="_blank" rel="noreferrer">
+            {tr("Point-in-time Nasdaq-100 membership source", "逐时点 Nasdaq-100 成分股来源")}
+          </a>
+        ) : null}
+      </div>
+    </section>
+  );
+}
+
 function AcademicFactorEvidencePanel({
   evidence
 }: {
@@ -1628,7 +1835,10 @@ function mergeValidationCurves(validation: HistoricalValidationPayload) {
   return mergeTrackCurves(validation.tracks);
 }
 
-function mergeTrackCurves(tracks: HistoricalTrack[]) {
+function mergeTrackCurves(tracks: Array<{
+  id: string;
+  equity_curve: Array<{ date: string; portfolio_value: number; daily_return: number }>;
+}>) {
   const rows = new Map<string, Record<string, string | number>>();
   for (const track of tracks) {
     const step = Math.max(1, Math.floor(track.equity_curve.length / 600));
