@@ -65,8 +65,8 @@ jobs:
 
       - name: Commit validation snapshot
         run: |
-          git diff --quiet -- web/public/data
-          if ($LASTEXITCODE -eq 0) {
+          $changes = git status --porcelain -- web/public/data
+          if (-not $changes) {
             echo "No validation changes to commit."
             exit 0
           }
