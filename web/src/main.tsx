@@ -34,6 +34,7 @@ import {
   BacktestPayload,
   DashboardPayload,
   HealthPayload,
+  HistoricalTrack,
   HistoricalValidationPayload,
   HistoryPayload,
   LatestQuote,
@@ -1385,6 +1386,14 @@ function HistoricalValidationPanel({ validation }: { validation: HistoricalValid
         </table>
       </div>
 
+      {validation.point_in_time_experiment ? (
+        <PointInTimeBiasPanel experiment={validation.point_in_time_experiment} />
+      ) : null}
+
+      {validation.academic_factor_evidence ? (
+        <AcademicFactorEvidencePanel evidence={validation.academic_factor_evidence} />
+      ) : null}
+
       <div className="validation-limitations">
         <strong>{tr("What this test does not prove", "这项测试尚不能证明什么")}</strong>
         <ul>
@@ -1395,9 +1404,233 @@ function HistoricalValidationPanel({ validation }: { validation: HistoricalValid
   );
 }
 
+function PointInTimeBiasPanel({
+  experiment
+}: {
+  experiment: NonNullable<HistoricalValidationPayload["point_in_time_experiment"]>;
+}) {
+  const { language, tr } = useI18n();
+  if (experiment.status !== "partial_point_in_time" || !experiment.tracks?.length) {
+    return (
+      <section className="bias-audit-panel">
+        <div className="bias-section-heading">
+          <div>
+            <span>{tr("Survivorship-bias audit", "幸存者偏差审计")}</span>
+            <strong>{tr("Point-in-time experiment unavailable", "历史时点实验暂不可用")}</strong>
+          </div>
+          <span className="validation-status">{experiment.status}</span>
+        </div>
+        {experiment.error ? <p>{experiment.error}</p> : null}
+      </section>
+    );
+  }
+
+  const benchmark = experiment.tracks.find((track) => track.id === "point_in_time_benchmark");
+  const survivor = experiment.tracks.find((track) => track.id === "current_members_survivor_rule");
+  const historical = experiment.tracks.find((track) => track.id === "historical_membership_rule");
+  if (!benchmark || !survivor || !historical) return null;
+  const audit = experiment.universe_audit;
+  const curves = mergeTrackCurves(experiment.tracks);
+  const history = [...(historical.selection_history ?? [])].reverse().slice(0, 12);
+  const limitations = language === "zh" ? experiment.limitations_zh : experiment.limitations_en;
+
+  return (
+    <section className="bias-audit-panel">
+      <div className="bias-section-heading">
+        <div>
+          <span>{tr("Survivorship-bias audit", "幸存者偏差审计")}</span>
+          <strong>{tr("Same rule, different historical universes", "同一规则，不同历史股票池")}</strong>
+          <small>
+            {experiment.evaluation_start_date} - {experiment.evaluation_end_date}
+          </small>
+        </div>
+        <span className="validation-status">{tr("Point-in-time proxy", "历史时点代理")}</span>
+      </div>
+
+      <div className="bias-metric-grid">
+        <BiasMetricCard
+          label={tr("SPY benchmark", "SPY 基准")}
+          value={percent(benchmark.metrics.cagr)}
+          detail={`${tr("Max drawdown", "最大回撤")} ${percent(benchmark.metrics.max_drawdown)}`}
+        />
+        <BiasMetricCard
+          label={tr("Today's survivors replayed backward", "今天幸存名单倒放")}
+          value={percent(survivor.metrics.cagr)}
+          detail={`Sharpe ${survivor.metrics.sharpe.toFixed(2)}`}
+        />
+        <BiasMetricCard
+          label={tr("Historical members only", "只用当时历史成分")}
+          value={percent(historical.metrics.cagr)}
+          detail={`Sharpe ${historical.metrics.sharpe.toFixed(2)}`}
+        />
+        <BiasMetricCard
+          label={tr("Measured survivor-list effect", "测得名单幸存偏差")}
+          value={formatSignedPercent(experiment.bias_effect?.survivor_minus_historical_cagr ?? 0)}
+          detail={tr("CAGR gap using the identical rule", "完全相同规则的年化收益差")}
+        />
+      </div>
+
+      <div className="validation-chart compact-validation-chart">
+        <ResponsiveContainer width="100%" height={260}>
+          <AreaChart data={curves} margin={{ top: 8, right: 18, left: 0, bottom: 0 }}>
+            <CartesianGrid stroke="#e6ecef" vertical={false} />
+            <XAxis dataKey="date" tick={{ fontSize: 11 }} minTickGap={42} />
+            <YAxis tick={{ fontSize: 11 }} width={54} />
+            <Tooltip content={<ChartTooltip />} />
+            <Area dataKey={benchmark.id} name={language === "zh" ? benchmark.name_zh : benchmark.name_en} type="monotone" stroke="#526168" fill="#526168" fillOpacity={0.03} strokeWidth={2} />
+            <Area dataKey={survivor.id} name={language === "zh" ? survivor.name_zh : survivor.name_en} type="monotone" stroke="#d2694c" fill="#d2694c" fillOpacity={0.03} strokeWidth={2.2} />
+            <Area dataKey={historical.id} name={language === "zh" ? historical.name_zh : historical.name_en} type="monotone" stroke="#1f6f5b" fill="#1f6f5b" fillOpacity={0.04} strokeWidth={2.5} />
+          </AreaChart>
+        </ResponsiveContainer>
+      </div>
+
+      {audit ? (
+        <div className="bias-coverage-strip">
+          <span>
+            {tr("Historical members", "历史成员")} <strong>{audit.unique_historical_members}</strong>
+          </span>
+          <span>
+            {tr("Removed members retained", "保留已移除成员")} <strong>{audit.removed_members_included}</strong>
+          </span>
+          <span>
+            {tr("Price-history coverage", "历史价格覆盖")} <strong>{percent(audit.ticker_price_coverage ?? 0)}</strong>
+          </span>
+          <span>
+            {tr("Rebalance eligibility coverage", "调仓可评分覆盖")} <strong>{percent(audit.rebalance_price_coverage)}</strong>
+          </span>
+        </div>
+      ) : null}
+
+      <div className="table-wrap selection-history-table">
+        <table>
+          <thead>
+            <tr>
+              <th>{tr("Rebalance date", "调仓日期")}</th>
+              <th>{tr("Market regime", "市场状态")}</th>
+              <th>{tr("Members", "当时成分")}</th>
+              <th>{tr("Price eligible", "价格可评分")}</th>
+              <th>{tr("Stocks selected with information available then", "当时可知信息选出的股票")}</th>
+              <th>{tr("Cash", "现金")}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {history.map((row) => (
+              <tr key={`${row.date}-${row.reason}`}>
+                <td>{row.date}</td>
+                <td><span className={`badge ${row.market_regime}`}>{localizeLabel(row.market_regime, language)}</span></td>
+                <td>{row.membership_count}</td>
+                <td>{row.price_eligible_count}</td>
+                <td className="selected-ticker-list">
+                  {row.selected.length ? row.selected.map((item) => item.ticker).join(", ") : tr("Cash only", "仅现金")}
+                </td>
+                <td>{percent(row.cash_weight)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div className="bias-disclosure">
+        <strong>{tr("Why this is better, but not yet CRSP-grade", "为什么更可靠，但还未达到 CRSP 研究级")}</strong>
+        <ul>{(limitations ?? []).map((item) => <li key={item}>{item}</li>)}</ul>
+        {audit ? (
+          <a href={audit.membership_source_url} target="_blank" rel="noreferrer">
+            {tr("Historical membership source and license", "历史成分数据来源与许可证")}
+          </a>
+        ) : null}
+      </div>
+    </section>
+  );
+}
+
+function AcademicFactorEvidencePanel({
+  evidence
+}: {
+  evidence: NonNullable<HistoricalValidationPayload["academic_factor_evidence"]>;
+}) {
+  const { language, tr } = useI18n();
+  if (evidence.status !== "available" || !evidence.tracks?.length) return null;
+  const market = evidence.tracks.find((track) => track.id === "academic_market");
+  const momentum = evidence.tracks.find((track) => track.id === "academic_high_momentum");
+  const limitations = language === "zh" ? evidence.limitations_zh : evidence.limitations_en;
+  return (
+    <section className="academic-evidence-panel">
+      <div className="bias-section-heading">
+        <div>
+          <span>{tr("Independent academic evidence", "独立学术证据")}</span>
+          <strong>{tr("Did a public rule beat the market?", "公开规则过去是否跑赢市场？")}</strong>
+          <small>{evidence.evaluation_start_date} - {evidence.evaluation_end_date}</small>
+        </div>
+        <a href={evidence.source?.url} target="_blank" rel="noreferrer">
+          Ken French / CRSP
+        </a>
+      </div>
+
+      {market && momentum ? (
+        <div className="factor-answer">
+          <strong>
+            {momentum.metrics.cagr > market.metrics.cagr
+              ? tr("Yes in this historical window, but with materially deeper drawdowns.", "这个历史区间内跑赢了，但回撤明显更深。")
+              : tr("No in this historical window.", "这个历史区间内没有跑赢。")}
+          </strong>
+          <span>
+            {tr("High momentum", "高动量")} {percent(momentum.metrics.cagr)} vs {tr("market", "市场")} {percent(market.metrics.cagr)};
+            {" "}{tr("drawdown", "回撤")} {percent(momentum.metrics.max_drawdown)} vs {percent(market.metrics.max_drawdown)}.
+          </span>
+        </div>
+      ) : null}
+
+      <div className="table-wrap validation-table">
+        <table>
+          <thead>
+            <tr>
+              <th>{tr("Academic portfolio", "学术组合")}</th>
+              <th>CAGR</th>
+              <th>{tr("vs market", "相对市场")}</th>
+              <th>Sharpe</th>
+              <th>{tr("Max drawdown", "最大回撤")}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {evidence.tracks.map((track) => (
+              <tr key={track.id} title={language === "zh" ? track.description_zh : track.description_en}>
+                <td>{language === "zh" ? track.name_zh : track.name_en}</td>
+                <td>{percent(track.metrics.cagr)}</td>
+                <td className={track.metrics.excess_cagr_vs_market >= 0 ? "positive" : "negative"}>
+                  {formatSignedPercent(track.metrics.excess_cagr_vs_market)}
+                </td>
+                <td>{track.metrics.sharpe.toFixed(2)}</td>
+                <td>{percent(track.metrics.max_drawdown)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p className="methodology-note">
+        {language === "zh" ? evidence.construction?.rule_zh : evidence.construction?.rule_en}
+      </p>
+      <ul className="factor-limitations">{(limitations ?? []).map((item) => <li key={item}>{item}</li>)}</ul>
+    </section>
+  );
+}
+
+function BiasMetricCard({ label, value, detail }: { label: string; value: string; detail: string }) {
+  return (
+    <div>
+      <span>{label}</span>
+      <strong>{value}</strong>
+      <small>{detail}</small>
+    </div>
+  );
+}
+
 function mergeValidationCurves(validation: HistoricalValidationPayload) {
+  return mergeTrackCurves(validation.tracks);
+}
+
+function mergeTrackCurves(tracks: HistoricalTrack[]) {
   const rows = new Map<string, Record<string, string | number>>();
-  for (const track of validation.tracks) {
+  for (const track of tracks) {
     const step = Math.max(1, Math.floor(track.equity_curve.length / 600));
     track.equity_curve.forEach((point, index) => {
       if (index % step !== 0 && index !== track.equity_curve.length - 1) return;

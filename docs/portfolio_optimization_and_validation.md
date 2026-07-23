@@ -18,6 +18,8 @@ These are research portfolios, not automatic orders. They never connect to a bro
 - Optimizer: `src/portfolio_agent/optimization.py`
 - Current snapshot output: `web/public/data/{market}/dashboard.json`
 - Walk-forward engine: `src/portfolio_agent/historical_validation.py`
+- Historical-membership experiment: `src/portfolio_agent/point_in_time.py`
+- Independent factor evidence: `src/portfolio_agent/academic_factors.py`
 - Export command: `scripts/export_historical_validation.py`
 - Published output: `web/public/data/{market}/historical_validation.json`
 
@@ -58,12 +60,55 @@ The price-rule reconstruction uses the same technical ingredients as the opportu
 
 The test includes transaction costs. A unit test changes future prices and confirms that all earlier price-rule results remain unchanged.
 
+## Survivorship-bias audit
+
+The US export now runs the identical monthly price rule on two different candidate sets:
+
+1. `Current members replayed backward` intentionally uses the final S&P 500 membership throughout the past. This is the biased control.
+2. `Historical membership rule` uses only the reconstructed S&P 500 membership available at each rebalance date.
+
+Both tracks use the same signal, rebalance frequency, position cap, trend filter, and transaction cost. The difference is therefore a direct estimate of the effect of using the final survivor list in this experiment.
+
+The historical membership source is the MIT-licensed `hanshof/sp500_constituents` dataset pinned to a recorded Git commit. It is community-reconstructed, not official S&P data. Yahoo adjusted-close history is cached outside the repository and the published result reports:
+
+- unique historical and final members
+- removed members retained in the candidate history
+- tickers with any available price history
+- price-eligible observations at rebalance dates
+- the last 24 rebalance dates and the stocks selected using information available then
+
+This substantially reduces survivor-list bias but does not eliminate it. Yahoo lacks complete history and delisting returns for some removed or renamed securities. A research-grade result requires CRSP permanent identifiers and delisting returns, or another audited point-in-time database.
+
+The 2015-08-23 through 2025-08-23 research snapshot produced:
+
+| Identical monthly price rule | CAGR | Sharpe | Max drawdown |
+| --- | ---: | ---: | ---: |
+| SPY benchmark | 15.02% | 0.86 | -33.7% |
+| Final members replayed backward | 10.80% | 0.63 | -34.9% |
+| Historical membership | 4.31% | 0.32 | -39.2% |
+
+The measured survivor-list CAGR gap was 6.49 percentage points. Price-history coverage was 81.3% by ticker and 88.9% across rebalance eligibility observations, so the historical-membership return is an incomplete free-data estimate rather than a final performance claim.
+
+## Independent factor evidence
+
+The dashboard also downloads the Kenneth R. French Data Library's CRSP-based daily market and momentum portfolios. This layer does not use this application's ticker list.
+
+The public momentum rule sorts eligible NYSE, AMEX, and Nasdaq stocks by prior 2-12 month return and holds the highest decile. Over 2016-05-31 through 2026-05-29:
+
+| CRSP research portfolio | CAGR | Sharpe | Max drawdown |
+| --- | ---: | ---: | ---: |
+| US market | 15.66% | 0.88 | -34.2% |
+| High prior-return decile | 20.25% | 0.80 | -43.1% |
+| Low prior-return decile | 9.43% | 0.43 | -55.8% |
+
+Momentum beat the market in raw return during this window, but with a lower Sharpe ratio and a materially deeper drawdown. These academic returns do not deduct this project's trading costs, taxes, or implementation shortfall and do not guarantee future outperformance.
+
 ## Honest limitations
 
 The published validation is deliberately labeled `exploratory_not_production`.
 
-- The candidate set is based on the current configured universe, so it has survivorship and selection bias.
-- Delisted securities are not included.
+- The optimizer profile tracks still use their configured current candidate lists, so those tracks retain survivorship and selection bias.
+- The historical-membership experiment reduces that bias but still lacks complete delisting returns.
 - Historical point-in-time SEC filing fundamentals are not yet included.
 - The technical track therefore reconstructs the price gates, not the complete current opportunity-map score.
 - Taxes, changing bid-ask spreads, market impact, and intraday execution are not modeled.

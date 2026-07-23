@@ -6,7 +6,7 @@ from typing import Any, Callable
 import numpy as np
 import pandas as pd
 
-from .backtest import compute_metrics, drift_weights
+from .backtest import compute_metrics, downsample_equity_curve, drift_weights
 from .config import AppConfig, OptimizationProfileConfig
 from .optimization import optimize_profile
 
@@ -100,6 +100,7 @@ def run_historical_validation(
         )
         frame = track.equity_curve.copy()
         frame["date"] = pd.to_datetime(frame["date"]).dt.strftime("%Y-%m-%d")
+        frame = downsample_equity_curve(frame)
         track_payloads.append(
             {
                 "id": track.track_id,
@@ -272,17 +273,34 @@ def _simulate_track(
 
 
 def _price_rule_target(config: AppConfig, history: pd.DataFrame) -> dict[str, float]:
-    assets = [
+    target, _ = build_price_rule_target(
+        config,
+        history,
+        assets=_validation_assets(config),
+    )
+    return target
+
+
+def build_price_rule_target(
+    config: AppConfig,
+    history: pd.DataFrame,
+    *,
+    assets: set[str] | frozenset[str] | list[str] | tuple[str, ...],
+) -> tuple[dict[str, float], dict[str, Any]]:
+    latest_history_date = pd.Timestamp(history.index.max())
+    eligible_assets = [
         ticker
-        for ticker in _validation_assets(config)
+        for ticker in assets
         if ticker != config.universe.benchmark
         and ticker in history
         and history[ticker].notna().sum() >= 253
     ]
     rows = []
-    for ticker in assets:
+    for ticker in eligible_assets:
         close = history[ticker].dropna().tail(253)
         if len(close) < 253:
+            continue
+        if pd.Timestamp(close.index[-1]) < latest_history_date - pd.Timedelta(days=10):
             continue
         latest = float(close.iloc[-1])
         ma50 = float(close.tail(50).mean())
@@ -306,7 +324,11 @@ def _price_rule_target(config: AppConfig, history: pd.DataFrame) -> dict[str, fl
             }
         )
     if not rows:
-        return {"CASH": 1.0}
+        return {"CASH": 1.0}, {
+            "price_eligible_count": 0,
+            "selected": [],
+            "market_regime": "cash",
+        }
     screen = pd.DataFrame(rows).set_index("ticker")
     score = (
         0.30 * screen["return_1y"].rank(pct=True)
@@ -318,7 +340,11 @@ def _price_rule_target(config: AppConfig, history: pd.DataFrame) -> dict[str, fl
     threshold = float(score.quantile(0.75))
     selected = score[(score >= threshold) & screen["gate"]].sort_values(ascending=False).head(8)
     if selected.empty:
-        return {"CASH": 1.0}
+        return {"CASH": 1.0}, {
+            "price_eligible_count": len(screen),
+            "selected": [],
+            "market_regime": "cash",
+        }
 
     benchmark = history[config.universe.benchmark].dropna()
     bullish = len(benchmark) >= 200 and float(benchmark.iloc[-1]) >= float(benchmark.tail(200).mean())
@@ -326,7 +352,19 @@ def _price_rule_target(config: AppConfig, history: pd.DataFrame) -> dict[str, fl
     weight = min(config.rules.max_single_position_weight, risk_budget / len(selected))
     target = {ticker: weight for ticker in selected.index}
     target["CASH"] = max(0.0, 1.0 - sum(target.values()))
-    return target
+    return target, {
+        "price_eligible_count": len(screen),
+        "selected": [
+            {
+                "ticker": ticker,
+                "score": float(selected.loc[ticker]),
+                "return_1y": float(screen.loc[ticker, "return_1y"]),
+                "distance_ma200": float(screen.loc[ticker, "distance_ma200"]),
+            }
+            for ticker in selected.index
+        ],
+        "market_regime": "bullish" if bullish else "defensive",
+    }
 
 
 def _profile_target(
