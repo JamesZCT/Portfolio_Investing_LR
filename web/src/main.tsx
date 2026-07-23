@@ -34,6 +34,7 @@ import {
   BacktestPayload,
   DashboardPayload,
   HealthPayload,
+  HistoricalValidationPayload,
   HistoryPayload,
   LatestQuote,
   MarketOpportunitiesPayload,
@@ -47,6 +48,7 @@ import {
   fetchBootstrap,
   fetchDashboard,
   fetchHealth,
+  fetchHistoricalValidation,
   fetchHistory,
   fetchMarketOpportunities,
   fetchLatestQuotes,
@@ -514,6 +516,7 @@ function App() {
   const [quotes, setQuotes] = useState<LatestQuote[]>([]);
   const [sentiment, setSentiment] = useState<SentimentPayload | null>(null);
   const [health, setHealth] = useState<HealthPayload | null>(null);
+  const [historicalValidation, setHistoricalValidation] = useState<HistoricalValidationPayload | null>(null);
   const [history, setHistory] = useState<HistoryPayload | null>(null);
   const [marketOpportunities, setMarketOpportunities] = useState<MarketOpportunitiesPayload | null>(null);
   const [researchPositions, setResearchPositions] = useState<Record<string, number>>({});
@@ -538,10 +541,11 @@ function App() {
         setOhlc(bootstrap.ohlc);
         setQuotes(bootstrap.quotes);
         setSentiment(bootstrap.sentiment);
-        const [healthPayload, historyPayload, opportunitiesPayload] = await fetchOptionalRunStatus(market);
+        const [healthPayload, historyPayload, opportunitiesPayload, validationPayload] = await fetchOptionalRunStatus(market);
         setHealth(healthPayload);
         setHistory(historyPayload);
         setMarketOpportunities(opportunitiesPayload);
+        setHistoricalValidation(validationPayload);
         applyResearchPositions(bootstrap.dashboard.positions);
         setHoverCandle(null);
         return;
@@ -559,7 +563,7 @@ function App() {
         fetchLatestQuotes(quoteTickers, market)
       ]);
       const sentimentPayload = await fetchSentiment(market);
-      const [healthPayload, historyPayload, opportunitiesPayload] = await fetchOptionalRunStatus(market);
+      const [healthPayload, historyPayload, opportunitiesPayload, validationPayload] = await fetchOptionalRunStatus(market);
       setDashboard(dash);
       setBacktest(bt);
       setStrategyComparison(comparison);
@@ -570,6 +574,7 @@ function App() {
       setHealth(healthPayload);
       setHistory(historyPayload);
       setMarketOpportunities(opportunitiesPayload);
+      setHistoricalValidation(validationPayload);
       applyResearchPositions(dash.positions);
       setHoverCandle(null);
     } catch (err) {
@@ -696,7 +701,7 @@ function App() {
           </section>
 
           <section className="conclusion-grid">
-            <Panel title={tr("My Research Portfolio", "我的研究组合")} icon={<Save size={18} />}>
+            <Panel title={tr("My Research Portfolio", "我的研究组合")} icon={<Save size={18} />} className="portfolio-panel">
               <PortfolioEditor
                 market={market}
                 positions={researchPositions}
@@ -709,11 +714,27 @@ function App() {
             </Panel>
           </section>
 
+          {dashboard.optimization?.profiles.length ? (
+            <section className="portfolio-comparison-row">
+              <Panel title={tr("Portfolio Optimizer & Action Plan", "组合优化与行动计划")} icon={<Gauge size={18} />} className="wide-panel">
+                <OptimizationPanel optimization={dashboard.optimization} market={market} />
+              </Panel>
+            </section>
+          ) : null}
+
           <section className="portfolio-comparison-row">
             <Panel title={tr("Selected Portfolio vs Indexes", "所选组合与指数对比")} icon={<BarChart3 size={18} />} className="wide-panel">
               <PortfolioComparison positions={researchPositions} targetWeights={dashboard.target_weights} market={market} />
             </Panel>
           </section>
+
+          {historicalValidation ? (
+            <section className="portfolio-comparison-row">
+              <Panel title={tr("10-Year Walk-Forward Validation", "十年滚动历史验证")} icon={<BarChart3 size={18} />} className="wide-panel">
+                <HistoricalValidationPanel validation={historicalValidation} />
+              </Panel>
+            </section>
+          ) : null}
 
           <section className="dashboard-grid">
             <Panel title={tr("News Sentiment & AI Readout", "新闻情绪与 AI 解读")} icon={<Newspaper size={18} />} className="wide-panel">
@@ -832,16 +853,18 @@ function MarketTruthBanner({
 
 async function fetchOptionalRunStatus(
   market: MarketProfile
-): Promise<[HealthPayload | null, HistoryPayload | null, MarketOpportunitiesPayload | null]> {
-  const [healthResult, historyResult, opportunitiesResult] = await Promise.allSettled([
+): Promise<[HealthPayload | null, HistoryPayload | null, MarketOpportunitiesPayload | null, HistoricalValidationPayload | null]> {
+  const [healthResult, historyResult, opportunitiesResult, validationResult] = await Promise.allSettled([
     fetchHealth(market),
     fetchHistory(market),
-    fetchMarketOpportunities(market)
+    fetchMarketOpportunities(market),
+    fetchHistoricalValidation(market)
   ]);
   return [
     healthResult.status === "fulfilled" ? healthResult.value : null,
     historyResult.status === "fulfilled" ? historyResult.value : null,
-    opportunitiesResult.status === "fulfilled" ? opportunitiesResult.value : null
+    opportunitiesResult.status === "fulfilled" ? opportunitiesResult.value : null,
+    validationResult.status === "fulfilled" ? validationResult.value : null
   ];
 }
 
@@ -1161,6 +1184,229 @@ function CandlestickChart({
       </svg>
     </div>
   );
+}
+
+function OptimizationPanel({
+  optimization,
+  market
+}: {
+  optimization: DashboardPayload["optimization"];
+  market: MarketProfile;
+}) {
+  const { language, tr } = useI18n();
+  const [profileId, setProfileId] = useState(optimization.profiles[0]?.id ?? "");
+  const profile = optimization.profiles.find((item) => item.id === profileId) ?? optimization.profiles[0];
+
+  useEffect(() => {
+    setProfileId(optimization.profiles[0]?.id ?? "");
+  }, [optimization]);
+
+  if (!profile) return <EmptyState label={tr("No optimizer profile is available.", "暂无可用优化组合。")} />;
+  const metric = (value: number | null) => (value == null ? "-" : percent(value));
+  const materialRows = profile.rows
+    .filter((row) => Math.abs(row.delta_weight) >= 0.005 || row.action === "HOLD")
+    .slice(0, 14);
+
+  return (
+    <div className="optimizer-panel">
+      <div className="profile-tabs" role="tablist" aria-label={tr("Risk profile", "风险档位")}>
+        {optimization.profiles.map((item) => (
+          <button
+            type="button"
+            role="tab"
+            aria-selected={item.id === profile.id}
+            className={item.id === profile.id ? "active" : ""}
+            key={item.id}
+            onClick={() => setProfileId(item.id)}
+          >
+            <strong>{language === "zh" ? item.name_zh : item.name_en}</strong>
+            <span>{localizeLabel(item.risk_level, language)}</span>
+          </button>
+        ))}
+      </div>
+
+      <div className="optimizer-summary">
+        <div>
+          <span>{tr("Trailing return", "历史年化收益")}</span>
+          <strong>{metric(profile.metrics.annualized_return)}</strong>
+        </div>
+        <div>
+          <span>{tr("Volatility", "年化波动率")}</span>
+          <strong>{metric(profile.metrics.annualized_volatility)}</strong>
+        </div>
+        <div>
+          <span>{tr("Sharpe", "夏普比率")}</span>
+          <strong>{profile.metrics.sharpe_ratio == null ? "-" : profile.metrics.sharpe_ratio.toFixed(2)}</strong>
+        </div>
+        <div>
+          <span>{tr("Max drawdown", "最大回撤")}</span>
+          <strong>{metric(profile.metrics.max_drawdown)}</strong>
+        </div>
+        <div>
+          <span>{tr("Estimated turnover", "预计换手率")}</span>
+          <strong>{percent(profile.metrics.turnover)}</strong>
+        </div>
+      </div>
+
+      <div className={`optimizer-explainer ${profile.status}`}>
+        <div>
+          <strong>{language === "zh" ? profile.objective_zh : profile.objective_en}</strong>
+          <span>
+            {tr("Long-only, no leverage; trailing diagnostics through", "只做多、不加杠杆；历史诊断截至")}{" "}
+            {optimization.data_as_of ?? profile.evidence.end_date ?? "-"}
+          </span>
+        </div>
+        <small>
+          {profile.status === "fallback"
+            ? `${tr("Fallback used", "已使用保守回退方案")}: ${profile.fallback_reason}`
+            : language === "zh"
+              ? profile.evidence.basis_zh
+              : profile.evidence.basis_en}
+        </small>
+      </div>
+
+      <div className="table-wrap optimizer-table">
+        <table>
+          <thead>
+            <tr>
+              <th>{tr("Priority", "优先级")}</th>
+              <th>{tr("Holding", "标的")}</th>
+              <th>{tr("Action", "操作")}</th>
+              <th>{tr("Current", "当前")}</th>
+              <th>{tr("Target", "目标")}</th>
+              <th>{tr("Gap", "差额")}</th>
+              <th>{tr("Why this allocation", "为什么这样配置")}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {materialRows.map((row) => (
+              <tr key={`${profile.id}-${row.ticker}`}>
+                <td>{row.priority}</td>
+                <td><TickerCell ticker={row.ticker} market={market} /></td>
+                <td><span className={`badge ${row.action.toLowerCase()}`}>{localizeLabel(row.action, language)}</span></td>
+                <td>{percent(row.current_weight)}</td>
+                <td>{percent(row.target_weight)}</td>
+                <td className={row.delta_weight >= 0 ? "positive" : "negative"}>{formatSignedPercent(row.delta_weight)}</td>
+                <td>
+                  {language === "zh" ? row.reason_zh : row.reason_en}
+                  <small className="rule-trace">{row.rule_ids.join(" · ")}</small>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p className="methodology-note">
+        {language === "zh" ? optimization.methodology_zh : optimization.methodology}
+      </p>
+    </div>
+  );
+}
+
+function HistoricalValidationPanel({ validation }: { validation: HistoricalValidationPayload }) {
+  const { language, tr } = useI18n();
+  const colors = ["#526168", "#1f6f5b", "#3a73a8", "#d0962f", "#9b5c72"];
+  const merged = mergeValidationCurves(validation);
+  const limitations = language === "zh" ? validation.limitations_zh : validation.limitations_en;
+  return (
+    <div className="historical-validation">
+      <div className="validation-header">
+        <div>
+          <strong>
+            {validation.evaluation_start_date} - {validation.evaluation_end_date}
+          </strong>
+          <span>
+            {tr("Signals at close t; first return exposure on t+1", "t 日收盘计算信号；最早从 t+1 日承担收益")}
+          </span>
+        </div>
+        <span className="validation-status">{tr("Exploratory, not production proof", "探索性结果，不是实盘有效性证明")}</span>
+      </div>
+
+      <div className="validation-chart">
+        <ResponsiveContainer width="100%" height={300}>
+          <AreaChart data={merged} margin={{ top: 8, right: 18, left: 0, bottom: 0 }}>
+            <CartesianGrid stroke="#e6ecef" vertical={false} />
+            <XAxis dataKey="date" tick={{ fontSize: 11 }} minTickGap={42} />
+            <YAxis tick={{ fontSize: 11 }} width={54} />
+            <Tooltip content={<ChartTooltip />} />
+            {validation.tracks.map((track, index) => (
+              <Area
+                key={track.id}
+                dataKey={track.id}
+                name={language === "zh" ? track.name_zh : track.name_en}
+                type="monotone"
+                stroke={colors[index % colors.length]}
+                fill={colors[index % colors.length]}
+                fillOpacity={0.04}
+                strokeWidth={track.id === "benchmark" ? 2 : 2.4}
+              />
+            ))}
+          </AreaChart>
+        </ResponsiveContainer>
+      </div>
+
+      <div className="strategy-legend">
+        {validation.tracks.map((track, index) => (
+          <span key={track.id}>
+            <i style={{ background: colors[index % colors.length] }} />
+            {language === "zh" ? track.name_zh : track.name_en}
+          </span>
+        ))}
+      </div>
+
+      <div className="table-wrap validation-table">
+        <table>
+          <thead>
+            <tr>
+              <th>{tr("Model", "模型")}</th>
+              <th>CAGR</th>
+              <th>{tr("vs benchmark", "相对基准")}</th>
+              <th>{tr("Sharpe", "夏普")}</th>
+              <th>{tr("Max drawdown", "最大回撤")}</th>
+              <th>{tr("Turnover", "累计换手")}</th>
+              <th>{tr("Rebalances", "调仓次数")}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {validation.tracks.map((track) => (
+              <tr key={track.id} title={language === "zh" ? track.description_zh : track.description_en}>
+                <td>{language === "zh" ? track.name_zh : track.name_en}</td>
+                <td>{percent(track.metrics.cagr)}</td>
+                <td className={track.metrics.excess_cagr_vs_benchmark >= 0 ? "positive" : "negative"}>
+                  {formatSignedPercent(track.metrics.excess_cagr_vs_benchmark)}
+                </td>
+                <td>{track.metrics.sharpe.toFixed(2)}</td>
+                <td>{percent(track.metrics.max_drawdown)}</td>
+                <td>{percent(track.turnover)}</td>
+                <td>{track.rebalance_count}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div className="validation-limitations">
+        <strong>{tr("What this test does not prove", "这项测试尚不能证明什么")}</strong>
+        <ul>
+          {limitations.map((item) => <li key={item}>{item}</li>)}
+        </ul>
+      </div>
+    </div>
+  );
+}
+
+function mergeValidationCurves(validation: HistoricalValidationPayload) {
+  const rows = new Map<string, Record<string, string | number>>();
+  for (const track of validation.tracks) {
+    const step = Math.max(1, Math.floor(track.equity_curve.length / 600));
+    track.equity_curve.forEach((point, index) => {
+      if (index % step !== 0 && index !== track.equity_curve.length - 1) return;
+      const row = rows.get(point.date) ?? { date: point.date };
+      row[track.id] = point.portfolio_value;
+      rows.set(point.date, row);
+    });
+  }
+  return Array.from(rows.values()).sort((a, b) => String(a.date).localeCompare(String(b.date)));
 }
 
 function BacktestMetrics({ backtest }: { backtest: BacktestPayload }) {

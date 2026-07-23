@@ -1,6 +1,6 @@
 # Netlify Credit Budget
 
-This project should treat Netlify as the production website host, not as the daily compute engine.
+This project treats GitHub Pages as the daily public host. Netlify is a manual backup channel, not the daily compute engine.
 
 ## Current Cost Model
 
@@ -21,7 +21,6 @@ The RTX 3090 Ti Windows runner should refresh market data and LLM sentiment loca
 
 Netlify production publishes should happen only when one of these is true:
 
-- Weekly Friday production publish after market close.
 - Manual workflow run with `deploy_to_netlify=true`.
 - Urgent website/UI fix that should go live immediately.
 
@@ -31,20 +30,13 @@ Daily scheduled refreshes should be compute-only and should not publish to Netli
 
 Approximate deploy-only budget:
 
-- Weekly production publish: 4 to 5 deploys/month = 60 to 75 credits/month.
+- Scheduled production publish: 0 deploys/month = 0 deploy credits/month.
 - Manual emergency deploys: 15 credits each.
 - Daily trading-day production publish: about 21 deploys/month = 315 credits/month, which exceeds the Free plan before traffic.
 
-Target budget: keep this project at or below 75 credits/month, around 25% of the Free plan.
+Target budget: zero scheduled Netlify deploy credits. GitHub Pages handles routine public refreshes.
 
-## Future Lower-Credit Architecture
+## Implemented Lower-Credit Architecture
 
-To make the public site update daily without daily production deploys, move refreshed JSON outside the Netlify deploy artifact. Options:
-
-- GitHub raw/CDN-backed snapshot URLs.
-- Cloudflare R2 or another cheap object store.
-- Supabase Storage.
-- A tiny API endpoint hosted somewhere other than Netlify Functions.
-
-Then Netlify can host the app shell and deploy only when the UI changes, while the dashboard fetches fresh JSON from the external data store.
+The self-hosted runner commits refreshed public JSON to GitHub. GitHub Pages rebuilds the app and serves those committed snapshots without consuming Netlify deploy credits.
 

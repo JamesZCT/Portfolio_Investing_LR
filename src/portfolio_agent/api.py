@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import sys
 import os
+from dataclasses import asdict
 from pathlib import Path
 from typing import Any
 
@@ -9,7 +10,7 @@ from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 
 from .config import load_config
-from .data import fetch_latest_quotes, fetch_ohlc, synthesize_ohlc_from_close
+from .data import fetch_close_prices, fetch_latest_quotes, fetch_ohlc, synthesize_ohlc_from_close
 from .engine import (
     backtest_to_payload,
     result_to_dashboard_payload,
@@ -18,6 +19,7 @@ from .engine import (
     run_strategy_comparison_for_config,
 )
 from .rules_catalog import rules_as_dicts
+from .historical_validation import run_historical_validation
 from .sandbox import generate_sandbox_prices
 from .sentiment import build_sentiment_payload
 
@@ -66,6 +68,7 @@ def get_config(config_path: str = Query(str(DEFAULT_CONFIG))) -> dict[str, Any]:
         "rules": cfg.rules.__dict__,
         "indicators": cfg.indicators.__dict__,
         "ml": cfg.ml.__dict__,
+        "optimization": asdict(cfg.optimization),
     }
 
 
@@ -206,6 +209,39 @@ def compare_strategies(
         )
         payload["mode"] = mode
         payload["lookback_days"] = lookback_days
+        return payload
+    except Exception as exc:  # noqa: BLE001
+        raise HTTPException(status_code=500, detail=f"{type(exc).__name__}: {exc}") from exc
+
+
+@app.get("/api/historical-validation")
+def historical_validation(
+    config_path: str = Query(str(DEFAULT_CONFIG)),
+    years: int = Query(10, ge=3, le=10),
+    mode: str = Query("real", pattern="^(real|sandbox)$"),
+) -> dict[str, Any]:
+    try:
+        resolved = _resolve_config(config_path)
+        cfg = load_config(resolved)
+        history_days = int((years + 3) * 365.25)
+        tickers = sorted(
+            {
+                cfg.universe.benchmark,
+                *(ticker for ticker in cfg.universe.positions if ticker != "CASH"),
+                *(
+                    ticker
+                    for profile in (cfg.optimization.profiles or {}).values()
+                    for ticker in profile.assets
+                ),
+            }
+        )
+        prices = (
+            generate_sandbox_prices(cfg, days=int((years + 3) * 252))
+            if mode == "sandbox"
+            else fetch_close_prices(tickers, lookback_days=history_days)
+        )
+        payload = run_historical_validation(cfg, prices, years=years)
+        payload["mode"] = mode
         return payload
     except Exception as exc:  # noqa: BLE001
         raise HTTPException(status_code=500, detail=f"{type(exc).__name__}: {exc}") from exc

@@ -30,12 +30,16 @@ on:
         required: true
         type: boolean
   schedule:
-    # US pre-open sentiment refresh: 08:30 ET during daylight saving time.
+    # Paired UTC times cover both US daylight and standard time. The gate job
+    # admits only 08:30 or 17:30 America/New_York.
     - cron: "30 12 * * 1-5"
-    # US post-close data refresh: after regular close, with room for Yahoo/yfinance data availability.
+    - cron: "30 13 * * 1-5"
+    - cron: "30 21 * * 1-5"
     - cron: "30 22 * * 1-5"
-    # Weekly production publish after Friday post-close refresh. Costs 15 Netlify credits when successful.
-    - cron: "30 23 * * 5"
+
+concurrency:
+  group: portfolio-data-writes
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -47,8 +51,45 @@ defaults:
     shell: powershell
 
 jobs:
+  schedule_gate:
+    runs-on: ubuntu-latest
+    outputs:
+      run: ${{ steps.gate.outputs.run }}
+      session: ${{ steps.gate.outputs.session }}
+    steps:
+      - name: Match New York market schedule
+        id: gate
+        shell: pwsh
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          if ($env:EVENT_NAME -eq "workflow_dispatch") {
+            "run=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+            "session=manual" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+            exit 0
+          }
+
+          $zone = [TimeZoneInfo]::FindSystemTimeZoneById("America/New_York")
+          $eastern = [TimeZoneInfo]::ConvertTime([DateTimeOffset]::UtcNow, $zone)
+          # Scheduled jobs can start a few minutes late, so gate on the Eastern
+          # hour rather than requiring an exact 08:30/17:30 start timestamp.
+          $session = if ($eastern.Hour -eq 8) {
+            "pre-open"
+          } elseif ($eastern.Hour -eq 17) {
+            "post-close"
+          } else {
+            "seasonal-duplicate"
+          }
+          $run = if ($session -eq "seasonal-duplicate") { "false" } else { "true" }
+          "run=$run" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          "session=$session" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          echo "Eastern time: $eastern; session=$session; run=$run"
+
   refresh:
+    needs: schedule_gate
+    if: ${{ needs.schedule_gate.outputs.run == 'true' }}
     runs-on: [self-hosted, windows, local-llm]
+    timeout-minutes: 45
     env:
       SNAPSHOT_MODE: ${{ inputs.mode || 'real' }}
       LLM_SENTIMENT_PROVIDER: ${{ inputs.provider || 'ollama' }}
@@ -70,14 +111,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
         with:
+          ref: main
+          fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Install Python dependencies
         run: |
           if (-not (Test-Path .venv\Scripts\python.exe)) {
-            python -m venv .venv
+            py -3.12 -m venv .venv
           }
-          .\.venv\Scripts\python.exe -m pip install --upgrade pip
           .\.venv\Scripts\python.exe -m pip install -r requirements.txt
           .\.venv\Scripts\python.exe -m pip install -e .
 
@@ -113,8 +155,8 @@ jobs:
         run: |
           echo "LLM available: ${{ steps.local_llm.outputs.available }}"
           echo "LLM status: ${{ steps.local_llm.outputs.reason }}"
-          .\.venv\Scripts\python.exe scripts\export_web_snapshot.py --config config.yaml --out-dir web\public\data\us --mode "$env:SNAPSHOT_MODE" --lookback-days 900
-          .\.venv\Scripts\python.exe scripts\export_web_snapshot.py --config example_hk_config.yaml --out-dir web\public\data\hk --mode "$env:SNAPSHOT_MODE" --lookback-days 900
+          .\.venv\Scripts\python.exe scripts\export_web_snapshot.py --config config.yaml --config-provenance example_config.yaml --out-dir web\public\data\us --mode "$env:SNAPSHOT_MODE" --lookback-days 900
+          .\.venv\Scripts\python.exe scripts\export_web_snapshot.py --config example_hk_config.yaml --config-provenance example_hk_config.yaml --out-dir web\public\data\hk --mode "$env:SNAPSHOT_MODE" --lookback-days 900
           Copy-Item web\public\data\us\*.json web\public\data\
 
       - name: Setup Node
@@ -141,7 +183,25 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add web/public/data
           git commit -m "Refresh market data snapshot"
-          git push
+          $pushed = $false
+          foreach ($attempt in 1..3) {
+            git fetch origin main
+            git rebase origin/main
+            if ($LASTEXITCODE -ne 0) {
+              git rebase --abort
+              throw "Snapshot rebase failed; refusing to overwrite main."
+            }
+            git push origin HEAD:main
+            if ($LASTEXITCODE -eq 0) {
+              $pushed = $true
+              break
+            }
+            Write-Host "Push attempt $attempt failed; refreshing main before retry."
+            Start-Sleep -Seconds (5 * $attempt)
+          }
+          if (-not $pushed) {
+            throw "Unable to push refreshed snapshot after 3 attempts."
+          }
           "changed=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
 
       - name: Decide Netlify deploy
@@ -157,9 +217,6 @@ jobs:
           if ($env:EVENT_NAME -eq "workflow_dispatch" -and $env:MANUAL_DEPLOY -eq "true") {
             $shouldDeploy = "true"
             $reason = "manual production deploy requested"
-          } elseif ($env:EVENT_NAME -eq "schedule" -and $env:EVENT_SCHEDULE -eq "30 23 * * 5") {
-            $shouldDeploy = "true"
-            $reason = "weekly Friday production publish"
           }
 
           "should_deploy=$shouldDeploy" | Out-File -FilePath $env:GITHUB_OUTPUT -Append

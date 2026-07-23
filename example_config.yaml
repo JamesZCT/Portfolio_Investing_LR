@@ -43,6 +43,65 @@ execution:
   mode: sandbox
   allow_live_brokerage: false
 
+optimization:
+  enabled: true
+  lookback_days: 756
+  min_history_days: 504
+  transaction_cost_bps: 8
+  asset_groups:
+    VTI: USBroad
+    VXUS: International
+    BND: FixedIncome
+    SGOV: FixedIncome
+    QQQ: Technology
+    AAPL: Technology
+    MSFT: Technology
+    NVDA: Technology
+    AVGO: Technology
+    JPM: Financials
+    V: Financials
+    XOM: Energy
+    JNJ: Healthcare
+    UNH: Healthcare
+    COST: ConsumerStaples
+  asset_types:
+    VTI: fund
+    VXUS: fund
+    BND: bond
+    SGOV: bond
+    QQQ: fund
+  profiles:
+    defensive:
+      name_en: Defensive
+      name_zh: 防守型
+      risk_level: low
+      objective: min_cvar
+      cash_weight: 0.15
+      max_single_weight: 0.15
+      max_fund_weight: 0.70
+      max_group_weight: 0.75
+      assets: [VTI, VXUS, BND, SGOV]
+    balanced:
+      name_en: Balanced
+      name_zh: 平衡型
+      risk_level: medium
+      objective: risk_budgeting
+      cash_weight: 0.05
+      max_single_weight: 0.15
+      max_fund_weight: 0.45
+      max_group_weight: 0.40
+      assets: [VTI, VXUS, BND, SGOV, QQQ, AAPL, MSFT, NVDA, AVGO, JPM, V, XOM, JNJ, UNH, COST]
+    aggressive:
+      name_en: Aggressive
+      name_zh: 进取型
+      risk_level: high
+      objective: max_sharpe
+      cash_weight: 0.02
+      max_single_weight: 0.15
+      max_fund_weight: 0.45
+      max_group_weight: 0.45
+      assets: [VTI, QQQ, AAPL, MSFT, NVDA, AVGO, JPM, V, XOM, JNJ, UNH, COST]
+
 notifications:
   enabled: true
   dry_run: true

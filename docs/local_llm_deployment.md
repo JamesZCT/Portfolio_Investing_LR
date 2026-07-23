@@ -85,7 +85,7 @@ NVIDIA PC
       |
 commit web/public/data/*.json
       |
-GitHub Actions deploys the static Netlify site
+GitHub Actions deploys the static GitHub Pages site
 ```
 
 Setup outline:
@@ -116,7 +116,7 @@ LLM_SENTIMENT_MODEL=qwen3:8b \
 python scripts/export_web_snapshot.py --config config.yaml --out-dir web/public/data/us --mode real --lookback-days 900
 ```
 
-For a 3090 Ti, `qwen3:8b` is the conservative first model. Try `qwen3:14b` after the full refresh workflow is stable.
+For a 3090 Ti, `qwen3:14b` is the current default. `qwen3:8b` remains the faster fallback, while `qwen3:30b` is reserved for manual deeper analysis rather than twice-daily snapshots.
 
 ### Option A: Ollama on the GPU Host
 
