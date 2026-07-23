@@ -454,6 +454,41 @@ export type HistoryPayload = {
   }>;
 };
 
+export type HistoricalTrack = {
+  id: string;
+  name_en: string;
+  name_zh: string;
+  description_en: string;
+  description_zh: string;
+  metrics: {
+    final_value: number;
+    cagr: number;
+    annualized_volatility: number;
+    sharpe: number;
+    max_drawdown: number;
+    excess_cagr_vs_benchmark: number;
+    drawdown_improvement_vs_benchmark: number;
+  };
+  turnover: number;
+  rebalance_count: number;
+  latest_holdings: string[];
+  equity_curve: Array<{ date: string; portfolio_value: number; daily_return: number }>;
+  selection_history?: Array<{
+    date: string;
+    reason: string;
+    membership_count: number;
+    price_eligible_count: number;
+    selected: Array<{
+      ticker: string;
+      score: number;
+      return_1y: number;
+      distance_ma200: number;
+    }>;
+    market_regime: string;
+    cash_weight: number;
+  }>;
+};
+
 export type HistoricalValidationPayload = {
   status: "exploratory" | string;
   requested_years: number;
@@ -463,26 +498,7 @@ export type HistoricalValidationPayload = {
   data_as_of: string;
   benchmark: string;
   transaction_cost_bps: number;
-  tracks: Array<{
-    id: string;
-    name_en: string;
-    name_zh: string;
-    description_en: string;
-    description_zh: string;
-    metrics: {
-      final_value: number;
-      cagr: number;
-      annualized_volatility: number;
-      sharpe: number;
-      max_drawdown: number;
-      excess_cagr_vs_benchmark: number;
-      drawdown_improvement_vs_benchmark: number;
-    };
-    turnover: number;
-    rebalance_count: number;
-    latest_holdings: string[];
-    equity_curve: Array<{ date: string; portfolio_value: number; daily_return: number }>;
-  }>;
+  tracks: HistoricalTrack[];
   universe: {
     tickers: string[];
     size: number;
@@ -500,6 +516,77 @@ export type HistoricalValidationPayload = {
   };
   limitations_en: string[];
   limitations_zh: string[];
+  point_in_time_experiment?: {
+    status: string;
+    error?: string;
+    evaluation_start_date?: string;
+    evaluation_end_date?: string;
+    benchmark?: string;
+    transaction_cost_bps?: number;
+    tracks?: HistoricalTrack[];
+    bias_effect?: {
+      survivor_minus_historical_cagr: number;
+      survivor_minus_historical_sharpe: number;
+    };
+    universe_audit?: {
+      membership_source: string;
+      membership_source_url: string;
+      membership_source_commit: string;
+      membership_license: string;
+      membership_is_official: boolean;
+      membership_start_date: string;
+      membership_end_date: string;
+      unique_historical_members: number;
+      final_members: number;
+      removed_members_included: number;
+      removed_members_with_price_history: number;
+      rebalance_member_observations: number;
+      price_eligible_observations: number;
+      rebalance_price_coverage: number;
+      requested_tickers?: number;
+      tickers_with_any_price?: number;
+      ticker_price_coverage?: number;
+      downloaded_tickers?: number;
+    };
+    integrity?: Record<string, boolean | string>;
+    limitations_en?: string[];
+    limitations_zh?: string[];
+  };
+  academic_factor_evidence?: {
+    status: string;
+    error?: string;
+    evaluation_start_date?: string;
+    evaluation_end_date?: string;
+    tracks?: Array<{
+      id: string;
+      name_en: string;
+      name_zh: string;
+      description_en: string;
+      description_zh: string;
+      metrics: {
+        final_value: number;
+        cagr: number;
+        annualized_volatility: number;
+        sharpe: number;
+        max_drawdown: number;
+        excess_cagr_vs_market: number;
+      };
+      equity_curve: Array<{ date: string; portfolio_value: number; daily_return: number }>;
+    }>;
+    source?: {
+      name: string;
+      url: string;
+      momentum_portfolios_url: string;
+      five_factors_url: string;
+    };
+    construction?: {
+      rule_en: string;
+      rule_zh: string;
+      survivorship_bias_control: string;
+    };
+    limitations_en?: string[];
+    limitations_zh?: string[];
+  };
 };
 
 export type BootstrapPayload = {

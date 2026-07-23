@@ -153,6 +153,20 @@ def compute_metrics(equity_curve: pd.DataFrame) -> dict[str, float]:
     }
 
 
+def downsample_equity_curve(
+    equity_curve: pd.DataFrame,
+    *,
+    max_points: int = 650,
+) -> pd.DataFrame:
+    if len(equity_curve) <= max_points:
+        return equity_curve.copy()
+    step = max(1, math.ceil((len(equity_curve) - 1) / (max_points - 1)))
+    positions = list(range(0, len(equity_curve), step))
+    if positions[-1] != len(equity_curve) - 1:
+        positions.append(len(equity_curve) - 1)
+    return equity_curve.iloc[positions].copy()
+
+
 def write_backtest_report(out_dir: str | Path, result: BacktestResult) -> tuple[Path, Path, Path]:
     out_dir = Path(out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)

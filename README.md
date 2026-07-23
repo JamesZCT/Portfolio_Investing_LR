@@ -80,7 +80,10 @@ It combines:
 - calculates each target with data available at that historical close
 - applies the new target starting on the following trading day
 - includes configured transaction costs and compares every track with the market benchmark
-- labels current-universe survivorship bias and excludes point-in-time fundamentals until those data are available
+- compares today's S&P 500 membership replayed backward with historical point-in-time membership under the identical rule
+- publishes membership, removed-ticker, price-coverage, rebalance-selection, and remaining-bias audits
+- adds independent Ken French/CRSP market and momentum evidence
+- labels incomplete delisting returns and excludes point-in-time fundamentals until research-grade data are available
 
 ## Installation
 
