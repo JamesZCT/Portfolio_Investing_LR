@@ -45,6 +45,69 @@ export type SeriesPoint = {
   value: number;
 };
 
+export type OptimizationRow = {
+  priority: number;
+  ticker: string;
+  group: string;
+  asset_type: string;
+  action: "ADD" | "TRIM" | "HOLD";
+  current_weight: number;
+  target_weight: number;
+  delta_weight: number;
+  reason_en: string;
+  reason_zh: string;
+  rule_ids: string[];
+};
+
+export type OptimizationProfile = {
+  id: string;
+  name_en: string;
+  name_zh: string;
+  risk_level: "low" | "medium" | "high" | string;
+  objective: string;
+  objective_en: string;
+  objective_zh: string;
+  status: "optimized" | "fallback";
+  fallback_reason: string | null;
+  cash_weight: number;
+  metrics: {
+    annualized_return: number | null;
+    annualized_volatility: number | null;
+    sharpe_ratio: number | null;
+    max_drawdown: number | null;
+    turnover: number;
+    estimated_transaction_cost: number;
+  };
+  rows: OptimizationRow[];
+  missing_assets: string[];
+  constraints: {
+    long_only: boolean;
+    max_single_weight: number;
+    max_fund_weight: number;
+    max_group_weight: number;
+    group_constraints: string[];
+    leverage: number;
+  };
+  evidence: {
+    start_date: string | null;
+    end_date: string | null;
+    observations: number;
+    basis_en: string;
+    basis_zh: string;
+  };
+};
+
+export type OptimizationPayload = {
+  status: string;
+  data_as_of?: string | null;
+  lookback_days?: number;
+  min_history_days?: number;
+  transaction_cost_bps?: number;
+  methodology: string;
+  methodology_zh?: string;
+  profiles: OptimizationProfile[];
+};
+
 export type DashboardPayload = {
   mode: string;
   lookback_days: number;
@@ -82,6 +145,7 @@ export type DashboardPayload = {
     rule_ids: string[];
     priority: number;
   }>;
+  optimization: OptimizationPayload;
   benchmark_series: SeriesPoint[];
   universe: {
     benchmark: string;
@@ -390,6 +454,54 @@ export type HistoryPayload = {
   }>;
 };
 
+export type HistoricalValidationPayload = {
+  status: "exploratory" | string;
+  requested_years: number;
+  source_start_date: string;
+  evaluation_start_date: string;
+  evaluation_end_date: string;
+  data_as_of: string;
+  benchmark: string;
+  transaction_cost_bps: number;
+  tracks: Array<{
+    id: string;
+    name_en: string;
+    name_zh: string;
+    description_en: string;
+    description_zh: string;
+    metrics: {
+      final_value: number;
+      cagr: number;
+      annualized_volatility: number;
+      sharpe: number;
+      max_drawdown: number;
+      excess_cagr_vs_benchmark: number;
+      drawdown_improvement_vs_benchmark: number;
+    };
+    turnover: number;
+    rebalance_count: number;
+    latest_holdings: string[];
+    equity_curve: Array<{ date: string; portfolio_value: number; daily_return: number }>;
+  }>;
+  universe: {
+    tickers: string[];
+    size: number;
+    definition_en: string;
+    definition_zh: string;
+  };
+  integrity: {
+    lookahead_protection: string;
+    lookahead_protection_zh: string;
+    transaction_costs_included: boolean;
+    fundamental_layer_included: boolean;
+    survivorship_bias: boolean;
+    delisted_securities_included: boolean;
+    claim_level: string;
+  };
+  limitations_en: string[];
+  limitations_zh: string[];
+};
+
 export type BootstrapPayload = {
   dashboard: DashboardPayload;
   backtest: BacktestPayload;
@@ -464,6 +576,14 @@ export async function fetchHistory(market: MarketProfile): Promise<HistoryPayloa
 
 export async function fetchMarketOpportunities(market: MarketProfile): Promise<MarketOpportunitiesPayload> {
   return fetchSnapshot<MarketOpportunitiesPayload>(`/data/${market}/market_opportunities.json`);
+}
+
+export async function fetchHistoricalValidation(market: MarketProfile): Promise<HistoricalValidationPayload> {
+  const params = new URLSearchParams({ market, years: "10", mode: "real" });
+  return fetchJson<HistoricalValidationPayload>(
+    `${API_BASE}/api/historical-validation?${params.toString()}`,
+    `/data/${market}/historical_validation.json`
+  );
 }
 
 async function fetchJson<T>(apiUrl: string, snapshotUrl: string): Promise<T> {

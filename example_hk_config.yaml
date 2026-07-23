@@ -43,6 +43,57 @@ execution:
   mode: sandbox
   allow_live_brokerage: false
 
+optimization:
+  enabled: true
+  lookback_days: 756
+  min_history_days: 504
+  transaction_cost_bps: 10
+  asset_groups:
+    "2800.HK": BroadMarket
+    "0700.HK": Technology
+    "9988.HK": Ecommerce
+    "3690.HK": ConsumerServices
+    "1299.HK": Insurance
+    "0388.HK": Exchanges
+    "0005.HK": Banks
+    "0939.HK": Banks
+    "1810.HK": Technology
+    "0823.HK": Property
+    "0001.HK": Conglomerates
+  asset_types:
+    "2800.HK": fund
+  profiles:
+    defensive:
+      name_en: Defensive
+      name_zh: 防守型
+      risk_level: low
+      objective: min_cvar
+      cash_weight: 0.15
+      max_single_weight: 0.15
+      max_fund_weight: 0.55
+      max_group_weight: 0.55
+      assets: ["2800.HK", "0005.HK", "1299.HK", "0823.HK"]
+    balanced:
+      name_en: Balanced
+      name_zh: 平衡型
+      risk_level: medium
+      objective: risk_budgeting
+      cash_weight: 0.05
+      max_single_weight: 0.15
+      max_fund_weight: 0.45
+      max_group_weight: 0.35
+      assets: ["2800.HK", "0700.HK", "9988.HK", "3690.HK", "1299.HK", "0388.HK", "0005.HK", "0939.HK", "1810.HK", "0823.HK", "0001.HK"]
+    aggressive:
+      name_en: Aggressive
+      name_zh: 进取型
+      risk_level: high
+      objective: max_sharpe
+      cash_weight: 0.02
+      max_single_weight: 0.16
+      max_fund_weight: 0.40
+      max_group_weight: 0.40
+      assets: ["2800.HK", "0700.HK", "9988.HK", "3690.HK", "1299.HK", "0388.HK", "0005.HK", "0939.HK", "1810.HK", "0823.HK", "0001.HK"]
+
 notifications:
   enabled: true
   dry_run: true

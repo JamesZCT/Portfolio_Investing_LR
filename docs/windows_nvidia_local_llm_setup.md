@@ -194,7 +194,7 @@ local-llm
 nvidia
 ```
 
-Install the runner as a Windows service so it recovers after reboot. Use an Administrator PowerShell for the service install command that GitHub shows.
+Install the runner as a Windows service so it recovers after reboot. Use an Administrator PowerShell for the service install command that GitHub shows. A logon-triggered Task Scheduler job with `RestartInterval=1 minute` is an acceptable fallback when service installation is unavailable.
 
 The local LLM workflow targets:
 
@@ -208,9 +208,9 @@ After the runner is online:
 
 1. Open GitHub Actions.
 2. Choose `Refresh Web Snapshot Local LLM`.
-3. Run it manually with `provider=ollama` and `model=qwen3:8b`.
+3. Run it manually with `provider=ollama` and `model=qwen3:14b`.
 4. Confirm the workflow commits refreshed `web/public/data/*.json`.
-5. Confirm the Netlify deploy step runs when `NETLIFY_AUTH_TOKEN` and `NETLIFY_SITE_ID` are set.
+5. Confirm the GitHub Pages deployment succeeds. Netlify runs only when a manual dispatch sets `deploy_to_netlify=true`.
 
 The scheduled workflow can then refresh the hosted dashboard automatically without deploying the model to Netlify or repeatedly consuming OpenAI tokens.
 

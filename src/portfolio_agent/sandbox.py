@@ -11,6 +11,11 @@ def generate_sandbox_prices(config: AppConfig, days: int = 900, seed: int = 7) -
         set(config.universe.positions)
         | set(config.universe.target_weights)
         | set(config.universe.sector_etfs.values())
+        | {
+            ticker
+            for profile in (config.optimization.profiles or {}).values()
+            for ticker in profile.assets
+        }
         | {config.universe.benchmark}
     )
     tickers = [ticker for ticker in tickers if ticker != "CASH"]

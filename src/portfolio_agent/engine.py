@@ -11,6 +11,7 @@ from .config import AppConfig, load_config
 from .data import fetch_close_prices, load_close_prices_csv
 from .execution import SandboxExecutionAdapter, suggestions_to_orders
 from .ml import build_risk_predictions
+from .optimization import build_optimization_payload
 from .portfolio import apply_trade_suggestions, propose_rebalance
 from .report import write_report
 from .sandbox import generate_sandbox_prices
@@ -33,6 +34,8 @@ def load_prices_for_config(cfg: AppConfig, prices_csv: str | None, lookback_days
     tickers = set(cfg.universe.sector_etfs.values())
     tickers.update(cfg.universe.positions.keys())
     tickers.update(cfg.universe.target_weights.keys())
+    for profile in (cfg.optimization.profiles or {}).values():
+        tickers.update(profile.assets)
     tickers.add(cfg.universe.benchmark)
 
     ordered_tickers = sorted(t for t in tickers if t != "CASH")
@@ -207,6 +210,7 @@ def result_to_dashboard_payload(result: AnalysisResult) -> dict[str, Any]:
         "sector_weights": _sector_weights(cfg.universe.positions, cfg.universe.ticker_sector),
         "advisor_summary": _advisor_summary(result),
         "recommended_distribution": _recommended_distribution(result),
+        "optimization": build_optimization_payload(cfg, result.prices),
         "benchmark_series": benchmark_series,
         "price_as_of": str(result.prices.index.max().date()) if not result.prices.empty else None,
         "universe": {

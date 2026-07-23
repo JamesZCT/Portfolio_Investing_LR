@@ -1,5 +1,6 @@
 pandas>=2.2.0
 numpy>=1.26.0
+skfolio==0.20.1
 yfinance>=0.2.54
 PyYAML>=6.0.1
 matplotlib>=3.8.0

@@ -8,7 +8,9 @@ It combines:
 - a sandbox-only execution boundary so recommendations can be simulated without placing live brokerage orders
 - a lightweight ML risk model that estimates next-horizon drawdown risk from price-derived features
 - a news sentiment layer that reads public RSS headlines and converts them into a market posture overlay
-- backtesting and daily automation workflows
+- constrained Defensive, Balanced, and Aggressive portfolio research profiles
+- walk-forward historical validation with transaction costs and explicit bias disclosures
+- backtesting and scheduled automation workflows
 
 ## Features
 
@@ -67,6 +69,18 @@ It combines:
 - scores headline tone with a transparent lexicon and theme classifier
 - combines news tone with price trend evidence into `risk_on`, `neutral`, `fragile`, or `risk_off` posture
 - includes an optional OpenAI-compatible LLM overlay that is disabled by default to avoid token spend
+
+10. Constrained portfolio optimization
+- uses `skfolio` for long-only CVaR minimization, risk budgeting, and estimated maximum-Sharpe research profiles
+- enforces cash, position, fund, group, and no-leverage constraints
+- reports current weight, target weight, action gap, turnover estimate, and bilingual reasons
+- falls back visibly to a conservative inverse-volatility allocation when optimization is infeasible
+
+11. Ten-year walk-forward validation
+- calculates each target with data available at that historical close
+- applies the new target starting on the following trading day
+- includes configured transaction costs and compares every track with the market benchmark
+- labels current-universe survivorship bias and excludes point-in-time fundamentals until those data are available
 
 ## Installation
 
@@ -190,6 +204,13 @@ CSV format requirements:
 - uses `example_config.yaml`
 - workflow outputs are uploaded as artifacts
 
+3. Windows 3090 Ti public dashboard refresh
+- `.github/workflows/refresh-web-snapshot-local-llm.yml`
+- 08:30 America/New_York on weekdays: pre-open news, information signs, and local LLM interpretation
+- 17:30 America/New_York on weekdays: post-close prices, rules, opportunities, portfolio analysis, and local LLM interpretation
+- paired UTC schedules plus a New York time gate keep these times correct through daylight-saving changes
+- `.github/workflows/weekly-historical-validation.yml` runs after the Friday trading week to refresh the ten-year walk-forward study
+
 ## Netlify hosting
 
 The dashboard can run on Netlify without a local FastAPI server. Netlify serves:
@@ -240,6 +261,7 @@ The repository includes:
 - `.github/workflows/ci.yml`: runs Python compile checks, unit tests, API sandbox smoke tests, snapshot export, and frontend build on push/PR.
 - `.github/workflows/refresh-web-snapshot.yml`: refreshes `web/public/data/*.json` on a market-day schedule or manual trigger.
 - `.github/workflows/refresh-web-snapshot-local-llm.yml`: refreshes snapshots on a self-hosted `local-llm` runner and enables Ollama/OpenAI-compatible sentiment only when the local model health check passes.
+- `.github/workflows/weekly-historical-validation.yml`: refreshes the US/HK ten-year walk-forward validation on the 3090 Ti runner and republishes GitHub Pages.
 - `.github/workflows/daily-portfolio-agent.yml`: runs the research agent and uploads report artifacts.
 
 Required private repository secrets for hands-free deploys:
@@ -261,7 +283,7 @@ The project source repository is:
 https://github.com/JamesZCT/Portfolio_Investing_LR
 ```
 
-The scheduled snapshot workflow commits refreshed public demo market data to `main`. Netlify production deploys are intentionally limited to weekly or manual publishes to avoid Free-plan credit burn.
+The scheduled snapshot workflow commits refreshed public demo market data to `main`. Netlify production deploys are manual-only to avoid Free-plan credit burn.
 
 The broad US market screen is implemented in `src/portfolio_agent/market_screener.py`. It queries US-listed equities above $2B market capitalization and 1M shares of three-month average daily volume, then ranks every eligible name with complete Yahoo trend fields. The labels are research shortlists, not personalized recommendations or automated orders.
 
@@ -270,7 +292,7 @@ The broad US market screen is implemented in `src/portfolio_agent/market_screene
 The public demo is also designed to run as a pure static site on free static hosts:
 
 - Cloudflare Pages production: `https://portfolio-investing-lr.pages.dev`
-- GitHub Pages: built by `.github/workflows/deploy-github-pages.yml` from `web/dist`
+- GitHub Pages: `https://jameszct.github.io/Portfolio_Investing_LR/`
 - Netlify: retained as a backup/manual production channel while credits are limited
 
 GitHub Pages uses `VITE_DATA_MODE=static`, so it reads the committed `web/public/data/*.json` snapshots directly and does not call Netlify Functions or any hosted LLM. When the self-hosted 3090 Ti refresh workflow commits new JSON to `main`, GitHub Pages republishes the updated static dashboard from that commit.
@@ -278,7 +300,7 @@ GitHub Pages uses `VITE_DATA_MODE=static`, so it reads the committed `web/public
 Usage controls:
 - The hosted dashboard loads its default real-data view through `/api/bootstrap`, reducing startup function calls from several requests to one.
 - The local refresh workflow updates data on the 3090 Ti runner but does not deploy to Netlify on every run.
-- Netlify production deploys happen weekly or when `deploy_to_netlify=true` is selected manually.
+- Netlify production deploys happen only when `deploy_to_netlify=true` is selected manually.
 - `/api/quotes` provides live quotes on demand, while heavier strategy and backtest data comes from refreshed snapshots.
 - News RSS is fetched during snapshot refresh, not on every page load.
 
@@ -297,6 +319,7 @@ For an NVIDIA PC workflow, install a GitHub self-hosted runner with the `windows
 See `docs/local_llm_deployment.md` for Mac local, Windows/Linux NVIDIA GPU, and cloud deployment routes. See `docs/windows_nvidia_local_llm_setup.md` for the detailed Windows 3090 Ti / 3060 Ti setup runbook.
 See `docs/public_private_split.md` for the public demo/private personal portfolio boundary.
 See `docs/research_sources_integration.md` for adding private Gmail/Substack/newsletter research overlays such as Lance Roberts / Real Investment Advice.
+See `docs/portfolio_optimization_and_validation.md` for optimization constraints, the validation protocol, known biases, and interpretation guidance.
 The local research reader accepts normalized JSON/Markdown/text plus Gmail `.eml` and Google Takeout `.mbox` files from `C:\portfolio-research-digest`. Raw private messages are never committed by the public workflow.
 
 ## Market profiles

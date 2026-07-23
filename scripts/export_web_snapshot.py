@@ -27,6 +27,11 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 def main() -> int:
     parser = argparse.ArgumentParser(description="Export dashboard JSON snapshots for static web hosting.")
     parser.add_argument("--config", default=str(PROJECT_ROOT / "example_config.yaml"))
+    parser.add_argument(
+        "--config-provenance",
+        default=None,
+        help="Original config label when a public example is copied to a runtime path such as config.yaml.",
+    )
     parser.add_argument("--out-dir", default=str(PROJECT_ROOT / "web" / "public" / "data"))
     parser.add_argument("--mode", choices=["real", "sandbox"], default="real")
     parser.add_argument("--lookback-days", type=int, default=900)
@@ -49,7 +54,12 @@ def main() -> int:
     dashboard = result_to_dashboard_payload(analysis)
     dashboard["mode"] = args.mode
     dashboard["lookback_days"] = args.lookback_days
-    dashboard["snapshot"] = _snapshot_metadata(config_path, args.mode, args.lookback_days)
+    dashboard["snapshot"] = _snapshot_metadata(
+        config_path,
+        args.mode,
+        args.lookback_days,
+        config_provenance=args.config_provenance,
+    )
 
     backtest = run_backtest_for_config(
         config_path,
@@ -103,6 +113,7 @@ def main() -> int:
         quotes=quotes_payload,
         sentiment=sentiment_payload,
         opportunities=opportunities_payload,
+        config_provenance=args.config_provenance,
     )
     _write_json(out_dir / "health.json", health_payload)
     _write_json(out_dir / "history.json", _updated_history(out_dir / "history.json", health_payload, sentiment_payload))
@@ -171,9 +182,15 @@ def _build_quotes_payload(prices, tickers: list[str]) -> dict[str, Any]:
     return {"quotes": quotes}
 
 
-def _snapshot_metadata(config_path: Path, mode: str, lookback_days: int) -> dict[str, Any]:
-    config_name = config_path.name
-    is_example = config_name == "example_config.yaml"
+def _snapshot_metadata(
+    config_path: Path,
+    mode: str,
+    lookback_days: int,
+    *,
+    config_provenance: str | None = None,
+) -> dict[str, Any]:
+    config_name = config_provenance or config_path.name
+    is_example = config_name.startswith("example")
     return {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "config_name": config_name,
@@ -199,6 +216,7 @@ def _build_health_payload(
     quotes: dict[str, Any],
     sentiment: dict[str, Any],
     opportunities: dict[str, Any],
+    config_provenance: str | None = None,
 ) -> dict[str, Any]:
     generated_at = datetime.now(timezone.utc)
     quote_dates = [quote.get("as_of") for quote in quotes.get("quotes", []) if quote.get("as_of")]
@@ -208,13 +226,14 @@ def _build_health_payload(
     research_overlay = sentiment.get("summary", {}).get("research_overlay", {})
     information_signs = sentiment.get("summary", {}).get("information_signs", {})
     deep_research = opportunities.get("deep_research", {})
+    config_name = config_provenance or config_path.name
     return {
         "generated_at": generated_at.isoformat(),
         "market": _market_from_config(config_path),
         "mode": mode,
         "lookback_days": lookback_days,
-        "config_name": config_path.name,
-        "is_example_config": config_path.name.startswith("example"),
+        "config_name": config_name,
+        "is_example_config": config_name.startswith("example"),
         "price_as_of": price_as_of,
         "days_since_price": days_since_price,
         "stale_price": days_since_price is not None and days_since_price > 4,

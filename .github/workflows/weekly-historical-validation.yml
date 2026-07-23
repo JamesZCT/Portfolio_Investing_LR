@@ -1,0 +1,136 @@
+name: Weekly Historical Validation
+
+on:
+  workflow_dispatch:
+    inputs:
+      years:
+        description: "Out-of-sample evaluation years"
+        default: "10"
+        required: true
+        type: choice
+        options:
+          - "3"
+          - "5"
+          - "10"
+  schedule:
+    # Saturday 07:15 UTC, after the US trading week has closed.
+    - cron: "15 7 * * 6"
+
+concurrency:
+  group: portfolio-data-writes
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+defaults:
+  run:
+    shell: powershell
+
+jobs:
+  validate:
+    runs-on: [self-hosted, windows, local-llm]
+    timeout-minutes: 60
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install Python dependencies
+        run: |
+          if (-not (Test-Path .venv\Scripts\python.exe)) {
+            py -3.12 -m venv .venv
+          }
+          .\.venv\Scripts\python.exe -m pip install -r requirements.txt
+          .\.venv\Scripts\python.exe -m pip install -e .
+
+      - name: Run US and HK walk-forward validation
+        env:
+          VALIDATION_YEARS: ${{ inputs.years || '10' }}
+        run: |
+          .\.venv\Scripts\python.exe scripts\export_historical_validation.py --config example_config.yaml --market us --mode real --years "$env:VALIDATION_YEARS"
+          .\.venv\Scripts\python.exe scripts\export_historical_validation.py --config example_hk_config.yaml --market hk --mode real --years "$env:VALIDATION_YEARS"
+          Copy-Item web\public\data\us\historical_validation.json web\public\data\historical_validation.json
+
+      - name: Verify frontend build
+        working-directory: web
+        run: |
+          npm ci
+          npm run build
+
+      - name: Commit validation snapshot
+        run: |
+          git diff --quiet -- web/public/data
+          if ($LASTEXITCODE -eq 0) {
+            echo "No validation changes to commit."
+            exit 0
+          }
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add web/public/data
+          git commit -m "Refresh walk-forward validation"
+          $pushed = $false
+          foreach ($attempt in 1..3) {
+            git fetch origin main
+            git rebase origin/main
+            if ($LASTEXITCODE -ne 0) {
+              git rebase --abort
+              throw "Validation rebase failed; refusing to overwrite main."
+            }
+            git push origin HEAD:main
+            if ($LASTEXITCODE -eq 0) {
+              $pushed = $true
+              break
+            }
+            Start-Sleep -Seconds (5 * $attempt)
+          }
+          if (-not $pushed) {
+            throw "Unable to push validation snapshot after 3 attempts."
+          }
+
+  deploy_pages:
+    runs-on: ubuntu-latest
+    needs: validate
+    defaults:
+      run:
+        shell: bash
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v6
+        with:
+          ref: main
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: "20.19.x"
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - name: Build GitHub Pages artifact
+        working-directory: web
+        env:
+          VITE_DATA_MODE: static
+        run: |
+          npm ci
+          npm run build -- --base=/Portfolio_Investing_LR/
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: web/dist
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
