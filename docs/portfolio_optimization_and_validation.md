@@ -19,6 +19,7 @@ These are research portfolios, not automatic orders. They never connect to a bro
 - Current snapshot output: `web/public/data/{market}/dashboard.json`
 - Walk-forward engine: `src/portfolio_agent/historical_validation.py`
 - Historical-membership experiment: `src/portfolio_agent/point_in_time.py`
+- Nasdaq-100 index-core comparison: `src/portfolio_agent/strategy_comparison.py`
 - Independent factor evidence: `src/portfolio_agent/academic_factors.py`
 - Export command: `scripts/export_historical_validation.py`
 - Published output: `web/public/data/{market}/historical_validation.json`
@@ -88,6 +89,45 @@ The 2015-08-23 through 2025-08-23 research snapshot produced:
 | Historical membership | 4.31% | 0.32 | -39.2% |
 
 The measured survivor-list CAGR gap was 6.49 percentage points. Price-history coverage was 81.3% by ticker and 88.9% across rebalance eligibility observations, so the historical-membership return is an incomplete free-data estimate rather than a final performance claim.
+
+## QQQ challenger and risk-control experiment
+
+The US export also compares five tracks over one identical ten-year window:
+
+1. Passive QQQ.
+2. A static 50% SPY, 25% QQQ, 15% active sleeve, and 10% Treasury-bill proxy.
+3. A dynamic challenger that can move only among pre-declared risk-on, neutral, and defensive allocations.
+4. An RIA-inspired public SPY/BIL proxy.
+5. A no-leverage QQQ volatility-control benchmark targeting 15% trailing volatility.
+
+The active sleeve uses only Nasdaq-100 members known on each rebalance date. It ranks those members by trailing 12-2 momentum, distance above the 200-day average, lower 126-day volatility, and drawdown resilience. The historical membership source is the MIT-licensed `jmccarrell/n100tickers` project pinned to commit `9a23023b59707c5372ae1fff4ed983b3ad025c74`.
+
+The dynamic allocation can use only these ranges:
+
+| Sleeve | Minimum | Maximum |
+| --- | ---: | ---: |
+| SPY broad-market core | 40% | 60% |
+| QQQ growth core | 15% | 35% |
+| Point-in-time active sleeve | 5% | 25% |
+| BIL Treasury-bill proxy | 5% | 30% |
+
+Risk-on, neutral, and defensive states are determined from SPY and QQQ 200-day trends, the QQQ 50/200-day relationship, point-in-time Nasdaq breadth, and trailing 63-day QQQ volatility. The thresholds, allocation ranges, monthly rebalance schedule, 15% volatility target, and 8-basis-point transaction cost were fixed before reading the result. Signals use close `t` and first affect returns on `t+1`.
+
+The 2016-06-22 through 2026-06-22 snapshot produced:
+
+| Strategy | CAGR | Sharpe | Max drawdown | Excess CAGR vs QQQ |
+| --- | ---: | ---: | ---: | ---: |
+| Passive QQQ | 22.19% | 1.01 | -35.12% | 0.00% |
+| Static index core | 15.70% | 0.95 | -28.83% | -6.50% |
+| Dynamic QQQ challenger | 15.47% | 0.94 | -29.76% | -6.72% |
+| RIA-inspired public proxy | 11.45% | 0.80 | -33.72% | -10.74% |
+| QQQ volatility control | 15.69% | 0.94 | -27.12% | -6.51% |
+
+The dynamic challenger did not beat QQQ in this window. It reduced maximum drawdown by about 5.36 percentage points, but captured only about 72% of both QQQ up days and down days. That trade-off explains why risk controls can improve the ride while lagging a long, concentrated technology bull market.
+
+The RIA-inspired track is not Lance Roberts' or RIA's proprietary Money Flow Buy/Sell model and is not a representation of client performance. Public descriptions of trend, positive-week participation, breadth, and exposure management are converted into a transparent research proxy. The page labels this distinction explicitly.
+
+This comparison still does not eliminate all survivorship bias. The membership history is community-reconstructed, Yahoo does not provide complete delisting returns, and the active sleeve does not yet use point-in-time filing fundamentals. It is a reproducible public-data test, not a forecast that any strategy will outperform QQQ next decade.
 
 ## Independent factor evidence
 

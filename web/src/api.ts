@@ -552,6 +552,115 @@ export type HistoricalValidationPayload = {
     limitations_en?: string[];
     limitations_zh?: string[];
   };
+  strategy_comparison?: {
+    status: string;
+    error?: string;
+    evaluation_start_date?: string;
+    evaluation_end_date?: string;
+    benchmark?: string;
+    transaction_cost_bps?: number;
+    rebalance_days?: number;
+    tracks?: Array<{
+      id: string;
+      name_en: string;
+      name_zh: string;
+      description_en: string;
+      description_zh: string;
+      metrics: {
+        final_value: number;
+        cagr: number;
+        annualized_volatility: number;
+        sharpe: number;
+        max_drawdown: number;
+        sortino: number;
+        calmar: number;
+        tracking_error_vs_qqq: number;
+        information_ratio_vs_qqq: number;
+        upside_capture_vs_qqq: number;
+        downside_capture_vs_qqq: number;
+        excess_cagr_vs_qqq: number;
+        drawdown_improvement_vs_qqq: number;
+      };
+      turnover: number;
+      rebalance_count: number;
+      latest_weights: Record<string, number>;
+      equity_curve: Array<{ date: string; portfolio_value: number; daily_return: number }>;
+      allocation_history: Array<{
+        date: string;
+        weights: Record<string, number>;
+        dynamic_regime: string;
+        active_selection: string[];
+        ria_equity_exposure: number;
+        qqq_volatility_control_weight: number;
+      }>;
+    }>;
+    verdict?: {
+      beat_qqq_on_cagr: boolean;
+      improved_max_drawdown: boolean;
+      beat_qqq_and_improved_drawdown: boolean;
+      challenger_excess_cagr: number;
+      challenger_drawdown_improvement: number;
+      explanation_en: string;
+      explanation_zh: string;
+    };
+    latest_signal?: {
+      date: string;
+      dynamic_regime: string;
+      dynamic_regime_evidence: {
+        spy_above_200d: boolean;
+        qqq_above_200d: boolean;
+        qqq_50d_above_200d: boolean;
+        breadth_above_200d: number;
+        qqq_realized_volatility: number | null;
+      };
+      active_selection: string[];
+      active_scores: Array<{
+        ticker: string;
+        score: number;
+        momentum_12_2: number;
+        trend_200: number;
+        realized_volatility: number;
+        max_drawdown: number;
+      }>;
+      ria_proxy: {
+        is_proprietary_mfbr: boolean;
+        label_en: string;
+        label_zh: string;
+        positive_week_ratio_20w: number;
+        positive_week_ratio_direction: number;
+        sp500_breadth_above_200d: number | null;
+        spy_above_200d: boolean;
+        equity_exposure: number;
+      };
+      qqq_realized_volatility: number | null;
+      qqq_volatility_control_weight: number;
+    };
+    allocation_policy?: {
+      static: Record<string, number>;
+      dynamic_ranges: Record<string, { minimum: number; maximum: number }>;
+      dynamic_regimes: Record<string, Record<string, number>>;
+      active_sleeve_count: number;
+      active_sleeve_rule_en: string;
+      active_sleeve_rule_zh: string;
+      volatility_target: number;
+      parameter_selection_en: string;
+      parameter_selection_zh: string;
+    };
+    universe_audit?: {
+      membership_source: string;
+      membership_source_url: string;
+      membership_source_commit: string;
+      membership_license: string;
+      membership_is_official: boolean;
+      membership_start_date: string;
+      membership_end_date: string;
+      unique_historical_members: number;
+    };
+    integrity?: Record<string, boolean | string>;
+    source_urls?: Record<string, string>;
+    limitations_en?: string[];
+    limitations_zh?: string[];
+  };
   academic_factor_evidence?: {
     status: string;
     error?: string;

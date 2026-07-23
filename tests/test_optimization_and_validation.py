@@ -14,6 +14,11 @@ from portfolio_agent.point_in_time import (
     run_point_in_time_experiment,
 )
 from portfolio_agent.sandbox import generate_sandbox_prices
+from portfolio_agent.strategy_comparison import (
+    DYNAMIC_RANGES,
+    load_nasdaq100_historical_universe,
+    run_index_core_strategy_comparison,
+)
 
 
 class OptimizationAndValidationTests(unittest.TestCase):
@@ -149,6 +154,107 @@ class OptimizationAndValidationTests(unittest.TestCase):
         self.assertEqual(len(frame), 2)
         self.assertAlmostEqual(frame.loc[pd.Timestamp("2024-01-03"), "Hi PRIOR"], 0.5)
 
+    def test_reconstructs_nasdaq_membership_from_yearly_snapshots(self) -> None:
+        source_texts = {
+            2020: _nasdaq_yaml(
+                2020,
+                ["AAPL", "MSFT"],
+                {"2020-12-21": {"difference": ["MSFT"], "union": ["OKTA"]}},
+            ),
+            2021: _nasdaq_yaml(
+                2021,
+                ["AAPL", "OKTA"],
+                {"2021-12-20": {"difference": ["OKTA"], "union": ["NVDA"]}},
+            ),
+        }
+        universe = load_nasdaq100_historical_universe(
+            start_year=2020,
+            end_year=2021,
+            source_texts=source_texts,
+        )
+
+        self.assertEqual(universe.members_as_of("2020-01-01"), {"AAPL", "MSFT"})
+        self.assertEqual(universe.members_as_of("2020-12-21"), {"AAPL", "OKTA"})
+        self.assertEqual(universe.members_as_of("2021-12-20"), {"AAPL", "NVDA"})
+
+    def test_dynamic_qqq_challenger_respects_predeclared_ranges(self) -> None:
+        prices, universe = _strategy_comparison_fixture()
+        payload = run_index_core_strategy_comparison(
+            prices,
+            universe,
+            sp500_universe=universe,
+            years=3,
+        )
+
+        self.assertEqual(payload["status"], "partial_point_in_time")
+        self.assertFalse(payload["integrity"]["parameters_optimized_on_displayed_window"])
+        self.assertFalse(payload["integrity"]["ria_proxy_is_proprietary_mfbr"])
+        challenger = _track(payload, "dynamic_qqq_challenger")
+        for rebalance in challenger["allocation_history"]:
+            weights = rebalance["weights"]
+            active_weight = 1.0 - sum(
+                weights.get(ticker, 0.0) for ticker in ("SPY", "QQQ", "BIL")
+            )
+            expanded = {
+                "SPY": weights.get("SPY", 0.0),
+                "QQQ": weights.get("QQQ", 0.0),
+                "BIL": weights.get("BIL", 0.0),
+                "ACTIVE": active_weight,
+            }
+            self.assertAlmostEqual(sum(weights.values()), 1.0, places=10)
+            for sleeve, value in expanded.items():
+                lower, upper = DYNAMIC_RANGES[sleeve]
+                self.assertGreaterEqual(value, lower - 1e-9)
+                self.assertLessEqual(value, upper + 1e-9)
+
+    def test_index_core_active_selection_uses_members_known_on_date(self) -> None:
+        prices, universe = _strategy_comparison_fixture()
+        payload = run_index_core_strategy_comparison(
+            prices,
+            universe,
+            sp500_universe=universe,
+            years=3,
+        )
+        challenger = _track(payload, "dynamic_qqq_challenger")
+        for rebalance in challenger["allocation_history"]:
+            known = universe.members_as_of(rebalance["date"])
+            self.assertTrue(set(rebalance["active_selection"]).issubset(known))
+
+    def test_future_prices_do_not_change_past_qqq_challenger_curve(self) -> None:
+        prices, universe = _strategy_comparison_fixture()
+        cutoff = prices.index[-180]
+        original = run_index_core_strategy_comparison(
+            prices,
+            universe,
+            sp500_universe=universe,
+            years=3,
+        )
+        changed = prices.copy()
+        rng = np.random.default_rng(91)
+        future = changed.index > cutoff
+        changed.loc[future, :] *= rng.uniform(
+            0.35,
+            1.80,
+            size=(int(future.sum()), len(changed.columns)),
+        )
+        perturbed = run_index_core_strategy_comparison(
+            changed,
+            universe,
+            sp500_universe=universe,
+            years=3,
+        )
+        original_curve = _curve_through(
+            _track(original, "dynamic_qqq_challenger"),
+            cutoff,
+        )
+        changed_curve = _curve_through(
+            _track(perturbed, "dynamic_qqq_challenger"),
+            cutoff,
+        )
+        self.assertEqual(original_curve.keys(), changed_curve.keys())
+        for date, value in original_curve.items():
+            self.assertAlmostEqual(value, changed_curve[date], places=10)
+
 
 def _track(payload: dict, track_id: str) -> dict:
     return next(item for item in payload["tracks"] if item["id"] == track_id)
@@ -174,6 +280,64 @@ def _point_in_time_fixture() -> tuple[pd.DataFrame, HistoricalUniverse]:
         source_commit="fixture",
     )
     return prices, universe
+
+
+def _strategy_comparison_fixture() -> tuple[pd.DataFrame, HistoricalUniverse]:
+    index = pd.bdate_range("2020-01-02", periods=1450)
+    rng = np.random.default_rng(812)
+    market_returns = rng.normal(0.00035, 0.010, len(index))
+    qqq_returns = 1.15 * market_returns + rng.normal(0.00012, 0.005, len(index))
+    bill_returns = np.full(len(index), 0.00012)
+    prices = pd.DataFrame(
+        {
+            "SPY": 100.0 * np.cumprod(1.0 + market_returns),
+            "QQQ": 100.0 * np.cumprod(1.0 + qqq_returns),
+            "BIL": 100.0 * np.cumprod(1.0 + bill_returns),
+        },
+        index=index,
+    )
+    members = [f"N{number:02d}" for number in range(14)]
+    for number, ticker in enumerate(members):
+        alpha = 0.00003 * (number - 5)
+        noise = rng.normal(alpha, 0.006 + number * 0.00015, len(index))
+        prices[ticker] = 50.0 * np.cumprod(1.0 + market_returns + noise)
+    change_date = index[-500]
+    universe = HistoricalUniverse(
+        dates=(index[0], change_date, index[-1]),
+        members=(
+            frozenset(members[:12]),
+            frozenset(members[2:14]),
+            frozenset(members[2:14]),
+        ),
+        source_url="fixture",
+        source_commit="fixture-nasdaq",
+    )
+    return prices, universe
+
+
+def _nasdaq_yaml(
+    year: int,
+    tickers: list[str],
+    changes: dict[str, dict[str, list[str]]],
+) -> str:
+    import yaml
+
+    return yaml.safe_dump(
+        {
+            "year": year,
+            "tickers_on_Jan_1": tickers,
+            "changes": changes,
+        },
+        sort_keys=False,
+    )
+
+
+def _curve_through(track: dict, cutoff: pd.Timestamp) -> dict[str, float]:
+    return {
+        row["date"]: row["portfolio_value"]
+        for row in track["equity_curve"]
+        if pd.Timestamp(row["date"]) <= cutoff
+    }
 
 
 if __name__ == "__main__":

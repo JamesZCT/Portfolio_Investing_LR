@@ -4,6 +4,7 @@ from bisect import bisect_right
 from dataclasses import dataclass
 from io import StringIO
 from pathlib import Path
+from collections.abc import Iterable
 from typing import Any
 
 import numpy as np
@@ -108,15 +109,23 @@ def fetch_point_in_time_prices(
     *,
     years: int = 10,
     benchmark: str = "SPY",
+    extra_tickers: Iterable[str] = (),
     cache_dir: str | Path | None = None,
+    cache_key: str = "sp500",
     batch_size: int = 60,
 ) -> tuple[pd.DataFrame, dict[str, Any]]:
     end = universe.end_date + pd.Timedelta(days=7)
     start = universe.end_date - pd.DateOffset(years=years + 2)
-    requested = sorted(universe.unique_members(start, universe.end_date) | {benchmark})
+    requested = sorted(
+        universe.unique_members(start, universe.end_date)
+        | {benchmark}
+        | {str(ticker).upper() for ticker in extra_tickers}
+    )
     cache_root = _cache_root(cache_dir)
     cache_root.mkdir(parents=True, exist_ok=True)
-    price_path = cache_root / f"sp500-prices-{universe.source_commit[:12]}.csv.gz"
+    price_path = (
+        cache_root / f"{cache_key}-prices-{universe.source_commit[:12]}.csv.gz"
+    )
 
     if price_path.exists():
         cached = pd.read_csv(price_path, index_col=0, parse_dates=True).sort_index()
