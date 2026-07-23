@@ -1,6 +1,19 @@
 {
   "articles": [
     {
+      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQb01Ndmdlc1RyaFY3OTg1OXdMQlZKR3FPeUlvRlZQOWhnajZwT3FuLU5ET3R0QU04VWVqZFBWMHBnRnl1MTJRSk9hX0d0NkN5dXNqOHQwX1NBd1hfRjFZYzU5T3A2dVpacnBocl9ia044WmJvWVlkY3RoRUtMSFhwczlXeUpjMGlIX1hDcUVCRWJlNnNrb2NKd2RuWkZBY2stanQ1TGtlWEZJV1pVWWVLMUhpYk5kOG1ZVWxBWGxKT1c?oc=5",
+      "matched_terms": [],
+      "published": "2026-07-23T03:59:00+00:00",
+      "sentiment_label": "neutral",
+      "sentiment_score": 0.0,
+      "source": "Bloomberg.com",
+      "themes": [
+        "China / policy"
+      ],
+      "ticker": "MARKET",
+      "title": "China\u2019s Semight Is Said to Mull Hong Kong Listing After 2,200% Stock Rise - Bloomberg.com"
+    },
+    {
       "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5yclJISkFackZ4T3dIY3MzWGR0NmZsZ0pDVXdadEZBLUtVdW5ZNXdOUkhDdk5BeUdDYlQ4VVczVmZvbzdLWFE4eGhXTzY4QS1zb1NxSGZCSC1YNjVfNTlrMlpCUGdaZXRlR3Z0UHBXLVBhbVlYZTFXd19zdw?oc=5",
       "matched_terms": [],
       "published": "2026-07-21T11:00:47+00:00",
@@ -29,7 +42,7 @@
     {
       "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNOG5mNm1JUHJPc0RfelhLQlY0ZWdONTd1b3NLTGNuMVp0TlktTnlVY3BJMGNXM2w2WnA0Y3lRSXY0RnBHaXV2dEh2d09xa3lTWWxKc3U4bV9WVlNacVZGV2lzSW5JeW9HN0lRSVZSSUtBXzZWaGs1VkstYkZqTEE1dFBBdUxxZTZVSjA5VmtQSk9DSWNvYWozaXF6Tll6THl1OWlhZ0t1Z2RkOXJmZVRCbXZVY1NRYzR4TVgtTkZkd0tENWc?oc=5",
       "matched_terms": [],
-      "published": "2026-07-21T05:58:00+00:00",
+      "published": "2026-07-21T06:00:03+00:00",
       "sentiment_label": "neutral",
       "sentiment_score": 0.0,
       "source": "Reuters",
@@ -40,32 +53,17 @@
       "title": "China's Zhongji Innolight plans $8 billion Hong Kong IPO, sources say - Reuters"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPYUlJaWVHUnRwU2I2QVZmZDREa3Qzc0djTllSalhKckk3N1d6Q3dVQjVPT25NNVdPZ251eVYyWW1iLUVIVXUwM1RJMjNkWHFMQktEQTBRcXBSazJLVnpkSklRTFloejUtOE1nOXQyX1JJc0E0TkF0MFducERISnZ3NXdQY0VpWHJEQWZCVkNkUC10dm9hQS1ubDdhcTFGamlzUHJwazhaSnNtTjNUNkhTRjdR?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPSVNTLWhISGlMSDhXd3Z0VzlqZTA5SDlmbDJ1ZXpVa2p2dFVRaWtUc2lyTWZRdi1SVzV4MUVLMl9fUlhkeFZfNzY5ZUtsQ1FNSjNuMVlpcC1ha0lmRnRyNmN0dVRLbTdLTjBZMzJVSGtmbDJHa1FjV0F2WlhmblhRQXF3ZW1DRGp2U2FvM1dSN09lVlRGMmczY0xfSEp4RlBUd2VEcEhZZm5rMUlyZGcxNzB4X09lRVFTVWFnaXUyMDE5U3hSZmdRbzJscGlBUGNiaEN0Rm13?oc=5",
       "matched_terms": [],
-      "published": "2026-07-20T07:10:18+00:00",
+      "published": "2026-07-23T04:35:04+00:00",
       "sentiment_label": "neutral",
       "sentiment_score": 0.0,
-      "source": "Bloomberg.com",
+      "source": "marketscreener.com",
       "themes": [
         "China / policy"
       ],
       "ticker": "MARKET",
-      "title": "Hong Kong Considers Longer Stock Trading Hours, Ending Lunch Break - Bloomberg.com"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPbVdXMTVzUmpNV0lGMnZDZFExYnduWFpXTVdiVElrYUJFS2NXUVFpM25vbUctTE10NXJxRWM2QW1YdGpaY1ZqM3F5MXhFVXVXZldmRkVDUU1GbERHMGxYY2tLR3ctZ0hiaXliMDY3dU11Z0MxVjlqTkZvVmhLX29ydEpSTHNXcWQ5TWdrbEp6d3hSdmNRWURhVlRwR1RKNlBIR1dkMEc4dWROVkR4TFRlN2pIeHTSAboBQVVfeXFMTkxQOW1yUF8zaVlOdFhLTDVveE04ek1iZ0Jnd09wck03cmhSdnlacUNaMzlkdzRWYW10aEpIWXJLYnpKNVBtVEUwVi02VGpVa1RKLXU4M1dESmM0cWlEYUVRTkFEbE5sVWdoQ3JlVTlFa2ZpaWRIREdIT01zXzI1b3ktblJhcjBmQS1DcWpfNzJjNDBzenh5SllxWS1sZ1ViVUlpcGd1V0M0TzhWbjdqMm9WOHVRVzB0SlVB?oc=5",
-      "matched_terms": [
-        "surge"
-      ],
-      "published": "2026-07-20T04:09:38+00:00",
-      "sentiment_label": "positive",
-      "sentiment_score": 0.36,
-      "source": "CNBC",
-      "themes": [
-        "China / policy"
-      ],
-      "ticker": "MARKET",
-      "title": "China's Zhongji Innolight sees shares surge after Hong Kong listing approval - CNBC"
+      "title": "Hong Kong Exchanges and Clearing : HKEX Adds Bursa Malaysia as Recognised Stock Exchange - marketscreener.com"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNWldIdVFna2JTS0xUUlZERXpHMWljdFRMYXpsdFlnZ3JGMXFiN3pIWmdiNG9xcjZDbzJpR0Q5VVdTLVpYd2lieF9KWGlic2VVMGZreURabzR5b1dmZWF4V19VR2ZIWFdYdV9Jd1NWRkxiZFNIMElia1FfMVgtckpPcW9mSUF3dmEwT19HN0lXa0Jvem9HUkp3aWI2c0tmdExxSkNfRjh5YXo?oc=5",
@@ -84,17 +82,17 @@
       "title": "Hong Kong Market Midday Review: Tencent Plunges Nearly 6%, Dragging Down Tech Stocks; Hang Seng Tech Index Slumps 2.11%, While Semiconductor and Nonferrous Metals Sectors Rise Against the Trend - \u5bcc\u9014\u725b\u725b"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPdGZDUjFnc3d1QlQzTnY5dThBMHBXLTNtQi04LXNEWkhfb0VHcHU1X0U5SGJtamJONzlmaWZQcDdaeGJYeVBOekZzdl8wZFlnUXNDNXpoSzBCdTdDQ1czMGNTcnBBM01xRDRDZ3lFeVh6NlY0OU1fS3kxV3R1b19tT3BUalE5amc4b1E?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNS04wS09WejQyckVSZmtBVnpLeERiQmFsTXJlejhIRVVBc0ZTUWh5YXJnaGFFdTduQjdTei1BRG51SWl0dEU3VkpjX1I1dUtPZWwxaVgzVkw3NURpc3laMThYS1lUaVZscy01aEtWbkRIdDVpbk9yYzFVNl9NckNwLWlzX0dSdzNXUENWZHVnMkNvdFl3ajZ3VXhWcWdXRE1Gd29ReGs3MkNBYzNQQU16VHR6S3ZZeU9OdEF5alQ3T3pqYXByTGlQVDd5NNIBywFBVV95cUxNWmNkRlFHY1pUMTRILUhXcUVpOGphLUNRc0ZuS0hhVFpPTXVGYTA4WEQySzJ6R2NOeGlYTlREaFRBVkM0ZTlQdXNSaWVSODQzbW1INWFkN1EyVVBjeHF2elJJd0VEN2VPZkJJd2t0RUt5SVFrRF9mS1doYnFNNGxJak5HeExKNmRtZXdYSXlza3gxc20zUFhJNUdmRk1oTk52MDB0elZPUUdPbHB0VGFVbVlfOVprY1g0Y29WeVJMVnp5MXU3ZGF2ZjJ3VQ?oc=5",
       "matched_terms": [],
-      "published": "2026-07-22T01:31:42+00:00",
+      "published": "2026-07-23T11:00:13+00:00",
       "sentiment_label": "neutral",
       "sentiment_score": 0.0,
-      "source": "marketscreener.com",
+      "source": "South China Morning Post",
       "themes": [
         "China / policy"
       ],
       "ticker": "MARKET",
-      "title": "Hong Kong Stocks Slip at Open - marketscreener.com"
+      "title": "Hong Kong exchange clears path for listings by Malaysian firms - South China Morning Post"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQbWRya0lLeDZUWmVMN3B2RVBQdDktbi1pT2dNYXliLUEzZnVNcC1GeGRzRmJDR0dyTTBRYmdWeXppMVdqX29XaDdqQmJqTFpaa29jOElrNlVqamtvT05ZTG50Vk9iWTR3YWprc0VNMjBNdFpnMmlqaFYybDY1S3RaMXp0bGVHVkVSdmU1azBfREtSWGhEb1FjRFdqb25uMXRTeEFhTnJjQkd3R0Ry?oc=5",
@@ -110,17 +108,17 @@
       "title": "Hong Kong Stock-Listing Boom Rumbles Toward Six-Year High - Bloomberg.com"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQUVVLVG1PREY3b2VfTzY0WFZWaHVzRGI1NjVPTC1mMDdMTl9sVTdPdFlPV0NiZkJhclVIUURMYll4aURWcHRDcEc4Z2JLZTdpdS1tN0dvSnYzQXhGbGk5N1RnX0VFemFlbFZPMzVPWElwZkpWQ0lJbXo2Um9SUUE2SEtjZDZkQmVWeUhtQ0NfazdzU1BHc0JkLdIBpAFBVV95cUxObTdfUXQ0aGxLaW1RTVpsQWRmMDhrbDNiUnhGeFFsaDl6Nk1DSnNrMVhlUDVIV0hrWXpTVUZpNTN4b19LUU9zM1E1YTBGLWhoWFhPN2tDU0RvS0xqX3pEaXN3R29aNmFESS1MaGFtT2NTRWtqZEJETkRQZl9nUDFEUHBQOXZjX3Rfci1oZGdYN3pLMzM0bm9hV3B4UFRIb3l6b1lueg?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBqWGktbm9jWk93TmNmZXNhNlZ6X1VrUGFvYlBBemZZTTRZQThwQ2V3bXMtbnNsa1ZUMmItajdEQnc4NnBWdFZ2RktlNjliNVVrMWZKaXFta3dJcExISi1lU0dhdnBpZw?oc=5",
       "matched_terms": [],
-      "published": "2026-07-20T02:35:34+00:00",
+      "published": "2026-07-20T07:00:00+00:00",
       "sentiment_label": "neutral",
       "sentiment_score": 0.0,
       "source": "FOREX.com",
       "themes": [
-        "general market"
+        "China / policy"
       ],
       "ticker": "MARKET",
-      "title": "Hang Seng Tech bulls searching for an antidote - FOREX.com"
+      "title": "Hang Seng Index Index Price - Hong Kong 50 - FOREX.com"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOMHdyOVJ5VVJOTFZIbVlNYUNQRzdxOG1HSk14SUxIRlM4VTJJQ294QVVwNEFYMXg4ZGdxT3UybVhrMXZxV1RYTEZLMFRoZkpvcEstejFnNVREMUNidlB6OFBZUVlBMWxaSjJfRFNsdWlTSUpnblZIMURxYWFWNXhYS0I1T2huR0p1X2IyRQ?oc=5",
@@ -134,6 +132,19 @@
       ],
       "ticker": "MARKET",
       "title": "Asia stock markets outlook for 2026: Hang Seng and Nikkei forecasts - ig.com"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQUVVLVG1PREY3b2VfTzY0WFZWaHVzRGI1NjVPTC1mMDdMTl9sVTdPdFlPV0NiZkJhclVIUURMYll4aURWcHRDcEc4Z2JLZTdpdS1tN0dvSnYzQXhGbGk5N1RnX0VFemFlbFZPMzVPWElwZkpWQ0lJbXo2Um9SUUE2SEtjZDZkQmVWeUhtQ0NfazdzU1BHc0JkLdIBpAFBVV95cUxObTdfUXQ0aGxLaW1RTVpsQWRmMDhrbDNiUnhGeFFsaDl6Nk1DSnNrMVhlUDVIV0hrWXpTVUZpNTN4b19LUU9zM1E1YTBGLWhoWFhPN2tDU0RvS0xqX3pEaXN3R29aNmFESS1MaGFtT2NTRWtqZEJETkRQZl9nUDFEUHBQOXZjX3Rfci1oZGdYN3pLMzM0bm9hV3B4UFRIb3l6b1lueg?oc=5",
+      "matched_terms": [],
+      "published": "2026-07-20T02:35:34+00:00",
+      "sentiment_label": "neutral",
+      "sentiment_score": 0.0,
+      "source": "FOREX.com",
+      "themes": [
+        "general market"
+      ],
+      "ticker": "MARKET",
+      "title": "Hang Seng Tech bulls searching for an antidote - FOREX.com"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQQ0EyUEJCNWxhY05BMmlJSGpLSUhtTFF2UFdHdlQ5eklWejRZbGI1VE5VSlE4dFd0aDZlQ1M4WjF1R2N2Q1lmelpXZ3lIaktGOHQtZ3FrenhWWDZfeC1ySUZZbXFEcU1yRHl0TWdYM1Z5Qy10d3RHX0MzekJlbko3SEVyMDRsOGpZVVlFbzJVd0xQSnN5Z1BwYWN6MzZfS1RncUE?oc=5",
@@ -212,21 +223,6 @@
       "title": "Hong Kong 50 (Hang Seng) forecast - Capital.com"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQeHJIUUhISzU1TXUwRWdvUTVaOUctQ0tpRC1ydE5nQ19tbEU1QVVfdnBxS3duQzlHNUhkU2pxMl8xaEQyY2RJOW15Z2RXVnk2UngzMUc3MkZhODZNYXJhQzZSY29STzQzOTU3Q2VmNldfSkZZOGhDVEYyaHhqQTdNSlF3djlVU2NLeEZyX1h2Yk0tREFJd1hHNDl5Uk41YU8zdjF1eUdSaEQtWVNzNm55ZlpSV2llQk1LdlA3RGJHNVNyeUZjMzRrSk5FNlh5UQ?oc=5",
-      "matched_terms": [
-        "rally"
-      ],
-      "published": "2025-08-19T07:00:00+00:00",
-      "sentiment_label": "positive",
-      "sentiment_score": 0.32,
-      "source": "invesco.com",
-      "themes": [
-        "China / policy"
-      ],
-      "ticker": "MARKET",
-      "title": "The outlook for Hong Kong equity market following the recent rally - invesco.com"
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPRHB3TFpnbEdpWjB5Z1IxMWJpelI1QXNvdDdLVmpya3hkakRtT2N6ZE5oeE44R3BCdm9IbkQ4NDFTUjJrSXVQLWNPRGNqWjFES1kwbkQ5TjJwTG5kUkJneDFCZ1FTZ2dSSEUwTkNycmhqSzgzUmEwRllEOVRZNUVYWHFoMnoyS2ZmX3pYdXoxUEZaeUxvNk5Mb1BFbmd0T3J1QklJdlBadWt5aklER01j?oc=5",
       "matched_terms": [],
       "published": "2026-07-07T07:00:00+00:00",
@@ -238,6 +234,19 @@
       ],
       "ticker": "MARKET",
       "title": "Chinese Stocks in HK Jump Most in 14 Months as Tech Rallies - Bloomberg.com"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPSWZadmVQb3NCUEZleTdpQ2pQUk1obGZ1SG5pQmx3bXVFUWdHS1g2eWVBYzNvSS1lVFdkZU1oajBwUm5BNUlaOXZ4dTZfUE01aTNtRkRScVpXanYxLWoyTTYzUDRmSDk3dGhIZFpXaG91M1A0bDBPdGlHZ0JpRENTc3cybXVGUVY4blgycEdjajBKY1ZDd3c0RUJxMDIzeGcyTnZqLURZVUZVX3RNN3ZFTXhPcngxSFlJaUc2YU0tSzRVcm14ZGpsaDdB?oc=5",
+      "matched_terms": [],
+      "published": "2026-07-10T07:00:00+00:00",
+      "sentiment_label": "neutral",
+      "sentiment_score": 0.0,
+      "source": "Reuters",
+      "themes": [
+        "China / policy"
+      ],
+      "ticker": "MARKET",
+      "title": "Chinese tech firms, from Apple suppliers to OpenAI rivals, raise $20 billion in Hong Kong - Reuters"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQdUFFY2xhWTZNQS1vaDRjS1dxamRhbFU4aDZ3ZnpNWjZndUUzN1BQMjRmdkNuTVRSQnVzSEwyTWR1TDdHbWR1S1NlQ1dOTWlvWktORVUtTGVjdU9nTEJ1TXZablI3NzNLdmZZZXJmaEtEM3BDdk11dGw2QlNvbHR4V2Z5ZFNRQWJDdEwwc1VFLW96bkhoMHZ1czdaQ2hxNWcwdGtScFJZSTVPcUZOOUFzbzM4OERzbEgyWUJmQl9wcnpxek43?oc=5",
@@ -260,7 +269,7 @@
       "matched_terms": [
         "ai"
       ],
-      "published": "2026-07-16T03:12:00+00:00",
+      "published": "2026-07-15T07:00:00+00:00",
       "sentiment_label": "positive",
       "sentiment_score": 0.16,
       "source": "CNBC",
@@ -272,17 +281,50 @@
       "title": "Alibaba and Baidu shares jump in Hong Kong on Apple AI partnership - CNBC"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPSWZadmVQb3NCUEZleTdpQ2pQUk1obGZ1SG5pQmx3bXVFUWdHS1g2eWVBYzNvSS1lVFdkZU1oajBwUm5BNUlaOXZ4dTZfUE01aTNtRkRScVpXanYxLWoyTTYzUDRmSDk3dGhIZFpXaG91M1A0bDBPdGlHZ0JpRENTc3cybXVGUVY4blgycEdjajBKY1ZDd3c0RUJxMDIzeGcyTnZqLURZVUZVX3RNN3ZFTXhPcngxSFlJaUc2YU0tSzRVcm14ZGpsaDdB?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5DckNsWjdTcW5tbUFQbFAzazN0SVBPaDk2em9xSFdPc0RyTXRtNmY2azdCdHNEbkcwaVJuVGxHcVJvVDk3cmpiNDJRMl9CSFA1cnkwR2RpQk1LejZwZ0tNdEVhancxQlpKRmYtbjJDa0JjR3NsWHc?oc=5",
+      "matched_terms": [
+        "record",
+        "strong",
+        "stimulus"
+      ],
+      "published": "2026-07-23T01:37:00+00:00",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.8,
+      "source": "finance.biggo.com",
+      "themes": [
+        "AI / semiconductors",
+        "China / policy"
+      ],
+      "ticker": "MARKET",
+      "title": "China Mutual Funds Slash Hong Kong Stock Holdings to Pre-Stimulus Lows; Semiconductor Bets Hit Record Highs, CICC Warns Sustained Rebound Needs Strong Catalyst - finance.biggo.com"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNU2x5Vjljei1DbWhmYWtNbEc4LWZYQXZIbDk0YXY3MnFZMFFvS0xydW9lekpVMmpsYTlrcUtpOGd5aGFHMVAxTGxQV3gtVlZ2eVlHcEprR3RoYnVtQzBQZXg5cTZ0Vk13bk9BQnZuSlZoY1JNYlA1UTEyUGFZVWRFbGxUMDRHQVlMZEFVcHJCTVo4WS1ZNk53Wk9vMzlrSVJXSWlxeUQ2WVRnUEpjTmtjVtIBsAFBVV95cUxNRjhNV1VtbzVMNjNvdzcyV0pEaC10NWY1TUdHdXl2U1UzZEJNZU1PSU5HWE9kSUttVUM2MzZTWlRtNmxQMXNKWlR3ckJaVlBQQWhwTnpLeEkyQVBwaFdfaFI4R2NMMlRGR29fY29DQy05TEFmUS1PQVpTVTlvWkhuLVVmMlIySDBkbV8yOXNWNDcwQkxDclBhWEFMVHJDT3BlTmQ1aWlYNzR0UkFkVDNQWQ?oc=5",
       "matched_terms": [],
-      "published": "2026-07-10T07:00:00+00:00",
+      "published": "2026-07-08T07:00:00+00:00",
       "sentiment_label": "neutral",
       "sentiment_score": 0.0,
-      "source": "Reuters",
+      "source": "South China Morning Post",
       "themes": [
         "China / policy"
       ],
       "ticker": "MARKET",
-      "title": "Chinese tech firms, from Apple suppliers to OpenAI rivals, raise $20 billion in Hong Kong - Reuters"
+      "title": "Hong Kong stocks rise as rallies from Alibaba, SMIC, others lift market sentiment - South China Morning Post"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPUTJMZEhCcTdDekpyUndwZnRGQVBHMlE5eW5rb0hIZEpMUHRzZFU0bzZFa1Z0VV9FMzFVWV9oeG96Yk5SYkR6bVMyZzdmNnY4NnhhUU1jZFhFVnRZWWJ0THp5SG5IWWhEX2VtamEzZl81bzlyNExocU5CbGdfcDVacm5CMHZxYUx1VzFIQ1hodXRwZVVyR3VSWUVkbHJjcDZ1cnB5UU11SldqZWpZLWIwZE95NlJVN1ZYQ2R6S1A1eDhPajRERHFkbnFzcm5qdjc1UWl6MDRHeV9aVGdIamc?oc=5",
+      "matched_terms": [
+        "rally"
+      ],
+      "published": "2026-07-21T10:03:24+00:00",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.32,
+      "source": "BBN Times",
+      "themes": [
+        "China / policy"
+      ],
+      "ticker": "MARKET",
+      "title": "Hong Kong Stock Exchange Today: Hang Seng Climbs 1.33% to Over-One-Month High as Tech Rally Extends to Five Days - BBN Times"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxOYzNPQ1NLaldsaEdtbzRsQTdOaHRfX0lPYlR2TnFaXy0yVWJLMlNiTDNNemNVSXBxZmpHZ2lFd1pYeDk2MTR2UHZ2WWRVUmhhYlZGT3hXeDRNODliM19GXzgtRk1lc2pXalI2TTR4WDJkbUFkbllOZkp4MVFMaG96bF8xb0tva1VOemx3VDlYaGZBOENqejFfaTdkVGMyRDVoN3U0VVJBaWJnell5WGhDRm9iWjktX0gzMHp4V21jSU9EcXVWbmRoS25icjBmVjV0Y21zYnFpRnBNWG9Cc1gxbHk5WVhXSGxReS1CV2dnakZMeGJDYjBPaE43eTlZWW_SAYQCQVVfeXFMTjN1Yk1WcnpoSHF6SF9RV1UtamRaLWdaUGVqaHdqOW5qLWpmRjhKWUFPWF83WDNqNjZvM3hNX2hBRVBkLUlIQlU0a2JoZVJ6TUdBaG1TcjFqbHN4LUVZTFFmUVkxRzNsRXVYT0dzQ2RGOVA0Q0JiZzVNakMxZkJ2OXlHcll3LU85aWVsbGV5WGNRakJOQWMtLUZFVzhtamVLem5KT1dCd1BSYVdVb095SmhIZFlic3d0LUVFa1c0LW5DcFVTQ3JpbkpDWm1VS3NKWENaTFI0RFY3ZXB5cGtTSGpDb2tFOVJnZ0MyS3U0UFkxaVN3RzdBMTBVNXBtWXprZnVSdUk?oc=5",
@@ -301,54 +343,9 @@
       "title": "Global Market: Chinese tech firms raise over $27 billion in Hong Kong to fuel AI, chip expansion - The Economic Times"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQTnFldUJPLUtIN05qUlNhYUNSVEdwODBWRXctOWV4YXYxbkozbEJNTnNYMmJjYXRNREtJTnVZUjFZYkpvNnBaM052bEFXUGl6bzBQNm9PbkR3ckRfZ1BmbVZXVFpZQkMyLTVob1R4Y0k3bVNIb2s5Mk5EN3pSY1M2Y3RxMFJOTXpvT0t6RXkyQTRoUVVTRFFsY2lOX211Q0JjVEpsZDNQd3EwUXI2MUZlODZ1b0NkWWxudHRwc0FoUy1OMDRjdHp5eHVYWTdtcGlrMmxhS0ZR0gHWAUFVX3lxTE40cFd0VnYtdTlTdG1aVU1wTEFlRjUzNzBneHFGVHc3R2k1dDhKYUpXM0thQUhZZkdLZG1ib1B4bU9lamtrUE5Ja3E4bVBKLW9yMUxoMUVOWTdPc3VEbVNVZkNUQVBvd29saGlVcVVlZDhsd2tTUXJ1SzUwS0IwM1NWX3BBT2FabXVWYWRxQTZjOUcyRG13ZDZQODZSRHZlSU1GUTF5SFVkV3R0NVkzZnB6VkROOEdEcVJiQTlRdXdkR0lYMmdySXotbl9SM0NJY2trT0pNQXc?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPX04tRzU1aXAydWVwdElRSmdCWGNhWDV5V2RxaUhJLV9kQ29jcmVLdjZTTXpjUWlBTjNhSkFzMlZ1Szg2V0RlQkk3TjlYcmNKZGxGdUktV2VqSGhIRTRCWGtRRF9Hdi1tc0hOVy1XeGk2bHRLeFIzQTU1QWNMT0s3TnMtM2pELXgxZ0ROSDNJUFlGTTFu?oc=5",
       "matched_terms": [],
-      "published": "2026-07-17T05:59:53+00:00",
-      "sentiment_label": "neutral",
-      "sentiment_score": 0.0,
-      "source": "South China Morning Post",
-      "themes": [
-        "China / policy"
-      ],
-      "ticker": "MARKET",
-      "title": "Hong Kong tech resilience tested as South Korea\u2019s Kospi slides into bear market - South China Morning Post"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBNNS1wTTg1S284UDBqNFVTRmtnS0trQ0NOVExNMl8zVnhmUEY2VUFVUm5uMTA5V3N5cWlqcWl3MHMtZFQ5SWZTVHRXNmJWYks0Z1g4OUtWMzZUTmR0WkJ3alpZWnFiVUtYbzRDOER6eHhZMXZXSXc?oc=5",
-      "matched_terms": [
-        "ai"
-      ],
-      "published": "2026-07-19T16:55:00+00:00",
-      "sentiment_label": "positive",
-      "sentiment_score": 0.16,
-      "source": "finance.biggo.com",
-      "themes": [
-        "AI / semiconductors",
-        "China / policy",
-        "consumer demand"
-      ],
-      "ticker": "MARKET",
-      "title": "AI Investment Paradox Amid K-Shaped Divergence: CITIC Securities Bullish on Hong Kong Internet Stocks \u2014 How Can Retail Investors Avoid Becoming Bubble 'Fuel'? - finance.biggo.com"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPUTJMZEhCcTdDekpyUndwZnRGQVBHMlE5eW5rb0hIZEpMUHRzZFU0bzZFa1Z0VV9FMzFVWV9oeG96Yk5SYkR6bVMyZzdmNnY4NnhhUU1jZFhFVnRZWWJ0THp5SG5IWWhEX2VtamEzZl81bzlyNExocU5CbGdfcDVacm5CMHZxYUx1VzFIQ1hodXRwZVVyR3VSWUVkbHJjcDZ1cnB5UU11SldqZWpZLWIwZE95NlJVN1ZYQ2R6S1A1eDhPajRERHFkbnFzcm5qdjc1UWl6MDRHeV9aVGdIamc?oc=5",
-      "matched_terms": [
-        "rally"
-      ],
-      "published": "2026-07-20T20:02:22+00:00",
-      "sentiment_label": "positive",
-      "sentiment_score": 0.32,
-      "source": "BBN Times",
-      "themes": [
-        "China / policy"
-      ],
-      "ticker": "MARKET",
-      "title": "Hong Kong Stock Exchange Today: Hang Seng Climbs 1.33% to Over-One-Month High as Tech Rally Extends to Five Days - BBN Times"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQcG9wV2Vfam1uaU9VQ0hSdmZlZXdaU19wZ3JaSlZmWHl0UEVnaWNXaWc5VDBGeDVFQ01kQzRHRFJRU3VqNE5lQVFPdnQ3bnhfbTBlNklyNWF2LXVLRVZoaUVHRTdtd1Q4WVNhenRnSXdtQTREc0wxcnhmREd4SkFRb0tmU25xWFQ0WXF1aHk3NXA5d2FtbFFOSE1zUTJvdV9zaVBpekNYZDBTemx5M1N4dw?oc=5",
-      "matched_terms": [],
-      "published": "2026-07-22T09:45:31+00:00",
+      "published": "2026-07-23T10:33:31+00:00",
       "sentiment_label": "neutral",
       "sentiment_score": 0.0,
       "source": "\u5bcc\u9014\u725b\u725b",
@@ -356,7 +353,7 @@
         "China / policy"
       ],
       "ticker": "2800.HK",
-      "title": "Southbound Capital Flows | Southbound capital recorded a net purchase of HK$7.517 billion, adding nearly HK$6.2 billion worth of Tracker Fund of Hong Kong (02800.HK), while selling Alibaba and Tencent throughout the day - \u5bcc\u9014\u725b\u725b"
+      "title": "HK$2.519 billion net outflow from Tracker Fund of Hong Kong via Stock Connect - \u5bcc\u9014\u725b\u725b"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPQUt5Nm5RTGZjc2N1RnVFbndBdjVrQU02Q09Ibm93c0hVeEl3NVJRYzlfOVFEUVI2Ri15SGpueE5KaHdkY1h4QlRCVEUwUGduekpGdU1hVmhKLW1RVEt0Y3VIRnM2eEUxY3hIQ0hrSnJwbzhEb1pTMk1PRktzY0I4QXE4VVhyU1N3NHVwYUFMd0I5ZlVySUJrMlM3bVZPV2VvdTU5U08wUDVKQzJTTTVTNHZNMEl0clZKZWpBaV9BREpKWlVabGc?oc=5",
@@ -374,9 +371,9 @@
       "title": "Record Demand, Recurring Pitfalls: The Truth About Single-Stock Leveraged and Inverse Products - Morningstar"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMinwJBVV95cUxQN0s3eENkUFNvSkdxUFRxVkd4Qmt5SVNudzhZWFpOSE9WZ0N0OVVod3V0Ri1YaUVUTVA0eVJuWjlkMnBQVzE4MV8wd1NIOHJLVWFzRS1QWUZGaWRwbjJtRmVndzRBTWVvUlVKbG1MS093Y2U4RnlnMDB5ZzhKZEYweDU3WnNVbWdrUGRKaWNqYi0zSWlmeDMwQVZ4SnlhN0tOcm1OSzJQdlB1LWZVdkF5THcyVHBuTjZPUHlIYThmWWU5YzY5eWxJRzR6a1BRbVBHSXF5dk9qTDNjNVg0enU1amRJVS0zSzk4MHRvWFBPUVl2ZUFxaDNGVm9EOU9oVWZtR2FYZ1U3dzZNYnZqRzRId3NYcHBVNDBvRWdhcE9TUQ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMitgJBVV95cUxNdEUxczlXOHZadVNOTzFqQ1RBMWdrZy1fYWF4aEdPUHJycUI0azVmN3d5c2IzclNjcDRUWU5WQ2lMbGJBUHR1SldseVNONl95MGwxYk9xYnQ1R2JFcXRaR2ZxeU1VMmdNekRVS3cza194bVdnYjdGdDBESmNITDI5UUY1UFBDbGozVzVUXzRPNndHODFJaDJZdkpjeFBQanUyeWNBaGxrYzlrWWpoSnplbnhJdHFBX2VnYlA3RGN2aEEzd1JTTUlkUVhMT1N6N0RPNGJneEFOU2NFX3NSdy1Qc1dOVXZMb0FpQ2pzc3J6UGdtTmI0YkliUTdBMU5QeXdlSmhmLVBDS2VORmFZVWRnTTJPMDhSN1FxRFU4aWFINDh6OUllaWNHNEN1NVZHWEs1bVpYYVRR?oc=5",
       "matched_terms": [],
-      "published": "2026-07-15T00:56:35+00:00",
+      "published": "2026-07-14T01:36:14+00:00",
       "sentiment_label": "neutral",
       "sentiment_score": 0.0,
       "source": "Moomoo",
@@ -442,9 +439,22 @@
       "title": "HKEX pushes deeper into index business as AI reshapes Hong Kong market - South China Morning Post"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOOVZhUXB6Q2Z2RThkUU1kUEt2elNnZkJ4RDBOaGhOQ29sTkRNT2hPNEZCRzc2enRRWmN6VGxrWktsZDlma0pzMXdTQXpPZlo4RFVkRmJGQmlrSmN3OFhzWWg3ODZWQTlpWlJBQ2NTWlU0UGpFeGdRZ1R4Ui1IRGlJc3RmMG9DMnFxSXF3Vk1hb3JRTmxOZ3ppZkZ6dDc?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5fRlRMdVFoekxjcU1zYjFFTU9iYjYybHlYSzYySl9LSWU2UXVuaWYzOXlYUjI0NU92Y181Wk5ZUTlWVlgyNy1NdnhvVUpqT2loLWhzdHpuRE8tOTdHT2lQZDNhcFdybzdzU3VnTFNHY3dhc3FjSTA4?oc=5",
       "matched_terms": [],
-      "published": "2026-07-07T07:00:00+00:00",
+      "published": "2026-06-26T07:00:00+00:00",
+      "sentiment_label": "neutral",
+      "sentiment_score": 0.0,
+      "source": "Yahoo Finance Singapore",
+      "themes": [
+        "general market"
+      ],
+      "ticker": "2800.HK",
+      "title": "E Fund (HK) HKEX Tech 100 Index ETF (3456) Lists Today - Yahoo Finance Singapore"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQNzRLY1hRVkNsM0djaWpWMnJ4MmY2a0hXcHpfNUQ3b1VqcWN5TDdOd3dWWXBUZzhRY1R2bFdXQXJBTUwtMkNxX2Z6OVo0Q1FhZTUzVDVCZ0x0WUFUbk85WFhBaHg0VWJMaXRtUS1NZ3NmZnE4OWhQVWw3T3NvUzVxQWU1NmpTZkhYSnloTUxhQnBzUzBzTUlGV0htMzU2Zw?oc=5",
+      "matched_terms": [],
+      "published": "2026-07-23T16:09:16+00:00",
       "sentiment_label": "neutral",
       "sentiment_score": 0.0,
       "source": "Yahoo Finance",
@@ -452,80 +462,64 @@
         "general market"
       ],
       "ticker": "0700.HK",
-      "title": "Is Tencent Holdings (SEHK:700) Fully Valued After The Kuaishou Share Sale? - Yahoo Finance"
+      "title": "Tencent Holdings (SEHK:700) Slides On Gaming Worries As Fair Value Debate Sharpens - Yahoo Finance"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOTFFwSVIyQ0FCa3lSdjVJZVl0ZVBxVDdKbkJmNEpzUUpjN0xWZXJUTkE5QkM2YjFCczdYbEU2dW44UmRNXzMtelRkUzdsMnVwbFp4T0RndEVURXd1YzhxM3plTjhIT3RuRTNfcm42X0hLeTBIRXE2bW5oc19JYktYbUlTRXJHWGNDM25mWkhJTkVlaXpFYzJ2bWs4SVMtQVR5ODNJV0tlTFQ5WWg3RUJkUmp0a1lvSFNsYXRuVC01QlNOejlkUUlqYjFqNm5JMThia3ZXZS1ycVZwZ0hscmVmZ1piaTE?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9XYUhrWTJVTmlwaFR3Q2dZbzV2VWc2MmljWkh0SU9EaWZIRjNyZWthZlNnVzBzczJJek1wODZYWWphZWFiU1ZHak1TX21CdUFQb2c?oc=5",
       "matched_terms": [],
-      "published": "2026-07-22T09:01:55+00:00",
+      "published": "2026-07-23T15:05:20+00:00",
       "sentiment_label": "neutral",
       "sentiment_score": 0.0,
-      "source": "MarketBeat",
+      "source": "WN Hub",
       "themes": [
         "general market"
       ],
       "ticker": "0700.HK",
-      "title": "Hsbc Holdings PLC Reduces Holdings in Tencent Music Entertainment Group Sponsored ADR $TME - MarketBeat"
+      "title": "Tencent shares experienced their largest daily drop since the spring of 2025 due to issues with mobile games - WN Hub"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9KTDJEZUFRcTRzdXFEQXlXLUJTcjFPWW9GcjZkSTRLZUdUTG9raXB3T3pndEJQeFJlYWs3RjBLbmlFSi1pM3FDN3E5SWgyRUYwemFQUjRmWm1yNXEtdlZmRDNubnk2ZWJhcjY4dS1Na2xyTVVqeHNFVjNYMA?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9ZTXJkWjlkY3ZJYTl6YVZtaTJnd3ZBSVJkOWNUWnZ1Wnc5N3pXd0kweXNRTV9ublBDWE9sUlZiM2NsbHdnTXZSRmItM081LW9JNlBabDNLU1JES3VKYlZqbE9yQkFNNHBTVHNTWURwb3k4TTNIQmc?oc=5",
       "matched_terms": [
-        "ai",
-        "falls"
+        "plunge"
       ],
-      "published": "2026-07-22T10:33:47+00:00",
+      "published": "2026-07-23T02:45:00+00:00",
       "sentiment_label": "negative",
-      "sentiment_score": -0.16,
-      "source": "Crypto Briefing",
+      "sentiment_score": -0.4,
+      "source": "finance.biggo.com",
       "themes": [
-        "AI / semiconductors"
+        "earnings"
       ],
       "ticker": "0700.HK",
-      "title": "Tencent falls sharply, dragging Chinese gaming stocks lower as investors rotate into AI - Crypto Briefing"
+      "title": "Citi: Tencent's 7% Single-Day Plunge Is a Market Misreading; Gaming Revenue Has Not Deteriorated, Reiterates Buy Rating - finance.biggo.com"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPamt1SXRTN3NBbDNHN0lMTkE5WEswOERjTkZPUE1rT1Zpd0UzMGt6OUdjVUdlODJqMG9TcG1EenNyb19sc1lKdTlraE5TN2RZaU1GblppX1BRR05ra1N3akJ6UGtCUVVKNmFLM003TnN6MjlOSTZFR011MFNQeHFCOWpSS2xaaFpTYlpxWW1RU2s3c2dVQ1o3RDAtazZOR25EMTdBTA?oc=5",
-      "matched_terms": [
-        "sell-off"
-      ],
-      "published": "2026-07-22T08:57:00+00:00",
-      "sentiment_label": "negative",
-      "sentiment_score": -0.36,
-      "source": "The Straits Times",
-      "themes": [
-        "China / policy"
-      ],
-      "ticker": "0700.HK",
-      "title": "Tencent slides most in over a year, leading China gaming sell-off - The Straits Times"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxONXp5a3lMMUhteXBwc2FlbExtWWpfSFJLYkVNdUYtRnFIbVFYVnhxMkVlNi1Qb09ma1NocFY2eWowVTU3SnJCalptalVCenBFa1FRaVZEVFBCazQ0dHNMYk1selJuaFhwQXlaOHR2VnVGdVk0bnZoZmJHcUlONlhuNE5kZXhiMVlvcEpEMw?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNeXBudFRldU5adllXZzJVY2ZVT0VUdG9paEFvdWpwQ0NEZkdJQlZXR1VmckY1eVdrLUg5RVBFcGwwOXotRlhvamVEeTAxUGROXzVCeDA3dlBxRDVLcjM2VTRnRnE2cm5sa3UzLVVkcFkwM2EwcUZhSUdpdmhHeVAyUFpEN0UyZExRTU5JUGppcjFUbklaTWkwWWlyc2U0Zw?oc=5",
       "matched_terms": [],
-      "published": "2026-07-22T20:25:36+00:00",
+      "published": "2026-06-15T07:00:00+00:00",
       "sentiment_label": "neutral",
       "sentiment_score": 0.0,
-      "source": "JournalArta",
+      "source": "Investing.com",
       "themes": [
         "general market"
       ],
       "ticker": "0700.HK",
-      "title": "Momentum Gains, Tencent Stock Drops: Full Details - JournalArta"
+      "title": "Why is Tencent stock slipping today? - Investing.com"
     }
   ],
-  "generated_at": "2026-07-22T22:50:37.332314+00:00",
+  "generated_at": "2026-07-23T19:00:29.879212+00:00",
   "market": "hk",
   "mode": "real",
   "summary": {
     "ai_layer": {
-      "analysis": "```json\n{\n  \"sentiment\": \"cautious\",\n  \"risks\": [\n    \"Increased regulatory scrutiny and enforcement actions from the Federal Reserve may signal tighter monetary or supervisory conditions.\",\n    \"Rising 10-Year Treasury yields could negatively impact equity valuations and increase borrowing costs for firms, including those planning IPOs in Hong Kong.\",\n    \"Market volatility and mixed commentary from analysts suggest uncertainty in investor positioning and potential for sharp corrections.\",\n    \"Recent underperformance of retail traders and momentum strategies highlights the risk of overexposure to speculative or crowded trades.\"\n  ],\n  \"watchlist\": [\n    \"Tencent (0700.HK)\",\n    \"JD.com (9618.HK)\",\n    \"Zhongji Innolight (to be listed on HKEX)\",\n    \"Hang Seng Tech Index\",\n    \"Semiconductor and Nonferrous Metals sectors in Hong Kong\",\n    \"10-Year Treasury Yield (FRED)\"\n  ],\n  \"research-note-conflicts\": [\n    \"No private research notes provided to evaluate for conflicts.\"\n  ],\n  \"recommended_posture\": \"balanced\",\n  \"rationale\": \"The current market environment is characterized by mixed signals, including rising bond yields, regulatory developments, and uncertainty around IPO activity in Hong Kong. While there is potential for growth in sectors like technology and industrials, the overall sentiment remains cautious due to the risk of regulatory tightening, valuation pressures, and the possibility of market corrections. The rule-based posture of 'balanced' is appropriate to maintain diversification and avoid overexposure to speculative or volatile assets. Public information signs are being used to inform and raise questions, but not to override established allocation or risk rules.\"\n}\n```",
+      "analysis": "```json\n{\n  \"sentiment\": \"cautious\",\n  \"risks\": [\n    \"Elevated regulatory scrutiny and enforcement actions from the Federal Reserve may increase uncertainty in the broader financial system.\",\n    \"Rising 10-Year Treasury yields could negatively impact equity valuations and increase borrowing costs for firms, including those considering listings in Hong Kong.\",\n    \"Mixed and cautionary commentary from market analysts suggests potential volatility or overvaluation in certain sectors, particularly in biotech and tech stocks.\",\n    \"Hong Kong market volatility, as evidenced by the Hang Seng Tech Index slump, may indicate broader market stress or sector-specific risks.\"\n  ],\n  \"watchlist\": [\n    \"Hong Kong IPO activity (e.g., Zhongji Innolight, Axiom, Semight)\",\n    \"Tencent and broader Hang Seng Tech Index performance\",\n    \"10-Year Treasury Yield trends\",\n    \"Federal Reserve policy statements and enforcement actions\",\n    \"Retail trader behavior and momentum indicators\"\n  ],\n  \"research-note-conflicts\": [\n    \"No private research notes provided to assess potential conflicts or overlays.\"\n  ],\n  \"recommended_posture\": \"balanced\",\n  \"rationale\": \"The current market environment is characterized by mixed signals and cautionary commentary, particularly around valuation risks and regulatory developments. While Hong Kong is experiencing a listing boom and increased interest from investors and firms, the broader market remains sensitive to macroeconomic and regulatory factors. Rising Treasury yields and mixed analyst commentary suggest that while opportunities exist, they should be approached with care. The recommended posture of 'balanced' aligns with the rule engine and reflects the need to remain cautious in the face of uncertainty, without overcommitting to any single sector or asset class.\"\n}\n```",
       "model": "qwen3:14b",
       "note": "LLM output is a research overlay and should not override rule, risk, and price evidence by itself.",
-      "prompt_template": "You are a cautious portfolio research agent. Use the headlines, market-regime facts, private research notes and public information signs when present, and rule-based portfolio constraints to explain market sentiment and produce a conditional, non-execution investment posture. Do not promise returns. Return JSON with sentiment, risks, watchlist, research-note conflicts, and recommended posture. Public information signs have zero decision weight: use them to explain and form questions, never to override price, allocation, or risk rules.\n\nBenchmark: 2800.HK\nRule engine posture: balanced\nNews score: 0.026\nPrivate research overlay status: empty\nPrivate research notes: []\nPublic information signs: [{'title': 'Agencies issue joint statement on handling of highly sensitive information during bank examinations', 'source': 'Federal Reserve', 'signal': 'event', 'why_it_matters': 'Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting.', 'decision_use': 'information_only'}, {'title': 'Federal Reserve Board issues enforcement action with former chief lending officer of Heritage State Bank', 'source': 'Federal Reserve', 'signal': 'event', 'why_it_matters': 'Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting.', 'decision_use': 'information_only'}, {'title': \"Minutes of the Board's discount rate meetings on June 8 and June 17, 2026\", 'source': 'Federal Reserve', 'signal': 'event', 'why_it_matters': 'Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting.', 'decision_use': 'information_only'}, {'title': 'Federal Reserve announces the leadership and objectives of its task forces to advance the conduct of monetary policy', 'source': 'Federal Reserve', 'signal': 'event', 'why_it_matters': 'Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting.', 'decision_use': 'information_only'}, {'title': '10-Year Treasury Yield', 'source': 'FRED / Federal Reserve Bank of St. Louis', 'signal': 'rising', 'why_it_matters': 'Long-term yields affect equity valuation, borrowing costs, and the relative appeal of bonds versus stocks. Latest change: +0.03 percentage points.', 'decision_use': 'information_only'}, {'title': 'Why Retail Traders Consistently Underperform Over Time', 'source': 'Lance Roberts / RIA', 'signal': 'mixed', 'why_it_matters': 'Commentary supplies a research hypothesis and watch items; it is not independent evidence for changing portfolio weights.', 'decision_use': 'information_only'}, {'title': 'Momentum Meltdown Catches Traders By Surprise', 'source': 'Lance Roberts / RIA', 'signal': 'cautionary', 'why_it_matters': 'Technical and positioning commentary can identify conditions to test against current price trend, drawdown, and concentration rules.', 'decision_use': 'information_only'}, {'title': 'Home Affordability: Better Than Headlines Suggest', 'source': 'Lance Roberts / RIA', 'signal': 'mixed', 'why_it_matters': 'Commentary supplies a research hypothesis and watch items; it is not independent evidence for changing portfolio weights.', 'decision_use': 'information_only'}, {'title': 'Spotting Market Bubbles: Why History Says It\u2019s Nearly Impossible', 'source': 'Lance Roberts / RIA', 'signal': 'cautionary', 'why_it_matters': 'Commentary supplies a research hypothesis and watch items; it is not independent evidence for changing portfolio weights.', 'decision_use': 'information_only'}]\nHeadlines: ['\u2018There is always a first\u2019: Why US biotech Axiom will begin its IPO journey in Hong Kong - Fierce Biotech', 'Michael Burry Is Betting Big on Hong Kong Stocks. Why He Likes JD.com Shares Here. - Yahoo Finance', \"China's Zhongji Innolight plans $8 billion Hong Kong IPO, sources say - Reuters\", 'Hong Kong Considers Longer Stock Trading Hours, Ending Lunch Break - Bloomberg.com', \"China's Zhongji Innolight sees shares surge after Hong Kong listing approval - CNBC\", 'Hong Kong Market Midday Review: Tencent Plunges Nearly 6%, Dragging Down Tech Stocks; Hang Seng Tech Index Slumps 2.11%, While Semiconductor and Nonferrous Metals Sectors Rise Against the Trend - \u5bcc\u9014\u725b\u725b', 'Hong Kong Stocks Slip at Open - marketscreener.com', 'Hong Kong Stock-Listing Boom Rumbles Toward Six-Year High - Bloomberg.com', 'Hang Seng Tech bulls searching for an antidote - FOREX.com', 'Asia stock markets outlook for 2026: Hang Seng and Nikkei forecasts - ig.com']",
+      "prompt_template": "You are a cautious portfolio research agent. Use the headlines, market-regime facts, private research notes and public information signs when present, and rule-based portfolio constraints to explain market sentiment and produce a conditional, non-execution investment posture. Do not promise returns. Return JSON with sentiment, risks, watchlist, research-note conflicts, and recommended posture. Public information signs have zero decision weight: use them to explain and form questions, never to override price, allocation, or risk rules.\n\nBenchmark: 2800.HK\nRule engine posture: balanced\nNews score: 0.028\nPrivate research overlay status: empty\nPrivate research notes: []\nPublic information signs: [{'title': 'Agencies issue joint statement on handling of highly sensitive information during bank examinations', 'source': 'Federal Reserve', 'signal': 'event', 'why_it_matters': 'Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting.', 'decision_use': 'information_only'}, {'title': 'Federal Reserve Board issues enforcement action with former chief lending officer of Heritage State Bank', 'source': 'Federal Reserve', 'signal': 'event', 'why_it_matters': 'Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting.', 'decision_use': 'information_only'}, {'title': \"Minutes of the Board's discount rate meetings on June 8 and June 17, 2026\", 'source': 'Federal Reserve', 'signal': 'event', 'why_it_matters': 'Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting.', 'decision_use': 'information_only'}, {'title': 'Federal Reserve announces the leadership and objectives of its task forces to advance the conduct of monetary policy', 'source': 'Federal Reserve', 'signal': 'event', 'why_it_matters': 'Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting.', 'decision_use': 'information_only'}, {'title': '10-Year Treasury Yield', 'source': 'FRED / Federal Reserve Bank of St. Louis', 'signal': 'rising', 'why_it_matters': 'Long-term yields affect equity valuation, borrowing costs, and the relative appeal of bonds versus stocks. Latest change: +0.03 percentage points.', 'decision_use': 'information_only'}, {'title': 'Why Retail Traders Consistently Underperform Over Time', 'source': 'Lance Roberts / RIA', 'signal': 'mixed', 'why_it_matters': 'Commentary supplies a research hypothesis and watch items; it is not independent evidence for changing portfolio weights.', 'decision_use': 'information_only'}, {'title': 'Momentum Meltdown Catches Traders By Surprise', 'source': 'Lance Roberts / RIA', 'signal': 'cautionary', 'why_it_matters': 'Technical and positioning commentary can identify conditions to test against current price trend, drawdown, and concentration rules.', 'decision_use': 'information_only'}, {'title': 'Home Affordability: Better Than Headlines Suggest', 'source': 'Lance Roberts / RIA', 'signal': 'mixed', 'why_it_matters': 'Commentary supplies a research hypothesis and watch items; it is not independent evidence for changing portfolio weights.', 'decision_use': 'information_only'}, {'title': 'Spotting Market Bubbles: Why History Says It\u2019s Nearly Impossible', 'source': 'Lance Roberts / RIA', 'signal': 'cautionary', 'why_it_matters': 'Commentary supplies a research hypothesis and watch items; it is not independent evidence for changing portfolio weights.', 'decision_use': 'information_only'}]\nHeadlines: ['China\u2019s Semight Is Said to Mull Hong Kong Listing After 2,200% Stock Rise - Bloomberg.com', '\u2018There is always a first\u2019: Why US biotech Axiom will begin its IPO journey in Hong Kong - Fierce Biotech', 'Michael Burry Is Betting Big on Hong Kong Stocks. Why He Likes JD.com Shares Here. - Yahoo Finance', \"China's Zhongji Innolight plans $8 billion Hong Kong IPO, sources say - Reuters\", 'Hong Kong Exchanges and Clearing : HKEX Adds Bursa Malaysia as Recognised Stock Exchange - marketscreener.com', 'Hong Kong Market Midday Review: Tencent Plunges Nearly 6%, Dragging Down Tech Stocks; Hang Seng Tech Index Slumps 2.11%, While Semiconductor and Nonferrous Metals Sectors Rise Against the Trend - \u5bcc\u9014\u725b\u725b', 'Hong Kong exchange clears path for listings by Malaysian firms - South China Morning Post', 'Hong Kong Stock-Listing Boom Rumbles Toward Six-Year High - Bloomberg.com', 'Hang Seng Index Index Price - Hong Kong 50 - FOREX.com', 'Asia stock markets outlook for 2026: Hang Seng and Nikkei forecasts - ig.com']",
       "provider": "ollama",
       "status": "llm_generated"
     },
     "article_count": 36,
-    "confidence": 0.8038333333333334,
+    "confidence": 0.8041666666666667,
     "forecast_bias": "neutral",
     "information_signs": {
       "commentary_signs": [
@@ -604,7 +598,7 @@
         "portfolio_weight": 0.0,
         "rule": "Information signs may explain conditions and create review questions, but they do not change target weights, trade instructions, or risk limits. Any future influence must be explicit, bounded, and recorded with a reason."
       },
-      "generated_at": "2026-07-22T22:50:31.625620+00:00",
+      "generated_at": "2026-07-23T19:00:15.573579+00:00",
       "market": "hk",
       "primary_signs": [
         {
@@ -763,15 +757,15 @@
     },
     "investment_posture": "balanced",
     "label": "neutral",
-    "negative_count": 4,
-    "neutral_count": 22,
-    "overall_score": 0.025555555555555557,
-    "positive_count": 10,
+    "negative_count": 3,
+    "neutral_count": 25,
+    "overall_score": 0.027777777777777776,
+    "positive_count": 8,
     "rationale": "News and price evidence are mixed or not strong enough for a directional overlay.",
     "recommended_action": "follow target weights and rule-based trims/adds; do not override price evidence with headlines alone",
     "research_overlay": {
       "decision_use": "No private research overlay was applied.",
-      "generated_at": "2026-07-22T22:50:30.423698+00:00",
+      "generated_at": "2026-07-23T19:00:14.415647+00:00",
       "note": "No supported research notes were found in the configured directory.",
       "note_count": 0,
       "notes": [],
@@ -784,20 +778,20 @@
     "source_mode": "rss",
     "top_themes": [
       {
-        "count": 25,
+        "count": 24,
         "theme": "China / policy"
       },
       {
-        "count": 9,
-        "theme": "AI / semiconductors"
-      },
-      {
-        "count": 9,
+        "count": 10,
         "theme": "general market"
       },
       {
+        "count": 8,
+        "theme": "AI / semiconductors"
+      },
+      {
         "count": 2,
-        "theme": "consumer demand"
+        "theme": "earnings"
       },
       {
         "count": 1,
@@ -807,23 +801,23 @@
   },
   "ticker_sentiment": [
     {
-      "article_count": 5,
+      "article_count": 4,
       "label": "neutral",
-      "score": -0.10400000000000001,
+      "score": -0.1,
       "ticker": "0700.HK",
       "top_headlines": [
-        "Is Tencent Holdings (SEHK:700) Fully Valued After The Kuaishou Share Sale? - Yahoo Finance",
-        "Hsbc Holdings PLC Reduces Holdings in Tencent Music Entertainment Group Sponsored ADR $TME - MarketBeat",
-        "Tencent falls sharply, dragging Chinese gaming stocks lower as investors rotate into AI - Crypto Briefing"
+        "Tencent Holdings (SEHK:700) Slides On Gaming Worries As Fair Value Debate Sharpens - Yahoo Finance",
+        "Tencent shares experienced their largest daily drop since the spring of 2025 due to issues with mobile games - WN Hub",
+        "Citi: Tencent's 7% Single-Day Plunge Is a Market Misreading; Gaming Revenue Has Not Deteriorated, Reiterates Buy Rating - finance.biggo.com"
       ]
     },
     {
-      "article_count": 7,
+      "article_count": 8,
       "label": "neutral",
-      "score": 0.06285714285714285,
+      "score": 0.05499999999999999,
       "ticker": "2800.HK",
       "top_headlines": [
-        "Southbound Capital Flows | Southbound capital recorded a net purchase of HK$7.517 billion, adding nearly HK$6.2 billion worth of Tracker Fund of Hong Kong (02800.HK), while selling Alibaba and Tencent throughout the day - \u5bcc\u9014\u725b\u725b",
+        "HK$2.519 billion net outflow from Tracker Fund of Hong Kong via Stock Connect - \u5bcc\u9014\u725b\u725b",
         "Record Demand, Recurring Pitfalls: The Truth About Single-Stock Leveraged and Inverse Products - Morningstar",
         "TRACKER FUND OF HONG KONG (02800) Stock Price | Quotes & News - Moomoo"
       ]
