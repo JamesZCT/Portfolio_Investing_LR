@@ -1,38 +1,52 @@
 {
   "articles": [
     {
-      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOT0ZuSlg2UWFSbFZWRG9zLXc4cWVCdTVQeVhHd2FpUm8zSnY3WVAyN0duMHluQ0x2R29zQnFhWDROVjd2QjZlb0hncGdGUnZaaWRPeHlQNlBaYWpVNk5lYnFXT081WEdwVHFrV3hQM281R0VHdU5vRjQ0Mk9ZZkY1QVhiYlN3XzJFZmdrMTM3Qy1IbmRyUHNpQ1BqNkphQzMtSi01QWMyN3hNaGZNVHpqcHpUbVlQOHN6UWN4OUFhZDVoV3hn?oc=5",
-      "matched_terms": [
-        "ai"
+      "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE52RnVCcG03VEVsNlExWlp0enhtV1UtNkhCNzFCaVl3VGZlS19wanVxejZ0VzFuUjI4eWQyZ3lsUXlNcmlYcWhORS1ZSUs1Q180RWFrV1FHT2I4Yk14M2dtMGlfTGZLTjhDM1FGbjNOUzlpaTg1SFlN0gF8QVVfeXFMUGJVbnA0bXg1SDhZVm9TcXZmRXdkZ1l5cXRUa3hCVUZLR2FQMThtNEloRFRHOVhvUDlDaUJwVVNuMVBoYTZzZ3loVVJGUTlxeTYzZkV4Tm5jOVVvWXlRZlYxREZfYnB5eEpweFA1QmM3Z0I3ZDA0cFZxVFc3QQ?oc=5",
+      "matched_terms": [],
+      "published": "2026-07-28T04:12:28+00:00",
+      "sentiment_label": "neutral",
+      "sentiment_score": 0.0,
+      "source": "CNBC",
+      "themes": [
+        "general market"
       ],
-      "published": "2026-07-23T14:00:55+00:00",
-      "sentiment_label": "positive",
-      "sentiment_score": 0.16,
+      "ticker": "MARKET",
+      "title": "Dow closes more than 250 points higher, aided by cooling oil prices - CNBC"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxObWE4UE55cjJKTXFET0xKNElSblpHdnRaZW92RlhpUzFnRER6WkUtMy0yTjVHMm9fLUxJWGphcTRTb2oyd2lPRkd4Q2tSd1JCaldHR3Q4ZFVESFl5T1R4SzB1M3d3V0JSbHVZbjBBM3FLdjFSX0NxUm1fTkczR0NET0M1ald1OTdjd1pHTVJLdnJCWmdYZGJQdGwzcVI0bFQ0bVZRSUJSbEI?oc=5",
+      "matched_terms": [
+        "falls"
+      ],
+      "published": "2026-07-27T08:04:12+00:00",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.32,
       "source": "Yahoo Finance",
       "themes": [
+        "general market"
+      ],
+      "ticker": "MARKET",
+      "title": "Stock market today: Dow, S&P 500, Nasdaq futures rise as oil falls, investors brace for busy week - Yahoo Finance"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOYXlfSVN1YVJlQWNSdWhHYmtiSTVYRzZfUmVIM25QNzFkeWVzX28zNFlKa3g4dHo1QUJ5RWhET3pObkFJUzI5akRFb210bUlwR21wTm5RQkVTTHhGRnF3eUZhNHlDWUxSX2ZEaUlyZDlOTWFZUDU0MjJ6d1RldWpfVFhwNHprb3FIeWNkUmVlUlk?oc=5",
+      "matched_terms": [
+        "plunge"
+      ],
+      "published": "2026-07-27T19:17:40+00:00",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.4,
+      "source": "Investopedia",
+      "themes": [
         "AI / semiconductors"
       ],
       "ticker": "MARKET",
-      "title": "Stock market today: Dow, S&P 500, Nasdaq sell off as rising oil prices, bond yields, and AI capex weigh - Yahoo Finance"
+      "title": "Markets News, July 27, 2026: Nasdaq Slips as Chip Stocks Drop, Dow Rises; Oil Prices Plunge on Pause in US-Iran Hostilities - Investopedia"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQbklMN0l2Q3E1RmdRQ21LMGluN1VrUVE2djN6RW53Um5RNFJGc1FiQXNCX3Fhb1V4STJIcDRwTmtzaTVHdmdSUWROQzZEVUNXeEFzNUxCaWc3c0VQZWh5Vnl3ODY0TmZJZEtQRTFfMVpwZGF1ZHN4WXA1ZXBoTmk4VExQQkNtYmVmcU9YT0pmQmtKdWxRTldfSHJHWm1qc3FrNTRtUGdHZGU2V0RaTUJxRG5aenBTRXM3YjBHVmh3?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBrVi1aVEdDbG9nbWhkOEh4UU1LaDJESThkODBGOWhMVzlZWlJoTlBHMW8yclp4c1NnWTVUQzJlSG1DR0d3OWsteG9Bbzh1b2RTaHEwbHZrR09fZlNCUjNIMmxnaWVxaTA0SkxPMXQwV0pnM19WTVln0gF8QVVfeXFMTlhfZHYzbTFqZEV0a0FESjdWNXhZX0YzUDk4UHBEQjZjZFNzblRYV2VUZlVHUDk5UmhhMEJhbFcyX29lY0xfdnhVenF6dURyUGNkaE9Rbjc1dld6RjU4c2ZEdzRYSGhwWUxnLXo5TnpBbWxzMG1MdUFiVUkxYg?oc=5",
       "matched_terms": [],
-      "published": "2026-07-23T20:42:00+00:00",
-      "sentiment_label": "neutral",
-      "sentiment_score": 0.0,
-      "source": "MarketWatch",
-      "themes": [
-        "rates / inflation",
-        "earnings"
-      ],
-      "ticker": "MARKET",
-      "title": "Stock Market on July 23, 2026: Dow, S&P 500 and Nasdaq close sharply lower as Big Tech stocks slump after earnings disappoint; Oil prices rise amid Middle East worries while Treasury yields climb - MarketWatch"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1vblI0ZnhoVnRkR2FISkRsT3hDd0UzZVhPd1JmaGFldHpEY1BaTl96dmtCcXFvU0ZJdHJ0U3kxS0t6eTY3LUUzTXo5TExReU5IdWJsbVc5Z1pKekJuWVpxZTBkdjc2Tm52b3MxYVRFU0lFTEN3WW9B0gF8QVVfeXFMUHJIVU9pa2lVQ1YxcGVuVXBIbFN4M1JJS1BCQ0dvTklEbmhlYjRrelFmVXNSbXVZLVhBZHVNZjcxZlU1OEtyNU1UaGo1Vjdua1p3MFUxa0dPYlo4ay1HN0k0eXBNcXlfU0ZRX1gtb3dPOXVhbC1IR3RWWlZNZg?oc=5",
-      "matched_terms": [],
-      "published": "2026-07-23T19:12:00+00:00",
+      "published": "2026-07-28T04:12:00+00:00",
       "sentiment_label": "neutral",
       "sentiment_score": 0.0,
       "source": "CNBC",
@@ -40,128 +54,102 @@
         "general market"
       ],
       "ticker": "MARKET",
-      "title": "Dow tumbles 500 points as Brent crude tops $100, Alphabet and Tesla drop: Live updates - CNBC"
+      "title": "U.S. stock futures slip, South Korea's Kospi plunges over 8%: Live updates - CNBC"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE01M0tDOWxlS2Y5ZkRyWTBBblZqMjR1S1JMQS16TWZfTTBlaXhXdWM4NnlSbFNIaEZrNnhFLW5wWG5iOXhYcEdFOXVZZTBhRjlScXZTMGp2aXJCYnBqVHhreUloYU1CUmY5aTFRMlNOUXpOSU0?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQMFlab2FNYXZBWmtLWDN5N0F0THRfRUdicVBwS2p1YnB5SEM2OHNWVXRDTzlRUUo2TWlZNnNJbDFvYXBwcTFXTzYyZVNOcXFkc1NmT1N5ZjRmT0NaSkNERGVfb0N4eEdnQ1R1RUsyY1JhVHdHbEREM0xKeVh6aXJyYm8zRG12WG4yLS14a25JUlNZZk1uWHfSAZsBQVVfeXFMUG8tUkxVdmtPVkkxZEt5U0lrZTkxM01hOTVJUEpURnd3MnU2RTBBUnQ3bzRKVnEyUUZIRHNIdWRWcGZGUDJZWUdud3RwV2xWcUF4R1RXMk5objg3NlMyeTlrc0NlNXhUU3VPXy1qRGNOMjYyd3B5MW5SeTQtUjFlRDBBc3JxUWVJQTNER0NiNTg3c3JDSlFJWGVJc2s?oc=5",
       "matched_terms": [],
-      "published": "2026-07-23T13:30:46+00:00",
-      "sentiment_label": "neutral",
-      "sentiment_score": 0.0,
-      "source": "CNN",
-      "themes": [
-        "macro risk"
-      ],
-      "ticker": "MARKET",
-      "title": "The world\u2019s most important market is flashing red about the Iran war - CNN"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOd09KalBlejJHb0hHTnlCdnVUTDcxdUNVUVNlZHY0Z244cHVobXNGYWwtd3h0VVh5dHRxMnl1dlQyUzJnWVMtbWlzQzlSR0J3RkZMaEdubHRNWll0RHRobWtic0pNTkJTclBWUVBYZGdLSjJMX2c3SDFndm01Tld6OGdvSFZWZlNsam43UDlCUE1qNVkwVDJTeDVzb2l3bGtYYzFxZ241OG9uNzA?oc=5",
-      "matched_terms": [],
-      "published": "2026-07-23T10:11:01+00:00",
-      "sentiment_label": "neutral",
-      "sentiment_score": 0.0,
-      "source": "Morningstar",
-      "themes": [
-        "general market"
-      ],
-      "ticker": "MARKET",
-      "title": "Where the Stock Market May Be Heading Next and What to Buy Now - Morningstar"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNRkZJcFp5Vnl2SWNqajBQYlRPcU5oNTBkVHM4WWlrYjN4b3ZNMlZnWXZFMkxOZnFOTzRneUxOcjY4Qi1EajdySTloODVrSmFpTVZWMnRDUU5GYXhpRmtUQlB1T2hPNGNoQWxxNVBxNjNZOS1mblZDTzFSdTVQcDFaTWhsTGlBRzlDQjZHYWotQURQNGgtUC1Xd2s4dEpwS0J5?oc=5",
-      "matched_terms": [
-        "record"
-      ],
-      "published": "2026-07-21T18:27:00+00:00",
-      "sentiment_label": "positive",
-      "sentiment_score": 0.27999999999999997,
-      "source": "Business Insider",
-      "themes": [
-        "general market"
-      ],
-      "ticker": "MARKET",
-      "title": "Investors Have Placed Record Short Bets Against the US Stock Market - Business Insider"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNcTJwS3A5VGRQNVAwUDlGR3lOMXBQcEt4bklSV3pRdW5oUHZRMWNudk9WRzVTUGIwenlhbkZxMWxGanU1M0tWNmtMWE9rZU4zY1YxZ3dTSGZKcUc1OXVVNzZneVdiNm54YS1FX3ZFLVBXckNnMXVXWExuc3c5MlhhZU5BQXNlWUxzZ0lTUmFlcGpveDJPRU8zQ1ROOGF0cGE1aVNkYVl6SGE2Zw?oc=5",
-      "matched_terms": [],
-      "published": "2026-07-21T10:39:00+00:00",
-      "sentiment_label": "neutral",
-      "sentiment_score": 0.0,
-      "source": "WSJ",
-      "themes": [
-        "general market"
-      ],
-      "ticker": "MARKET",
-      "title": "Something Weird Is Happening Beneath the Stock Market\u2019s Surface - WSJ"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPM1ptS092RkJxU29IclRfcjFBSXRvVG9FUTkzczY1b2FMX3RsUXU3UDBDQkRfbDlpYlJFMkw0WWptTlVROTkyb2hFdmhISUt3NkNMWVo0akp2S3M3N09rdmxtT2g0UVJDZjZ6TGZzS2Uyd3R3UXUxb05vMmh4cVlFa2pNaWdGQVh6aFExUHFlRU1nZjgyZnB4X3lOZi1JUHV3bjFUdmZPSUfSAa4BQVVfeXFMTkJKZWktbHlRSXpmN1NqUkc5RzFtM0lFeXlsRVBuRlJGR3N1T2VmblFvdDRDNnN4a0xSdE83NlRjTUlicmtpX1JUMzVkejctVTJ1TjdTQ09Eb0xJMjNsclBad2JuX1pMcGs1UEE1ekR0YUNMMGt2UXBTcmxWQmNoRVhleTREMHFOU2ttMHdKVDJxclNYcXZnWkhEeGxtd3RvYkgtTGlBVG9tUWNDd3J3?oc=5",
-      "matched_terms": [],
-      "published": "2026-07-23T16:36:24+00:00",
+      "published": "2026-07-28T01:22:00+00:00",
       "sentiment_label": "neutral",
       "sentiment_score": 0.0,
       "source": "CNBC",
       "themes": [
-        "macro risk"
+        "general market"
       ],
       "ticker": "MARKET",
-      "title": "Shortsighted stock market can no longer brush off war: 'It's too hard to ignore $100 oil' - CNBC"
+      "title": "U.S. and Korean tech stocks are now tightly linked \u2014 and that could be a worry for investors - CNBC"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNUGJXVW1sN0lkbGNqbGdFZGRXTlVsOWtrU080LTNTdUpyaV9hR3JXTWRLYktSUUlsVGRCSHVPU2pTOVA2dDJqVmtUdW5vN2ZxTzI2aVBUbzV5S2NGRURfS3prSkp3alVoVGZ1QlBJNVRZeTh0WUdEaWUtdExhM2xsbDgxeHJTRGVkdUYzQXJrWXNBRGd5SWIxQjhOQmtPb3JTb2lZVTR4ZDZ3R2RBaTBMS05yWUdxWHFY?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQTE5ReURiN3E4azk1Q0xhR1FzQmZpV3JCNmw4NnVvV21fUEw3b3lNRTV3XzlxUXNBRW9rMzluQU5DTFlYMm9QX3QxNjkyWHZuWDl5MGVrTVkwbFpVRVg3a3Y3YW1iSzByU29jYmRFMFhoY1hDRGVjdmV5NEM0dGVGSEZuVDFGWDM0VFozUmxpcnZ3Rm5zcW9nZHRLUmpZYk5IdlHSAacBQVVfeXFMTmk4b0Nkd25faFlwV3U3OVJheGxMSzdWNHFLSHQ3SktjRV9BamdvUTJSU3QtdFM0UUpUYWVDVUdfOW0xWVlwMEMtTmgzek9LTUdwNWFlOHlLQjdFN0VZVjZlbVZOQ0ZEbVViNFVLWVlSb01RbUxPeHVKeURPTHQ2QTY1TXdXSHdHWFA0d2ZRSDVRejhDQzNFenBaQ0E1ckIwNHRGdXpfRlk?oc=5",
       "matched_terms": [
-        "ai"
+        "plunge",
+        "sell-off"
       ],
-      "published": "2026-07-23T13:12:46+00:00",
-      "sentiment_label": "positive",
-      "sentiment_score": 0.16,
+      "published": "2026-07-28T01:02:00+00:00",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.76,
+      "source": "CNBC",
+      "themes": [
+        "AI / semiconductors"
+      ],
+      "ticker": "MARKET",
+      "title": "SK Hynix shares plunge 13% in Seoul as chip sell-off deepens - CNBC"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNQS1IbFZvbjJTMFVxelh1NTQyalgxZVdWNzl2bktIeTVYa3Z1Y1RIR0dGVzhZRWRrOTBnQjV2Q2x3TkhkYk45XzZoeUtDanZFbjJaQl9MTTFSZE5leG4tSHNvZk1pSERJSnVlemZXQ1VwYThMRll0R3A5YnVPNDdpeFVSWTBienpmRnI4YkRGaThIVl9KZDROaUNNY1hUWTVaRmJucTFOYTIwRi1BVnpORGZIbk56ajlYckg4?oc=5",
+      "matched_terms": [],
+      "published": "2026-07-27T21:09:45+00:00",
+      "sentiment_label": "neutral",
+      "sentiment_score": 0.0,
+      "source": "Yahoo Finance",
+      "themes": [
+        "earnings",
+        "consumer demand"
+      ],
+      "ticker": "MARKET",
+      "title": "Earnings live: LVMH sales grow as US luxury shoppers boost results - Yahoo Finance"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQVjJPMmdUV2xHWmNlcW1OTUM2MTlMNDF6OXZsWXprbzVBLUVkWGFzbGlGb2RGM3A3eFl3ZGYtSGxieHlld1NoX0pmeGVSS3FJZllwdTlqSW5MLXlWeUEwWHVXYUJ0MHNqOVBCWEVIaU5palJzdTY0czZ3enF5bENlQy1VbTRHT28?oc=5",
+      "matched_terms": [],
+      "published": "2026-07-27T20:18:40+00:00",
+      "sentiment_label": "neutral",
+      "sentiment_score": 0.0,
+      "source": "Yahoo Finance",
+      "themes": [
+        "general market"
+      ],
+      "ticker": "MARKET",
+      "title": "Oil prices slump as US and Iran pause strikes - Yahoo Finance"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOblBWOEtFWTlWbEdVSTMwSHR3cWxGZTkyS19UNTdhNWlkYVk5Tzd2VjhrbEowSVNkVUlEemFXbC14WTBBN2I0UDMxU3dXX2pxNl82RGhUa3NjQmh3N1hfekFJeW5tX0hXMkdDR0NGRmM0Qng4WUVoY1MxSXZFY19rUFhqa1QyWjVtXzJha2RwRmhrWFUwQUlFbDR5TVI1UHpCNTJWWEJTclVPakt4VElwbnBULUkzQWFrN0JFcnB3WGNpTGt3d2Y0?oc=5",
+      "matched_terms": [],
+      "published": "2026-07-27T18:37:40+00:00",
+      "sentiment_label": "neutral",
+      "sentiment_score": 0.0,
       "source": "Investing.com",
       "themes": [
-        "AI / semiconductors"
-      ],
-      "ticker": "MARKET",
-      "title": "Is the S&P 500 in an AI bubble? Key risks & market outlook - Investing.com"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxONWZxR0ZVenNfNFk2VENaanFKRVNKc0ZnMjUxTWhsWnpIb0ctZmlLajUzdUlSSlBTbUdGeVZRNDA3TFZYdThQeXZIdDFOVHFjX25oUkd3cmlyenlEd1JINEdvMVFuakpHa2RGMjJmR3ZqdnMxVi1CNGFZblFETHZGcUFQdU52WlFLbXp2RTNmVGZBNE5CQ0E?oc=5",
-      "matched_terms": [],
-      "published": "2026-07-21T13:09:27+00:00",
-      "sentiment_label": "neutral",
-      "sentiment_score": 0.0,
-      "source": "CNBC",
-      "themes": [
         "general market"
       ],
       "ticker": "MARKET",
-      "title": "UBS hikes its year-end S&P 500 target to 8,100. Here's why - CNBC"
+      "title": "September market outlook: historical weakness meets 2026 volatility - Investing.com"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOQktjckJyZUdtdlQ1V1JHdS0xZm9ZTzU3OFJLRXoteFg5NEdndzZiTi04alc0S0FQM0l4Wm56eHlwd3pCaHNsWFE3RF9ITW1KYnJWTTZxdmo0RmZjZ1pJejVlOG8zMmxXN2dmb3BpWWJsTEVjT1hMMVhSdEZjRVUxZFZRN1V1dVhIeU9KYnI4ZFpwb1hCcnlaekw2YVIyOFExclBDU3p2bkFRUQ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQT3VrcFNscHJ0Vm9GaFE0LS1XSDdzUE9zVmVXVWhGNkl1eS1PSThZSHBuT0FmTUFHdVRwY05RbmQwVG5zanJiR0ZfQms0SndvN0pQU2tMcFRPaWZsTC1DVmxIUmNYLUdOendlcE9KYkctOVVzdWgwcW5zR1ZMZjJlTEdXTG92QUZFN0Vkb0ZWbHRZUFJFb1hsc19B?oc=5",
       "matched_terms": [],
-      "published": "2026-07-23T14:29:11+00:00",
+      "published": "2026-07-26T20:00:00+00:00",
       "sentiment_label": "neutral",
       "sentiment_score": 0.0,
       "source": "Seeking Alpha",
       "themes": [
         "general market"
       ],
-      "ticker": "SPY",
-      "title": "My Three Most Reliable Market Indicators Are Still Flashing Green (NYSEARCA:SPY) - Seeking Alpha"
+      "ticker": "MARKET",
+      "title": "S&P500: Breaking In Slow Motion (Technical Analysis) (SP500) - Seeking Alpha"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNT3ZaR3hsVkZ1UWF0QzUyUlY2SDM3Vk5zNmZFQ0VZdWgwd3lYRmdHaEFNeTgyTnAzVHBJUXE3dF9EMTVzNjBHNWc3UnFHaGtPUlN6R1gyVlgtWDZueFFYMmZrcHVDR05RMGQ2WkJIZ0xaY0MyVk1xXzZZNEF2SGlRNFRyVGFSYjZacEN5eEluODNuUEk0TU5jekJYNndzSTJPNE44ZlIyNl8?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQUEhfQ0wydXNEOTQzUjg2UTRmb2lTUUxTdzNqczVfRURpWGg1RTItLWZIZTJhNmt1aVkxSG1PX0Rwa1lfUXB0RVdYNFNQQ19OeFBsME5lOWlNMGIxTE5RZTRNcGZtbjRJa1FndnhoX1AwdUxvZV8zVE92dGtmaGFtUDR4R2hpby1VZnZQYkE3MlF2U0pITHc?oc=5",
       "matched_terms": [],
-      "published": "2026-07-05T07:00:00+00:00",
+      "published": "2026-07-27T09:14:35+00:00",
       "sentiment_label": "neutral",
       "sentiment_score": 0.0,
-      "source": "Fortune",
+      "source": "Moomoo",
       "themes": [
         "general market"
       ],
       "ticker": "MARKET",
-      "title": "Stock market outlook: S&P 500 to lose much of 2026 gains as 'speculation is hitting extreme levels' - Fortune"
+      "title": "The S&P 500 Seeks Support on 7,410 as Tech Surges at Pre-Market | Options Market Statistics - Moomoo"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOT21BbEYyM2ZUU1h5XzV5R2NBY1pOa056MUc5Q0xqbTFwYzg4cFFrMnk5bVBLcm4wQlhGb3lqTUJGYnlzLWRBZ0x5VXVJNWpHU0hIaEFxM2YtV1JJVHJxVTR4YUQtT3FzNXpWeTNYb29fTi1oQ295aDdyQXZlMjlXVmRMNkxBTTdtZjFKcHg5c1JKb0N5YTQzN0QtY2Y3YTF6R0R3bnpveHpjX25KRFBIVWJtbi1BTVE?oc=5",
@@ -179,17 +167,47 @@
       "title": "The S&P 500 Is Forecast to Climb as Earnings Growth Powers Stocks Higher - Goldman Sachs"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNNExYYmVRbjFoREsxaGlDZ0NTM2daTUFWRTF4aUNIblcxV0hONndWemNzWXdOTzFKVmstUTVydG5ZMXc1YTlfVjc4UEhIeFdpT3B2dGQ5c1hoX3dTMEtnek1NczhIdTRGOEZZQlMwZkt0ZDlyQk9JZlkzTzdMX1I4WXIwSXUycDRtYWxnN1dQeVNvYUU5VEVrTXJjcw?oc=5",
-      "matched_terms": [],
-      "published": "2026-07-21T22:54:58+00:00",
-      "sentiment_label": "neutral",
-      "sentiment_score": 0.0,
-      "source": "Mott Capital Management",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPX1JfZmpxel93MU94Z1prdFJXZUwteEZYcDJSV3BiMjVkV3owZ2xETjBuanJwaF9IUGlQQTRWYVFOZVVkZUJkVkktRmlraUtjQWtyZUdhY2doX01Qc0tVS1VlMzFndmhMbmtyUHVMbW9jdm1GdWQ5bW9kTHdoQktqX2Rqd29STkVlQmhWUnlMWm9sTEZPOGZHbEF1X2RWZTVGcEdXaVd2Mng?oc=5",
+      "matched_terms": [
+        "ai"
+      ],
+      "published": "2026-07-15T07:00:00+00:00",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.16,
+      "source": "Citigroup",
       "themes": [
-        "macro risk"
+        "AI / semiconductors"
       ],
       "ticker": "MARKET",
-      "title": "S&P 500 Outlook Hinges on Key Resistance and Market Liquidity - Mott Capital Management"
+      "title": "Midyear 2026 Outlook: Resilience, AI, and Evolving Market Dynamics - Citigroup"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNeU9xVWlYdlRIczU3VWM2N1lpR3VFVVJMVFNpZ1E1VmM0YVNFM2kycU9MYnZxTW96ZTVqSEdHbVdKNTJncmpYY2tJVkZ2Ulo5U2t5N1FFR0twS2pVbHpqQUJnQm1tcHBmMm53Ulh1SFI0cEtTRkpRWnVPVW1pcnBVd05KclB4UVUwU3dSa1dpMVh2czBQRnc?oc=5",
+      "matched_terms": [
+        "surge"
+      ],
+      "published": "2026-07-24T08:49:45+00:00",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.36,
+      "source": "Yahoo Finance",
+      "themes": [
+        "general market"
+      ],
+      "ticker": "MARKET",
+      "title": "Nasdaq, S&P 500 Futures Mixed As Oil Surge, Trump Tariffs Cloud Market Outlook: Why INTC, TSLA, SPCX, ORCL, SLS Are In Focus - Yahoo Finance"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNT3ZaR3hsVkZ1UWF0QzUyUlY2SDM3Vk5zNmZFQ0VZdWgwd3lYRmdHaEFNeTgyTnAzVHBJUXE3dF9EMTVzNjBHNWc3UnFHaGtPUlN6R1gyVlgtWDZueFFYMmZrcHVDR05RMGQ2WkJIZ0xaY0MyVk1xXzZZNEF2SGlRNFRyVGFSYjZacEN5eEluODNuUEk0TU5jekJYNndzSTJPNE44ZlIyNl8?oc=5",
+      "matched_terms": [],
+      "published": "2026-07-05T07:00:00+00:00",
+      "sentiment_label": "neutral",
+      "sentiment_score": 0.0,
+      "source": "Fortune",
+      "themes": [
+        "general market"
+      ],
+      "ticker": "MARKET",
+      "title": "Stock market outlook: S&P 500 to lose much of 2026 gains as 'speculation is hitting extreme levels' - Fortune"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOdWY3dGM5ZzVrRFoxZ0JfMkNZTC1QOFcwVkl6MWhhczJCRFY1R1p3MHZ6V3ljcll5UXRrU3lnRS1NMThBVGVzVzFnOGNzTTBHZkhrTWlDbTNSVmg2RnA3aTBKQnRtRnItSndoNEQ0cUFocHBld2tjWVpicllqTVVOOFN4d1U1YlQtYmVrRnNKWWJvNDFJc2ZVeWw0NjFFZVlod29BSks1SFZ2TVJNRWc?oc=5",
@@ -206,37 +224,48 @@
       "title": "S&P 500 Earnings Outlook Hinges On Tech, Energy And The Fed - Forbes"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQVnFyQnR2eHM4bXhlUzQyekNIQTMzRlJ6NVVIN1FhVmhQMTNvRUlhMU1wcEZMeXhKQ1hOT1R3Q3dsWUYyanMzM05US21fMl94VjJYcW9IbVFGMllsSHYxTEtLN2RrRG1EN216S29YNk5XcTdvQU5MdGFFVGNwTzFrSnAxalpwdXNSTF9kcmRwcUtsYkZodjhnU085WW1xVkRkYzFhMUxQOERYV3Rt0gG4AUFVX3lxTE5aQkhWal8xSmNkbnU1Y1FiVHJCSDVLZmRyT0szTjNnNFhZTjVIcUVTOWdBdEU2cUpZQzlhOG1BVzBvdkVSZFhDNzI0TmNmMHNqdk5wcndqY1lLZ0xrdW1qelFXalJVbEdIWUJkZ2dTMW8xS0N2anFqOEd2a3ZlMEZjNjFzeFBRNGg5Uk5vWXVTaWhwdFBWVTY5ZjA5d1FIWUpaeUpRNWhjTW52YjJ6VHU4WThTOEg1a3M?oc=5",
-      "matched_terms": [
-        "risk"
-      ],
-      "published": "2026-07-22T21:14:57+00:00",
-      "sentiment_label": "negative",
-      "sentiment_score": -0.16,
-      "source": "FOREX.com",
-      "themes": [
-        "earnings"
-      ],
-      "ticker": "MARKET",
-      "title": "S&P 500 Forecast: SPX remains cautious as risk appetite weakens - FOREX.com"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOaXBXTVRBZXJ6cUd1dGtkTWstNkRjNF9RVDZsdlFQTldCZl91al9jXzNkRF9sRFVTYWxXUDBpcE43QTJnTjNnVjg3TGc1a1hObWoxenNkbDhWSlVndzZUZ0VmTnotZWlRZUlsR2hlQWw1OXBBMWcyRUt6dGNzeDVhQzNDa21paXRTcjNIY21USmdrbWtmYmhKLTVxeDk?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxONUZ1eU9IbkxOS3M3ckVSeFJIVDZ0eFI0Mm1RX2ZGSW9HdGlMUnNrYjlOSVcxRDkxZGlIeGV3WUlEbG1xVlpuaHprUEZGZFVzdkp1MzV6N0NmR2xWckpReVltRGNwNlh5ZFRCa09XdERHQlhVSEhKeUtJcll0VmV2ZzYtV3lCMHZ1bF90THNzUWtmSHlJOHBpbFJmbTB1c2E4NEpwMVpyQ2dOWWZZdTNpVXhXWjQ?oc=5",
       "matched_terms": [],
-      "published": "2026-07-23T13:42:51+00:00",
+      "published": "2026-07-27T21:42:13+00:00",
       "sentiment_label": "neutral",
       "sentiment_score": 0.0,
-      "source": "FXStreet",
+      "source": "Bloomberg",
+      "themes": [
+        "rates / inflation"
+      ],
+      "ticker": "MARKET",
+      "title": "Citadel Securities Sees Warsh Delivering Surprise Fed Rate Hike - Bloomberg"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNMU9DVFo2Q1JqanJtMk9WeDJGOVdFMkM2QWVFRlJBS1BNV09JRW55N2lvNkNMNml1c0R3Y29kczF2UXpfRy1uUEJHRDVxUE9QbmRpNFZNZGo3VE9lbFRCU3QtSmYzVGI5dU95TEI2bEx0SmZuZDRZRXVIQmZOZFNLWVNHMUpKV1NmUTNKWWoxNlJ2R1hiMUJBNA?oc=5",
+      "matched_terms": [],
+      "published": "2026-07-27T23:30:00+00:00",
+      "sentiment_label": "neutral",
+      "sentiment_score": 0.0,
+      "source": "The Motley Fool",
       "themes": [
         "general market"
       ],
       "ticker": "MARKET",
-      "title": "Federal Reserve: Hike pricing questioned \u2013 TD Securities - FXStreet"
+      "title": "Federal Reserve: 1 Thing All Investors Need to Know Before July 29 - The Motley Fool"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPSG5UVUo2Qjc0QmZXVkZkVG5DNDFUMHJVT3ZDUHZzOFBVOXVuWk55aE9ZcDVOVEFJa3Y5ZHpjNWx4YWgtb3VfSjRHQUJXMFJIV3lPcTFDSjFadXBmdENDeGx2eGMyZ2NVRjM2Mk9RYlU3X1B2OGMwWmR6ajgtMWxQUmFCMER2R1gxZk52LVZYWW1lVkxxeWp2S3dpVjA?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNX3o1amMxNmdZVnRYUlpLZk9ocS16aXRTeU5xU19ZN0xFQ0dreTFKemlzMzV1MkFjQjdxVUd0ck9zTlVKVVRIWGFoX3BzOFV0UTYxT1o0MDBCWjRfV3dLcnpXa0p3YnlKdXQ3Wk1HNmVvZ2FoQk04LXVUdGgwVVlBY0FtMkczMUQ1bjhkVTV0RGtteXc5eGVXM2pGV011XzVmU29iM1R4eGwzU2dRRS1WR1doU0R2bmpCY09jQzQ3QVdzbXA3?oc=5",
       "matched_terms": [],
-      "published": "2026-07-01T07:00:00+00:00",
+      "published": "2026-07-26T15:06:00+00:00",
+      "sentiment_label": "neutral",
+      "sentiment_score": 0.0,
+      "source": "Investor's Business Daily",
+      "themes": [
+        "rates / inflation"
+      ],
+      "ticker": "MARKET",
+      "title": "Stock Market Week Ahead: Mag 7 And The Fed \u2014 But It's All About The Cash - Investor's Business Daily"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOTkJod3ZLRFFVV25kQk05QWpFNXYzUlBxeE15Wjk5MDZoMVVJbk1raWpSYWh6WlpJWC1DQUdhcGVLR0xRYnZpNUxiN1Jod0xUTFk4TzdxNXNJQzE2QllOdGUtbFdRVjlYV0x2YkRlZ09LcU1RUENCSXZISFlrZG43ZWdJSmwwdHNMaXl5cncwTHZ3UU1k?oc=5",
+      "matched_terms": [],
+      "published": "2026-07-15T07:00:00+00:00",
       "sentiment_label": "neutral",
       "sentiment_score": 0.0,
       "source": "Yahoo Finance",
@@ -244,7 +273,20 @@
         "general market"
       ],
       "ticker": "MARKET",
-      "title": "Stock Market Investors Just Got Bad News From the Federal Reserve. History Says a Big Drop Could Follow. - Yahoo Finance"
+      "title": "Alphabet Inc. (GOOGL): 8 Best Stocks to Buy Following Federal Reserve Pivot Expectations - Yahoo Finance"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOQUpJQlV1VV9UdDZmMklELUlIb1JuMG92UE1tZDFELV9VaGtpYkZtbmFLSkVIcVduelJabU50SWZObEFYSTBxWHZjbHVPb0RFR2paZmNkY0UtdjBiYmRaalZySHJ6SkpxbFBoZ1Z5d3FfQmNKc2VieFFSNjhlaDNqNXpkS0NxTFZBS21BNmhQcF9BdmwtTDBhT1lpbTdzdzcxd2E4MGpaR2t2cWFYTTg5LUxGOTNlRk9Sd3lwbksyUWVtT1FtQTkzSkc0ZjJwNG5obXhBS29xLTE?oc=5",
+      "matched_terms": [],
+      "published": "2026-07-27T22:22:21+00:00",
+      "sentiment_label": "neutral",
+      "sentiment_score": 0.0,
+      "source": "NewsCord",
+      "themes": [
+        "general market"
+      ],
+      "ticker": "MARKET",
+      "title": "Bitcoin Holds Above $65,000 as Traders Await Federal Reserve Decision: how 16 outlets framed it - NewsCord"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQcUlFaFNwNVNsa1RTZTFkTEhaMmhGLXBpZnZjeVAwaDBSSzRjZUFIMTQ3UTctckwtOXRvUDB6c0sxUGVlRWY5SUM5ZUllV1doQVhoLWkyd3IxdFdkRWJGY2J0ZGxyNmNwTEU3LVVBdDlXWVlxM2QtdGpHWmtBMGl0WkFWQzNucTVFTF9lelY3ZjdXNzFYeDhN?oc=5",
@@ -260,61 +302,17 @@
       "title": "US stocks sink on worries about a possible hike to interest rates this year by the Federal Reserve - AP News"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1nakJLS3BWWGc3VGNEb2E0R2xia3J3eS01Tko5NzVjdktuUV8yLW5FYmptVDZrREM1VS0tZUV2UzNFeGt5THRSVkVCeTJwblJZbDhTbHE1RUR3QmlGbjRkMnhtWTYzWW1JbWVpcXJXZGxBV0d1S0h5aGZn?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPY2Rodm44akFzYjFsTkk2ZXpZQTliWnJpUlc0TGQtYzFRMEFRSUlIYmNnaE5NeERfV2c2Njdud3RjcXlnNklUYTIzbE5kSDRBRHl1SW5YeHRLS0NibjRUNF9wRDFNQXg1UDRrdTB6ajhTM0U3MnZNNmdhdGFfamZ2ZHp1YmVBUQ?oc=5",
       "matched_terms": [],
-      "published": "2026-07-09T07:00:00+00:00",
+      "published": "2026-06-22T07:00:00+00:00",
       "sentiment_label": "neutral",
       "sentiment_score": 0.0,
-      "source": "Barron's",
-      "themes": [
-        "rates / inflation",
-        "China / policy"
-      ],
-      "ticker": "MARKET",
-      "title": "How Shifting Fed Policy and Rising Bond Yields Could Finally Crack the Stock Market - Barron's"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQM0N3MjBOMzV3c24tR2Q4OUhXMkhzZGFpNVpHOEJqZU42SnJiel9TWFFZd2hxeFJYenZDY1h3MXJyX2FjZXF4Unl1QUhMeldPWFhUV08wM09IQTd5cW5EblEtR1JMRmJkR0t5TGJMLWxYQ01CWEhrSkl0TUdpZjc0WWFlQnIxQ2Q5dkVEWkk1WUtLOHlxY2lyOXhWUi11TE9mSE1CeV8ySm9tXy1STkJMUUVXckZCb1FpbExvWGhn?oc=5",
-      "matched_terms": [
-        "raises"
-      ],
-      "published": "2026-06-29T07:00:00+00:00",
-      "sentiment_label": "positive",
-      "sentiment_score": 0.32,
-      "source": "The Berkshire Edge",
+      "source": "invesco.com",
       "themes": [
         "rates / inflation"
       ],
       "ticker": "MARKET",
-      "title": "CAPITAL IDEAS: What happens to the stock market if the Federal Reserve raises interest rates? - The Berkshire Edge"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNRTA5ZVFoVU0xb1h6cUpDUTZiQnRObGN1andUQmU0NkpZbVc5Zk8xNlB0Tmk5VUlGLWpIbGZvaGhra19vcFhwZWJGNmlrU3duc0hzNk9nOWxncllld09FcGJDdFAzc000MmI2emdPUnZGNzdZTjZwOGVZRzZxSXFWTkdVaUs1TGFKelJSUFpJYk1GdlFuaUpj?oc=5",
-      "matched_terms": [
-        "warning"
-      ],
-      "published": "2026-07-16T10:02:00+00:00",
-      "sentiment_label": "negative",
-      "sentiment_score": -0.32,
-      "source": "The Motley Fool",
-      "themes": [
-        "general market"
-      ],
-      "ticker": "MARKET",
-      "title": "Investors Just Got a Subtle Warning From the Federal Reserve. History Says the Stock Market Will Do This Next. - The Motley Fool"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxObEkyNnNKUlBxZndnaXkzLWZwTDdjVFFoSE04R09vQ2k5THM3dWVQVFdmU2RNcFVIMjhvdHdGYmhhelZaNnlpRkxweTd4VUYxeVVJdzNXYnNwY092MXhzU0l4WVk3eHNYZXNZLV92WEdCTzRleWFBVmw4N2cySXAyZVBwU2F5NDhfRWxENl8xU2FxVkNkS0dianU0THhvVWwtT1c5MQ?oc=5",
-      "matched_terms": [],
-      "published": "2026-07-07T07:00:00+00:00",
-      "sentiment_label": "neutral",
-      "sentiment_score": 0.0,
-      "source": "24/7 Wall St.",
-      "themes": [
-        "general market"
-      ],
-      "ticker": "MARKET",
-      "title": "Will the Federal Reserve Crush the Small-Cap Stock Revival? - 24/7 Wall St."
+      "title": "Why the Fed may need to stay patient - invesco.com"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQNXgzLXpId1Nfb2JFdTB1cnhvRVNEcFh0RGd3UGJoUXc1elJITHQxbGN6ZUw1WWFWS0xXMnNLY3NSa1NHSUlhVi14QzR5YjhGWWlhX3BaMWg5NE1fYzI2Wl8zRkxoSmdmSGRobHlDOUtYZ2k0YWk5UG9RcGY0bU9IQ2E1MFc3YkJBd01ZNkFpRm1yczloWV9WeDF5Smh4T1otMW14Vmln?oc=5",
@@ -330,9 +328,48 @@
       "title": "Trading Day: US stocks end lower, dollar jumps as Federal Reserve kicks off Warsh era - Reuters"
     },
     {
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNSlNyV3RENVlMZmVKQXk4UWZzdGtYS1BKN2hsMVhUSjMteUlVNzJBcHBCc0dxQXhYc3JfWE9lTDBRUmduRzQ5NTh2LUNUSWx6WnFaVkx5c1N1SkpUaVZyUVRfSlNGNDU0elBQN29hMzM4UjRCRGZxNExoYU1VMk9BbVdPU1hxZXdLUWxSenZYZEdVa010NUVrT0hn?oc=5",
+      "matched_terms": [],
+      "published": "2026-07-27T13:57:04+00:00",
+      "sentiment_label": "neutral",
+      "sentiment_score": 0.0,
+      "source": "Moomoo",
+      "themes": [
+        "general market"
+      ],
+      "ticker": "SPY",
+      "title": "$SPDR S&P 500 ETF (SPY.US)$ please DONT hold here, keep dumping....Lol - Moomoo"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQOTdTWVRjSFFJZjY0UkhDeVJzMXBodnFqOVBIajFQRU9Bak1PYWFhOE52bmtMOVBUc2xCWXFzWDVZM1FXS3l0UUpuYXpPOXZUUlQ2REw4bmNWa3BBSzM2Skl6WHVfS3JIMlFCaDJOQnpZMXlZVjJZUEVERm5PRFVkYUNrZ1JOOC0xWGxKVk9vM19vbV9CU05EbWpaWnVqS1B4dkdXLUhxZ3E0dTk3TXNfUm1vQ1Z3QQ?oc=5",
+      "matched_terms": [],
+      "published": "2026-07-27T18:32:20+00:00",
+      "sentiment_label": "neutral",
+      "sentiment_score": 0.0,
+      "source": "24/7 Wall St.",
+      "themes": [
+        "general market"
+      ],
+      "ticker": "SPY",
+      "title": "UPRO: The One Rule You Need to Know Before Buying This 3X S&P 500 ETF - 24/7 Wall St."
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPV2d1SS1DVG5felpVbWhpNWlNNEcwR1Z4b1l1MzJRVm5qR09rTmtxMll3RTA1bzVGSjVTQUNkT1l1R2gzQ1ZGbTJxal8weWxPbVFRY0FuaXNXOHAyWEYxREFva3JLMS1OQVl6YTQzT1R0WnZJVkwzdUlRR0RDTnNjSlRpSUV6MGFRWHVqQjh4eXdhWGM?oc=5",
+      "matched_terms": [],
+      "published": "2026-07-26T22:55:23+00:00",
+      "sentiment_label": "neutral",
+      "sentiment_score": 0.0,
+      "source": "Yahoo Finance",
+      "themes": [
+        "general market"
+      ],
+      "ticker": "SPY",
+      "title": "Why This Leveraged S&P 500 ETF Can Lose Money Even When Stocks Rise - Yahoo Finance"
+    },
+    {
       "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPWTV4Q01NVnlwV3NNb3dMUWhreEJzQ2l0QmY2Tkw0SXRCbTJvUFJHVzhOVURrUFZSLWlNME9BeHFPdU43QXFaM19IUTB3MDQ3em83ekVsYmROUDFyXzI5c1doUHVneEV2aVZhZDdfTm5LVlNXVzUzQjZYX3pQVVdSSGNnZ3k1dw?oc=5",
       "matched_terms": [],
-      "published": "2026-07-23T19:30:38+00:00",
+      "published": "2026-07-23T20:03:00+00:00",
       "sentiment_label": "neutral",
       "sentiment_score": 0.0,
       "source": "The Motley Fool",
@@ -341,86 +378,6 @@
       ],
       "ticker": "SPY",
       "title": "Is It Too Late to Buy the Vanguard S&P 500 ETF? Here's What History Says. - The Motley Fool"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQaTFBRHU4WUhSdkZjTWxHeHJpSXFibEhNaTg0emFBdUx5UHNGOWkyQVp3dWtfSVptYndFeDJzRXRDUDZHNVRRaTJkZjZRX21nZEwzcnNpdGJOc1BibElPYm00czlDV2xSZjEtN1RSLVVEbThBajUydkFOcmtYS2pnOERmTk8yTXZZa3hrQnp4a2RZQTBkUmdkOdIBngFBVV95cUxQbXJIMWgzNmF0UlBMMW0zbmNPSThaZU4tMHllRzFOSjNLRnpub3BhdUhqZksxOERQSmVJMTNPWVhCai1KZ1d4dUtSTVRLVkZGSXBTYk9tREx2dmFZbnFnNXBCWVNmczhDVkc1NGhVbU1kdjlnbjN5aDFqaUc1MWVER0cySzRDMENFRUlrM1NURDJVd2hGbVJ4Yk5fT1JOZw?oc=5",
-      "matched_terms": [
-        "risk"
-      ],
-      "published": "2026-07-23T19:05:05+00:00",
-      "sentiment_label": "negative",
-      "sentiment_score": -0.16,
-      "source": "CNBC",
-      "themes": [
-        "general market"
-      ],
-      "ticker": "SPY",
-      "title": "As the S&P 500 sells off, traders eye key 'risk pivot' level - CNBC"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQakNHb2JaRUVxTndQb1Q1azdVdTZPWDcyblVyR0lfMU02VGNMb2Y0VXg3X0hQbS1nV21sSGpPUmx0T2ZlNVUzVEhLZzVHWGpYX010REFFUldPTVRrUjlFZURqNVNZTkx2VHA4bEpkWmF3TlI0VzBhNzhycUw2UHRaMm5YQQ?oc=5",
-      "matched_terms": [],
-      "published": "2026-07-23T19:50:18+00:00",
-      "sentiment_label": "neutral",
-      "sentiment_score": 0.0,
-      "source": "ETF Database",
-      "themes": [
-        "general market"
-      ],
-      "ticker": "COST",
-      "title": "Supercharge VOO With 2 Low-Cost Vanguard ETFs - ETF Database"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQSVF6UWxNR2ZPMHZhcGU4djJqcGplRS1NU1owWjY3bzllenZqZjVTTUVLZ3VtblhhaXgyMmR2SlZLSWp4MlFWdl9xQ1lnV094MU5NY2lyQzdFdWh6QUtmTWVTTFdDeEE2aXJCZTVmTmFieTlObnd2M21tUlY5ZjNyQk1sc3VLVy1IcVFiWl94a2pKSDZRSXFacEdMWi1raUs5MmRaT1ZDdG9zQ01Ucl9QZEU1dWxsUXJ2c1lZQjZMRVdOSVBvSS1xT19jcGZ6Y25ySkNfWnRqOWJTOW0ydTJZLVdPeHFNTjAzNnc?oc=5",
-      "matched_terms": [],
-      "published": "2026-07-23T19:27:18+00:00",
-      "sentiment_label": "neutral",
-      "sentiment_score": 0.0,
-      "source": "The Globe and Mail",
-      "themes": [
-        "general market"
-      ],
-      "ticker": "SPY",
-      "title": "Is It Too Late to Buy the Vanguard S&P 500 ETF? Here's What History Says. - The Globe and Mail"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNQUxzRzZLSzR2X3EtWHJVYlo4ak1uRjJBQkxmdTA1WThfYzNseGZKMUZpWGpTblVoNDZKWDlGVExONmYwMkNwbmJhZ0ZKalFicGFXTVhvX2VzQmVKNjRrU1B0Yy0xelRpTVpnX0hiVGtjZG41SmZuMHZCcjlXWWd3dkhxVnRtYUZqM1Y4b0dzRQ?oc=5",
-      "matched_terms": [],
-      "published": "2026-07-23T09:46:00+00:00",
-      "sentiment_label": "neutral",
-      "sentiment_score": 0.0,
-      "source": "Yahoo Finance",
-      "themes": [
-        "general market"
-      ],
-      "ticker": "SPY",
-      "title": "Should You Invest in the S&P 500 Right Now or Wait? History Offers a Clear Answer. - Yahoo Finance"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFA5UXRvZEwyTEt6T2x0OGJmLXNhM1BXLUUyTTlXZWY1S1VXSG5CSHMzSUpJRVVzcVRKYXd0YzI5Vm9Gc2pDY18zdGR1WU9GZU5oWTQzTWlDQnR3WlJwQVZka1oteS1VU3YtWG5kZEJEZnVmM0k?oc=5",
-      "matched_terms": [],
-      "published": "2026-07-21T07:00:00+00:00",
-      "sentiment_label": "neutral",
-      "sentiment_score": 0.0,
-      "source": "CME Group",
-      "themes": [
-        "general market"
-      ],
-      "ticker": "SPY",
-      "title": "E-mini S&P 500 Futures Overview - CME Group"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOWFNZMEpaLS1SN0pIOEp1X2t1X1VnSkIzcmNzeHFWZmVJU1BiZWtFV0VuX2ZuejlvQW5RTWlOM29pNThzMGFGN1pnZGVxMkdRSmQ4Y0pQbU90R1IydmlSbVROcmV6Ykp5WnR1YzdwY2IxRDhsZldYV0sxMThZa195M2dMV3B6S0hNa3NjRzRHa1QtVVlrc05iM1RMNWw0QQ?oc=5",
-      "matched_terms": [],
-      "published": "2026-07-21T12:00:00+00:00",
-      "sentiment_label": "neutral",
-      "sentiment_score": 0.0,
-      "source": "24/7 Wall St.",
-      "themes": [
-        "general market"
-      ],
-      "ticker": "SPY",
-      "title": "Here\u2019s the Smartest S&P 500 ETF to Buy Before July Ends - 24/7 Wall St."
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFAwOVFpQTBacEtRYlRMTWhJT0Ryb0pNNG9aXzVkLVBGTUF0cVNSRXIzS1lnZ0Y4UFI1cWUtM3JUbl9aT3p2RmYycnY2LTZuQS1XVDBGYzdCakl5b1BqcmNzQUtSN1k?oc=5",
@@ -436,75 +393,158 @@
       "title": "The Top S&P 500 ETFs for July 2026: IVV, VOO and More - NerdWallet"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE96dmdHODg4dkNRRE4tdkZMNGo4RlRwSXpGVU9ZdkE4R3VIbjhkRk0ySzZUN0Qxdjd5SEI2NTgxSi1uc0V5Mi1KVWJhb3NBUm1pQ0pYLUl4WFJ5UktNdGJGUGQ0TmtrLUhYQ1dHUlAzdGFiZk80VGp4UTFrMm4?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMihgJBVV95cUxPRlpJZWtMNmQ4eEEybjJIT1R0OEZWbXAxYUpzc1B6X041NV9yUUcxdkNtaUx6RWFmRXU4TFJ5dlRCSnFleGlUQjcyd3g0alRqbWU4Mk1UQlhQS3NIOTFCbTlvc01KZmN6MGFRNnBRVm5PYlRBZXlBam5BV1VYZU11bXg5NFdSdWZjaml3aWNyVnhMWVBtRWdydEpjcnRNY0hYNWFFNFEwczNPWWwwd3E1dWh3MWJHZzVXblVIaFc0T1BlTEdBYmgxblR1YUUtelJwcWdLNnAwaklhQkZjUDZNcl9NSVlpNTlBY1hHM2IxT3hWWWxzWjNmR2tsZFFaZndLQ3VxYk5R?oc=5",
       "matched_terms": [],
-      "published": "2026-07-20T20:05:00+00:00",
+      "published": "2026-07-26T17:22:49+00:00",
+      "sentiment_label": "neutral",
+      "sentiment_score": 0.0,
+      "source": "The Globe and Mail",
+      "themes": [
+        "general market"
+      ],
+      "ticker": "SPY",
+      "title": "Is It Really Safe to Invest in the Vanguard S&P 500 ETF Right Now? Here's What History Says. - The Globe and Mail"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBYNzdTd0lleFgyYXRoTzRHVF9KWHJPWFdUdm5TRWZVazFoSnZPQnBLYzZFdmc3WklMNmxQeElmbHpTYnpIdHMxT0J5T21xMmpvY1ItZllTTjdRakNEZlBmSEt0NDZzNGtqaFFUZ1gzU2Z6UQ?oc=5",
+      "matched_terms": [],
+      "published": "2026-07-10T07:00:00+00:00",
       "sentiment_label": "neutral",
       "sentiment_score": 0.0,
       "source": "The Motley Fool",
       "themes": [
         "general market"
       ],
-      "ticker": "AAPL",
-      "title": "Why Apple Stock Dropped Today - The Motley Fool"
+      "ticker": "SPY",
+      "title": "Best S&P 500 ETFs to Buy in 2026 - The Motley Fool"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxON1hZUG51eU9SOVJtM1J5a18yeDJ6R0pVODBPcWlDZ0pQckRxYjRwUHBybU05bVdNSUNrX2g3d0lPa2Nvd255ZkVuODNtV0l5SGxuQWQzb3BmVVJiQnJXTWJrZUZrZU90YjZVVF9MVHNISU1jeXNkZkJHR0dfZm5yYlpjTVlsM1ZndHh6VVNJNm5YRWlVUUdsNThYLTBiOW40Nl9oTDVzU3pGM20tdjM1YVcyQ0RmTnN6eno3M0hyU25zX3hJZEI1RlZqaWZwcXZWbEtXRzA4YnByRGc?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPd0hNQWdqVnQzbG5qaWlURFVqN1VPM2lXMnFOMjZ0WWlUc1Y4OUo0WTJERjdSTGZGWVR6cnZyQ1hhRlNpcGsxdWRQVmZJUUNuQUdVemw2ZWFmLUF1cHhnTzhoRVVSSlFkc3J6REtoeDFMdTVsSnktRnlDVUtMZkkwUllrODVON1dPVjZndl9NWlBNS0plcXJvY1pJWGFwZm8y?oc=5",
       "matched_terms": [],
-      "published": "2026-07-23T20:47:00+00:00",
-      "sentiment_label": "neutral",
-      "sentiment_score": 0.0,
-      "source": "MarketWatch",
-      "themes": [
-        "general market"
-      ],
-      "ticker": "AAPL",
-      "title": "S&P 500 flashes sell signals \u2014 options traders brace for wild swings in Apple, Meta and Microsoft - MarketWatch"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOUVlPM1BUcDRUcVl5MDg5c0pIVENwT0QxMHJaR2ZLVFd2UzZnQUhLcGc0bDl1SlRRLUU5d3J6T2YyTzM2czdqbHUybkNlRDUyZE9WWndDWVVqell3SDJlelpvSUtTZUN6dS1qVGxaUmJJZVdYSjY4b3I4UkQwY1FqSjhMV0lNSlBPWFF0RVJQUU9LSWJXbkJVS1RjM0w1eUdweXY3Zmg2ZEZfeGlrV0RVbnFtZGtBSFRYWUx0ZF9xWTg1RUtWU19oc1RLS25EUQ?oc=5",
-      "matched_terms": [],
-      "published": "2026-07-22T17:08:06+00:00",
+      "published": "2026-07-25T11:15:00+00:00",
       "sentiment_label": "neutral",
       "sentiment_score": 0.0,
       "source": "Yahoo Finance",
       "themes": [
         "general market"
       ],
-      "ticker": "AAPL",
-      "title": "Is Apple stock overvalued? Here's what AlphaSpace valuation metrics say. - Yahoo Finance"
+      "ticker": "SPY",
+      "title": "Prediction: This Unstoppable ETF Will Crush the S&P 500 in 2026 and Beyond - Yahoo Finance"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQUUYyZlZpQ20tZHdpb2VuVFlOc2NxcU5EcXIyUFplRV8xb192RjBzdVZBTXliZURFMUQyak1NRGJvYzZDOVhCNEJ4aG0xRUJZNVpISG1oenJHSzZIbnFVbE1qT0FEWUVoazA3c29RWUlnTWFSTU0wc2V0RGRkUE1raTlLZV9Pb09yLWd1RGFGNG55S2RGZ1l2dXVjbDdmUQ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNNmd0M05vNUFOZG84MEpPeF80RmdtQXZKRHVnaVdfU0h1SUUweEtZZ21Da2JBczFsdEFmU1VQMGVBc0N3VUxjUm4tNkpHQ1U4aklWZVctVnNFZElmbnhSMi1jaXBNc0xQckJKM3E1ZDRXejkyd2JjMmh1a09Mb2FfWXJTYkNwNmpJeFZXeWE2YjlFVUhwSmVwQ01kbFNhMnpXY2x0Zko2eXZ1SURZd0FhSmFmWExJQ2ppWERwWHlvN0JqUzhGNmZoNEdIdmZtSWlNMnJ6V0p6eEMydw?oc=5",
       "matched_terms": [],
-      "published": "2026-07-23T12:09:37+00:00",
+      "published": "2026-07-27T20:04:15+00:00",
       "sentiment_label": "neutral",
       "sentiment_score": 0.0,
-      "source": "Trefis",
+      "source": "Yahoo Finance",
       "themes": [
-        "general market"
+        "AI / semiconductors"
       ],
       "ticker": "AAPL",
-      "title": "What Could Keep Apple Stock Climbing? - Trefis"
+      "title": "Apple overtakes Nvidia as most valuable company as iPhone maker avoids 'capex pitfalls' - Yahoo Finance"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQcjh1Tl9KYmpqUm1rUVNubjE3UUFKaHc4cE8zSEdSd2sxM0RjWDlGSnBBcnZlZVYzVkRmcTc4dXZTRHFtX042UGR6aVdFZ01VakVVVkM1a1ZfMUg5ZFM5UjcyOGtGYXNfOUxKNjNTaHIyQXg3SlluWU5QQXFBMjI2MG8wTUpyU1ZWUWRzLXdKOTJCd3pfTjc40gGcAUFVX3lxTE52YzFmVGhYUW9PQVJWQnJTYzVhWlNyRm9Fb2I1cUJvTEZSVi1PWEEwY2VWY0Z3VmlrUkxMUUJNTmZjMTdrTks1NXV1a1ZibUZBVWxnbUg3Q05jaHVlVFhCMWctLUdyOUtWR3JWOGFDQVZYWWY0a0t4bk1aMHJTYzNNQlBmVmFOZFlKbHZodWxubVo5YjZNd3FnMjV4OQ?oc=5",
+      "matched_terms": [],
+      "published": "2026-07-27T10:58:27+00:00",
+      "sentiment_label": "neutral",
+      "sentiment_score": 0.0,
+      "source": "CNBC",
+      "themes": [
+        "earnings"
+      ],
+      "ticker": "AAPL",
+      "title": "Apple options are doing something unusual into earnings - CNBC"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNQW56aHhzWW44Z2lueHZfd0Y1N0J2VGxSR3NGLUhFZ2lsZTZWcC1XSlZ3emU3NkRSa1N5S2JBS3dPU1dCOUZ2MS1CeER0MTlUcUVzSEFjOWhkeXZiNU02UUF1OENaRGhrN2U2N1JyblJtaS1RcmtfaFlFUEFXcmlGRTF1ckloSnlfSFhMUzRlS1YweFh6UEFJY3llWU9rZw?oc=5",
+      "matched_terms": [
+        "record"
+      ],
+      "published": "2026-07-27T20:33:00+00:00",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.27999999999999997,
+      "source": "Investor's Business Daily",
+      "themes": [
+        "earnings"
+      ],
+      "ticker": "AAPL",
+      "title": "Apple Stock Hits Record High Before Fiscal Q3 Earnings - Investor's Business Daily"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPWWNUNjB2NmhxT3Z1bEEyeWtvWmphWmE5UHBLdi1sY3RiVG5FMjhsM010eXpsX2JHNVZQTzJpaFJYWnhUTjR1eUI2aUJEZkRFc0hTRjQ4d1lDTnRQdmlWRE40Q1ZoZ2t6UXZTSElubzd1TTB6dUkwcHpVYTExcHg2WENtdUgwSTlNYXNycFpoNUZGSXh4djJWMg?oc=5",
+      "matched_terms": [],
+      "published": "2026-07-27T16:26:00+00:00",
+      "sentiment_label": "neutral",
+      "sentiment_score": 0.0,
+      "source": "The Motley Fool",
+      "themes": [
+        "earnings"
+      ],
+      "ticker": "AAPL",
+      "title": "1 Incredible Reason to Buy Apple Stock Before It Reports Earnings on July 30 - The Motley Fool"
     }
   ],
-  "generated_at": "2026-07-23T21:51:44.017976+00:00",
+  "generated_at": "2026-07-28T04:57:18.267470+00:00",
   "market": "us",
   "mode": "real",
   "summary": {
     "ai_layer": {
-      "analysis": "```json\n{\n  \"sentiment\": \"cautious\",\n  \"risks\": [\n    \"Rising oil prices and geopolitical tensions (e.g., Middle East, Iran) could increase inflationary pressures and reduce investor risk appetite.\",\n    \"Elevated 10-Year Treasury yields may negatively impact equity valuations, particularly for growth-oriented sectors like AI and tech.\",\n    \"Recent underperformance of retail traders and potential momentum meltdowns suggest increased volatility and potential overextension in certain market segments.\",\n    \"Short positions against the U.S. stock market at record levels may indicate heightened bearish sentiment, which could amplify downside risk if triggered.\"\n  ],\n  \"watchlist\": [\n    \"10-Year Treasury Yield (FRED)\",\n    \"Brent crude oil prices\",\n    \"Big Tech earnings performance (Alphabet, Tesla)\",\n    \"AI sector valuations and capex trends\",\n    \"Short interest in major indices and individual stocks\"\n  ],\n  \"research-note-conflicts\": [\n    \"Private research notes are not available to assess potential conflicts or overlays.\",\n    \"Public commentary from Lance Roberts / RIA raises caution about market bubbles and momentum risks, but these are not actionable signals for portfolio changes.\"\n  ],\n  \"recommended_posture\": {\n    \"allocation\": \"balanced\",\n    \"positioning\": \"maintain current allocations with a focus on liquidity and diversification\",\n    \"action\": \"monitor developments in oil prices, Treasury yields, and AI sector performance closely. Avoid overexposure to high-momentum or speculative assets. Reassess positioning if macroeconomic indicators or geopolitical risks escalate.\"\n  }\n}\n```",
+      "analysis": "```json\n{\n  \"sentiment\": \"cautiously neutral\",\n  \"risks\": [\n    \"Volatility from geopolitical pauses (e.g., US-Iran) may disrupt market stability.\",\n    \"Cooling oil prices may benefit energy sectors but could signal broader economic slowdown.\",\n    \"AI capex depreciation risks may pressure tech earnings and valuations.\",\n    \"Retail trader underperformance could indicate broader market sentiment shifts.\",\n    \"Uncertainty around Federal Reserve policy and task force objectives may influence rate expectations.\"\n  ],\n  \"watchlist\": [\n    \"10-Year Treasury Yield (FRED): Monitor for further declines and their impact on equity valuations.\",\n    \"Chip stocks (e.g., SK Hynix): Watch for continued sell-off or reversal.\",\n    \"AI-related capex and depreciation trends: Track earnings and technical indicators.\",\n    \"Federal Reserve policy statements and task force updates: Assess for shifts in monetary policy direction.\",\n    \"Oil prices: Monitor for sustained declines and their macroeconomic implications.\"\n  ],\n  \"research-note-conflicts\": [\n    \"No private research notes available to cross-check or validate public information.\",\n    \"Public commentary on AI capex and depreciation risks is cautionary but not actionable on its own.\"\n  ],\n  \"recommended_posture\": \"balanced\"\n}\n```",
       "model": "qwen3:14b",
       "note": "LLM output is a research overlay and should not override rule, risk, and price evidence by itself.",
-      "prompt_template": "You are a cautious portfolio research agent. Use the headlines, market-regime facts, private research notes and public information signs when present, and rule-based portfolio constraints to explain market sentiment and produce a conditional, non-execution investment posture. Do not promise returns. Return JSON with sentiment, risks, watchlist, research-note conflicts, and recommended posture. Public information signs have zero decision weight: use them to explain and form questions, never to override price, allocation, or risk rules.\n\nBenchmark: SPY\nRule engine posture: balanced\nNews score: 0.016\nPrivate research overlay status: empty\nPrivate research notes: []\nPublic information signs: [{'title': 'Agencies issue joint statement on handling of highly sensitive information during bank examinations', 'source': 'Federal Reserve', 'signal': 'event', 'why_it_matters': 'Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting.', 'decision_use': 'information_only'}, {'title': 'Federal Reserve Board issues enforcement action with former chief lending officer of Heritage State Bank', 'source': 'Federal Reserve', 'signal': 'event', 'why_it_matters': 'Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting.', 'decision_use': 'information_only'}, {'title': \"Minutes of the Board's discount rate meetings on June 8 and June 17, 2026\", 'source': 'Federal Reserve', 'signal': 'event', 'why_it_matters': 'Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting.', 'decision_use': 'information_only'}, {'title': 'Federal Reserve announces the leadership and objectives of its task forces to advance the conduct of monetary policy', 'source': 'Federal Reserve', 'signal': 'event', 'why_it_matters': 'Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting.', 'decision_use': 'information_only'}, {'title': '10-Year Treasury Yield', 'source': 'FRED / Federal Reserve Bank of St. Louis', 'signal': 'rising', 'why_it_matters': 'Long-term yields affect equity valuation, borrowing costs, and the relative appeal of bonds versus stocks. Latest change: +0.04 percentage points.', 'decision_use': 'information_only'}, {'title': 'Why Retail Traders Consistently Underperform Over Time', 'source': 'Lance Roberts / RIA', 'signal': 'mixed', 'why_it_matters': 'Commentary supplies a research hypothesis and watch items; it is not independent evidence for changing portfolio weights.', 'decision_use': 'information_only'}, {'title': 'Momentum Meltdown Catches Traders By Surprise', 'source': 'Lance Roberts / RIA', 'signal': 'cautionary', 'why_it_matters': 'Technical and positioning commentary can identify conditions to test against current price trend, drawdown, and concentration rules.', 'decision_use': 'information_only'}, {'title': 'Home Affordability: Better Than Headlines Suggest', 'source': 'Lance Roberts / RIA', 'signal': 'mixed', 'why_it_matters': 'Commentary supplies a research hypothesis and watch items; it is not independent evidence for changing portfolio weights.', 'decision_use': 'information_only'}, {'title': 'Spotting Market Bubbles: Why History Says It\u2019s Nearly Impossible', 'source': 'Lance Roberts / RIA', 'signal': 'cautionary', 'why_it_matters': 'Commentary supplies a research hypothesis and watch items; it is not independent evidence for changing portfolio weights.', 'decision_use': 'information_only'}]\nHeadlines: ['Stock market today: Dow, S&P 500, Nasdaq sell off as rising oil prices, bond yields, and AI capex weigh - Yahoo Finance', 'Stock Market on July 23, 2026: Dow, S&P 500 and Nasdaq close sharply lower as Big Tech stocks slump after earnings disappoint; Oil prices rise amid Middle East worries while Treasury yields climb - MarketWatch', 'Dow tumbles 500 points as Brent crude tops $100, Alphabet and Tesla drop: Live updates - CNBC', 'The world\u2019s most important market is flashing red about the Iran war - CNN', 'Where the Stock Market May Be Heading Next and What to Buy Now - Morningstar', 'Investors Have Placed Record Short Bets Against the US Stock Market - Business Insider', 'Something Weird Is Happening Beneath the Stock Market\u2019s Surface - WSJ', \"Shortsighted stock market can no longer brush off war: 'It's too hard to ignore $100 oil' - CNBC\", 'Is the S&P 500 in an AI bubble? Key risks & market outlook - Investing.com', \"UBS hikes its year-end S&P 500 target to 8,100. Here's why - CNBC\"]",
+      "prompt_template": "You are a cautious portfolio research agent. Use the headlines, market-regime facts, private research notes and public information signs when present, and rule-based portfolio constraints to explain market sentiment and produce a conditional, non-execution investment posture. Do not promise returns. Return JSON with sentiment, risks, watchlist, research-note conflicts, and recommended posture. Public information signs have zero decision weight: use them to explain and form questions, never to override price, allocation, or risk rules.\n\nBenchmark: SPY\nRule engine posture: balanced\nNews score: -0.011\nPrivate research overlay status: empty\nPrivate research notes: []\nPublic information signs: [{'title': 'Agencies issue joint statement on handling of highly sensitive information during bank examinations', 'source': 'Federal Reserve', 'signal': 'event', 'why_it_matters': 'Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting.', 'decision_use': 'information_only'}, {'title': 'Federal Reserve Board issues enforcement action with former chief lending officer of Heritage State Bank', 'source': 'Federal Reserve', 'signal': 'event', 'why_it_matters': 'Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting.', 'decision_use': 'information_only'}, {'title': \"Minutes of the Board's discount rate meetings on June 8 and June 17, 2026\", 'source': 'Federal Reserve', 'signal': 'event', 'why_it_matters': 'Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting.', 'decision_use': 'information_only'}, {'title': 'Federal Reserve announces the leadership and objectives of its task forces to advance the conduct of monetary policy', 'source': 'Federal Reserve', 'signal': 'event', 'why_it_matters': 'Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting.', 'decision_use': 'information_only'}, {'title': '10-Year Treasury Yield', 'source': 'FRED / Federal Reserve Bank of St. Louis', 'signal': 'falling', 'why_it_matters': 'Long-term yields affect equity valuation, borrowing costs, and the relative appeal of bonds versus stocks. Latest change: -0.02 percentage points.', 'decision_use': 'information_only'}, {'title': 'Are US Treasuries Still A Safe Asset?', 'source': 'Lance Roberts / RIA', 'signal': 'mixed', 'why_it_matters': \"Macro commentary provides a scenario to compare with primary economic data and the portfolio's rate sensitivity.\", 'decision_use': 'information_only'}, {'title': 'The AI Capex Bill Comes Due', 'source': 'Lance Roberts / RIA', 'signal': 'cautionary', 'why_it_matters': 'Technical and positioning commentary can identify conditions to test against current price trend, drawdown, and concentration rules.', 'decision_use': 'information_only'}, {'title': 'AI Capex Depreciation Risk Is The Catch To Record Earnings', 'source': 'Lance Roberts / RIA', 'signal': 'cautionary', 'why_it_matters': 'Commentary supplies a research hypothesis and watch items; it is not independent evidence for changing portfolio weights.', 'decision_use': 'information_only'}, {'title': 'Why Retail Traders Consistently Underperform Over Time', 'source': 'Lance Roberts / RIA', 'signal': 'mixed', 'why_it_matters': 'Commentary supplies a research hypothesis and watch items; it is not independent evidence for changing portfolio weights.', 'decision_use': 'information_only'}]\nHeadlines: ['Dow closes more than 250 points higher, aided by cooling oil prices - CNBC', 'Stock market today: Dow, S&P 500, Nasdaq futures rise as oil falls, investors brace for busy week - Yahoo Finance', 'Markets News, July 27, 2026: Nasdaq Slips as Chip Stocks Drop, Dow Rises; Oil Prices Plunge on Pause in US-Iran Hostilities - Investopedia', \"U.S. stock futures slip, South Korea's Kospi plunges over 8%: Live updates - CNBC\", 'U.S. and Korean tech stocks are now tightly linked \u2014 and that could be a worry for investors - CNBC', 'SK Hynix shares plunge 13% in Seoul as chip sell-off deepens - CNBC', 'Earnings live: LVMH sales grow as US luxury shoppers boost results - Yahoo Finance', 'Oil prices slump as US and Iran pause strikes - Yahoo Finance', 'September market outlook: historical weakness meets 2026 volatility - Investing.com', 'S&P500: Breaking In Slow Motion (Technical Analysis) (SP500) - Seeking Alpha']",
       "provider": "ollama",
       "status": "llm_generated"
     },
     "article_count": 36,
-    "confidence": 0.8023333333333333,
+    "confidence": 0.8016666666666667,
     "forecast_bias": "neutral",
     "information_signs": {
       "commentary_signs": [
+        {
+          "category": "market commentary",
+          "decision_use": "information_only",
+          "portfolio_weight": 0.0,
+          "published": "2026-07-27T09:34:50+00:00",
+          "signal": "mixed",
+          "source": "Lance Roberts / RIA",
+          "source_tier": "commentary",
+          "title": "Are US Treasuries Still A Safe Asset?",
+          "unit": null,
+          "url": "https://realinvestmentadvice.com/resources/blog/are-us-treasuries-still-a-safe-asset-copy/",
+          "value": null,
+          "why_it_matters": "Macro commentary provides a scenario to compare with primary economic data and the portfolio's rate sensitivity."
+        },
+        {
+          "category": "market commentary",
+          "decision_use": "information_only",
+          "portfolio_weight": 0.0,
+          "published": "2026-07-25T13:07:52+00:00",
+          "signal": "cautionary",
+          "source": "Lance Roberts / RIA",
+          "source_tier": "commentary",
+          "title": "The AI Capex Bill Comes Due",
+          "unit": null,
+          "url": "https://realinvestmentadvice.com/resources/blog/the-ai-capex-bill-comes-due/",
+          "value": null,
+          "why_it_matters": "Technical and positioning commentary can identify conditions to test against current price trend, drawdown, and concentration rules."
+        },
+        {
+          "category": "market commentary",
+          "decision_use": "information_only",
+          "portfolio_weight": 0.0,
+          "published": "2026-07-24T09:28:15+00:00",
+          "signal": "cautionary",
+          "source": "Lance Roberts / RIA",
+          "source_tier": "commentary",
+          "title": "AI Capex Depreciation Risk Is The Catch To Record Earnings",
+          "unit": null,
+          "url": "https://realinvestmentadvice.com/resources/blog/ai-capex-depreciation-risk-is-the-catch-to-record-earnings/",
+          "value": null,
+          "why_it_matters": "Commentary supplies a research hypothesis and watch items; it is not independent evidence for changing portfolio weights."
+        },
         {
           "category": "market commentary",
           "decision_use": "information_only",
@@ -532,55 +572,13 @@
           "url": "https://realinvestmentadvice.com/resources/blog/momentum-meltdown-catches-traders-by-surprise/",
           "value": null,
           "why_it_matters": "Technical and positioning commentary can identify conditions to test against current price trend, drawdown, and concentration rules."
-        },
-        {
-          "category": "market commentary",
-          "decision_use": "information_only",
-          "portfolio_weight": 0.0,
-          "published": "2026-07-17T09:19:00+00:00",
-          "signal": "mixed",
-          "source": "Lance Roberts / RIA",
-          "source_tier": "commentary",
-          "title": "Home Affordability: Better Than Headlines Suggest",
-          "unit": null,
-          "url": "https://realinvestmentadvice.com/resources/blog/home-affordability-today-is-better-than-the-headlines/",
-          "value": null,
-          "why_it_matters": "Commentary supplies a research hypothesis and watch items; it is not independent evidence for changing portfolio weights."
-        },
-        {
-          "category": "market commentary",
-          "decision_use": "information_only",
-          "portfolio_weight": 0.0,
-          "published": "2026-07-13T09:48:00+00:00",
-          "signal": "cautionary",
-          "source": "Lance Roberts / RIA",
-          "source_tier": "commentary",
-          "title": "Spotting Market Bubbles: Why History Says It\u2019s Nearly Impossible",
-          "unit": null,
-          "url": "https://realinvestmentadvice.com/resources/blog/spotting-market-bubbles-why-history-says-its-nearly-impossible/",
-          "value": null,
-          "why_it_matters": "Commentary supplies a research hypothesis and watch items; it is not independent evidence for changing portfolio weights."
-        },
-        {
-          "category": "market commentary",
-          "decision_use": "information_only",
-          "portfolio_weight": 0.0,
-          "published": "2026-07-11T09:42:15+00:00",
-          "signal": "cautionary",
-          "source": "Lance Roberts / RIA",
-          "source_tier": "commentary",
-          "title": "Big Bank Earnings Kick Off Earnings Season",
-          "unit": null,
-          "url": "https://realinvestmentadvice.com/resources/blog/big-bank-earnings-kick-off-earnings-season/",
-          "value": null,
-          "why_it_matters": "Technical and positioning commentary can identify conditions to test against current price trend, drawdown, and concentration rules."
         }
       ],
       "decision_policy": {
         "portfolio_weight": 0.0,
         "rule": "Information signs may explain conditions and create review questions, but they do not change target weights, trade instructions, or risk limits. Any future influence must be explicit, bounded, and recorded with a reason."
       },
-      "generated_at": "2026-07-23T21:51:34.699297+00:00",
+      "generated_at": "2026-07-28T04:57:06.656835+00:00",
       "market": "us",
       "primary_signs": [
         {
@@ -643,29 +641,29 @@
           "category": "rates / financial conditions",
           "decision_use": "information_only",
           "portfolio_weight": 0.0,
-          "published": "2026-07-22",
-          "signal": "rising",
+          "published": "2026-07-24",
+          "signal": "falling",
           "source": "FRED / Federal Reserve Bank of St. Louis",
           "source_tier": "primary",
           "title": "10-Year Treasury Yield",
           "unit": "%",
           "url": "https://fred.stlouisfed.org/series/DGS10",
-          "value": 4.67,
-          "why_it_matters": "Long-term yields affect equity valuation, borrowing costs, and the relative appeal of bonds versus stocks. Latest change: +0.04 percentage points."
+          "value": 4.69,
+          "why_it_matters": "Long-term yields affect equity valuation, borrowing costs, and the relative appeal of bonds versus stocks. Latest change: -0.02 percentage points."
         },
         {
           "category": "rates / policy expectations",
           "decision_use": "information_only",
           "portfolio_weight": 0.0,
-          "published": "2026-07-22",
-          "signal": "rising",
+          "published": "2026-07-24",
+          "signal": "falling",
           "source": "FRED / Federal Reserve Bank of St. Louis",
           "source_tier": "primary",
           "title": "2-Year Treasury Yield",
           "unit": "%",
           "url": "https://fred.stlouisfed.org/series/DGS2",
-          "value": 4.31,
-          "why_it_matters": "The 2-year yield is sensitive to expected Federal Reserve policy and near-term financial conditions. Latest change: +0.05 percentage points."
+          "value": 4.33,
+          "why_it_matters": "The 2-year yield is sensitive to expected Federal Reserve policy and near-term financial conditions. Latest change: -0.04 percentage points."
         },
         {
           "category": "labor market",
@@ -699,7 +697,7 @@
           "category": "rates / growth expectations",
           "decision_use": "information_only",
           "portfolio_weight": 0.0,
-          "published": "2026-07-22",
+          "published": "2026-07-24",
           "signal": "positive",
           "source": "FRED / U.S. Treasury",
           "source_tier": "primary",
@@ -715,7 +713,7 @@
       "source_status": [
         {
           "item_count": 5,
-          "latest_published": "2026-07-20T09:22:00+00:00",
+          "latest_published": "2026-07-27T09:34:50+00:00",
           "source": "Lance Roberts / RIA",
           "status": "ok",
           "url": "https://realinvestmentadvice.com/feed/"
@@ -740,14 +738,14 @@
     "investment_posture": "balanced",
     "label": "neutral",
     "negative_count": 3,
-    "neutral_count": 28,
-    "overall_score": 0.015555555555555553,
-    "positive_count": 5,
+    "neutral_count": 29,
+    "overall_score": -0.011111111111111115,
+    "positive_count": 4,
     "rationale": "News and price evidence are mixed or not strong enough for a directional overlay.",
     "recommended_action": "follow target weights and rule-based trims/adds; do not override price evidence with headlines alone",
     "research_overlay": {
       "decision_use": "No private research overlay was applied.",
-      "generated_at": "2026-07-23T21:51:33.384786+00:00",
+      "generated_at": "2026-07-28T04:57:05.284673+00:00",
       "note": "No supported research notes were found in the configured directory.",
       "note_count": 0,
       "notes": [],
@@ -760,8 +758,12 @@
     "source_mode": "rss",
     "top_themes": [
       {
-        "count": 24,
+        "count": 22,
         "theme": "general market"
+      },
+      {
+        "count": 6,
+        "theme": "earnings"
       },
       {
         "count": 5,
@@ -769,48 +771,35 @@
       },
       {
         "count": 4,
-        "theme": "earnings"
-      },
-      {
-        "count": 3,
-        "theme": "macro risk"
-      },
-      {
-        "count": 2,
         "theme": "AI / semiconductors"
+      },
+      {
+        "count": 1,
+        "theme": "consumer demand"
       }
     ]
   },
   "ticker_sentiment": [
     {
-      "article_count": 8,
-      "label": "neutral",
-      "score": -0.02,
-      "ticker": "SPY",
-      "top_headlines": [
-        "My Three Most Reliable Market Indicators Are Still Flashing Green (NYSEARCA:SPY) - Seeking Alpha",
-        "Is It Too Late to Buy the Vanguard S&P 500 ETF? Here's What History Says. - The Motley Fool",
-        "As the S&P 500 sells off, traders eye key 'risk pivot' level - CNBC"
-      ]
-    },
-    {
       "article_count": 4,
       "label": "neutral",
-      "score": 0.0,
+      "score": 0.06999999999999999,
       "ticker": "AAPL",
       "top_headlines": [
-        "Why Apple Stock Dropped Today - The Motley Fool",
-        "S&P 500 flashes sell signals \u2014 options traders brace for wild swings in Apple, Meta and Microsoft - MarketWatch",
-        "Is Apple stock overvalued? Here's what AlphaSpace valuation metrics say. - Yahoo Finance"
+        "Apple overtakes Nvidia as most valuable company as iPhone maker avoids 'capex pitfalls' - Yahoo Finance",
+        "Apple options are doing something unusual into earnings - CNBC",
+        "Apple Stock Hits Record High Before Fiscal Q3 Earnings - Investor's Business Daily"
       ]
     },
     {
-      "article_count": 1,
+      "article_count": 8,
       "label": "neutral",
       "score": 0.0,
-      "ticker": "COST",
+      "ticker": "SPY",
       "top_headlines": [
-        "Supercharge VOO With 2 Low-Cost Vanguard ETFs - ETF Database"
+        "$SPDR S&P 500 ETF (SPY.US)$ please DONT hold here, keep dumping....Lol - Moomoo",
+        "UPRO: The One Rule You Need to Know Before Buying This 3X S&P 500 ETF - 24/7 Wall St.",
+        "Why This Leveraged S&P 500 ETF Can Lose Money Even When Stocks Rise - Yahoo Finance"
       ]
     }
   ]
