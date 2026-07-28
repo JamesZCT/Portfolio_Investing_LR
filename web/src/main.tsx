@@ -291,6 +291,34 @@ const ZH_MODEL_COPY: Record<string, Omit<ModelPortfolio, "id" | "weights">> = {
     description: "覆盖美国大型公司，降低单一个股决策风险。",
     keywords: ["美国", "大型股", "标普 500", "简洁"]
   },
+  "qqq-only": {
+    name: "100% QQQ 集中型",
+    risk: "很高",
+    coverage: "纳斯达克 100、成长和科技集中",
+    description: "完整持有 QQQ 的对照组合；历史增长强，但国家、风格和大型科技集中风险都很高。",
+    keywords: ["美国", "科技", "集中", "高回撤"]
+  },
+  "global-diversified": {
+    name: "全球分散核心",
+    risk: "中等",
+    coverage: "美国、国际、债券、现金",
+    description: "不押注单一国家，以美国全市场为核心，同时持有国际股票和防守资产。",
+    keywords: ["全球", "分散", "指数", "债券"]
+  },
+  "china-tilt": {
+    name: "全球 + 中国倾斜",
+    risk: "中高",
+    coverage: "美国、国际、中国离岸股票、A 股",
+    description: "保留美国核心，用 MCHI 和 CNYA 建立约 15% 的直接中国仓位；这是中国看多实验的建议起点。",
+    keywords: ["中国", "全球", "A 股", "中高风险"]
+  },
+  "china-conviction": {
+    name: "中国高信念",
+    risk: "很高",
+    coverage: "美国、国际、广义中国、A 股、中国互联网",
+    description: "约 30% 直接中国仓位，并加入 5% KWEB；只适合能承受政策、汇率和长期相对落后的投资者。",
+    keywords: ["中国", "高信念", "互联网", "高波动"]
+  },
   "balanced-growth": {
     name: "均衡增长",
     risk: "中等",
@@ -370,6 +398,9 @@ const MARKET_INFO: Record<MarketProfile, MarketProfileInfo> = {
       V: "Visa",
       VTI: "Vanguard Total Stock Market ETF",
       VXUS: "Vanguard Total International Stock ETF",
+      MCHI: "iShares MSCI China ETF",
+      CNYA: "iShares MSCI China A ETF",
+      KWEB: "KraneShares CSI China Internet ETF",
       XOM: "Exxon Mobil",
       CASH: "Cash reserve",
       XLB: "Materials Select Sector SPDR",
@@ -430,6 +461,24 @@ const MODEL_PORTFOLIOS: Record<MarketProfile, ModelPortfolio[]> = {
       weights: { SPY: 1 }
     },
     {
+      id: "qqq-only",
+      name: "100% QQQ Concentrated",
+      risk: "Very high",
+      coverage: "Nasdaq-100 growth and technology concentration",
+      description: "The full QQQ benchmark as an investable reference: strong historical growth with concentrated country, style and mega-cap technology risk.",
+      keywords: ["US", "technology", "concentrated", "deep drawdowns"],
+      weights: { QQQ: 1 }
+    },
+    {
+      id: "global-diversified",
+      name: "Global Diversified Core",
+      risk: "Moderate",
+      coverage: "US, international, bonds, cash",
+      description: "Avoids a single-country bet by combining a broad US core with international equity and defensive assets.",
+      keywords: ["global", "diversified", "index", "bonds"],
+      weights: { VTI: 0.6, VXUS: 0.25, BND: 0.1, CASH: 0.05 }
+    },
+    {
       id: "balanced-growth",
       name: "Balanced Growth",
       risk: "Moderate",
@@ -446,6 +495,24 @@ const MODEL_PORTFOLIOS: Record<MarketProfile, ModelPortfolio[]> = {
       description: "Keeps a broad US core but deliberately leans toward Nasdaq-style growth exposure.",
       keywords: ["tech", "growth", "US", "higher volatility"],
       weights: { VTI: 0.55, QQQ: 0.25, VXUS: 0.1, SGOV: 0.05, CASH: 0.05 }
+    },
+    {
+      id: "china-tilt",
+      name: "Global + China Tilt",
+      risk: "Moderate-high",
+      coverage: "US, international, broad China, mainland A-shares",
+      description: "Keeps a US core while using MCHI and CNYA for 15% direct China exposure; this is the suggested starting point for a measured China view.",
+      keywords: ["China", "global", "A-shares", "moderate-high risk"],
+      weights: { VTI: 0.45, QQQ: 0.15, VXUS: 0.2, MCHI: 0.1, CNYA: 0.05, SGOV: 0.05 }
+    },
+    {
+      id: "china-conviction",
+      name: "China High Conviction",
+      risk: "Very high",
+      coverage: "US, international, broad China, A-shares, China internet",
+      description: "Uses 30% direct China exposure including a 5% KWEB satellite; intended only for investors able to tolerate policy, currency and long relative-performance risk.",
+      keywords: ["China", "high conviction", "internet", "high volatility"],
+      weights: { VTI: 0.4, QQQ: 0.1, VXUS: 0.15, MCHI: 0.15, CNYA: 0.1, KWEB: 0.05, SGOV: 0.05 }
     },
     {
       id: "defensive",
@@ -500,7 +567,9 @@ const MODEL_PORTFOLIOS: Record<MarketProfile, ModelPortfolio[]> = {
 const US_SINGLE_STOCKS = new Set(["AAPL", "AVGO", "COST", "JNJ", "JPM", "MSFT", "NVDA", "UNH", "V", "XOM"]);
 const US_CORE_FUNDS = new Set(["SPY", "VTI", "QQQ"]);
 const TECH_TILT_TICKERS = new Set(["AAPL", "AVGO", "MSFT", "NVDA", "QQQ", "XLK"]);
-const INTERNATIONAL_TICKERS = new Set(["VXUS"]);
+const INTERNATIONAL_TICKERS = new Set(["VXUS", "MCHI", "CNYA", "KWEB"]);
+const CHINA_FUND_TICKERS = new Set(["MCHI", "CNYA", "KWEB"]);
+const VXUS_CHINA_LOOKTHROUGH = 0.08;
 const BOND_TICKERS = new Set(["BND"]);
 const CASH_TICKERS = new Set(["CASH", "SGOV"]);
 
@@ -2230,6 +2299,7 @@ function PortfolioComparison({
           { id: "vti", name: tr("Total US Market", "美国全市场"), risk: tr("Market beta", "市场风险"), coverage: tr("US all-cap stocks", "美国全市值股票"), weights: { VTI: 1 } },
           { id: "spy", name: "S&P 500", risk: tr("Market beta", "市场风险"), coverage: tr("US large cap", "美国大型股"), weights: { SPY: 1 } },
           { id: "qqq", name: tr("Nasdaq 100", "纳斯达克 100"), risk: tr("Aggressive", "进取"), coverage: tr("US growth and tech-heavy", "美国增长及科技股为主"), weights: { QQQ: 1 } },
+          { id: "china-tilt", name: tr("Global + China Tilt", "全球 + 中国倾斜"), risk: tr("Moderate-high", "中高"), coverage: tr("US core plus broad China and A-shares", "美国核心、广义中国和 A 股"), weights: { VTI: 0.45, QQQ: 0.15, VXUS: 0.2, MCHI: 0.1, CNYA: 0.05, SGOV: 0.05 } },
           { id: "rule-target", name: tr("Current Rule Target", "当前规则目标"), risk: tr("Rule model", "规则模型"), coverage: tr("App target weights", "应用目标权重"), weights: targetWeights }
         ]
       : [
@@ -2260,12 +2330,27 @@ function PortfolioComparison({
           <strong>{percent(selected.defensive)}</strong>
           <small>{formatSignedPercent(selected.defensive - marketBaseline.defensive)} {tr("vs", "对比")} {profiles[1]?.name ?? tr("baseline", "基准")}</small>
         </div>
+        {market === "us" ? (
+          <div>
+            <span>{tr("Estimated China exposure", "估算中国敞口")}</span>
+            <strong>{percent(selected.chinaExposure)}</strong>
+            <small>{tr("Direct", "直接")} {percent(selected.chinaDirect)} + {tr("VXUS look-through", "VXUS 穿透估算")}</small>
+          </div>
+        ) : null}
         <div>
           <span>{tr("Top five concentration", "前五大持仓集中度")}</span>
           <strong>{percent(selected.topFive)}</strong>
           <small>{tr("Largest holding", "最大持仓")} {selected.largestTicker ? `${selected.largestTicker} ${percent(selected.largestWeight)}` : tr("none", "无")}</small>
         </div>
       </div>
+      {market === "us" ? (
+        <p className="china-lookthrough-note">
+          {tr(
+            "China estimate counts MCHI, CNYA and KWEB directly, plus 8% of VXUS based on Vanguard's March 31, 2026 country allocation. Fund holdings change, so this is a transparent approximation rather than live look-through accounting.",
+            "中国敞口估算直接计入 MCHI、CNYA 和 KWEB，并按 Vanguard 2026 年 3 月 31 日的国家配置，把 VXUS 的 8% 计为中国。基金持仓会变化，因此这是透明估算，不是实时穿透核算。"
+          )}
+        </p>
+      ) : null}
       <div className="table-wrap compact-table">
         <table>
           <thead>
@@ -2275,6 +2360,7 @@ function PortfolioComparison({
               <th>{market === "us" ? tr("US Equity", "美国股票") : tr("Local Equity", "本地股票")}</th>
               <th>{tr("Tech Tilt", "科技倾斜")}</th>
               <th>{tr("International", "国际")}</th>
+              {market === "us" ? <th>{tr("China estimate", "中国估算")}</th> : null}
               <th>{tr("Bonds + Cash", "债券 + 现金")}</th>
               <th>{tr("Top 5", "前五大")}</th>
               <th>{tr("Largest Holding", "最大持仓")}</th>
@@ -2294,6 +2380,7 @@ function PortfolioComparison({
                 <td>{percent(row.profile.usEquity)}</td>
                 <td>{percent(row.profile.techTilt)}</td>
                 <td>{percent(row.profile.international)}</td>
+                {market === "us" ? <td>{percent(row.profile.chinaExposure)}</td> : null}
                 <td>{percent(row.profile.defensive)}</td>
                 <td>{percent(row.profile.topFive)}</td>
                 <td>{row.profile.largestTicker ? `${row.profile.largestTicker} ${percent(row.profile.largestWeight)}` : "-"}</td>
@@ -2302,6 +2389,28 @@ function PortfolioComparison({
           </tbody>
         </table>
       </div>
+      {market === "us" ? (
+        <section className="china-fund-guide" aria-label={tr("China exposure building blocks", "中国敞口构成")}>
+          <div>
+            <span>{tr("Broad China", "广义中国")}</span>
+            <a href="https://www.ishares.com/us/products/239619/ishares-msci-china-etf" target="_blank" rel="noreferrer">MCHI</a>
+            <strong>{tr("Default China building block", "默认中国核心工具")}</strong>
+            <small>{tr("Hundreds of Chinese companies available to international investors; still carries single-country, policy and currency risk.", "覆盖数百家可供国际投资者交易的中国公司；仍有单一国家、政策和汇率风险。")}</small>
+          </div>
+          <div>
+            <span>{tr("Mainland economy", "中国内地经济")}</span>
+            <a href="https://www.ishares.com/us/products/273318/ishares-msci-china-a-etf" target="_blank" rel="noreferrer">CNYA</a>
+            <strong>{tr("Shanghai and Shenzhen A-shares", "沪深 A 股")}</strong>
+            <small>{tr("Complements offshore China exposure with domestic listings; liquidity, access and policy behavior can differ.", "用境内上市公司补充离岸中国敞口；流动性、准入和政策表现可能不同。")}</small>
+          </div>
+          <div>
+            <span>{tr("Optional satellite", "可选卫星仓")}</span>
+            <a href="https://kraneshares.com/etf/kweb/" target="_blank" rel="noreferrer">KWEB</a>
+            <strong>{tr("China internet, capped at 5%", "中国互联网，上限 5%")}</strong>
+            <small>{tr("Concentrated internet exposure with much higher volatility; it is not a substitute for the whole Chinese economy.", "高度集中的互联网敞口、波动很高；不能替代整个中国经济。")}</small>
+          </div>
+        </section>
+      ) : null}
     </div>
   );
 }
@@ -2730,6 +2839,8 @@ function portfolioProfile(weights: Record<string, number>, market: MarketProfile
     usEquity: 0,
     techTilt: 0,
     international: 0,
+    chinaDirect: 0,
+    chinaExposure: 0,
     defensive: 0,
     topFive: entries.slice(0, 5).reduce((sum, [, weight]) => sum + weight, 0),
     largestTicker: entries[0]?.[0] ?? "",
@@ -2739,6 +2850,11 @@ function portfolioProfile(weights: Record<string, number>, market: MarketProfile
   for (const [ticker, weight] of entries) {
     if (TECH_TILT_TICKERS.has(ticker)) profile.techTilt += weight;
     if (market === "us" && (INTERNATIONAL_TICKERS.has(ticker) || ticker.endsWith(".HK"))) profile.international += weight;
+    if (market === "us" && CHINA_FUND_TICKERS.has(ticker)) {
+      profile.chinaDirect += weight;
+      profile.chinaExposure += weight;
+    }
+    if (market === "us" && ticker === "VXUS") profile.chinaExposure += weight * VXUS_CHINA_LOOKTHROUGH;
     if (BOND_TICKERS.has(ticker) || CASH_TICKERS.has(ticker)) profile.defensive += weight;
     if (market === "us" && (US_CORE_FUNDS.has(ticker) || US_SINGLE_STOCKS.has(ticker))) profile.usEquity += weight;
     if (market === "hk" && ticker.endsWith(".HK")) profile.usEquity += weight;

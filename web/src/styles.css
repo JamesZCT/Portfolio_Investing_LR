@@ -1194,7 +1194,7 @@ code {
 
 .comparison-summary {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 10px;
 }
 
@@ -1220,6 +1220,52 @@ code {
   color: #182126;
   font-size: 1.14rem;
   line-height: 1.2;
+}
+
+.china-lookthrough-note {
+  margin: 0;
+  border-left: 4px solid #3a73a8;
+  background: #f1f7fb;
+  color: #52666f;
+  padding: 9px 11px;
+  font-size: 0.72rem;
+  line-height: 1.45;
+}
+
+.china-fund-guide {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid #d8e1e4;
+  border-radius: 7px;
+  background: #d8e1e4;
+}
+
+.china-fund-guide > div {
+  display: grid;
+  min-width: 0;
+  gap: 4px;
+  background: #f8fafb;
+  padding: 11px;
+}
+
+.china-fund-guide span,
+.china-fund-guide small {
+  color: #66777e;
+  font-size: 0.7rem;
+  line-height: 1.4;
+}
+
+.china-fund-guide a {
+  color: #176a82;
+  font-size: 1rem;
+  font-weight: 850;
+}
+
+.china-fund-guide strong {
+  color: #1d2a2f;
+  font-size: 0.78rem;
 }
 
 .sentiment-panel {
@@ -2088,6 +2134,10 @@ meter {
   .conclusion-grid {
     grid-template-columns: 1fr;
   }
+
+  .comparison-summary {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 980px) {
@@ -2111,6 +2161,10 @@ meter {
   .opportunity-groups,
   .run-health-summary,
   .run-history {
+    grid-template-columns: 1fr;
+  }
+
+  .china-fund-guide {
     grid-template-columns: 1fr;
   }
 

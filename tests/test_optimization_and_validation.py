@@ -30,7 +30,10 @@ class OptimizationAndValidationTests(unittest.TestCase):
         payload = build_optimization_payload(self.config, prices)
 
         self.assertEqual(payload["status"], "available")
-        self.assertEqual({item["id"] for item in payload["profiles"]}, {"defensive", "balanced", "aggressive"})
+        self.assertEqual(
+            {item["id"] for item in payload["profiles"]},
+            {"defensive", "balanced", "global_china", "aggressive"},
+        )
         for profile in payload["profiles"]:
             target = {
                 row["ticker"]: row["target_weight"]
@@ -49,6 +52,23 @@ class OptimizationAndValidationTests(unittest.TestCase):
                     else profile["constraints"]["max_single_weight"]
                 )
                 self.assertLessEqual(row["target_weight"], cap * risk_scale + 1e-8)
+            group_weights: dict[str, float] = {}
+            for row in profile["rows"]:
+                if row["ticker"] == "CASH":
+                    continue
+                group_weights[row["group"]] = group_weights.get(row["group"], 0.0) + row["target_weight"]
+            for weight in group_weights.values():
+                self.assertLessEqual(
+                    weight,
+                    profile["constraints"]["max_group_weight"] * risk_scale + 1e-8,
+                )
+
+        china_profile = next(item for item in payload["profiles"] if item["id"] == "global_china")
+        self.assertTrue(
+            {"MCHI", "CNYA", "KWEB"}.issubset(
+                {row["ticker"] for row in china_profile["rows"]}
+            )
+        )
 
     def test_validation_is_json_safe_and_declares_known_biases(self) -> None:
         prices = generate_sandbox_prices(self.config, days=1100, seed=17)

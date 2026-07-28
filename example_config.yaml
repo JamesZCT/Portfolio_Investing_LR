@@ -51,6 +51,9 @@ optimization:
   asset_groups:
     VTI: USBroad
     VXUS: International
+    MCHI: ChinaEquity
+    CNYA: ChinaEquity
+    KWEB: ChinaEquity
     BND: FixedIncome
     SGOV: FixedIncome
     QQQ: Technology
@@ -67,6 +70,9 @@ optimization:
   asset_types:
     VTI: fund
     VXUS: fund
+    MCHI: fund
+    CNYA: fund
+    KWEB: fund
     BND: bond
     SGOV: bond
     QQQ: fund
@@ -91,6 +97,16 @@ optimization:
       max_fund_weight: 0.45
       max_group_weight: 0.40
       assets: [VTI, VXUS, BND, SGOV, QQQ, AAPL, MSFT, NVDA, AVGO, JPM, V, XOM, JNJ, UNH, COST]
+    global_china:
+      name_en: Global + China Tilt
+      name_zh: 全球 + 中国倾斜
+      risk_level: medium_high
+      objective: risk_budgeting
+      cash_weight: 0.05
+      max_single_weight: 0.15
+      max_fund_weight: 0.50
+      max_group_weight: 0.45
+      assets: [VTI, QQQ, VXUS, MCHI, CNYA, KWEB, BND, SGOV]
     aggressive:
       name_en: Aggressive
       name_zh: 进取型
