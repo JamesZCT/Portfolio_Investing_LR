@@ -40,6 +40,28 @@ For each profile:
 
 Do not select a profile only because its trailing return is highest. Start with drawdown tolerance, liquidity needs, concentration, tax impact, and the walk-forward evidence.
 
+## Selectable geographic allocations
+
+The US portfolio editor includes four explicit reference choices in addition to the existing profiles:
+
+| Template | US equity | International equity | Direct China | Defensive | Intended use |
+| --- | ---: | ---: | ---: | ---: | --- |
+| 100% QQQ Concentrated | 100% | 0% | 0% | 0% | A high-concentration benchmark, not the default recommendation |
+| Global Diversified Core | 60% | 25% | 0% | 15% | A country-diversified long-term baseline |
+| Global + China Tilt | 60% | 35% | 15% | 5% | Suggested starting point for a measured positive China view |
+| China High Conviction | 50% | 45% | 30% | 5% | A high-risk research allocation with a 5% China-internet satellite |
+
+International and defensive columns do not sum to 100% by themselves because cash and bonds are reported separately. The editor also estimates indirect China exposure inside VXUS using Vanguard's March 31, 2026 country allocation of 8%. This look-through percentage is dated and approximate; fund holdings change.
+
+The China building blocks are intentionally separated:
+
+- `MCHI` is the broad default China sleeve for companies available to international investors.
+- `CNYA` adds mainland Shanghai and Shenzhen A-shares, which can behave differently from offshore listings.
+- `KWEB` is a concentrated China internet satellite capped at 5% in the high-conviction template. It is not a proxy for the entire Chinese economy.
+- `VXUS` supplies diversified international exposure and only a small indirect China allocation.
+
+China equity exposure carries country-policy, regulatory, currency, accounting, capital-control, geopolitical, and shareholder-rights risks. Strong Chinese GDP or industrial performance does not guarantee that public equity investors receive the same return. These templates are research starting points rather than personal recommendations or automatic orders.
+
 ## Walk-forward protocol
 
 The historical study uses this order:
