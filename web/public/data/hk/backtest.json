@@ -2,4153 +2,3748 @@
   "equity_curve": [
     {
       "daily_return": 0.0,
-      "date": "2024-02-08",
+      "date": "2024-02-14",
       "portfolio_value": 1.0
     },
     {
-      "daily_return": -0.005093262629457032,
-      "date": "2024-02-09",
-      "portfolio_value": 0.9949067373705429
-    },
-    {
-      "daily_return": 0.009128700339261081,
-      "date": "2024-02-14",
-      "portfolio_value": 1.0039889428415105
-    },
-    {
-      "daily_return": 0.00450427601048114,
+      "daily_return": 0.004569851587933209,
       "date": "2024-02-15",
-      "portfolio_value": 1.00851118615154
+      "portfolio_value": 1.004569851587933
     },
     {
-      "daily_return": 0.023316477335078214,
+      "daily_return": 0.023203775619158,
       "date": "2024-02-16",
-      "portfolio_value": 1.032026114365615
+      "portfolio_value": 1.0278796650179505
     },
     {
-      "daily_return": -0.016310733004412045,
+      "daily_return": -0.016245032227086224,
       "date": "2024-02-19",
-      "portfolio_value": 1.0151930119606167
+      "portfolio_value": 1.0111817267341674
     },
     {
-      "daily_return": 0.00357160970906674,
+      "daily_return": 0.00355355381282753,
       "date": "2024-02-20",
-      "portfolio_value": 1.018818885178712
+      "portfolio_value": 1.014775015414665
     },
     {
-      "daily_return": 0.014642153019916762,
+      "daily_return": 0.014420201204835854,
       "date": "2024-02-21",
-      "portfolio_value": 1.0337365871950799
+      "portfolio_value": 1.0294082753145848
     },
     {
-      "daily_return": 0.012009939288707852,
+      "daily_return": 0.011840751347620887,
       "date": "2024-02-22",
-      "portfolio_value": 1.046151700847809
+      "portfolio_value": 1.041597242737768
     },
     {
-      "daily_return": -0.0010712327458735327,
+      "daily_return": -0.0011780085329369445,
       "date": "2024-02-23",
-      "portfolio_value": 1.0450310288887095
+      "portfolio_value": 1.0403702322979393
     },
     {
-      "daily_return": -0.00688103380499618,
+      "daily_return": -0.006844309979189822,
       "date": "2024-02-26",
-      "portfolio_value": 1.0378401350516564
+      "portfolio_value": 1.0332496159349704
     },
     {
-      "daily_return": 0.002963618649483573,
+      "daily_return": 0.002928585163754294,
       "date": "2024-02-27",
-      "portfolio_value": 1.040915897431078
+      "portfolio_value": 1.0362755754306525
     },
     {
-      "daily_return": -0.016549729937242626,
+      "daily_return": -0.016324017113382012,
       "date": "2024-02-28",
-      "portfolio_value": 1.023689020441211
+      "portfolio_value": 1.0193593952031428
     },
     {
-      "daily_return": -1.3271534987672681e-06,
+      "daily_return": -5.235279276476776e-05,
       "date": "2024-02-29",
-      "portfolio_value": 1.0236876618487458
+      "portfolio_value": 1.0193060288919729
     },
     {
-      "daily_return": 0.00993742305431236,
+      "daily_return": 0.009434214123461406,
       "date": "2024-03-01",
-      "portfolio_value": 1.0338604792200166
+      "portfolio_value": 1.028922380225875
     },
     {
-      "daily_return": 0.001337320239977802,
+      "daily_return": 0.0011583735081190179,
       "date": "2024-03-04",
-      "portfolio_value": 1.0352430817641907
+      "portfolio_value": 1.0301142566530395
     },
     {
-      "daily_return": -0.02959680430631631,
+      "daily_return": -0.029446950742549632,
       "date": "2024-03-05",
-      "portfolio_value": 1.0046031948637482
+      "portfolio_value": 0.9997805328781793
     },
     {
-      "daily_return": 0.015834919971161668,
+      "daily_return": 0.015698423368760567,
       "date": "2024-03-06",
-      "portfolio_value": 1.020511006057189
+      "portfolio_value": 1.0154755109591458
     },
     {
-      "daily_return": -0.012175140250359628,
+      "daily_return": -0.011993337319645168,
       "date": "2024-03-07",
-      "portfolio_value": 1.008086141431407
+      "portfolio_value": 1.0032965706163737
     },
     {
-      "daily_return": 0.005546549259080446,
+      "daily_return": 0.005637263423976424,
       "date": "2024-03-08",
-      "portfolio_value": 1.0136775408722527
+      "portfolio_value": 1.0089524176773104
     },
     {
-      "daily_return": 0.020174388091861423,
+      "daily_return": 0.019931496210705484,
       "date": "2024-03-11",
-      "portfolio_value": 1.0341278649818133
+      "portfolio_value": 1.0290623489670279
     },
     {
-      "daily_return": 0.03579817150068847,
+      "daily_return": 0.03570239305918044,
       "date": "2024-03-12",
-      "portfolio_value": 1.0709194682858112
+      "portfolio_value": 1.0658023374322523
     },
     {
-      "daily_return": -0.00038704617107327625,
+      "daily_return": 0.0002989029281289634,
       "date": "2024-03-13",
-      "portfolio_value": 1.0705049730060834
+      "portfolio_value": 1.0661209088717176
     },
     {
-      "daily_return": -0.005037133667348113,
+      "daily_return": -0.009274645022937898,
       "date": "2024-03-14",
-      "portfolio_value": 1.0651126963654909
+      "portfolio_value": 1.0560085215915522
     },
     {
-      "daily_return": -0.010237894069448878,
+      "daily_return": -0.010243337522117795,
       "date": "2024-03-15",
-      "portfolio_value": 1.054208185408076
+      "portfolio_value": 1.0451914698786573
     },
     {
-      "daily_return": 0.00206098795252765,
+      "daily_return": 0.0020392020369754617,
       "date": "2024-03-18",
-      "portfolio_value": 1.0563808957776581
+      "portfolio_value": 1.0473228264530632
     },
     {
-      "daily_return": -0.006836397658781558,
+      "daily_return": -0.006865958980153169,
       "date": "2024-03-19",
-      "portfolio_value": 1.0491590558949822
+      "portfolio_value": 1.0401319508876583
     },
     {
-      "daily_return": -0.0012546148632053067,
+      "daily_return": -0.0012817112210351733,
       "date": "2024-03-20",
-      "portfolio_value": 1.0478427653495899
+      "portfolio_value": 1.0387988020948484
     },
     {
-      "daily_return": 0.009740735481992823,
+      "daily_return": 0.00975177975138447,
       "date": "2024-03-21",
-      "portfolio_value": 1.05804952455358
+      "portfolio_value": 1.0489289392188794
     },
     {
-      "daily_return": -0.009417622978807643,
+      "daily_return": -0.009415331162792372,
       "date": "2024-03-22",
-      "portfolio_value": 1.0480852130384275
+      "portfolio_value": 1.039052925889897
     },
     {
-      "daily_return": -0.00020499259879403408,
+      "daily_return": -0.00035898452940638973,
       "date": "2024-03-25",
-      "portfolio_value": 1.0478703633268491
+      "portfolio_value": 1.0386799219642682
     },
     {
-      "daily_return": 0.004415300448131338,
+      "daily_return": 0.004415023771857569,
       "date": "2024-03-26",
-      "portfolio_value": 1.0524970258116297
+      "portfolio_value": 1.0432657185110916
     },
     {
-      "daily_return": -0.00767342809712529,
+      "daily_return": -0.007689715717684835,
       "date": "2024-03-27",
-      "portfolio_value": 1.044420765561626
+      "portfolio_value": 1.0352433017177352
     },
     {
-      "daily_return": 0.006014457280532504,
+      "daily_return": 0.005895850498099146,
       "date": "2024-03-28",
-      "portfolio_value": 1.0507023896389975
+      "portfolio_value": 1.0413469414538215
     },
     {
-      "daily_return": 0.013958314609144385,
+      "daily_return": 0.013949433953795701,
       "date": "2024-04-02",
-      "portfolio_value": 1.0653684241541586
+      "portfolio_value": 1.0558731418366187
     },
     {
-      "daily_return": -0.006780086452219596,
+      "daily_return": -0.006766844897958889,
       "date": "2024-04-03",
-      "portfolio_value": 1.0581451341349284
+      "portfolio_value": 1.0487282120538899
     },
     {
-      "daily_return": 0.0013687020403675048,
+      "daily_return": 0.0013493443606586047,
       "date": "2024-04-05",
-      "portfolio_value": 1.0595934195390238
+      "portfolio_value": 1.0501433075526885
     },
     {
-      "daily_return": -0.0007846985361255006,
+      "daily_return": -0.0007346090274612019,
       "date": "2024-04-08",
-      "portfolio_value": 1.0587619581338232
+      "portfolio_value": 1.0493718627988322
     },
     {
-      "daily_return": 0.002712507210830979,
+      "daily_return": 0.002734112711591054,
       "date": "2024-04-09",
-      "portfolio_value": 1.0616338575798148
+      "portfolio_value": 1.0522409637480963
     },
     {
-      "daily_return": 0.01228181334952735,
+      "daily_return": 0.012279211188652536,
       "date": "2024-04-10",
-      "portfolio_value": 1.0746726464641487
+      "portfolio_value": 1.0651616527633103
     },
     {
-      "daily_return": -0.000589607047043538,
+      "daily_return": -0.0006405414822330052,
       "date": "2024-04-11",
-      "portfolio_value": 1.0740390118985286
+      "portfolio_value": 1.0644793725394315
     },
     {
-      "daily_return": -0.011732326985226449,
+      "daily_return": -0.011806147582815516,
       "date": "2024-04-12",
-      "portfolio_value": 1.0614380350160455
+      "portfolio_value": 1.051911971968368
     },
     {
-      "daily_return": -0.005330159001418262,
+      "daily_return": -0.005356864066549192,
       "date": "2024-04-15",
-      "portfolio_value": 1.0556031502093888
+      "portfolio_value": 1.0462770225245577
     },
     {
-      "daily_return": -0.010877143755159571,
+      "daily_return": -0.012739860266624678,
       "date": "2024-04-16",
-      "portfolio_value": 1.044121202996162
+      "portfolio_value": 1.0329475994574147
     },
     {
-      "daily_return": 0.00233429850765509,
+      "daily_return": -0.0008238416977453565,
       "date": "2024-04-17",
-      "portfolio_value": 1.046558493562127
+      "portfolio_value": 1.0319762696638475
     },
     {
-      "daily_return": 0.002496846202432235,
+      "daily_return": 0.0019025813045785015,
       "date": "2024-04-18",
-      "portfolio_value": 1.0491715891624007
+      "portfolio_value": 1.0339396884212786
     },
     {
-      "daily_return": -0.008034902015849565,
+      "daily_return": -0.0045343001601380346,
       "date": "2024-04-19",
-      "portfolio_value": 1.0407415982456676
+      "portfolio_value": 1.0292514955264969
     },
     {
-      "daily_return": 0.007778687351588402,
+      "daily_return": 0.0076638254289643545,
       "date": "2024-04-22",
-      "portfolio_value": 1.048837201752213
+      "portfolio_value": 1.0371394993107124
     },
     {
-      "daily_return": 0.01103753553933162,
+      "daily_return": 0.008829036255621163,
       "date": "2024-04-23",
-      "portfolio_value": 1.060413779641526
+      "portfolio_value": 1.0462964415522633
     },
     {
-      "daily_return": 0.012001759253558654,
+      "daily_return": 0.009161127047999014,
       "date": "2024-04-24",
-      "portfolio_value": 1.0731406105339398
+      "portfolio_value": 1.055881696183193
     },
     {
-      "daily_return": -2.91422624320235e-05,
+      "daily_return": 0.00036869297814197936,
       "date": "2024-04-25",
-      "portfolio_value": 1.0731093367886413
+      "portfolio_value": 1.0562709923503242
     },
     {
-      "daily_return": 0.012308809529889221,
+      "daily_return": 0.00784009928024514,
       "date": "2024-04-26",
-      "portfolio_value": 1.0863180352199184
+      "portfolio_value": 1.0645522617971939
     },
     {
-      "daily_return": 0.00040931088044433416,
+      "daily_return": 0.0001142162260382892,
       "date": "2024-04-29",
-      "portfolio_value": 1.086762677011357
+      "portfolio_value": 1.0646738509389568
     },
     {
-      "daily_return": -0.0012235749118994835,
+      "daily_return": -0.000610696270543069,
       "date": "2024-04-30",
-      "portfolio_value": 1.0854329414645771
+      "portfolio_value": 1.0640236585888436
     },
     {
-      "daily_return": 0.012042500462308895,
+      "daily_return": 0.010218498869357584,
       "date": "2024-05-02",
-      "portfolio_value": 1.0985042681639696
+      "portfolio_value": 1.0748963831411036
     },
     {
-      "daily_return": 0.009106149835076049,
+      "daily_return": 0.006090694882580766,
       "date": "2024-05-03",
-      "portfolio_value": 1.1085074126243413
+      "portfolio_value": 1.0814432490412056
     },
     {
-      "daily_return": 0.0011597429014730183,
+      "daily_return": 0.0016529046967145174,
       "date": "2024-05-06",
-      "portfolio_value": 1.1097929962273625
+      "portfolio_value": 1.083230771666776
     },
     {
-      "daily_return": -0.004876417586441242,
+      "daily_return": -0.003977839793626741,
       "date": "2024-05-07",
-      "portfolio_value": 1.10438118214325
+      "portfolio_value": 1.0789218531975588
     },
     {
-      "daily_return": 0.006485018087090398,
+      "daily_return": -0.00021216630660635528,
       "date": "2024-05-08",
-      "portfolio_value": 1.1115431140844914
+      "portfolio_value": 1.078692942332849
     },
     {
-      "daily_return": 0.0051257668852248885,
+      "daily_return": 0.004852588420628986,
       "date": "2024-05-09",
-      "portfolio_value": 1.1172406249701654
+      "portfolio_value": 1.0839273952142277
     },
     {
-      "daily_return": 0.007661085557719032,
+      "daily_return": 0.006464805487254209,
       "date": "2024-05-10",
-      "portfolio_value": 1.1257999009866213
+      "portfolio_value": 1.0909347749865939
     },
     {
-      "daily_return": 0.00461924850920922,
+      "daily_return": 0.004966128717655764,
       "date": "2024-05-13",
-      "portfolio_value": 1.1310002505009216
+      "portfolio_value": 1.096352497501744
     },
     {
-      "daily_return": 0.006147654309193977,
+      "daily_return": 0.0027306723851542826,
       "date": "2024-05-14",
-      "portfolio_value": 1.1379532490646131
+      "portfolio_value": 1.0993462769910671
     },
     {
-      "daily_return": 0.0020987746404204127,
+      "daily_return": 0.003023130612643536,
       "date": "2024-05-16",
-      "portfolio_value": 1.1402156639024363
+      "portfolio_value": 1.1026697443749345
     },
     {
-      "daily_return": 0.005797651891872001,
+      "daily_return": 0.005394199121178702,
       "date": "2024-05-17",
-      "portfolio_value": 1.1468262374034024
+      "portfolio_value": 1.1086177645409923
     },
     {
-      "daily_return": -0.0001590506451683622,
+      "daily_return": 6.046223581180336e-05,
       "date": "2024-05-20",
-      "portfolio_value": 1.1466438339504472
+      "portfolio_value": 1.1086675798344257
     },
     {
-      "daily_return": -0.009066858136462014,
+      "daily_return": -0.006635102783928583,
       "date": "2024-05-21",
-      "portfolio_value": 1.1362473769749697
+      "portfolio_value": 1.101311456489015
     },
     {
-      "daily_return": -0.0009202577220344327,
+      "daily_return": -0.0010248403692587826,
       "date": "2024-05-22",
-      "portfolio_value": 1.1352017365521672
+      "portfolio_value": 1.1001827880492778
     },
     {
-      "daily_return": -0.009078022985254987,
+      "daily_return": -0.006875830349577797,
       "date": "2024-05-23",
-      "portfolio_value": 1.1248963490948451
+      "portfolio_value": 1.0926181178451255
     },
     {
-      "daily_return": -0.0068485859499959586,
+      "daily_return": -0.0049346076450166206,
       "date": "2024-05-24",
-      "portfolio_value": 1.1171923997632325
+      "portfolio_value": 1.0872264761277233
     },
     {
-      "daily_return": 0.004182452566247719,
+      "daily_return": 0.003023382753881543,
       "date": "2024-05-27",
-      "portfolio_value": 1.1218650039826146
+      "portfolio_value": 1.090513577905211
     },
     {
-      "daily_return": -0.000554614930822173,
+      "daily_return": -0.00026052698586959887,
       "date": "2024-05-28",
-      "portfolio_value": 1.121242800901039
+      "portfolio_value": 1.0902294696897095
     },
     {
-      "daily_return": -0.010474049518197304,
+      "daily_return": -0.007553281374844628,
       "date": "2024-05-29",
-      "portfolio_value": 1.1094988482824792
+      "portfolio_value": 1.0819946597419954
     },
     {
-      "daily_return": -0.0055295066182664086,
+      "daily_return": -0.0039015456221686952,
       "date": "2024-05-30",
-      "portfolio_value": 1.1033638670579422
+      "portfolio_value": 1.077773208214069
     },
     {
-      "daily_return": -0.005879193389989167,
+      "daily_return": -0.0044831723594055736,
       "date": "2024-05-31",
-      "portfolio_value": 1.0968769775039822
+      "portfolio_value": 1.0729413651572959
     },
     {
-      "daily_return": 0.009977061963528574,
+      "daily_return": 0.007257409021367991,
       "date": "2024-06-03",
-      "portfolio_value": 1.1078205870749074
+      "portfolio_value": 1.0807281395001873
     },
     {
-      "daily_return": 0.0016419367291451857,
+      "daily_return": 0.0011827886139494264,
       "date": "2024-06-04",
-      "portfolio_value": 1.1096395583861287
+      "portfolio_value": 1.082006412438363
     },
     {
-      "daily_return": 0.0007383784311170993,
+      "daily_return": 0.0006148996709695939,
       "date": "2024-06-05",
-      "portfolio_value": 1.1104588923023553
+      "portfolio_value": 1.0826717378253583
     },
     {
-      "daily_return": 0.0014044654367586248,
+      "daily_return": 0.0009923771907611278,
       "date": "2024-06-06",
-      "portfolio_value": 1.1120184934355353
+      "portfolio_value": 1.083746156563058
     },
     {
-      "daily_return": -0.003625585422369554,
+      "daily_return": -0.002745501144658512,
       "date": "2024-06-07",
-      "portfolio_value": 1.10798677539633
+      "portfolio_value": 1.0807707302496947
     },
     {
-      "daily_return": -0.00222878451510892,
+      "daily_return": -0.0015787337224440448,
       "date": "2024-06-11",
-      "portfolio_value": 1.1055173116283812
+      "portfolio_value": 1.079064481051619
     },
     {
-      "daily_return": -0.005938085249360516,
+      "daily_return": -0.004401323765647164,
       "date": "2024-06-12",
-      "portfolio_value": 1.098952655587288
+      "portfolio_value": 1.0743151689065007
     },
     {
-      "daily_return": 0.005972577578269929,
+      "daily_return": 0.0044143944793046805,
       "date": "2024-06-13",
-      "portfolio_value": 1.105516235577629
+      "portfolio_value": 1.0790576198571549
     },
     {
-      "daily_return": -0.00544471155922437,
+      "daily_return": -0.0038961776623265376,
       "date": "2024-06-14",
-      "portfolio_value": 1.0994970185508692
+      "portfolio_value": 1.0748534196623043
     },
     {
-      "daily_return": 0.0016793471997188054,
+      "daily_return": 0.0010575762983067731,
       "date": "2024-06-17",
-      "portfolio_value": 1.1012948585189033
+      "portfolio_value": 1.0759901591630932
     },
     {
-      "daily_return": -0.0010987281661649084,
+      "daily_return": -0.0010614142852164207,
       "date": "2024-06-18",
-      "portfolio_value": 1.1000848348385959
+      "portfolio_value": 1.0748480878374052
     },
     {
-      "daily_return": 0.015152122931936558,
+      "daily_return": 0.010810852671834154,
       "date": "2024-06-19",
-      "portfolio_value": 1.1167534554916292
+      "portfolio_value": 1.086461888468928
     },
     {
-      "daily_return": -0.0020104810963184564,
+      "daily_return": -0.0016057351723839511,
       "date": "2024-06-20",
-      "portfolio_value": 1.114508243780115
+      "portfolio_value": 1.084717318401159
     },
     {
-      "daily_return": -0.0072290187869764825,
+      "daily_return": -0.005131678932540589,
       "date": "2024-06-21",
-      "portfolio_value": 1.1064514427475884
+      "portfolio_value": 1.0791508973905577
     },
     {
-      "daily_return": -0.0009653348508750086,
+      "daily_return": -0.0007061963014029295,
       "date": "2024-06-24",
-      "portfolio_value": 1.1053833466091032
+      "portfolio_value": 1.078388805018165
     },
     {
-      "daily_return": 0.000760121338862587,
+      "daily_return": 0.0004721179623989237,
       "date": "2024-06-25",
-      "portfolio_value": 1.106223572078484
+      "portfolio_value": 1.078897931743464
     },
     {
-      "daily_return": 0.0004100216465161145,
+      "daily_return": 0.00042790831262735983,
       "date": "2024-06-26",
-      "portfolio_value": 1.1066771476889228
+      "portfolio_value": 1.0793596011369333
     },
     {
-      "daily_return": -0.010951343853339344,
+      "daily_return": -0.007898122111173043,
       "date": "2024-06-27",
-      "portfolio_value": 1.0945575457099486
+      "portfolio_value": 1.0708346872052867
     },
     {
-      "daily_return": -0.002323745297524346,
+      "daily_return": -0.0019002832742716354,
       "date": "2024-06-28",
-      "portfolio_value": 1.0920140727602352
+      "portfolio_value": 1.0687997979596806
     },
     {
-      "daily_return": 0.001045364207765426,
+      "daily_return": 0.0005614473846757385,
       "date": "2024-07-02",
-      "portfolio_value": 1.0931556251862748
+      "portfolio_value": 1.069399872810987
     },
     {
-      "daily_return": 0.006932088505188334,
+      "daily_return": 0.005302974410716157,
       "date": "2024-07-03",
-      "portfolio_value": 1.1007334767300105
+      "portfolio_value": 1.075070872971327
     },
     {
-      "daily_return": 0.004393276806781114,
+      "daily_return": 0.002772315876412408,
       "date": "2024-07-04",
-      "portfolio_value": 1.1055693035837761
+      "portfolio_value": 1.078051309020734
     },
     {
-      "daily_return": -0.005073082252168811,
+      "daily_return": -0.003023455955236163,
       "date": "2024-07-05",
-      "portfolio_value": 1.0999606595712226
+      "portfolio_value": 1.0747918683704252
     },
     {
-      "daily_return": -0.003906963176730505,
+      "daily_return": -0.0029166670062577517,
       "date": "2024-07-08",
-      "portfolio_value": 1.0956631537784256
+      "portfolio_value": 1.071657058389355
     },
     {
-      "daily_return": -0.0005049639587830193,
+      "daily_return": 8.323970417641177e-06,
       "date": "2024-07-09",
-      "portfolio_value": 1.095109883374801
+      "portfolio_value": 1.0716659788310068
     },
     {
-      "daily_return": -0.0010487198822455488,
+      "daily_return": -0.0005274268179406458,
       "date": "2024-07-10",
-      "portfolio_value": 1.0939614198668621
+      "portfolio_value": 1.0711007534538968
     },
     {
-      "daily_return": 0.009150851030077551,
+      "daily_return": 0.00689420451684772,
       "date": "2024-07-11",
-      "portfolio_value": 1.1039720978527159
+      "portfolio_value": 1.0784851411063576
     },
     {
-      "daily_return": 0.011502349876930421,
+      "daily_return": 0.00853878442053448,
       "date": "2024-07-12",
-      "portfolio_value": 1.1166703711765866
+      "portfolio_value": 1.0876940932270145
     },
     {
-      "daily_return": -0.006949576953247886,
+      "daily_return": -0.005085025228836084,
       "date": "2024-07-15",
-      "portfolio_value": 1.108909984500683
+      "portfolio_value": 1.082163141321699
     },
     {
-      "daily_return": -0.007408401087831475,
+      "daily_return": -0.005027484678842235,
       "date": "2024-07-16",
-      "portfolio_value": 1.100694734565201
+      "portfolio_value": 1.0767225827086964
     },
     {
-      "daily_return": 0.002152510774040361,
+      "daily_return": 0.0019227561532451647,
       "date": "2024-07-17",
-      "portfolio_value": 1.1030279675271728
+      "portfolio_value": 1.0787928576799375
     },
     {
-      "daily_return": -1.7392629168171147e-05,
+      "daily_return": -0.00024726432107954454,
       "date": "2024-07-18",
-      "portfolio_value": 1.1030087829707713
+      "portfolio_value": 1.0785261106963977
     },
     {
-      "daily_return": -0.0078073946636557385,
+      "daily_return": -0.0053015041905433245,
       "date": "2024-07-19",
-      "portfolio_value": 1.0943971580846399
+      "portfolio_value": 1.0727938187374615
     },
     {
-      "daily_return": 0.00852623956758375,
+      "daily_return": 0.005445448273771985,
       "date": "2024-07-22",
-      "portfolio_value": 1.1037282504365524
+      "portfolio_value": 1.0786356619858186
     },
     {
-      "daily_return": -0.0045137012751902735,
+      "daily_return": -0.003146422677028763,
       "date": "2024-07-23",
-      "portfolio_value": 1.0987463508250934
+      "portfolio_value": 1.0752418182786945
     },
     {
-      "daily_return": -0.004733234725850311,
+      "daily_return": -0.003187811480553841,
       "date": "2024-07-24",
-      "portfolio_value": 1.0935457264424668
+      "portfolio_value": 1.071814150066014
     },
     {
-      "daily_return": -0.00963558129010523,
+      "daily_return": -0.006148722623233682,
       "date": "2024-07-25",
-      "portfolio_value": 1.0830087777008832
+      "portfolio_value": 1.0652238621536012
     },
     {
-      "daily_return": 0.0014690330843220806,
+      "daily_return": 0.0009741465670470087,
       "date": "2024-07-26",
-      "portfolio_value": 1.084599753425937
+      "portfolio_value": 1.0662615463220546
     },
     {
-      "daily_return": 0.007727867503460961,
+      "daily_return": 0.005721408131118367,
       "date": "2024-07-29",
-      "portfolio_value": 1.092981396614699
+      "portfolio_value": 1.0723620638030804
     },
     {
-      "daily_return": -0.00489914637049757,
+      "daily_return": -0.003169654866210669,
       "date": "2024-07-30",
-      "portfolio_value": 1.0876267207724528
+      "portfolio_value": 1.0689630461692072
     },
     {
-      "daily_return": 0.009612508323293911,
+      "daily_return": 0.005624641984490045,
       "date": "2024-07-31",
-      "portfolio_value": 1.0980815416785148
+      "portfolio_value": 1.074975580598559
     },
     {
-      "daily_return": -0.0008301365260780342,
+      "daily_return": 0.0001016302479976959,
       "date": "2024-08-01",
-      "portfolio_value": 1.0971699840821554
+      "portfolio_value": 1.0750848306334067
     },
     {
-      "daily_return": -0.01156114031257159,
+      "daily_return": -0.007493569217938732,
       "date": "2024-08-02",
-      "portfolio_value": 1.0844854479494397
+      "portfolio_value": 1.0670286080398992
     },
     {
-      "daily_return": -0.004674771965409209,
+      "daily_return": -0.002062158046559348,
       "date": "2024-08-05",
-      "portfolio_value": 1.0794157257804713
+      "portfolio_value": 1.0648282264099207
     },
     {
-      "daily_return": 0.00041675028712577657,
+      "daily_return": 0.00021893656767552126,
       "date": "2024-08-06",
-      "portfolio_value": 1.0798655725941184
+      "portfolio_value": 1.0650613562469748
     },
     {
-      "daily_return": 0.005223934498376728,
+      "daily_return": 0.0035381050040859023,
       "date": "2024-08-07",
-      "portfolio_value": 1.0855067196124022
+      "portfolio_value": 1.068829655161171
     },
     {
-      "daily_return": 0.0005512346477049775,
+      "daily_return": 0.0003125570025433193,
       "date": "2024-08-08",
-      "portfolio_value": 1.086105088526569
+      "portfolio_value": 1.0691637253544175
     },
     {
-      "daily_return": 0.005363304406254336,
+      "daily_return": 0.003647350410128966,
       "date": "2024-08-09",
-      "portfolio_value": 1.091930200733519
+      "portfolio_value": 1.0730633401065839
     },
     {
-      "daily_return": 0.0018993357293764846,
+      "daily_return": 0.0010436057376895355,
       "date": "2024-08-12",
-      "portfolio_value": 1.0940041427777574
+      "portfolio_value": 1.0741831951652234
     },
     {
-      "daily_return": 0.0020625897897219745,
+      "daily_return": 0.0015315983019170152,
       "date": "2024-08-13",
-      "portfolio_value": 1.0962606245525643
+      "portfolio_value": 1.0758284123228863
     },
     {
-      "daily_return": -0.002266537592274791,
+      "daily_return": -0.0016044662432842564,
       "date": "2024-08-14",
-      "portfolio_value": 1.0937759086360852
+      "portfolio_value": 1.074102281951748
     },
     {
-      "daily_return": -0.0006844738218388187,
+      "daily_return": -0.0012045263005102615,
       "date": "2024-08-15",
-      "portfolio_value": 1.0930009586323235
+      "portfolio_value": 1.072808497503699
     },
     {
-      "daily_return": 0.00823225824020209,
+      "daily_return": 0.00615998891317946,
       "date": "2024-08-16",
-      "portfolio_value": 1.1019988247805732
+      "portfolio_value": 1.0794169859542866
     },
     {
-      "daily_return": 0.003373244289684565,
+      "daily_return": 0.002584941837550578,
       "date": "2024-08-19",
-      "portfolio_value": 1.1057161360235033
+      "portfolio_value": 1.0822072160814424
     },
     {
-      "daily_return": -0.0008944984594757337,
+      "daily_return": -0.0010151355938049392,
       "date": "2024-08-20",
-      "portfolio_value": 1.1047270746432127
+      "portfolio_value": 1.0811086290165255
     },
     {
-      "daily_return": -0.0020182407695641946,
+      "daily_return": -0.0013094462365609598,
       "date": "2024-08-21",
-      "portfolio_value": 1.1024974694219265
+      "portfolio_value": 1.0796929753909463
     },
     {
-      "daily_return": 0.010088438873120695,
+      "daily_return": 0.007137065564178015,
       "date": "2024-08-22",
-      "portfolio_value": 1.1136199477499598
+      "portfolio_value": 1.087398814945494
     },
     {
-      "daily_return": -0.000590816566378829,
+      "daily_return": -0.00048146831807917994,
       "date": "2024-08-23",
-      "portfolio_value": 1.112962002636179
+      "portfolio_value": 1.086875266866981
     },
     {
-      "daily_return": 0.0037597709693593406,
+      "daily_return": 0.002704746292648763,
       "date": "2024-08-26",
-      "portfolio_value": 1.1171464848636905
+      "portfolio_value": 1.0898149887156112
     },
     {
-      "daily_return": -0.0015031377223521873,
+      "daily_return": -0.002397175170743584,
       "date": "2024-08-27",
-      "portfolio_value": 1.1154672598408988
+      "portfolio_value": 1.087202511283958
     },
     {
-      "daily_return": -0.003796865231885478,
+      "daily_return": -0.0030454100555203107,
       "date": "2024-08-28",
-      "portfolio_value": 1.1112319809847022
+      "portfolio_value": 1.083891533823707
     },
     {
-      "daily_return": 0.0025432226966673943,
+      "daily_return": 0.004015493715297383,
       "date": "2024-08-29",
-      "portfolio_value": 1.1140580913800051
+      "portfolio_value": 1.08824389346584
     },
     {
-      "daily_return": 0.005168148213500383,
+      "daily_return": 0.004339532738591602,
       "date": "2024-08-30",
-      "portfolio_value": 1.1198157087147065
+      "portfolio_value": 1.0929663634691074
     },
     {
-      "daily_return": -0.00601979088047018,
+      "daily_return": -0.004353629250394645,
       "date": "2024-09-02",
-      "portfolio_value": 1.1130746523235784
+      "portfolio_value": 1.0882079931394109
     },
     {
-      "daily_return": 0.0005584383281152332,
+      "daily_return": 0.001057791910522439,
       "date": "2024-09-03",
-      "portfolio_value": 1.1136962358714895
+      "portfolio_value": 1.0893590907515196
     },
     {
-      "daily_return": -0.003812273414732332,
+      "daily_return": -0.0022563046407222454,
       "date": "2024-09-04",
-      "portfolio_value": 1.109450521319389
+      "portfolio_value": 1.086901164779644
     },
     {
-      "daily_return": 9.433839791609966e-05,
+      "daily_return": 0.00015470140734473643,
       "date": "2024-09-05",
-      "portfolio_value": 1.1095551851041376
+      "portfolio_value": 1.08706930991948
     },
     {
-      "daily_return": -0.002837648837086153,
+      "daily_return": -0.0020289946398911315,
       "date": "2024-09-09",
-      "portfolio_value": 1.1064066571234439
+      "portfolio_value": 1.0848636521164632
     },
     {
-      "daily_return": 0.003403254832240612,
+      "daily_return": 0.002615468061016807,
       "date": "2024-09-10",
-      "portfolio_value": 1.1101720409257225
+      "portfolio_value": 1.0877010783491319
     },
     {
-      "daily_return": -0.0007214400962286889,
+      "daily_return": 4.87562568357628e-05,
       "date": "2024-09-11",
-      "portfolio_value": 1.1093711183016868
+      "portfolio_value": 1.0877541105822686
     },
     {
-      "daily_return": 0.004042084861616064,
+      "daily_return": 0.0033368265730234,
       "date": "2024-09-12",
-      "portfolio_value": 1.1138552905048882
+      "portfolio_value": 1.091383757403375
     },
     {
-      "daily_return": 0.002634753040349732,
+      "daily_return": 0.0014477758933058552,
       "date": "2024-09-13",
-      "portfolio_value": 1.1167900241180555
+      "portfolio_value": 1.092963836497689
     },
     {
-      "daily_return": 0.0010356856920277426,
+      "daily_return": 0.001101155494382952,
       "date": "2024-09-16",
-      "portfolio_value": 1.1179466675670338
+      "portfolio_value": 1.0941673596314103
     },
     {
-      "daily_return": 0.0052512204984316675,
+      "daily_return": 0.003464046596900568,
       "date": "2024-09-17",
-      "portfolio_value": 1.1238172520239151
+      "portfolio_value": 1.0979576063499812
     },
     {
-      "daily_return": 0.008113700413229558,
+      "daily_return": 0.006462888318259145,
       "date": "2024-09-19",
-      "portfolio_value": 1.132935568526056
+      "portfolio_value": 1.1050535837380042
     },
     {
-      "daily_return": 0.003331876417093752,
+      "daily_return": 0.002827343179164876,
       "date": "2024-09-20",
-      "portfolio_value": 1.1367103698289147
+      "portfolio_value": 1.1081779494505974
     },
     {
-      "daily_return": 0.0009983037125323871,
+      "daily_return": -1.4402238722443345e-05,
       "date": "2024-09-23",
-      "portfolio_value": 1.137845152011189
+      "portfolio_value": 1.1081619892072225
     },
     {
-      "daily_return": 0.016688736049603803,
+      "daily_return": 0.011865441247895145,
       "date": "2024-09-24",
-      "portfolio_value": 1.156834349418425
+      "portfolio_value": 1.1213108201833115
     },
     {
-      "daily_return": 0.00027012804191710543,
+      "daily_return": 5.239877356281086e-05,
       "date": "2024-09-25",
-      "portfolio_value": 1.1571468428160558
+      "portfolio_value": 1.1213695754950719
     },
     {
-      "daily_return": 0.01982970982148564,
+      "daily_return": 0.015353979583690348,
       "date": "2024-09-26",
-      "portfolio_value": 1.1800927289299465
+      "portfolio_value": 1.1385870610629947
     },
     {
-      "daily_return": 0.011124988978983619,
+      "daily_return": 0.010549696239320035,
       "date": "2024-09-27",
-      "portfolio_value": 1.1932212475334711
+      "portfolio_value": 1.1505988086992296
     },
     {
-      "daily_return": 0.01088113554805761,
+      "daily_return": 0.009847600428607665,
       "date": "2024-09-30",
-      "portfolio_value": 1.2062048496667053
+      "portfolio_value": 1.1619294460209315
     },
     {
-      "daily_return": 0.02448233563820164,
+      "daily_return": 0.0203910201987291,
       "date": "2024-10-02",
-      "portfolio_value": 1.235735561644672
+      "portfolio_value": 1.1856223728242425
     },
     {
-      "daily_return": -0.004751258961968053,
+      "daily_return": -0.002747618533617059,
       "date": "2024-10-03",
-      "portfolio_value": 1.229864261982785
+      "portfolio_value": 1.1823647348187996
     },
     {
-      "daily_return": 0.011100812215853292,
+      "daily_return": 0.009037133272463617,
       "date": "2024-10-04",
-      "portfolio_value": 1.243516754206045
+      "portfolio_value": 1.1930499225040183
     },
     {
-      "daily_return": 0.005156762321280155,
+      "daily_return": 0.0032306923588723106,
       "date": "2024-10-07",
-      "portfolio_value": 1.2499292745500155
+      "portfolio_value": 1.1969042997724053
     },
     {
-      "daily_return": -0.03911649784688995,
+      "daily_return": -0.031310266595428654,
       "date": "2024-10-08",
-      "portfolio_value": 1.2010364187733151
+      "portfolio_value": 1.1594289070573165
     },
     {
-      "daily_return": -0.0046598191054412425,
+      "daily_return": -0.002280728210263148,
       "date": "2024-10-09",
-      "portfolio_value": 1.1954398063227845
+      "portfolio_value": 1.1567845648411963
     },
     {
-      "daily_return": 0.010927587929684556,
+      "daily_return": 0.008574902621627445,
       "date": "2024-10-10",
-      "portfolio_value": 1.208503079921022
+      "portfolio_value": 1.1667038798389113
     },
     {
-      "daily_return": -0.0033265506984140056,
+      "daily_return": -0.004103108668828366,
       "date": "2024-10-14",
-      "portfolio_value": 1.204482933156475
+      "portfolio_value": 1.1619167670355885
     },
     {
-      "daily_return": -0.016781214658521677,
+      "daily_return": -0.013450878961099347,
       "date": "2024-10-15",
-      "portfolio_value": 1.1842702465026504
+      "portfolio_value": 1.146287965239321
     },
     {
-      "daily_return": -0.000896189555539007,
+      "daily_return": -0.0005496197277581354,
       "date": "2024-10-16",
-      "portfolio_value": 1.183208915876799
+      "portfolio_value": 1.1456579427599338
     },
     {
-      "daily_return": -0.0017596296206876902,
+      "daily_return": -0.0015389754798759588,
       "date": "2024-10-17",
-      "portfolio_value": 1.1811269064209606
+      "portfolio_value": 1.1438948032777012
     },
     {
-      "daily_return": 0.016977701833897713,
+      "daily_return": 0.01317653137098181,
       "date": "2024-10-18",
-      "portfolio_value": 1.2011797268661697
+      "portfolio_value": 1.1589673690381928
     },
     {
-      "daily_return": -0.007982001423545913,
+      "daily_return": -0.0060879265117919825,
       "date": "2024-10-21",
-      "portfolio_value": 1.1915919085763895
+      "portfolio_value": 1.1519116608659232
     },
     {
-      "daily_return": 0.0008543430065641668,
+      "daily_return": 0.0009510722187699027,
       "date": "2024-10-22",
-      "portfolio_value": 1.1926099367901601
+      "portfolio_value": 1.1529855994491636
     },
     {
-      "daily_return": 0.007897395485511388,
+      "daily_return": 0.006583448528690894,
       "date": "2024-10-23",
-      "portfolio_value": 1.202028449120943
+      "portfolio_value": 1.1605762207974588
     },
     {
-      "daily_return": -0.0069017344571713855,
+      "daily_return": -0.005587900533579312,
       "date": "2024-10-24",
-      "portfolio_value": 1.1937323679551448
+      "portfolio_value": 1.1540910363140053
     },
     {
-      "daily_return": 0.001862295129207474,
+      "daily_return": 0.001103077724603116,
       "date": "2024-10-25",
-      "portfolio_value": 1.195955449929565
+      "portfolio_value": 1.1553640884283274
     },
     {
-      "daily_return": -0.0008553224008190717,
+      "daily_return": -0.0006950962790091724,
       "date": "2024-10-28",
-      "portfolio_value": 1.1949325224428586
+      "portfolio_value": 1.15456099914956
     },
     {
-      "daily_return": 0.00504614594790171,
+      "daily_return": 0.0034266838623122032,
       "date": "2024-10-29",
-      "portfolio_value": 1.2009623263489995
+      "portfolio_value": 1.158517314693401
     },
     {
-      "daily_return": -0.004945660813963141,
+      "daily_return": -0.0038015560413330873,
       "date": "2024-10-30",
-      "portfolio_value": 1.1950227740325292
+      "portfolio_value": 1.154113146196739
     },
     {
-      "daily_return": -0.0006763667426421662,
+      "daily_return": -0.0007945271183696332,
       "date": "2024-10-31",
-      "portfolio_value": 1.1942145003714737
+      "portfolio_value": 1.153196172004419
     },
     {
-      "daily_return": 0.007761013288459567,
+      "daily_return": 0.005811032570074199,
       "date": "2024-11-01",
-      "portfolio_value": 1.2034828149781278
+      "portfolio_value": 1.1598974325196216
     },
     {
-      "daily_return": 0.0007803567110476522,
+      "daily_return": 0.0005052014018359474,
       "date": "2024-11-04",
-      "portfolio_value": 1.2044219608694264
+      "portfolio_value": 1.1604834143285163
     },
     {
-      "daily_return": 0.009940139966558643,
+      "daily_return": 0.007217191628165225,
       "date": "2024-11-05",
-      "portfolio_value": 1.2163940837392655
+      "portfolio_value": 1.1688588455110325
     },
     {
-      "daily_return": -0.009280459221397183,
+      "daily_return": -0.006420447710150498,
       "date": "2024-11-06",
-      "portfolio_value": 1.2051053880479745
+      "portfolio_value": 1.161354248412882
     },
     {
-      "daily_return": 0.008615745924148403,
+      "daily_return": 0.006617968135019827,
       "date": "2024-11-07",
-      "portfolio_value": 1.2154882698832183
+      "portfolio_value": 1.1690400538223484
     },
     {
-      "daily_return": -0.004901068883578707,
+      "daily_return": -0.0040292031038877555,
       "date": "2024-11-08",
-      "portfolio_value": 1.2095310781453388
+      "portfolio_value": 1.1643297540089184
     },
     {
-      "daily_return": -0.0037636127353411954,
+      "daily_return": -0.0027888737373700976,
       "date": "2024-11-11",
-      "portfolio_value": 1.20497887157584
+      "portfolio_value": 1.1610825853363242
     },
     {
-      "daily_return": -0.012514400004158946,
+      "daily_return": -0.00927110732539918,
       "date": "2024-11-12",
-      "portfolio_value": 1.18989928398038
+      "portfolio_value": 1.1503180640740192
     },
     {
-      "daily_return": 0.0006753787843032435,
+      "daily_return": 0.000468571425113778,
       "date": "2024-11-13",
-      "portfolio_value": 1.1907029167122378
+      "portfolio_value": 1.1508570702486365
     },
     {
-      "daily_return": -0.00814813913045454,
+      "daily_return": -0.0061246321841708085,
       "date": "2024-11-14",
-      "portfolio_value": 1.1810009036838285
+      "portfolio_value": 1.1438084939968112
     },
     {
-      "daily_return": -0.0004289788933768125,
+      "daily_return": -0.0003663496895480689,
       "date": "2024-11-15",
-      "portfolio_value": 1.1804942792230892
+      "portfolio_value": 1.143389460110133
     },
     {
-      "daily_return": 0.004365749304981214,
+      "daily_return": 0.00239974385736107,
       "date": "2024-11-18",
-      "portfolio_value": 1.1855628980616146
+      "portfolio_value": 1.1461333019436037
     },
     {
-      "daily_return": 0.0010223936539710055,
+      "daily_return": 0.0002055076410776381,
       "date": "2024-11-19",
-      "portfolio_value": 1.1867750100449763
+      "portfolio_value": 1.1463688410948467
     },
     {
-      "daily_return": -0.00015551588171855212,
+      "daily_return": 0.0008106737880453005,
       "date": "2024-11-20",
-      "portfolio_value": 1.1865904476828877
+      "portfolio_value": 1.1472616918465843
     },
     {
-      "daily_return": -0.001824973871855332,
+      "daily_return": -0.0014817870607447682,
       "date": "2024-11-21",
-      "portfolio_value": 1.1844249511192733
+      "portfolio_value": 1.1455616943163178
     },
     {
-      "daily_return": -0.0047395484231889965,
+      "daily_return": -0.0040051273426726704,
       "date": "2024-11-22",
-      "portfolio_value": 1.1788113117098102
+      "portfolio_value": 1.140973573851693
     },
     {
-      "daily_return": -0.001929890659118878,
+      "daily_return": -0.0021213760618796935,
       "date": "2024-11-25",
-      "portfolio_value": 1.1765363347704778
+      "portfolio_value": 1.1385531398248867
     },
     {
-      "daily_return": -0.001132606005485608,
+      "daily_return": -0.0011082082556259365,
       "date": "2024-11-26",
-      "portfolio_value": 1.1752037826520447
+      "portfolio_value": 1.137291385835864
     },
     {
-      "daily_return": 0.009312626014380453,
+      "daily_return": 0.007861339157654973,
       "date": "2024-11-27",
-      "portfolio_value": 1.1861480159705686
+      "portfolio_value": 1.1462320191409991
     },
     {
-      "daily_return": -0.003740813918759785,
+      "daily_return": -0.003180517364074093,
       "date": "2024-11-28",
-      "portfolio_value": 1.1817108569627166
+      "portfolio_value": 1.1425864083008634
     },
     {
-      "daily_return": -1.0204951180284452e-05,
+      "daily_return": -0.0007967094145435549,
       "date": "2024-11-29",
-      "portfolio_value": 1.181698797661112
+      "portfolio_value": 1.1416760989524406
     },
     {
-      "daily_return": 0.0032138638238786324,
+      "daily_return": 0.00218976811615345,
       "date": "2024-12-02",
-      "portfolio_value": 1.1854966166776357
+      "portfolio_value": 1.144176104872901
     },
     {
-      "daily_return": 0.005417666375704794,
+      "daily_return": 0.0031148526949341775,
       "date": "2024-12-03",
-      "portfolio_value": 1.191919241836322
+      "portfolio_value": 1.1477400448966437
     },
     {
-      "daily_return": 0.00013885057378778724,
+      "daily_return": -0.00013488609088901387,
       "date": "2024-12-04",
-      "portfolio_value": 1.1920847405069597
+      "portfolio_value": 1.147585230728631
     },
     {
-      "daily_return": -0.0010131176553880186,
+      "daily_return": -0.0011320219940269321,
       "date": "2024-12-05",
-      "portfolio_value": 1.1908770184096333
+      "portfolio_value": 1.1462861390074257
     },
     {
-      "daily_return": 0.006823045966828523,
+      "daily_return": 0.004838333870102266,
       "date": "2024-12-06",
-      "portfolio_value": 1.199002427047082
+      "portfolio_value": 1.1518322540586141
     },
     {
-      "daily_return": 0.008272220895355025,
+      "daily_return": 0.007112946405912884,
       "date": "2024-12-09",
-      "portfolio_value": 1.2089208399776823
+      "portfolio_value": 1.160025175150335
     },
     {
-      "daily_return": -0.0017696898926700755,
+      "daily_return": -0.0016552589714869538,
       "date": "2024-12-10",
-      "portfolio_value": 1.2067814249861355
+      "portfolio_value": 1.1581050330720166
     },
     {
-      "daily_return": -0.0026589310725461954,
+      "daily_return": -0.0026364434138893473,
       "date": "2024-12-11",
-      "portfolio_value": 1.2035726763574683
+      "portfolio_value": 1.155051754684982
     },
     {
-      "daily_return": 0.007071430436210078,
+      "daily_return": 0.004986994014368079,
       "date": "2024-12-12",
-      "portfolio_value": 1.2120836568132534
+      "portfolio_value": 1.1608119908718812
     },
     {
-      "daily_return": -0.005627194254845974,
+      "daily_return": -0.004590534337885804,
       "date": "2024-12-13",
-      "portfolio_value": 1.2052630266232411
+      "portfolio_value": 1.1554832435679543
     },
     {
-      "daily_return": -0.003921490653367184,
+      "daily_return": -0.003734309625993644,
       "date": "2024-12-16",
-      "portfolio_value": 1.200536598929489
+      "portfolio_value": 1.151168311368824
     },
     {
-      "daily_return": -0.0021422436004907165,
+      "daily_return": -0.0020159859906171865,
       "date": "2024-12-17",
-      "portfolio_value": 1.1979084559164677
+      "portfolio_value": 1.148847572180262
     },
     {
-      "daily_return": 0.0029768436444375774,
+      "daily_return": 0.0028387419849248852,
       "date": "2024-12-18",
-      "portfolio_value": 1.2014744420900805
+      "portfolio_value": 1.1521088540176891
     },
     {
-      "daily_return": -0.0009754727396110854,
+      "daily_return": 0.00021150795539515003,
       "date": "2024-12-19",
-      "portfolio_value": 1.200302436524482
+      "portfolio_value": 1.1523295981522512
     },
     {
-      "daily_return": 0.001499086323362668,
+      "daily_return": 0.0027405847983135267,
       "date": "2024-12-20",
-      "portfolio_value": 1.2021017934909748
+      "portfolio_value": 1.155487655131594
     },
     {
-      "daily_return": 0.002733533133498158,
+      "daily_return": 0.000760173545611337,
       "date": "2024-12-23",
-      "portfolio_value": 1.2053877785733198
+      "portfolio_value": 1.1563660262793054
     },
     {
-      "daily_return": 0.005070176168703835,
+      "daily_return": 0.0035028138049349555,
       "date": "2024-12-24",
-      "portfolio_value": 1.211499306962289
+      "portfolio_value": 1.1604165611597144
     },
     {
-      "daily_return": 0.0024562012685851926,
+      "daily_return": 0.0014102580135204323,
       "date": "2024-12-27",
-      "portfolio_value": 1.2144749930969398
+      "portfolio_value": 1.1620530479141118
     },
     {
-      "daily_return": 0.0007624782258827814,
+      "daily_return": 0.0005166574737941287,
       "date": "2024-12-30",
-      "portfolio_value": 1.2154010038350556
+      "portfolio_value": 1.1626534313062618
     },
     {
-      "daily_return": 0.0015250046441718183,
+      "daily_return": 0.0011208730212361173,
       "date": "2024-12-31",
-      "portfolio_value": 1.217254496010435
+      "portfolio_value": 1.1639566181704606
     },
     {
-      "daily_return": -0.005727615107245385,
+      "daily_return": -0.004617512847570187,
       "date": "2025-01-02",
-      "portfolio_value": 1.2102825307697234
+      "portfolio_value": 1.1585820335320443
     },
     {
-      "daily_return": 0.005476343618423877,
+      "daily_return": 0.004070626866999155,
       "date": "2025-01-03",
-      "portfolio_value": 1.2169104537835942
+      "portfolio_value": 1.1632981886853624
     },
     {
-      "daily_return": -0.00025010109860323134,
+      "daily_return": -0.0011126340477279684,
       "date": "2025-01-06",
-      "portfolio_value": 1.216606103142201
+      "portfolio_value": 1.1620038635129708
     },
     {
-      "daily_return": -0.009931397267354203,
+      "daily_return": -0.011052021469776338,
       "date": "2025-01-07",
-      "portfolio_value": 1.2045235046140081
+      "portfolio_value": 1.1491613718654623
     },
     {
-      "daily_return": -0.0043980763490416176,
+      "daily_return": -0.0049099433448870616,
       "date": "2025-01-08",
-      "portfolio_value": 1.1992259182765006
+      "portfolio_value": 1.1435190546354703
     },
     {
-      "daily_return": 0.001116009006119282,
+      "daily_return": 0.0012997070533005328,
       "date": "2025-01-09",
-      "portfolio_value": 1.2005642652016688
+      "portfolio_value": 1.1450052944163636
     },
     {
-      "daily_return": -0.0011673092957549137,
+      "daily_return": -0.0018282703619763383,
       "date": "2025-01-10",
-      "portfolio_value": 1.1991628353747477
+      "portfolio_value": 1.1429119151722762
     },
     {
-      "daily_return": -0.005546497309526873,
+      "daily_return": -0.004299344189415511,
       "date": "2025-01-13",
-      "portfolio_value": 1.192511681934657
+      "portfolio_value": 1.1379981434707667
     },
     {
-      "daily_return": 0.007007231247404095,
+      "daily_return": 0.00637119131358177,
       "date": "2025-01-14",
-      "portfolio_value": 1.200867887055204
+      "portfolio_value": 1.1452485473573197
     },
     {
-      "daily_return": 0.0008856821901760521,
+      "daily_return": 0.001282762779097109,
       "date": "2025-01-15",
-      "portfolio_value": 1.2019314743555234
+      "portfolio_value": 1.1467176295666845
     },
     {
-      "daily_return": 0.0057213104522684,
+      "daily_return": 0.004281957487555389,
       "date": "2025-01-16",
-      "portfolio_value": 1.208808097462664
+      "portfolio_value": 1.1516278257067194
     },
     {
-      "daily_return": 0.0011074561316971928,
+      "daily_return": 0.0004689065481721562,
       "date": "2025-01-17",
-      "portfolio_value": 1.2101467994022443
+      "portfolio_value": 1.1521678315352506
     },
     {
-      "daily_return": 0.0048459268129741025,
+      "daily_return": 0.004878019646674947,
       "date": "2025-01-20",
-      "portfolio_value": 1.2159876126150957
+      "portfolio_value": 1.1577881288537464
     },
     {
-      "daily_return": 0.004245073164926979,
+      "daily_return": 0.003038923141718094,
       "date": "2025-01-21",
-      "portfolio_value": 1.2211495689982919
+      "portfolio_value": 1.1613065579917266
     },
     {
-      "daily_return": -0.0033492047909873756,
+      "daily_return": -0.003941569380539198,
       "date": "2025-01-22",
-      "portfolio_value": 1.2170596890112906
+      "portfolio_value": 1.1566835339023507
     },
     {
-      "daily_return": -0.00150839141431059,
+      "daily_return": -0.0011518525694011305,
       "date": "2025-01-23",
-      "portfolio_value": 1.2152238866256824
+      "portfolio_value": 1.1553512050018413
     },
     {
-      "daily_return": 0.00946784632314243,
+      "daily_return": 0.0082405725168599,
       "date": "2025-01-24",
-      "portfolio_value": 1.2267294396324662
+      "portfolio_value": 1.1648719603891005
     },
     {
-      "daily_return": 0.001666253635092778,
+      "daily_return": 0.001771715965636289,
       "date": "2025-01-27",
-      "portfolio_value": 1.2287734820205292
+      "portfolio_value": 1.166935782639244
     },
     {
-      "daily_return": 0.0031132943013865533,
+      "daily_return": 0.0027155281739794914,
       "date": "2025-01-28",
-      "portfolio_value": 1.2325990154997986
+      "portfolio_value": 1.1701046296342255
     },
     {
-      "daily_return": 8.854923950329897e-05,
+      "daily_return": -0.0003580105463832395,
       "date": "2025-02-03",
-      "portfolio_value": 1.2327081612052335
+      "portfolio_value": 1.1696857198364445
     },
     {
-      "daily_return": 0.007988605935590464,
+      "daily_return": 0.007982332036846992,
       "date": "2025-02-04",
-      "portfolio_value": 1.2425557809386885
+      "portfolio_value": 1.1790225396309375
     },
     {
-      "daily_return": -0.001145462803821974,
+      "daily_return": -0.0013714437894583854,
       "date": "2025-02-05",
-      "portfolio_value": 1.2411324795099492
+      "portfolio_value": 1.1774055764913292
     },
     {
-      "daily_return": 0.0037290514718249824,
+      "daily_return": 0.0032014362179997964,
       "date": "2025-02-06",
-      "portfolio_value": 1.2457607264093955
+      "portfolio_value": 1.1811749653471832
     },
     {
-      "daily_return": 0.0069797843043138035,
+      "daily_return": 0.006043613564150409,
       "date": "2025-02-07",
-      "portfolio_value": 1.2544558675745183
+      "portfolio_value": 1.1883135303893904
     },
     {
-      "daily_return": 0.007284615084436806,
+      "daily_return": 0.0065901711364399025,
       "date": "2025-02-10",
-      "portfolio_value": 1.2635940957102119
+      "portfolio_value": 1.1961447199184037
     },
     {
-      "daily_return": -0.00229587627881084,
+      "daily_return": -0.0027568945667095575,
       "date": "2025-02-11",
-      "portfolio_value": 1.2606930399998253
+      "portfolio_value": 1.1928470750390623
     },
     {
-      "daily_return": 0.009681434090287312,
+      "daily_return": 0.00863958218799514,
       "date": "2025-02-12",
-      "portfolio_value": 1.2728983565746677
+      "portfolio_value": 1.203152775381572
     },
     {
-      "daily_return": -0.004451106575648248,
+      "daily_return": -0.0037103849911192636,
       "date": "2025-02-13",
-      "portfolio_value": 1.2672325503295863
+      "portfolio_value": 1.1986886153817726
     },
     {
-      "daily_return": 0.012814847516005352,
+      "daily_return": 0.013048191955822476,
       "date": "2025-02-14",
-      "portfolio_value": 1.2834719422293783
+      "portfolio_value": 1.214329334530533
     },
     {
-      "daily_return": 0.003485698223850026,
+      "daily_return": 0.004288573574393875,
       "date": "2025-02-17",
-      "portfolio_value": 1.2879457380987687
+      "portfolio_value": 1.219537075225212
     },
     {
-      "daily_return": 0.011693407174023352,
+      "daily_return": 0.01002575096308647,
       "date": "2025-02-18",
-      "portfolio_value": 1.3030062120324055
+      "portfolio_value": 1.2317638502316708
     },
     {
-      "daily_return": 0.0023521845965008073,
+      "daily_return": 0.001287042249711509,
       "date": "2025-02-19",
-      "portfolio_value": 1.3060711231734932
+      "portfolio_value": 1.2333491823485863
     },
     {
-      "daily_return": -0.004945906586665759,
+      "daily_return": -0.0048440683145056455,
       "date": "2025-02-20",
-      "portfolio_value": 1.2996114174027356
+      "portfolio_value": 1.22737475465365
     },
     {
-      "daily_return": 0.012991515568236365,
+      "daily_return": 0.012115063526616858,
       "date": "2025-02-21",
-      "portfolio_value": 1.316455721679643
+      "portfolio_value": 1.2422444777772448
     },
     {
-      "daily_return": -0.003945555486657844,
+      "daily_return": -0.0037086414043271576,
       "date": "2025-02-24",
-      "portfolio_value": 1.3112615725840278
+      "portfolio_value": 1.2376374384726634
     },
     {
-      "daily_return": -0.00023811623992269328,
+      "daily_return": -0.00020744657190574414,
       "date": "2025-02-25",
-      "portfolio_value": 1.310949339908809
+      "portfolio_value": 1.2373734589838246
     },
     {
-      "daily_return": 0.01361398270018787,
+      "daily_return": 0.012195939661826034,
       "date": "2025-02-26",
-      "portfolio_value": 1.3287965815431502
+      "portfolio_value": 1.2524643910287363
     },
     {
-      "daily_return": -0.004894670661155533,
+      "daily_return": -0.0051930140604765414,
       "date": "2025-02-27",
-      "portfolio_value": 1.322292559900827
+      "portfolio_value": 1.2459603258358778
     },
     {
-      "daily_return": -0.009041377050433522,
+      "daily_return": -0.007953688523362954,
       "date": "2025-02-28",
-      "portfolio_value": 1.3103372142957808
+      "portfolio_value": 1.2360503454917113
     },
     {
-      "daily_return": 0.001845747343258996,
+      "daily_return": 0.0013606676791841005,
       "date": "2025-03-03",
-      "portfolio_value": 1.3127557657278406
+      "portfolio_value": 1.2377321992466663
     },
     {
-      "daily_return": 0.0002572389061622622,
+      "daily_return": 0.0008210398514267047,
       "date": "2025-03-04",
-      "portfolio_value": 1.3130934575850748
+      "portfolio_value": 1.238748426707642
     },
     {
-      "daily_return": 0.011562322957056234,
+      "daily_return": 0.011603199541500358,
       "date": "2025-03-05",
-      "portfolio_value": 1.328275868214471
+      "portfolio_value": 1.2531218718844506
     },
     {
-      "daily_return": 0.011866410914369949,
+      "daily_return": 0.010816144450369516,
       "date": "2025-03-06",
-      "portfolio_value": 1.3440377354743456
+      "portfolio_value": 1.2666758190646703
     },
     {
-      "daily_return": -0.005565879494282585,
+      "daily_return": -0.004868440035923466,
       "date": "2025-03-07",
-      "portfolio_value": 1.336556983402927
+      "portfolio_value": 1.2605090837945998
     },
     {
-      "daily_return": -0.0070396160047081656,
+      "daily_return": -0.006712423100223707,
       "date": "2025-03-10",
-      "portfolio_value": 1.3271481354713592
+      "portfolio_value": 1.2520480135024952
     },
     {
-      "daily_return": -0.0025019587781588653,
+      "daily_return": -0.0013284579636373567,
       "date": "2025-03-11",
-      "portfolio_value": 1.3238276655438996
+      "portfolio_value": 1.2503847203481016
     },
     {
-      "daily_return": -0.003109047675576052,
+      "daily_return": -0.003619057015893549,
       "date": "2025-03-12",
-      "portfolio_value": 1.319711822217477
+      "portfolio_value": 1.2458595067533595
     },
     {
-      "daily_return": 0.0002808009713054123,
+      "daily_return": 0.0005319383318912359,
       "date": "2025-03-13",
-      "portfolio_value": 1.320082398578999
+      "portfolio_value": 1.2465222271811527
     },
     {
-      "daily_return": 0.005583312143636023,
+      "daily_return": 0.005234721551996958,
       "date": "2025-03-14",
-      "portfolio_value": 1.327452830665585
+      "portfolio_value": 1.2530474239488212
     },
     {
-      "daily_return": 0.007017817768554523,
+      "daily_return": 0.005894964403977606,
       "date": "2025-03-17",
-      "portfolio_value": 1.336768652727548
+      "portfolio_value": 1.2604340939094953
     },
     {
-      "daily_return": 0.009801776308384162,
+      "daily_return": 0.008436919101928066,
       "date": "2025-03-18",
-      "portfolio_value": 1.3498713600376435
+      "portfolio_value": 1.2710682743931216
     },
     {
-      "daily_return": 0.0014235452874128145,
+      "daily_return": 0.0013629641596668647,
       "date": "2025-03-19",
-      "portfolio_value": 1.3517929630508385
+      "portfolio_value": 1.272800694895609
     },
     {
-      "daily_return": -0.0077429289642029515,
+      "daily_return": -0.0075822198703755835,
       "date": "2025-03-20",
-      "portfolio_value": 1.3413261261636265
+      "portfolio_value": 1.2631500401757436
     },
     {
-      "daily_return": -0.007625837496271053,
+      "daily_return": -0.006394974067537787,
       "date": "2025-03-21",
-      "portfolio_value": 1.3310973910959998
+      "portfolio_value": 1.2550722284254106
     },
     {
-      "daily_return": 0.005989720502343173,
+      "daily_return": 0.005436783685607134,
       "date": "2025-03-24",
-      "portfolio_value": 1.339004907780596
+      "portfolio_value": 1.2618957846411722
     },
     {
-      "daily_return": -0.011449011764308178,
+      "daily_return": -0.01020391574663486,
       "date": "2025-03-25",
-      "portfolio_value": 1.3236746248389497
+      "portfolio_value": 1.24901950637366
     },
     {
-      "daily_return": 0.0032652833349333613,
+      "daily_return": 0.0024546333101942023,
       "date": "2025-03-26",
-      "portfolio_value": 1.3279967975323106
+      "portfolio_value": 1.2520415953109643
     },
     {
-      "daily_return": -0.00241255657678617,
+      "daily_return": -0.0027411375929228088,
       "date": "2025-03-27",
-      "portfolio_value": 1.324792930124473
+      "portfolio_value": 1.2486095770261543
     },
     {
-      "daily_return": -0.0015971179557850834,
+      "daily_return": -0.0016358868116459289,
       "date": "2025-03-28",
-      "portfolio_value": 1.322677079548074
+      "portfolio_value": 1.2465669930862024
     },
     {
-      "daily_return": -0.007111027886683544,
+      "daily_return": -0.006270659207359035,
       "date": "2025-03-31",
-      "portfolio_value": 1.3132714859503305
+      "portfolio_value": 1.2387501962934166
     },
     {
-      "daily_return": -0.0005761991552948253,
+      "daily_return": -0.0011827196714654495,
       "date": "2025-04-01",
-      "portfolio_value": 1.3125147800294532
+      "portfolio_value": 1.2372851020682287
     },
     {
-      "daily_return": -0.0027207953770609777,
+      "daily_return": -0.0029611226468983735,
       "date": "2025-04-02",
-      "portfolio_value": 1.308943695883625
+      "portfolio_value": 1.2336213491318244
     },
     {
-      "daily_return": -0.004287075978320359,
+      "daily_return": -0.0023431661251963097,
       "date": "2025-04-03",
-      "portfolio_value": 1.3033321548080283
+      "portfolio_value": 1.2307307693752196
     },
     {
-      "daily_return": -0.05538079961692999,
+      "daily_return": -0.0485228267233631,
       "date": "2025-04-07",
-      "portfolio_value": 1.2311525779083032
+      "portfolio_value": 1.1710122335097146
     },
     {
-      "daily_return": 0.0039846614756318625,
+      "daily_return": 0.004350558005967929,
       "date": "2025-04-08",
-      "portfolio_value": 1.2360583041561193
+      "portfolio_value": 1.1761067901572968
     },
     {
-      "daily_return": 0.0034345076917655774,
+      "daily_return": 0.003672641857170928,
       "date": "2025-04-09",
-      "portfolio_value": 1.2403035559092144
+      "portfolio_value": 1.1804262091833313
     },
     {
-      "daily_return": 0.00820787486514883,
+      "daily_return": 0.006688743152789672,
       "date": "2025-04-10",
-      "portfolio_value": 1.2504838122909163
+      "portfolio_value": 1.18832177690738
     },
     {
-      "daily_return": 0.0028141251383996236,
+      "daily_return": 0.0029324696698353452,
       "date": "2025-04-11",
-      "portfolio_value": 1.254002830222246
+      "portfolio_value": 1.1918064944761657
     },
     {
-      "daily_return": 0.009033588512502608,
+      "daily_return": 0.006364765179637225,
       "date": "2025-04-14",
-      "portfolio_value": 1.2653309757839872
+      "portfolio_value": 1.1993920629530732
     },
     {
-      "daily_return": 0.0011101028092795897,
+      "daily_return": 0.0010299696305263112,
       "date": "2025-04-15",
-      "portfolio_value": 1.2667356232548737
+      "portfolio_value": 1.200627400353009
     },
     {
-      "daily_return": -0.006198713828602064,
+      "daily_return": -0.006145852927815372,
       "date": "2025-04-16",
-      "portfolio_value": 1.2588834916298208
+      "portfolio_value": 1.1932485209293342
     },
     {
-      "daily_return": 0.006644517242956523,
+      "daily_return": 0.0058825816404406645,
       "date": "2025-04-17",
-      "portfolio_value": 1.2672481646968285
+      "portfolio_value": 1.2002679027710361
     },
     {
-      "daily_return": 0.006744777721148723,
+      "daily_return": 0.005962495570335816,
       "date": "2025-04-22",
-      "portfolio_value": 1.2757954718852422
+      "portfolio_value": 1.2074244948245247
     },
     {
-      "daily_return": 0.013989455733296557,
+      "daily_return": 0.01227408079342255,
       "date": "2025-04-23",
-      "portfolio_value": 1.293643156163921
+      "portfolio_value": 1.2222445206259582
     },
     {
-      "daily_return": -0.0015652688299012348,
+      "daily_return": -0.0009956047734248717,
       "date": "2025-04-24",
-      "portfolio_value": 1.2916182568545624
+      "portfolio_value": 1.2210276481469307
     },
     {
-      "daily_return": 0.0008675209885783085,
+      "daily_return": 0.0006675638563604714,
       "date": "2025-04-25",
-      "portfolio_value": 1.2926815445918933
+      "portfolio_value": 1.2218427620724504
     },
     {
-      "daily_return": 0.0005022259677589119,
+      "daily_return": 9.720795511281835e-05,
       "date": "2025-04-28",
-      "portfolio_value": 1.2933307628316302
+      "portfolio_value": 1.2219615349088209
     },
     {
-      "daily_return": 0.0009988286775121655,
+      "daily_return": 0.0007135049512382404,
       "date": "2025-04-29",
-      "portfolio_value": 1.294622578687055
+      "portfolio_value": 1.222803455488466
     },
     {
-      "daily_return": 0.0009823068950832316,
+      "daily_return": 0.002549898920375076,
       "date": "2025-04-30",
-      "portfolio_value": 1.2958942953726298
+      "portfolio_value": 1.225921480699447
     },
     {
-      "daily_return": 0.006021668307268264,
+      "daily_return": 0.005938955487358549,
       "date": "2025-05-02",
-      "portfolio_value": 1.303697740980645
+      "portfolio_value": 1.2332021738043177
     },
     {
-      "daily_return": 0.002721001542929899,
+      "daily_return": 0.001810965306744002,
       "date": "2025-05-06",
-      "portfolio_value": 1.3072451045453677
+      "portfolio_value": 1.2354354601572786
     },
     {
-      "daily_return": 0.001426524376914389,
+      "daily_return": -9.360784301751138e-05,
       "date": "2025-05-07",
-      "portfolio_value": 1.3091099215536037
+      "portfolio_value": 1.2353198137086658
     },
     {
-      "daily_return": 0.0016876386576698203,
+      "daily_return": 0.0018675172046399508,
       "date": "2025-05-08",
-      "portfolio_value": 1.3113192260643567
+      "portfolio_value": 1.2376267947139992
     },
     {
-      "daily_return": 0.0032192713082911436,
+      "daily_return": 0.001867602294256806,
       "date": "2025-05-09",
-      "portfolio_value": 1.3155407184248364
+      "portfolio_value": 1.2399381893552406
     },
     {
-      "daily_return": 0.00949365407844999,
+      "daily_return": 0.007232639348786514,
       "date": "2025-05-12",
-      "portfolio_value": 1.3280300069316775
+      "portfolio_value": 1.2489062150936343
     },
     {
-      "daily_return": -0.006394437787910009,
+      "daily_return": -0.005928234520377259,
       "date": "2025-05-13",
-      "portfolio_value": 1.3195380016718752
+      "portfolio_value": 1.2415024061566025
     },
     {
-      "daily_return": 0.008622282081053782,
+      "daily_return": 0.0070650365314543955,
       "date": "2025-05-14",
-      "portfolio_value": 1.33091543053896
+      "portfolio_value": 1.2502736660099874
     },
     {
-      "daily_return": -0.0011684497034884236,
+      "daily_return": -0.0011048047250130557,
       "date": "2025-05-15",
-      "portfolio_value": 1.3293603227987787
+      "portfolio_value": 1.24889235775622
     },
     {
-      "daily_return": -0.0012781432640339842,
+      "daily_return": -0.001156655438176205,
       "date": "2025-05-16",
-      "portfolio_value": 1.3276612098567193
+      "portfolio_value": 1.2474478196189247
     },
     {
-      "daily_return": 0.0005151967618179762,
+      "daily_return": 0.001704696009580656,
       "date": "2025-05-19",
-      "portfolio_value": 1.328345216612829
+      "portfolio_value": 1.2495743389391891
     },
     {
-      "daily_return": 0.006137958443878087,
+      "daily_return": 0.00506706288992052,
       "date": "2025-05-20",
-      "portfolio_value": 1.3364985443515227
+      "portfolio_value": 1.255906010700225
     },
     {
-      "daily_return": 0.0017713976882854027,
+      "daily_return": 0.0009684838000543125,
       "date": "2025-05-21",
-      "portfolio_value": 1.3388660147833837
+      "portfolio_value": 1.2571223353259788
     },
     {
-      "daily_return": -0.0036419839240978396,
+      "daily_return": -0.00317453838538792,
       "date": "2025-05-22",
-      "portfolio_value": 1.3339898862810218
+      "portfolio_value": 1.253131552217358
     },
     {
-      "daily_return": 0.0013530798758318633,
+      "daily_return": 0.0007409154123821445,
       "date": "2025-05-23",
-      "portfolio_value": 1.3357948811507119
+      "portfolio_value": 1.2540600166981382
     },
     {
-      "daily_return": -0.0039041737989053303,
+      "daily_return": -0.003998263535800141,
       "date": "2025-05-26",
-      "portfolio_value": 1.3305797057750115
+      "portfolio_value": 1.2490459542616692
     },
     {
-      "daily_return": 0.0015477498758999333,
+      "daily_return": 0.0012687630778250812,
       "date": "2025-05-27",
-      "portfolio_value": 1.3326391103495
+      "portfolio_value": 1.2506306976509431
     },
     {
-      "daily_return": -0.002216657135212103,
+      "daily_return": -0.0016324407772246381,
       "date": "2025-05-28",
-      "portfolio_value": 1.329612529942723
+      "portfolio_value": 1.2485891171028487
     },
     {
-      "daily_return": 0.003360631160663078,
+      "daily_return": 0.0026816282780359776,
       "date": "2025-05-29",
-      "portfolio_value": 1.3340808672424567
+      "portfolio_value": 1.2519373689869198
     },
     {
-      "daily_return": -0.002969655842156479,
+      "daily_return": -0.00298798843736566,
       "date": "2025-05-30",
-      "portfolio_value": 1.330119106201141
+      "portfolio_value": 1.248193058754679
     },
     {
-      "daily_return": -0.0011416331840597817,
+      "daily_return": -0.0004696909859713945,
       "date": "2025-06-02",
-      "portfolio_value": 1.3286005980907498
+      "portfolio_value": 1.2476067937262298
     },
     {
-      "daily_return": 0.006246558757440807,
+      "daily_return": 0.0047295563127604376,
       "date": "2025-06-03",
-      "portfolio_value": 1.3368997797918947
+      "portfolio_value": 1.2535074203133407
     },
     {
-      "daily_return": 0.0029824763568381744,
+      "daily_return": 0.002470609811926275,
       "date": "2025-06-04",
-      "portfolio_value": 1.3408870517765863
+      "portfolio_value": 1.2566043480452893
     },
     {
-      "daily_return": 0.003808617961573405,
+      "daily_return": 0.002836472082183927,
       "date": "2025-06-05",
-      "portfolio_value": 1.3459939782864239
+      "portfolio_value": 1.2601686711968707
     },
     {
-      "daily_return": -0.0016796017387469809,
+      "daily_return": -0.0014745908509819412,
       "date": "2025-06-06",
-      "portfolio_value": 1.343733244460151
+      "portfolio_value": 1.2583104380036298
     },
     {
-      "daily_return": 0.006459194121123694,
+      "daily_return": 0.004572751529702339,
       "date": "2025-06-09",
-      "portfolio_value": 1.3524126783331265
+      "portfolio_value": 1.2640643789838513
     },
     {
-      "daily_return": -0.001208369858885507,
+      "daily_return": -0.0013556776188360072,
       "date": "2025-06-10",
-      "portfolio_value": 1.3507784636158542
+      "portfolio_value": 1.262350715196495
     },
     {
-      "daily_return": 0.0033837936507271978,
+      "daily_return": 0.002319609304142152,
       "date": "2025-06-11",
-      "portfolio_value": 1.3553492192045766
+      "portfolio_value": 1.2652788756605553
     },
     {
-      "daily_return": -0.00546172918587606,
+      "daily_return": -0.004559688111234701,
       "date": "2025-06-12",
-      "portfolio_value": 1.3479466688169928
+      "portfolio_value": 1.2595095986138094
     },
     {
-      "daily_return": -0.00068640243222562,
+      "daily_return": -0.0007223280608885834,
       "date": "2025-06-13",
-      "portfolio_value": 1.3470214349450063
+      "portfolio_value": 1.258599819487772
     },
     {
-      "daily_return": 0.005323542451317113,
+      "daily_return": 0.0038495741688376077,
       "date": "2025-06-16",
-      "portfolio_value": 1.35419236073677
+      "portfolio_value": 1.2634448928417759
     },
     {
-      "daily_return": -0.0015790001767435457,
+      "daily_return": -0.0007366387599785403,
       "date": "2025-06-17",
-      "portfolio_value": 1.352054090759822
+      "portfolio_value": 1.2625141903626116
     },
     {
-      "daily_return": -0.0025899375192365423,
+      "daily_return": -0.002095946505826488,
       "date": "2025-06-18",
-      "portfolio_value": 1.348552355142126
+      "portfolio_value": 1.2598680281567647
     },
     {
-      "daily_return": -0.007711038082043503,
+      "daily_return": -0.005489381141622738,
       "date": "2025-06-19",
-      "portfolio_value": 1.3381536165759955
+      "portfolio_value": 1.2529521323620674
     },
     {
-      "daily_return": 0.006205127962917851,
+      "daily_return": 0.004701306515103363,
       "date": "2025-06-20",
-      "portfolio_value": 1.3464570310008908
+      "portfolio_value": 1.2588426443850538
     },
     {
-      "daily_return": 0.0030851012307428036,
+      "daily_return": 0.001839922154713447,
       "date": "2025-06-23",
-      "portfolio_value": 1.3506109872443741
+      "portfolio_value": 1.261158816855756
     },
     {
-      "daily_return": 0.009223904524894761,
+      "daily_return": 0.006605854671710452,
       "date": "2025-06-24",
-      "portfolio_value": 1.36306889404099
+      "portfolio_value": 1.2694898487178514
     },
     {
-      "daily_return": 0.004316812281371681,
+      "daily_return": 0.0027680422928872,
       "date": "2025-06-25",
-      "portfolio_value": 1.368953006583142
+      "portfolio_value": 1.2730038503094936
     },
     {
-      "daily_return": -0.0013374630366041677,
+      "daily_return": -0.0006662246141723781,
       "date": "2025-06-26",
-      "portfolio_value": 1.367117701229495
+      "portfolio_value": 1.2721557438104811
     },
     {
-      "daily_return": 0.0009748659261736196,
+      "daily_return": 0.0012571948783108176,
       "date": "2025-06-27",
-      "portfolio_value": 1.3684504576934926
+      "portfolio_value": 1.2737550914960134
     },
     {
-      "daily_return": -0.0029123246121595396,
+      "daily_return": -0.002239307596406187,
       "date": "2025-06-30",
-      "portfolio_value": 1.364465085745031
+      "portfolio_value": 1.2709027620436653
     },
     {
-      "daily_return": 0.003680268761881072,
+      "daily_return": 0.0021343215312488516,
       "date": "2025-07-02",
-      "portfolio_value": 1.3694866839767756
+      "portfolio_value": 1.2736152771728186
     },
     {
-      "daily_return": -0.003007989620800333,
+      "daily_return": -0.0027193294386875858,
       "date": "2025-07-03",
-      "portfolio_value": 1.3653672822455494
+      "portfolio_value": 1.2701518976560404
     },
     {
-      "daily_return": -0.002293570752367959,
+      "daily_return": -0.002051899838630728,
       "date": "2025-07-04",
-      "portfolio_value": 1.362235715780751
+      "portfolio_value": 1.2675456731822035
     },
     {
-      "daily_return": -0.0005930788287327661,
+      "daily_return": 3.310740161759341e-05,
       "date": "2025-07-07",
-      "portfolio_value": 1.3614278026179778
+      "portfolio_value": 1.2675876383258742
     },
     {
-      "daily_return": 0.004172295957630454,
+      "daily_return": 0.0032940994763185696,
       "date": "2025-07-08",
-      "portfolio_value": 1.3671080823354465
+      "portfolio_value": 1.2717631981014714
     },
     {
-      "daily_return": -0.003496997713523753,
+      "daily_return": -0.0030541486807985387,
       "date": "2025-07-09",
-      "portfolio_value": 1.3623273084973795
+      "portfolio_value": 1.2678790442077017
     },
     {
-      "daily_return": 0.002295651637282018,
+      "daily_return": 0.0011178021010471645,
       "date": "2025-07-10",
-      "portfolio_value": 1.3654547374136456
+      "portfolio_value": 1.2692962820671907
     },
     {
-      "daily_return": 0.0011175191594736586,
+      "daily_return": 0.0007438303135990002,
       "date": "2025-07-11",
-      "portfolio_value": 1.3669806592440994
+      "portfolio_value": 1.2702404231187308
     },
     {
-      "daily_return": 0.0004386780299642521,
+      "daily_return": 0.0004318278237723935,
       "date": "2025-07-14",
-      "portfolio_value": 1.367580323626696
+      "portfolio_value": 1.270788948276314
     },
     {
-      "daily_return": 0.005521660383846494,
+      "daily_return": 0.005079005771056083,
       "date": "2025-07-15",
-      "portfolio_value": 1.3751316377213936
+      "portfolio_value": 1.2772432926784036
     },
     {
-      "daily_return": -0.0018158555696520212,
+      "daily_return": -0.0013930718648649523,
       "date": "2025-07-16",
-      "portfolio_value": 1.3726345972780325
+      "portfolio_value": 1.275464000982786
     },
     {
-      "daily_return": -0.0011509147298888538,
+      "daily_return": -0.0011068494354365024,
       "date": "2025-07-17",
-      "portfolio_value": 1.3710548119012702
+      "portfolio_value": 1.2740522543733785
     },
     {
-      "daily_return": 0.004253114807617927,
+      "daily_return": 0.003233374679691181,
       "date": "2025-07-18",
-      "portfolio_value": 1.3768860654238233
+      "portfolio_value": 1.2781717426732728
     },
     {
-      "daily_return": 0.0013164892813257788,
+      "daily_return": 0.0014434692759121178,
       "date": "2025-07-21",
-      "portfolio_value": 1.3786987211705606
+      "portfolio_value": 1.280016744313161
     },
     {
-      "daily_return": 0.0019248121536613089,
+      "daily_return": 0.0014339468932661405,
       "date": "2025-07-22",
-      "portfolio_value": 1.3813524572253069
+      "portfolio_value": 1.2818522203469973
     },
     {
-      "daily_return": 0.006872081604094166,
+      "daily_return": 0.006207106006447657,
       "date": "2025-07-23",
-      "portfolio_value": 1.390845224035375
+      "portfolio_value": 1.2898088129632914
     },
     {
-      "daily_return": 0.004567861901943531,
+      "daily_return": 0.0031114114484553116,
       "date": "2025-07-24",
-      "portfolio_value": 1.3971984129457464
+      "portfolio_value": 1.293821938870264
     },
     {
-      "daily_return": -0.005373838600679187,
+      "daily_return": -0.004234442249543862,
       "date": "2025-07-25",
-      "portfolio_value": 1.389690094181451
+      "portfolio_value": 1.288343324588925
     },
     {
-      "daily_return": 0.0030297942862213827,
+      "daily_return": 0.0018162131237549628,
       "date": "2025-07-28",
-      "portfolio_value": 1.3938297526833012
+      "portfolio_value": 1.2906832306429454
     },
     {
-      "daily_return": -0.003120413182934495,
+      "daily_return": -0.0027918269595963285,
       "date": "2025-07-29",
-      "portfolio_value": 1.3894804279482618
+      "portfolio_value": 1.2870798664033376
     },
     {
-      "daily_return": -0.005530800491913276,
+      "daily_return": -0.004581803660929377,
       "date": "2025-07-30",
-      "portfolio_value": 1.3817954889138617
+      "portfolio_value": 1.281150102854011
     },
     {
-      "daily_return": -0.005218965606590977,
+      "daily_return": -0.0038722305136380973,
       "date": "2025-07-31",
-      "portfolio_value": 1.3745839457818778
+      "portfolio_value": 1.2761891943331893
     },
     {
-      "daily_return": -0.006987040498504763,
+      "daily_return": -0.004612930368915931,
       "date": "2025-08-01",
-      "portfolio_value": 1.3649796720841054
+      "portfolio_value": 1.2703022224421674
     },
     {
-      "daily_return": 0.005006465045345219,
+      "daily_return": 0.00406803416916407,
       "date": "2025-08-04",
-      "portfolio_value": 1.3718133951000013
+      "portfolio_value": 1.2754698552882273
     },
     {
-      "daily_return": 0.0031376372504478066,
+      "daily_return": 0.002088205287666447,
       "date": "2025-08-05",
-      "portfolio_value": 1.3761176479091306
+      "portfolio_value": 1.2781332981842994
     },
     {
-      "daily_return": 0.001368285837975756,
+      "daily_return": 0.0011119219633202563,
       "date": "2025-08-06",
-      "portfolio_value": 1.3780005701981533
+      "portfolio_value": 1.2795544826706016
     },
     {
-      "daily_return": 0.001899710351657924,
+      "daily_return": 0.0009534576745182669,
       "date": "2025-08-07",
-      "portfolio_value": 1.380618372145949
+      "portfolio_value": 1.280774483712068
     },
     {
-      "daily_return": -0.0036117091554776853,
+      "daily_return": -0.0028657743576440075,
       "date": "2025-08-08",
-      "portfolio_value": 1.3756319801310488
+      "portfolio_value": 1.2771040730387213
     },
     {
-      "daily_return": 0.0012077670616689052,
+      "daily_return": 0.0009372582760354801,
       "date": "2025-08-11",
-      "portfolio_value": 1.3772934231256293
+      "portfolio_value": 1.2783010494005353
     },
     {
-      "daily_return": 0.00034097367145352836,
+      "daily_return": 0.0004919991014628641,
       "date": "2025-08-12",
-      "portfolio_value": 1.377763043920781
+      "portfolio_value": 1.2789299723682395
     },
     {
-      "daily_return": 0.010790765673737414,
+      "daily_return": 0.008359898533028138,
       "date": "2025-08-13",
-      "portfolio_value": 1.3926301620816655
+      "portfolio_value": 1.2896216971680865
     },
     {
-      "daily_return": -0.0014688190248904835,
+      "daily_return": -0.0007172951431673208,
       "date": "2025-08-14",
-      "portfolio_value": 1.3905846404049635
+      "portfolio_value": 1.2886966577881847
     },
     {
-      "daily_return": -0.0033430243853402246,
+      "daily_return": -0.002381340508155024,
       "date": "2025-08-15",
-      "portfolio_value": 1.3859358820422103
+      "portfolio_value": 1.2856278322342698
     },
     {
-      "daily_return": -0.0031345873531601624,
+      "daily_return": -0.0024120290136767446,
       "date": "2025-08-18",
-      "portfolio_value": 1.3815915449540699
+      "portfolio_value": 1.2825268606021303
     },
     {
-      "daily_return": 5.0454995470882383e-05,
+      "daily_return": 0.00018921683029766596,
       "date": "2025-08-19",
-      "portfolio_value": 1.3816612531492132
+      "portfolio_value": 1.282769536269465
     },
     {
-      "daily_return": 0.0013949370310877749,
+      "daily_return": 0.0007584701427104883,
       "date": "2025-08-20",
-      "portfolio_value": 1.38358858359565
+      "portfolio_value": 1.283742478662704
     },
     {
-      "daily_return": 6.281037336249679e-05,
+      "daily_return": -0.00021124883812305152,
       "date": "2025-08-21",
-      "portfolio_value": 1.3836754873111656
+      "portfolio_value": 1.2834712895556373
     },
     {
-      "daily_return": 0.0033726168115674657,
+      "daily_return": 0.0026631171948784116,
       "date": "2025-08-22",
-      "portfolio_value": 1.388342094521425
+      "portfolio_value": 1.2868893240159855
     },
     {
-      "daily_return": 0.006937503400671681,
+      "daily_return": 0.00505120926183357,
       "date": "2025-08-25",
-      "portfolio_value": 1.3979737225234632
+      "portfolio_value": 1.2933896712884099
     },
     {
-      "daily_return": -0.005676250887035385,
+      "daily_return": -0.003961564836013356,
       "date": "2025-08-26",
-      "portfolio_value": 1.3899697489542489
+      "portfolio_value": 1.2882658242473708
     },
     {
-      "daily_return": -0.004134722934962482,
+      "daily_return": -0.003157370434530569,
       "date": "2025-08-27",
-      "portfolio_value": 1.3842226091543437
+      "portfolio_value": 1.284198291822076
     },
     {
-      "daily_return": -0.00087718487787738,
+      "daily_return": -0.001635326335065136,
       "date": "2025-08-28",
-      "portfolio_value": 1.3830083900139776
+      "portfolio_value": 1.2820912264108542
     },
     {
-      "daily_return": -8.576483714344823e-05,
+      "daily_return": -0.00011526667389807808,
       "date": "2025-08-29",
-      "portfolio_value": 1.3828897765246402
+      "portfolio_value": 1.2819434440195518
     },
     {
-      "daily_return": 0.006042353418676533,
+      "daily_return": 0.00481990220246713,
       "date": "2025-09-01",
-      "portfolio_value": 1.3912456852934765
+      "portfolio_value": 1.28812228604882
     },
     {
-      "daily_return": -0.00017175725548650657,
+      "daily_return": 0.00028298082030123997,
       "date": "2025-09-02",
-      "portfolio_value": 1.3910067287528631
+      "portfolio_value": 1.2884867999499745
     },
     {
-      "daily_return": -0.0036877886758654704,
+      "daily_return": -0.0025588853170938246,
       "date": "2025-09-03",
-      "portfolio_value": 1.3858769898905157
+      "portfolio_value": 1.2851897099963134
     },
     {
-      "daily_return": -0.0033847549396673134,
+      "daily_return": -0.0025070759537681947,
       "date": "2025-09-04",
-      "portfolio_value": 1.3811861359032125
+      "portfolio_value": 1.2819676417783514
     },
     {
-      "daily_return": 0.0054513796851676805,
+      "daily_return": 0.004272358709462822,
       "date": "2025-09-05",
-      "portfolio_value": 1.3887155059459104
+      "portfolio_value": 1.2874446673979527
     },
     {
-      "daily_return": 0.0037935634096563165,
+      "daily_return": 0.0028201878789410927,
       "date": "2025-09-08",
-      "portfolio_value": 1.3939836862756894
+      "portfolio_value": 1.2910755032437558
     },
     {
-      "daily_return": 0.005406820886864337,
+      "daily_return": 0.004034135038538044,
       "date": "2025-09-09",
-      "portfolio_value": 1.4015207063865929
+      "portfolio_value": 1.2962838761687894
     },
     {
-      "daily_return": 0.0039594603972655735,
+      "daily_return": 0.0029980682735047492,
       "date": "2025-09-10",
-      "portfolio_value": 1.4070699721194782
+      "portfolio_value": 1.3001702237313868
     },
     {
-      "daily_return": -0.0015502625155282,
+      "daily_return": -0.001371498636789848,
       "date": "2025-09-11",
-      "portfolio_value": 1.4048886442849762
+      "portfolio_value": 1.2983870420419443
     },
     {
-      "daily_return": 0.005037094796718551,
+      "daily_return": 0.0039628777235556426,
       "date": "2025-09-12",
-      "portfolio_value": 1.4119652015650732
+      "portfolio_value": 1.3035323911274057
     },
     {
-      "daily_return": 0.0003275578095062469,
+      "daily_return": 0.0004426254858613869,
       "date": "2025-09-15",
-      "portfolio_value": 1.4124277017935971
+      "portfolio_value": 1.3041093677853646
     },
     {
-      "daily_return": 0.000569612235685829,
+      "daily_return": 0.0007940795131323272,
       "date": "2025-09-16",
-      "portfolio_value": 1.4132322378945603
+      "portfolio_value": 1.3051449343172068
     },
     {
-      "daily_return": 0.005156976279885983,
+      "daily_return": 0.004597188985022033,
       "date": "2025-09-17",
-      "portfolio_value": 1.4205202430233528
+      "portfolio_value": 1.3111449322331072
     },
     {
-      "daily_return": -0.007144932585666527,
+      "daily_return": -0.0053879350104929224,
       "date": "2025-09-18",
-      "portfolio_value": 1.4103707216503762
+      "portfolio_value": 1.304080568548898
     },
     {
-      "daily_return": -0.002138291460947377,
+      "daily_return": -0.0010036174921997758,
       "date": "2025-09-19",
-      "portfolio_value": 1.4073549379795012
+      "portfolio_value": 1.3027717704790647
     },
     {
-      "daily_return": -0.0022628099307778478,
+      "daily_return": -0.0017221915668839522,
       "date": "2025-09-22",
-      "portfolio_value": 1.4041703612497118
+      "portfolio_value": 1.3005281479223711
     },
     {
-      "daily_return": -0.0015594548364908948,
+      "daily_return": -0.0010285931901041219,
       "date": "2025-09-23",
-      "portfolio_value": 1.4019806209886039
+      "portfolio_value": 1.2991904335258795
     },
     {
-      "daily_return": 0.0034600262063204682,
+      "daily_return": 0.003301483428673036,
       "date": "2025-09-24",
-      "portfolio_value": 1.4067979109327833
+      "portfolio_value": 1.3034796892128557
     },
     {
-      "daily_return": 0.00026011985640270966,
+      "daily_return": 0.0005975912587124302,
       "date": "2025-09-25",
-      "portfolio_value": 1.4071638470033627
+      "portfolio_value": 1.3042586372810385
     },
     {
-      "daily_return": -0.005077722156454748,
+      "daily_return": -0.004900666404911121,
       "date": "2025-09-26",
-      "portfolio_value": 1.4000186599596716
+      "portfolio_value": 1.297866900794
     },
     {
-      "daily_return": 0.008112529624738136,
+      "daily_return": 0.005335824788284344,
       "date": "2025-09-29",
-      "portfolio_value": 1.4113763528137806
+      "portfolio_value": 1.3047920911751505
     },
     {
-      "daily_return": 0.0016830757082742882,
+      "daily_return": 0.001536971262587627,
       "date": "2025-09-30",
-      "portfolio_value": 1.4137518060684342
+      "portfolio_value": 1.3067975191229384
     },
     {
-      "daily_return": 0.005465947757744388,
+      "daily_return": 0.0045826523862011114,
       "date": "2025-10-02",
-      "portfolio_value": 1.421479299582821
+      "portfolio_value": 1.3127861178922289
     },
     {
-      "daily_return": -0.0014800368858639092,
+      "daily_return": -0.0013953292426900335,
       "date": "2025-10-03",
-      "portfolio_value": 1.4193754577869464
+      "portfolio_value": 1.3109543490325364
     },
     {
-      "daily_return": -0.0008812496535602397,
+      "daily_return": -0.0008191448059553591,
       "date": "2025-10-06",
-      "portfolio_value": 1.4181246336564997
+      "portfolio_value": 1.3098804875866819
     },
     {
-      "daily_return": -0.0013276101760000393,
+      "daily_return": -0.00109326809185508,
       "date": "2025-10-08",
-      "portfolio_value": 1.416241916962021
+      "portfolio_value": 1.3084484370454599
     },
     {
-      "daily_return": -0.001913999496623964,
+      "daily_return": -0.002974803560635734,
       "date": "2025-10-09",
-      "portfolio_value": 1.413531230645858
+      "portfolio_value": 1.3045560599760289
     },
     {
-      "daily_return": -0.006406901201338301,
+      "daily_return": -0.005417372691120905,
       "date": "2025-10-10",
-      "portfolio_value": 1.4044748757061039
+      "portfolio_value": 1.2974887936026784
     },
     {
-      "daily_return": -0.00831789559427151,
+      "daily_return": -0.006181673381783648,
       "date": "2025-10-13",
-      "portfolio_value": 1.392792600325203
+      "portfolio_value": 1.289468141664102
     },
     {
-      "daily_return": -0.006162976787375022,
+      "daily_return": -0.004214771517442796,
       "date": "2025-10-14",
-      "portfolio_value": 1.384208851859771
+      "portfolio_value": 1.2840333280679663
     },
     {
-      "daily_return": 0.005425101822555685,
+      "daily_return": 0.003938657108525649,
       "date": "2025-10-15",
-      "portfolio_value": 1.3917183258247934
+      "portfolio_value": 1.2890906950631449
     },
     {
-      "daily_return": -0.003149531313677566,
+      "daily_return": -0.002473326418624312,
       "date": "2025-10-16",
-      "portfolio_value": 1.3873350653777892
+      "portfolio_value": 1.2859023529910425
     },
     {
-      "daily_return": -0.007928695666479961,
+      "daily_return": -0.0060586169063012695,
       "date": "2025-10-17",
-      "portfolio_value": 1.3763353078569727
+      "portfolio_value": 1.2781115632553584
     },
     {
-      "daily_return": 0.010449581308371812,
+      "daily_return": 0.007337404626644907,
       "date": "2025-10-20",
-      "portfolio_value": 1.390717435564007
+      "portfolio_value": 1.2874895849529566
     },
     {
-      "daily_return": 0.001923682995918398,
+      "daily_return": 0.0011664289874259047,
       "date": "2025-10-21",
-      "portfolio_value": 1.3933927350469288
+      "portfolio_value": 1.2889913501258545
     },
     {
-      "daily_return": -0.00465314172869615,
+      "daily_return": -0.0026252931085942476,
       "date": "2025-10-22",
-      "portfolio_value": 1.38690908116702
+      "portfolio_value": 1.2856073700173314
     },
     {
-      "daily_return": 0.0028956853731852347,
+      "daily_return": 0.002574360590077348,
       "date": "2025-10-23",
-      "portfolio_value": 1.390925133507293
+      "portfolio_value": 1.288916986965017
     },
     {
-      "daily_return": 0.0015647035779475247,
+      "daily_return": 0.0009793193556082306,
       "date": "2025-10-24",
-      "portfolio_value": 1.393101519040349
+      "portfolio_value": 1.290179248318124
     },
     {
-      "daily_return": 0.004631494073918108,
+      "daily_return": 0.0031466304814902566,
       "date": "2025-10-27",
-      "portfolio_value": 1.399532435786993
+      "portfolio_value": 1.294238965667468
     },
     {
-      "daily_return": 0.0024650001259301506,
+      "daily_return": 0.0008413259681580643,
       "date": "2025-10-28",
-      "portfolio_value": 1.402982283417451
+      "portfolio_value": 1.2953278425182861
     },
     {
-      "daily_return": -0.0007334481334202338,
+      "daily_return": 0.0002905083057077527,
       "date": "2025-10-30",
-      "portfolio_value": 1.4019532686804568
+      "portfolio_value": 1.2956934964184912
     },
     {
-      "daily_return": -0.004755539619004802,
+      "daily_return": -0.004435942321872157,
       "date": "2025-10-31",
-      "portfolio_value": 1.3952862243672537
+      "portfolio_value": 1.289945874801554
     },
     {
-      "daily_return": 0.006364763887406777,
+      "daily_return": 0.0035805449465812524,
       "date": "2025-11-03",
-      "portfolio_value": 1.4041668917407024
+      "portfolio_value": 1.2945645839849382
     },
     {
-      "daily_return": -0.0016709560004796295,
+      "daily_return": -0.001110081140148479,
       "date": "2025-11-04",
-      "portfolio_value": 1.4018205906472734
+      "portfolio_value": 1.2931275122555526
     },
     {
-      "daily_return": -0.0004006859017645948,
+      "daily_return": -0.0001867932157917499,
       "date": "2025-11-05",
-      "portfolio_value": 1.4012589008997978
+      "portfolio_value": 1.2928859648091096
     },
     {
-      "daily_return": 0.00791001148696646,
+      "daily_return": 0.005985872482776401,
       "date": "2025-11-06",
-      "portfolio_value": 1.412342874902129
+      "portfolio_value": 1.3006250153292283
     },
     {
-      "daily_return": -0.0030839513069571473,
+      "daily_return": -0.0027971163219722957,
       "date": "2025-11-07",
-      "portfolio_value": 1.407987278247203
+      "portfolio_value": 1.2969870158700854
     },
     {
-      "daily_return": 0.004464487013317747,
+      "daily_return": 0.003722666921906416,
       "date": "2025-11-10",
-      "portfolio_value": 1.414273219165854
+      "portfolio_value": 1.301815266532207
     },
     {
-      "daily_return": 0.0017412175988634562,
+      "daily_return": 0.001394207857522006,
       "date": "2025-11-11",
-      "portfolio_value": 1.4167357765846667
+      "portfolio_value": 1.3036302676058482
     },
     {
-      "daily_return": 0.004594390997617951,
+      "daily_return": 0.002913559127520485,
       "date": "2025-11-12",
-      "portfolio_value": 1.4232448146826107
+      "portfolio_value": 1.3074284714709432
     },
     {
-      "daily_return": 0.0011175763250639943,
+      "daily_return": 0.0008037895076217692,
       "date": "2025-11-13",
-      "portfolio_value": 1.42483539939227
+      "portfolio_value": 1.3084793687582776
     },
     {
-      "daily_return": -0.007193077492630097,
+      "daily_return": -0.005314316523948627,
       "date": "2025-11-14",
-      "portfolio_value": 1.4145864479501988
+      "portfolio_value": 1.3015256952276397
     },
     {
-      "daily_return": -0.002869383817097183,
+      "daily_return": -0.0021019925386721113,
       "date": "2025-11-17",
-      "portfolio_value": 1.4105274564885655
+      "portfolio_value": 1.298789897927381
     },
     {
-      "daily_return": -0.007205362248568506,
+      "daily_return": -0.005242614503092132,
       "date": "2025-11-18",
-      "portfolio_value": 1.4003640952030134
+      "portfolio_value": 1.2919808431720374
     },
     {
-      "daily_return": -0.002595650920197808,
+      "daily_return": -0.002247555196836011,
       "date": "2025-11-19",
-      "portfolio_value": 1.3967292388506878
+      "portfolio_value": 1.2890770449137534
     },
     {
-      "daily_return": -0.0023124920097146303,
+      "daily_return": -0.0011047602098206383,
       "date": "2025-11-20",
-      "portfolio_value": 1.3934993136461107
+      "portfolio_value": 1.2876529238871395
     },
     {
-      "daily_return": -0.009619066609383862,
+      "daily_return": -0.005992671873140462,
       "date": "2025-11-21",
-      "portfolio_value": 1.3800951509280182
+      "portfolio_value": 1.279936442427794
     },
     {
-      "daily_return": 0.008534839251763173,
+      "daily_return": 0.005988449881621661,
       "date": "2025-11-24",
-      "portfolio_value": 1.3918740411933268
+      "portfolio_value": 1.287601277664934
     },
     {
-      "daily_return": 0.0016274402515213974,
+      "daily_return": 0.0011732860767077048,
       "date": "2025-11-25",
-      "portfolio_value": 1.3941392330330127
+      "portfolio_value": 1.2891120023163694
     },
     {
-      "daily_return": 0.0006781488517665125,
+      "daily_return": 0.0002152124275983481,
       "date": "2025-11-26",
-      "portfolio_value": 1.39504194885788
+      "portfolio_value": 1.2893894352398338
     },
     {
-      "daily_return": 0.00024859010641143953,
+      "daily_return": 8.442428310446846e-05,
       "date": "2025-11-27",
-      "portfolio_value": 1.3953887424843952
+      "portfolio_value": 1.2894982910185464
     },
     {
-      "daily_return": -0.0012653771762245825,
+      "daily_return": -0.0005546647473717492,
       "date": "2025-11-28",
-      "portfolio_value": 1.3936230494176947
+      "portfolio_value": 1.2887743876792435
     },
     {
-      "daily_return": 0.0023025860083482324,
+      "daily_return": 0.0015852752293700014,
       "date": "2025-12-01",
-      "portfolio_value": 1.3968319863521956
+      "portfolio_value": 1.2908174497922777
     },
     {
-      "daily_return": 0.0005892616114861641,
+      "daily_return": 0.00026498773967177126,
       "date": "2025-12-02",
-      "portfolio_value": 1.397655085819449
+      "portfolio_value": 1.2911595005906271
     },
     {
-      "daily_return": -0.0037023245747500734,
+      "daily_return": -0.0023900862180817758,
       "date": "2025-12-03",
-      "portfolio_value": 1.3924805130481952
+      "portfolio_value": 1.2880735180629201
     },
     {
-      "daily_return": 0.0016963650598759883,
+      "daily_return": 0.0016123706545821824,
       "date": "2025-12-04",
-      "portfolio_value": 1.3948426683370885
+      "portfolio_value": 1.290150370004389
     },
     {
-      "daily_return": -0.0012114691651796611,
+      "daily_return": -0.00030493953383305583,
       "date": "2025-12-05",
-      "portfolio_value": 1.3931528594541212
+      "portfolio_value": 1.2897569521519854
     },
     {
-      "daily_return": -0.005253090679321033,
+      "daily_return": -0.003936098418757958,
       "date": "2025-12-08",
-      "portfolio_value": 1.3858345011532534
+      "portfolio_value": 1.2846803418520378
     },
     {
-      "daily_return": -0.002405639607699395,
+      "daily_return": -0.0016716773295736833,
       "date": "2025-12-09",
-      "portfolio_value": 1.3825006827875628
+      "portfolio_value": 1.2825327708488148
     },
     {
-      "daily_return": 0.0016917240399906223,
+      "daily_return": 0.001610110656721698,
       "date": "2025-12-10",
-      "portfolio_value": 1.3848394924279377
+      "portfolio_value": 1.2845977905307533
     },
     {
-      "daily_return": 0.0005931821716193464,
+      "daily_return": 0.000838400729469016,
       "date": "2025-12-11",
-      "portfolio_value": 1.3856609545254004
+      "portfolio_value": 1.2856747982554086
     },
     {
-      "daily_return": 0.00703924770967138,
+      "daily_return": 0.005113208074800179,
       "date": "2025-12-12",
-      "portfolio_value": 1.3954149652259245
+      "portfolio_value": 1.2922487210154152
     },
     {
-      "daily_return": -0.002724140174964603,
+      "daily_return": -0.003098448982152073,
       "date": "2025-12-15",
-      "portfolio_value": 1.3916136592584056
+      "portfolio_value": 1.2882447542810977
     },
     {
-      "daily_return": -0.005130541257407334,
+      "daily_return": -0.0034257321967967828,
       "date": "2025-12-16",
-      "portfolio_value": 1.3844739279652087
+      "portfolio_value": 1.2838315727490024
     },
     {
-      "daily_return": 0.0039025604083783353,
+      "daily_return": 0.002779356877278466,
       "date": "2025-12-17",
-      "portfolio_value": 1.389876921102918
+      "portfolio_value": 1.2873997988599897
     },
     {
-      "daily_return": 0.0015971023240045467,
+      "daily_return": 0.0009289405971244169,
       "date": "2025-12-18",
-      "portfolio_value": 1.3920966967636916
+      "portfolio_value": 1.2885957167978805
     },
     {
-      "daily_return": 0.0037652627287855294,
+      "daily_return": 0.0023155829684322732,
       "date": "2025-12-19",
-      "portfolio_value": 1.3973383065708815
+      "portfolio_value": 1.2915795670928925
     },
     {
-      "daily_return": 0.0011158133122034794,
+      "daily_return": 0.0010992115031312794,
       "date": "2025-12-22",
-      "portfolio_value": 1.3988974752550054
+      "portfolio_value": 1.2929992862102502
     },
     {
-      "daily_return": -0.0002930530739821419,
+      "daily_return": -0.00041039086962058074,
       "date": "2025-12-23",
-      "portfolio_value": 1.398487524049696
+      "portfolio_value": 1.2924686511087635
     },
     {
-      "daily_return": 0.0016931620721027615,
+      "daily_return": 0.0009121196841015985,
       "date": "2025-12-24",
-      "portfolio_value": 1.4008553900837257
+      "portfolio_value": 1.293647537206524
     },
     {
-      "daily_return": -0.004240171203819329,
+      "daily_return": -0.0026234077858259867,
       "date": "2025-12-29",
-      "portfolio_value": 1.3948647153257379
+      "portfolio_value": 1.2902537721853016
     },
     {
-      "daily_return": 0.0016410765604121752,
+      "daily_return": 0.0016392942461245117,
       "date": "2025-12-30",
-      "portfolio_value": 1.397153795115005
+      "portfolio_value": 1.2923688777700855
     },
     {
-      "daily_return": -0.0024984972110569173,
+      "daily_return": -0.0016674077378000293,
       "date": "2025-12-31",
-      "portfolio_value": 1.3936630102544927
+      "portfolio_value": 1.29020701167637
     },
     {
-      "daily_return": 0.010591691331920942,
+      "daily_return": 0.006928073684168567,
       "date": "2026-01-02",
-      "portfolio_value": 1.408424258679824
+      "portfolio_value": 1.2991456609210947
     },
     {
-      "daily_return": 0.0004058972482002204,
+      "daily_return": 8.385254676093957e-05,
       "date": "2026-01-05",
-      "portfolio_value": 1.4089959342107203
+      "portfolio_value": 1.2992545975933765
     },
     {
-      "daily_return": 0.007114849278249955,
+      "daily_return": 0.004124750737195777,
       "date": "2026-01-06",
-      "portfolio_value": 1.4190207279162967
+      "portfolio_value": 1.3046136989526047
     },
     {
-      "daily_return": -0.0040533763577713725,
+      "daily_return": -0.003100074803987985,
       "date": "2026-01-07",
-      "portfolio_value": 1.4132689028465732
+      "portfolio_value": 1.3005692988955442
     },
     {
-      "daily_return": -0.004991946409895511,
+      "daily_return": -0.003568990717194725,
       "date": "2026-01-08",
-      "portfolio_value": 1.4062139402207914
+      "portfolio_value": 1.2959275791407174
     },
     {
-      "daily_return": 0.001369575054694699,
+      "daily_return": 0.00047933033233784467,
       "date": "2026-01-09",
-      "portfolio_value": 1.4081398557548817
+      "portfolio_value": 1.2965487565379128
     },
     {
-      "daily_return": 0.004331346179228203,
+      "daily_return": 0.0034498696905647438,
       "date": "2026-01-12",
-      "portfolio_value": 1.4142389969389246
+      "portfolio_value": 1.3010216807954322
     },
     {
-      "daily_return": 0.004219080319679704,
+      "daily_return": 0.002840666405271713,
       "date": "2026-01-13",
-      "portfolio_value": 1.4202057848582332
+      "portfolio_value": 1.304717449376598
     },
     {
-      "daily_return": 0.002148966487449722,
+      "daily_return": 0.001447469794509244,
       "date": "2026-01-14",
-      "portfolio_value": 1.4232577594951756
+      "portfolio_value": 1.30660598847494
     },
     {
-      "daily_return": -0.00019814055331342993,
+      "daily_return": -0.0003817133152810953,
       "date": "2026-01-15",
-      "portfolio_value": 1.4229757544152015
+      "portfolio_value": 1.306107239571313
     },
     {
-      "daily_return": -0.0009232755988031651,
+      "daily_return": -0.0006434682124388887,
       "date": "2026-01-16",
-      "portfolio_value": 1.4216619556234615
+      "portfolio_value": 1.3052668010806125
     },
     {
-      "daily_return": -0.004379468280196743,
+      "daily_return": -0.0030647642388099724,
       "date": "2026-01-19",
-      "portfolio_value": 1.4154358321836462
+      "portfolio_value": 1.3012664660665547
     },
     {
-      "daily_return": -0.001886787583823567,
+      "daily_return": -0.0011972642100505433,
       "date": "2026-01-20",
-      "portfolio_value": 1.4127652054297832
+      "portfolio_value": 1.2997085062989944
     },
     {
-      "daily_return": 0.00015699466417591973,
+      "daily_return": 3.4868891212548874e-05,
       "date": "2026-01-21",
-      "portfolio_value": 1.4129870020287691
+      "portfolio_value": 1.2997538256935086
     },
     {
-      "daily_return": -0.00036184733581160356,
+      "daily_return": -7.998507248458943e-05,
       "date": "2026-01-22",
-      "portfolio_value": 1.4124757164465487
+      "portfolio_value": 1.2996498647895482
     },
     {
-      "daily_return": 0.0006283720402209884,
+      "daily_return": 0.0006795176736394384,
       "date": "2026-01-23",
-      "portfolio_value": 1.4133632766942548
+      "portfolio_value": 1.3005329998422157
     },
     {
-      "daily_return": 0.0023131465567806683,
+      "daily_return": 0.0011531129958324503,
       "date": "2026-01-26",
-      "portfolio_value": 1.4166325930912205
+      "portfolio_value": 1.3020326613458426
     },
     {
-      "daily_return": 0.00719127591585864,
+      "daily_return": 0.004653706093449217,
       "date": "2026-01-27",
-      "portfolio_value": 1.4268199889395377
+      "portfolio_value": 1.3080919386758179
     },
     {
-      "daily_return": 0.009309204686333119,
+      "daily_return": 0.00625517957846364,
       "date": "2026-01-28",
-      "portfolio_value": 1.4400417320610415
+      "portfolio_value": 1.3162742886573757
     },
     {
-      "daily_return": 0.0031427232812820025,
+      "daily_return": 0.0017029207506521066,
       "date": "2026-01-29",
-      "portfolio_value": 1.4445673847384073
+      "portfolio_value": 1.3185157994570802
     },
     {
-      "daily_return": -0.008690470946453381,
+      "daily_return": -0.005924126566733577,
       "date": "2026-01-30",
-      "portfolio_value": 1.432013413851144
+      "portfolio_value": 1.310701456486974
     },
     {
-      "daily_return": -0.007021696472069943,
+      "daily_return": -0.004231630717299109,
       "date": "2026-02-02",
-      "portfolio_value": 1.4219582503151487
+      "portfolio_value": 1.3051550519424948
     },
     {
-      "daily_return": 0.00013985307876222342,
+      "daily_return": -0.0003534949038690768,
       "date": "2026-02-03",
-      "portfolio_value": 1.4221571155543264
+      "portfolio_value": 1.3046936862828742
     },
     {
-      "daily_return": -0.0015626457884629266,
+      "daily_return": -0.0019157960398729602,
       "date": "2026-02-04",
-      "portfolio_value": 1.4199347877271729
+      "portfolio_value": 1.3021941592854462
     },
     {
-      "daily_return": -0.0018486805756889857,
+      "daily_return": -0.00024199414253240053,
       "date": "2026-02-05",
-      "portfolio_value": 1.4173097818663565
+      "portfolio_value": 1.3018790359264591
     },
     {
-      "daily_return": -0.00925448692465513,
+      "daily_return": -0.004947790266682883,
       "date": "2026-02-06",
-      "portfolio_value": 1.4041933070218884
+      "portfolio_value": 1.2954376115041037
     },
     {
-      "daily_return": 0.009206191503560366,
+      "daily_return": 0.005532272090034422,
       "date": "2026-02-09",
-      "portfolio_value": 1.4171205795143496
+      "portfolio_value": 1.3026043248466086
     },
     {
-      "daily_return": -0.0006806144292228429,
+      "daily_return": -0.0006084207502395169,
       "date": "2026-02-10",
-      "portfolio_value": 1.4161560667999835
+      "portfolio_value": 1.3018117933460203
     },
     {
-      "daily_return": 3.1788016145784364e-05,
+      "daily_return": 0.00022884500813981313,
       "date": "2026-02-11",
-      "portfolio_value": 1.4162010835919
+      "portfolio_value": 1.302109706476465
     },
     {
-      "daily_return": -0.00489554893141455,
+      "daily_return": -0.003308424590903958,
       "date": "2026-02-12",
-      "portfolio_value": 1.4092680018904535
+      "portfolio_value": 1.2978017747035036
     },
     {
-      "daily_return": -0.007640701198113611,
+      "daily_return": -0.004263838368533789,
       "date": "2026-02-13",
-      "portfolio_value": 1.3985002061799459
+      "portfolio_value": 1.2922681577017714
     },
     {
-      "daily_return": 0.002109974459764739,
+      "daily_return": 0.00080676343673026,
       "date": "2026-02-16",
-      "portfolio_value": 1.4014510058969614
+      "portfolio_value": 1.2933107124018561
     },
     {
-      "daily_return": -0.004137239737137609,
+      "daily_return": -0.0027036596253628936,
       "date": "2026-02-20",
-      "portfolio_value": 1.395652867105713
+      "portfolio_value": 1.289814040445686
     },
     {
-      "daily_return": 0.010061181182961593,
+      "daily_return": 0.006258612363748371,
       "date": "2026-02-23",
-      "portfolio_value": 1.4096947834701834
+      "portfolio_value": 1.2978864865461557
     },
     {
-      "daily_return": -0.006575231056594847,
+      "daily_return": -0.004732083831298806,
       "date": "2026-02-24",
-      "portfolio_value": 1.4004257145495904
+      "portfolio_value": 1.2917447788883094
     },
     {
-      "daily_return": 0.0036625903554736244,
+      "daily_return": 0.003195558177942108,
       "date": "2026-02-25",
-      "portfolio_value": 1.405554900265257
+      "portfolio_value": 1.2958726244803
     },
     {
-      "daily_return": -0.00028240704018722067,
+      "daily_return": -0.0007492764105929807,
       "date": "2026-02-26",
-      "portfolio_value": 1.4051579616660523
+      "portfolio_value": 1.2949016576916437
     },
     {
-      "daily_return": 0.0037063852040926737,
+      "daily_return": 0.002135770296584512,
       "date": "2026-02-27",
-      "portfolio_value": 1.4103660183445843
+      "portfolio_value": 1.2976672701891396
     },
     {
-      "daily_return": -0.011096274729282105,
+      "daily_return": -0.0073593951403337745,
       "date": "2026-03-02",
-      "portfolio_value": 1.3947162095361891
+      "portfolio_value": 1.2881172239871395
     },
     {
-      "daily_return": -0.00251550755438394,
+      "daily_return": -0.0017834992063605639,
       "date": "2026-03-03",
-      "portfolio_value": 1.3911807820388609
+      "portfolio_value": 1.285819867940459
     },
     {
-      "daily_return": -0.00976383829189799,
+      "daily_return": -0.00576742772704942,
       "date": "2026-03-04",
-      "portfolio_value": 1.3775975178482374
+      "portfolio_value": 1.2784039947821082
     },
     {
-      "daily_return": 0.005337207260417269,
+      "daily_return": 0.002350437588846981,
       "date": "2026-03-05",
-      "portfolio_value": 1.3849500413224296
+      "portfolio_value": 1.2813886671876673
     },
     {
-      "daily_return": 0.005420520225075368,
+      "daily_return": 0.0036858516478040057,
       "date": "2026-03-06",
-      "portfolio_value": 1.3924571910321368
+      "portfolio_value": 1.2861116757180984
     },
     {
-      "daily_return": -0.008648481962556171,
+      "daily_return": -0.004171973830154289,
       "date": "2026-03-09",
-      "portfolio_value": 1.3804145501318636
+      "portfolio_value": 1.2807460514643465
     },
     {
-      "daily_return": 0.01186070535490623,
+      "daily_return": 0.0071011135007301,
       "date": "2026-03-10",
-      "portfolio_value": 1.3967872403786032
+      "portfolio_value": 1.2898407745414069
     },
     {
-      "daily_return": -0.0016774429351273743,
+      "daily_return": -0.0015643465214185317,
       "date": "2026-03-11",
-      "portfolio_value": 1.394444209490354
+      "portfolio_value": 1.2878230166125693
     },
     {
-      "daily_return": -0.0033271865597107168,
+      "daily_return": -0.0014020930018721364,
       "date": "2026-03-12",
-      "portfolio_value": 1.3898046334582712
+      "portfolio_value": 1.286017368973327
     },
     {
-      "daily_return": -0.006372521161061325,
+      "daily_return": -0.003306550991489376,
       "date": "2026-03-13",
-      "portfolio_value": 1.3809480740218172
+      "portfolio_value": 1.2817650869668757
     },
     {
-      "daily_return": 0.005684415999166051,
+      "daily_return": 0.0037984661222449376,
       "date": "2026-03-16",
-      "portfolio_value": 1.3887979573478042
+      "portfolio_value": 1.2866338282263958
     },
     {
-      "daily_return": -0.00025379468341302843,
+      "daily_return": -7.737209682316589e-05,
       "date": "2026-03-17",
-      "portfolio_value": 1.3884454878098944
+      "portfolio_value": 1.2865342786692624
     },
     {
-      "daily_return": 0.004049855703762772,
+      "daily_return": 0.0022623872384090497,
       "date": "2026-03-18",
-      "portfolio_value": 1.3940684916880648
+      "portfolio_value": 1.2894449174030995
     },
     {
-      "daily_return": -0.008364181987284053,
+      "daily_return": -0.0054282820506711075,
       "date": "2026-03-19",
-      "portfolio_value": 1.3824082491208471
+      "portfolio_value": 1.2824454467026312
     },
     {
-      "daily_return": -0.0007181581630073982,
+      "daily_return": -0.0015380133242526924,
       "date": "2026-03-20",
-      "portfolio_value": 1.3814154613521323
+      "portfolio_value": 1.2804730285179753
     },
     {
-      "daily_return": -0.014888490232762867,
+      "daily_return": -0.008082576712654367,
       "date": "2026-03-23",
-      "portfolio_value": 1.3608482707484035
+      "portfolio_value": 1.270123507036494
     },
     {
-      "daily_return": 0.012199006165059496,
+      "daily_return": 0.006700019607747595,
       "date": "2026-03-24",
-      "portfolio_value": 1.3774492671929737
+      "portfolio_value": 1.2786333594378996
     },
     {
-      "daily_return": 0.005292241791362706,
+      "daily_return": 0.0029994213550018434,
       "date": "2026-03-25",
-      "portfolio_value": 1.3847390617702944
+      "portfolio_value": 1.2824685196414152
     },
     {
-      "daily_return": -0.0043413519245906985,
+      "daily_return": -0.00280295478379434,
       "date": "2026-03-26",
-      "portfolio_value": 1.378727422179422
+      "portfolio_value": 1.2788738183692205
     },
     {
-      "daily_return": -0.0006328645505857833,
+      "daily_return": -7.034259854584197e-05,
       "date": "2026-03-27",
-      "portfolio_value": 1.377854874469004
+      "portfolio_value": 1.278783859061624
     },
     {
-      "daily_return": -0.0035020384961028336,
+      "daily_return": -0.001962783929585484,
       "date": "2026-03-30",
-      "portfolio_value": 1.3730295736565705
+      "portfolio_value": 1.2762738826536446
     },
     {
-      "daily_return": 0.002901684730432901,
+      "daily_return": 0.001642576456472419,
       "date": "2026-03-31",
-      "portfolio_value": 1.3770136726048825
+      "portfolio_value": 1.2783702600853022
     },
     {
-      "daily_return": 0.008921595627664517,
+      "daily_return": 0.004785815469609935,
       "date": "2026-04-01",
-      "portfolio_value": 1.3892537691759965
+      "portfolio_value": 1.2844883042519077
     },
     {
-      "daily_return": -0.002752672388780216,
+      "daily_return": -0.00207765467213596,
       "date": "2026-04-02",
-      "portfolio_value": 1.385429608684577
+      "portfolio_value": 1.2818195811252748
     },
     {
-      "daily_return": 0.0119338833797599,
+      "daily_return": 0.009042617609269327,
       "date": "2026-04-08",
-      "portfolio_value": 1.4019631640654853
+      "portfolio_value": 1.2934027614457129
     },
     {
-      "daily_return": -0.001618415211257386,
+      "daily_return": -0.0012789980277325436,
       "date": "2026-04-09",
-      "portfolio_value": 1.3996942055551391
+      "portfolio_value": 1.2917485018647599
     },
     {
-      "daily_return": 0.0013363824344290725,
+      "daily_return": 0.0006877162740585613,
       "date": "2026-04-10",
-      "portfolio_value": 1.401564732305015
+      "portfolio_value": 1.2926368583314831
     },
     {
-      "daily_return": -0.0034131803098243724,
+      "daily_return": -0.0023486597487930114,
       "date": "2026-04-13",
-      "portfolio_value": 1.3967809391577672
+      "portfolio_value": 1.2896008941725137
     },
     {
-      "daily_return": 0.0018548976933348642,
+      "daily_return": 0.0014446765911266715,
       "date": "2026-04-14",
-      "portfolio_value": 1.399371824899905
+      "portfolio_value": 1.2914639503962206
     },
     {
-      "daily_return": 0.0001235138167708164,
+      "daily_return": 0.0005372362706251735,
       "date": "2026-04-15",
-      "portfolio_value": 1.39954466665508
+      "portfolio_value": 1.2921577716725783
     },
     {
-      "daily_return": 0.002718690445238042,
+      "daily_return": 0.0026793585272875385,
       "date": "2026-04-16",
-      "portfolio_value": 1.403349595367999
+      "portfolio_value": 1.29561992561671
     },
     {
-      "daily_return": -0.002058366220521329,
+      "daily_return": -0.001014318464924953,
       "date": "2026-04-17",
-      "portfolio_value": 1.4004609879653114
+      "portfolio_value": 1.2943057544026324
     },
     {
-      "daily_return": 0.003399397435835195,
+      "daily_return": 0.0024069826571767707,
       "date": "2026-04-20",
-      "portfolio_value": 1.405221711456788
+      "portfolio_value": 1.2974211259065638
     },
     {
-      "daily_return": 0.001597524961366037,
+      "daily_return": 0.0011232122384026283,
       "date": "2026-04-21",
-      "portfolio_value": 1.4074665882170936
+      "portfolio_value": 1.298878405193544
     },
     {
-      "daily_return": -0.002164745499490424,
+      "daily_return": -0.002228863787124158,
       "date": "2026-04-22",
-      "portfolio_value": 1.4044197812545676
+      "portfolio_value": 1.2959833821523306
     },
     {
-      "daily_return": -0.003106043598826874,
+      "daily_return": -0.002133558221627845,
       "date": "2026-04-23",
-      "portfolio_value": 1.4000575921829361
+      "portfolio_value": 1.2932183261522463
     },
     {
-      "daily_return": 0.00020502172198392154,
+      "daily_return": 0.00021617777851476965,
       "date": "2026-04-24",
-      "portfolio_value": 1.4003446344013621
+      "portfolio_value": 1.2934978912171284
     },
     {
-      "daily_return": -0.0004399010358278306,
+      "daily_return": -0.000813714068285688,
       "date": "2026-04-27",
-      "portfolio_value": 1.399728621346173
+      "portfolio_value": 1.2924453537857472
     },
     {
-      "daily_return": -0.0015498122212640455,
+      "daily_return": -0.0012582472934553285,
       "date": "2026-04-28",
-      "portfolio_value": 1.3975593048223576
+      "portfolio_value": 1.2908191379174074
     },
     {
-      "daily_return": 0.005022540197764946,
+      "daily_return": 0.003129707970534293,
       "date": "2026-04-29",
-      "portfolio_value": 1.4045786026095883
+      "portfolio_value": 1.2948590248618659
     },
     {
-      "daily_return": -0.004130830969044856,
+      "daily_return": -0.003214884581597359,
       "date": "2026-04-30",
-      "portfolio_value": 1.3987765258194709
+      "portfolio_value": 1.2906962025474953
     },
     {
-      "daily_return": 0.00428377565989294,
+      "daily_return": 0.003393422828562231,
       "date": "2026-05-04",
-      "portfolio_value": 1.404768570654406
+      "portfolio_value": 1.2950760805059585
     },
     {
-      "daily_return": -0.0015572268645049165,
+      "daily_return": -0.002019788742433925,
       "date": "2026-05-05",
-      "portfolio_value": 1.4025810272977708
+      "portfolio_value": 1.2924603004179571
     },
     {
-      "daily_return": 0.004725214257803829,
+      "daily_return": 0.0031842885774829312,
       "date": "2026-05-06",
-      "portfolio_value": 1.4092029567765867
+      "portfolio_value": 1.296575866989428
     },
     {
-      "daily_return": 0.00559008341720104,
+      "daily_return": 0.0038953940918112703,
       "date": "2026-05-07",
-      "portfolio_value": 1.4170805188567344
+      "portfolio_value": 1.3016265409612837
     },
     {
-      "daily_return": -0.004078162142614974,
+      "daily_return": -0.002962182496615387,
       "date": "2026-05-08",
-      "portfolio_value": 1.4113014347316957
+      "portfolio_value": 1.2977660212340993
     },
     {
-      "daily_return": 0.0004758990580298371,
+      "daily_return": 0.0003857544104602257,
       "date": "2026-05-11",
-      "portfolio_value": 1.4119730717550807
+      "portfolio_value": 1.2982666402005358
     },
     {
-      "daily_return": -0.0014051345007347978,
+      "daily_return": -0.0011322551833524625,
       "date": "2026-05-12",
-      "portfolio_value": 1.4099890596778493
+      "portfolio_value": 1.2967966710677952
     },
     {
-      "daily_return": 0.0016137247576680997,
+      "daily_return": 0.001377926795432717,
       "date": "2026-05-13",
-      "portfolio_value": 1.4122643939314927
+      "portfolio_value": 1.2985835619490875
     },
     {
-      "daily_return": 0.0013332389118288262,
+      "daily_return": 0.0007467112706563858,
       "date": "2026-05-14",
-      "portfolio_value": 1.4141472797752725
+      "portfolio_value": 1.299553228930684
     },
     {
-      "daily_return": -0.003150711392017047,
+      "daily_return": -0.0023994477524009513,
       "date": "2026-05-15",
-      "portfolio_value": 1.4096917098308948
+      "portfolio_value": 1.2964350188564007
     },
     {
-      "daily_return": -0.0031285228705152258,
+      "daily_return": -0.0018747392625146687,
       "date": "2026-05-18",
-      "portfolio_value": 1.405281457076313
+      "portfolio_value": 1.2940045412252517
     },
     {
-      "daily_return": 0.0012341131164248882,
+      "daily_return": 0.0013548505086458137,
       "date": "2026-05-19",
-      "portfolio_value": 1.4070157333547595
+      "portfolio_value": 1.2957577239361207
     },
     {
-      "daily_return": -0.0025249680246550972,
+      "daily_return": -0.0018818591386592775,
       "date": "2026-05-20",
-      "portfolio_value": 1.4034630636178522
+      "portfolio_value": 1.2933192904218431
     },
     {
-      "daily_return": -0.0005797707716433589,
+      "daily_return": -0.0006164328974104161,
       "date": "2026-05-21",
-      "portfolio_value": 1.4026493767544854
+      "portfolio_value": 1.2925220458643716
     },
     {
-      "daily_return": 0.002744426994207562,
+      "daily_return": 0.001908201962628988,
       "date": "2026-05-22",
-      "portfolio_value": 1.406498845567459
+      "portfolio_value": 1.2949884389690314
     },
     {
-      "daily_return": -0.002407295903812198,
+      "daily_return": -0.0011779134993818987,
       "date": "2026-05-26",
-      "portfolio_value": 1.4031129866578078
+      "portfolio_value": 1.2934630546052264
     },
     {
-      "daily_return": -0.002494252291035751,
+      "daily_return": -0.001911064565580873,
       "date": "2026-05-27",
-      "portfolio_value": 1.3996132688762546
+      "portfolio_value": 1.2909911631946822
     },
     {
-      "daily_return": -0.002215286752666629,
+      "daily_return": -0.0018380157397577836,
       "date": "2026-05-28",
-      "portfolio_value": 1.3965127241428568
+      "portfolio_value": 1.2886183011168422
     },
     {
-      "daily_return": 0.001025034411151217,
+      "daily_return": 0.00042759445920903587,
       "date": "2026-05-29",
-      "portfolio_value": 1.3979441977407139
+      "portfolio_value": 1.2891693071624353
     },
     {
-      "daily_return": 0.0006705485892323915,
+      "daily_return": 0.0011652739638115866,
       "date": "2026-06-01",
-      "portfolio_value": 1.3988815872503346
+      "portfolio_value": 1.2906715425910165
     },
     {
-      "daily_return": 0.00571703498786895,
+      "daily_return": 0.004794095011636917,
       "date": "2026-06-02",
-      "portfolio_value": 1.4068790422285304
+      "portfolio_value": 1.296859144595014
     },
     {
-      "daily_return": -0.0024771150468541185,
+      "daily_return": -0.002313211615718473,
       "date": "2026-06-03",
-      "portfolio_value": 1.4033940409839225
+      "portfolio_value": 1.293859234957786
     },
     {
-      "daily_return": -0.005922293927804165,
+      "daily_return": -0.0032436541055718164,
       "date": "2026-06-04",
-      "portfolio_value": 1.395082728976687
+      "portfolio_value": 1.289662403138283
     },
     {
-      "daily_return": -0.004213075704112358,
+      "daily_return": -0.0024070932032689727,
       "date": "2026-06-05",
-      "portfolio_value": 1.3891759587124217
+      "portfolio_value": 1.2865580655331774
     },
     {
-      "daily_return": -0.002685009351519154,
+      "daily_return": -0.0018547133636818652,
       "date": "2026-06-08",
-      "portfolio_value": 1.3854460082723732
+      "portfolio_value": 1.2841718690958803
     },
     {
-      "daily_return": -0.0017182017034003299,
+      "daily_return": -0.0011121888265210394,
       "date": "2026-06-09",
-      "portfolio_value": 1.3830655325809904
+      "portfolio_value": 1.282731678984488
     },
     {
-      "daily_return": -0.003164430490486912,
+      "daily_return": -0.0021882550900615143,
       "date": "2026-06-10",
-      "portfolio_value": 1.3786889178393498
+      "portfolio_value": 1.279924734858767
     },
     {
-      "daily_return": 0.0007445588921896186,
+      "daily_return": -2.41814507720504e-05,
       "date": "2026-06-11",
-      "portfolio_value": 1.3797154329326904
+      "portfolio_value": 1.279893784421799
     },
     {
-      "daily_return": 0.005243760705238005,
+      "daily_return": 0.003979625722035802,
       "date": "2026-06-12",
-      "portfolio_value": 1.3869503305043134
+      "portfolio_value": 1.2849872826477575
     },
     {
-      "daily_return": 0.0025240427655355735,
+      "daily_return": 0.0013696594787119538,
       "date": "2026-06-15",
-      "portfolio_value": 1.3904510524521798
+      "portfolio_value": 1.2867472776594604
     },
     {
-      "daily_return": -0.001612895342111928,
+      "daily_return": -0.0013958270046165017,
       "date": "2026-06-16",
-      "portfolio_value": 1.388208400426245
+      "portfolio_value": 1.2849512010611865
     },
     {
-      "daily_return": -0.0013069690516562416,
+      "daily_return": -0.0008809420656595308,
       "date": "2026-06-17",
-      "portfolio_value": 1.3863940550096385
+      "portfolio_value": 1.283819233495852
     },
     {
-      "daily_return": -0.0024587002514559735,
+      "daily_return": -0.0017043877001544827,
       "date": "2026-06-18",
-      "portfolio_value": 1.3829853275979693
+      "portfolio_value": 1.28163110778506
     },
     {
-      "daily_return": -0.0011268974098473674,
+      "daily_return": -0.0011360904823109772,
       "date": "2026-06-22",
-      "portfolio_value": 1.3814268450144422
+      "portfolio_value": 1.2801750588816716
     },
     {
-      "daily_return": -0.0030542362341839224,
+      "daily_return": -0.0022697462772031346,
       "date": "2026-06-23",
-      "portfolio_value": 1.3772076410895249
+      "portfolio_value": 1.2772693863076066
     },
     {
-      "daily_return": 0.00039124004474208097,
+      "daily_return": 0.00017464474535975485,
       "date": "2026-06-24",
-      "portfolio_value": 1.377746459868644
+      "portfolio_value": 1.277492454694334
     },
     {
-      "daily_return": -0.0020731246725092405,
+      "daily_return": -0.001909223601385105,
       "date": "2026-06-25",
-      "portfolio_value": 1.3748902196902282
+      "portfolio_value": 1.2750534359492403
     },
     {
-      "daily_return": -0.00319123269072073,
+      "daily_return": -0.0024620805308316453,
       "date": "2026-06-26",
-      "portfolio_value": 1.3705026250750005
+      "portfolio_value": 1.2719141517088197
     },
     {
-      "daily_return": 0.002089605399388087,
+      "daily_return": 0.0015394452500006868,
       "date": "2026-06-29",
-      "portfolio_value": 1.373366434760233
+      "portfolio_value": 1.2738721939080764
     },
     {
-      "daily_return": -0.0016533711010378051,
+      "daily_return": -0.0008895220377014509,
       "date": "2026-06-30",
-      "portfolio_value": 1.3710957503858652
+      "portfolio_value": 1.27273905651838
     },
     {
-      "daily_return": 0.0018746431333512286,
+      "daily_return": 0.0014252476548363528,
       "date": "2026-07-02",
-      "portfolio_value": 1.373666065619493
+      "portfolio_value": 1.2745530248739017
     },
     {
-      "daily_return": 0.0026680167656205254,
+      "daily_return": 0.0015910281184594432,
       "date": "2026-07-03",
-      "portfolio_value": 1.3773310297129298
+      "portfolio_value": 1.2765808745749436
     },
     {
-      "daily_return": 0.0009853457643978995,
+      "daily_return": 0.0013677062389293613,
       "date": "2026-07-06",
-      "portfolio_value": 1.378688177009231
+      "portfolio_value": 1.2783268622015977
     },
     {
-      "daily_return": -7.621906992575035e-05,
+      "daily_return": 0.0004215021531755073,
       "date": "2026-07-07",
-      "portfolio_value": 1.3785830946786617
+      "portfolio_value": 1.2788656797264777
     },
     {
-      "daily_return": 0.005284633697107944,
+      "daily_return": 0.004697657291685874,
       "date": "2026-07-08",
-      "portfolio_value": 1.3858459626601822
+      "portfolio_value": 1.2848733524119316
     },
     {
-      "daily_return": -0.001286043548474862,
+      "daily_return": -0.0013931027601341553,
       "date": "2026-07-09",
-      "portfolio_value": 1.3840637044007231
+      "portfolio_value": 1.2830833917982636
     },
     {
-      "daily_return": 0.0034969016030799017,
+      "daily_return": 0.0023635736556417188,
       "date": "2026-07-10",
-      "portfolio_value": 1.3889036389874068
+      "portfolio_value": 1.2861087133347011
     },
     {
-      "daily_return": -1.3141840717736573e-05,
+      "daily_return": 0.0001526574434423107,
       "date": "2026-07-13",
-      "portfolio_value": 1.388885386237011
+      "portfolio_value": 1.2863050474028677
     },
     {
-      "daily_return": 0.0011901981966711958,
+      "daily_return": 0.0006234163687534307,
       "date": "2026-07-14",
-      "portfolio_value": 1.390538435119093
+      "portfolio_value": 1.287106951024629
     },
     {
-      "daily_return": 0.0033849703275758503,
+      "daily_return": 0.002625062218726936,
       "date": "2026-07-15",
-      "portfolio_value": 1.395245366461325
+      "portfolio_value": 1.2904856868532244
     },
     {
-      "daily_return": 0.0016565356816074458,
+      "daily_return": 0.0017561469606777198,
       "date": "2026-07-16",
-      "portfolio_value": 1.3975566401954655
+      "portfolio_value": 1.2927519693699898
     },
     {
-      "daily_return": -0.0011956862211139362,
+      "daily_return": -0.0012836822692841368,
       "date": "2026-07-17",
-      "portfolio_value": 1.3958856009775575
+      "portfolio_value": 1.2910924865883275
     },
     {
-      "daily_return": 0.0033124954088662056,
+      "daily_return": 0.0031709805962374595,
       "date": "2026-07-20",
-      "portfolio_value": 1.400509465622098
+      "portfolio_value": 1.295186515811247
     },
     {
-      "daily_return": 0.00017952203670362407,
+      "daily_return": -0.0002735425604112927,
       "date": "2026-07-21",
-      "portfolio_value": 1.4007608879337892
+      "portfolio_value": 1.2948322271755017
     },
     {
-      "daily_return": -0.0007311536003895734,
+      "daily_return": -0.0007755925266981609,
       "date": "2026-07-22",
-      "portfolio_value": 1.3997367165672916
+      "portfolio_value": 1.2938279649767765
     },
     {
-      "daily_return": 0.0035816629044093957,
+      "daily_return": 0.0030014894494901933,
       "date": "2026-07-23",
-      "portfolio_value": 1.4047501016409605
+      "portfolio_value": 1.2977113759631098
     },
     {
-      "daily_return": -0.002317988007446491,
+      "daily_return": -0.0017000675333074802,
       "date": "2026-07-24",
-      "portfolio_value": 1.4014939077518975
+      "portfolio_value": 1.2955051789852312
     },
     {
-      "daily_return": 0.0027841638084199964,
+      "daily_return": 0.0025166652864977023,
       "date": "2026-07-27",
-      "portfolio_value": 1.4053958963675817
+      "portfolio_value": 1.2987655318976612
     },
     {
-      "daily_return": -0.00032628552429561793,
+      "daily_return": 0.0009859761430550324,
       "date": "2026-07-28",
-      "portfolio_value": 1.4049373360306925
+      "portfolio_value": 1.3000460837275345
+    },
+    {
+      "daily_return": 0.002856363810292314,
+      "date": "2026-07-29",
+      "portfolio_value": 1.303759488312806
     }
   ],
   "lookback_days": 900,
   "metrics": {
-    "annualized_volatility": 0.1052255028377142,
-    "cagr": 0.15294844447567635,
-    "final_value": 1.4049373360306925,
-    "max_drawdown": -0.08924472048608989,
-    "sharpe": 1.4084883032129691
+    "annualized_volatility": 0.08861631960088355,
+    "cagr": 0.1176412912636624,
+    "final_value": 1.303759488312806,
+    "max_drawdown": -0.07997203473733394,
+    "sharpe": 1.300728426183097
   },
   "mode": "real",
   "trades": [
     {
       "action": "hold",
-      "date": "2024-03-12",
-      "delta_weight": 0.4262406561770304,
+      "date": "2024-03-14",
+      "delta_weight": 0.4250847975226038,
       "reason": "raise or maintain cash buffer",
       "rule_ids": "CASH_BUFFER",
       "ticker": "CASH"
     },
     {
       "action": "trim",
-      "date": "2024-03-12",
-      "delta_weight": -0.07562241101683602,
+      "date": "2024-03-14",
+      "delta_weight": -0.07553193280759576,
       "reason": "over target weight; stop-loss triggered",
       "rule_ids": "OVER_TARGET,STOP_LOSS",
       "ticker": "0700.HK"
     },
     {
       "action": "trim",
-      "date": "2024-03-12",
-      "delta_weight": -0.06397372471920121,
+      "date": "2024-03-14",
+      "delta_weight": -0.06185237716116028,
       "reason": "over target weight; stop-loss triggered",
       "rule_ids": "OVER_TARGET,STOP_LOSS",
       "ticker": "3690.HK"
     },
     {
       "action": "trim",
-      "date": "2024-03-12",
-      "delta_weight": -0.04414892011474941,
+      "date": "2024-03-14",
+      "delta_weight": -0.04450378645436865,
       "reason": "over target weight; stop-loss triggered",
       "rule_ids": "OVER_TARGET,STOP_LOSS",
       "ticker": "1810.HK"
     },
     {
       "action": "trim",
-      "date": "2024-03-12",
-      "delta_weight": -0.0433650852355745,
+      "date": "2024-03-14",
+      "delta_weight": -0.0440634760696262,
       "reason": "stop-loss triggered",
       "rule_ids": "STOP_LOSS",
       "ticker": "0388.HK"
     },
     {
       "action": "trim",
-      "date": "2024-03-12",
-      "delta_weight": -0.04307965164547012,
+      "date": "2024-03-14",
+      "delta_weight": -0.04229846569105204,
       "reason": "stop-loss triggered",
       "rule_ids": "STOP_LOSS",
       "ticker": "1299.HK"
     },
     {
       "action": "trim",
-      "date": "2024-03-12",
-      "delta_weight": -0.03967706772252063,
+      "date": "2024-03-14",
+      "delta_weight": -0.03941450729052824,
       "reason": "stop-loss triggered",
       "rule_ids": "STOP_LOSS",
       "ticker": "0939.HK"
     },
     {
       "action": "trim",
-      "date": "2024-03-12",
-      "delta_weight": -0.03707333781674091,
+      "date": "2024-03-14",
+      "delta_weight": -0.03831712561455602,
       "reason": "stop-loss triggered",
       "rule_ids": "STOP_LOSS",
       "ticker": "0005.HK"
     },
     {
       "action": "trim",
-      "date": "2024-03-12",
-      "delta_weight": -0.036516512722895474,
+      "date": "2024-03-14",
+      "delta_weight": -0.03766764196755681,
       "reason": "stop-loss triggered",
       "rule_ids": "STOP_LOSS",
       "ticker": "0823.HK"
     },
     {
       "action": "trim",
-      "date": "2024-03-12",
-      "delta_weight": -0.023623731694041566,
+      "date": "2024-03-14",
+      "delta_weight": -0.023927850136268317,
       "reason": "stop-loss triggered",
       "rule_ids": "STOP_LOSS",
       "ticker": "0001.HK"
     },
     {
       "action": "trim",
-      "date": "2024-03-12",
-      "delta_weight": -0.01916021348900057,
+      "date": "2024-03-14",
+      "delta_weight": -0.01750763432989147,
       "reason": "over target weight",
       "rule_ids": "OVER_TARGET",
       "ticker": "9988.HK"
     },
     {
-      "action": "add",
-      "date": "2024-04-15",
-      "delta_weight": 0.10041566048565238,
-      "reason": "under target",
-      "rule_ids": "UNDER_TARGET",
-      "ticker": "1810.HK"
-    },
-    {
       "action": "hold",
-      "date": "2024-04-15",
-      "delta_weight": 0.13494174246675095,
+      "date": "2024-04-17",
+      "delta_weight": 0.23320392276793336,
       "reason": "raise or maintain cash buffer",
       "rule_ids": "CASH_BUFFER",
       "ticker": "CASH"
     },
     {
       "action": "trim",
-      "date": "2024-04-15",
-      "delta_weight": -0.0572420722609838,
+      "date": "2024-04-17",
+      "delta_weight": -0.05683494650587228,
       "reason": "stop-loss triggered",
       "rule_ids": "STOP_LOSS",
       "ticker": "9988.HK"
     },
     {
       "action": "trim",
-      "date": "2024-04-15",
-      "delta_weight": -0.0401470853169413,
+      "date": "2024-04-17",
+      "delta_weight": -0.040190849325125136,
       "reason": "stop-loss triggered",
       "rule_ids": "STOP_LOSS",
       "ticker": "0700.HK"
     },
     {
       "action": "trim",
-      "date": "2024-04-15",
-      "delta_weight": -0.03529406469561971,
+      "date": "2024-04-17",
+      "delta_weight": -0.03322653360974689,
       "reason": "stop-loss triggered",
       "rule_ids": "STOP_LOSS",
       "ticker": "3690.HK"
     },
     {
       "action": "trim",
-      "date": "2024-04-15",
-      "delta_weight": -0.020434683441936028,
+      "date": "2024-04-17",
+      "delta_weight": -0.02063151914833428,
       "reason": "stop-loss triggered",
       "rule_ids": "STOP_LOSS",
       "ticker": "0005.HK"
     },
     {
       "action": "trim",
-      "date": "2024-04-15",
-      "delta_weight": -0.02007129590333052,
-      "reason": "stop-loss triggered",
-      "rule_ids": "STOP_LOSS",
-      "ticker": "0388.HK"
-    },
-    {
-      "action": "trim",
-      "date": "2024-04-15",
-      "delta_weight": -0.019674009244830887,
+      "date": "2024-04-17",
+      "delta_weight": -0.019872815117536267,
       "reason": "stop-loss triggered",
       "rule_ids": "STOP_LOSS",
       "ticker": "0939.HK"
     },
     {
       "action": "trim",
-      "date": "2024-04-15",
-      "delta_weight": -0.01600543387304259,
+      "date": "2024-04-17",
+      "delta_weight": -0.019597147960508127,
+      "reason": "stop-loss triggered",
+      "rule_ids": "STOP_LOSS",
+      "ticker": "0388.HK"
+    },
+    {
+      "action": "trim",
+      "date": "2024-04-17",
+      "delta_weight": -0.01626852422379965,
       "reason": "stop-loss triggered; trailing-stop triggered",
       "rule_ids": "STOP_LOSS,TRAILING_STOP",
       "ticker": "1299.HK"
     },
     {
       "action": "trim",
-      "date": "2024-04-15",
-      "delta_weight": -0.015906051156714115,
+      "date": "2024-04-17",
+      "delta_weight": -0.016106022409228867,
       "reason": "stop-loss triggered; trailing-stop triggered",
       "rule_ids": "STOP_LOSS,TRAILING_STOP",
       "ticker": "0823.HK"
     },
     {
       "action": "trim",
-      "date": "2024-04-15",
-      "delta_weight": -0.010582707059004364,
-      "reason": "stop-loss triggered",
-      "rule_ids": "STOP_LOSS",
+      "date": "2024-04-17",
+      "delta_weight": -0.010475564467781846,
+      "reason": "stop-loss triggered; trailing-stop triggered",
+      "rule_ids": "STOP_LOSS,TRAILING_STOP",
       "ticker": "0001.HK"
     },
     {
       "action": "add",
-      "date": "2024-05-16",
-      "delta_weight": 0.02445667372731411,
+      "date": "2024-05-20",
+      "delta_weight": 0.005670924109607577,
       "reason": "under target",
       "rule_ids": "UNDER_TARGET",
       "ticker": "0700.HK"
     },
     {
-      "action": "add",
-      "date": "2024-05-16",
-      "delta_weight": 0.020972828750775413,
-      "reason": "under target",
-      "rule_ids": "UNDER_TARGET",
-      "ticker": "0005.HK"
-    },
-    {
-      "action": "add",
-      "date": "2024-05-16",
-      "delta_weight": 0.020259623430703727,
-      "reason": "under target",
-      "rule_ids": "UNDER_TARGET",
-      "ticker": "0388.HK"
-    },
-    {
-      "action": "add",
-      "date": "2024-05-16",
-      "delta_weight": 0.016034882874323177,
-      "reason": "under target",
-      "rule_ids": "UNDER_TARGET",
-      "ticker": "9988.HK"
-    },
-    {
-      "action": "add",
-      "date": "2024-05-16",
-      "delta_weight": 0.015419148797657904,
-      "reason": "under target",
-      "rule_ids": "UNDER_TARGET",
-      "ticker": "0939.HK"
-    },
-    {
-      "action": "add",
-      "date": "2024-05-16",
-      "delta_weight": 0.013255856277457293,
-      "reason": "under target",
-      "rule_ids": "UNDER_TARGET",
-      "ticker": "3690.HK"
+      "action": "hold",
+      "date": "2024-05-20",
+      "delta_weight": 0.019711550120450793,
+      "reason": "raise or maintain cash buffer",
+      "rule_ids": "CASH_BUFFER",
+      "ticker": "CASH"
     },
     {
       "action": "trim",
-      "date": "2024-05-16",
-      "delta_weight": -0.08659063126368595,
-      "reason": "exceeds max single-name cap; over target weight",
-      "rule_ids": "OVER_TARGET,SINGLE_CAP",
-      "ticker": "1810.HK"
-    },
-    {
-      "action": "trim",
-      "date": "2024-05-16",
-      "delta_weight": -0.009908741594967808,
+      "date": "2024-05-20",
+      "delta_weight": -0.010540187915618754,
       "reason": "stop-loss triggered",
       "rule_ids": "STOP_LOSS",
       "ticker": "1299.HK"
     },
     {
       "action": "trim",
-      "date": "2024-05-16",
-      "delta_weight": -0.008320816638573285,
+      "date": "2024-05-20",
+      "delta_weight": -0.009028798503486282,
       "reason": "stop-loss triggered",
       "rule_ids": "STOP_LOSS",
       "ticker": "0823.HK"
     },
     {
       "action": "trim",
-      "date": "2024-05-16",
-      "delta_weight": -0.005578824361004586,
+      "date": "2024-05-20",
+      "delta_weight": -0.005813487810953334,
       "reason": "stop-loss triggered",
       "rule_ids": "STOP_LOSS",
       "ticker": "0001.HK"
     },
     {
-      "action": "add",
-      "date": "2024-06-17",
-      "delta_weight": 0.014309826996286312,
-      "reason": "under target",
-      "rule_ids": "UNDER_TARGET",
-      "ticker": "0700.HK"
-    },
-    {
-      "action": "add",
-      "date": "2024-06-17",
-      "delta_weight": 0.012322037369448464,
-      "reason": "under target",
-      "rule_ids": "UNDER_TARGET",
-      "ticker": "0005.HK"
-    },
-    {
-      "action": "add",
-      "date": "2024-06-17",
-      "delta_weight": 0.009287332921576893,
-      "reason": "under target",
-      "rule_ids": "UNDER_TARGET",
-      "ticker": "0939.HK"
-    },
-    {
-      "action": "add",
-      "date": "2024-06-17",
-      "delta_weight": 0.00820624869682509,
-      "reason": "under target",
-      "rule_ids": "UNDER_TARGET",
-      "ticker": "3690.HK"
+      "action": "hold",
+      "date": "2024-06-19",
+      "delta_weight": 0.011456738804115373,
+      "reason": "raise or maintain cash buffer",
+      "rule_ids": "CASH_BUFFER",
+      "ticker": "CASH"
     },
     {
       "action": "trim",
-      "date": "2024-06-17",
-      "delta_weight": -0.023691054530811845,
-      "reason": "trailing-stop triggered",
-      "rule_ids": "TRAILING_STOP",
-      "ticker": "9988.HK"
-    },
-    {
-      "action": "trim",
-      "date": "2024-06-17",
-      "delta_weight": -0.02043439145332491,
+      "date": "2024-06-19",
+      "delta_weight": -0.011456738804115373,
       "reason": "stop-loss triggered",
       "rule_ids": "STOP_LOSS",
       "ticker": "0388.HK"
     },
     {
       "action": "add",
-      "date": "2024-07-17",
-      "delta_weight": 0.011281753246464363,
-      "reason": "under target",
-      "rule_ids": "UNDER_TARGET",
-      "ticker": "9988.HK"
-    },
-    {
-      "action": "add",
-      "date": "2024-07-17",
-      "delta_weight": 0.008910672106108563,
+      "date": "2024-07-19",
+      "delta_weight": 0.0055948988035595315,
       "reason": "under target",
       "rule_ids": "UNDER_TARGET",
       "ticker": "0700.HK"
-    },
-    {
-      "action": "add",
-      "date": "2024-07-17",
-      "delta_weight": 0.007418999455024397,
-      "reason": "under target",
-      "rule_ids": "UNDER_TARGET",
-      "ticker": "0005.HK"
-    },
-    {
-      "action": "add",
-      "date": "2024-07-17",
-      "delta_weight": 0.005046982479555646,
-      "reason": "under target",
-      "rule_ids": "UNDER_TARGET",
-      "ticker": "0939.HK"
-    },
-    {
-      "action": "trim",
-      "date": "2024-07-17",
-      "delta_weight": -0.023102521809256198,
-      "reason": "trailing-stop triggered",
-      "rule_ids": "TRAILING_STOP",
-      "ticker": "1810.HK"
-    },
-    {
-      "action": "trim",
-      "date": "2024-07-17",
-      "delta_weight": -0.009555885477896773,
-      "reason": "stop-loss triggered; trailing-stop triggered",
-      "rule_ids": "STOP_LOSS,TRAILING_STOP",
-      "ticker": "0388.HK"
-    },
-    {
-      "action": "add",
-      "date": "2024-08-15",
-      "delta_weight": 0.008725746475211934,
-      "reason": "under target",
-      "rule_ids": "UNDER_TARGET",
-      "ticker": "9988.HK"
-    },
-    {
-      "action": "add",
-      "date": "2024-08-15",
-      "delta_weight": 0.006970539831075699,
-      "reason": "under target",
-      "rule_ids": "UNDER_TARGET",
-      "ticker": "0700.HK"
-    },
-    {
-      "action": "add",
-      "date": "2024-08-15",
-      "delta_weight": 0.005972199811238188,
-      "reason": "under target",
-      "rule_ids": "UNDER_TARGET",
-      "ticker": "0005.HK"
-    },
-    {
-      "action": "trim",
-      "date": "2024-08-15",
-      "delta_weight": -0.02643466483075721,
-      "reason": "stop-loss triggered; trailing-stop triggered",
-      "rule_ids": "STOP_LOSS,TRAILING_STOP",
-      "ticker": "3690.HK"
-    },
-    {
-      "action": "add",
-      "date": "2024-11-18",
-      "delta_weight": 0.07179469707496898,
-      "reason": "under target",
-      "rule_ids": "UNDER_TARGET",
-      "ticker": "0005.HK"
-    },
-    {
-      "action": "trim",
-      "date": "2024-11-18",
-      "delta_weight": -0.033876914884175276,
-      "reason": "trailing-stop triggered",
-      "rule_ids": "TRAILING_STOP",
-      "ticker": "0700.HK"
-    },
-    {
-      "action": "trim",
-      "date": "2024-11-18",
-      "delta_weight": -0.02458213413728196,
-      "reason": "trailing-stop triggered",
-      "rule_ids": "TRAILING_STOP",
-      "ticker": "9988.HK"
-    },
-    {
-      "action": "trim",
-      "date": "2024-11-18",
-      "delta_weight": -0.01333564805351174,
-      "reason": "trailing-stop triggered",
-      "rule_ids": "TRAILING_STOP",
-      "ticker": "3690.HK"
     },
     {
       "action": "hold",
-      "date": "2024-12-17",
-      "delta_weight": 0.09399469638268129,
+      "date": "2024-07-19",
+      "delta_weight": 0.01580712899916068,
       "reason": "raise or maintain cash buffer",
       "rule_ids": "CASH_BUFFER",
       "ticker": "CASH"
     },
     {
       "action": "trim",
-      "date": "2024-12-17",
-      "delta_weight": -0.04757101761317606,
-      "reason": "over target weight",
-      "rule_ids": "OVER_TARGET",
-      "ticker": "0005.HK"
-    },
-    {
-      "action": "trim",
-      "date": "2024-12-17",
-      "delta_weight": -0.022373638924235172,
+      "date": "2024-07-19",
+      "delta_weight": -0.016177820711149635,
       "reason": "trailing-stop triggered",
       "rule_ids": "TRAILING_STOP",
-      "ticker": "0700.HK"
-    },
-    {
-      "action": "trim",
-      "date": "2024-12-17",
-      "delta_weight": -0.015751800039773067,
-      "reason": "trailing-stop triggered",
-      "rule_ids": "TRAILING_STOP",
-      "ticker": "9988.HK"
-    },
-    {
-      "action": "trim",
-      "date": "2024-12-17",
-      "delta_weight": -0.00829823980549699,
-      "reason": "trailing-stop triggered",
-      "rule_ids": "TRAILING_STOP",
-      "ticker": "3690.HK"
-    },
-    {
-      "action": "hold",
-      "date": "2025-01-20",
-      "delta_weight": 0.03860098045116245,
-      "reason": "raise or maintain cash buffer",
-      "rule_ids": "CASH_BUFFER",
-      "ticker": "CASH"
-    },
-    {
-      "action": "trim",
-      "date": "2025-01-20",
-      "delta_weight": -0.014297680594215973,
-      "reason": "trailing-stop triggered",
-      "rule_ids": "TRAILING_STOP",
-      "ticker": "0700.HK"
-    },
-    {
-      "action": "trim",
-      "date": "2025-01-20",
-      "delta_weight": -0.010539953402318324,
-      "reason": "trailing-stop triggered",
-      "rule_ids": "TRAILING_STOP",
-      "ticker": "9988.HK"
-    },
-    {
-      "action": "trim",
-      "date": "2025-01-20",
-      "delta_weight": -0.008393349059032926,
-      "reason": "over target weight",
-      "rule_ids": "OVER_TARGET",
       "ticker": "1810.HK"
     },
     {
       "action": "trim",
-      "date": "2025-01-20",
-      "delta_weight": -0.005369997395595222,
-      "reason": "trailing-stop triggered",
-      "rule_ids": "TRAILING_STOP",
-      "ticker": "3690.HK"
-    },
-    {
-      "action": "add",
-      "date": "2025-02-21",
-      "delta_weight": 0.011215345504127557,
-      "reason": "under target",
-      "rule_ids": "UNDER_TARGET",
-      "ticker": "0700.HK"
-    },
-    {
-      "action": "add",
-      "date": "2025-02-21",
-      "delta_weight": 0.009468408130445242,
-      "reason": "under target",
-      "rule_ids": "UNDER_TARGET",
+      "date": "2024-07-19",
+      "delta_weight": -0.005224207091570578,
+      "reason": "stop-loss triggered; trailing-stop triggered",
+      "rule_ids": "STOP_LOSS,TRAILING_STOP",
       "ticker": "0388.HK"
-    },
-    {
-      "action": "add",
-      "date": "2025-02-21",
-      "delta_weight": 0.009409543130808214,
-      "reason": "under target",
-      "rule_ids": "UNDER_TARGET",
-      "ticker": "9988.HK"
     },
     {
       "action": "block",
-      "date": "2025-02-21",
+      "date": "2024-09-19",
       "delta_weight": 0.0,
-      "reason": "add blocked: position is down -18.44% from entry without thesis override",
+      "reason": "add blocked: position is down -11.19% from entry without thesis override",
       "rule_ids": "ADD_BLOCK",
       "ticker": "0001.HK"
     },
     {
-      "action": "trim",
-      "date": "2025-02-21",
-      "delta_weight": -0.030093296765381014,
-      "reason": "over target weight",
-      "rule_ids": "OVER_TARGET",
-      "ticker": "1810.HK"
+      "action": "add",
+      "date": "2024-10-22",
+      "delta_weight": 0.006770687155527797,
+      "reason": "under target",
+      "rule_ids": "UNDER_TARGET",
+      "ticker": "0005.HK"
     },
     {
       "action": "add",
-      "date": "2025-03-24",
-      "delta_weight": 0.014974673595978009,
+      "date": "2024-10-22",
+      "delta_weight": 0.006646353284403832,
+      "reason": "under target",
+      "rule_ids": "UNDER_TARGET",
+      "ticker": "0700.HK"
+    },
+    {
+      "action": "hold",
+      "date": "2024-10-22",
+      "delta_weight": 0.010655009666618262,
+      "reason": "raise or maintain cash buffer",
+      "rule_ids": "CASH_BUFFER",
+      "ticker": "CASH"
+    },
+    {
+      "action": "trim",
+      "date": "2024-10-22",
+      "delta_weight": -0.02407205010654989,
+      "reason": "trailing-stop triggered",
+      "rule_ids": "TRAILING_STOP",
+      "ticker": "9988.HK"
+    },
+    {
+      "action": "add",
+      "date": "2024-11-20",
+      "delta_weight": 0.011576606557624016,
       "reason": "under target",
       "rule_ids": "UNDER_TARGET",
       "ticker": "0700.HK"
     },
     {
       "action": "add",
-      "date": "2025-03-24",
-      "delta_weight": 0.012791306034792772,
+      "date": "2024-11-20",
+      "delta_weight": 0.011264891900404209,
+      "reason": "under target",
+      "rule_ids": "UNDER_TARGET",
+      "ticker": "0005.HK"
+    },
+    {
+      "action": "add",
+      "date": "2024-11-20",
+      "delta_weight": 0.008955309077945279,
+      "reason": "under target",
+      "rule_ids": "UNDER_TARGET",
+      "ticker": "0939.HK"
+    },
+    {
+      "action": "trim",
+      "date": "2024-11-20",
+      "delta_weight": -0.017671902178388633,
+      "reason": "trailing-stop triggered",
+      "rule_ids": "TRAILING_STOP",
+      "ticker": "3690.HK"
+    },
+    {
+      "action": "trim",
+      "date": "2024-11-20",
+      "delta_weight": -0.014124905357584872,
+      "reason": "trailing-stop triggered",
+      "rule_ids": "TRAILING_STOP",
+      "ticker": "9988.HK"
+    },
+    {
+      "action": "add",
+      "date": "2024-12-19",
+      "delta_weight": 0.007330845027249122,
+      "reason": "under target",
+      "rule_ids": "UNDER_TARGET",
+      "ticker": "0700.HK"
+    },
+    {
+      "action": "add",
+      "date": "2024-12-19",
+      "delta_weight": 0.007018999590803428,
+      "reason": "under target",
+      "rule_ids": "UNDER_TARGET",
+      "ticker": "0005.HK"
+    },
+    {
+      "action": "add",
+      "date": "2024-12-19",
+      "delta_weight": 0.005553833173927614,
+      "reason": "under target",
+      "rule_ids": "UNDER_TARGET",
+      "ticker": "0939.HK"
+    },
+    {
+      "action": "trim",
+      "date": "2024-12-19",
+      "delta_weight": -0.010681911051928488,
+      "reason": "trailing-stop triggered",
+      "rule_ids": "TRAILING_STOP",
+      "ticker": "3690.HK"
+    },
+    {
+      "action": "trim",
+      "date": "2024-12-19",
+      "delta_weight": -0.009221766740051674,
+      "reason": "trailing-stop triggered",
+      "rule_ids": "TRAILING_STOP",
+      "ticker": "9988.HK"
+    },
+    {
+      "action": "add",
+      "date": "2025-01-22",
+      "delta_weight": 0.021425594212449935,
+      "reason": "under target",
+      "rule_ids": "UNDER_TARGET",
+      "ticker": "0005.HK"
+    },
+    {
+      "action": "add",
+      "date": "2025-01-22",
+      "delta_weight": 0.01804234648183721,
+      "reason": "under target",
+      "rule_ids": "UNDER_TARGET",
+      "ticker": "0939.HK"
+    },
+    {
+      "action": "trim",
+      "date": "2025-01-22",
+      "delta_weight": -0.026504410863651677,
+      "reason": "trailing-stop triggered",
+      "rule_ids": "TRAILING_STOP",
+      "ticker": "0700.HK"
+    },
+    {
+      "action": "trim",
+      "date": "2025-01-22",
+      "delta_weight": -0.006864097851950746,
+      "reason": "trailing-stop triggered",
+      "rule_ids": "TRAILING_STOP",
+      "ticker": "3690.HK"
+    },
+    {
+      "action": "trim",
+      "date": "2025-01-22",
+      "delta_weight": -0.006099431978684729,
+      "reason": "trailing-stop triggered",
+      "rule_ids": "TRAILING_STOP",
+      "ticker": "9988.HK"
+    },
+    {
+      "action": "hold",
+      "date": "2025-02-25",
+      "delta_weight": 0.011695422428391111,
+      "reason": "raise or maintain cash buffer",
+      "rule_ids": "CASH_BUFFER",
+      "ticker": "CASH"
+    },
+    {
+      "action": "trim",
+      "date": "2025-02-25",
+      "delta_weight": -0.011695422428391111,
+      "reason": "over target weight",
+      "rule_ids": "OVER_TARGET",
+      "ticker": "1810.HK"
+    },
+    {
+      "action": "add",
+      "date": "2025-03-26",
+      "delta_weight": 0.011022135930201538,
       "reason": "under target",
       "rule_ids": "UNDER_TARGET",
       "ticker": "9988.HK"
     },
     {
       "action": "add",
-      "date": "2025-03-24",
-      "delta_weight": 0.012408279858411338,
+      "date": "2025-03-26",
+      "delta_weight": 0.010068136704300535,
       "reason": "under target",
       "rule_ids": "UNDER_TARGET",
       "ticker": "0388.HK"
     },
     {
       "action": "add",
-      "date": "2025-03-24",
-      "delta_weight": 0.008654132744348052,
+      "date": "2025-03-26",
+      "delta_weight": 0.008033635286160488,
+      "reason": "under target",
+      "rule_ids": "UNDER_TARGET",
+      "ticker": "0700.HK"
+    },
+    {
+      "action": "add",
+      "date": "2025-03-26",
+      "delta_weight": 0.0058544956521527185,
       "reason": "under target",
       "rule_ids": "UNDER_TARGET",
       "ticker": "0001.HK"
     },
     {
       "action": "trim",
-      "date": "2025-03-24",
-      "delta_weight": -0.027357715321772953,
-      "reason": "over target weight; sector hyped (z=1.43)",
-      "rule_ids": "OVER_TARGET,SECTOR_HYPED",
+      "date": "2025-03-26",
+      "delta_weight": -0.019916496109585,
+      "reason": "sector hyped (z=1.39)",
+      "rule_ids": "SECTOR_HYPED",
       "ticker": "0005.HK"
     },
     {
       "action": "trim",
-      "date": "2025-03-24",
-      "delta_weight": -0.014759082011419983,
-      "reason": "sector hyped (z=1.43)",
+      "date": "2025-03-26",
+      "delta_weight": -0.015061907463230282,
+      "reason": "sector hyped (z=1.39)",
       "rule_ids": "SECTOR_HYPED",
       "ticker": "0939.HK"
     },
     {
-      "action": "trim",
-      "date": "2025-03-24",
-      "delta_weight": -0.006711594900337237,
-      "reason": "over target weight",
-      "rule_ids": "OVER_TARGET",
-      "ticker": "1810.HK"
-    },
-    {
-      "action": "add",
-      "date": "2025-04-25",
-      "delta_weight": 0.04426123155564518,
-      "reason": "under target",
-      "rule_ids": "UNDER_TARGET",
-      "ticker": "0939.HK"
-    },
-    {
       "action": "block",
-      "date": "2025-04-25",
+      "date": "2025-04-29",
       "delta_weight": 0.0,
-      "reason": "add blocked: ML drawdown risk high (p=0.72)",
+      "reason": "add blocked: ML drawdown risk medium (p=0.52)",
       "rule_ids": "ADD_BLOCK",
       "ticker": "0388.HK"
     },
     {
+      "action": "block",
+      "date": "2025-04-29",
+      "delta_weight": 0.0,
+      "reason": "add blocked: ML drawdown risk medium (p=0.47)",
+      "rule_ids": "ADD_BLOCK",
+      "ticker": "0700.HK"
+    },
+    {
+      "action": "hold",
+      "date": "2025-04-29",
+      "delta_weight": 0.04899281533808085,
+      "reason": "raise or maintain cash buffer",
+      "rule_ids": "CASH_BUFFER",
+      "ticker": "CASH"
+    },
+    {
       "action": "trim",
-      "date": "2025-04-25",
-      "delta_weight": -0.022883310560783028,
-      "reason": "ML drawdown risk high (p=0.98); trailing-stop triggered",
+      "date": "2025-04-29",
+      "delta_weight": -0.023825763205317544,
+      "reason": "ML drawdown risk high (p=0.96); trailing-stop triggered",
       "rule_ids": "ML_HIGH_RISK,TRAILING_STOP",
       "ticker": "1810.HK"
     },
     {
       "action": "trim",
-      "date": "2025-04-25",
-      "delta_weight": -0.015526245770251799,
-      "reason": "trailing-stop triggered",
-      "rule_ids": "TRAILING_STOP",
-      "ticker": "9988.HK"
-    },
-    {
-      "action": "trim",
-      "date": "2025-04-25",
-      "delta_weight": -0.005851675224610352,
-      "reason": "ML drawdown risk high (p=0.67)",
-      "rule_ids": "ML_HIGH_RISK",
-      "ticker": "0700.HK"
-    },
-    {
-      "action": "add",
-      "date": "2025-05-28",
-      "delta_weight": 0.015741615724778366,
-      "reason": "under target",
-      "rule_ids": "UNDER_TARGET",
-      "ticker": "0700.HK"
-    },
-    {
-      "action": "add",
-      "date": "2025-05-28",
-      "delta_weight": 0.013133768487301332,
-      "reason": "under target",
-      "rule_ids": "UNDER_TARGET",
-      "ticker": "0823.HK"
-    },
-    {
-      "action": "add",
-      "date": "2025-05-28",
-      "delta_weight": 0.011546102325079343,
-      "reason": "under target",
-      "rule_ids": "UNDER_TARGET",
-      "ticker": "0388.HK"
-    },
-    {
-      "action": "add",
-      "date": "2025-05-28",
-      "delta_weight": 0.008443110339088527,
-      "reason": "under target",
-      "rule_ids": "UNDER_TARGET",
-      "ticker": "0001.HK"
-    },
-    {
-      "action": "add",
-      "date": "2025-05-28",
-      "delta_weight": 0.005717058442503122,
-      "reason": "under target",
-      "rule_ids": "UNDER_TARGET",
-      "ticker": "1810.HK"
-    },
-    {
-      "action": "block",
-      "date": "2025-05-28",
-      "delta_weight": 0.0,
-      "reason": "add blocked: position is down -11.51% from entry without thesis override",
-      "rule_ids": "ADD_BLOCK",
-      "ticker": "1299.HK"
-    },
-    {
-      "action": "trim",
-      "date": "2025-05-28",
-      "delta_weight": -0.02296987609840926,
-      "reason": "over target weight; sector hyped (z=1.12)",
-      "rule_ids": "OVER_TARGET,SECTOR_HYPED",
-      "ticker": "0939.HK"
-    },
-    {
-      "action": "trim",
-      "date": "2025-05-28",
-      "delta_weight": -0.021489937116218483,
-      "reason": "sector hyped (z=1.12)",
+      "date": "2025-04-29",
+      "delta_weight": -0.010390574401945338,
+      "reason": "sector hyped (z=0.90)",
       "rule_ids": "SECTOR_HYPED",
       "ticker": "0005.HK"
     },
     {
       "action": "trim",
-      "date": "2025-05-28",
-      "delta_weight": -0.010121842104122945,
+      "date": "2025-04-29",
+      "delta_weight": -0.008714980024778355,
       "reason": "trailing-stop triggered",
       "rule_ids": "TRAILING_STOP",
       "ticker": "9988.HK"
     },
     {
+      "action": "trim",
+      "date": "2025-04-29",
+      "delta_weight": -0.006061497706039608,
+      "reason": "sector hyped (z=0.90)",
+      "rule_ids": "SECTOR_HYPED",
+      "ticker": "0939.HK"
+    },
+    {
       "action": "hold",
-      "date": "2025-06-26",
-      "delta_weight": 0.0064095351097920835,
+      "date": "2025-05-30",
+      "delta_weight": 0.005665532844571373,
       "reason": "raise or maintain cash buffer",
       "rule_ids": "CASH_BUFFER",
       "ticker": "CASH"
     },
     {
       "action": "trim",
-      "date": "2025-06-26",
-      "delta_weight": -0.0064095351097920835,
+      "date": "2025-05-30",
+      "delta_weight": -0.005665532844571373,
       "reason": "trailing-stop triggered",
       "rule_ids": "TRAILING_STOP",
       "ticker": "9988.HK"
     },
     {
       "action": "add",
-      "date": "2025-07-28",
-      "delta_weight": 0.015603407994530898,
+      "date": "2025-07-30",
+      "delta_weight": 0.007953377105440838,
       "reason": "under target",
       "rule_ids": "UNDER_TARGET",
       "ticker": "1299.HK"
     },
     {
       "action": "add",
-      "date": "2025-07-28",
-      "delta_weight": 0.011493237876634,
+      "date": "2025-07-30",
+      "delta_weight": 0.007120698076901316,
       "reason": "under target",
       "rule_ids": "UNDER_TARGET",
-      "ticker": "0700.HK"
+      "ticker": "0388.HK"
     },
     {
       "action": "add",
-      "date": "2025-07-28",
-      "delta_weight": 0.009831884175528785,
+      "date": "2025-07-30",
+      "delta_weight": 0.006212964612408266,
       "reason": "under target",
       "rule_ids": "UNDER_TARGET",
       "ticker": "0823.HK"
     },
     {
-      "action": "add",
-      "date": "2025-07-28",
-      "delta_weight": 0.008034852568605894,
-      "reason": "under target",
-      "rule_ids": "UNDER_TARGET",
-      "ticker": "0388.HK"
-    },
-    {
-      "action": "add",
-      "date": "2025-07-28",
-      "delta_weight": 0.005841249134959183,
-      "reason": "under target",
-      "rule_ids": "UNDER_TARGET",
-      "ticker": "0001.HK"
+      "action": "hold",
+      "date": "2025-07-30",
+      "delta_weight": 0.0083418515160667,
+      "reason": "raise or maintain cash buffer",
+      "rule_ids": "CASH_BUFFER",
+      "ticker": "CASH"
     },
     {
       "action": "trim",
-      "date": "2025-07-28",
-      "delta_weight": -0.019578520155639576,
-      "reason": "sector hyped (z=2.07)",
-      "rule_ids": "SECTOR_HYPED",
-      "ticker": "0939.HK"
-    },
-    {
-      "action": "trim",
-      "date": "2025-07-28",
-      "delta_weight": -0.016903933468641736,
-      "reason": "sector hyped (z=2.07)",
-      "rule_ids": "SECTOR_HYPED",
-      "ticker": "0005.HK"
-    },
-    {
-      "action": "trim",
-      "date": "2025-07-28",
-      "delta_weight": -0.01432217812597745,
-      "reason": "sector hyped (z=3.05)",
+      "date": "2025-07-30",
+      "delta_weight": -0.01327211490774069,
+      "reason": "sector hyped (z=2.29)",
       "rule_ids": "SECTOR_HYPED",
       "ticker": "1810.HK"
     },
     {
-      "action": "add",
-      "date": "2025-08-26",
-      "delta_weight": 0.017384799532421114,
-      "reason": "under target",
-      "rule_ids": "UNDER_TARGET",
-      "ticker": "1299.HK"
-    },
-    {
-      "action": "add",
-      "date": "2025-08-26",
-      "delta_weight": 0.011479752451834422,
-      "reason": "under target",
-      "rule_ids": "UNDER_TARGET",
-      "ticker": "0005.HK"
-    },
-    {
-      "action": "add",
-      "date": "2025-08-26",
-      "delta_weight": 0.011380651075724215,
-      "reason": "under target",
-      "rule_ids": "UNDER_TARGET",
-      "ticker": "0823.HK"
-    },
-    {
-      "action": "add",
-      "date": "2025-08-26",
-      "delta_weight": 0.009195145553411862,
-      "reason": "under target",
-      "rule_ids": "UNDER_TARGET",
-      "ticker": "1810.HK"
-    },
-    {
       "action": "trim",
-      "date": "2025-08-26",
-      "delta_weight": -0.023435802475755912,
-      "reason": "sector hyped (z=2.18)",
+      "date": "2025-07-30",
+      "delta_weight": -0.008753126600626437,
+      "reason": "sector hyped (z=2.29)",
       "rule_ids": "SECTOR_HYPED",
       "ticker": "0700.HK"
     },
     {
       "action": "trim",
-      "date": "2025-08-26",
-      "delta_weight": -0.013316905596388484,
-      "reason": "sector hyped (z=1.30)",
+      "date": "2025-07-30",
+      "delta_weight": -0.007603649802449992,
+      "reason": "sector hyped (z=0.83)",
       "rule_ids": "SECTOR_HYPED",
       "ticker": "0939.HK"
     },
     {
-      "action": "trim",
-      "date": "2025-08-26",
-      "delta_weight": -0.012687640541247214,
-      "reason": "sector hyped (z=2.06)",
-      "rule_ids": "SECTOR_HYPED",
-      "ticker": "0388.HK"
+      "action": "hold",
+      "date": "2025-08-28",
+      "delta_weight": 0.010891716583164492,
+      "reason": "raise or maintain cash buffer",
+      "rule_ids": "CASH_BUFFER",
+      "ticker": "CASH"
     },
     {
-      "action": "add",
-      "date": "2025-09-24",
-      "delta_weight": 0.007263892728860217,
-      "reason": "under target",
-      "rule_ids": "UNDER_TARGET",
+      "action": "trim",
+      "date": "2025-08-28",
+      "delta_weight": -0.005681697752206588,
+      "reason": "sector hyped (z=1.58)",
+      "rule_ids": "SECTOR_HYPED",
       "ticker": "0700.HK"
     },
     {
-      "action": "add",
-      "date": "2025-09-24",
-      "delta_weight": 0.006499682884734892,
-      "reason": "under target",
-      "rule_ids": "UNDER_TARGET",
-      "ticker": "1299.HK"
-    },
-    {
-      "action": "add",
-      "date": "2025-09-24",
-      "delta_weight": 0.005696382600689093,
-      "reason": "under target",
-      "rule_ids": "UNDER_TARGET",
-      "ticker": "0388.HK"
+      "action": "trim",
+      "date": "2025-08-28",
+      "delta_weight": -0.0052100188309579035,
+      "reason": "sector hyped (z=1.34)",
+      "rule_ids": "SECTOR_HYPED",
+      "ticker": "0005.HK"
     },
     {
       "action": "block",
-      "date": "2025-09-24",
+      "date": "2025-09-26",
       "delta_weight": 0.0,
-      "reason": "add blocked: ML drawdown risk medium (p=0.60)",
+      "reason": "add blocked: ML drawdown risk high (p=0.68)",
       "rule_ids": "ADD_BLOCK",
       "ticker": "9988.HK"
     },
     {
       "action": "hold",
-      "date": "2025-09-24",
-      "delta_weight": 0.00884663548543603,
+      "date": "2025-10-30",
+      "delta_weight": 0.016438315326599458,
       "reason": "raise or maintain cash buffer",
       "rule_ids": "CASH_BUFFER",
       "ticker": "CASH"
     },
     {
       "action": "trim",
-      "date": "2025-09-24",
-      "delta_weight": -0.01600201438866393,
-      "reason": "sector hyped (z=1.97)",
-      "rule_ids": "SECTOR_HYPED",
-      "ticker": "0005.HK"
-    },
-    {
-      "action": "trim",
-      "date": "2025-09-24",
-      "delta_weight": -0.012304579311056302,
-      "reason": "sector hyped (z=1.54)",
-      "rule_ids": "SECTOR_HYPED",
-      "ticker": "1810.HK"
-    },
-    {
-      "action": "add",
-      "date": "2025-10-27",
-      "delta_weight": 0.0071134351867319125,
-      "reason": "under target",
-      "rule_ids": "UNDER_TARGET",
-      "ticker": "9988.HK"
-    },
-    {
-      "action": "hold",
-      "date": "2025-10-27",
-      "delta_weight": 0.016103775399053444,
-      "reason": "raise or maintain cash buffer",
-      "rule_ids": "CASH_BUFFER",
-      "ticker": "CASH"
-    },
-    {
-      "action": "trim",
-      "date": "2025-10-27",
-      "delta_weight": -0.012537258994139142,
-      "reason": "sector hyped (z=1.09)",
-      "rule_ids": "SECTOR_HYPED",
-      "ticker": "0700.HK"
-    },
-    {
-      "action": "trim",
-      "date": "2025-10-27",
-      "delta_weight": -0.010679951591646215,
+      "date": "2025-10-30",
+      "delta_weight": -0.010527146654275723,
       "reason": "trailing-stop triggered",
       "rule_ids": "TRAILING_STOP",
       "ticker": "1810.HK"
     },
     {
-      "action": "add",
-      "date": "2025-11-26",
-      "delta_weight": 0.009592122446042784,
-      "reason": "under target",
-      "rule_ids": "UNDER_TARGET",
+      "action": "trim",
+      "date": "2025-10-30",
+      "delta_weight": -0.005911168672323733,
+      "reason": "sector hyped (z=0.91)",
+      "rule_ids": "SECTOR_HYPED",
       "ticker": "0700.HK"
     },
     {
-      "action": "add",
-      "date": "2025-11-26",
-      "delta_weight": 0.006400734578032655,
-      "reason": "under target",
-      "rule_ids": "UNDER_TARGET",
-      "ticker": "0005.HK"
-    },
-    {
-      "action": "add",
-      "date": "2025-11-26",
-      "delta_weight": 0.006350087296163885,
-      "reason": "under target",
-      "rule_ids": "UNDER_TARGET",
-      "ticker": "0388.HK"
-    },
-    {
-      "action": "add",
-      "date": "2025-11-26",
-      "delta_weight": 0.005891013820943026,
-      "reason": "under target",
-      "rule_ids": "UNDER_TARGET",
-      "ticker": "1299.HK"
+      "action": "hold",
+      "date": "2025-11-28",
+      "delta_weight": 0.013445390156163977,
+      "reason": "raise or maintain cash buffer",
+      "rule_ids": "CASH_BUFFER",
+      "ticker": "CASH"
     },
     {
       "action": "trim",
-      "date": "2025-11-26",
-      "delta_weight": -0.018816717358352723,
+      "date": "2025-11-28",
+      "delta_weight": -0.0068585892561787,
       "reason": "stop-loss triggered; trailing-stop triggered",
       "rule_ids": "STOP_LOSS,TRAILING_STOP",
       "ticker": "0823.HK"
     },
     {
       "action": "trim",
-      "date": "2025-11-26",
-      "delta_weight": -0.007905187210507935,
-      "reason": "trailing-stop triggered",
-      "rule_ids": "TRAILING_STOP",
-      "ticker": "9988.HK"
-    },
-    {
-      "action": "trim",
-      "date": "2025-11-26",
-      "delta_weight": -0.006285001344218368,
+      "date": "2025-11-28",
+      "delta_weight": -0.006586800899985278,
       "reason": "trailing-stop triggered",
       "rule_ids": "TRAILING_STOP",
       "ticker": "1810.HK"
     },
     {
-      "action": "add",
-      "date": "2025-12-29",
-      "delta_weight": 0.01638536124320626,
-      "reason": "under target",
-      "rule_ids": "UNDER_TARGET",
-      "ticker": "0700.HK"
-    },
-    {
-      "action": "add",
-      "date": "2025-12-29",
-      "delta_weight": 0.010549252260694144,
-      "reason": "under target",
-      "rule_ids": "UNDER_TARGET",
-      "ticker": "0388.HK"
-    },
-    {
-      "action": "add",
-      "date": "2025-12-29",
-      "delta_weight": 0.009489149360196479,
-      "reason": "under target",
-      "rule_ids": "UNDER_TARGET",
-      "ticker": "0939.HK"
-    },
-    {
-      "action": "trim",
-      "date": "2025-12-29",
-      "delta_weight": -0.01515502069875238,
-      "reason": "sector hyped (z=2.13)",
-      "rule_ids": "SECTOR_HYPED",
-      "ticker": "0005.HK"
-    },
-    {
-      "action": "trim",
-      "date": "2025-12-29",
-      "delta_weight": -0.012066794543997027,
-      "reason": "sector hyped (z=1.09)",
-      "rule_ids": "SECTOR_HYPED",
-      "ticker": "1299.HK"
-    },
-    {
-      "action": "trim",
-      "date": "2025-12-29",
-      "delta_weight": -0.009201947621347477,
-      "reason": "stop-loss triggered; trailing-stop triggered",
-      "rule_ids": "STOP_LOSS,TRAILING_STOP",
-      "ticker": "0823.HK"
-    },
-    {
-      "action": "add",
-      "date": "2026-01-28",
-      "delta_weight": 0.02213747956842762,
-      "reason": "under target",
-      "rule_ids": "UNDER_TARGET",
-      "ticker": "9988.HK"
-    },
-    {
-      "action": "add",
-      "date": "2026-01-28",
-      "delta_weight": 0.010292699641856848,
-      "reason": "under target",
-      "rule_ids": "UNDER_TARGET",
-      "ticker": "1299.HK"
-    },
-    {
-      "action": "add",
-      "date": "2026-01-28",
-      "delta_weight": 0.009800289834516923,
-      "reason": "under target",
-      "rule_ids": "UNDER_TARGET",
-      "ticker": "0005.HK"
-    },
-    {
-      "action": "trim",
-      "date": "2026-01-28",
-      "delta_weight": -0.020584263653180154,
-      "reason": "sector hyped (z=0.23)",
-      "rule_ids": "SECTOR_HYPED",
-      "ticker": "0700.HK"
-    },
-    {
-      "action": "trim",
-      "date": "2026-01-28",
-      "delta_weight": -0.012001484064005266,
-      "reason": "sector hyped (z=2.33)",
-      "rule_ids": "SECTOR_HYPED",
-      "ticker": "0939.HK"
-    },
-    {
-      "action": "trim",
-      "date": "2026-01-28",
-      "delta_weight": -0.009644721327615971,
-      "reason": "sector hyped (z=3.05)",
-      "rule_ids": "SECTOR_HYPED",
-      "ticker": "0001.HK"
-    },
-    {
-      "action": "add",
-      "date": "2026-03-03",
-      "delta_weight": 0.00864918661558912,
-      "reason": "under target",
-      "rule_ids": "UNDER_TARGET",
-      "ticker": "0823.HK"
-    },
-    {
-      "action": "block",
-      "date": "2026-03-03",
-      "delta_weight": 0.0,
-      "reason": "add blocked: position is down -36.96% from entry without thesis override",
-      "rule_ids": "ADD_BLOCK",
-      "ticker": "3690.HK"
-    },
-    {
       "action": "hold",
-      "date": "2026-03-03",
-      "delta_weight": 0.021528804427065465,
+      "date": "2025-12-31",
+      "delta_weight": 0.01078925973708704,
       "reason": "raise or maintain cash buffer",
       "rule_ids": "CASH_BUFFER",
       "ticker": "CASH"
     },
     {
       "action": "trim",
-      "date": "2026-03-03",
-      "delta_weight": -0.019656184134702007,
-      "reason": "trailing-stop triggered",
-      "rule_ids": "TRAILING_STOP",
-      "ticker": "0700.HK"
+      "date": "2025-12-31",
+      "delta_weight": -0.01078925973708704,
+      "reason": "sector hyped (z=1.95)",
+      "rule_ids": "SECTOR_HYPED",
+      "ticker": "0005.HK"
+    },
+    {
+      "action": "hold",
+      "date": "2026-01-30",
+      "delta_weight": 0.005017901853531868,
+      "reason": "raise or maintain cash buffer",
+      "rule_ids": "CASH_BUFFER",
+      "ticker": "CASH"
     },
     {
       "action": "trim",
-      "date": "2026-03-03",
-      "delta_weight": -0.010521806907952578,
-      "reason": "trailing-stop triggered",
-      "rule_ids": "TRAILING_STOP",
-      "ticker": "9988.HK"
+      "date": "2026-01-30",
+      "delta_weight": -0.005017901853531868,
+      "reason": "sector hyped (z=2.00)",
+      "rule_ids": "SECTOR_HYPED",
+      "ticker": "0005.HK"
     },
     {
       "action": "block",
-      "date": "2026-04-01",
+      "date": "2026-03-05",
       "delta_weight": 0.0,
       "reason": "add blocked: benchmark trend is bearish",
       "rule_ids": "ADD_BLOCK",
@@ -4156,87 +3751,15 @@
     },
     {
       "action": "block",
-      "date": "2026-04-01",
+      "date": "2026-03-05",
       "delta_weight": 0.0,
-      "reason": "add blocked: position is down -11.35% from entry without thesis override",
+      "reason": "add blocked: benchmark trend is bearish",
       "rule_ids": "ADD_BLOCK",
-      "ticker": "0823.HK"
-    },
-    {
-      "action": "hold",
-      "date": "2026-04-01",
-      "delta_weight": 0.06487098182417678,
-      "reason": "raise or maintain cash buffer",
-      "rule_ids": "CASH_BUFFER",
-      "ticker": "CASH"
-    },
-    {
-      "action": "trim",
-      "date": "2026-04-01",
-      "delta_weight": -0.015004235162150381,
-      "reason": "benchmark trend bearish (2800.HK below MA200); sector hyped (z=0.27)",
-      "rule_ids": "SECTOR_HYPED,TREND_FILTER",
-      "ticker": "0005.HK"
-    },
-    {
-      "action": "trim",
-      "date": "2026-04-01",
-      "delta_weight": -0.013940107375094574,
-      "reason": "benchmark trend bearish (2800.HK below MA200); sector hyped (z=1.07)",
-      "rule_ids": "SECTOR_HYPED,TREND_FILTER",
-      "ticker": "1299.HK"
-    },
-    {
-      "action": "trim",
-      "date": "2026-04-01",
-      "delta_weight": -0.012828411982456425,
-      "reason": "benchmark trend bearish (2800.HK below MA200); trailing-stop triggered",
-      "rule_ids": "TRAILING_STOP,TREND_FILTER",
-      "ticker": "0700.HK"
-    },
-    {
-      "action": "trim",
-      "date": "2026-04-01",
-      "delta_weight": -0.010159392062169237,
-      "reason": "benchmark trend bearish (2800.HK below MA200)",
-      "rule_ids": "TREND_FILTER",
       "ticker": "0388.HK"
     },
     {
-      "action": "trim",
-      "date": "2026-04-01",
-      "delta_weight": -0.006513323990277547,
-      "reason": "benchmark trend bearish (2800.HK below MA200)",
-      "rule_ids": "TREND_FILTER",
-      "ticker": "0939.HK"
-    },
-    {
-      "action": "trim",
-      "date": "2026-04-01",
-      "delta_weight": -0.006425511252028611,
-      "reason": "trailing-stop triggered",
-      "rule_ids": "TRAILING_STOP",
-      "ticker": "9988.HK"
-    },
-    {
-      "action": "hold",
-      "date": "2026-05-06",
-      "delta_weight": 0.007900021898806658,
-      "reason": "raise or maintain cash buffer",
-      "rule_ids": "CASH_BUFFER",
-      "ticker": "CASH"
-    },
-    {
-      "action": "trim",
-      "date": "2026-05-06",
-      "delta_weight": -0.007900021898806658,
-      "reason": "trailing-stop triggered",
-      "rule_ids": "TRAILING_STOP",
-      "ticker": "0700.HK"
-    },
-    {
       "action": "block",
-      "date": "2026-06-05",
+      "date": "2026-03-05",
       "delta_weight": 0.0,
       "reason": "add blocked: benchmark trend is bearish",
       "rule_ids": "ADD_BLOCK",
@@ -4244,63 +3767,151 @@
     },
     {
       "action": "block",
-      "date": "2026-06-05",
+      "date": "2026-03-05",
       "delta_weight": 0.0,
-      "reason": "add blocked: position is down -33.38% from entry without thesis override",
+      "reason": "add blocked: benchmark trend is bearish",
       "rule_ids": "ADD_BLOCK",
-      "ticker": "3690.HK"
+      "ticker": "1299.HK"
     },
     {
       "action": "hold",
-      "date": "2026-06-05",
-      "delta_weight": 0.04201123757780993,
+      "date": "2026-03-05",
+      "delta_weight": 0.03142852999379988,
       "reason": "raise or maintain cash buffer",
       "rule_ids": "CASH_BUFFER",
       "ticker": "CASH"
     },
     {
       "action": "trim",
-      "date": "2026-06-05",
-      "delta_weight": -0.014196640524246787,
+      "date": "2026-03-05",
+      "delta_weight": -0.018011211150591334,
       "reason": "benchmark trend bearish (2800.HK below MA200); trailing-stop triggered",
       "rule_ids": "TRAILING_STOP,TREND_FILTER",
-      "ticker": "1299.HK"
+      "ticker": "0700.HK"
     },
     {
       "action": "trim",
-      "date": "2026-06-05",
-      "delta_weight": -0.008549480183529672,
-      "reason": "benchmark trend bearish (2800.HK below MA200)",
-      "rule_ids": "TREND_FILTER",
-      "ticker": "0388.HK"
-    },
-    {
-      "action": "trim",
-      "date": "2026-06-05",
-      "delta_weight": -0.008207744912780096,
+      "date": "2026-03-05",
+      "delta_weight": -0.00751981523849222,
       "reason": "benchmark trend bearish (2800.HK below MA200)",
       "rule_ids": "TREND_FILTER",
       "ticker": "0005.HK"
     },
     {
       "action": "trim",
-      "date": "2026-06-05",
-      "delta_weight": -0.005740577641356709,
+      "date": "2026-03-05",
+      "delta_weight": -0.005897503604716321,
       "reason": "benchmark trend bearish (2800.HK below MA200)",
       "rule_ids": "TREND_FILTER",
       "ticker": "0939.HK"
     },
     {
+      "action": "hold",
+      "date": "2026-04-08",
+      "delta_weight": 0.01209823986227136,
+      "reason": "raise or maintain cash buffer",
+      "rule_ids": "CASH_BUFFER",
+      "ticker": "CASH"
+    },
+    {
       "action": "trim",
-      "date": "2026-06-05",
-      "delta_weight": -0.005316794315896668,
+      "date": "2026-04-08",
+      "delta_weight": -0.01209823986227136,
+      "reason": "trailing-stop triggered",
+      "rule_ids": "TRAILING_STOP",
+      "ticker": "0700.HK"
+    },
+    {
+      "action": "hold",
+      "date": "2026-05-08",
+      "delta_weight": 0.007496501073804975,
+      "reason": "raise or maintain cash buffer",
+      "rule_ids": "CASH_BUFFER",
+      "ticker": "CASH"
+    },
+    {
+      "action": "trim",
+      "date": "2026-05-08",
+      "delta_weight": -0.007496501073804975,
       "reason": "trailing-stop triggered",
       "rule_ids": "TRAILING_STOP",
       "ticker": "0700.HK"
     },
     {
       "action": "block",
-      "date": "2026-07-08",
+      "date": "2026-06-09",
+      "delta_weight": 0.0,
+      "reason": "add blocked: benchmark trend is bearish",
+      "rule_ids": "ADD_BLOCK",
+      "ticker": "0001.HK"
+    },
+    {
+      "action": "block",
+      "date": "2026-06-09",
+      "delta_weight": 0.0,
+      "reason": "add blocked: benchmark trend is bearish",
+      "rule_ids": "ADD_BLOCK",
+      "ticker": "0388.HK"
+    },
+    {
+      "action": "block",
+      "date": "2026-06-09",
+      "delta_weight": 0.0,
+      "reason": "add blocked: benchmark trend is bearish",
+      "rule_ids": "ADD_BLOCK",
+      "ticker": "0823.HK"
+    },
+    {
+      "action": "hold",
+      "date": "2026-06-09",
+      "delta_weight": 0.01862961077360494,
+      "reason": "raise or maintain cash buffer",
+      "rule_ids": "CASH_BUFFER",
+      "ticker": "CASH"
+    },
+    {
+      "action": "trim",
+      "date": "2026-06-09",
+      "delta_weight": -0.006999266626625981,
+      "reason": "benchmark trend bearish (2800.HK below MA200)",
+      "rule_ids": "TREND_FILTER",
+      "ticker": "0005.HK"
+    },
+    {
+      "action": "trim",
+      "date": "2026-06-09",
+      "delta_weight": -0.006086972426462733,
+      "reason": "trailing-stop triggered",
+      "rule_ids": "TRAILING_STOP",
+      "ticker": "1299.HK"
+    },
+    {
+      "action": "trim",
+      "date": "2026-06-09",
+      "delta_weight": -0.005543371720516224,
+      "reason": "benchmark trend bearish (2800.HK below MA200)",
+      "rule_ids": "TREND_FILTER",
+      "ticker": "0939.HK"
+    },
+    {
+      "action": "block",
+      "date": "2026-07-10",
+      "delta_weight": 0.0,
+      "reason": "add blocked: benchmark trend is bearish",
+      "rule_ids": "ADD_BLOCK",
+      "ticker": "0001.HK"
+    },
+    {
+      "action": "block",
+      "date": "2026-07-10",
+      "delta_weight": 0.0,
+      "reason": "add blocked: benchmark trend is bearish",
+      "rule_ids": "ADD_BLOCK",
+      "ticker": "0388.HK"
+    },
+    {
+      "action": "block",
+      "date": "2026-07-10",
       "delta_weight": 0.0,
       "reason": "add blocked: benchmark trend is bearish",
       "rule_ids": "ADD_BLOCK",
@@ -4308,51 +3919,35 @@
     },
     {
       "action": "block",
-      "date": "2026-07-08",
+      "date": "2026-07-10",
       "delta_weight": 0.0,
       "reason": "add blocked: benchmark trend is bearish",
       "rule_ids": "ADD_BLOCK",
       "ticker": "0939.HK"
     },
     {
-      "action": "block",
-      "date": "2026-07-08",
-      "delta_weight": 0.0,
-      "reason": "add blocked: position is down -32.58% from entry without thesis override",
-      "rule_ids": "ADD_BLOCK",
-      "ticker": "3690.HK"
-    },
-    {
       "action": "hold",
-      "date": "2026-07-08",
-      "delta_weight": 0.032382143729737634,
+      "date": "2026-07-10",
+      "delta_weight": 0.011415091796831579,
       "reason": "raise or maintain cash buffer",
       "rule_ids": "CASH_BUFFER",
       "ticker": "CASH"
     },
     {
       "action": "trim",
-      "date": "2026-07-08",
-      "delta_weight": -0.015395006239439065,
-      "reason": "benchmark trend bearish (2800.HK below MA200); trailing-stop triggered",
-      "rule_ids": "TRAILING_STOP,TREND_FILTER",
-      "ticker": "0388.HK"
-    },
-    {
-      "action": "trim",
-      "date": "2026-07-08",
-      "delta_weight": -0.009495796622939675,
-      "reason": "trailing-stop triggered",
-      "rule_ids": "TRAILING_STOP",
-      "ticker": "1299.HK"
-    },
-    {
-      "action": "trim",
-      "date": "2026-07-08",
-      "delta_weight": -0.0074913408673588965,
+      "date": "2026-07-10",
+      "delta_weight": -0.00640975467334592,
       "reason": "benchmark trend bearish (2800.HK below MA200)",
       "rule_ids": "TREND_FILTER",
       "ticker": "0005.HK"
+    },
+    {
+      "action": "trim",
+      "date": "2026-07-10",
+      "delta_weight": -0.005005337123485659,
+      "reason": "trailing-stop triggered",
+      "rule_ids": "TRAILING_STOP",
+      "ticker": "0700.HK"
     }
   ]
 }
