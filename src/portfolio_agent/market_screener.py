@@ -119,6 +119,16 @@ def rank_market_opportunities(
     frame["action"] = "hold_watch"
     frame.loc[buy_mask, "action"] = "buy_candidate"
     frame.loc[sell_mask, "action"] = "sell_avoid"
+    frame["entry_posture"] = frame.apply(_entry_posture, axis=1)
+    frame["entry_label"] = frame["entry_posture"].map(
+        {
+            "near_50dma": "Near 50-day support",
+            "wait_for_pullback": "Wait for pullback",
+            "trend_candidate": "Trend candidate",
+            "avoid_entry": "Avoid new entry",
+            "not_applicable": "No entry signal",
+        }
+    )
     frame["reason"] = frame.apply(_reason, axis=1)
 
     output_columns = [
@@ -146,6 +156,8 @@ def rank_market_opportunities(
         "analyst_rating",
         "range_width_pct",
         "reason",
+        "entry_posture",
+        "entry_label",
     ]
     for column in (
         "price",
@@ -218,9 +230,9 @@ def rank_market_opportunities(
         },
         "methodology": {
             "summary": "Two-stage screen: cross-sectional trend and momentum for the liquid US universe, followed by SEC filing, earnings, valuation, quality, and balance-sheet research for the visible shortlist.",
-            "buy_rule": "A research buy requires a strong trend screen plus acceptable sector-aware quality, valuation, financial-strength, and latest-earnings evidence.",
+            "buy_rule": "A momentum research candidate must rank in the top quartile, remain above rising 50-day and 200-day trend structure, be profitable, and stay within 20% of the 50-day average. Entry timing is shown separately.",
             "sell_rule": "Bottom-quartile score and below both the 50-day and 200-day averages.",
-            "policy": "Research shortlist only. Sell/avoid means review an owned position or avoid a new entry; it is not an instruction to short or trade automatically.",
+            "policy": "Research shortlist only. Momentum strength is not an immediate buy instruction. Sell/avoid means review an owned position or avoid a new entry; it is not an instruction to short or trade automatically.",
             "sector_models": {
                 "software": "Growth, FCF margin, forward P/E, ROIC and dilution review.",
                 "banks": "P/B and P/E relative to ROE, credit quality and regulatory capital.",
@@ -270,10 +282,23 @@ def _fetch_us_equity_universe() -> tuple[list[dict[str, Any]], int]:
 
 def _reason(row: pd.Series) -> str:
     if row["action"] == "buy_candidate":
-        return f"Positive earnings and long-term trend; 1Y return {row['return_1y_pct']:+.1f}% and price {row['distance_ma50_pct']:+.1f}% vs 50-day average."
+        return f"Profitable momentum screen passed; 1Y return {row['return_1y_pct']:+.1f}% and price {row['distance_ma50_pct']:+.1f}% vs 50-day average."
     if row["action"] == "sell_avoid":
         return f"Below both trend averages; 1Y return {row['return_1y_pct']:+.1f}% and price {row['distance_ma200_pct']:+.1f}% vs 200-day average."
     return f"Mixed or extended setup; score {row['score']:.1f}/100 and price {row['distance_ma50_pct']:+.1f}% vs 50-day average."
+
+
+def _entry_posture(row: pd.Series) -> str:
+    if row["action"] == "sell_avoid":
+        return "avoid_entry"
+    if row["action"] != "buy_candidate":
+        return "not_applicable"
+    distance = float(row["distance_ma50_pct"])
+    if 0.0 <= distance <= 3.5:
+        return "near_50dma"
+    if distance >= 8.0:
+        return "wait_for_pullback"
+    return "trend_candidate"
 
 
 def _forward_eps_growth(row: pd.Series) -> float | None:

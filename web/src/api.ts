@@ -9,6 +9,64 @@ export type MarketRegime = {
   drawdown: number;
 };
 
+export type MarketTimingRow = {
+  ticker: string;
+  as_of: string;
+  price: number;
+  ma50: number;
+  ma200: number;
+  distance_ma50_pct: number;
+  distance_ma200_pct: number;
+  ma50_slope_20d_pct: number;
+  ma200_slope_20d_pct: number;
+  rsi14: number;
+  weekly_macd: number;
+  weekly_macd_signal: number;
+  weekly_macd_positive: boolean;
+  recent_50dma_touch: boolean;
+  cross: {
+    event: "golden_cross" | "death_cross" | "none";
+    label: string;
+    date: string | null;
+    sessions_ago: number | null;
+  };
+  bearish_confirmation_count: number;
+  regime: string;
+  dca_action: string;
+  tactical_action: string;
+  headline: string;
+  evidence: string[];
+};
+
+export type MarketTimingPayload = {
+  status: string;
+  as_of: string | null;
+  benchmark: string;
+  summary: {
+    regime: string;
+    dca_action: string;
+    tactical_action: string;
+    headline: string;
+  };
+  breadth: {
+    label: string;
+    available_count: number;
+    tickers: string[];
+    above_50dma_pct: number | null;
+    above_200dma_pct: number | null;
+    ma50_above_ma200_pct: number | null;
+    note: string;
+  };
+  rows: MarketTimingRow[];
+  methodology: {
+    name: string;
+    dca_policy: string;
+    tactical_policy: string;
+    decision_authority: string;
+    ria_disclosure: string;
+  };
+};
+
 export type SectorSignal = {
   sector: string;
   etf: string;
@@ -120,6 +178,7 @@ export type DashboardPayload = {
     lookback_days?: number;
   };
   market_regime: MarketRegime;
+  market_timing?: MarketTimingPayload;
   signals: SectorSignal[];
   suggestions: Suggestion[];
   risk_predictions: RiskPrediction[];
@@ -315,6 +374,8 @@ export type MarketOpportunity = {
   analyst_rating?: string | null;
   range_width_pct: number;
   reason: string;
+  entry_posture?: string;
+  entry_label?: string;
   research?: {
     status: "sec_fundamentals" | "quote_only";
     decision: string;
@@ -759,7 +820,11 @@ export async function fetchSentiment(market: MarketProfile): Promise<SentimentPa
 
 export async function fetchBootstrap(market: MarketProfile): Promise<BootstrapPayload> {
   const params = new URLSearchParams({ market });
-  return fetchJson<BootstrapPayload>(`${API_BASE}/api/bootstrap?${params.toString()}`, `/data/${market}/bootstrap.json`);
+  const response = await fetch(`${API_BASE}/api/bootstrap?${params.toString()}`);
+  if (!response.ok) {
+    throw new Error(await readError(response));
+  }
+  return response.json();
 }
 
 export async function fetchHealth(market: MarketProfile): Promise<HealthPayload> {
@@ -775,11 +840,7 @@ export async function fetchMarketOpportunities(market: MarketProfile): Promise<M
 }
 
 export async function fetchHistoricalValidation(market: MarketProfile): Promise<HistoricalValidationPayload> {
-  const params = new URLSearchParams({ market, years: "10", mode: "real" });
-  return fetchJson<HistoricalValidationPayload>(
-    `${API_BASE}/api/historical-validation?${params.toString()}`,
-    `/data/${market}/historical_validation.json`
-  );
+  return fetchSnapshot<HistoricalValidationPayload>(`/data/${market}/historical_validation.json`);
 }
 
 async function fetchJson<T>(apiUrl: string, snapshotUrl: string): Promise<T> {

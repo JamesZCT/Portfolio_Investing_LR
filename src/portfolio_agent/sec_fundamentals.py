@@ -689,7 +689,7 @@ def _median_fcf(cfo: list[dict[str, Any]], capex: list[dict[str, Any]]) -> float
 
 def _decision_label(decision: str) -> str:
     return {
-        "research_buy": "Research buy",
+        "research_buy": "Research-qualified",
         "hold_watch": "Hold / watch",
         "wait_watch": "Wait / watch",
         "wait_for_value": "Wait for value",
