@@ -13,6 +13,8 @@ It combines:
 - walk-forward historical validation with transaction costs and explicit bias disclosures
 - a point-in-time Nasdaq-100 test comparing QQQ, static and dynamic index cores, a public RIA-inspired risk proxy, and volatility control
 - backtesting and scheduled automation workflows
+- a DCA-versus-tactical timing layer for SPY, QQQ, VTI, and VXUS using transparent 50/200-day evidence
+- an interactive architecture explorer linking each dashboard stage to its Data, Financial, AI, and delivery code
 
 ## Features
 
@@ -86,6 +88,19 @@ It combines:
 - publishes membership, removed-ticker, price-coverage, rebalance-selection, and remaining-bias audits
 - adds independent Ken French/CRSP market and momentum evidence
 - labels incomplete delisting returns and excludes point-in-time fundamentals until research-grade data are available
+
+12. DCA and tactical market timing
+- keeps scheduled long-term investing separate from tactical exposure changes
+- reports 50-day and 200-day relationships and slopes, RSI, weekly MACD, recent golden/death crosses, and sector ETF breadth
+- allows staged tactical adds only around confirmed rising 50-day support
+- requires a 200-day break plus multiple confirmations before reducing the tactical sleeve
+- labels the method as a public-rule proxy rather than RIA's proprietary model
+
+13. Interactive architecture explorer
+- maps collection, analysis, decision, validation, snapshot, and publishing stages
+- identifies the Financial, AI/ML, Data Engineering, and automation ownership of each module
+- opens the relevant GitHub source files from each selected module
+- see `docs/system_architecture.md` for the durable code-level reference
 
 ## Installation
 

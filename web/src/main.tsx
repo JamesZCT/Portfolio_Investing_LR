@@ -14,7 +14,8 @@ import {
   RotateCcw,
   Save,
   ShieldCheck,
-  TrendingUp
+  TrendingUp,
+  Workflow
 } from "lucide-react";
 import {
   Area,
@@ -59,6 +60,8 @@ import {
   fetchStrategyComparison,
   IS_STATIC_DATA_MODE
 } from "./api";
+import { ArchitectureExplorer } from "./ArchitectureExplorer";
+import { MarketTimingPanel } from "./MarketTimingPanel";
 import "./styles.css";
 
 type MarketProfileInfo = {
@@ -159,6 +162,12 @@ const ZH_LABELS: Record<string, string> = {
   "quote only": "仅报价筛选",
   reduce: "减持",
   "research buy": "研究买入",
+  "research-qualified": "研究合格",
+  "near 50-day support": "接近 50 日支撑",
+  "wait for pullback": "等待回调",
+  "trend candidate": "趋势候选",
+  "avoid new entry": "避免新建仓",
+  "no entry signal": "无入场信号",
   "rules only": "仅规则分析",
   sell: "卖出",
   "sell / avoid": "卖出 / 回避",
@@ -730,6 +739,16 @@ function App() {
 
           <RunHealthPanel health={health} history={history} sentiment={sentiment} />
 
+          <section className="portfolio-comparison-row">
+            <Panel title={tr("DCA & Tactical Market Timing", "定投与战术择时")} icon={<TrendingUp size={18} />} className="wide-panel">
+              {dashboard.market_timing ? (
+                <MarketTimingPanel payload={dashboard.market_timing} language={language} />
+              ) : (
+                <EmptyState label={tr("Timing evidence will appear after the next data refresh.", "下一次数据刷新后将显示择时证据。")} />
+              )}
+            </Panel>
+          </section>
+
           {market === "us" && marketOpportunities ? <MarketOpportunityPanel payload={marketOpportunities} /> : null}
 
           <section className="metric-grid">
@@ -863,6 +882,12 @@ function App() {
               <RulesTable rules={rules} />
             </Panel>
           </section>
+
+          <section className="portfolio-comparison-row">
+            <Panel title={tr("Interactive System Architecture", "交互式系统架构")} icon={<Workflow size={18} />} className="wide-panel">
+              <ArchitectureExplorer language={language} />
+            </Panel>
+          </section>
         </>
       ) : (
         <section className="loading-surface">{tr("Loading portfolio lab...", "正在加载投资组合研究室...")}</section>
@@ -941,7 +966,7 @@ async function fetchOptionalRunStatus(
 function MarketOpportunityPanel({ payload }: { payload: MarketOpportunitiesPayload }) {
   const { language, tr } = useI18n();
   const groups = [
-    { key: "buy", title: tr("Best research setups", "最佳研究机会"), rows: payload.buy_candidates, count: payload.action_counts.buy_candidate },
+    { key: "buy", title: tr("Momentum research candidates", "动量研究候选"), rows: payload.buy_candidates, count: payload.action_counts.buy_candidate },
     { key: "hold", title: tr("Hold / watch", "持有 / 观察"), rows: payload.hold_watch, count: payload.action_counts.hold_watch },
     { key: "sell", title: tr("Sell / avoid review", "卖出 / 回避审查"), rows: payload.sell_avoid, count: payload.action_counts.sell_avoid }
   ];
@@ -978,6 +1003,8 @@ function MarketOpportunityPanel({ payload }: { payload: MarketOpportunitiesPaylo
                     const decision = research?.decision ?? row.action;
                     const evidence = research?.key_takeaways?.[0] ?? row.reason;
                     const report = research?.earnings;
+                    const entryPosture = row.entry_posture ?? inferEntryPosture(row);
+                    const entryLabel = row.entry_label ?? entryLabelFor(entryPosture);
                     return (
                       <article className={`decision-card ${decision}`} key={row.ticker} title={row.reason}>
                         <div className="decision-heading">
@@ -993,6 +1020,10 @@ function MarketOpportunityPanel({ payload }: { payload: MarketOpportunitiesPaylo
                           <span>{research?.sector ?? row.exchange}</span>
                           <span>{localizeLabel(research?.confidence, language, "low")} {tr("confidence", "置信度")}</span>
                           <span>{localizeBusinessModel(research?.business_model, language, tr("trend screen", "趋势筛选"))}</span>
+                        </div>
+                        <div className={`entry-posture ${entryPosture}`}>
+                          <span>{tr("Entry timing", "入场时机")}</span>
+                          <strong>{localizeLabel(entryLabel, language)}</strong>
                         </div>
                         <p>{evidence}</p>
                         {research?.risks?.[0] ? <small className="decision-risk">{research.risks[0]}</small> : null}
@@ -1031,6 +1062,24 @@ function MarketOpportunityPanel({ payload }: { payload: MarketOpportunitiesPaylo
       )}
     </section>
   );
+}
+
+function inferEntryPosture(row: MarketOpportunitiesPayload["buy_candidates"][number]) {
+  if (row.action === "sell_avoid") return "avoid_entry";
+  if (row.action !== "buy_candidate") return "not_applicable";
+  if (row.distance_ma50_pct >= 0 && row.distance_ma50_pct <= 3.5) return "near_50dma";
+  if (row.distance_ma50_pct >= 8) return "wait_for_pullback";
+  return "trend_candidate";
+}
+
+function entryLabelFor(posture: string) {
+  return {
+    near_50dma: "Near 50-day support",
+    wait_for_pullback: "Wait for pullback",
+    trend_candidate: "Trend candidate",
+    avoid_entry: "Avoid new entry",
+    not_applicable: "No entry signal"
+  }[posture] ?? "No entry signal";
 }
 
 function ScoreChip({ label, value }: { label: string; value: number | null | undefined }) {

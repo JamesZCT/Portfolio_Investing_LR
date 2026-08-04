@@ -17,6 +17,7 @@ class MarketScreenerTests(unittest.TestCase):
         self.assertIn("FOXTROT", {row["ticker"] for row in payload["sell_avoid"]})
         self.assertEqual(payload["deep_research"]["status"], "not_run")
         self.assertEqual(payload["buy_candidates"][0]["research"]["status"], "quote_only")
+        self.assertIn(payload["buy_candidates"][0]["entry_posture"], {"near_50dma", "trend_candidate", "wait_for_pullback"})
         self.assertIn("earnings", payload["buy_candidates"][0]["research"]["scorecard"])
         json.dumps(payload, allow_nan=False)
 

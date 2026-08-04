@@ -11,6 +11,7 @@ from .config import AppConfig, load_config
 from .data import fetch_close_prices, load_close_prices_csv
 from .execution import SandboxExecutionAdapter, suggestions_to_orders
 from .ml import build_risk_predictions
+from .market_timing import build_market_timing_payload
 from .optimization import build_optimization_payload
 from .portfolio import apply_trade_suggestions, propose_rebalance
 from .report import write_report
@@ -201,6 +202,11 @@ def result_to_dashboard_payload(result: AnalysisResult) -> dict[str, Any]:
 
     return {
         "market_regime": asdict(result.market_regime),
+        "market_timing": build_market_timing_payload(
+            result.prices,
+            benchmark=cfg.universe.benchmark,
+            sector_etfs=cfg.universe.sector_etfs.values(),
+        ),
         "signals": [asdict(item) for item in result.signals],
         "suggestions": [_suggestion_to_dict(item) for item in result.suggestions],
         "risk_predictions": [asdict(item) for item in result.risk_predictions.values()],
