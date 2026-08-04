@@ -12,6 +12,39 @@
       "source_url": "https://mebfaber.com/wp-content/uploads/2016/05/SSRN-id962461.pdf"
     },
     {
+      "action": "Continue scheduled long-term contributions when the written horizon and risk plan are unchanged.",
+      "category": "Investment process",
+      "evidence": "Vanguard research distinguishes regular investing from deliberately holding an available lump sum in cash.",
+      "formula": "core_dca_action is independent of tactical_action",
+      "implementation_status": "implemented",
+      "name": "Separate scheduled DCA from tactical timing",
+      "rationale": "Moving-average timing manages tactical exposure; it does not prove that withholding every scheduled contribution improves return.",
+      "rule_id": "CORE_DCA_SEPARATION",
+      "source_url": "https://investor.vanguard.com/investor-resources-education/online-trading/dollar-cost-averaging-vs-lump-sum"
+    },
+    {
+      "action": "Permit only a staged tactical add; do not treat strong momentum far above the 50-day average as an immediate entry.",
+      "category": "Tactical entry",
+      "evidence": "Transparent proxy based on public RIA discussion; not the proprietary RIA money-flow model.",
+      "formula": "price >= SMA50 > SMA200 with positive slopes, recent SMA50 test, and RSI between 35 and 65",
+      "implementation_status": "implemented",
+      "name": "Rising 50-day pullback entry",
+      "rationale": "A controlled pullback can improve entry discipline while preserving the established long-term trend.",
+      "rule_id": "RISING_50DMA_PULLBACK",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/bull-market-pullback-why-the-4-5-dip-held-the-50-dma/"
+    },
+    {
+      "action": "Reduce only the tactical sleeve after confirmation; do not liquidate the core portfolio from one daily close.",
+      "category": "Tactical risk reduction",
+      "evidence": "Transparent proxy based on public RIA discussion; exact thresholds are this project's rules.",
+      "formula": "price < SMA200 and at least 3 confirmations from SMA200 slope, SMA50/SMA200 stack, weekly MACD, and sector breadth",
+      "implementation_status": "implemented",
+      "name": "Confirmed 200-day break",
+      "rationale": "The 200-day average is a lagging regime indicator whose false breaks require context and confirmation.",
+      "rule_id": "CONFIRMED_200DMA_BREAK",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/the-200-dma-just-broke-what-every-investor-should-know/"
+    },
+    {
       "action": "Trim hyped/overextended exposure; consider washed-out candidates only with trend confirmation.",
       "category": "Mean reversion / valuation extension",
       "evidence": "Commonly used in Bollinger-style band analysis; best used as confirmation, not a standalone signal.",

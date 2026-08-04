@@ -1114,7 +1114,7 @@
       "status": "simulated",
       "target_weight_delta": 0.22790000000000002,
       "ticker": "CASH",
-      "timestamp": "2026-08-04T16:51:33"
+      "timestamp": "2026-08-04T18:08:01"
     },
     {
       "message": "sandbox only; no brokerage order was placed",
@@ -1122,7 +1122,7 @@
       "status": "simulated",
       "target_weight_delta": -0.05280000000000001,
       "ticker": "0700.HK",
-      "timestamp": "2026-08-04T16:51:33"
+      "timestamp": "2026-08-04T18:08:01"
     },
     {
       "message": "sandbox only; no brokerage order was placed",
@@ -1130,7 +1130,7 @@
       "status": "simulated",
       "target_weight_delta": -0.05,
       "ticker": "3690.HK",
-      "timestamp": "2026-08-04T16:51:33"
+      "timestamp": "2026-08-04T18:08:01"
     },
     {
       "message": "sandbox only; no brokerage order was placed",
@@ -1138,7 +1138,7 @@
       "status": "simulated",
       "target_weight_delta": -0.046200000000000005,
       "ticker": "9988.HK",
-      "timestamp": "2026-08-04T16:51:33"
+      "timestamp": "2026-08-04T18:08:01"
     },
     {
       "message": "sandbox only; no brokerage order was placed",
@@ -1146,7 +1146,7 @@
       "status": "simulated",
       "target_weight_delta": -0.026400000000000003,
       "ticker": "1810.HK",
-      "timestamp": "2026-08-04T16:51:33"
+      "timestamp": "2026-08-04T18:08:01"
     },
     {
       "message": "sandbox only; no brokerage order was placed",
@@ -1154,7 +1154,7 @@
       "status": "simulated",
       "target_weight_delta": -0.02,
       "ticker": "0005.HK",
-      "timestamp": "2026-08-04T16:51:33"
+      "timestamp": "2026-08-04T18:08:01"
     },
     {
       "message": "sandbox only; no brokerage order was placed",
@@ -1162,7 +1162,7 @@
       "status": "simulated",
       "target_weight_delta": -0.02,
       "ticker": "0939.HK",
-      "timestamp": "2026-08-04T16:51:33"
+      "timestamp": "2026-08-04T18:08:01"
     },
     {
       "message": "sandbox only; no brokerage order was placed",
@@ -1170,7 +1170,7 @@
       "status": "simulated",
       "target_weight_delta": -0.0125,
       "ticker": "0001.HK",
-      "timestamp": "2026-08-04T16:51:33"
+      "timestamp": "2026-08-04T18:08:01"
     }
   ],
   "lookback_days": 900,
@@ -1182,7 +1182,80 @@
     "realized_vol": 0.18727324634738288,
     "trend_ma": 25.846897192001343,
     "trend_state": "bullish",
-    "z": 1.2607884811850036
+    "z": 1.2607884811847616
+  },
+  "market_timing": {
+    "as_of": "2026-08-03",
+    "benchmark": "2800.HK",
+    "breadth": {
+      "above_200dma_pct": 0.6667,
+      "above_50dma_pct": 1.0,
+      "available_count": 9,
+      "label": "Sector ETF breadth",
+      "ma50_above_ma200_pct": 0.3333,
+      "note": "Breadth uses configured sector ETFs, not every listed stock.",
+      "tickers": [
+        "2800.HK",
+        "0700.HK",
+        "9988.HK",
+        "3690.HK",
+        "1299.HK",
+        "0388.HK",
+        "0005.HK",
+        "0823.HK",
+        "0001.HK"
+      ]
+    },
+    "methodology": {
+      "dca_policy": "Scheduled long-term contributions remain separate from tactical timing. A moving-average signal does not automatically stop core DCA.",
+      "decision_authority": "Deterministic price rules only; news and LLM commentary have zero decision weight.",
+      "name": "Public 50/200-day trend and pullback proxy",
+      "ria_disclosure": "This is a transparent research proxy derived from public trend concepts. It is not RIA's proprietary Money Flow Buy/Sell model or client advice.",
+      "tactical_policy": "A staged add requires an established rising trend and a controlled test of the 50-day average. Tactical risk reduction requires a 200-day break plus multiple confirmations."
+    },
+    "rows": [
+      {
+        "as_of": "2026-07-31",
+        "bearish_confirmation_count": 2,
+        "cross": {
+          "date": "2026-05-06",
+          "event": "death_cross",
+          "label": "Death cross",
+          "sessions_ago": 59
+        },
+        "dca_action": "continue_core_dca",
+        "distance_ma200_pct": 2.14,
+        "distance_ma50_pct": 5.72,
+        "evidence": [
+          "Price is above the 50-day average and above the 200-day average.",
+          "50-day slope over 20 sessions: -1.6%; 200-day slope: -0.4%.",
+          "RSI(14): 67.0; weekly MACD is above its signal line.",
+          "Most recent death cross occurred on 2026-05-06.",
+          "Sector ETF breadth: 100% above 50-day and 67% above 200-day averages."
+        ],
+        "headline": "Long trend remains intact; wait for short-trend confirmation",
+        "ma200": 25.8469,
+        "ma200_slope_20d_pct": -0.36,
+        "ma50": 24.9724,
+        "ma50_slope_20d_pct": -1.56,
+        "price": 26.4,
+        "recent_50dma_touch": true,
+        "regime": "caution",
+        "rsi14": 67.0,
+        "tactical_action": "wait_for_50dma_reclaim",
+        "ticker": "2800.HK",
+        "weekly_macd": -0.17,
+        "weekly_macd_positive": true,
+        "weekly_macd_signal": -0.2257
+      }
+    ],
+    "status": "available",
+    "summary": {
+      "dca_action": "continue_core_dca",
+      "headline": "Long trend remains intact; wait for short-trend confirmation",
+      "regime": "caution",
+      "tactical_action": "wait_for_50dma_reclaim"
+    }
   },
   "mode": "real",
   "optimization": {
@@ -1217,12 +1290,12 @@
         "fallback_reason": null,
         "id": "defensive",
         "metrics": {
-          "annualized_return": 0.2221287393216169,
-          "annualized_volatility": 0.17766769142151181,
-          "estimated_transaction_cost": 0.0007,
-          "max_drawdown": -0.15263629940476853,
-          "sharpe_ratio": 1.2502483571682284,
-          "turnover": 0.7
+          "annualized_return": 0.22212872159462108,
+          "annualized_volatility": 0.17766767982535778,
+          "estimated_transaction_cost": 0.0007000000000000001,
+          "max_drawdown": -0.15263629135868306,
+          "sharpe_ratio": 1.2502483389942798,
+          "turnover": 0.7000000000000001
         },
         "missing_assets": [],
         "name_en": "Defensive",
@@ -1236,7 +1309,7 @@
             "action": "ADD",
             "asset_type": "fund",
             "current_weight": 0.0,
-            "delta_weight": 0.4674999999999829,
+            "delta_weight": 0.46749999999998276,
             "group": "BroadMarket",
             "priority": 1,
             "reason_en": "Increase toward the constrained Defensive solution; minimize expected tail loss (cvar).",
@@ -1247,7 +1320,7 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.4674999999999829,
+            "target_weight": 0.46749999999998276,
             "ticker": "2800.HK"
           },
           {
@@ -1398,7 +1471,7 @@
             "action": "ADD",
             "asset_type": "stock",
             "current_weight": 0.08,
-            "delta_weight": 0.04750000000000566,
+            "delta_weight": 0.04750000000000569,
             "group": "Banks",
             "priority": 10,
             "reason_en": "Increase toward the constrained Defensive solution; minimize expected tail loss (cvar).",
@@ -1409,14 +1482,14 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.12750000000000566,
+            "target_weight": 0.1275000000000057,
             "ticker": "0005.HK"
           },
           {
             "action": "ADD",
             "asset_type": "stock",
             "current_weight": 0.08,
-            "delta_weight": 0.04750000000000555,
+            "delta_weight": 0.047500000000005635,
             "group": "Property",
             "priority": 11,
             "reason_en": "Increase toward the constrained Defensive solution; minimize expected tail loss (cvar).",
@@ -1427,14 +1500,14 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.12750000000000555,
+            "target_weight": 0.12750000000000564,
             "ticker": "0823.HK"
           },
           {
             "action": "ADD",
             "asset_type": "stock",
             "current_weight": 0.09,
-            "delta_weight": 0.03750000000000586,
+            "delta_weight": 0.037500000000005945,
             "group": "Insurance",
             "priority": 12,
             "reason_en": "Increase toward the constrained Defensive solution; minimize expected tail loss (cvar).",
@@ -1445,7 +1518,7 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.12750000000000586,
+            "target_weight": 0.12750000000000594,
             "ticker": "1299.HK"
           }
         ],
@@ -1481,12 +1554,12 @@
         "fallback_reason": null,
         "id": "balanced",
         "metrics": {
-          "annualized_return": 0.28826682253817804,
-          "annualized_volatility": 0.20538349911770737,
-          "estimated_transaction_cost": 0.0002763653841188108,
-          "max_drawdown": -0.1693363129062112,
-          "sharpe_ratio": 1.4035539552910694,
-          "turnover": 0.27636538411881084
+          "annualized_return": 0.2882698314204509,
+          "annualized_volatility": 0.2053831697572838,
+          "estimated_transaction_cost": 0.00027636997302903565,
+          "max_drawdown": -0.16933591163514827,
+          "sharpe_ratio": 1.4035708561763862,
+          "turnover": 0.27636997302903565
         },
         "missing_assets": [],
         "name_en": "Balanced",
@@ -1500,7 +1573,7 @@
             "action": "TRIM",
             "asset_type": "stock",
             "current_weight": 0.16,
-            "delta_weight": -0.08705862274048609,
+            "delta_weight": -0.08705634387751005,
             "group": "Technology",
             "priority": 1,
             "reason_en": "Reduce concentration so the Technology exposure fits the Balanced risk budget.",
@@ -1511,14 +1584,14 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.07294137725951391,
+            "target_weight": 0.07294365612248996,
             "ticker": "0700.HK"
           },
           {
             "action": "TRIM",
             "asset_type": "stock",
             "current_weight": 0.14,
-            "delta_weight": -0.08698559357614752,
+            "delta_weight": -0.08698619717583164,
             "group": "Ecommerce",
             "priority": 2,
             "reason_en": "Reduce concentration so the Ecommerce exposure fits the Balanced risk budget.",
@@ -1529,14 +1602,14 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.0530144064238525,
+            "target_weight": 0.05301380282416837,
             "ticker": "9988.HK"
           },
           {
             "action": "ADD",
             "asset_type": "fund",
             "current_weight": 0.0,
-            "delta_weight": 0.08282268557035838,
+            "delta_weight": 0.08282321223149432,
             "group": "BroadMarket",
             "priority": 3,
             "reason_en": "Increase toward the constrained Balanced solution; spread risk contributions across assets.",
@@ -1547,14 +1620,14 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.08282268557035838,
+            "target_weight": 0.08282321223149432,
             "ticker": "2800.HK"
           },
           {
             "action": "ADD",
             "asset_type": "stock",
             "current_weight": 0.08,
-            "delta_weight": 0.05720279177165109,
+            "delta_weight": 0.057193987322340115,
             "group": "Property",
             "priority": 4,
             "reason_en": "Increase toward the constrained Balanced solution; spread risk contributions across assets.",
@@ -1565,14 +1638,14 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.1372027917716511,
+            "target_weight": 0.13719398732234012,
             "ticker": "0823.HK"
           },
           {
             "action": "ADD",
             "asset_type": "stock",
             "current_weight": 0.05,
-            "delta_weight": 0.052440270468437925,
+            "delta_weight": 0.05244540427736186,
             "group": "Conglomerates",
             "priority": 5,
             "reason_en": "Increase toward the constrained Balanced solution; spread risk contributions across assets.",
@@ -1583,14 +1656,14 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.10244027046843793,
+            "target_weight": 0.10244540427736186,
             "ticker": "0001.HK"
           },
           {
             "action": "TRIM",
             "asset_type": "stock",
             "current_weight": 0.1,
-            "delta_weight": -0.047108074850299074,
+            "delta_weight": -0.04710810424804693,
             "group": "ConsumerServices",
             "priority": 6,
             "reason_en": "Reduce concentration so the ConsumerServices exposure fits the Balanced risk budget.",
@@ -1601,14 +1674,14 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.05289192514970093,
+            "target_weight": 0.05289189575195308,
             "ticker": "3690.HK"
           },
           {
             "action": "ADD",
             "asset_type": "stock",
             "current_weight": 0.08,
-            "delta_weight": 0.04260224148797585,
+            "delta_weight": 0.0426068650238865,
             "group": "Banks",
             "priority": 7,
             "reason_en": "Increase toward the constrained Balanced solution; spread risk contributions across assets.",
@@ -1619,14 +1692,14 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.12260224148797585,
+            "target_weight": 0.1226068650238865,
             "ticker": "0005.HK"
           },
           {
             "action": "ADD",
             "asset_type": "stock",
             "current_weight": 0.08,
-            "delta_weight": 0.04129739482038754,
+            "delta_weight": 0.04130050417395284,
             "group": "Banks",
             "priority": 8,
             "reason_en": "Increase toward the constrained Balanced solution; spread risk contributions across assets.",
@@ -1637,14 +1710,14 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.12129739482038754,
+            "target_weight": 0.12130050417395284,
             "ticker": "0939.HK"
           },
           {
             "action": "TRIM",
             "asset_type": "stock",
             "current_weight": 0.09,
-            "delta_weight": -0.02362184812523513,
+            "delta_weight": -0.023623279788798746,
             "group": "Exchanges",
             "priority": 9,
             "reason_en": "Reduce concentration so the Exchanges exposure fits the Balanced risk budget.",
@@ -1655,14 +1728,14 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.06637815187476487,
+            "target_weight": 0.06637672021120125,
             "ticker": "0388.HK"
           },
           {
             "action": "TRIM",
             "asset_type": "stock",
             "current_weight": 0.08,
-            "delta_weight": -0.01824903560208968,
+            "delta_weight": -0.018251890701779114,
             "group": "Technology",
             "priority": 10,
             "reason_en": "Reduce concentration so the Technology exposure fits the Balanced risk budget.",
@@ -1673,14 +1746,14 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.06175096439791032,
+            "target_weight": 0.06174810929822089,
             "ticker": "1810.HK"
           },
           {
             "action": "TRIM",
             "asset_type": "stock",
             "current_weight": 0.09,
-            "delta_weight": -0.013342209224553356,
+            "delta_weight": -0.01334415723706922,
             "group": "Insurance",
             "priority": 11,
             "reason_en": "Reduce concentration so the Insurance exposure fits the Balanced risk budget.",
@@ -1691,7 +1764,7 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.07665779077544664,
+            "target_weight": 0.07665584276293078,
             "ticker": "1299.HK"
           },
           {
@@ -1745,12 +1818,12 @@
         "fallback_reason": null,
         "id": "aggressive",
         "metrics": {
-          "annualized_return": 0.3528610529385418,
-          "annualized_volatility": 0.21601925217174275,
-          "estimated_transaction_cost": 0.0005526034288630287,
-          "max_drawdown": -0.19619830524620996,
-          "sharpe_ratio": 1.6334703939165807,
-          "turnover": 0.5526034288630287
+          "annualized_return": 0.3528610514229024,
+          "annualized_volatility": 0.21601925824468274,
+          "estimated_transaction_cost": 0.0005526034576111902,
+          "max_drawdown": -0.19619831037186541,
+          "sharpe_ratio": 1.6334703409786753,
+          "turnover": 0.5526034576111901
         },
         "missing_assets": [],
         "name_en": "Aggressive",
@@ -1764,7 +1837,7 @@
             "action": "ADD",
             "asset_type": "fund",
             "current_weight": 0.0,
-            "delta_weight": 0.21540346075705485,
+            "delta_weight": 0.2154034895049259,
             "group": "BroadMarket",
             "priority": 1,
             "reason_en": "Increase toward the constrained Aggressive solution; maximize estimated return per unit of volatility.",
@@ -1775,14 +1848,14 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.21540346075705485,
+            "target_weight": 0.2154034895049259,
             "ticker": "2800.HK"
           },
           {
             "action": "TRIM",
             "asset_type": "stock",
             "current_weight": 0.14,
-            "delta_weight": -0.13999997150076807,
+            "delta_weight": -0.13999997150116006,
             "group": "Ecommerce",
             "priority": 2,
             "reason_en": "Reduce concentration so the Ecommerce exposure fits the Aggressive risk budget.",
@@ -1793,14 +1866,14 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 2.849923193482104e-08,
+            "target_weight": 2.849883996627171e-08,
             "ticker": "9988.HK"
           },
           {
             "action": "ADD",
             "asset_type": "stock",
             "current_weight": 0.05,
-            "delta_weight": 0.10679999263123822,
+            "delta_weight": 0.1067999926313448,
             "group": "Conglomerates",
             "priority": 3,
             "reason_en": "Increase toward the constrained Aggressive solution; maximize estimated return per unit of volatility.",
@@ -1811,14 +1884,14 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.15679999263123823,
+            "target_weight": 0.1567999926313448,
             "ticker": "0001.HK"
           },
           {
             "action": "TRIM",
             "asset_type": "stock",
             "current_weight": 0.1,
-            "delta_weight": -0.09999999386538097,
+            "delta_weight": -0.09999999386547077,
             "group": "ConsumerServices",
             "priority": 4,
             "reason_en": "Reduce concentration so the ConsumerServices exposure fits the Aggressive risk budget.",
@@ -1829,14 +1902,14 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 6.134619040613518e-09,
+            "target_weight": 6.1345292314801835e-09,
             "ticker": "3690.HK"
           },
           {
             "action": "TRIM",
             "asset_type": "stock",
             "current_weight": 0.09,
-            "delta_weight": -0.08999998679995162,
+            "delta_weight": -0.08999998680015023,
             "group": "Insurance",
             "priority": 5,
             "reason_en": "Reduce concentration so the Insurance exposure fits the Aggressive risk budget.",
@@ -1847,14 +1920,14 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 1.3200048367887473e-08,
+            "target_weight": 1.3199849774327216e-08,
             "ticker": "1299.HK"
           },
           {
             "action": "TRIM",
             "asset_type": "stock",
             "current_weight": 0.08,
-            "delta_weight": -0.07999995931789927,
+            "delta_weight": -0.07999995931843848,
             "group": "Property",
             "priority": 6,
             "reason_en": "Reduce concentration so the Property exposure fits the Aggressive risk budget.",
@@ -1865,14 +1938,14 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 4.0682100730697934e-08,
+            "target_weight": 4.068156152160278e-08,
             "ticker": "0823.HK"
           },
           {
             "action": "ADD",
             "asset_type": "stock",
             "current_weight": 0.08,
-            "delta_weight": 0.07679999775518857,
+            "delta_weight": 0.0767999977552211,
             "group": "Banks",
             "priority": 7,
             "reason_en": "Increase toward the constrained Aggressive solution; maximize estimated return per unit of volatility.",
@@ -1883,14 +1956,14 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.15679999775518857,
+            "target_weight": 0.1567999977552211,
             "ticker": "0005.HK"
           },
           {
             "action": "ADD",
             "asset_type": "stock",
             "current_weight": 0.08,
-            "delta_weight": 0.07679999658963647,
+            "delta_weight": 0.07679999658968369,
             "group": "Banks",
             "priority": 8,
             "reason_en": "Increase toward the constrained Aggressive solution; maximize estimated return per unit of volatility.",
@@ -1901,14 +1974,14 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.15679999658963648,
+            "target_weight": 0.1567999965896837,
             "ticker": "0939.HK"
           },
           {
             "action": "ADD",
             "asset_type": "stock",
             "current_weight": 0.08,
-            "delta_weight": 0.07679998112991061,
+            "delta_weight": 0.07679998113001467,
             "group": "Technology",
             "priority": 9,
             "reason_en": "Increase toward the constrained Aggressive solution; maximize estimated return per unit of volatility.",
@@ -1919,14 +1992,14 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.15679998112991061,
+            "target_weight": 0.15679998113001467,
             "ticker": "1810.HK"
           },
           {
             "action": "TRIM",
             "asset_type": "stock",
             "current_weight": 0.16,
-            "delta_weight": -0.05995753859657382,
+            "delta_weight": -0.05995766486370614,
             "group": "Technology",
             "priority": 10,
             "reason_en": "Reduce concentration so the Technology exposure fits the Aggressive risk budget.",
@@ -1937,14 +2010,14 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.10004246140342618,
+            "target_weight": 0.10004233513629386,
             "ticker": "0700.HK"
           },
           {
             "action": "TRIM",
             "asset_type": "stock",
             "current_weight": 0.09,
-            "delta_weight": -0.052645978782454965,
+            "delta_weight": -0.05264588126226443,
             "group": "Exchanges",
             "priority": 11,
             "reason_en": "Reduce concentration so the Exchanges exposure fits the Aggressive risk budget.",
@@ -1955,7 +2028,7 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.03735402121754503,
+            "target_weight": 0.037354118737735566,
             "ticker": "0388.HK"
           },
           {
@@ -2164,12 +2237,12 @@
         "ret_252": -0.10124347147831203,
         "ret_63": 0.060525076966705615,
         "vol_21": 0.4731623092046476,
-        "vol_63": 0.4241191286445559,
-        "z_60": 2.153022202482559
+        "vol_63": 0.42411912864455603,
+        "z_60": 2.1530222024818357
       },
       "model_version": "logistic_price_risk_v1",
       "risk_level": "low",
-      "risk_probability": 0.3453441666928756,
+      "risk_probability": 0.34534421361178014,
       "ticker": "0700.HK"
     },
     {
@@ -2186,7 +2259,7 @@
       },
       "model_version": "logistic_price_risk_v1",
       "risk_level": "high",
-      "risk_probability": 0.7043314710612711,
+      "risk_probability": 0.7043315024740044,
       "ticker": "9988.HK"
     },
     {
@@ -2203,7 +2276,7 @@
       },
       "model_version": "logistic_price_risk_v1",
       "risk_level": "medium",
-      "risk_probability": 0.5097554353733615,
+      "risk_probability": 0.5097554710656869,
       "ticker": "3690.HK"
     },
     {
@@ -2214,13 +2287,13 @@
         "ret_21": 0.07235499046768346,
         "ret_252": 0.12925378389242836,
         "ret_63": -0.06041436216274776,
-        "vol_21": 0.2056844092485245,
-        "vol_63": 0.2802066104858061,
-        "z_60": 0.17261046353298462
+        "vol_21": 0.2056844092485238,
+        "vol_63": 0.28020661048580575,
+        "z_60": 0.17261046353298123
       },
       "model_version": "logistic_price_risk_v1",
       "risk_level": "low",
-      "risk_probability": 0.1456064022105337,
+      "risk_probability": 0.14560639417965401,
       "ticker": "1299.HK"
     },
     {
@@ -2229,32 +2302,32 @@
         "ma_gap": 0.0068681299223483094,
         "ret_126": -0.015396116819974992,
         "ret_21": 0.09066666666666667,
-        "ret_252": -0.04259296975363436,
+        "ret_252": -0.04259303814794091,
         "ret_63": -0.008244408212425447,
-        "vol_21": 0.12939971813349962,
-        "vol_63": 0.18246502518177082,
-        "z_60": 0.8234917809321343
+        "vol_21": 0.12939971813350182,
+        "vol_63": 0.18246502518177068,
+        "z_60": 0.8234917809321497
       },
       "model_version": "logistic_price_risk_v1",
       "risk_level": "low",
-      "risk_probability": 0.1151310599924833,
+      "risk_probability": 0.11513103608074575,
       "ticker": "0388.HK"
     },
     {
       "features": {
         "drawdown_252": 0.0,
-        "ma_gap": 0.30090132140335846,
+        "ma_gap": 0.3009013210195426,
         "ret_126": 0.3364686092816882,
         "ret_21": 0.1065789272910671,
-        "ret_252": 0.7634995286548645,
+        "ret_252": 0.7634993875913334,
         "ret_63": 0.20641090633532477,
-        "vol_21": 0.14279147092149613,
-        "vol_63": 0.2512010203280372,
-        "z_60": 2.351741653449412
+        "vol_21": 0.14279147092149674,
+        "vol_63": 0.2512010203280373,
+        "z_60": 2.3517416534490567
       },
       "model_version": "logistic_price_risk_v1",
       "risk_level": "low",
-      "risk_probability": 0.11612576421878235,
+      "risk_probability": 0.11612574820966078,
       "ticker": "0005.HK"
     },
     {
@@ -2265,13 +2338,13 @@
         "ret_21": 0.18251922379983676,
         "ret_252": 0.15976037779707064,
         "ret_63": 0.0791618895140096,
-        "vol_21": 0.2891119269464237,
-        "vol_63": 0.23585423753144644,
-        "z_60": 2.1954901203519377
+        "vol_21": 0.2891119269464242,
+        "vol_63": 0.23585423753144677,
+        "z_60": 2.195490120352409
       },
       "model_version": "logistic_price_risk_v1",
       "risk_level": "low",
-      "risk_probability": 0.1556863999682484,
+      "risk_probability": 0.15568638686164757,
       "ticker": "0939.HK"
     },
     {
@@ -2288,24 +2361,24 @@
       },
       "model_version": "logistic_price_risk_v1",
       "risk_level": "high",
-      "risk_probability": 0.7068050993875654,
+      "risk_probability": 0.7068051093181319,
       "ticker": "1810.HK"
     },
     {
       "features": {
-        "drawdown_252": -0.059581383621143624,
+        "drawdown_252": -0.05958146981606127,
         "ma_gap": 0.0708538174392852,
         "ret_126": 0.1416989470432688,
         "ret_21": 0.03217302952567769,
         "ret_252": -0.02797995729875047,
         "ret_63": 0.03335394606179398,
-        "vol_21": 0.14639531122858043,
-        "vol_63": 0.16648097063990597,
-        "z_60": 0.6767329236438147
+        "vol_21": 0.14639531122858052,
+        "vol_63": 0.16648097063990608,
+        "z_60": 0.6767329236439341
       },
       "model_version": "logistic_price_risk_v1",
       "risk_level": "low",
-      "risk_probability": 0.070634289597195,
+      "risk_probability": 0.07063430027509995,
       "ticker": "0823.HK"
     },
     {
@@ -2316,13 +2389,13 @@
         "ret_21": 0.11280490393301101,
         "ret_252": 0.48910846218336856,
         "ret_63": 0.14828811779815165,
-        "vol_21": 0.3064236853374394,
-        "vol_63": 0.27688203230390707,
-        "z_60": 1.5484639996331275
+        "vol_21": 0.30642368533744085,
+        "vol_63": 0.27688203230390745,
+        "z_60": 1.5484639996335565
       },
       "model_version": "logistic_price_risk_v1",
       "risk_level": "low",
-      "risk_probability": 0.1254176441436414,
+      "risk_probability": 0.12541763936514075,
       "ticker": "0001.HK"
     }
   ],
@@ -2346,10 +2419,10 @@
       "realized_vol": 0.20568440924852432,
       "sector": "Insurance",
       "status": "neutral",
-      "std": 4.903338423312712,
+      "std": 4.903338423312808,
       "trend_ma": 79.77595409393311,
       "trend_state": "bearish",
-      "z": 0.17261046353298462
+      "z": 0.17261046353298123
     },
     {
       "etf": "0823.HK",
@@ -2360,10 +2433,10 @@
       "realized_vol": 0.14639531122858054,
       "sector": "Property",
       "status": "neutral",
-      "std": 1.431264871012454,
+      "std": 1.4312648710122013,
       "trend_ma": 36.5502730178833,
       "trend_state": "bullish",
-      "z": 0.6767329236438147
+      "z": 0.6767329236439341
     },
     {
       "etf": "9988.HK",
@@ -2388,10 +2461,10 @@
       "realized_vol": 0.12939971813350026,
       "sector": "Exchanges",
       "status": "neutral",
-      "std": 17.223406063966795,
+      "std": 17.223406063966472,
       "trend_ma": 406.210096282959,
       "trend_state": "bullish",
-      "z": 0.8234917809321343
+      "z": 0.8234917809321497
     },
     {
       "etf": "2800.HK",
@@ -2402,10 +2475,10 @@
       "realized_vol": 0.18727324634738288,
       "sector": "BroadMarket",
       "status": "warm",
-      "std": 0.949141159322302,
+      "std": 0.9491411593224841,
       "trend_ma": 25.846897192001343,
       "trend_state": "bullish",
-      "z": 1.2607884811850036
+      "z": 1.2607884811847616
     },
     {
       "etf": "0001.HK",
@@ -2416,10 +2489,10 @@
       "realized_vol": 0.30642368533744035,
       "sector": "Conglomerates",
       "status": "hyped",
-      "std": 2.3019692914886702,
+      "std": 2.3019692914880325,
       "trend_ma": 60.81193452835083,
       "trend_state": "bullish",
-      "z": 1.5484639996331275
+      "z": 1.5484639996335565
     },
     {
       "etf": "3690.HK",
@@ -2444,29 +2517,29 @@
       "realized_vol": 0.4731623092046474,
       "sector": "Technology",
       "status": "extended",
-      "std": 17.949715248080366,
+      "std": 17.949715248086395,
       "trend_ma": 534.0786512756348,
       "trend_state": "bearish",
-      "z": 2.153022202482559
+      "z": 2.1530222024818357
     },
     {
       "etf": "0005.HK",
-      "ma": 129.2949697113037,
+      "ma": 129.29496974945067,
       "momentum": 0.3364686092816882,
-      "pct_from_ma": 0.30090132140335846,
+      "pct_from_ma": 0.3009013210195426,
       "price": 168.1999969482422,
       "realized_vol": 0.1427914709214967,
       "sector": "Banks",
       "status": "hyped",
-      "std": 8.128020004369446,
-      "trend_ma": 129.2949697113037,
+      "std": 8.128020004370674,
+      "trend_ma": 129.29496974945067,
       "trend_state": "bullish",
-      "z": 2.351741653449412
+      "z": 2.3517416534490567
     }
   ],
   "snapshot": {
     "config_name": "example_hk_config.yaml",
-    "generated_at": "2026-08-04T16:51:33.190622+00:00",
+    "generated_at": "2026-08-04T18:08:01.409328+00:00",
     "is_example_config": true,
     "lookback_days": 900,
     "mode": "real"
