@@ -10,7 +10,7 @@
       "source_tier": "commentary",
       "title": "Bonds In Your Portfolio: Why Ditching Them Is The Wrong Move",
       "unit": null,
-      "url": "https://realinvestmentadvice.com/resources/blog/bonds-in-your-portfolio-why-ditching-them-is-the-wrong-move/",
+      "url": "https://realinvestmentadvice.com/blog/bonds-in-your-portfolio-why-ditching-them-is-the-wrong-move/",
       "value": null,
       "why_it_matters": "Commentary supplies a research hypothesis and watch items; it is not independent evidence for changing portfolio weights."
     },
@@ -24,7 +24,7 @@
       "source_tier": "commentary",
       "title": "The Momentum Crash: Is It Over?",
       "unit": null,
-      "url": "https://realinvestmentadvice.com/resources/blog/the-momentum-crash-is-it-over/",
+      "url": "https://realinvestmentadvice.com/blog/the-momentum-crash-is-it-over/",
       "value": null,
       "why_it_matters": "Technical and positioning commentary can identify conditions to test against current price trend, drawdown, and concentration rules."
     },
@@ -38,7 +38,7 @@
       "source_tier": "commentary",
       "title": "AI Bear Case: What Skeptics Get Right And Wrong",
       "unit": null,
-      "url": "https://realinvestmentadvice.com/resources/blog/ai-bear-case-what-skeptics-get-right-and-wrong/",
+      "url": "https://realinvestmentadvice.com/blog/ai-bear-case-what-skeptics-get-right-and-wrong/",
       "value": null,
       "why_it_matters": "Commentary supplies a research hypothesis and watch items; it is not independent evidence for changing portfolio weights."
     },
@@ -52,7 +52,7 @@
       "source_tier": "commentary",
       "title": "Are US Treasuries Still A Safe Asset?",
       "unit": null,
-      "url": "https://realinvestmentadvice.com/resources/blog/are-us-treasuries-still-a-safe-asset-copy/",
+      "url": "https://realinvestmentadvice.com/blog/are-us-treasuries-still-a-safe-asset-copy/",
       "value": null,
       "why_it_matters": "Macro commentary provides a scenario to compare with primary economic data and the portfolio's rate sensitivity."
     },
@@ -66,7 +66,7 @@
       "source_tier": "commentary",
       "title": "The AI Capex Bill Comes Due",
       "unit": null,
-      "url": "https://realinvestmentadvice.com/resources/blog/the-ai-capex-bill-comes-due/",
+      "url": "https://realinvestmentadvice.com/blog/the-ai-capex-bill-comes-due/",
       "value": null,
       "why_it_matters": "Technical and positioning commentary can identify conditions to test against current price trend, drawdown, and concentration rules."
     }
@@ -75,9 +75,51 @@
     "portfolio_weight": 0.0,
     "rule": "Information signs may explain conditions and create review questions, but they do not change target weights, trade instructions, or risk limits. Any future influence must be explicit, bounded, and recorded with a reason."
   },
-  "generated_at": "2026-08-04T18:07:44.012001+00:00",
+  "generated_at": "2026-08-06T05:35:00.494302+00:00",
   "market": "us",
   "primary_signs": [
+    {
+      "category": "monetary policy / regulation",
+      "decision_use": "information_only",
+      "portfolio_weight": 0.0,
+      "published": "2026-08-04T20:30:00+00:00",
+      "signal": "event",
+      "source": "Federal Reserve",
+      "source_tier": "primary",
+      "title": "Federal Reserve Board announces approval of the application by Coastal Bend Bancshares, Inc.",
+      "unit": null,
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/orders20260804c.htm",
+      "value": null,
+      "why_it_matters": "Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting."
+    },
+    {
+      "category": "monetary policy / regulation",
+      "decision_use": "information_only",
+      "portfolio_weight": 0.0,
+      "published": "2026-08-04T20:30:00+00:00",
+      "signal": "event",
+      "source": "Federal Reserve",
+      "source_tier": "primary",
+      "title": "Federal Reserve Board announces approval of the application by FS Bancorp, Inc.",
+      "unit": null,
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/orders20260804b.htm",
+      "value": null,
+      "why_it_matters": "Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting."
+    },
+    {
+      "category": "monetary policy / regulation",
+      "decision_use": "information_only",
+      "portfolio_weight": 0.0,
+      "published": "2026-08-04T20:30:00+00:00",
+      "signal": "event",
+      "source": "Federal Reserve",
+      "source_tier": "primary",
+      "title": "Federal Reserve Board announces approval of the application by Banco Santander, S.A. and Santander Holdings USA, Inc.",
+      "unit": null,
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/orders20260804a.htm",
+      "value": null,
+      "why_it_matters": "Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting."
+    },
     {
       "category": "monetary policy / regulation",
       "decision_use": "information_only",
@@ -93,74 +135,32 @@
       "why_it_matters": "Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting."
     },
     {
-      "category": "monetary policy / regulation",
-      "decision_use": "information_only",
-      "portfolio_weight": 0.0,
-      "published": "2026-07-31T14:00:00+00:00",
-      "signal": "event",
-      "source": "Federal Reserve",
-      "source_tier": "primary",
-      "title": "Federal Reserve Board requests comment on a proposal to modernize rules for mutual banking organizations",
-      "unit": null,
-      "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260731a.htm",
-      "value": null,
-      "why_it_matters": "Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting."
-    },
-    {
-      "category": "monetary policy / regulation",
-      "decision_use": "information_only",
-      "portfolio_weight": 0.0,
-      "published": "2026-07-30T15:00:00+00:00",
-      "signal": "event",
-      "source": "Federal Reserve",
-      "source_tier": "primary",
-      "title": "Federal Reserve Board issues enforcement action with Iuka Bancshares, Inc. and The Iuka State Bank",
-      "unit": null,
-      "url": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20260730b.htm",
-      "value": null,
-      "why_it_matters": "Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting."
-    },
-    {
-      "category": "monetary policy / regulation",
-      "decision_use": "information_only",
-      "portfolio_weight": 0.0,
-      "published": "2026-07-30T15:00:00+00:00",
-      "signal": "event",
-      "source": "Federal Reserve",
-      "source_tier": "primary",
-      "title": "Federal Reserve Board issues enforcement actions with former employee of Regions Bank and former employee of First Interstate Bank",
-      "unit": null,
-      "url": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20260730a.htm",
-      "value": null,
-      "why_it_matters": "Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting."
-    },
-    {
       "category": "rates / financial conditions",
       "decision_use": "information_only",
       "portfolio_weight": 0.0,
-      "published": "2026-07-31",
-      "signal": "rising",
+      "published": "2026-08-04",
+      "signal": "falling",
       "source": "FRED / Federal Reserve Bank of St. Louis",
       "source_tier": "primary",
       "title": "10-Year Treasury Yield",
       "unit": "%",
       "url": "https://fred.stlouisfed.org/series/DGS10",
-      "value": 4.75,
-      "why_it_matters": "Long-term yields affect equity valuation, borrowing costs, and the relative appeal of bonds versus stocks. Latest change: +0.07 percentage points."
+      "value": 4.63,
+      "why_it_matters": "Long-term yields affect equity valuation, borrowing costs, and the relative appeal of bonds versus stocks. Latest change: -0.07 percentage points."
     },
     {
       "category": "rates / policy expectations",
       "decision_use": "information_only",
       "portfolio_weight": 0.0,
-      "published": "2026-07-31",
-      "signal": "rising",
+      "published": "2026-08-04",
+      "signal": "falling",
       "source": "FRED / Federal Reserve Bank of St. Louis",
       "source_tier": "primary",
       "title": "2-Year Treasury Yield",
       "unit": "%",
       "url": "https://fred.stlouisfed.org/series/DGS2",
-      "value": 4.28,
-      "why_it_matters": "The 2-year yield is sensitive to expected Federal Reserve policy and near-term financial conditions. Latest change: +0.05 percentage points."
+      "value": 4.2,
+      "why_it_matters": "The 2-year yield is sensitive to expected Federal Reserve policy and near-term financial conditions. Latest change: -0.05 percentage points."
     },
     {
       "category": "labor market",
@@ -194,14 +194,14 @@
       "category": "rates / growth expectations",
       "decision_use": "information_only",
       "portfolio_weight": 0.0,
-      "published": "2026-07-31",
+      "published": "2026-08-04",
       "signal": "positive",
       "source": "FRED / U.S. Treasury",
       "source_tier": "primary",
       "title": "10Y minus 2Y Treasury Curve",
       "unit": "percentage points",
       "url": "https://fred.stlouisfed.org/graph/?g=1K7YE",
-      "value": 0.47,
+      "value": 0.43,
       "why_it_matters": "The yield-curve shape is a macro context indicator for expected growth and policy, not a market-timing rule."
     }
   ],
@@ -217,7 +217,7 @@
     },
     {
       "item_count": 4,
-      "latest_published": "2026-07-31T14:00:00+00:00",
+      "latest_published": "2026-08-04T20:30:00+00:00",
       "source": "Federal Reserve",
       "status": "ok",
       "url": "https://www.federalreserve.gov/feeds/press_all.xml"
