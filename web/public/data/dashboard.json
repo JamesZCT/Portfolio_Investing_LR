@@ -12,7 +12,7 @@
       "title": "\u8d8b\u52bf\u4ecd\u652f\u6301\u6301\u6709\u98ce\u9669\u8d44\u4ea7"
     },
     {
-      "detail": "HOLD CASH +25.89%\uff1araise or maintain cash buffer",
+      "detail": "HOLD CASH +29.89%\uff1araise or maintain cash buffer",
       "rank": 2,
       "rule_ids": [
         "CASH_BUFFER"
@@ -21,7 +21,7 @@
       "title": "\u5efa\u8bae\u63d0\u9ad8\u73b0\u91d1\u7f13\u51b2"
     },
     {
-      "detail": "TRIM AAPL -6.55%\uff1aexceeds max single-name cap; over target weight; sector exceeds max cap; sector hyped (z=0.60)",
+      "detail": "TRIM AAPL -6.55%\uff1aexceeds max single-name cap; over target weight; sector exceeds max cap; sector hyped (z=-0.04)",
       "rank": 3,
       "rule_ids": [
         "OVER_TARGET",
@@ -33,7 +33,7 @@
       "title": "\u4f18\u5148\u4fee\u526a AAPL"
     },
     {
-      "detail": "TRIM MSFT -5.45%\uff1aover target weight; sector exceeds max cap; sector hyped (z=0.60)",
+      "detail": "TRIM MSFT -5.45%\uff1aover target weight; sector exceeds max cap; sector hyped (z=-0.04)",
       "rank": 4,
       "rule_ids": [
         "OVER_TARGET",
@@ -44,7 +44,7 @@
       "title": "\u4f18\u5148\u4fee\u526a MSFT"
     },
     {
-      "detail": "TRIM NVDA -5.00%\uff1aover target weight; sector exceeds max cap; sector hyped (z=0.60)",
+      "detail": "TRIM NVDA -5.00%\uff1aover target weight; sector exceeds max cap; sector hyped (z=-0.04)",
       "rank": 5,
       "rule_ids": [
         "OVER_TARGET",
@@ -55,57 +55,18 @@
       "title": "\u4f18\u5148\u4fee\u526a NVDA"
     },
     {
-      "detail": "TRIM AVGO -3.64%\uff1asector exceeds max cap; sector hyped (z=0.60)",
+      "detail": "TRIM AVGO -3.64%\uff1asector exceeds max cap; sector hyped (z=-0.04); trailing-stop triggered",
       "rank": 6,
       "rule_ids": [
         "SECTOR_CAP",
-        "SECTOR_HYPED"
+        "SECTOR_HYPED",
+        "TRAILING_STOP"
       ],
       "severity": "medium",
       "title": "\u4f18\u5148\u4fee\u526a AVGO"
     }
   ],
   "benchmark_series": [
-    {
-      "date": "2025-07-24",
-      "value": 627.4674072265625
-    },
-    {
-      "date": "2025-07-25",
-      "value": 630.1181030273438
-    },
-    {
-      "date": "2025-07-28",
-      "value": 629.9598999023438
-    },
-    {
-      "date": "2025-07-29",
-      "value": 628.2982788085938
-    },
-    {
-      "date": "2025-07-30",
-      "value": 627.5070190429688
-    },
-    {
-      "date": "2025-07-31",
-      "value": 625.1531372070312
-    },
-    {
-      "date": "2025-08-01",
-      "value": 614.9066162109375
-    },
-    {
-      "date": "2025-08-04",
-      "value": 624.2530517578125
-    },
-    {
-      "date": "2025-08-05",
-      "value": 621.088134765625
-    },
-    {
-      "date": "2025-08-06",
-      "value": 625.845458984375
-    },
     {
       "date": "2025-08-07",
       "value": 625.3212280273438
@@ -116,11 +77,11 @@
     },
     {
       "date": "2025-08-11",
-      "value": 628.9510498046875
+      "value": 628.9509887695312
     },
     {
       "date": "2025-08-12",
-      "value": 635.6468505859375
+      "value": 635.6467895507812
     },
     {
       "date": "2025-08-13",
@@ -132,7 +93,7 @@
     },
     {
       "date": "2025-08-15",
-      "value": 636.3886108398438
+      "value": 636.388671875
     },
     {
       "date": "2025-08-18",
@@ -156,7 +117,7 @@
     },
     {
       "date": "2025-08-25",
-      "value": 635.4292602539062
+      "value": 635.42919921875
     },
     {
       "date": "2025-08-26",
@@ -184,7 +145,7 @@
     },
     {
       "date": "2025-09-04",
-      "value": 642.0062866210938
+      "value": 642.00634765625
     },
     {
       "date": "2025-09-05",
@@ -196,11 +157,11 @@
     },
     {
       "date": "2025-09-09",
-      "value": 643.2031860351562
+      "value": 643.203125
     },
     {
       "date": "2025-09-10",
-      "value": 645.0625
+      "value": 645.0624389648438
     },
     {
       "date": "2025-09-11",
@@ -212,11 +173,11 @@
     },
     {
       "date": "2025-09-15",
-      "value": 653.6671752929688
+      "value": 653.6671142578125
     },
     {
       "date": "2025-09-16",
-      "value": 652.7671508789062
+      "value": 652.76708984375
     },
     {
       "date": "2025-09-17",
@@ -1105,6 +1066,46 @@
     {
       "date": "2026-08-05",
       "value": 769.7899780273438
+    },
+    {
+      "date": "2026-08-06",
+      "value": 768.5599975585938
+    },
+    {
+      "date": "2026-08-07",
+      "value": 773.260009765625
+    },
+    {
+      "date": "2026-08-10",
+      "value": 773.030029296875
+    },
+    {
+      "date": "2026-08-11",
+      "value": 770.5599975585938
+    },
+    {
+      "date": "2026-08-12",
+      "value": 772.489990234375
+    },
+    {
+      "date": "2026-08-13",
+      "value": 777.8800048828125
+    },
+    {
+      "date": "2026-08-14",
+      "value": 776.3400268554688
+    },
+    {
+      "date": "2026-08-17",
+      "value": 772.6699829101562
+    },
+    {
+      "date": "2026-08-18",
+      "value": 767.4500122070312
+    },
+    {
+      "date": "2026-08-19",
+      "value": 769.0599975585938
     }
   ],
   "execution_results": [
@@ -1112,9 +1113,9 @@
       "message": "sandbox only; no brokerage order was placed",
       "side": "cash",
       "status": "simulated",
-      "target_weight_delta": 0.2588636363636363,
+      "target_weight_delta": 0.29886363636363633,
       "ticker": "CASH",
-      "timestamp": "2026-08-06T05:34:49"
+      "timestamp": "2026-08-20T04:40:30"
     },
     {
       "message": "sandbox only; no brokerage order was placed",
@@ -1122,7 +1123,7 @@
       "status": "simulated",
       "target_weight_delta": -0.06545454545454543,
       "ticker": "AAPL",
-      "timestamp": "2026-08-06T05:34:49"
+      "timestamp": "2026-08-20T04:40:30"
     },
     {
       "message": "sandbox only; no brokerage order was placed",
@@ -1130,7 +1131,7 @@
       "status": "simulated",
       "target_weight_delta": -0.05454545454545453,
       "ticker": "MSFT",
-      "timestamp": "2026-08-06T05:34:49"
+      "timestamp": "2026-08-20T04:40:30"
     },
     {
       "message": "sandbox only; no brokerage order was placed",
@@ -1138,7 +1139,7 @@
       "status": "simulated",
       "target_weight_delta": -0.04999999999999999,
       "ticker": "NVDA",
-      "timestamp": "2026-08-06T05:34:49"
+      "timestamp": "2026-08-20T04:40:30"
     },
     {
       "message": "sandbox only; no brokerage order was placed",
@@ -1146,7 +1147,7 @@
       "status": "simulated",
       "target_weight_delta": -0.036363636363636355,
       "ticker": "AVGO",
-      "timestamp": "2026-08-06T05:34:49"
+      "timestamp": "2026-08-20T04:40:30"
     },
     {
       "message": "sandbox only; no brokerage order was placed",
@@ -1154,7 +1155,23 @@
       "status": "simulated",
       "target_weight_delta": -0.035,
       "ticker": "UNH",
-      "timestamp": "2026-08-06T05:34:49"
+      "timestamp": "2026-08-20T04:40:30"
+    },
+    {
+      "message": "sandbox only; no brokerage order was placed",
+      "side": "sell",
+      "status": "simulated",
+      "target_weight_delta": -0.02,
+      "ticker": "JNJ",
+      "timestamp": "2026-08-20T04:40:30"
+    },
+    {
+      "message": "sandbox only; no brokerage order was placed",
+      "side": "sell",
+      "status": "simulated",
+      "target_weight_delta": -0.02,
+      "ticker": "XOM",
+      "timestamp": "2026-08-20T04:40:30"
     },
     {
       "message": "sandbox only; no brokerage order was placed",
@@ -1162,22 +1179,22 @@
       "status": "simulated",
       "target_weight_delta": -0.0175,
       "ticker": "COST",
-      "timestamp": "2026-08-06T05:34:49"
+      "timestamp": "2026-08-20T04:40:30"
     }
   ],
   "lookback_days": 900,
   "market_regime": {
     "benchmark": "SPY",
-    "drawdown": -0.0019966020100066206,
-    "momentum": 0.1223309549954883,
-    "price": 769.7899780273438,
-    "realized_vol": 0.13881690338938493,
-    "trend_ma": 699.0441604614258,
+    "drawdown": -0.01133851914029782,
+    "momentum": 0.1265602513997648,
+    "price": 769.0599975585938,
+    "realized_vol": 0.12989942194685358,
+    "trend_ma": 704.111974182129,
     "trend_state": "bullish",
-    "z": 2.7644822732456635
+    "z": 1.4406436442646648
   },
   "market_timing": {
-    "as_of": "2026-08-05",
+    "as_of": "2026-08-19",
     "benchmark": "SPY",
     "breadth": {
       "above_200dma_pct": 0.8182,
@@ -1209,149 +1226,149 @@
     },
     "rows": [
       {
-        "as_of": "2026-08-05",
+        "as_of": "2026-08-19",
         "bearish_confirmation_count": 0,
         "cross": {
           "date": null,
           "event": "none",
           "label": "No recent cross",
-          "sessions_ago": 277
+          "sessions_ago": 287
         },
         "dca_action": "continue_core_dca",
-        "distance_ma200_pct": 10.12,
-        "distance_ma50_pct": 3.23,
+        "distance_ma200_pct": 9.22,
+        "distance_ma50_pct": 2.52,
         "evidence": [
           "Price is above the 50-day average and above the 200-day average.",
-          "50-day slope over 20 sessions: +1.0%; 200-day slope: +1.3%.",
-          "RSI(14): 64.8; weekly MACD is above its signal line.",
+          "50-day slope over 20 sessions: +0.8%; 200-day slope: +1.4%.",
+          "RSI(14): 57.8; weekly MACD is above its signal line.",
           "Sector ETF breadth: 91% above 50-day and 82% above 200-day averages."
         ],
-        "headline": "Rising 50-day support held; a staged tactical add is eligible",
-        "ma200": 699.0442,
-        "ma200_slope_20d_pct": 1.29,
-        "ma50": 745.7206,
-        "ma50_slope_20d_pct": 1.01,
-        "price": 769.79,
-        "recent_50dma_touch": true,
-        "regime": "bullish_pullback",
-        "rsi14": 64.8,
-        "tactical_action": "staged_add",
+        "headline": "Trend supports holding core exposure",
+        "ma200": 704.112,
+        "ma200_slope_20d_pct": 1.36,
+        "ma50": 750.1662,
+        "ma50_slope_20d_pct": 0.82,
+        "price": 769.06,
+        "recent_50dma_touch": false,
+        "regime": "bullish",
+        "rsi14": 57.8,
+        "tactical_action": "hold_core",
         "ticker": "SPY",
-        "weekly_macd": 20.4352,
+        "weekly_macd": 21.9857,
         "weekly_macd_positive": true,
-        "weekly_macd_signal": 19.8536
+        "weekly_macd_signal": 20.6414
       },
       {
-        "as_of": "2026-08-05",
+        "as_of": "2026-08-19",
         "bearish_confirmation_count": 1,
         "cross": {
           "date": null,
           "event": "none",
           "label": "No recent cross",
-          "sessions_ago": 281
+          "sessions_ago": 291
         },
         "dca_action": "continue_core_dca",
-        "distance_ma200_pct": 11.11,
-        "distance_ma50_pct": 0.36,
+        "distance_ma200_pct": 10.01,
+        "distance_ma50_pct": 0.45,
         "evidence": [
           "Price is above the 50-day average and above the 200-day average.",
-          "50-day slope over 20 sessions: +0.4%; 200-day slope: +1.6%.",
-          "RSI(14): 55.4; weekly MACD is below its signal line.",
+          "50-day slope over 20 sessions: -0.8%; 200-day slope: +1.5%.",
+          "RSI(14): 51.5; weekly MACD is below its signal line.",
           "Sector ETF breadth: 91% above 50-day and 82% above 200-day averages."
         ],
-        "headline": "Rising 50-day support held; a staged tactical add is eligible",
-        "ma200": 645.5689,
-        "ma200_slope_20d_pct": 1.61,
-        "ma50": 714.7207,
-        "ma50_slope_20d_pct": 0.38,
-        "price": 717.3,
+        "headline": "Trend supports holding core exposure",
+        "ma200": 650.9037,
+        "ma200_slope_20d_pct": 1.53,
+        "ma50": 712.8578,
+        "ma50_slope_20d_pct": -0.82,
+        "price": 716.08,
         "recent_50dma_touch": true,
-        "regime": "bullish_pullback",
-        "rsi14": 55.4,
-        "tactical_action": "staged_add",
+        "regime": "bullish",
+        "rsi14": 51.5,
+        "tactical_action": "hold_core",
         "ticker": "QQQ",
-        "weekly_macd": 23.7548,
+        "weekly_macd": 23.9106,
         "weekly_macd_positive": false,
-        "weekly_macd_signal": 27.2218
+        "weekly_macd_signal": 26.2421
       },
       {
-        "as_of": "2026-08-05",
+        "as_of": "2026-08-19",
         "bearish_confirmation_count": 0,
         "cross": {
           "date": null,
           "event": "none",
           "label": "No recent cross",
-          "sessions_ago": 275
+          "sessions_ago": 285
         },
         "dca_action": "continue_core_dca",
-        "distance_ma200_pct": 10.21,
-        "distance_ma50_pct": 3.12,
+        "distance_ma200_pct": 9.49,
+        "distance_ma50_pct": 2.54,
         "evidence": [
           "Price is above the 50-day average and above the 200-day average.",
-          "50-day slope over 20 sessions: +1.2%; 200-day slope: +1.3%.",
-          "RSI(14): 64.3; weekly MACD is above its signal line.",
+          "50-day slope over 20 sessions: +1.0%; 200-day slope: +1.4%.",
+          "RSI(14): 58.1; weekly MACD is above its signal line.",
           "Sector ETF breadth: 91% above 50-day and 82% above 200-day averages."
         ],
-        "headline": "Rising 50-day support held; a staged tactical add is eligible",
-        "ma200": 344.4751,
-        "ma200_slope_20d_pct": 1.31,
-        "ma50": 368.1614,
-        "ma50_slope_20d_pct": 1.16,
-        "price": 379.65,
-        "recent_50dma_touch": true,
-        "regime": "bullish_pullback",
-        "rsi14": 64.3,
-        "tactical_action": "staged_add",
+        "headline": "Trend supports holding core exposure",
+        "ma200": 347.0431,
+        "ma200_slope_20d_pct": 1.39,
+        "ma50": 370.5861,
+        "ma50_slope_20d_pct": 0.99,
+        "price": 379.99,
+        "recent_50dma_touch": false,
+        "regime": "bullish",
+        "rsi14": 58.1,
+        "tactical_action": "hold_core",
         "ticker": "VTI",
-        "weekly_macd": 10.2729,
+        "weekly_macd": 11.1102,
         "weekly_macd_positive": true,
-        "weekly_macd_signal": 10.0107
+        "weekly_macd_signal": 10.4202
       },
       {
-        "as_of": "2026-08-05",
+        "as_of": "2026-08-19",
         "bearish_confirmation_count": 1,
         "cross": {
           "date": null,
           "event": "none",
           "label": "No recent cross",
-          "sessions_ago": 358
+          "sessions_ago": 368
         },
         "dca_action": "continue_core_dca",
-        "distance_ma200_pct": 8.74,
-        "distance_ma50_pct": 1.99,
+        "distance_ma200_pct": 8.36,
+        "distance_ma50_pct": 2.08,
         "evidence": [
           "Price is above the 50-day average and above the 200-day average.",
-          "50-day slope over 20 sessions: +0.5%; 200-day slope: +1.6%.",
-          "RSI(14): 60.0; weekly MACD is below its signal line.",
+          "50-day slope over 20 sessions: +0.6%; 200-day slope: +1.7%.",
+          "RSI(14): 56.6; weekly MACD is below its signal line.",
           "Sector ETF breadth: 91% above 50-day and 82% above 200-day averages."
         ],
-        "headline": "Rising 50-day support held; a staged tactical add is eligible",
-        "ma200": 79.5559,
-        "ma200_slope_20d_pct": 1.59,
-        "ma50": 84.8227,
-        "ma50_slope_20d_pct": 0.46,
-        "price": 86.51,
-        "recent_50dma_touch": true,
-        "regime": "bullish_pullback",
-        "rsi14": 60.0,
-        "tactical_action": "staged_add",
+        "headline": "Trend supports holding core exposure",
+        "ma200": 80.2592,
+        "ma200_slope_20d_pct": 1.66,
+        "ma50": 85.2019,
+        "ma50_slope_20d_pct": 0.57,
+        "price": 86.97,
+        "recent_50dma_touch": false,
+        "regime": "bullish",
+        "rsi14": 56.6,
+        "tactical_action": "hold_core",
         "ticker": "VXUS",
-        "weekly_macd": 2.0706,
+        "weekly_macd": 2.2306,
         "weekly_macd_positive": false,
-        "weekly_macd_signal": 2.3021
+        "weekly_macd_signal": 2.2837
       }
     ],
     "status": "available",
     "summary": {
       "dca_action": "continue_core_dca",
-      "headline": "Rising 50-day support held; a staged tactical add is eligible",
-      "regime": "bullish_pullback",
-      "tactical_action": "staged_add"
+      "headline": "Trend supports holding core exposure",
+      "regime": "bullish",
+      "tactical_action": "hold_core"
     }
   },
   "mode": "real",
   "optimization": {
-    "data_as_of": "2026-08-05",
+    "data_as_of": "2026-08-19",
     "lookback_days": 756,
     "methodology": "Long-only constrained research portfolios built with skfolio. Metrics are trailing-sample diagnostics, not promised future returns.",
     "methodology_zh": "\u4f7f\u7528 skfolio \u6784\u5efa\u7684\u53ea\u505a\u591a\u7ea6\u675f\u7814\u7a76\u7ec4\u5408\u3002\u6307\u6807\u662f\u5386\u53f2\u6837\u672c\u8bca\u65ad\uff0c\u4e0d\u662f\u672a\u6765\u6536\u76ca\u627f\u8bfa\u3002",
@@ -1374,18 +1391,18 @@
         "evidence": {
           "basis_en": "Trailing in-sample daily returns; review with walk-forward validation.",
           "basis_zh": "\u57fa\u4e8e\u5386\u53f2\u6837\u672c\u5185\u65e5\u6536\u76ca\uff1b\u8fd8\u9700\u7ed3\u5408\u6eda\u52a8\u6837\u672c\u5916\u9a8c\u8bc1\u3002",
-          "end_date": "2026-08-05",
-          "observations": 616,
-          "start_date": "2024-02-21"
+          "end_date": "2026-08-19",
+          "observations": 617,
+          "start_date": "2024-03-05"
         },
         "fallback_reason": null,
         "id": "defensive",
         "metrics": {
-          "annualized_return": 0.07094742816837529,
-          "annualized_volatility": 0.032703661641494845,
+          "annualized_return": 0.06898931031571943,
+          "annualized_volatility": 0.032659739761602885,
           "estimated_transaction_cost": 0.0008,
-          "max_drawdown": -0.030867677686435724,
-          "sharpe_ratio": 2.1694031985200164,
+          "max_drawdown": -0.03086801225522795,
+          "sharpe_ratio": 2.112365585865083,
           "turnover": 1.0
         },
         "missing_assets": [],
@@ -1400,7 +1417,7 @@
             "action": "ADD",
             "asset_type": "bond",
             "current_weight": 0.0,
-            "delta_weight": 0.5949999997522558,
+            "delta_weight": 0.5949999999209081,
             "group": "FixedIncome",
             "priority": 1,
             "reason_en": "Increase toward the constrained Defensive solution; minimize expected tail loss (cvar).",
@@ -1411,7 +1428,7 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.5949999997522558,
+            "target_weight": 0.5949999999209081,
             "ticker": "SGOV"
           },
           {
@@ -1490,7 +1507,7 @@
             "action": "ADD",
             "asset_type": "fund",
             "current_weight": 0.0,
-            "delta_weight": 0.1094521124925055,
+            "delta_weight": 0.10944903528298532,
             "group": "International",
             "priority": 6,
             "reason_en": "Increase toward the constrained Defensive solution; minimize expected tail loss (cvar).",
@@ -1501,14 +1518,14 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.1094521124925055,
+            "target_weight": 0.10944903528298532,
             "ticker": "VXUS"
           },
           {
             "action": "ADD",
             "asset_type": "fund",
             "current_weight": 0.0,
-            "delta_weight": 0.10304788752005622,
+            "delta_weight": 0.10305096472375914,
             "group": "USBroad",
             "priority": 7,
             "reason_en": "Increase toward the constrained Defensive solution; minimize expected tail loss (cvar).",
@@ -1519,7 +1536,7 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.10304788752005622,
+            "target_weight": 0.10305096472375914,
             "ticker": "VTI"
           },
           {
@@ -1652,7 +1669,7 @@
             "action": "ADD",
             "asset_type": "bond",
             "current_weight": 0.0,
-            "delta_weight": 0.04250000023518239,
+            "delta_weight": 0.04250000007234746,
             "group": "FixedIncome",
             "priority": 15,
             "reason_en": "Increase toward the constrained Defensive solution; minimize expected tail loss (cvar).",
@@ -1663,7 +1680,7 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.04250000023518239,
+            "target_weight": 0.04250000007234746,
             "ticker": "BND"
           }
         ],
@@ -1691,19 +1708,19 @@
         "evidence": {
           "basis_en": "Trailing in-sample daily returns; review with walk-forward validation.",
           "basis_zh": "\u57fa\u4e8e\u5386\u53f2\u6837\u672c\u5185\u65e5\u6536\u76ca\uff1b\u8fd8\u9700\u7ed3\u5408\u6eda\u52a8\u6837\u672c\u5916\u9a8c\u8bc1\u3002",
-          "end_date": "2026-08-05",
-          "observations": 616,
-          "start_date": "2024-02-21"
+          "end_date": "2026-08-19",
+          "observations": 617,
+          "start_date": "2024-03-05"
         },
         "fallback_reason": null,
         "id": "balanced",
         "metrics": {
-          "annualized_return": 0.14496471154024337,
-          "annualized_volatility": 0.06986339820543082,
-          "estimated_transaction_cost": 0.0004586916661321574,
-          "max_drawdown": -0.07531383240199907,
-          "sharpe_ratio": 2.074973666668487,
-          "turnover": 0.5733645826651967
+          "annualized_return": 0.142432346658268,
+          "annualized_volatility": 0.06953820530671878,
+          "estimated_transaction_cost": 0.00045890487857805324,
+          "max_drawdown": -0.07544427264685205,
+          "sharpe_ratio": 2.0482603200647485,
+          "turnover": 0.5736310982225665
         },
         "missing_assets": [],
         "name_en": "Balanced",
@@ -1717,7 +1734,7 @@
             "action": "ADD",
             "asset_type": "bond",
             "current_weight": 0.0,
-            "delta_weight": 0.23054271016819458,
+            "delta_weight": 0.2304168956165329,
             "group": "FixedIncome",
             "priority": 1,
             "reason_en": "Increase toward the constrained Balanced solution; spread risk contributions across assets.",
@@ -1728,14 +1745,14 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.23054271016819458,
+            "target_weight": 0.2304168956165329,
             "ticker": "SGOV"
           },
           {
             "action": "TRIM",
             "asset_type": "stock",
             "current_weight": 0.18,
-            "delta_weight": -0.14958642812139847,
+            "delta_weight": -0.14973292823865403,
             "group": "Technology",
             "priority": 2,
             "reason_en": "Reduce concentration so the Technology exposure fits the Balanced risk budget.",
@@ -1746,14 +1763,14 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.030413571878601515,
+            "target_weight": 0.030267071761345958,
             "ticker": "AAPL"
           },
           {
             "action": "ADD",
             "asset_type": "bond",
             "current_weight": 0.0,
-            "delta_weight": 0.1494572884069243,
+            "delta_weight": 0.14958310249565232,
             "group": "FixedIncome",
             "priority": 3,
             "reason_en": "Increase toward the constrained Balanced solution; spread risk contributions across assets.",
@@ -1764,14 +1781,14 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.1494572884069243,
+            "target_weight": 0.14958310249565232,
             "ticker": "BND"
           },
           {
             "action": "TRIM",
             "asset_type": "stock",
             "current_weight": 0.15,
-            "delta_weight": -0.1109752672240282,
+            "delta_weight": -0.11113008466319704,
             "group": "Technology",
             "priority": 4,
             "reason_en": "Reduce concentration so the Technology exposure fits the Balanced risk budget.",
@@ -1782,14 +1799,14 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.03902473277597179,
+            "target_weight": 0.03886991533680296,
             "ticker": "MSFT"
           },
           {
             "action": "TRIM",
             "asset_type": "stock",
             "current_weight": 0.12,
-            "delta_weight": -0.10022078552316926,
+            "delta_weight": -0.09956715511328916,
             "group": "Technology",
             "priority": 5,
             "reason_en": "Reduce concentration so the Technology exposure fits the Balanced risk budget.",
@@ -1800,14 +1817,14 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.019779214476830728,
+            "target_weight": 0.020432844886710832,
             "ticker": "NVDA"
           },
           {
             "action": "TRIM",
             "asset_type": "stock",
             "current_weight": 0.1,
-            "delta_weight": -0.0805153130114023,
+            "delta_weight": -0.0803524701341351,
             "group": "Technology",
             "priority": 6,
             "reason_en": "Reduce concentration so the Technology exposure fits the Balanced risk budget.",
@@ -1818,7 +1835,7 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.019484686988597708,
+            "target_weight": 0.01964752986586491,
             "ticker": "AVGO"
           },
           {
@@ -1843,7 +1860,7 @@
             "action": "ADD",
             "asset_type": "fund",
             "current_weight": 0.0,
-            "delta_weight": 0.04800088273795385,
+            "delta_weight": 0.048125466103954344,
             "group": "International",
             "priority": 8,
             "reason_en": "Increase toward the constrained Balanced solution; spread risk contributions across assets.",
@@ -1854,14 +1871,14 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.04800088273795385,
+            "target_weight": 0.048125466103954344,
             "ticker": "VXUS"
           },
           {
             "action": "TRIM",
             "asset_type": "stock",
             "current_weight": 0.08,
-            "delta_weight": -0.043608655772987545,
+            "delta_weight": -0.043851737551464307,
             "group": "Financials",
             "priority": 9,
             "reason_en": "Reduce concentration so the Financials exposure fits the Balanced risk budget.",
@@ -1872,14 +1889,14 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.036391344227012457,
+            "target_weight": 0.036148262448535695,
             "ticker": "JPM"
           },
           {
             "action": "ADD",
             "asset_type": "fund",
             "current_weight": 0.0,
-            "delta_weight": 0.03694021805239783,
+            "delta_weight": 0.03694673565036942,
             "group": "USBroad",
             "priority": 10,
             "reason_en": "Increase toward the constrained Balanced solution; spread risk contributions across assets.",
@@ -1890,14 +1907,14 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.03694021805239783,
+            "target_weight": 0.03694673565036942,
             "ticker": "VTI"
           },
           {
             "action": "ADD",
             "asset_type": "fund",
             "current_weight": 0.0,
-            "delta_weight": 0.031731421659765974,
+            "delta_weight": 0.031849563148909264,
             "group": "Technology",
             "priority": 11,
             "reason_en": "Increase toward the constrained Balanced solution; spread risk contributions across assets.",
@@ -1908,14 +1925,14 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.031731421659765974,
+            "target_weight": 0.031849563148909264,
             "ticker": "QQQ"
           },
           {
             "action": "TRIM",
             "asset_type": "stock",
             "current_weight": 0.07,
-            "delta_weight": -0.030299031623468135,
+            "delta_weight": -0.03030891469208858,
             "group": "Healthcare",
             "priority": 12,
             "reason_en": "Reduce concentration so the Healthcare exposure fits the Balanced risk budget.",
@@ -1926,14 +1943,14 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.03970096837653187,
+            "target_weight": 0.039691085307911426,
             "ticker": "UNH"
           },
           {
             "action": "TRIM",
             "asset_type": "stock",
             "current_weight": 0.07,
-            "delta_weight": -0.02882160964298413,
+            "delta_weight": -0.028649732448673103,
             "group": "Financials",
             "priority": 13,
             "reason_en": "Reduce concentration so the Financials exposure fits the Balanced risk budget.",
@@ -1944,14 +1961,14 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.04117839035701588,
+            "target_weight": 0.041350267551326904,
             "ticker": "V"
           },
           {
             "action": "ADD",
             "asset_type": "stock",
             "current_weight": 0.08,
-            "delta_weight": 0.026692061639960143,
+            "delta_weight": 0.026709335207148355,
             "group": "Healthcare",
             "priority": 14,
             "reason_en": "Increase toward the constrained Balanced solution; spread risk contributions across assets.",
@@ -1962,14 +1979,14 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.10669206163996015,
+            "target_weight": 0.10670933520714836,
             "ticker": "JNJ"
           },
           {
             "action": "TRIM",
             "asset_type": "stock",
             "current_weight": 0.07,
-            "delta_weight": -0.016667364496848684,
+            "delta_weight": -0.017002286424903174,
             "group": "ConsumerStaples",
             "priority": 15,
             "reason_en": "Reduce concentration so the ConsumerStaples exposure fits the Balanced risk budget.",
@@ -1980,14 +1997,14 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.05333263550315132,
+            "target_weight": 0.05299771357509683,
             "ticker": "COST"
           },
           {
             "action": "TRIM",
             "asset_type": "stock",
             "current_weight": 0.08,
-            "delta_weight": -0.01267012724891002,
+            "delta_weight": -0.013035788956162003,
             "group": "Energy",
             "priority": 16,
             "reason_en": "Reduce concentration so the Energy exposure fits the Balanced risk budget.",
@@ -1998,7 +2015,7 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.06732987275108998,
+            "target_weight": 0.066964211043838,
             "ticker": "XOM"
           }
         ],
@@ -2023,18 +2040,18 @@
         "evidence": {
           "basis_en": "Trailing in-sample daily returns; review with walk-forward validation.",
           "basis_zh": "\u57fa\u4e8e\u5386\u53f2\u6837\u672c\u5185\u65e5\u6536\u76ca\uff1b\u8fd8\u9700\u7ed3\u5408\u6eda\u52a8\u6837\u672c\u5916\u9a8c\u8bc1\u3002",
-          "end_date": "2026-08-05",
-          "observations": 616,
-          "start_date": "2024-02-21"
+          "end_date": "2026-08-19",
+          "observations": 617,
+          "start_date": "2024-03-05"
         },
         "fallback_reason": null,
         "id": "global_china",
         "metrics": {
-          "annualized_return": 0.12519104738688513,
-          "annualized_volatility": 0.09207961098298474,
+          "annualized_return": 0.1183724008698798,
+          "annualized_volatility": 0.09174873684353302,
           "estimated_transaction_cost": 0.0008,
-          "max_drawdown": -0.08900302029638851,
-          "sharpe_ratio": 1.3595957460117747,
+          "max_drawdown": -0.08906097430383075,
+          "sharpe_ratio": 1.2901801696926944,
           "turnover": 1.0
         },
         "missing_assets": [],
@@ -2049,7 +2066,7 @@
             "action": "ADD",
             "asset_type": "bond",
             "current_weight": 0.0,
-            "delta_weight": 0.2389539746067314,
+            "delta_weight": 0.23895157862831953,
             "group": "FixedIncome",
             "priority": 1,
             "reason_en": "Increase toward the constrained Global + China Tilt solution; spread risk contributions across assets.",
@@ -2060,14 +2077,14 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.2389539746067314,
+            "target_weight": 0.23895157862831953,
             "ticker": "SGOV"
           },
           {
             "action": "ADD",
             "asset_type": "bond",
             "current_weight": 0.0,
-            "delta_weight": 0.18854602354637967,
+            "delta_weight": 0.18854841901136096,
             "group": "FixedIncome",
             "priority": 2,
             "reason_en": "Increase toward the constrained Global + China Tilt solution; spread risk contributions across assets.",
@@ -2078,7 +2095,7 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.18854602354637967,
+            "target_weight": 0.18854841901136096,
             "ticker": "BND"
           },
           {
@@ -2121,7 +2138,7 @@
             "action": "ADD",
             "asset_type": "fund",
             "current_weight": 0.0,
-            "delta_weight": 0.12892446695947646,
+            "delta_weight": 0.12895537123375073,
             "group": "USBroad",
             "priority": 5,
             "reason_en": "Increase toward the constrained Global + China Tilt solution; spread risk contributions across assets.",
@@ -2132,7 +2149,7 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.12892446695947646,
+            "target_weight": 0.12895537123375073,
             "ticker": "VTI"
           },
           {
@@ -2157,7 +2174,7 @@
             "action": "ADD",
             "asset_type": "fund",
             "current_weight": 0.0,
-            "delta_weight": 0.11316419284532032,
+            "delta_weight": 0.11268304950591633,
             "group": "International",
             "priority": 7,
             "reason_en": "Increase toward the constrained Global + China Tilt solution; spread risk contributions across assets.",
@@ -2168,7 +2185,7 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.11316419284532032,
+            "target_weight": 0.11268304950591633,
             "ticker": "VXUS"
           },
           {
@@ -2193,7 +2210,7 @@
             "action": "ADD",
             "asset_type": "fund",
             "current_weight": 0.0,
-            "delta_weight": 0.08976215272821476,
+            "delta_weight": 0.0898313405554258,
             "group": "Technology",
             "priority": 9,
             "reason_en": "Increase toward the constrained Global + China Tilt solution; spread risk contributions across assets.",
@@ -2204,7 +2221,7 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.08976215272821476,
+            "target_weight": 0.0898313405554258,
             "ticker": "QQQ"
           },
           {
@@ -2265,7 +2282,7 @@
             "action": "ADD",
             "asset_type": "fund",
             "current_weight": 0.0,
-            "delta_weight": 0.07944276961779179,
+            "delta_weight": 0.0795888725169129,
             "group": "ChinaEquity",
             "priority": 13,
             "reason_en": "Increase toward the constrained Global + China Tilt solution; spread risk contributions across assets.",
@@ -2276,7 +2293,7 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.07944276961779179,
+            "target_weight": 0.0795888725169129,
             "ticker": "CNYA"
           },
           {
@@ -2337,7 +2354,7 @@
             "action": "ADD",
             "asset_type": "fund",
             "current_weight": 0.0,
-            "delta_weight": 0.06227272654958378,
+            "delta_weight": 0.06242033709197897,
             "group": "ChinaEquity",
             "priority": 17,
             "reason_en": "Increase toward the constrained Global + China Tilt solution; spread risk contributions across assets.",
@@ -2348,7 +2365,7 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.06227272654958378,
+            "target_weight": 0.06242033709197897,
             "ticker": "MCHI"
           },
           {
@@ -2373,7 +2390,7 @@
             "action": "ADD",
             "asset_type": "fund",
             "current_weight": 0.0,
-            "delta_weight": 0.04893369314650176,
+            "delta_weight": 0.049021031456334664,
             "group": "ChinaEquity",
             "priority": 19,
             "reason_en": "Increase toward the constrained Global + China Tilt solution; spread risk contributions across assets.",
@@ -2384,7 +2401,7 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.04893369314650176,
+            "target_weight": 0.049021031456334664,
             "ticker": "KWEB"
           }
         ],
@@ -2410,19 +2427,19 @@
         "evidence": {
           "basis_en": "Trailing in-sample daily returns; review with walk-forward validation.",
           "basis_zh": "\u57fa\u4e8e\u5386\u53f2\u6837\u672c\u5185\u65e5\u6536\u76ca\uff1b\u8fd8\u9700\u7ed3\u5408\u6eda\u52a8\u6837\u672c\u5916\u9a8c\u8bc1\u3002",
-          "end_date": "2026-08-05",
-          "observations": 616,
-          "start_date": "2024-02-21"
+          "end_date": "2026-08-19",
+          "observations": 617,
+          "start_date": "2024-03-05"
         },
         "fallback_reason": null,
         "id": "aggressive",
         "metrics": {
-          "annualized_return": 0.28929259020707293,
-          "annualized_volatility": 0.1425292968486522,
-          "estimated_transaction_cost": 0.00027339488226968064,
-          "max_drawdown": -0.16911748662412762,
-          "sharpe_ratio": 2.0297061488647103,
-          "turnover": 0.3417436028371008
+          "annualized_return": 0.26055604154275525,
+          "annualized_volatility": 0.1341751414689957,
+          "estimated_transaction_cost": 0.0002912036616319492,
+          "max_drawdown": -0.1657345061334553,
+          "sharpe_ratio": 1.9419099446447226,
+          "turnover": 0.36400457703993644
         },
         "missing_assets": [],
         "name_en": "Aggressive",
@@ -2436,7 +2453,7 @@
             "action": "TRIM",
             "asset_type": "stock",
             "current_weight": 0.15,
-            "delta_weight": -0.14999998160734648,
+            "delta_weight": -0.14999980990336312,
             "group": "Technology",
             "priority": 1,
             "reason_en": "Reduce concentration so the Technology exposure fits the Aggressive risk budget.",
@@ -2447,34 +2464,16 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 1.8392653504592317e-08,
+            "target_weight": 1.9009663687158273e-07,
             "ticker": "MSFT"
           },
           {
-            "action": "TRIM",
-            "asset_type": "stock",
-            "current_weight": 0.18,
-            "delta_weight": -0.10193922448007671,
-            "group": "Technology",
-            "priority": 2,
-            "reason_en": "Reduce concentration so the Technology exposure fits the Aggressive risk budget.",
-            "reason_zh": "\u964d\u4f4e\u96c6\u4e2d\u5ea6\uff0c\u4f7f Technology \u655e\u53e3\u7b26\u5408\u8fdb\u53d6\u578b\u7684\u98ce\u9669\u9884\u7b97\u3002",
-            "rule_ids": [
-              "OPT_MAX_SHARPE",
-              "LONG_ONLY",
-              "POSITION_CAP",
-              "TRANSACTION_COST_REVIEW"
-            ],
-            "target_weight": 0.07806077551992328,
-            "ticker": "AAPL"
-          },
-          {
             "action": "ADD",
-            "asset_type": "stock",
-            "current_weight": 0.07,
-            "delta_weight": 0.06986259271491752,
-            "group": "ConsumerStaples",
-            "priority": 3,
+            "asset_type": "fund",
+            "current_weight": 0.0,
+            "delta_weight": 0.08190880940466595,
+            "group": "USBroad",
+            "priority": 2,
             "reason_en": "Increase toward the constrained Aggressive solution; maximize estimated return per unit of volatility.",
             "reason_zh": "\u63d0\u9ad8\u81f3\u53d7\u7ea6\u675f\u7684\u8fdb\u53d6\u578b\u76ee\u6807\uff1b\u6700\u5927\u5316\u6bcf\u5355\u4f4d\u6ce2\u52a8\u7387\u7684\u4f30\u8ba1\u6536\u76ca\u3002",
             "rule_ids": [
@@ -2483,14 +2482,32 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.13986259271491752,
-            "ticker": "COST"
+            "target_weight": 0.08190880940466595,
+            "ticker": "VTI"
+          },
+          {
+            "action": "TRIM",
+            "asset_type": "stock",
+            "current_weight": 0.18,
+            "delta_weight": -0.0755395798369895,
+            "group": "Technology",
+            "priority": 3,
+            "reason_en": "Reduce concentration so the Technology exposure fits the Aggressive risk budget.",
+            "reason_zh": "\u964d\u4f4e\u96c6\u4e2d\u5ea6\uff0c\u4f7f Technology \u655e\u53e3\u7b26\u5408\u8fdb\u53d6\u578b\u7684\u98ce\u9669\u9884\u7b97\u3002",
+            "rule_ids": [
+              "OPT_MAX_SHARPE",
+              "LONG_ONLY",
+              "POSITION_CAP",
+              "TRANSACTION_COST_REVIEW"
+            ],
+            "target_weight": 0.10446042016301049,
+            "ticker": "AAPL"
           },
           {
             "action": "ADD",
             "asset_type": "stock",
             "current_weight": 0.08,
-            "delta_weight": 0.0669999977305689,
+            "delta_weight": 0.06699999695572585,
             "group": "Healthcare",
             "priority": 4,
             "reason_en": "Increase toward the constrained Aggressive solution; maximize estimated return per unit of volatility.",
@@ -2501,14 +2518,14 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.1469999977305689,
+            "target_weight": 0.14699999695572585,
             "ticker": "JNJ"
           },
           {
             "action": "ADD",
             "asset_type": "stock",
             "current_weight": 0.08,
-            "delta_weight": 0.06699999487962428,
+            "delta_weight": 0.06699999367603658,
             "group": "Energy",
             "priority": 5,
             "reason_en": "Increase toward the constrained Aggressive solution; maximize estimated return per unit of volatility.",
@@ -2519,14 +2536,14 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.14699999487962429,
+            "target_weight": 0.14699999367603658,
             "ticker": "XOM"
           },
           {
             "action": "ADD",
             "asset_type": "stock",
             "current_weight": 0.08,
-            "delta_weight": 0.06699999348244091,
+            "delta_weight": 0.0669999853216459,
             "group": "Financials",
             "priority": 6,
             "reason_en": "Increase toward the constrained Aggressive solution; maximize estimated return per unit of volatility.",
@@ -2537,34 +2554,16 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.14699999348244092,
+            "target_weight": 0.1469999853216459,
             "ticker": "JPM"
           },
           {
-            "action": "TRIM",
+            "action": "ADD",
             "asset_type": "stock",
             "current_weight": 0.07,
-            "delta_weight": -0.04967990407990917,
-            "group": "Healthcare",
+            "delta_weight": 0.06109561825362164,
+            "group": "ConsumerStaples",
             "priority": 7,
-            "reason_en": "Reduce concentration so the Healthcare exposure fits the Aggressive risk budget.",
-            "reason_zh": "\u964d\u4f4e\u96c6\u4e2d\u5ea6\uff0c\u4f7f Healthcare \u655e\u53e3\u7b26\u5408\u8fdb\u53d6\u578b\u7684\u98ce\u9669\u9884\u7b97\u3002",
-            "rule_ids": [
-              "OPT_MAX_SHARPE",
-              "LONG_ONLY",
-              "POSITION_CAP",
-              "TRANSACTION_COST_REVIEW"
-            ],
-            "target_weight": 0.020320095920090833,
-            "ticker": "UNH"
-          },
-          {
-            "action": "ADD",
-            "asset_type": "fund",
-            "current_weight": 0.0,
-            "delta_weight": 0.04600199849800297,
-            "group": "USBroad",
-            "priority": 8,
             "reason_en": "Increase toward the constrained Aggressive solution; maximize estimated return per unit of volatility.",
             "reason_zh": "\u63d0\u9ad8\u81f3\u53d7\u7ea6\u675f\u7684\u8fdb\u53d6\u578b\u76ee\u6807\uff1b\u6700\u5927\u5316\u6bcf\u5355\u4f4d\u6ce2\u52a8\u7387\u7684\u4f30\u8ba1\u6536\u76ca\u3002",
             "rule_ids": [
@@ -2573,16 +2572,16 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.04600199849800297,
-            "ticker": "VTI"
+            "target_weight": 0.13109561825362165,
+            "ticker": "COST"
           },
           {
             "action": "TRIM",
             "asset_type": "stock",
             "current_weight": 0.12,
-            "delta_weight": -0.03762474699355199,
+            "delta_weight": -0.05342166197001705,
             "group": "Technology",
-            "priority": 9,
+            "priority": 8,
             "reason_en": "Reduce concentration so the Technology exposure fits the Aggressive risk budget.",
             "reason_zh": "\u964d\u4f4e\u96c6\u4e2d\u5ea6\uff0c\u4f7f Technology \u655e\u53e3\u7b26\u5408\u8fdb\u53d6\u578b\u7684\u98ce\u9669\u9884\u7b97\u3002",
             "rule_ids": [
@@ -2591,8 +2590,44 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.082375253006448,
+            "target_weight": 0.06657833802998295,
             "ticker": "NVDA"
+          },
+          {
+            "action": "TRIM",
+            "asset_type": "stock",
+            "current_weight": 0.07,
+            "delta_weight": -0.0422080240110354,
+            "group": "Healthcare",
+            "priority": 9,
+            "reason_en": "Reduce concentration so the Healthcare exposure fits the Aggressive risk budget.",
+            "reason_zh": "\u964d\u4f4e\u96c6\u4e2d\u5ea6\uff0c\u4f7f Healthcare \u655e\u53e3\u7b26\u5408\u8fdb\u53d6\u578b\u7684\u98ce\u9669\u9884\u7b97\u3002",
+            "rule_ids": [
+              "OPT_MAX_SHARPE",
+              "LONG_ONLY",
+              "POSITION_CAP",
+              "TRANSACTION_COST_REVIEW"
+            ],
+            "target_weight": 0.027791975988964608,
+            "ticker": "UNH"
+          },
+          {
+            "action": "TRIM",
+            "asset_type": "stock",
+            "current_weight": 0.1,
+            "delta_weight": -0.03408318358805554,
+            "group": "Technology",
+            "priority": 10,
+            "reason_en": "Reduce concentration so the Technology exposure fits the Aggressive risk budget.",
+            "reason_zh": "\u964d\u4f4e\u96c6\u4e2d\u5ea6\uff0c\u4f7f Technology \u655e\u53e3\u7b26\u5408\u8fdb\u53d6\u578b\u7684\u98ce\u9669\u9884\u7b97\u3002",
+            "rule_ids": [
+              "OPT_MAX_SHARPE",
+              "LONG_ONLY",
+              "POSITION_CAP",
+              "TRANSACTION_COST_REVIEW"
+            ],
+            "target_weight": 0.06591681641194447,
+            "ticker": "AVGO"
           },
           {
             "action": "ADD",
@@ -2600,7 +2635,7 @@
             "current_weight": 0.0,
             "delta_weight": 0.02,
             "group": "Cash",
-            "priority": 10,
+            "priority": 11,
             "reason_en": "Keep the configured 2% liquidity and drawdown buffer.",
             "reason_zh": "\u4fdd\u7559\u914d\u7f6e\u4e2d\u7684 2% \u6d41\u52a8\u6027\u548c\u56de\u64a4\u7f13\u51b2\u3002",
             "rule_ids": [
@@ -2613,46 +2648,28 @@
             "ticker": "CASH"
           },
           {
-            "action": "HOLD",
+            "action": "TRIM",
             "asset_type": "stock",
             "current_weight": 0.07,
-            "delta_weight": 0.004879006181789894,
+            "delta_weight": -0.008752317730475835,
             "group": "Financials",
-            "priority": 11,
-            "reason_en": "Current weight is already close to the constrained target.",
-            "reason_zh": "\u5f53\u524d\u6743\u91cd\u5df2\u63a5\u8fd1\u53d7\u7ea6\u675f\u7684\u76ee\u6807\u3002",
-            "rule_ids": [
-              "OPT_MAX_SHARPE",
-              "LONG_ONLY",
-              "POSITION_CAP",
-              "TRANSACTION_COST_REVIEW"
-            ],
-            "target_weight": 0.0748790061817899,
-            "ticker": "V"
-          },
-          {
-            "action": "HOLD",
-            "asset_type": "stock",
-            "current_weight": 0.1,
-            "delta_weight": -0.0024997456762164555,
-            "group": "Technology",
             "priority": 12,
-            "reason_en": "Current weight is already close to the constrained target.",
-            "reason_zh": "\u5f53\u524d\u6743\u91cd\u5df2\u63a5\u8fd1\u53d7\u7ea6\u675f\u7684\u76ee\u6807\u3002",
+            "reason_en": "Reduce concentration so the Financials exposure fits the Aggressive risk budget.",
+            "reason_zh": "\u964d\u4f4e\u96c6\u4e2d\u5ea6\uff0c\u4f7f Financials \u655e\u53e3\u7b26\u5408\u8fdb\u53d6\u578b\u7684\u98ce\u9669\u9884\u7b97\u3002",
             "rule_ids": [
               "OPT_MAX_SHARPE",
               "LONG_ONLY",
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 0.09750025432378355,
-            "ticker": "AVGO"
+            "target_weight": 0.06124768226952417,
+            "ticker": "V"
           },
           {
             "action": "HOLD",
             "asset_type": "fund",
             "current_weight": 0.0,
-            "delta_weight": 1.9349756291844063e-08,
+            "delta_weight": 1.7342824048512166e-07,
             "group": "Technology",
             "priority": 13,
             "reason_en": "Current weight is already close to the constrained target.",
@@ -2663,7 +2680,7 @@
               "POSITION_CAP",
               "TRANSACTION_COST_REVIEW"
             ],
-            "target_weight": 1.9349756291844063e-08,
+            "target_weight": 1.7342824048512166e-07,
             "ticker": "QQQ"
           }
         ],
@@ -2685,15 +2702,15 @@
     "V": 0.07,
     "XOM": 0.08
   },
-  "price_as_of": "2026-08-05",
+  "price_as_of": "2026-08-19",
   "recommended_distribution": [
     {
       "action": "raise_cash",
       "current_weight": 0.0,
-      "delta_weight": 0.2588636363636363,
-      "priority": 0.3088636363636363,
+      "delta_weight": 0.29886363636363633,
+      "priority": 0.3488636363636363,
       "reason": "raise or maintain cash buffer",
-      "recommended_weight": 0.2588636363636363,
+      "recommended_weight": 0.29886363636363633,
       "rule_ids": [
         "CASH_BUFFER"
       ],
@@ -2706,7 +2723,7 @@
       "current_weight": 0.18,
       "delta_weight": -0.06545454545454543,
       "priority": 0.11545454545454543,
-      "reason": "exceeds max single-name cap; over target weight; sector exceeds max cap; sector hyped (z=0.60)",
+      "reason": "exceeds max single-name cap; over target weight; sector exceeds max cap; sector hyped (z=-0.04)",
       "recommended_weight": 0.11454545454545456,
       "rule_ids": [
         "OVER_TARGET",
@@ -2723,7 +2740,7 @@
       "current_weight": 0.15,
       "delta_weight": -0.054545454545454536,
       "priority": 0.10454545454545454,
-      "reason": "over target weight; sector exceeds max cap; sector hyped (z=0.60)",
+      "reason": "over target weight; sector exceeds max cap; sector hyped (z=-0.04)",
       "recommended_weight": 0.09545454545454546,
       "rule_ids": [
         "OVER_TARGET",
@@ -2739,7 +2756,7 @@
       "current_weight": 0.12,
       "delta_weight": -0.04999999999999999,
       "priority": 0.09999999999999999,
-      "reason": "over target weight; sector exceeds max cap; sector hyped (z=0.60)",
+      "reason": "over target weight; sector exceeds max cap; sector hyped (z=-0.04)",
       "recommended_weight": 0.07,
       "rule_ids": [
         "OVER_TARGET",
@@ -2755,11 +2772,12 @@
       "current_weight": 0.1,
       "delta_weight": -0.03636363636363635,
       "priority": 0.08636363636363635,
-      "reason": "sector exceeds max cap; sector hyped (z=0.60)",
+      "reason": "sector exceeds max cap; sector hyped (z=-0.04); trailing-stop triggered",
       "recommended_weight": 0.06363636363636366,
       "rule_ids": [
         "SECTOR_CAP",
-        "SECTOR_HYPED"
+        "SECTOR_HYPED",
+        "TRAILING_STOP"
       ],
       "sector": "Technology",
       "target_weight": 0.12,
@@ -2770,9 +2788,10 @@
       "current_weight": 0.07,
       "delta_weight": -0.035,
       "priority": 0.085,
-      "reason": "stop-loss triggered",
+      "reason": "sector hyped (z=2.41); stop-loss triggered",
       "recommended_weight": 0.035,
       "rule_ids": [
+        "SECTOR_HYPED",
         "STOP_LOSS"
       ],
       "sector": "Healthcare",
@@ -2781,10 +2800,38 @@
     },
     {
       "action": "trim",
+      "current_weight": 0.08,
+      "delta_weight": -0.020000000000000004,
+      "priority": 0.07,
+      "reason": "sector hyped (z=2.41)",
+      "recommended_weight": 0.06,
+      "rule_ids": [
+        "SECTOR_HYPED"
+      ],
+      "sector": "Healthcare",
+      "target_weight": 0.09,
+      "ticker": "JNJ"
+    },
+    {
+      "action": "trim",
+      "current_weight": 0.08,
+      "delta_weight": -0.020000000000000004,
+      "priority": 0.07,
+      "reason": "sector hyped (z=2.43)",
+      "recommended_weight": 0.06,
+      "rule_ids": [
+        "SECTOR_HYPED"
+      ],
+      "sector": "Energy",
+      "target_weight": 0.1,
+      "ticker": "XOM"
+    },
+    {
+      "action": "trim",
       "current_weight": 0.07,
       "delta_weight": -0.0175,
       "priority": 0.0675,
-      "reason": "sector hyped (z=0.99)",
+      "reason": "sector hyped (z=1.72)",
       "recommended_weight": 0.052500000000000005,
       "rule_ids": [
         "SECTOR_HYPED"
@@ -2801,18 +2848,6 @@
       "reason": "\u5f53\u524d\u6ca1\u6709\u89c4\u5219\u89e6\u53d1\u660e\u663e\u8c03\u6574\u3002",
       "recommended_weight": 0.08,
       "rule_ids": [],
-      "sector": "Healthcare",
-      "target_weight": 0.09,
-      "ticker": "JNJ"
-    },
-    {
-      "action": "hold",
-      "current_weight": 0.08,
-      "delta_weight": 0.0,
-      "priority": 0.0,
-      "reason": "\u5f53\u524d\u6ca1\u6709\u89c4\u5219\u89e6\u53d1\u660e\u663e\u8c03\u6574\u3002",
-      "recommended_weight": 0.08,
-      "rule_ids": [],
       "sector": "Financials",
       "target_weight": 0.1,
       "ticker": "JPM"
@@ -2828,189 +2863,177 @@
       "sector": "Financials",
       "target_weight": 0.1,
       "ticker": "V"
-    },
-    {
-      "action": "hold",
-      "current_weight": 0.08,
-      "delta_weight": 0.0,
-      "priority": 0.0,
-      "reason": "\u5f53\u524d\u6ca1\u6709\u89c4\u5219\u89e6\u53d1\u660e\u663e\u8c03\u6574\u3002",
-      "recommended_weight": 0.08,
-      "rule_ids": [],
-      "sector": "Energy",
-      "target_weight": 0.1,
-      "ticker": "XOM"
     }
   ],
   "risk_predictions": [
     {
       "features": {
-        "drawdown_252": -0.08550925582351565,
-        "ma_gap": 0.11642408892631373,
-        "ret_126": 0.15621856544163082,
-        "ret_21": 0.0010944322857229238,
-        "ret_252": 0.5354501647382852,
-        "ret_63": 0.09538505062482816,
-        "vol_21": 0.35828394896365956,
-        "vol_63": 0.3143245797451242,
-        "z_60": 0.20155358158078354
+        "drawdown_252": -0.06756275160232428,
+        "ma_gap": 0.1290659720334868,
+        "ret_126": 0.20066334435514865,
+        "ret_21": -0.03245487240135958,
+        "ret_252": 0.3772807319116973,
+        "ret_63": 0.060652374842501855,
+        "vol_21": 0.3332852317420682,
+        "vol_63": 0.3169608274291635,
+        "z_60": 0.5289628024439931
       },
       "model_version": "logistic_price_risk_v1",
       "risk_level": "low",
-      "risk_probability": 0.09030047216894586,
+      "risk_probability": 0.07813160359462301,
       "ticker": "AAPL"
     },
     {
       "features": {
-        "drawdown_252": -0.09504829366026313,
-        "ma_gap": 0.12850768705561122,
-        "ret_126": 0.190707434906356,
-        "ret_21": 0.25362615997838245,
-        "ret_252": -0.08267939740303176,
-        "ret_63": 0.1875048834778943,
-        "vol_21": 0.5881730427550933,
-        "vol_63": 0.4579183746703042,
-        "z_60": 2.731457570150359
+        "drawdown_252": -0.10089604063552615,
+        "ma_gap": 0.12485913704054474,
+        "ret_126": 0.21738436038738462,
+        "ret_21": 0.2176241296256285,
+        "ret_252": -0.05593031126238557,
+        "ret_63": 0.16275919228384628,
+        "vol_21": 0.592613304354191,
+        "vol_63": 0.46023496779949236,
+        "z_60": 1.4582630991997814
       },
       "model_version": "logistic_price_risk_v1",
       "risk_level": "low",
-      "risk_probability": 0.13739924572289886,
+      "risk_probability": 0.10827927420093707,
       "ticker": "MSFT"
     },
     {
       "features": {
-        "drawdown_252": -0.06899341812628113,
-        "ma_gap": 0.13343480437748778,
-        "ret_126": 0.21707548157613576,
-        "ret_21": 0.11318747460484291,
-        "ret_252": 0.2195109156516668,
-        "ret_63": 0.11692370700324783,
-        "vol_21": 0.43278496531933774,
-        "vol_63": 0.42133182843769773,
-        "z_60": 1.0985443854424541
+        "drawdown_252": -0.07604329645285945,
+        "ma_gap": 0.11564860995227821,
+        "ret_126": 0.15876883231423045,
+        "ret_21": 0.04954413915332978,
+        "ret_252": 0.19691100179217513,
+        "ret_63": -0.012675934034232617,
+        "vol_21": 0.3741541570179983,
+        "vol_63": 0.3928512120160677,
+        "z_60": 0.9870494502300299
       },
       "model_version": "logistic_price_risk_v1",
       "risk_level": "low",
-      "risk_probability": 0.10366816214917367,
+      "risk_probability": 0.09199562659510509,
       "ticker": "NVDA"
     },
     {
       "features": {
-        "drawdown_252": 0.0,
-        "ma_gap": 0.15817622039052592,
-        "ret_126": 0.1519933422329296,
-        "ret_21": 0.059017713995721754,
-        "ret_252": 0.24418035134669513,
-        "ret_63": 0.16631657084236307,
-        "vol_21": 0.22178530150834416,
-        "vol_63": 0.23027350278240769,
-        "z_60": 1.6879492756651562
+        "drawdown_252": -0.02168788835369706,
+        "ma_gap": 0.14003438509730404,
+        "ret_126": 0.16816517069055648,
+        "ret_21": 0.03484632968300461,
+        "ret_252": 0.24890980262296014,
+        "ret_63": 0.21362676902850208,
+        "vol_21": 0.17670583008214263,
+        "vol_63": 0.21369678306772344,
+        "z_60": 1.0838307707926673
       },
       "model_version": "logistic_price_risk_v1",
       "risk_level": "low",
-      "risk_probability": 0.06815215266435405,
+      "risk_probability": 0.05782393252325261,
       "ticker": "JPM"
     },
     {
       "features": {
-        "drawdown_252": -0.10970320107209497,
-        "ma_gap": 0.09322942127629896,
-        "ret_126": 0.06920415001531088,
-        "ret_21": 0.07015316726751264,
-        "ret_252": 0.45723560117752315,
-        "ret_63": -0.014338927646351585,
-        "vol_21": 0.24122418631393083,
-        "vol_63": 0.287709225097048,
-        "z_60": 0.5488494937949605
+        "drawdown_252": -0.026287276068563403,
+        "ma_gap": 0.17531641112090512,
+        "ret_126": 0.10806032618020112,
+        "ret_21": 0.09311786341694317,
+        "ret_252": 0.5886945230963072,
+        "ret_63": 0.02022090744989158,
+        "vol_21": 0.24550645020112194,
+        "vol_63": 0.27408144357417397,
+        "z_60": 2.1064299736389542
       },
       "model_version": "logistic_price_risk_v1",
       "risk_level": "low",
-      "risk_probability": 0.09108275850742913,
+      "risk_probability": 0.09142146140522252,
       "ticker": "XOM"
     },
     {
       "features": {
-        "drawdown_252": -0.03610984227331071,
-        "ma_gap": 0.1407566811408918,
-        "ret_126": 0.11732583905412808,
-        "ret_21": -0.03610984227331071,
-        "ret_252": 0.5436515393293122,
-        "ret_63": 0.14862074007555637,
-        "vol_21": 0.23401420852138785,
-        "vol_63": 0.2495590554842683,
-        "z_60": 0.9942081891524438
+        "drawdown_252": 0.0,
+        "ma_gap": 0.19095041211688035,
+        "ret_126": 0.12838986314315015,
+        "ret_21": 0.09097802560244705,
+        "ret_252": 0.5900225633759149,
+        "ret_63": 0.19557568488288046,
+        "vol_21": 0.2100921991715147,
+        "vol_63": 0.2484840605219203,
+        "z_60": 1.7472722783844998
       },
       "model_version": "logistic_price_risk_v1",
       "risk_level": "low",
-      "risk_probability": 0.07888977923842833,
+      "risk_probability": 0.0714128184505546,
       "ticker": "JNJ"
     },
     {
       "features": {
-        "drawdown_252": -0.0028409529569864977,
-        "ma_gap": 0.11723198813448077,
-        "ret_126": 0.12505866901137752,
-        "ret_21": 0.04639408225882069,
-        "ret_252": 0.08563799819610485,
-        "ret_63": 0.14680011714601315,
-        "vol_21": 0.1887401376898782,
-        "vol_63": 0.20331267714450188,
-        "z_60": 1.6616967218149543
+        "drawdown_252": -0.011474409078578662,
+        "ma_gap": 0.10671906235389583,
+        "ret_126": 0.14573308699497,
+        "ret_21": 0.02922565860306303,
+        "ret_252": 0.07505234568535046,
+        "ret_63": 0.11005755555030405,
+        "vol_21": 0.16367471026039193,
+        "vol_63": 0.20247512091364162,
+        "z_60": 1.115213872502863
       },
       "model_version": "logistic_price_risk_v1",
       "risk_level": "low",
-      "risk_probability": 0.06101968393957354,
+      "risk_probability": 0.05452001910208963,
       "ticker": "V"
     },
     {
       "features": {
-        "drawdown_252": -0.13783201025111724,
-        "ma_gap": -0.013709853244350922,
-        "ret_126": -0.03380978736891915,
-        "ret_21": -0.004234670722962575,
-        "ret_252": -0.008252224892904114,
-        "ret_63": -0.07175409990864035,
-        "vol_21": 0.22907601720213389,
-        "vol_63": 0.23228395898503434,
-        "z_60": -0.6261089594584469
+        "drawdown_252": -0.12410307472069249,
+        "ma_gap": 0.000544508885185202,
+        "ret_126": -0.03632006886675021,
+        "ret_21": 0.031522733326785124,
+        "ret_252": -0.017130067820322337,
+        "ret_63": -0.12410307472069249,
+        "vol_21": 0.1440143775181519,
+        "vol_63": 0.21298325565538476,
+        "z_60": 0.21735542058362525
       },
       "model_version": "logistic_price_risk_v1",
       "risk_level": "low",
-      "risk_probability": 0.06190871342923997,
+      "risk_probability": 0.06445196544547138,
       "ticker": "COST"
     },
     {
       "features": {
-        "drawdown_252": -0.054085036721454705,
-        "ma_gap": 0.20554124271473717,
-        "ret_126": 0.4720760878213359,
-        "ret_21": -0.03605876445823619,
-        "ret_252": 0.7586696777536606,
-        "ret_63": 0.1408124394430672,
-        "vol_21": 0.24140834967181884,
-        "vol_63": 0.2594162955458405,
-        "z_60": 0.30416344575207416
+        "drawdown_252": -0.10940763168140699,
+        "ma_gap": 0.12723661472457826,
+        "ret_126": 0.3666478171740164,
+        "ret_21": -0.10940763168140699,
+        "ret_252": 0.29345414672620995,
+        "ret_63": 0.004083682129778721,
+        "vol_21": 0.2025325094966937,
+        "vol_63": 0.2554052649993093,
+        "z_60": -1.3128612929758696
       },
       "model_version": "logistic_price_risk_v1",
       "risk_level": "low",
-      "risk_probability": 0.08596068383609948,
+      "risk_probability": 0.056356090425277165,
       "ticker": "UNH"
     },
     {
       "features": {
-        "drawdown_252": -0.13004965804516888,
-        "ma_gap": 0.14340595878473272,
-        "ret_126": 0.3105886490480825,
-        "ret_21": 0.128108312628465,
-        "ret_252": 0.4152384042174442,
-        "ret_63": -0.019697668450629813,
-        "vol_21": 0.45238790184880323,
-        "vol_63": 0.5424185693356703,
-        "z_60": 0.7424959419100147
+        "drawdown_252": -0.24610402020266264,
+        "ma_gap": -0.015734987799067568,
+        "ret_126": 0.09086770387348087,
+        "ret_21": -0.06214744893576163,
+        "ret_252": 0.1941912478319756,
+        "ret_63": -0.11680809466699904,
+        "vol_21": 0.4421237854974838,
+        "vol_63": 0.5396779345629963,
+        "z_60": -1.318561740575773
       },
       "model_version": "logistic_price_risk_v1",
       "risk_level": "low",
-      "risk_probability": 0.1507501171370186,
+      "risk_probability": 0.11641979956018693,
       "ticker": "AVGO"
     }
   ],
@@ -3024,162 +3047,162 @@
   "signals": [
     {
       "etf": "XLU",
-      "ma": 44.362280960083005,
-      "momentum": 0.023265114210682558,
-      "pct_from_ma": -0.015830590706163328,
-      "price": 43.65999984741211,
-      "realized_vol": 0.12958638156007643,
+      "ma": 44.33119638442993,
+      "momentum": -0.021907113384935117,
+      "pct_from_ma": -0.007019795359629821,
+      "price": 44.02000045776367,
+      "realized_vol": 0.1356261151684844,
       "sector": "Utilities",
-      "status": "cool",
-      "std": 0.8154673046772457,
-      "trend_ma": 44.362280960083005,
-      "trend_state": "bearish",
-      "z": -1.3487867208828401
-    },
-    {
-      "etf": "XLC",
-      "ma": 113.76718326568603,
-      "momentum": -0.05288635316399681,
-      "pct_from_ma": -0.025465871931961925,
-      "price": 110.87000274658203,
-      "realized_vol": 0.24250953201138734,
-      "sector": "CommunicationServices",
       "status": "neutral",
-      "std": 3.186396396273772,
-      "trend_ma": 113.76718326568603,
+      "std": 0.8741053696041207,
+      "trend_ma": 44.33119638442993,
       "trend_state": "bearish",
-      "z": -0.15208285228043242
-    },
-    {
-      "etf": "XLE",
-      "ma": 52.27425626754761,
-      "momentum": 0.124452452008319,
-      "pct_from_ma": 0.09633317554954202,
-      "price": 57.310001373291016,
-      "realized_vol": 0.20836414530850894,
-      "sector": "Energy",
-      "status": "neutral",
-      "std": 2.050270460858602,
-      "trend_ma": 52.27425626754761,
-      "trend_state": "bullish",
-      "z": 0.24627112930350853
+      "z": -0.7336852969341524
     },
     {
       "etf": "XLK",
-      "ma": 155.73644199371338,
-      "momentum": 0.3116771670403997,
-      "pct_from_ma": 0.1937475987130488,
-      "price": 185.91000366210938,
-      "realized_vol": 0.3478150628918894,
+      "ma": 157.80206859588623,
+      "momentum": 0.30641942566324354,
+      "pct_from_ma": 0.16373632502835123,
+      "price": 183.63999938964844,
+      "realized_vol": 0.32016543935328134,
       "sector": "Technology",
       "status": "hyped",
-      "std": 6.336779675435145,
-      "trend_ma": 155.73644199371338,
+      "std": 6.089157525363315,
+      "trend_ma": 157.80206859588623,
       "trend_state": "bullish",
-      "z": 0.5998798044185939
+      "z": -0.04307984235855627
     },
     {
-      "etf": "XLY",
-      "ma": 116.73358215332031,
-      "momentum": -0.015495342774258347,
-      "pct_from_ma": 0.01633135213673298,
-      "price": 118.63999938964844,
-      "realized_vol": 0.2490272133218825,
-      "sector": "ConsumerDiscretionary",
+      "etf": "XLC",
+      "ma": 113.6058003616333,
+      "momentum": -0.02127828695100098,
+      "pct_from_ma": -0.02012045740211199,
+      "price": 111.31999969482422,
+      "realized_vol": 0.24340895762128545,
+      "sector": "CommunicationServices",
       "status": "neutral",
-      "std": 2.557326550775788,
-      "trend_ma": 116.73358215332031,
-      "trend_state": "bullish",
-      "z": 0.92858694049767
-    },
-    {
-      "etf": "XLP",
-      "ma": 81.59714130401612,
-      "momentum": 0.006238578530408212,
-      "pct_from_ma": 0.04574744246407603,
-      "price": 85.33000183105469,
-      "realized_vol": 0.18970841017276524,
-      "sector": "ConsumerStaples",
-      "status": "hyped",
-      "std": 1.2375236956886084,
-      "trend_ma": 81.59714130401612,
-      "trend_state": "bullish",
-      "z": 0.9926859550602429
-    },
-    {
-      "etf": "XLRE",
-      "ma": 42.16641330718994,
-      "momentum": 0.12478668615970157,
-      "pct_from_ma": 0.07194321778447876,
-      "price": 45.20000076293945,
-      "realized_vol": 0.13785431772538911,
-      "sector": "RealEstate",
-      "status": "hyped",
-      "std": 0.7414941270811881,
-      "trend_ma": 42.16641330718994,
-      "trend_state": "bullish",
-      "z": 0.997312783266731
-    },
-    {
-      "etf": "XLV",
-      "ma": 151.71090660095214,
-      "momentum": 0.07437913363321913,
-      "pct_from_ma": 0.08205802298645737,
-      "price": 164.16000366210938,
-      "realized_vol": 0.17760148425215538,
-      "sector": "Healthcare",
-      "status": "warm",
-      "std": 6.839961069631649,
-      "trend_ma": 151.71090660095214,
-      "trend_state": "bullish",
-      "z": 1.3225016844578803
-    },
-    {
-      "etf": "XLF",
-      "ma": 52.5760071182251,
-      "momentum": 0.0928892680959772,
-      "pct_from_ma": 0.10316479282228941,
-      "price": 58.0,
-      "realized_vol": 0.1298600070660408,
-      "sector": "Financials",
-      "status": "warm",
-      "std": 2.277344919386831,
-      "trend_ma": 52.5760071182251,
-      "trend_state": "bullish",
-      "z": 1.7804023966066542
+      "std": 2.56166933360445,
+      "trend_ma": 113.6058003616333,
+      "trend_state": "bearish",
+      "z": 0.25360304391388244
     },
     {
       "etf": "XLI",
-      "ma": 167.08488342285156,
-      "momentum": 0.10887533626814716,
-      "pct_from_ma": 0.11530141019345641,
-      "price": 186.35000610351562,
-      "realized_vol": 0.1716846236159861,
+      "ma": 168.68822540283202,
+      "momentum": 0.044962130636007513,
+      "pct_from_ma": 0.07861705530270835,
+      "price": 181.9499969482422,
+      "realized_vol": 0.1764121376473396,
       "sector": "Industrials",
       "status": "hyped",
-      "std": 4.725205828080118,
-      "trend_ma": 167.08488342285156,
+      "std": 4.370713422083015,
+      "trend_ma": 168.68822540283202,
       "trend_state": "bullish",
-      "z": 1.7864139923000275
+      "z": 0.4172658126494125
+    },
+    {
+      "etf": "XLRE",
+      "ma": 42.33458549499512,
+      "momentum": 0.03981084279818781,
+      "pct_from_ma": 0.0627245112340975,
+      "price": 44.9900016784668,
+      "realized_vol": 0.1319364884512066,
+      "sector": "RealEstate",
+      "status": "hyped",
+      "std": 0.6709189313745677,
+      "trend_ma": 42.33458549499512,
+      "trend_state": "bullish",
+      "z": 0.5445384022725988
+    },
+    {
+      "etf": "XLY",
+      "ma": 116.73876613616943,
+      "momentum": 0.017475785097886387,
+      "pct_from_ma": 0.015857887341055532,
+      "price": 118.58999633789062,
+      "realized_vol": 0.24567004031366446,
+      "sector": "ConsumerDiscretionary",
+      "status": "neutral",
+      "std": 2.607283632761923,
+      "trend_ma": 116.73876613616943,
+      "trend_state": "bullish",
+      "z": 0.8487610582993876
+    },
+    {
+      "etf": "XLF",
+      "ma": 52.866897354125975,
+      "momentum": 0.10245012866764247,
+      "pct_from_ma": 0.08725880312607992,
+      "price": 57.47999954223633,
+      "realized_vol": 0.1089870375451598,
+      "sector": "Financials",
+      "status": "warm",
+      "std": 2.297415987996772,
+      "trend_ma": 52.866897354125975,
+      "trend_state": "bullish",
+      "z": 1.0615554973850927
     },
     {
       "etf": "XLB",
-      "ma": 48.74354990005493,
-      "momentum": 0.04678094941599764,
-      "pct_from_ma": 0.07993774555983091,
-      "price": 52.63999938964844,
-      "realized_vol": 0.20369434387392185,
+      "ma": 49.19067735671997,
+      "momentum": -0.0013048941983166973,
+      "pct_from_ma": 0.06768199341717085,
+      "price": 52.52000045776367,
+      "realized_vol": 0.19203750049675297,
       "sector": "Materials",
       "status": "hyped",
-      "std": 0.816430942047098,
-      "trend_ma": 48.74354990005493,
+      "std": 0.8629680352516308,
+      "trend_ma": 49.19067735671997,
       "trend_state": "bullish",
-      "z": 1.9800113868733122
+      "z": 1.3558105706016301
+    },
+    {
+      "etf": "XLP",
+      "ma": 82.00836818695069,
+      "momentum": -0.004646049984393552,
+      "pct_from_ma": 0.0552581746078169,
+      "price": 86.54000091552734,
+      "realized_vol": 0.15903884466771193,
+      "sector": "ConsumerStaples",
+      "status": "hyped",
+      "std": 1.3176408453124029,
+      "trend_ma": 82.00836818695069,
+      "trend_state": "bullish",
+      "z": 1.7169220575656232
+    },
+    {
+      "etf": "XLV",
+      "ma": 152.96240837097167,
+      "momentum": 0.12374058995833415,
+      "pct_from_ma": 0.1485174334449142,
+      "price": 175.67999267578125,
+      "realized_vol": 0.18276288724319867,
+      "sector": "Healthcare",
+      "status": "hyped",
+      "std": 6.974126377709773,
+      "trend_ma": 152.96240837097167,
+      "trend_state": "bullish",
+      "z": 2.41326747920882
+    },
+    {
+      "etf": "XLE",
+      "ma": 53.18648458480835,
+      "momentum": 0.17665086843670652,
+      "pct_from_ma": 0.19541651093095624,
+      "price": 63.58000183105469,
+      "realized_vol": 0.24102302270195644,
+      "sector": "Energy",
+      "status": "hyped",
+      "std": 2.6223056281864787,
+      "trend_ma": 53.18648458480835,
+      "trend_state": "bullish",
+      "z": 2.4268063536505147
     }
   ],
   "snapshot": {
     "config_name": "example_config.yaml",
-    "generated_at": "2026-08-06T05:34:49.409613+00:00",
+    "generated_at": "2026-08-20T04:40:30.456912+00:00",
     "is_example_config": true,
     "lookback_days": 900,
     "mode": "real"
@@ -3187,7 +3210,7 @@
   "suggestions": [
     {
       "action": "hold",
-      "delta_weight": 0.2588636363636363,
+      "delta_weight": 0.29886363636363633,
       "metadata": {},
       "reason": "raise or maintain cash buffer",
       "rule_ids": [
@@ -3199,7 +3222,7 @@
       "action": "trim",
       "delta_weight": -0.06545454545454543,
       "metadata": {},
-      "reason": "exceeds max single-name cap; over target weight; sector exceeds max cap; sector hyped (z=0.60)",
+      "reason": "exceeds max single-name cap; over target weight; sector exceeds max cap; sector hyped (z=-0.04)",
       "rule_ids": [
         "OVER_TARGET",
         "SECTOR_CAP",
@@ -3212,7 +3235,7 @@
       "action": "trim",
       "delta_weight": -0.05454545454545453,
       "metadata": {},
-      "reason": "over target weight; sector exceeds max cap; sector hyped (z=0.60)",
+      "reason": "over target weight; sector exceeds max cap; sector hyped (z=-0.04)",
       "rule_ids": [
         "OVER_TARGET",
         "SECTOR_CAP",
@@ -3224,7 +3247,7 @@
       "action": "trim",
       "delta_weight": -0.04999999999999999,
       "metadata": {},
-      "reason": "over target weight; sector exceeds max cap; sector hyped (z=0.60)",
+      "reason": "over target weight; sector exceeds max cap; sector hyped (z=-0.04)",
       "rule_ids": [
         "OVER_TARGET",
         "SECTOR_CAP",
@@ -3236,10 +3259,11 @@
       "action": "trim",
       "delta_weight": -0.036363636363636355,
       "metadata": {},
-      "reason": "sector exceeds max cap; sector hyped (z=0.60)",
+      "reason": "sector exceeds max cap; sector hyped (z=-0.04); trailing-stop triggered",
       "rule_ids": [
         "SECTOR_CAP",
-        "SECTOR_HYPED"
+        "SECTOR_HYPED",
+        "TRAILING_STOP"
       ],
       "ticker": "AVGO"
     },
@@ -3247,17 +3271,38 @@
       "action": "trim",
       "delta_weight": -0.035,
       "metadata": {},
-      "reason": "stop-loss triggered",
+      "reason": "sector hyped (z=2.41); stop-loss triggered",
       "rule_ids": [
+        "SECTOR_HYPED",
         "STOP_LOSS"
       ],
       "ticker": "UNH"
     },
     {
       "action": "trim",
+      "delta_weight": -0.02,
+      "metadata": {},
+      "reason": "sector hyped (z=2.41)",
+      "rule_ids": [
+        "SECTOR_HYPED"
+      ],
+      "ticker": "JNJ"
+    },
+    {
+      "action": "trim",
+      "delta_weight": -0.02,
+      "metadata": {},
+      "reason": "sector hyped (z=2.43)",
+      "rule_ids": [
+        "SECTOR_HYPED"
+      ],
+      "ticker": "XOM"
+    },
+    {
+      "action": "trim",
       "delta_weight": -0.0175,
       "metadata": {},
-      "reason": "sector hyped (z=0.99)",
+      "reason": "sector hyped (z=1.72)",
       "rule_ids": [
         "SECTOR_HYPED"
       ],

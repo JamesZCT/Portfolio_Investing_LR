@@ -1,8 +1,36 @@
 {
-  "generated_at": "2026-08-06T05:35:30.604521+00:00",
+  "generated_at": "2026-08-20T04:41:13.472120+00:00",
   "market": "us",
   "retention_runs": 120,
   "runs": [
+    {
+      "forecast_bias": "neutral",
+      "generated_at": "2026-08-20T04:41:13.472120+00:00",
+      "information_sign_count": 14,
+      "information_signs_status": "available",
+      "investment_posture": "balanced",
+      "llm_status": "llm_generated",
+      "market": "us",
+      "news_article_count": 36,
+      "price_as_of": "2026-08-19",
+      "research_overlay_note_count": 0,
+      "research_overlay_status": "empty",
+      "sentiment_label": "neutral",
+      "top_themes": [
+        {
+          "count": 25,
+          "theme": "general market"
+        },
+        {
+          "count": 7,
+          "theme": "rates / inflation"
+        },
+        {
+          "count": 3,
+          "theme": "AI / semiconductors"
+        }
+      ]
+    },
     {
       "forecast_bias": "neutral",
       "generated_at": "2026-08-06T05:35:30.604521+00:00",
