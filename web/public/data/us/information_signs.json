@@ -4,6 +4,20 @@
       "category": "market commentary",
       "decision_use": "information_only",
       "portfolio_weight": 0.0,
+      "published": "2026-08-21T09:02:02+00:00",
+      "signal": "mixed",
+      "source": "Lance Roberts / RIA",
+      "source_tier": "commentary",
+      "title": "Normal Interest Rates: What The Debt Panic Gets Wrong",
+      "unit": null,
+      "url": "https://realinvestmentadvice.com/resources/blog/normal-interest-rates-what-the-debt-panic-gets-wrong/",
+      "value": null,
+      "why_it_matters": "Macro commentary provides a scenario to compare with primary economic data and the portfolio's rate sensitivity."
+    },
+    {
+      "category": "market commentary",
+      "decision_use": "information_only",
+      "portfolio_weight": 0.0,
       "published": "2026-08-17T09:35:39+00:00",
       "signal": "mixed",
       "source": "Lance Roberts / RIA",
@@ -55,29 +69,57 @@
       "url": "https://realinvestmentadvice.com/resources/blog/earnings-drive-both-bull-bear-markets/",
       "value": null,
       "why_it_matters": "Commentary supplies a research hypothesis and watch items; it is not independent evidence for changing portfolio weights."
-    },
-    {
-      "category": "market commentary",
-      "decision_use": "information_only",
-      "portfolio_weight": 0.0,
-      "published": "2026-08-08T09:58:56+00:00",
-      "signal": "mixed",
-      "source": "Lance Roberts / RIA",
-      "source_tier": "commentary",
-      "title": "AI Narrative Risk: The Hyperscaler Story Changes Again.",
-      "unit": null,
-      "url": "https://realinvestmentadvice.com/resources/blog/ai-narrative-risk-the-cost-of-trading-the-story/",
-      "value": null,
-      "why_it_matters": "Technical and positioning commentary can identify conditions to test against current price trend, drawdown, and concentration rules."
     }
   ],
   "decision_policy": {
     "portfolio_weight": 0.0,
     "rule": "Information signs may explain conditions and create review questions, but they do not change target weights, trade instructions, or risk limits. Any future influence must be explicit, bounded, and recorded with a reason."
   },
-  "generated_at": "2026-08-20T04:40:41.588728+00:00",
+  "generated_at": "2026-08-21T15:21:16.524490+00:00",
   "market": "us",
   "primary_signs": [
+    {
+      "category": "monetary policy / regulation",
+      "decision_use": "information_only",
+      "portfolio_weight": 0.0,
+      "published": "2026-08-20T20:00:00+00:00",
+      "signal": "event",
+      "source": "Federal Reserve",
+      "source_tier": "primary",
+      "title": "Federal Reserve Board announces approval of application by National Westminster Bank Plc",
+      "unit": null,
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/orders20260820a.htm",
+      "value": null,
+      "why_it_matters": "Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting."
+    },
+    {
+      "category": "monetary policy / regulation",
+      "decision_use": "information_only",
+      "portfolio_weight": 0.0,
+      "published": "2026-08-20T15:00:00+00:00",
+      "signal": "event",
+      "source": "Federal Reserve",
+      "source_tier": "primary",
+      "title": "Federal Reserve Board issues enforcement action with SouthPoint Bancshares, Inc. and announces termination of enforcement action with Deutsche Bank AG, DB USA Corporation, and Deutsche Bank AG New York Branch",
+      "unit": null,
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20260820b.htm",
+      "value": null,
+      "why_it_matters": "Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting."
+    },
+    {
+      "category": "monetary policy / regulation",
+      "decision_use": "information_only",
+      "portfolio_weight": 0.0,
+      "published": "2026-08-20T15:00:00+00:00",
+      "signal": "event",
+      "source": "Federal Reserve",
+      "source_tier": "primary",
+      "title": "Federal Reserve Board issues enforcement actions with former employee of Regions Bank and former employee of United Community Bank",
+      "unit": null,
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20260820a.htm",
+      "value": null,
+      "why_it_matters": "Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting."
+    },
     {
       "category": "monetary policy / regulation",
       "decision_use": "information_only",
@@ -93,66 +135,24 @@
       "why_it_matters": "Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting."
     },
     {
-      "category": "monetary policy / regulation",
-      "decision_use": "information_only",
-      "portfolio_weight": 0.0,
-      "published": "2026-08-13T15:00:00+00:00",
-      "signal": "event",
-      "source": "Federal Reserve",
-      "source_tier": "primary",
-      "title": "Federal Reserve Board issues enforcement action with former employee of Regions Bank",
-      "unit": null,
-      "url": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20260813a.htm",
-      "value": null,
-      "why_it_matters": "Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting."
-    },
-    {
-      "category": "monetary policy / regulation",
-      "decision_use": "information_only",
-      "portfolio_weight": 0.0,
-      "published": "2026-08-04T20:30:00+00:00",
-      "signal": "event",
-      "source": "Federal Reserve",
-      "source_tier": "primary",
-      "title": "Federal Reserve Board announces approval of the application by Coastal Bend Bancshares, Inc.",
-      "unit": null,
-      "url": "https://www.federalreserve.gov/newsevents/pressreleases/orders20260804c.htm",
-      "value": null,
-      "why_it_matters": "Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting."
-    },
-    {
-      "category": "monetary policy / regulation",
-      "decision_use": "information_only",
-      "portfolio_weight": 0.0,
-      "published": "2026-08-04T20:30:00+00:00",
-      "signal": "event",
-      "source": "Federal Reserve",
-      "source_tier": "primary",
-      "title": "Federal Reserve Board announces approval of the application by FS Bancorp, Inc.",
-      "unit": null,
-      "url": "https://www.federalreserve.gov/newsevents/pressreleases/orders20260804b.htm",
-      "value": null,
-      "why_it_matters": "Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting."
-    },
-    {
       "category": "rates / financial conditions",
       "decision_use": "information_only",
       "portfolio_weight": 0.0,
-      "published": "2026-08-18",
+      "published": "2026-08-19",
       "signal": "falling",
       "source": "FRED / Federal Reserve Bank of St. Louis",
       "source_tier": "primary",
       "title": "10-Year Treasury Yield",
       "unit": "%",
       "url": "https://fred.stlouisfed.org/series/DGS10",
-      "value": 4.71,
-      "why_it_matters": "Long-term yields affect equity valuation, borrowing costs, and the relative appeal of bonds versus stocks. Latest change: -0.01 percentage points."
+      "value": 4.65,
+      "why_it_matters": "Long-term yields affect equity valuation, borrowing costs, and the relative appeal of bonds versus stocks. Latest change: -0.06 percentage points."
     },
     {
       "category": "rates / policy expectations",
       "decision_use": "information_only",
       "portfolio_weight": 0.0,
-      "published": "2026-08-18",
+      "published": "2026-08-19",
       "signal": "unchanged",
       "source": "FRED / Federal Reserve Bank of St. Louis",
       "source_tier": "primary",
@@ -194,14 +194,14 @@
       "category": "rates / growth expectations",
       "decision_use": "information_only",
       "portfolio_weight": 0.0,
-      "published": "2026-08-18",
+      "published": "2026-08-19",
       "signal": "positive",
       "source": "FRED / U.S. Treasury",
       "source_tier": "primary",
       "title": "10Y minus 2Y Treasury Curve",
       "unit": "percentage points",
       "url": "https://fred.stlouisfed.org/graph/?g=1K7YE",
-      "value": 0.52,
+      "value": 0.46,
       "why_it_matters": "The yield-curve shape is a macro context indicator for expected growth and policy, not a market-timing rule."
     }
   ],
@@ -210,14 +210,14 @@
   "source_status": [
     {
       "item_count": 5,
-      "latest_published": "2026-08-17T09:35:39+00:00",
+      "latest_published": "2026-08-21T09:02:02+00:00",
       "source": "Lance Roberts / RIA",
       "status": "ok",
       "url": "https://realinvestmentadvice.com/feed/"
     },
     {
       "item_count": 4,
-      "latest_published": "2026-08-19T18:00:00+00:00",
+      "latest_published": "2026-08-20T20:00:00+00:00",
       "source": "Federal Reserve",
       "status": "ok",
       "url": "https://www.federalreserve.gov/feeds/press_all.xml"
