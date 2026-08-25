@@ -1,8 +1,36 @@
 {
-  "generated_at": "2026-08-21T15:22:17.951951+00:00",
+  "generated_at": "2026-08-25T21:43:19.217611+00:00",
   "market": "hk",
   "retention_runs": 120,
   "runs": [
+    {
+      "forecast_bias": "neutral",
+      "generated_at": "2026-08-25T21:43:19.217611+00:00",
+      "information_sign_count": 14,
+      "information_signs_status": "available",
+      "investment_posture": "balanced",
+      "llm_status": "llm_generated",
+      "market": "hk",
+      "news_article_count": 36,
+      "price_as_of": "2026-08-24",
+      "research_overlay_note_count": 0,
+      "research_overlay_status": "empty",
+      "sentiment_label": "neutral",
+      "top_themes": [
+        {
+          "count": 23,
+          "theme": "China / policy"
+        },
+        {
+          "count": 10,
+          "theme": "general market"
+        },
+        {
+          "count": 8,
+          "theme": "AI / semiconductors"
+        }
+      ]
+    },
     {
       "forecast_bias": "neutral",
       "generated_at": "2026-08-21T15:22:17.951951+00:00",
