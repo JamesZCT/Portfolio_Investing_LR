@@ -75,9 +75,23 @@
     "portfolio_weight": 0.0,
     "rule": "Information signs may explain conditions and create review questions, but they do not change target weights, trade instructions, or risk limits. Any future influence must be explicit, bounded, and recorded with a reason."
   },
-  "generated_at": "2026-11-19T00:47:21.201076+00:00",
+  "generated_at": "2026-11-19T22:43:21.585310+00:00",
   "market": "us",
   "primary_signs": [
+    {
+      "category": "monetary policy / regulation",
+      "decision_use": "information_only",
+      "portfolio_weight": 0.0,
+      "published": "2026-11-19T16:00:00+00:00",
+      "signal": "event",
+      "source": "Federal Reserve",
+      "source_tier": "primary",
+      "title": "Federal Reserve Board issues enforcement action with former employee of First Security Bancorp",
+      "unit": null,
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261119a.htm",
+      "value": null,
+      "why_it_matters": "Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting."
+    },
     {
       "category": "monetary policy / regulation",
       "decision_use": "information_only",
@@ -121,46 +135,32 @@
       "why_it_matters": "Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting."
     },
     {
-      "category": "monetary policy / regulation",
-      "decision_use": "information_only",
-      "portfolio_weight": 0.0,
-      "published": "2026-11-12T17:45:00+00:00",
-      "signal": "event",
-      "source": "Federal Reserve",
-      "source_tier": "primary",
-      "title": "Federal Reserve announces revised tentative schedule of Federal Open Market Committee meetings in 2027",
-      "unit": null,
-      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261112a.htm",
-      "value": null,
-      "why_it_matters": "Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting."
-    },
-    {
       "category": "rates / financial conditions",
       "decision_use": "information_only",
       "portfolio_weight": 0.0,
-      "published": "2026-11-17",
+      "published": "2026-11-18",
       "signal": "falling",
       "source": "FRED / Federal Reserve Bank of St. Louis",
       "source_tier": "primary",
       "title": "10-Year Treasury Yield",
       "unit": "%",
       "url": "https://fred.stlouisfed.org/series/DGS10",
-      "value": 5.1,
-      "why_it_matters": "Long-term yields affect equity valuation, borrowing costs, and the relative appeal of bonds versus stocks. Latest change: -0.02 percentage points."
+      "value": 5.07,
+      "why_it_matters": "Long-term yields affect equity valuation, borrowing costs, and the relative appeal of bonds versus stocks. Latest change: -0.03 percentage points."
     },
     {
       "category": "rates / policy expectations",
       "decision_use": "information_only",
       "portfolio_weight": 0.0,
-      "published": "2026-11-17",
-      "signal": "falling",
+      "published": "2026-11-18",
+      "signal": "unchanged",
       "source": "FRED / Federal Reserve Bank of St. Louis",
       "source_tier": "primary",
       "title": "2-Year Treasury Yield",
       "unit": "%",
       "url": "https://fred.stlouisfed.org/series/DGS2",
       "value": 4.8,
-      "why_it_matters": "The 2-year yield is sensitive to expected Federal Reserve policy and near-term financial conditions. Latest change: -0.03 percentage points."
+      "why_it_matters": "The 2-year yield is sensitive to expected Federal Reserve policy and near-term financial conditions. Latest change: +0.00 percentage points."
     },
     {
       "category": "labor market",
@@ -194,14 +194,14 @@
       "category": "rates / growth expectations",
       "decision_use": "information_only",
       "portfolio_weight": 0.0,
-      "published": "2026-11-17",
+      "published": "2026-11-18",
       "signal": "positive",
       "source": "FRED / U.S. Treasury",
       "source_tier": "primary",
       "title": "10Y minus 2Y Treasury Curve",
       "unit": "percentage points",
       "url": "https://fred.stlouisfed.org/graph/?g=1K7YE",
-      "value": 0.3,
+      "value": 0.27,
       "why_it_matters": "The yield-curve shape is a macro context indicator for expected growth and policy, not a market-timing rule."
     }
   ],
@@ -217,7 +217,7 @@
     },
     {
       "item_count": 4,
-      "latest_published": "2026-11-18T19:00:00+00:00",
+      "latest_published": "2026-11-19T16:00:00+00:00",
       "source": "Federal Reserve",
       "status": "ok",
       "url": "https://www.federalreserve.gov/feeds/press_all.xml"

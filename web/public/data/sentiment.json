@@ -1,90 +1,244 @@
 {
   "articles": [
     {
-      "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOQ2dEa1hYbXZuV0gxR1h0RHFYSmEwXzFiTXA3RWFHUUpOZGxkUllEN080TzZhQVFDS09leGJva1VfeE8xaC1vV1NCSFQ4MmlPS0RtdDNfVTFNR0VSTDVUbDhHTldqaGg4T0FXSTU0Si13Z2tLaDFocGc3NlItUXRVekFiUklGR1JpZzBJWl9yY2k5UTFmRjdocXdFWFBqZWkxNEx0TXVUVXhUSlI1TkhNNUtsZ3Uwem0wNDk0WHVSVEM3bjVETlp0YkRYeUxZWXkzN1h6Wk8tT09TdUFlZlhZ?oc=5",
-      "matched_terms": [],
-      "published": "2026-11-18T09:06:02+00:00",
-      "sentiment_label": "neutral",
-      "sentiment_score": 0.0,
-      "source": "The Motley Fool",
-      "themes": [
-        "rates / inflation",
-        "earnings"
-      ],
-      "ticker": "MARKET",
-      "title": "The Latest Federal Reserve Interest Rate Forecast Points to 4 Hikes by mid-September -- and That's Terrible News for Wall Street - The Motley Fool"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5IWXhxT19LOGhnTFRsRDZXVGRrR0dDWEctMkhndGtmMEpLMEdDTWhVVzFxRkRSX0ZqbnNVSXJnNm1tWmxkdjQ5Z1BXQmZtVlVNamdjWW02dWV4Q1hwX3ZZak8tRjE5N0tM?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE14U2NHa0M5c3U5aU1rSFlveXQ5SU04X0Jjb29RdVBJeXJ4OVQzRl9zVkMzNVN6SVJZREJYOVJycWVia2hlamstS3FGbDZnY293TTZTUnZGSVJBY1IyUlhWejUwZUp2c3lVbFJsZVFabVMxMDhtNUHSAXtBVV95cUxPYjZZVENYd3lLenZiVHE3azkwQXo1ejJvU2doaVMtSThZckRKTTNCU1pPdXJUWGdhRDdCaTNaczRTanF1VUczcUt3THIteXB3VFdkM0JzSUJfZ3UzNVpRQi1NSS1SajdaMkxwdk1nanhCaFdJZ3VzUGxhSUE?oc=5",
       "matched_terms": [
-        "ai",
-        "risk"
+        "ai"
       ],
-      "published": "2026-11-16T17:18:31+00:00",
-      "sentiment_label": "neutral",
-      "sentiment_score": 0.0,
-      "source": "Axios",
+      "published": "2026-11-19T21:51:00+00:00",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.16,
+      "source": "CNBC",
       "themes": [
-        "AI / semiconductors",
-        "rates / inflation"
+        "AI / semiconductors"
       ],
       "ticker": "MARKET",
-      "title": "Fed's Warsh sees risk of stock bust if AI boom disappoints - Axios"
+      "title": "Anthropic closes first day at $97.17 per share in landmark moment for AI: IPO live updates - CNBC"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOaVRqdWxHZTVJYU9nTnNEUFFBZWVVaG11UTdUYmdzUHFSMjVWYTY0b2o0NG5OTE9mcTZ5M3dQc2swdXE0aGpsTnk0THVka0poUi1uMTdfMkF3TGtWTGgtYU9KZm5DdjBrOWp3RDd6bmpFejdwVWxyb3pEYWxjZzFKTk5MME10LTdf?oc=5",
-      "matched_terms": [],
-      "published": "2026-11-16T11:00:00+00:00",
-      "sentiment_label": "neutral",
-      "sentiment_score": 0.0,
-      "source": "Barron's",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxONFhTcEs0ZXJTOXhCWUVEQlBXR3BaeFdLVjdiNkNXdVFrNWtaVjFJRVc0cTcyRUJBRXBqV0JZUHUza3I0TndGYzZRX3N3eU4zR3plNl9wUkR5VU1FQ0phSjZEODlXYjJYQk5QaVRoTFotemhuTWFwSkhrYzFfNE1tM0JJNlBFY1BmNFNhS0FTeURyaGtHM2xJb3VoRE5LY0I1SVUxeko5dDJvRGlGam1ITllSRFU1OEV6T0tF?oc=5",
+      "matched_terms": [
+        "ai"
+      ],
+      "published": "2026-11-19T21:38:51+00:00",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.16,
+      "source": "Reuters",
       "themes": [
-        "rates / inflation"
+        "AI / semiconductors"
       ],
       "ticker": "MARKET",
-      "title": "Stocks\u2019 New Headache? The Fed Could Raise Rates Well Into 2027 - Barron's"
+      "title": "Wall Street ends sharply lower as Anthropic's debut fails to revive AI fervor - Reuters"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOVFhzTTR4MFlnY1R1X3AxQ2pNOTBrZXNRaTZmOFNndTdZY003Q3Z3ZzJXOHpnUlU2VlNvS2ZJMUFpSm5EdUdVZnk5RkJZR0dFM1lkYjFrbWpDb1g5THFqSkl0Umo1YmpEdzNLdENWd1pnT21nT25yb1o5U3ZldnlPVG41VmFEQmo1ZlRiQ0N5VS1iVW9OVGQ1VDRDQ3lYaFZlUGpjeUE3NA?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNMHJMMGxuVjE0QlBiMjdlLVg4Snd2RjdIVmxmMlFGX3E1cEpBS3BHaEQ0YnpUb19jc2lXMG9RQk9nSk8xSVFmN2d4VFRoSC1nQkJUdk5DTF9MWlVqRklPelgyUGpNREtJQUpEd3BTZ3A0VmVZdGRZZ21mT0x5bEdhUkd1OVVKZHNLUkRqdWY3M3VxOHBu?oc=5",
+      "matched_terms": [
+        "ai"
+      ],
+      "published": "2026-11-18T22:07:41+00:00",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.16,
+      "source": "Bloomberg.com",
+      "themes": [
+        "AI / semiconductors"
+      ],
+      "ticker": "MARKET",
+      "title": "Stocks Fall as Anthropic Debut Not an AI All-Clear: Markets Wrap - Bloomberg.com"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5iQy1ONS05blpQMVlFOXg4VFdqQzVQbm1MNWgxUTM5WHpkWWlienZhUGRPLTJvRDFiWmQ2QmNHQ3lCVG1CYjNILXQ1V3BGbHNKTmNFaXcyVWN5c1o1cHBrNWF6YlJQSE9KT0FpU1F3NDVacnBMZ0pNQzkyYzM3QQ?oc=5",
       "matched_terms": [],
-      "published": "2026-11-18T12:39:10+00:00",
+      "published": "2026-11-19T20:56:08+00:00",
       "sentiment_label": "neutral",
       "sentiment_score": 0.0,
-      "source": "\u5bcc\u9014\u725b\u725b",
+      "source": "Stocks Down Under",
       "themes": [
-        "AI / semiconductors",
-        "China / policy"
+        "general market"
       ],
-      "ticker": "NVDA",
-      "title": "U.S. Stock Preview | The Federal Reserve will release the minutes of its monetary policy meeting at 3:00 a.m.; Democrats are preparing a data center power reform plan; Musk says SpaceX will not sell any computing power to OpenAI; NVIDIA rose more than 3 - \u5bcc\u9014\u725b\u725b"
+      "ticker": "MARKET",
+      "title": "Why Is the US Stock Market Crashing Today? Dow Drops 1,000 Points Despite Anthropic IPO - Stocks Down Under"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNZ3loNDRFRS1qcXRkNU4zd2dEbEt0VEpENld4UU9ES3pEOXNhMzkteGVfYXVaaHc1ZUZqRWtwckFiT1NfX3BJTHZzQmtGMUV0MmwzT1p0a1FsNFUxQTZMSmlWWVVqa25FNlNxMXFBM1BRc2E3S2hxYnc3WEdiWThDRzRfNEZfUkg0ZVAxMllvdzJmTlZiNUo3WlRjRQ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBwN3RZUUlsZ2xnX2REUk5uSEh0RTdScHBHQVd5X1J2dk1Eams5c1pDaHlWM3pJNkl3MXR0ZzR3QzRIOWY3a24zbTZpb21qVlRZMHlVYjMtTTNyOWs1cmozWHNEYXpLS1Z6RWtYOElVRmI1NFA0MGpVYw?oc=5",
+      "matched_terms": [
+        "ai"
+      ],
+      "published": "2026-11-18T16:48:38+00:00",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.16,
+      "source": "CNN",
+      "themes": [
+        "AI / semiconductors"
+      ],
+      "ticker": "MARKET",
+      "title": "Anthropic\u2019s Wall Street debut marks a new chapter for AI - CNN"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQUXF4elZiRmtpU0hWaElPNjVGbHBuMkxPaDJCSzlMREtmUWs5dThVN3RCRUJWR2R6dEhGaGtibWY5bnRrMFpnRVRlb2hEazc0ekVOQjBVMkY4RVQ1U1pMYWNYdFdKQTN5a2tRM0hfeGVTNXJVeW1talprVGRjRllJZ0xxQzVtV09ZZmpDcGZIU3U3X2VZMXZCcWZDYXBGY2FrUkY1NXlwblRTamJpeHA4Rl9yOUJ6RlU2QkZXSm1PV2dBRF9vSjd5eTBjRTZmLUFBdlpCclVya2Zfdw?oc=5",
       "matched_terms": [],
-      "published": "2026-11-16T09:56:42+00:00",
+      "published": "2026-11-18T22:53:54+00:00",
       "sentiment_label": "neutral",
       "sentiment_score": 0.0,
       "source": "Yahoo Finance",
       "themes": [
-        "AI / semiconductors",
-        "earnings"
+        "AI / semiconductors"
       ],
       "ticker": "NVDA",
-      "title": "US Stock Futures Decline Ahead of Nvidia Earnings as Investors Await Federal Reserve Signals: Dow Jones, S&P, Nasdaq, Wall Street - Yahoo Finance"
+      "title": "Stock market today: Dow, S&P 500 slip ahead of Anthropic IPO, Nvidia stock extends decline - Yahoo Finance"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNUU11cWRxVVJseEhRLWhKMTRUcGxCWVQ2aDU0VWhsb29hQS1fR0N6N0lmWWY1Y3lIZGlMTnItSEhCdHhLNzlRdnpBUk8xS0dCMVlvY3k0ZkhKeDF1ZGp4UWJTaFJOQW5SRGhNTDlkV09BUF9TcFBMSTRPTFZyRlhGSk4wakt6TG1HRHdkUUxCQURQLUdrLWFNRFdfTE9hcW5oNXJCTW1iTjY3T1R6Ukt6clNWaDZVN3RGSzlTZnlIT1RsNGpxdXBRQXFlT3hKY0gtdjAw?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9haDBGN05NTm5JVm5PcFdVQ3hJV3Q3N1BQeUJfaGhhbkluOGpOWW1sU2dWb2ZtY3dEX2VTWHN5S2RaSkhWQTgxZFJ0UEZFTkVnaTRoZFQtZV9DelB0SkdBdUhSckR2VWFmWmw4R2tWejJNMEhSaVpn0gF8QVVfeXFMTkFhZVJoMnczYWE3UFBMLTAzcmhienFUYjlqUmNXWURGd3dsamhpbkVhSmpheXBmdDVvYk11ellHMEtGcG1ZOXBUYmxBandtMTVWOVl5M1hGZUZMSERKb1lDR1IzZVN4eC1qWklncjZTc2tzVUJod1F3Uk83dw?oc=5",
+      "matched_terms": [
+        "ai",
+        "falls"
+      ],
+      "published": "2026-11-19T22:20:00+00:00",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.16,
+      "source": "CNBC",
+      "themes": [
+        "AI / semiconductors"
+      ],
+      "ticker": "MARKET",
+      "title": "Dow closes below 50,000; Nasdaq falls 2% as Anthropic IPO fails to resuscitate AI trade - CNBC"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPVmU0cXVPRUhwcDZpRkRudEI3bjNfMllQVEN3M09VWFNmQUJTck1UUE9mVERRbmFicElZMWxKVnd3UWpTNGY3R1JiZ0NnRnNBRHhLMkxkVC1vUWVOVzQ3NzcwMkoycTR0MC1LUnBfdUIyWl9OZE5xYnlVVmQ5bzdVZmdnVHFjUjh6dHZrbVVQdEFPaDNCUC1KSkZEMUlhcU9OeWFiWi10SGwxNTBpNE16aTd1MA?oc=5",
+      "matched_terms": [
+        "ai"
+      ],
+      "published": "2026-11-19T21:10:31+00:00",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.16,
+      "source": "Reuters",
+      "themes": [
+        "AI / semiconductors"
+      ],
+      "ticker": "MARKET",
+      "title": "Anthropic's blockbuster debut tests Wall Street's faith in AI boom - Reuters"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQLWJDTjBBalYwVHVpc0VxV1BwRE1xeUt1RWlLQ1VJdnJQRXNnb3p6MnFNbjRBV0s0TnlldW4wSVIycFRQeVNISWJ3VV9wMWdjX1ZndE1Tc24tNzc0anNYWjl0SVBsRDhSa0dVTWlyVVYxX0w5b2JhTFB0Tm9Vb2FwYVZubTU1SVJlcy0zMEpXOEM4ZlhiSU1QazdVQVlldw?oc=5",
       "matched_terms": [],
-      "published": "2026-11-18T21:18:31+00:00",
+      "published": "2026-11-16T08:00:00+00:00",
       "sentiment_label": "neutral",
       "sentiment_score": 0.0,
-      "source": "TradingKey",
+      "source": "BlackRock",
       "themes": [
-        "AI / semiconductors",
+        "general market"
+      ],
+      "ticker": "MARKET",
+      "title": "Weekly market commentary - BlackRock"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOOGc4dnJSVllYd1NGX1BjdExQSUhNcm1TS3l6amgySnpxcXItNXQtemp4bFNHT25uSktBNXBPaEVQb2hCNzk0RTNETWhvcm9Ibk90MjhUNU1PMlk4VV9JQmVwQVJoYVdwX1p1cTRSMUVGUF94V0lmOFh4ZmtuUmg3andfWS1RUjZ5cUpIbHAyV1RmSlNsTXdlSUxhal90Wm8?oc=5",
+      "matched_terms": [],
+      "published": "2026-11-19T10:20:00+00:00",
+      "sentiment_label": "neutral",
+      "sentiment_score": 0.0,
+      "source": "Business Insider",
+      "themes": [
+        "general market"
+      ],
+      "ticker": "MARKET",
+      "title": "Why Morgan Stanley Says the S&P 500 Is Poised to Jump 18% - Business Insider"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQT211blRHRDhRdERHczZlcXJSZExwQ25qZVc4RlN3RXFRcXc3bTdpcVE5TXRJZHJrWHhEUkdUS1FteExONlN2blk4ZUd5ZjlaNkxIYUltZ0x0VUxLZjVuLUotcmlrdFVKWUxXWUIzS2xhYUh3YWg0RVROS3pJbnJIMVVvV3BhYTNjU3QxRkRxVmVueUU3YUVrd2VjajhjeWh3bUo5WF9IdFVZYXVFUF82dkFBXy04VFR5S1ZtLUJKTjZBaDA2Mjl5OFMza1hLektHdFBPTG8wbTBEZUotNXFmaUVFdnhMVUJxVUE4?oc=5",
+      "matched_terms": [],
+      "published": "2026-11-17T13:36:42+00:00",
+      "sentiment_label": "neutral",
+      "sentiment_score": 0.0,
+      "source": "StoneX",
+      "themes": [
         "earnings"
       ],
+      "ticker": "MARKET",
+      "title": "S&P 500 forecast: Why US stocks have largely defied gravity and what could trigger a correction - StoneX"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPQ2ZUVmlOMEJMQk52VlRZdFFZbnRKRVhCZ1dLM0lqd25TLWxoT1lrLWtFRUZMZFVraWk1V01Fa3FucUNSR2w1Y0dGMFZVVUdja3NrVDBSYmdKMm9kZkM0NEpPMThVNXB4clVvRUUtQ0pfbWRwLVpDbEZzd0NzUXdaVjRTTzluUXF1MVV0NGdDTTVEb1JpTjloUmF0LXJxb281UU50UmJB?oc=5",
+      "matched_terms": [
+        "record"
+      ],
+      "published": "2026-11-19T15:33:34+00:00",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.27999999999999997,
+      "source": "FOREX.com",
+      "themes": [
+        "earnings"
+      ],
+      "ticker": "MARKET",
+      "title": "S&P500 Forecast: SPX jumps ahead of Anthropic\u2019s record IPO - FOREX.com"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQb2xLbG9kYWZ4ZVAzcHNTb25JdThjRkVrb0RWZGwyay1lQy1wOFNraTdWbXRveTJTUWU5TEh6cHhRWEwxVWlPOGowaHNISl9HdmtmSUFBYUJSWkhWa2J4R1hkWk9fcmRhbV9JSXB6bEJZTjN2bG43SktRYzljVmZpRUNZUGJ4akhDamY1WUQzZW5GUmRISFdEY3UyYy12M0ZNZXdqejJ1MWpGSTI0Y20wMHFBZ3hTc0NYNkZiOUx6Zw?oc=5",
+      "matched_terms": [],
+      "published": "2026-11-17T20:05:53+00:00",
+      "sentiment_label": "neutral",
+      "sentiment_score": 0.0,
+      "source": "CNBC",
+      "themes": [
+        "general market"
+      ],
+      "ticker": "MARKET",
+      "title": "Goldman Sachs revealed its outlook for 2027. Here\u2019s how much it sees the S&P 500 gaining - CNBC"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOSF9vRy0ySndqOHR6R3hONm1tYlRMWkQxRW9CbVRNS2p4VzFKdDV1RnJUV2lXLVZlUEMwNFZrcWR0ZmJNZVAyRmZ3VWgxYkVsUUNDem1EVFVVejZERzloWUtvSm5kTzdIOFdGaG8tZjRScllDcXlZU2JWWFFKYk5xME5B?oc=5",
+      "matched_terms": [],
+      "published": "2026-11-17T15:13:26+00:00",
+      "sentiment_label": "neutral",
+      "sentiment_score": 0.0,
+      "source": "Yahoo Finance UK",
+      "themes": [
+        "general market"
+      ],
+      "ticker": "MARKET",
+      "title": "Stock market outlook for 2027: 5 key predictions for investors - Yahoo Finance UK"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOT21BbEYyM2ZUU1h5XzV5R2NBY1pOa056MUc5Q0xqbTFwYzg4cFFrMnk5bVBLcm4wQlhGb3lqTUJGYnlzLWRBZ0x5VXVJNWpHU0hIaEFxM2YtV1JJVHJxVTR4YUQtT3FzNXpWeTNYb29fTi1oQ295aDdyQXZlMjlXVmRMNkxBTTdtZjFKcHg5c1JKb0N5YTQzN0QtY2Y3YTF6R0R3bnpveHpjX25KRFBIVWJtbi1BTVE?oc=5",
+      "matched_terms": [
+        "growth"
+      ],
+      "published": "2026-05-28T07:00:00+00:00",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.27999999999999997,
+      "source": "Goldman Sachs",
+      "themes": [
+        "earnings"
+      ],
+      "ticker": "MARKET",
+      "title": "The S&P 500 Is Forecast to Climb as Earnings Growth Powers Stocks Higher - Goldman Sachs"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBDQk1lMmROWVFYOVh4TU9YcGIxelQ5ZjdjbnptNXdWYm14ZmJkQ3ZSTHVaUWp2cF9vWnZXNkJBUmxFbkNKSnFKSVdnWm9Ibk5tM19vaF9Lal9uTzNvWElzSVZycTl3ZmxjMjBhdVFSYUFjQk9KMVE?oc=5",
+      "matched_terms": [
+        "cuts"
+      ],
+      "published": "2026-11-19T04:55:00+00:00",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.32,
+      "source": "BigGo Finance",
+      "themes": [
+        "general market"
+      ],
+      "ticker": "MARKET",
+      "title": "UBS Sets S&P 500 Target of 8,200 by End-2027, Implying Roughly 12% Upside, But Cuts Rating to Neutral - BigGo Finance"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQcmFUblpod1pHLTBLVmtqRnlsM19kQ19zRlBSTHoxOGoySkF4R1NTdEt6YkJ4ZC1qaVlDa3dxNEgxTXJBLW9lblhYc3N6YkdwSG95dk1jdXI3UHpBcm5wT1VaYmJ0Nk5MWFFsM0lEWFBKNi1jSGtSU3M3aEplOFVMTUJ2a2lvNENkcGF0WXFobHZ0Q1VLalRCRmI1UngyOS1KM1NyaVJRMA?oc=5",
+      "matched_terms": [],
+      "published": "2026-11-17T10:12:02+00:00",
+      "sentiment_label": "neutral",
+      "sentiment_score": 0.0,
+      "source": "The Motley Fool",
+      "themes": [
+        "AI / semiconductors"
+      ],
       "ticker": "NVDA",
-      "title": "US Stocks Diverge as Nasdaq Rises 0.4%; Select Tech Stocks Gain as Nvidia Drops Nearly 3% Post-Earnings While AMD Surges 5% - TradingKey"
+      "title": "The Stock Market Is Primed for an Explosive Week. Nvidia and the Federal Reserve May Decide What Comes Next. - The Motley Fool"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOYTBzZEUwUk5XQmpmbTV4WWhEdWp2dGNxaGlJWE03aGFUQk13VFZVTjhUZ2dGOUVOSXFfOWR2X3FERkg3bDVXQmJfa3lIY2dXZ2hoUFgtNE9yWmY3SmprbEZUcmdCRVJfb3otWEpSTEJISkNNQTZBaUgxaUZ0cXF4Mmt5WFBieTQ5UlJjOVJUMFhlU3pZeW9Wc1FCTUNoTDBiR0FWczlJTy1sZGljdC1pSUJRSy04cmhfQ1kzOVV2UDhHMHIwSUh6amNiVHBGNTBW?oc=5",
@@ -102,6 +256,34 @@
       "title": "Downside Risk to the Stock Market and Consumption - Federal Reserve Bank of Atlanta"
     },
     {
+      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQcV83dkp4UXZzWDF1T0tqQWpEdFFpQkRscU50R1JoWDlBS2hjMk5fVm1GQWFuQWZ5eHJYdHdkNG13cW1QWTRfeW81VV9YOXh1RXJ5cHVnVHZaUXhCcnBXdmRqbXpNYjIwMDlxTTV0dHhBUk1VRWk4MGtZOWNoQzlNSkM4NDRwRDdWMUZTZVIwY3pCQTBSbk1FRk1MNVhMOXpJSTNV?oc=5",
+      "matched_terms": [],
+      "published": "2026-11-19T16:31:05+00:00",
+      "sentiment_label": "neutral",
+      "sentiment_score": 0.0,
+      "source": "Securities.io",
+      "themes": [
+        "general market"
+      ],
+      "ticker": "MARKET",
+      "title": "Federal Reserve Board Fines Former First Security Bancorp Director $100,000 - Securities.io"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPejd0TzFKV2tpM1VPQXRXYU9nZlFQUkdjQ2VnSWpDWWFYOUZMcEl2ZEdEaHpyaVhockZwNjR4Ump3WHNFalNkTF9LVmd5b0NVYmNsMW1SeTVSMnRZM1lvVnZhWUJYX04xRXF5OXBzMl9LVk5WRFRyRUlndlNRbW1Zc19uWm4xeG1ieXBBMXd1NzRlRHJyckdXNm5jV3NnLWRFWkVPd1hJWjYyMVpUbXVNcEVKWFBlWURSYlRPZVZIREdIZw?oc=5",
+      "matched_terms": [
+        "risk"
+      ],
+      "published": "2026-06-02T07:00:00+00:00",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.16,
+      "source": "Federal Reserve Bank of Boston",
+      "themes": [
+        "macro risk"
+      ],
+      "ticker": "MARKET",
+      "title": "How U.S. Bank Stock Prices Respond to Geopolitical Risk - Federal Reserve Bank of Boston"
+    },
+    {
       "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPV1BJTVFELVMzTzdSNWZydElEbzRtUDFsQ2RET0dab0lTM3VNZDVSVHgxeVdDbDhENmktSk5IbVlXVHkwSjZaOURlTUkza0dVSXBISTV4eTFUbmZyR3JwcU9aTE9jbDFKdnphSkdLbkdndjg0eUctNUI4MGczTEJEV1I4ZUduWWVIY1FZeEpfMVB2SzJILXJqcGFvazVLY29ZU2JSLWJKWWdCRGp1OUZ0QlBGSHhQSlM5?oc=5",
       "matched_terms": [],
       "published": "2026-11-17T22:06:24+00:00",
@@ -115,63 +297,62 @@
       "title": "Gold struggles near one-year lows, silver rebounds as stocks slide, Fed hike bets persist - Kitco PM Report - Kitco"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNa3QycmhSUEZ3dG5uaUxiREtjYTU4czJuY3JoNWZKbUhYTnZpTS1TQ1VmNHBkMVBKcFh5VUJ1dGZaTDUyV0lyVE9YVEtjOVRLM041ZkEyVnA4OTVhUTJPcFduTUJPM1VzYzFKQmNTLWlaQVNNWVY1YUJ2QWhUUGptazE4UzNHdTVVcl9XaTg4NWZITUN3azZsR3VBdmY2Y21QV2RobmNOR1ZXY2RQZjhqb2FHOVg1eGNNck9KcQ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPNmFjYWNhVVJHZ2Y1dVZ5M3A1LTdZT01sSFVQTVJZcXpfcjNNajNyRjZXNXBpWTlST29nWFBhQ19Id05CQ3pGQXMybTBoRU9CeDFvZXNNN1dxeUVxR3dkM0wyYTZhS1ZMVTJsckdySFlzVXBQVHdGMjVWd3k4TG9idUdueERPVHRZUV95NzBKYTdfYnVVNThfTlRkeEZtNGtCY0dhc3FZMjZBQ0ZHYzRhbnBkZFNxb1JQYmczWHR3S21LYU8yeXhyNk1HRk0?oc=5",
       "matched_terms": [],
-      "published": "2026-11-18T13:21:01+00:00",
+      "published": "2026-08-10T07:00:00+00:00",
       "sentiment_label": "neutral",
       "sentiment_score": 0.0,
-      "source": "The Motley Fool",
-      "themes": [
-        "AI / semiconductors"
-      ],
-      "ticker": "SPY",
-      "title": "Why S&P 500 ETF Investors Don't Have to Worry (Much) About Nvidia Stock Plunging - The Motley Fool"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNRzlQcHpvRkJiZkxPbkt1dnV1Q25PbW50UDBnT0NzY2o1REt4WmcybV96RnItRXVkbE96MENvT21fRnlkY0xlS3Q0NUcySTlJYkNzRGVucmRUZENJbmdFM3F6aElkaktzUDhGbnhWRHVKS0VjR1h2WnhNOVhoQmVNX205aHVXNng4UWxvb2tVWEFRR0ZlT28tdWl0eG5GUEYyX1V0X3dUVHdsZ1JxZjllYUR3WnRRY0U?oc=5",
-      "matched_terms": [],
-      "published": "2026-11-18T06:37:13+00:00",
-      "sentiment_label": "neutral",
-      "sentiment_score": 0.0,
-      "source": "Benzinga",
+      "source": "Federal Reserve Bank of San Francisco",
       "themes": [
         "general market"
       ],
-      "ticker": "SPY",
-      "title": "Stock Market: Will S&P 500 Open Up or Down Today? - Benzinga"
+      "ticker": "MARKET",
+      "title": "Financial Markets, Oil Prices, and Supply-Side Risks - Federal Reserve Bank of San Francisco"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPcTJSZGZmYXVlYWRnbWVLOFRCMXEycGRtWjBHZm5Ca1JZeWNIRy1Ra2hmTmFqVXRrSmNpX3dvU1lnRFp4TDNQZ2FCVXF5Vk9wSEhOeWVmOVl0Ym8zT193ZWNpbHA5VnlQbGlCWm5mazlkempXa0FaWWJMTXR1aVd1ZlMtX2lpX0RLbWFjZ3EtYklQSGJiNHBHQw?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPSG5UVUo2Qjc0QmZXVkZkVG5DNDFUMHJVT3ZDUHZzOFBVOXVuWk55aE9ZcDVOVEFJa3Y5ZHpjNWx4YWgtb3VfSjRHQUJXMFJIV3lPcTFDSjFadXBmdENDeGx2eGMyZ2NVRjM2Mk9RYlU3X1B2OGMwWmR6ajgtMWxQUmFCMER2R1gxZk52LVZYWW1lVkxxeWp2S3dpVjA?oc=5",
       "matched_terms": [],
-      "published": "2026-11-16T12:43:00+00:00",
+      "published": "2026-07-01T07:00:00+00:00",
       "sentiment_label": "neutral",
       "sentiment_score": 0.0,
       "source": "Yahoo Finance",
       "themes": [
         "general market"
       ],
-      "ticker": "SPY",
-      "title": "If You Had Invested $10,000 in the Vanguard S&P 500 ETF (VOO) in 2016, Here's What You Would Have Today - Yahoo Finance"
+      "ticker": "MARKET",
+      "title": "Stock Market Investors Just Got Bad News From the Federal Reserve. History Says a Big Drop Could Follow. - Yahoo Finance"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNU0NsdlA5U0JWeVhBYkYzbEN1ZF9pd3hJRjZKZmtaTHgwMTZTbkh4Q29FSDNiVTRSSTFqWDZpaThDZHNZdHoxWUhRdzlGWHU4TGZtMUcyd2lDTHFMWGlOcmFMUkJJMkg2V3FiVVBQak5qcHVIemR6Q19QWTFGdElpUnhqaTRFTGJpWGExNmk0YzhIWTlpdEpCbjRWd1RGTko0SEJ1WGJTcTVydlhvOVo0NUZHZE01V3lET0MzaGRZaURxZzBVakFlcmVUb1Q1Q2puMldWZlZLMFVJYldQMlhCTEtjYUIzY00?oc=5",
-      "matched_terms": [
-        "dividend"
-      ],
-      "published": "2026-11-18T10:15:02+00:00",
-      "sentiment_label": "positive",
-      "sentiment_score": 0.2,
+      "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOQ2dEa1hYbXZuV0gxR1h0RHFYSmEwXzFiTXA3RWFHUUpOZGxkUllEN080TzZhQVFDS09leGJva1VfeE8xaC1vV1NCSFQ4MmlPS0RtdDNfVTFNR0VSTDVUbDhHTldqaGg4T0FXSTU0Si13Z2tLaDFocGc3NlItUXRVekFiUklGR1JpZzBJWl9yY2k5UTFmRjdocXdFWFBqZWkxNEx0TXVUVXhUSlI1TkhNNUtsZ3Uwem0wNDk0WHVSVEM3bjVETlp0YkRYeUxZWXkzN1h6Wk8tT09TdUFlZlhZ?oc=5",
+      "matched_terms": [],
+      "published": "2026-11-18T09:06:02+00:00",
+      "sentiment_label": "neutral",
+      "sentiment_score": 0.0,
       "source": "The Motley Fool",
+      "themes": [
+        "rates / inflation",
+        "earnings"
+      ],
+      "ticker": "MARKET",
+      "title": "The Latest Federal Reserve Interest Rate Forecast Points to 4 Hikes by mid-September -- and That's Terrible News for Wall Street - The Motley Fool"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1Mc05Ua1Zjb0I3UVNoSGlBZUV3TGlOZEZIaXc1Rm5hQ3ZyVDYtYlFDRzhPRWFwSUdEVFVtWW1oNm5jNERoUEljSVJKTEF1RDVG?oc=5",
+      "matched_terms": [],
+      "published": "2026-11-17T18:42:09+00:00",
+      "sentiment_label": "neutral",
+      "sentiment_score": 0.0,
+      "source": "Yahoo! Finance Canada",
       "themes": [
         "general market"
       ],
       "ticker": "SPY",
-      "title": "Vanguard S&P 500 ETF vs. Schwab U.S. Dividend ETF: How Much You\u2019d Need to Collect $1,000 a Month From Each. - The Motley Fool"
+      "title": "Vanguard S&P 500 ETF (VOO) Stock Price, News, Quote & History - Yahoo! Finance Canada"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOM0dINWp6VU5VY0dQWmpzQ3VSZFFDRi0tR3RSd3hqbDVPendXYlBqSWpfdlRucHBkdnlxMnU3Z0w0XzFpcGlGWUc5djRYSk94c2h2UkRUcmEwSTN3STdRNG1rRjNxM21iUTRjZ2xNS09WSkNhY0w0V0lQNUkwYklXVHJNRklEbkoxdF9RZzRCanB5WXR0UmYyRjM4LUVTWUtnRDZlYlFTbEgzWEhCQUtiY1hZRTYtS01wY1c0UnBhdw?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPNFNMR3dMM1g5M0xJWXFfOXFSeURsTnFaSnlrQ1NTNTBiRW1DTEVNZEdzZUZ1c3c0SzVzeUVJMnN5eVZZTGVaZXJmdUw3Y19SZVUwUEJQTjJsMThleTRxRnd0MzltN191amZ2RFF2MkRnWWp0ZnFaWWROMHhGM2pmQ3BCOTlsc2VOeWVJWVhfM3dNajFGSXZCQWUyT3VPTUxhbWNiRE5tQzRoeHM?oc=5",
       "matched_terms": [],
-      "published": "2026-11-17T09:02:00+00:00",
+      "published": "2026-11-19T10:02:01+00:00",
       "sentiment_label": "neutral",
       "sentiment_score": 0.0,
       "source": "The Motley Fool",
@@ -179,20 +360,7 @@
         "general market"
       ],
       "ticker": "SPY",
-      "title": "Could the Vanguard S&P 500 ETF Set You Up for Life? Here's What History Says. - The Motley Fool"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQM0ZrajFqNTJYZG8yV2ZhLWpBXzd0ZDBhMlNlY3I0ZG5oOHNDVWVodjQ1NkVpbXJsQWRTV1docmd6d096UGlQX2ZLb1pXWnQteDI2Yk5EMVM1M0I5Z1g3V1psUU1teS16UDJCOVZ3d2VQcndsYlpibGVlcWx6aV83TlhXS0FrWHZaV1ZfMXcwMA?oc=5",
-      "matched_terms": [],
-      "published": "2026-11-18T18:20:00+00:00",
-      "sentiment_label": "neutral",
-      "sentiment_score": 0.0,
-      "source": "Yahoo Finance",
-      "themes": [
-        "general market"
-      ],
-      "ticker": "SPY",
-      "title": "If You'd Invested $1,000 in an S&P 500 ETF Ahead of the Dot-Com Bubble, Here's What You'd Have Today - Yahoo Finance"
+      "title": "Is Investing in an S&P 500 ETF Really Enough? Here's My Honest Take. - The Motley Fool"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5TUFA3RWYzMzMtSGQ5OGpsTjFWTE4yQlhNYzdmM3htanVMVzlEcTA1X2hhTmJlUWoxb0swQU5hbWlTVWpDYWlwN29oVzNReFhtV1dFNGEzakFJSnR1Uk9KRG1nMVpiSEM2em9nQkczbmxkTkIzOXdCVkpHS0E?oc=5",
@@ -208,19 +376,56 @@
       "title": "8 Top-Performing US Stock ETFs - Morningstar"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQZTBIZ3VncTZ2UnJZX3U0RWswUEg1SXlvOV9MQzIyYkwzbHlHRzdrX3VsYXJheFNJbVNZcHo3SWh6anVDTmEteXRiUVg5UkpscjZWdjBpbGotMmJIWGFtM1IybnIxUWhQbGw5V0ZnQ0hwTnB0NEFFQTU2X0VkUUtaMXJuYTdyekRKaG4tYUJqdw?oc=5",
-      "matched_terms": [
-        "dividend"
-      ],
-      "published": "2026-11-18T10:35:02+00:00",
-      "sentiment_label": "positive",
-      "sentiment_score": 0.2,
-      "source": "Yahoo Finance",
+      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNOFpCbEJBOWtlUE0xUGYzaWlHMkhFcFBKR3puOVBUMVFFOFM3MWpVUWswb1FkLTBOT2E0Q1VpYnRWODY4MnUtWUR1eTBhZUx4QnJ6akF2NmtMNklDZVdqbXlOWmtHTHRTcEVGVUFSaFg0NVhTcEdWWkZESGNENFZ2Qlc1QkdlbHA5Vm5IZGM1TW9ZcmJPbU9WTnJ3WXgtTnZIdmdET3NPc0R0T09iVk5hVzRwYWV1N3M?oc=5",
+      "matched_terms": [],
+      "published": "2026-11-19T06:10:52+00:00",
+      "sentiment_label": "neutral",
+      "sentiment_score": 0.0,
+      "source": "Benzinga",
       "themes": [
         "general market"
       ],
       "ticker": "SPY",
-      "title": "Vanguard S&P 500 ETF vs. Schwab U.S. Dividend ETF: How Much You'd Need to Collect $1,000 a Month From Each. - Yahoo Finance"
+      "title": "Stock Market: Will S&P 500 Open Up or Down Today? - State Street SPDR S&P 500 ETF Trust (ARCA:SPY) - Benzinga"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPWkE3QmxzTlR2YW5sTEh1bEI5OFNUVzVFQUdQMFZWNTJicVJmNjViWUhWUU9JV0dfZ21SbWpVUi1lTUhRX0VKb2xSdllXTC1GTG5feTA0bHRmaUdSS2RqWjV3OHBqVFI2MldEb0xCc1JqSDBGNERjcl9RbnN5RlNxanBQZTZhZUh3c2JObDA5M3diMEQzdkZJblFHSEYyZEdUYmRlZnV0dmZUZl93VGR5VE8wa1Zoa0JqVGJZUHV2Z195NFBySmJrWXkxQUtUR0w4LU5hNWtfMmluZEF5Z08yQkk3MW13UQ?oc=5",
+      "matched_terms": [],
+      "published": "2026-11-19T11:01:20+00:00",
+      "sentiment_label": "neutral",
+      "sentiment_score": 0.0,
+      "source": "The Globe and Mail",
+      "themes": [
+        "general market"
+      ],
+      "ticker": "SPY",
+      "title": "Is Investing in an S&P 500 ETF Really Enough? Here's My Honest Take. - The Globe and Mail"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFAwOVFpQTBacEtRYlRMTWhJT0Ryb0pNNG9aXzVkLVBGTUF0cVNSRXIzS1lnZ0Y4UFI1cWUtM3JUbl9aT3p2RmYycnY2LTZuQS1XVDBGYzdCakl5b1BqcmNzQUtSN1k?oc=5",
+      "matched_terms": [],
+      "published": "2026-11-02T08:00:00+00:00",
+      "sentiment_label": "neutral",
+      "sentiment_score": 0.0,
+      "source": "NerdWallet",
+      "themes": [
+        "general market"
+      ],
+      "ticker": "SPY",
+      "title": "The Top S&P 500 ETFs for November 2026: IVV, VOO, SPY and SPYM - NerdWallet"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFA5UXRvZEwyTEt6T2x0OGJmLXNhM1BXLUUyTTlXZWY1S1VXSG5CSHMzSUpJRVVzcVRKYXd0YzI5Vm9Gc2pDY18zdGR1WU9GZU5oWTQzTWlDQnR3WlJwQVZka1oteS1VU3YtWG5kZEJEZnVmM0k?oc=5",
+      "matched_terms": [],
+      "published": "2026-11-16T08:00:00+00:00",
+      "sentiment_label": "neutral",
+      "sentiment_score": 0.0,
+      "source": "CME Group",
+      "themes": [
+        "general market"
+      ],
+      "ticker": "SPY",
+      "title": "E-mini S&P 500 Futures Overview - CME Group"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNQW9vQjk5Uy1zcWpFbmtiVENwTU1HLVJaN3Yzd0pucF9qU1IyYVBCV2dGTlYwOGhTcjNMay15djhoT3VSZDlxUFNINnY3NFhTaVphNUNZT1hyZ1VPd2VWMlhoMlVOOGxKUXVldXBCODh2UmFkeE5Vd1FBV1VJR0hobFVMbVVZdm5lOVhZaXNQNU9mYWZTUEE1OWdKcFlrOER4Wjg0cWRleUpPUU5fYl92MUNLSGlLV3BlOE1Vbl9ORHFQSVY4Sk9EOFA3dmNudExTcHBPa0prOWV3VXU3TEE?oc=5",
@@ -240,7 +445,7 @@
       "matched_terms": [
         "ai"
       ],
-      "published": "2026-11-18T16:07:00+00:00",
+      "published": "2026-11-18T21:04:00+00:00",
       "sentiment_label": "positive",
       "sentiment_score": 0.16,
       "source": "Investor's Business Daily",
@@ -249,45 +454,6 @@
       ],
       "ticker": "AAPL",
       "title": "Apple Stock Polishes Breakout As Nvidia-Led AI Boom Gets Wake-Up Call - Investor's Business Daily"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPT29ibEJOTkFrQlBKczg2X1pISmpPV212UDhlMUJzVHFhRWZfQjJkZVV1T3ZtbmFjVjEyRVBnNE8zU1VZYjFaWVJMUG0zMk81aVFiT1BaTEZPeWlfb1QyeU0xWkZGV2tEcHEyMHMtamhYRGx4X2ozZEYwYkpJQ21aXzdpV0ZVMGlEdGltSVl0QmxCVlYtVTN4cUpNVkk2aEJDVDlZWXFRam8ycFBXYVRJUWZrWHFPVFFa?oc=5",
-      "matched_terms": [],
-      "published": "2026-11-18T16:43:47+00:00",
-      "sentiment_label": "neutral",
-      "sentiment_score": 0.0,
-      "source": "Barchart.com",
-      "themes": [
-        "general market"
-      ],
-      "ticker": "AAPL",
-      "title": "Apple Stock Shows Strength Now, and a Key Catalyst Is Brewing in June 2027 - Barchart.com"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPREhaQVNhZS1VX1NLSFZHejdsaEp4b2NSRncybk5TbDJ2RU5qNlA2a1ZiMXZFTXI2dDNITFBHQTdHZjNvcnAyd0lpM09LZVZqYVBPZmkxM2NZSU8zUkpQdVRVV3NvWjRIdUpaNXg2YlBaTEpTN2pNYnprSnpRZnVIZUV6YXVlNUhuTG5iMG5FQUJteVB2eV8waXJnT184NUpWNGdscHJOeHNXOURtOTYyazRCVQ?oc=5",
-      "matched_terms": [],
-      "published": "2026-11-17T00:32:00+00:00",
-      "sentiment_label": "neutral",
-      "sentiment_score": 0.0,
-      "source": "9to5Mac",
-      "themes": [
-        "general market"
-      ],
-      "ticker": "AAPL",
-      "title": "Former Apple chairman Arthur Levinson files to sell $31.8 million in company stock - 9to5Mac"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQX1lsV1RqX0xCZklKaUt4RlZMTGRSdld3V1lTOThXZTNJM2ZReWVWcUxMamh0bkhtZHRLZnFvYTRJUGdkRnhWdTRUYnkyemdrZkVOMUxWSFpYTUx2Tzl6Zlk5UnU4M01DeTVMeHc4T21KeklDSkFpVGhHYkV6VDJzckNLcS1yc0QyY3NHV053bVBOWEM5aGxMQzBYcW5sLXU5SWE3RlI1SHRWNkYxRmJEXzU1VEdQc2gxaUpwRmNOVm1uRURBeEHSAcsBQVVfeXFMTlFYaVdzTGJoRmloQTdQTWl4WDd5Znotelo3VE5HdXQ0NnRZckNqNEsxZXBRazBTSEpveGNhUktfV0RyZTNvaGUxMjk4RDBjRkY2R0VKWGVWSmN0SDRodzZfWWJSVjdzb1g5bjZhN1F1Z2pta3NKUUFrcFNlUHZLSUVPMWFTWTJQcEIwbWIycWhfbGZUbEJadkM4U0Z5SVA2M3AxNkRXVDdQUUxfM0lVVzFfNGt2MUd0YnUyQlhlZ0ZORHl1MGVValJoZ28?oc=5",
-      "matched_terms": [],
-      "published": "2026-11-18T14:21:55+00:00",
-      "sentiment_label": "neutral",
-      "sentiment_score": 0.0,
-      "source": "Moneycontrol.com",
-      "themes": [
-        "general market"
-      ],
-      "ticker": "AAPL",
-      "title": "Apple\u2019s haven status makes it one of priciest stocks in market - Moneycontrol.com"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQR3lydi0xSC1BUklpa2h0UkJNX3c1eGJoQWd4a29LLUtFNUhZRk82OHhYZEpBVmFvbHpHa1ZGVGxxUU9JZjlpLUVpRDVpbmVmVnZlN3lsdWdpR09JaGwtUVNqSGdnai1yeXhlVmtaazFzdXBKOHlUUFFLUUR3aFpyZEd3b0tHX2ZqSWV0RDBTRjhpWkx1MjBEMWJhdDJlelRK?oc=5",
@@ -303,209 +469,46 @@
       "title": "Dear Apple Stock Fans, Mark Your Calendars for June 2027 - Barchart.com"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQa25pcEwwc2R5QjVLYkhINnZwVjd2ZC1BNlpwNVV0OEt0RF9fWHV4SDRDLS1ham5hMUVxRjNuOFd6ejdUQkd6cnRIclY0c1UzeUw4d2lfX2VNczJfbmFoTGV3dk1XX0FVSDNkUnN2OXByQjMyRVotV3ZsWDdFemFrLWhsdFEtVXNvYmZ6bGptUzRFWEJjOTdWSFl0QUJOUnp5VHZXTHJWR1QwUHdNenVERWNxOXFONUZRWFlPWENIVDdYLWdtMFRIN1VyRGNlaGZ4RG5YVA?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNeVg3X2ItdFpwNE0xRmpKaXQ4dW9GWTFsN0pmcnIwQ2tOLV8tazZtcjdyZWFPM1M5cF9aZkdEbE5LYnZteHZvRUNIeDZUREFHZkoxQXBJS1dVdlFEN2h2OWt6RGphVldvRnB6aHdPbDg3Rmo2b0JIVVM3VThJbU1rdVFYME9zQXFzODlDay14ejRyUE5CUm14SWxzOTUtNEJiQmkxUDJhRjJPUDlJQ2Nud1NXZjZsYXF1ZW1MTlBSN0RiRFMyb3dBaWxTS0UzMzA5UnRSS0hNQmNybmpXUEx4aXRVRjgzRzRBWTMtSW1Od0EwUkY2YXlvaw?oc=5",
       "matched_terms": [],
-      "published": "2026-11-16T16:40:03+00:00",
+      "published": "2026-11-17T13:47:00+00:00",
       "sentiment_label": "neutral",
       "sentiment_score": 0.0,
-      "source": "Barchart.com",
+      "source": "24/7 Wall St.",
       "themes": [
         "general market"
       ],
       "ticker": "AAPL",
-      "title": "I Will Keep Holding Apple Stock at New All-Time Highs as Long as It Stays Above This Key Level - Barchart.com"
+      "title": "Warren Buffett's Berkshire Didn't Sell a Single Apple Share for a Second Straight Quarter. The Stake Is Now Worth $80 Billion - 24/7 Wall St."
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPVE5rQ2pkQ3huWmlSLThsOEN3Uk1Rak02YWMySFA5cTcyeGpQbktZdXEyT3NnWi1lSjdxT2h4UGVLYWo0MjBUYTBDZElnUmptOFh1VmhlLWxxY0ZaenQzZXhucHJUY1VMUXpPZXdvX2VYR3NuRHBPMEhPN1JHRzZsRXZORGllUGQtR0tTQnpIbGdVOE1VSVFBQzlMZ29mRU5GSnJZSFlZdzJrZ3ZlZTZxYnM2Z3B5TVA0YnVuREVQVXdCREJLTDdVN2NOSWhtUy1adWRFTUZXZw?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPQ2I1TjdieTB0dHRkQ2NlckpUT2FSY240RDNPZ3VhUHVEbnZ6czlqbERpRGJlSWV2NFVLbEdsTG4tNTN2OURIaEZOWXRQN0RWdGJLTk5WUUVrSmI5RHZPY0FseGpOQXZTS0taZjl2N2RzNXREc3JMWXZvZVdaWl96RTc3VEdtZjZZa1E?oc=5",
       "matched_terms": [],
-      "published": "2026-09-30T07:00:00+00:00",
+      "published": "2026-11-19T09:30:39+00:00",
       "sentiment_label": "neutral",
       "sentiment_score": 0.0,
-      "source": "Yahoo Finance",
+      "source": "FinanceFeeds",
       "themes": [
-        "general market"
+        "earnings"
       ],
       "ticker": "AAPL",
-      "title": "Apple stock pops on report it will unveil all-new smart home hub at Oct. 13 event - Yahoo Finance"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPYVdhOFhuckUwSm5CZHlQeEcyMFZyeUZnaEM5NnN1Y3k1VlRmUU1FVi1WUW5PTDFzZlNjTTVya0ZlYXFmdW1DeXNBR1FUVVZpTERaSXlJR0s5VGV5NE1JeVIwNWpEUk5lSVllWURfRjF3UzFaWXhxaUlzbzVzaHE3SWVqb1p6SEZhUnd3WjNlRVBZcWxNVGJzejJYWDNvakloQ0N3ZDJBU0tZa2o1X2hr?oc=5",
-      "matched_terms": [],
-      "published": "2026-11-18T18:04:54+00:00",
-      "sentiment_label": "neutral",
-      "sentiment_score": 0.0,
-      "source": "TipRanks",
-      "themes": [
-        "general market"
-      ],
-      "ticker": "MSFT",
-      "title": "\u201cThe New OS For Work\u201d: Microsoft Stock (NASDAQ:MSFT) Slips as Microsoft Pushes Copilot - TipRanks"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQci1qeVFnbVdRbUVhYm1FWkZPallwbTFJWXFqc3IybkxFbFlqX09oZXVLamMwaXpTaEZjb0hqODFRR19TQ1ItQkFaOXFhMU4yU1FhNFpZYUhHekhocktoQXVIQ21KTmlTM1ZLOHdxNUd5LU5kb2pMTWhfbzhVc1ZGS21NSko0cnhZMks5OWswNFFDYmR0MkE0b3JXWWVBd0QwTkZMakJR?oc=5",
-      "matched_terms": [],
-      "published": "2026-11-17T13:13:30+00:00",
-      "sentiment_label": "neutral",
-      "sentiment_score": 0.0,
-      "source": "Yahoo Finance",
-      "themes": [
-        "general market"
-      ],
-      "ticker": "MSFT",
-      "title": "Microsoft Is Making Voluntary Exit Offers to Engineers for the First Time - Yahoo Finance"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQeHFlZGVlaGkybFNKek1nQzczeEF2cDRvSlRyVTktUWlBb25TYW5ZeThHdHRGSDFNazYtNGZyOGFkQ1lVeGpBakJCc054alA4OFN2enJRc2JZaHpQRG8zX0tWYV9Vb0lnQm5JR1ZGNHNnbTNzVThHLWNUT1dvUlMwQVhYTnJ3X2xEXzdXRDMzQllEN1lkdmktdWgxMS1EQUYwOHRyVk1lU0pNQV9udk40RmVVSzdSOHB3OUpzMnpMMW9ySjEyZWsyMFYtbXNNM2Rrc2dFdGVkMkJyeEoxVVZRTXNvSQ?oc=5",
-      "matched_terms": [],
-      "published": "2026-11-18T22:22:31+00:00",
-      "sentiment_label": "neutral",
-      "sentiment_score": 0.0,
-      "source": "The Motley Fool",
-      "themes": [
-        "general market"
-      ],
-      "ticker": "MSFT",
-      "title": "Billionaire Bill Ackman Sold 2 Million Shares of Microsoft Stock. But Here's Why He Says He's Still Bullish - The Motley Fool"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxOVHNsRzdlMGROMVBORkxodjhWUEN2M0VMeXkwR3R6aFRSMDY5Rk91V0NjSm9TVTRYU1NDYWh5MnhpRWdMX2hlSFQ5aEdxQXRYd2tHT0hCTUhCRm1PZ19oMXJvSDhfX3BUdC1UaE9pLW5wSExhbGxvaWJxQnBiTmlDdXE1WUtLajNibFM1M0dFSTBXUEZiMEJfcjAxVzNsLVJKS2hTTXlFUVZhNVNXY0V4LXE2a2o1SGZic213UXRpeVA4SVUwUjJlaVNkUm56VjVTLXRTbVdtZlB1aTRHSUQwbUxFT2NUdjlNWkFr?oc=5",
-      "matched_terms": [],
-      "published": "2026-11-18T18:46:25+00:00",
-      "sentiment_label": "neutral",
-      "sentiment_score": 0.0,
-      "source": "Barchart.com",
-      "themes": [
-        "AI / semiconductors"
-      ],
-      "ticker": "MSFT",
-      "title": "Trump\u2019s \u2018National Champion\u2019 Stocks Include Nvidia, Amazon, and Microsoft, Says WSJ. Will the Designation Really Matter? - Barchart.com"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPcXV2VzNBNnNwY0FyZUR6UlZBN1BBR1Q4ek9TRnVxa25HNVR5bWRodWlHMi1PdkdMcUozNkJmT2gtYUFmb1d5dXZoTDRrZTBKd3ZkNHk1UWJQeEJiR3dBSVNfSmRLQmdRVDRoRHBxSUR4N3FSV0l3ODBLRm51dFh1aFUycld3aElhZkFfcXlvQlg3WGFaNl9sMjA0ZlNnaVZZUW50X09IQVZyNWtPcFlSb3lpWGZaUkl2Skt5SHFGdGgweWFyajdReERyeERhdzYzMDBZSXc1LXZUUXhwV3BQd2dWTQ?oc=5",
-      "matched_terms": [],
-      "published": "2026-11-13T10:00:00+00:00",
-      "sentiment_label": "neutral",
-      "sentiment_score": 0.0,
-      "source": "WSJ",
-      "themes": [
-        "general market"
-      ],
-      "ticker": "MSFT",
-      "title": "Microsoft Stock Slips on Widespread Outage - WSJ"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPU1ItRk5Ubm9qeE13bU4yVjRfeFZ2MVZUMlQ2Y0VGeC0ydDFqMk5YRUtUeFE3RHc5Y2YtYWFXRjNTRzdIWWh1eTItdnFsQmROZy1CblRIMDE3SGZ3NlpEX1QwUzFEUHpMQUl0SElwRWs1ajRQMG1CMXJNd1N4VGFIbnljdzdmbnBJeW42WmJR?oc=5",
-      "matched_terms": [],
-      "published": "2026-11-18T13:00:00+00:00",
-      "sentiment_label": "neutral",
-      "sentiment_score": 0.0,
-      "source": "Investor's Business Daily",
-      "themes": [
-        "general market"
-      ],
-      "ticker": "MSFT",
-      "title": "Microsoft Stock Loses Key Level Amid Global Outage; Is Microsoft A Buy Now? - Investor's Business Daily"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNNFpRb0pNc3JnOWUtNUpLVDNYUklWY1EzcUc5eGFacUtWenhsdVI2MWh3VkRlTUtjZGxsa1NPRVMtaTRzdEVKbHpveDloWS1TdEtvWVF4S21jOHczMzlOM0dhUXY3Q215cWhoX21yMmtFUzlWVzd6VnlLa0NRSnhabkg5ODZURWpLTklaMGxn?oc=5",
-      "matched_terms": [
-        "ai"
-      ],
-      "published": "2026-11-18T15:23:00+00:00",
-      "sentiment_label": "positive",
-      "sentiment_score": 0.16,
-      "source": "Barron's",
-      "themes": [
-        "AI / semiconductors"
-      ],
-      "ticker": "MSFT",
-      "title": "Microsoft Makes Its AI Case After Global Outage and Anthropic Challenge - Barron's"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNVlk2Z3EwMG1rLV9wQzZHVFl6R1NCT3lfNW1Kbl9Ib0t4eE5fYjdWMWM0cXZYS3RKSDdwZENqZkJvd0N5TFNiN3RsejVsMGhoU25IalNiQWVwYVoyS1p2bG9oM1pYcW9IaF9RMm5GcmZFbDdtelRFN2dWbW1ndWliMFV6VmY3ZnJoRTZWQWhtUGV1bjVUV1NVU3cxYy01eC1QdjlN?oc=5",
-      "matched_terms": [],
-      "published": "2026-11-16T13:00:00+00:00",
-      "sentiment_label": "neutral",
-      "sentiment_score": 0.0,
-      "source": "Seeking Alpha",
-      "themes": [
-        "general market"
-      ],
-      "ticker": "MSFT",
-      "title": "Microsoft: Assessing The Threat To Office Tools, Reiterate Buy - Seeking Alpha"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQUXF4elZiRmtpU0hWaElPNjVGbHBuMkxPaDJCSzlMREtmUWs5dThVN3RCRUJWR2R6dEhGaGtibWY5bnRrMFpnRVRlb2hEazc0ekVOQjBVMkY4RVQ1U1pMYWNYdFdKQTN5a2tRM0hfeGVTNXJVeW1talprVGRjRllJZ0xxQzVtV09ZZmpDcGZIU3U3X2VZMXZCcWZDYXBGY2FrUkY1NXlwblRTamJpeHA4Rl9yOUJ6RlU2QkZXSm1PV2dBRF9vSjd5eTBjRTZmLUFBdlpCclVya2Zfdw?oc=5",
-      "matched_terms": [],
-      "published": "2026-11-18T22:20:52+00:00",
-      "sentiment_label": "neutral",
-      "sentiment_score": 0.0,
-      "source": "Yahoo Finance",
-      "themes": [
-        "AI / semiconductors"
-      ],
-      "ticker": "NVDA",
-      "title": "Stock market today: Anthropic IPO in spotlight, Nvidia stock extends decline - Yahoo Finance"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPNkp0UU1oOEhxWU1LYXI5TDRZdDFFN004TDI5Z0NhQTVSb0VlazJJMWNZM01XTGNXaW54RktVSm5kaXFaaHJncmczZm42bTI1T2JPWjRrVG5XZDdZTXYxSGtrQ1hVRGFESmJUcDl4STV0NGlNcDczdWhMNDVXNzlmcy05cXd3TnZTWGFVdlh6YkNhemJhdUo3a0VjUUJQdGxKckE?oc=5",
-      "matched_terms": [],
-      "published": "2026-11-18T14:56:19+00:00",
-      "sentiment_label": "neutral",
-      "sentiment_score": 0.0,
-      "source": "Yahoo Finance",
-      "themes": [
-        "AI / semiconductors",
-        "earnings"
-      ],
-      "ticker": "NVDA",
-      "title": "3 numbers explaining Nvidia's post-earnings stock move - Yahoo Finance"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNWF9SSWdwQ1BBTkhfMnRGdVRodTBUeEpibW9RRlgzWURreHZVY2RKYXM5el9YQU1XeVpnTnl3QWJnbzRpdEVBT1JDbWNodTRKWHBsdnFKOGFYM1lGaUtNbmRlYUJhaTZrandnaFpUVHFDaEV6UUVaSW9jU05fakc1UVRTRkhibWM?oc=5",
-      "matched_terms": [
-        "falls"
-      ],
-      "published": "2026-11-18T23:21:00+00:00",
-      "sentiment_label": "negative",
-      "sentiment_score": -0.32,
-      "source": "WSJ",
-      "themes": [
-        "AI / semiconductors",
-        "earnings"
-      ],
-      "ticker": "NVDA",
-      "title": "Stock Market Today: Dow Falls as Nvidia Earnings Fail to Soothe Investors' Nerves - WSJ"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNWHZLSzBzRzJHd3lrVGJiclp5VWloalN5d1BCZDNJTkZFeVh2Q0ctR2ZNdG8wSmRUTlRVbElFNlp5cTFZdkFuc0dNbGxYaUlIZS1Ud0NKUUMtWXZaeWRlWUQ0WnBzZkRWT0h0Zkx2cHBTS3NZNWZhVjJMekNjUG80QUduN2YxOFBkMzg4UzN0Z1NEaEtMOUEwYllYVXJNd3lyaUp2dDM0MnlKcGloazM2X1I3bGJEUFNNWkxrUFhpTXJMejV3czVuejln?oc=5",
-      "matched_terms": [],
-      "published": "2026-11-19T00:05:00+00:00",
-      "sentiment_label": "neutral",
-      "sentiment_score": 0.0,
-      "source": "The Motley Fool",
-      "themes": [
-        "AI / semiconductors",
-        "earnings"
-      ],
-      "ticker": "NVDA",
-      "title": "After Nvidia\u2019s Earnings, Here\u2019s My Prediction for the Stock Price by the End of the Year - The Motley Fool"
+      "title": "Apple Stock Price Could Reach $765 by 2030, CoinCodex Forecast Shows - FinanceFeeds"
     }
   ],
-  "generated_at": "2026-11-19T00:47:35.313386+00:00",
+  "generated_at": "2026-11-19T22:43:33.017372+00:00",
   "market": "us",
   "mode": "real",
   "summary": {
     "ai_layer": {
-      "analysis": "```json\n{\n  \"sentiment\": \"cautious\",\n  \"risks\": [\n    \"Potential for further Federal Reserve rate hikes into 2027, which could increase borrowing costs and pressure equities.\",\n    \"Uncertainty around AI sector performance, with implications for tech stocks and broader market sentiment.\",\n    \"Mixed signals from market indicators, including a falling 10-year Treasury yield and a volatile VIX, suggesting potential for increased market volatility.\",\n    \"Regulatory developments from the Federal Reserve may impact liquidity and market structure, affecting both equities and fixed income.\"\n  ],\n  \"watchlist\": [\n    \"Federal Reserve policy statements and minutes for further clues on rate trajectory.\",\n    \"AI sector performance, particularly in companies like NVIDIA and AMD.\",\n    \"10-Year Treasury Yield movements and their impact on equity valuations.\",\n    \"VIX volatility index for signs of market complacency or fear.\",\n    \"NVIDIA and AMD stock performance post-earnings and broader tech sector trends.\"\n  ],\n  \"research-note-conflicts\": [\n    \"Private research notes are currently empty, so no direct conflicts are identified.\",\n    \"Public commentary from Lance Roberts / RIA suggests mixed signals and caution, but these are not independent evidence for portfolio changes.\"\n  ],\n  \"recommended_posture\": \"balanced\"\n}\n```",
+      "analysis": "```json\n{\n  \"sentiment\": \"cautious\",\n  \"risks\": [\n    \"Market volatility may increase due to mixed investor reactions to Anthropic's IPO performance and broader AI sector sentiment.\",\n    \"Federal Reserve-related announcements may influence liquidity, regulatory expectations, and rate outlooks, though no immediate action is expected.\",\n    \"The 10-Year Treasury Yield is falling, which may temporarily support equities but could signal broader economic or inflationary concerns.\",\n    \"Leveraged ETF commentary and VIX spikes suggest potential for increased market turbulence, though not yet confirmed.\"\n  ],\n  \"watchlist\": [\n    \"Anthropic (ANTH) - Monitor IPO performance and investor sentiment in AI sector.\",\n    \"NVIDIA (NVDA) - Track continued decline and its implications for AI and semiconductor demand.\",\n    \"10-Year Treasury Yield - Watch for further declines and their impact on equity valuations.\",\n    \"VIX Index - Monitor for signs of increased market volatility or complacency.\",\n    \"Federal Reserve announcements - Stay alert for any changes in policy or regulatory expectations.\"\n  ],\n  \"research-note-conflicts\": [],\n  \"recommended_posture\": \"balanced\"\n}\n```",
       "model": "qwen3:14b",
       "note": "LLM output is a research overlay and should not override rule, risk, and price evidence by itself.",
-      "prompt_template": "You are a cautious portfolio research agent. Use the headlines, market-regime facts, private research notes and public information signs when present, and rule-based portfolio constraints to explain market sentiment and produce a conditional, non-execution investment posture. Do not promise returns. Return JSON with sentiment, risks, watchlist, research-note conflicts, and recommended posture. Public information signs have zero decision weight: use them to explain and form questions, never to override price, allocation, or risk rules.\n\nBenchmark: SPY\nRule engine posture: balanced\nNews score: 0.007\nPrivate research overlay status: empty\nPrivate research notes: []\nPublic information signs: [{'title': 'Minutes of the Federal Open Market Committee, October 27-28, 2026', 'source': 'Federal Reserve', 'signal': 'event', 'why_it_matters': 'Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting.', 'decision_use': 'information_only'}, {'title': 'Agencies extend comment period for proposed third-party risk management guidance', 'source': 'Federal Reserve', 'signal': 'event', 'why_it_matters': 'Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting.', 'decision_use': 'information_only'}, {'title': 'Federal Reserve Board announces pricing, effective January 1, 2027, for payment services the Federal Reserve Banks provide to banks and credit unions, and changes to streamline and adjust their check services', 'source': 'Federal Reserve', 'signal': 'event', 'why_it_matters': 'Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting.', 'decision_use': 'information_only'}, {'title': 'Federal Reserve announces revised tentative schedule of Federal Open Market Committee meetings in 2027', 'source': 'Federal Reserve', 'signal': 'event', 'why_it_matters': 'Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting.', 'decision_use': 'information_only'}, {'title': '10-Year Treasury Yield', 'source': 'FRED / Federal Reserve Bank of St. Louis', 'signal': 'falling', 'why_it_matters': 'Long-term yields affect equity valuation, borrowing costs, and the relative appeal of bonds versus stocks. Latest change: -0.02 percentage points.', 'decision_use': 'information_only'}, {'title': 'A Leveraged ETF: That Math Doesn\u2019t Work The Way You Think', 'source': 'Lance Roberts / RIA', 'signal': 'mixed', 'why_it_matters': 'Commentary supplies a research hypothesis and watch items; it is not independent evidence for changing portfolio weights.', 'decision_use': 'information_only'}, {'title': 'VIX Spike: Complacency\u2019s Bill Coming Due. What Happens Now?', 'source': 'Lance Roberts / RIA', 'signal': 'mixed', 'why_it_matters': 'Commentary supplies a research hypothesis and watch items; it is not independent evidence for changing portfolio weights.', 'decision_use': 'information_only'}, {'title': 'Recession Indicators Turned Green. Job Quality Hasn\u2019t.', 'source': 'Lance Roberts / RIA', 'signal': 'mixed', 'why_it_matters': 'Commentary supplies a research hypothesis and watch items; it is not independent evidence for changing portfolio weights.', 'decision_use': 'information_only'}, {'title': 'How Bonds Work: Everything You Need To Know', 'source': 'Lance Roberts / RIA', 'signal': 'cautionary', 'why_it_matters': \"Macro commentary provides a scenario to compare with primary economic data and the portfolio's rate sensitivity.\", 'decision_use': 'information_only'}]\nHeadlines: [\"The Latest Federal Reserve Interest Rate Forecast Points to 4 Hikes by mid-September -- and That's Terrible News for Wall Street - The Motley Fool\", \"Fed's Warsh sees risk of stock bust if AI boom disappoints - Axios\", \"Stocks\u2019 New Headache? The Fed Could Raise Rates Well Into 2027 - Barron's\", 'U.S. Stock Preview | The Federal Reserve will release the minutes of its monetary policy meeting at 3:00 a.m.; Democrats are preparing a data center power reform plan; Musk says SpaceX will not sell any computing power to OpenAI; NVIDIA rose more than 3 - \u5bcc\u9014\u725b\u725b', 'US Stock Futures Decline Ahead of Nvidia Earnings as Investors Await Federal Reserve Signals: Dow Jones, S&P, Nasdaq, Wall Street - Yahoo Finance', 'US Stocks Diverge as Nasdaq Rises 0.4%; Select Tech Stocks Gain as Nvidia Drops Nearly 3% Post-Earnings While AMD Surges 5% - TradingKey', 'Downside Risk to the Stock Market and Consumption - Federal Reserve Bank of Atlanta', 'Gold struggles near one-year lows, silver rebounds as stocks slide, Fed hike bets persist - Kitco PM Report - Kitco', \"Why S&P 500 ETF Investors Don't Have to Worry (Much) About Nvidia Stock Plunging - The Motley Fool\", 'Stock Market: Will S&P 500 Open Up or Down Today? - Benzinga']",
+      "prompt_template": "You are a cautious portfolio research agent. Use the headlines, market-regime facts, private research notes and public information signs when present, and rule-based portfolio constraints to explain market sentiment and produce a conditional, non-execution investment posture. Do not promise returns. Return JSON with sentiment, risks, watchlist, research-note conflicts, and recommended posture. Public information signs have zero decision weight: use them to explain and form questions, never to override price, allocation, or risk rules.\n\nBenchmark: SPY\nRule engine posture: balanced\nNews score: 0.020\nPrivate research overlay status: empty\nPrivate research notes: []\nPublic information signs: [{'title': 'Federal Reserve Board issues enforcement action with former employee of First Security Bancorp', 'source': 'Federal Reserve', 'signal': 'event', 'why_it_matters': 'Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting.', 'decision_use': 'information_only'}, {'title': 'Minutes of the Federal Open Market Committee, October 27-28, 2026', 'source': 'Federal Reserve', 'signal': 'event', 'why_it_matters': 'Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting.', 'decision_use': 'information_only'}, {'title': 'Agencies extend comment period for proposed third-party risk management guidance', 'source': 'Federal Reserve', 'signal': 'event', 'why_it_matters': 'Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting.', 'decision_use': 'information_only'}, {'title': 'Federal Reserve Board announces pricing, effective January 1, 2027, for payment services the Federal Reserve Banks provide to banks and credit unions, and changes to streamline and adjust their check services', 'source': 'Federal Reserve', 'signal': 'event', 'why_it_matters': 'Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting.', 'decision_use': 'information_only'}, {'title': '10-Year Treasury Yield', 'source': 'FRED / Federal Reserve Bank of St. Louis', 'signal': 'falling', 'why_it_matters': 'Long-term yields affect equity valuation, borrowing costs, and the relative appeal of bonds versus stocks. Latest change: -0.03 percentage points.', 'decision_use': 'information_only'}, {'title': 'A Leveraged ETF: That Math Doesn\u2019t Work The Way You Think', 'source': 'Lance Roberts / RIA', 'signal': 'mixed', 'why_it_matters': 'Commentary supplies a research hypothesis and watch items; it is not independent evidence for changing portfolio weights.', 'decision_use': 'information_only'}, {'title': 'VIX Spike: Complacency\u2019s Bill Coming Due. What Happens Now?', 'source': 'Lance Roberts / RIA', 'signal': 'mixed', 'why_it_matters': 'Commentary supplies a research hypothesis and watch items; it is not independent evidence for changing portfolio weights.', 'decision_use': 'information_only'}, {'title': 'Recession Indicators Turned Green. Job Quality Hasn\u2019t.', 'source': 'Lance Roberts / RIA', 'signal': 'mixed', 'why_it_matters': 'Commentary supplies a research hypothesis and watch items; it is not independent evidence for changing portfolio weights.', 'decision_use': 'information_only'}, {'title': 'How Bonds Work: Everything You Need To Know', 'source': 'Lance Roberts / RIA', 'signal': 'cautionary', 'why_it_matters': \"Macro commentary provides a scenario to compare with primary economic data and the portfolio's rate sensitivity.\", 'decision_use': 'information_only'}]\nHeadlines: ['Anthropic closes first day at $97.17 per share in landmark moment for AI: IPO live updates - CNBC', \"Wall Street ends sharply lower as Anthropic's debut fails to revive AI fervor - Reuters\", 'Stocks Fall as Anthropic Debut Not an AI All-Clear: Markets Wrap - Bloomberg.com', 'Why Is the US Stock Market Crashing Today? Dow Drops 1,000 Points Despite Anthropic IPO - Stocks Down Under', 'Anthropic\u2019s Wall Street debut marks a new chapter for AI - CNN', 'Stock market today: Dow, S&P 500 slip ahead of Anthropic IPO, Nvidia stock extends decline - Yahoo Finance', 'Dow closes below 50,000; Nasdaq falls 2% as Anthropic IPO fails to resuscitate AI trade - CNBC', \"Anthropic's blockbuster debut tests Wall Street's faith in AI boom - Reuters\", 'Weekly market commentary - BlackRock', 'Why Morgan Stanley Says the S&P 500 Is Poised to Jump 18% - Business Insider']",
       "provider": "ollama",
       "status": "llm_generated"
     },
     "article_count": 36,
-    "confidence": 0.801,
+    "confidence": 0.803,
     "forecast_bias": "neutral",
     "information_signs": {
       "commentary_signs": [
@@ -584,9 +587,23 @@
         "portfolio_weight": 0.0,
         "rule": "Information signs may explain conditions and create review questions, but they do not change target weights, trade instructions, or risk limits. Any future influence must be explicit, bounded, and recorded with a reason."
       },
-      "generated_at": "2026-11-19T00:47:21.201076+00:00",
+      "generated_at": "2026-11-19T22:43:21.585310+00:00",
       "market": "us",
       "primary_signs": [
+        {
+          "category": "monetary policy / regulation",
+          "decision_use": "information_only",
+          "portfolio_weight": 0.0,
+          "published": "2026-11-19T16:00:00+00:00",
+          "signal": "event",
+          "source": "Federal Reserve",
+          "source_tier": "primary",
+          "title": "Federal Reserve Board issues enforcement action with former employee of First Security Bancorp",
+          "unit": null,
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261119a.htm",
+          "value": null,
+          "why_it_matters": "Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting."
+        },
         {
           "category": "monetary policy / regulation",
           "decision_use": "information_only",
@@ -630,46 +647,32 @@
           "why_it_matters": "Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting."
         },
         {
-          "category": "monetary policy / regulation",
-          "decision_use": "information_only",
-          "portfolio_weight": 0.0,
-          "published": "2026-11-12T17:45:00+00:00",
-          "signal": "event",
-          "source": "Federal Reserve",
-          "source_tier": "primary",
-          "title": "Federal Reserve announces revised tentative schedule of Federal Open Market Committee meetings in 2027",
-          "unit": null,
-          "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261112a.htm",
-          "value": null,
-          "why_it_matters": "Official releases can change rate, liquidity, regulatory, or economic expectations; review the underlying release before acting."
-        },
-        {
           "category": "rates / financial conditions",
           "decision_use": "information_only",
           "portfolio_weight": 0.0,
-          "published": "2026-11-17",
+          "published": "2026-11-18",
           "signal": "falling",
           "source": "FRED / Federal Reserve Bank of St. Louis",
           "source_tier": "primary",
           "title": "10-Year Treasury Yield",
           "unit": "%",
           "url": "https://fred.stlouisfed.org/series/DGS10",
-          "value": 5.1,
-          "why_it_matters": "Long-term yields affect equity valuation, borrowing costs, and the relative appeal of bonds versus stocks. Latest change: -0.02 percentage points."
+          "value": 5.07,
+          "why_it_matters": "Long-term yields affect equity valuation, borrowing costs, and the relative appeal of bonds versus stocks. Latest change: -0.03 percentage points."
         },
         {
           "category": "rates / policy expectations",
           "decision_use": "information_only",
           "portfolio_weight": 0.0,
-          "published": "2026-11-17",
-          "signal": "falling",
+          "published": "2026-11-18",
+          "signal": "unchanged",
           "source": "FRED / Federal Reserve Bank of St. Louis",
           "source_tier": "primary",
           "title": "2-Year Treasury Yield",
           "unit": "%",
           "url": "https://fred.stlouisfed.org/series/DGS2",
           "value": 4.8,
-          "why_it_matters": "The 2-year yield is sensitive to expected Federal Reserve policy and near-term financial conditions. Latest change: -0.03 percentage points."
+          "why_it_matters": "The 2-year yield is sensitive to expected Federal Reserve policy and near-term financial conditions. Latest change: +0.00 percentage points."
         },
         {
           "category": "labor market",
@@ -703,14 +706,14 @@
           "category": "rates / growth expectations",
           "decision_use": "information_only",
           "portfolio_weight": 0.0,
-          "published": "2026-11-17",
+          "published": "2026-11-18",
           "signal": "positive",
           "source": "FRED / U.S. Treasury",
           "source_tier": "primary",
           "title": "10Y minus 2Y Treasury Curve",
           "unit": "percentage points",
           "url": "https://fred.stlouisfed.org/graph/?g=1K7YE",
-          "value": 0.3,
+          "value": 0.27,
           "why_it_matters": "The yield-curve shape is a macro context indicator for expected growth and policy, not a market-timing rule."
         }
       ],
@@ -726,7 +729,7 @@
         },
         {
           "item_count": 4,
-          "latest_published": "2026-11-18T19:00:00+00:00",
+          "latest_published": "2026-11-19T16:00:00+00:00",
           "source": "Federal Reserve",
           "status": "ok",
           "url": "https://www.federalreserve.gov/feeds/press_all.xml"
@@ -743,15 +746,15 @@
     },
     "investment_posture": "balanced",
     "label": "neutral",
-    "negative_count": 2,
-    "neutral_count": 30,
-    "overall_score": 0.006666666666666667,
-    "positive_count": 4,
+    "negative_count": 4,
+    "neutral_count": 24,
+    "overall_score": 0.02,
+    "positive_count": 8,
     "rationale": "News and price evidence are mixed or not strong enough for a directional overlay.",
     "recommended_action": "follow target weights and rule-based trims/adds; do not override price evidence with headlines alone",
     "research_overlay": {
       "decision_use": "No private research overlay was applied.",
-      "generated_at": "2026-11-19T00:47:19.672511+00:00",
+      "generated_at": "2026-11-19T22:43:20.029164+00:00",
       "note": "No supported research notes were found in the configured directory.",
       "note_count": 0,
       "notes": [],
@@ -764,70 +767,58 @@
     "source_mode": "rss",
     "top_themes": [
       {
-        "count": 21,
+        "count": 20,
         "theme": "general market"
       },
       {
-        "count": 12,
+        "count": 9,
         "theme": "AI / semiconductors"
       },
       {
-        "count": 6,
+        "count": 5,
         "theme": "earnings"
       },
       {
-        "count": 4,
+        "count": 2,
         "theme": "rates / inflation"
       },
       {
         "count": 1,
-        "theme": "China / policy"
+        "theme": "macro risk"
       }
     ]
   },
   "ticker_sentiment": [
     {
-      "article_count": 8,
+      "article_count": 5,
       "label": "neutral",
-      "score": 0.05,
-      "ticker": "SPY",
+      "score": 0.032,
+      "ticker": "AAPL",
       "top_headlines": [
-        "Why S&P 500 ETF Investors Don't Have to Worry (Much) About Nvidia Stock Plunging - The Motley Fool",
-        "Stock Market: Will S&P 500 Open Up or Down Today? - Benzinga",
-        "If You Had Invested $10,000 in the Vanguard S&P 500 ETF (VOO) in 2016, Here's What You Would Have Today - Yahoo Finance"
+        "Apple Stock Near All-Time Highs: Former Chairman Files to Cash Out $32 Million - Benzinga",
+        "Apple Stock Polishes Breakout As Nvidia-Led AI Boom Gets Wake-Up Call - Investor's Business Daily",
+        "Dear Apple Stock Fans, Mark Your Calendars for June 2027 - Barchart.com"
       ]
     },
     {
       "article_count": 7,
       "label": "neutral",
-      "score": -0.045714285714285714,
+      "score": 0.0,
+      "ticker": "SPY",
+      "top_headlines": [
+        "Vanguard S&P 500 ETF (VOO) Stock Price, News, Quote & History - Yahoo! Finance Canada",
+        "Is Investing in an S&P 500 ETF Really Enough? Here's My Honest Take. - The Motley Fool",
+        "8 Top-Performing US Stock ETFs - Morningstar"
+      ]
+    },
+    {
+      "article_count": 2,
+      "label": "neutral",
+      "score": 0.0,
       "ticker": "NVDA",
       "top_headlines": [
-        "U.S. Stock Preview | The Federal Reserve will release the minutes of its monetary policy meeting at 3:00 a.m.; Democrats are preparing a data center power reform plan; Musk says SpaceX will not sell any computing power to OpenAI; NVIDIA rose more than 3 - \u5bcc\u9014\u725b\u725b",
-        "US Stock Futures Decline Ahead of Nvidia Earnings as Investors Await Federal Reserve Signals: Dow Jones, S&P, Nasdaq, Wall Street - Yahoo Finance",
-        "US Stocks Diverge as Nasdaq Rises 0.4%; Select Tech Stocks Gain as Nvidia Drops Nearly 3% Post-Earnings While AMD Surges 5% - TradingKey"
-      ]
-    },
-    {
-      "article_count": 8,
-      "label": "neutral",
-      "score": 0.02,
-      "ticker": "AAPL",
-      "top_headlines": [
-        "Apple Stock Near All-Time Highs: Former Chairman Files to Cash Out $32 Million - Benzinga",
-        "Apple Stock Polishes Breakout As Nvidia-Led AI Boom Gets Wake-Up Call - Investor's Business Daily",
-        "Apple Stock Shows Strength Now, and a Key Catalyst Is Brewing in June 2027 - Barchart.com"
-      ]
-    },
-    {
-      "article_count": 8,
-      "label": "neutral",
-      "score": 0.02,
-      "ticker": "MSFT",
-      "top_headlines": [
-        "\u201cThe New OS For Work\u201d: Microsoft Stock (NASDAQ:MSFT) Slips as Microsoft Pushes Copilot - TipRanks",
-        "Microsoft Is Making Voluntary Exit Offers to Engineers for the First Time - Yahoo Finance",
-        "Billionaire Bill Ackman Sold 2 Million Shares of Microsoft Stock. But Here's Why He Says He's Still Bullish - The Motley Fool"
+        "Stock market today: Dow, S&P 500 slip ahead of Anthropic IPO, Nvidia stock extends decline - Yahoo Finance",
+        "The Stock Market Is Primed for an Explosive Week. Nvidia and the Federal Reserve May Decide What Comes Next. - The Motley Fool"
       ]
     }
   ]
