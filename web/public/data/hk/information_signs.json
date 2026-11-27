@@ -4,6 +4,20 @@
       "category": "market commentary",
       "decision_use": "information_only",
       "portfolio_weight": 0.0,
+      "published": "2026-11-27T09:30:18+00:00",
+      "signal": "mixed",
+      "source": "Lance Roberts / RIA",
+      "source_tier": "commentary",
+      "title": "Jobless Growth: What A Shrinking Workforce Means For Investors",
+      "unit": null,
+      "url": "https://realinvestmentadvice.com/resources/blog/jobless-growth-what-a-shrinking-workforce-means-for-investors/",
+      "value": null,
+      "why_it_matters": "Macro commentary provides a scenario to compare with primary economic data and the portfolio's rate sensitivity."
+    },
+    {
+      "category": "market commentary",
+      "decision_use": "information_only",
+      "portfolio_weight": 0.0,
       "published": "2026-11-23T09:00:13+00:00",
       "signal": "cautionary",
       "source": "Lance Roberts / RIA",
@@ -55,27 +69,13 @@
       "url": "https://realinvestmentadvice.com/resources/blog/leveraged-etfs-that-math-doesnt-work-the-way-you-think/",
       "value": null,
       "why_it_matters": "Commentary supplies a research hypothesis and watch items; it is not independent evidence for changing portfolio weights."
-    },
-    {
-      "category": "market commentary",
-      "decision_use": "information_only",
-      "portfolio_weight": 0.0,
-      "published": "2026-11-14T09:12:00+00:00",
-      "signal": "mixed",
-      "source": "Lance Roberts / RIA",
-      "source_tier": "commentary",
-      "title": "VIX Spike: Complacency\u2019s Bill Coming Due. What Happens Now?",
-      "unit": null,
-      "url": "https://realinvestmentadvice.com/resources/blog/vix-spike-complacencys-bill-coming-due-what-happens-now/",
-      "value": null,
-      "why_it_matters": "Commentary supplies a research hypothesis and watch items; it is not independent evidence for changing portfolio weights."
     }
   ],
   "decision_policy": {
     "portfolio_weight": 0.0,
     "rule": "Information signs may explain conditions and create review questions, but they do not change target weights, trade instructions, or risk limits. Any future influence must be explicit, bounded, and recorded with a reason."
   },
-  "generated_at": "2026-11-25T22:39:12.842960+00:00",
+  "generated_at": "2026-11-27T18:03:00.150169+00:00",
   "market": "hk",
   "primary_signs": [
     {
@@ -210,7 +210,7 @@
   "source_status": [
     {
       "item_count": 5,
-      "latest_published": "2026-11-23T09:00:13+00:00",
+      "latest_published": "2026-11-27T09:30:18+00:00",
       "source": "Lance Roberts / RIA",
       "status": "ok",
       "url": "https://realinvestmentadvice.com/feed/"
